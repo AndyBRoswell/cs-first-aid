@@ -36,6 +36,15 @@
 推荐开课学期：1 ~ 2。
 ### 高等代数 || 线性代数 / Linear Algebra
 #### 课本
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 高等代数 | 丘维声 | 北京大学 | 2 | 清华大学出版社 | 2019/6 | 简体中文
+| Introduction to Linear Algebra | Gilbert Strang | Massachusetts Institute of Technology | 5 | 2016 | English
+| 线性代数 | 李炯生 | 中国科学技术大学 | 中国科学技术大学出版社 | 1989 | 简体中文
+||查建国 | 中国科学技术大学
+|Algebra | Michael Artin | Massachusetts Institute of Technology | 2 | Pearson | 2010 | English
+| Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  |  | English | 前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/index-1.html
+||Joseph Rabinoff | Duke University |
 
 #### 说明
 “高等代数”是苏联的说法，在欧美高校中没有对应的课程。在中国内地，高等代数一般在数学系开设，内容比线性代数要多。
