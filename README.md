@@ -19,8 +19,8 @@
 ## 基础必修
 ### 数学分析 || 高等数学（微积分） / Mathematical Analysis || Calculus
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | 
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注 | 
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | 
 | 数学分析教程 | 常庚哲 | 中国科学技术大学 | 2 | 高等教育出版社 | 2003/5 | 简体中文
 || 史济怀 | 中国科学技术大学
 | 数学分析 | 陈纪修 | 复旦大学 ||高等教育出版社| | 简体中文
@@ -41,11 +41,13 @@
 | 高等代数 | 丘维声 | 北京大学 | 2 | 清华大学出版社 | 2019/6 | 简体中文
 | Introduction to Linear Algebra | Gilbert Strang | Massachusetts Institute of Technology | 5 | 2016 | English
 | 线性代数 | 李炯生 | 中国科学技术大学 | 中国科学技术大学出版社 | 1989 | 简体中文
-||查建国 | 中国科学技术大学
-|Algebra | Michael Artin | Massachusetts Institute of Technology | 2 | Pearson | 2010 | English
-| Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  |  | English | 前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/index-1.html
+|| 查建国 | 中国科学技术大学
+| Algebra | Michael Artin | Massachusetts Institute of Technology | 2 | Pearson | 2010 | English
+| Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  | English | 前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/index-1.html
 ||Joseph Rabinoff | Duke University |
-
+| 基础代数 | 席南华 | 中国科学院大学 ||||简体中文
+| Linear Algebra Done Right | Sheldon Axler | University of California, Berkeley | 3 |  | 2015 | English
+|| Kenneth Ribet | San Francisco State University
 #### 说明
 “高等代数”是苏联的说法，在欧美高校中没有对应的课程。在中国内地，高等代数一般在数学系开设，内容比线性代数要多。
 
@@ -56,7 +58,16 @@
 例：南京大学人工智能学院要求学习两个学期的工科数学分析和高等代数。
 ### 离散数学 / Discrete Mathematics
 #### 课本
-
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Discrete Mathematics and its Applications | Kenneth H. Rosen |  | 8 | McGraw-Hill Higher Education | 2018/7/9 | English
+| 离散数学教程 | 耿素云 | 北京大学 |  | 北京大学出版社 | 2009/7 | 简体中文
+|| 屈婉玲 | 北京大学
+|| 王捍贫 | 北京大学
+| 离散数学习题解析 | 耿素云 | 北京大学 |  | 北京大学出版社 | 2009/8 | 简体中文
+|| 屈婉玲 | 北京大学
+|| 王捍贫 | 北京大学
+|| 刘田 | 北京大学
 #### 说明
 离散数学为计算机类专业的必修课。一般学习两个学期，也有学校学习一个学期或三个学期。
 
@@ -65,7 +76,11 @@
 推荐开课学期：1 ~ 2。
 ### 概率论与数理统计 / Probability Theory and Statistics
 #### 课本
-
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 概率论与数理统计 | 陈希孺 | 中国科学技术大学 |  | 中国科学技术大学出版社 | 2009 | 简体中文
+| 概率论与数理统计 | 徐全智 | 电子科技大学 |  | 高等教育出版社 | 2004 | 简体中文
+|| 吕恕 | 电子科技大学
 #### 说明
 概率论与数据统计课程是日后的机器学习等众多专业课的基础。
 推荐开课学期：3。
