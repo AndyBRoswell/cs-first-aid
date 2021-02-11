@@ -317,12 +317,28 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Python Crash Course | Eric Matthes |  | 2 |  | 2019/5/3 | English
+| Python Cookbook | David Beazley |  | 3 |  | 2013/5/23 | English
+|| Brian K. Jones
+| Python语言程序设计基础 | 嵩天 | 北京理工大学 | 2 |  | 2017/2 | 简体中文
+|| 礼欣 | 北京理工大学
+|| 黄天羽 | 北京理工大学
 #### 说明
+https://docs.python.org/3/ 上具有非常丰富的官方文档。
+
+Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的老代码的 Python 脚本，否则请选用 Python 3。
 ### C#
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Head First C# | Andrew Stellman |  | 4 |  | 2020/12 | English
+|| Jill Alison Hart
+| Illustrated C# | Cal Schrotenboer |  | 5 |  | 2018 | English
+|| Daniel Solis
 #### 说明
+Microsoft 为 C# 准备了非常丰富的官方文档：
+
+https://docs.microsoft.com/en-us/dotnet/csharp/
 ### HTML+CSS+JS
 #### 说明
 ## 专业选修
@@ -330,13 +346,28 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Computer Architecture, A Quantitative Approach | David A Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
+|| John L. Hennessy | Stanford University
+| Computer Organization and Architecture: Designing for Performance | William Stallings |  | 11 | Pearson | 2018/3/1 | English
 #### 说明
+要求较高的院校可能将体系结构列为专业必修课。
 ### 算法 / Algorithms
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Introduction to Algorithms | Thomas H. Cormen |  | 3 | MIT Press | 2009/7/31 | English
+|| Charles E. Leiserson
+|| Ronlad L. Rivest
+|| Clifford Stein
+| 算法设计与分析 | 屈婉玲 | 北京大学 | 2 | 清华大学出版社 | 2016/2 | 简体中文
+|| 刘田 | 北京大学
+|| 张立昂 | 北京大学
+|| 王捍贫 | 北京大学
+| 算法设计与分析习题解答与学习指导 | 屈婉玲 | 北京大学 | 2 | 清华大学出版社 | 2016/3 | 简体中文
+|| 刘田 | 北京大学
+|| 张立昂 | 北京大学
+|| 王捍贫 | 北京大学
 #### 说明
-
 公开课包括但不限于：
 
 https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654
