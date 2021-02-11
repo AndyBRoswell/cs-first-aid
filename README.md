@@ -15,7 +15,7 @@
 # 第零部分 提升效率的工具与思想
 
 # 第一部分 课程、教材与公开课
-内地与境外高校计算机类专业的总体差距，主要体现在打基础的本科教学上。而内地的计算机顶校与非顶校之间，本科教学质量的差距也是十分值得引起重视的。
+内地与境外高校计算机类专业的总体差距，主要体现在打基础的本科教学上（这个观点是我们老师说的，他也是教研室主任）。而内地的计算机顶校与非顶校之间，本科教学质量的差距也是十分值得引起重视的。
 
 在没有特殊说明的情况下，对于每门课，只需要从罗列的若干本教材中选择一本即可（不包括习题集）。
 ## 基础必修
@@ -143,6 +143,8 @@ https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
 
 一般地，普通物理为物理类专业的必修课程，常分为力学、热学、电磁学、光学和原子物理学五门课。大学物理是非物理专业的公共基础课，也包括力、热、电、光、原，但课时明显比物理系少，学习内容和难度也比物理系低。
 
+物理苦手可以选择难度偏低的《物理学教程》，东南大学编写。
+
 推荐开课学期：1 ~ 2。
 
 *例：中国科学技术大学计算机科学与技术专业2020级培养方案要求学习三个学期的物理类课程，包括：
@@ -154,6 +156,10 @@ https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
 第三学期：大学物理-综合实验、光学B、原子物理B。
 
 学有余力的学霸与学神可以考虑尝试。
+
+https://catalog.ustc.edu.cn/plan
+
+公开课包括但不限于：
 
 https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 
@@ -192,7 +198,6 @@ https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 数电的书我没有去找别的，反正我们学校用的是这本。计算机专业的可以不用买书，看我的笔记（目前还在修订，修订完以后我会贴到GitHub上来），应该足够不卡住后面的学习了。
 
 推荐开课学期：3
-
 ### 汇编语言 / Assembly Language
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
@@ -201,46 +206,92 @@ https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 #### 说明
 本课程是操作系统、组成原理两门专业必修课的基础。
 
-听说非常多的学校（甚至包括有的顶校）还在教8086的汇编，哎……
+非常多的学校（甚至包括有的顶校）还在教8086的汇编，哎……
 
 推荐开课学期：4
-
 ## 专业必修
 ### 数据结构 / Data Structures
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 数据结构（C++版） | 邓俊辉 | 清华大学 | 3 | 清华大学出版社 |  | 简体中文
+| 数据结构习题解析 | 邓俊辉 | 清华大学 | 3 | 清华大学出版社 |  | 简体中文
+| 数据结构（C语言版） | 严蔚敏 | 清华大学 | 2 | 中国工信出版集团 | 2015/2 | 简体中文
+|| 李冬梅 | ? || 人民邮电出版社
+|| 吴伟民 | 广东工业大学
+| 数据结构习题解析与实验指导 | 李冬梅 | ? | 2 | 中国工信出版集团 | 2015/2 | 简体中文
+|| 张琪 | ? || 人民邮电出版社
+| Data Structures & Algorithm Analysis in C++ | Mark Allen Weiss | Florida International University | 4 | Pearson | 2013/6/23 | English
+| The Algorithm Design Manual | Steven S Skiena | Stony Brook University | 2 | Springer | 2011/4/27 | English
 #### 说明
-推荐开课学期：3
+有的学校的对应课程为“数据结构与算法”。
 
+其实严蔚敏的《数据结构》倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。严书的代码风格我不喜欢。
+
+推荐开课学期：3
 ### 操作系统 / Operating Systems
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Operating System: Three Easy Pieces | Remzi H. Arpaci-Dusseau | University of Wisconsin-Madison |  |  |  | English
+|| Andrea C. Arpaci-Dusseau | University of Wisconsin-Madison
+|| Peter Reiher | University of California, Los Angeles
+| 计算机操作系统 | 汤小丹 | ? | 4 | 西安电子科技大学出版社 | 2014 | 简体中文
+|| 梁红兵 | ?
+|| 哲凤屏 | ?
+|| 汤子瀛 | 杭州电子科技大学
+| Operating System Concepts | Abraham Silberschatz | Yale University | 10 | Wiley | 2018/5/4 | English
+| Modern Operating Systems | Andrew S. Tanenbaum | Vrije Universiteit Amsterdam | 4 | Pearson | 2016/3/25 | English
 #### 说明
-推荐开课学期：4
+OSTEP 作者主页上有英文版，中文版不能直接从主页里找到，且不会随时更新。前往
 
+http://pages.cs.wisc.edu/~remzi/OSTEP/
+
+获得最新版本。
+
+http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
+
+为中译版。
+
+汤子瀛等编著的《计算机操作系统》为内地众多知名高校的计算机类专业考研的指定参考书，其中部分内容可以作为OSTEP的补充。
+
+推荐开课学期：4
 ### 计算机组成原理 / Computer Organization
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Computer Organization and Design: The Hardware/Software Interface | David A Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
+|| John L. Hennessy | Stanford University
+| Computer Systems: A Programmer's Perspective | Randal E. Bryant | Carnegie Mellon University |  | Pearson |  | English
+|| David R. O'Hallaron | Carnegie Mellon University
+| 计算机组成原理 | 唐朔飞 | 哈尔滨工业大学 | 3 | 高等教育出版社 | 2020/10 | 简体中文
+| 计算机组成原理——学习指导与习题解答 | 唐朔飞 | 哈尔滨工业大学 | 2 | 高等教育出版社 |  | 简体中文
 #### 说明
-推荐开课学期：4
+考研的同学可以以唐朔飞的《计算机组成原理》为参考资料。
 
+推荐开课学期：4
 ### 计算机网络 / Computer Networking
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Computer Networking: A Top-Down Approach | James F. Kurose | University of Massachusetts, Amherst | 8 | Pearson | 2020-Spring | English
+|| Keith W. Ross | New York University
+| 计算机网络 | 谢希仁 | 陆军工程大学 | 7 | 电子工业出版社 | 2017 | 简体中文
 #### 说明
-推荐开课学期：5
+谢的《计算机网络》，我们老师说如果用的中文教材的话基本都是用这本。同时这本书也是很多学校考研指定的参考书。用于和《自顶向下方法》互为补充也是很不错的。
 
+推荐开课学期：5
 ### 数据库 / Database
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Database System Concepts | Abraham Silberschatz | Yale University | 7 | McGraw-Hill Higher Education | 2019/2/19 | English | Recommended by @vczh
+| 数据库系统概论 | 王珊 | 中国人民大学 | 5 | 高等教育出版社 | 2014 | 简体中文
+|| 萨师煊 | 中国人民大学
 #### 说明
-推荐开课学期：5
+人大的《数据库系统概论》比较坑的地方在于，它上面的不少SQL语句在很多数据库产品里面都是不能被识别的。理论部分总体还OK。
 
+推荐开课学期：5
 ### 编译原理 / The Principle of Compilation
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
@@ -298,5 +349,8 @@ https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654
 # 附录一 Q&A
 
 # 推荐读物
+CS自救指北&emsp;迟先生
+
+https://survivesjtu.gitbook.io/survivesjtumanual/fu-lu/ben-ke-sheng-zhuan-ye-jie-shao-todo/cs-zi-jiu-zhi-bei#ke-cheng
 
 # 后记：人和人年和月都太内卷
