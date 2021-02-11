@@ -18,6 +18,8 @@
 内地与境外高校计算机类专业的总体差距，主要体现在打基础的本科教学上（这个观点是我们老师说的，他也是教研室主任）。而内地的计算机顶校与非顶校之间，本科教学质量的差距也是十分值得引起重视的。
 
 在没有特殊说明的情况下，对于每门课，只需要从罗列的若干本教材中选择一本即可（不包括习题集）。
+
+对于公开课，没有注明建议倍速，并不代表应当原速播放。可能是为了照顾基础不好的学生，许多大学在录制公开课时，都会将视频的播放速度降低。大家在播放的时候，一般都可以加速播放。
 ## 基础必修
 ### 数学分析 || 高等数学（微积分） / Mathematical Analysis || Calculus
 #### 课本
@@ -51,7 +53,7 @@ https://www.bilibili.com/video/BV1ZW411e7PF?from=search&seid=1209165925049325951
 
 数学分析（中国科学技术大学）&emsp;主讲：史济怀
 
-公开课录制时间比较早，而且有少量的视频有缺损。凑合着看吧。
+公开课录制时间比较早（2003年秋开始录制），而且有少量的视频有内容缺损。凑合着看吧。
 
 https://www.bilibili.com/video/BV12s411h7v4?from=search&seid=12091659250493259510
 
@@ -87,9 +89,13 @@ https://www.bilibili.com/video/BV19W411G7QU?from=search&seid=1440468356516358163
 
 高等代数（北京大学）&emsp;主讲：丘维声
 
+建议倍速：≤ 1.5 x
+
 https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371
 
 Introduction to Linear Algebra（Massachusetts Institute of Technology）&emsp;主讲：Gilbert Strang
+
+建议倍速：≤ 1.5 x
 
 https://www.bilibili.com/video/BV1ys411472E
 
