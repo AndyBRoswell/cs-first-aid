@@ -12,6 +12,8 @@
 作为在大内卷时代摸爬打滚的一员，私以为有必要将自己踩过的坑以及总结出来的经验与方法提供给后来者，帮助各位尽可能利用好最珍贵的本科时光，为日后的自己积累更多的选择筹码。
 
 本《自救指南》将长期更新。也欢迎大家批评指正。
+
+注意：撰写本《自救指南》的主要目的，是为了让大家真正学到有用的知识与技能，考研等各类考试并不是《自救指南》主要针对的场景。
 # 第零部分 提升效率的工具与思想
 
 # 第一部分 课程、教材与公开课
@@ -23,9 +25,9 @@
 ## 基础必修
 ### 数学分析 || 高等数学（微积分） / Mathematical Analysis || Calculus
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注 | 
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | 
-| 数学分析教程 | 常庚哲 | 中国科学技术大学 | 2 | 高等教育出版社 | 2003/5 | 简体中文 | 可选2012年第三版
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 数学分析教程 | 常庚哲 | 中国科学技术大学 | 2 | 高等教育出版社 | 2003/5 | 简体中文 | 
 || 史济怀 | 中国科学技术大学
 | 数学分析 | 陈纪修 | 复旦大学 ||高等教育出版社| | 简体中文
 || 於崇华 | 复旦大学
@@ -33,7 +35,9 @@
 | 数学分析精选习题全解 | 薛春华 | ? || 清华大学出版社 | 2009/12 | 简体中文
 || 徐森林 | 中国科学技术大学
 #### 说明
-内地大多数院校的计算机类专业，要求学习的是高等数学（有的学校称作微积分）。部分对数学要求较高的院校或专业，则会要求学习（工科）数学分析。
+中科大版《数学分析教程》可选2012年第三版。
+
+内地大多数院校的计算机类专业，要求学习的是高等数学（有的学校称作微积分）。部分对数学要求较高的院校或专业，则会要求学习（工科）数学分析。一些大学虽然按照高等数学（微积分）的要求讲课，但也使用数学分析教材。
 
 一般而言，数学和物理等理科专业要求学习数学分析。通常，数学系会学习三个学期，其它院系学习两个学期，且要求有所降低。
 
@@ -62,11 +66,11 @@ https://www.bilibili.com/video/BV12s411h7v4?from=search&seid=1209165925049325951
 有比较多的同学反映，中科大的数分比复旦的要难。大家可以根据自己实际的情况选择。
 ### 高等代数 || 线性代数 / Linear Algebra
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | 高等代数 | 丘维声 | 北京大学 | 2 | 清华大学出版社 | 2019/6 | 简体中文
 | Introduction to Linear Algebra | Gilbert Strang | Massachusetts Institute of Technology | 5 | 2016 | English
-| 线性代数 | 李炯生 | 中国科学技术大学 || 中国科学技术大学出版社 | 1989 | 简体中文 | 可选2010年第2版
+| 线性代数 | 李炯生 | 中国科学技术大学 || 中国科学技术大学出版社 | 1989 | 简体中文
 || 查建国 | 中国科学技术大学
 | Algebra | Michael Artin | Massachusetts Institute of Technology | 2 | Pearson | 2010 | English
 | Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  | English | 前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/index-1.html
@@ -75,6 +79,8 @@ https://www.bilibili.com/video/BV12s411h7v4?from=search&seid=1209165925049325951
 | Linear Algebra Done Right | Sheldon Axler | University of California, Berkeley | 3 |  | 2015 | English
 || Kenneth Ribet | San Francisco State University
 #### 说明
+李炯生等编著的《线性代数》可选2010年第2版。但是，原书面向的是中国科学技术大学数学系或少年班，难度较大，不建议数学较弱的同学选用。
+
 “高等代数”是苏联的说法，在欧美高校中没有对应的课程。在中国内地，高等代数一般在数学系开设，内容比线性代数要多。
 
 一般地，学习一到两个学期。
@@ -102,8 +108,8 @@ https://www.bilibili.com/video/BV1ys411472E
 线性代数的本质&emsp;主讲：3Blue1Brown
 ### 离散数学 / Discrete Mathematics
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Discrete Mathematics and its Applications | Kenneth H. Rosen |  | 8 | McGraw-Hill Higher Education | 2018/7/9 | English
 | 离散数学教程 | 耿素云 | 北京大学 |  | 北京大学出版社 | 2009/7 | 简体中文
 || 屈婉玲 | 北京大学
@@ -126,8 +132,8 @@ https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
 离散数学（北京大学）&emsp;主讲：刘田、屈婉玲、王捍贫
 ### 概率论与数理统计 / Probability Theory and Statistics
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | 概率论与数理统计 | 陈希孺 | 中国科学技术大学 |  | 中国科学技术大学出版社 | 2009 | 简体中文
 | 概率论与数理统计 | 徐全智 | 电子科技大学 |  | 高等教育出版社 | 2004 | 简体中文
 || 吕恕 | 电子科技大学
@@ -137,8 +143,8 @@ https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
 推荐开课学期：3。
 ### 物理 / Physics
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | 大学物理学 | 张三慧 | 清华大学 | 4 | 清华大学出版社 |  | 简体中文
 | 普通物理学 | 程守洙 | 南京大学 | 7 | 高等教育出版社 | 2016 | 简体中文
 || 江之永 | 南京大学
@@ -172,8 +178,8 @@ https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 普通物理学（清华大学）&emsp;主讲：杨振宁
 ### C语言 / C Programming Language
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 |The C Programming Language | Brian W. Kernighan |  |  |  | 2019/9/6 | English
 || Dennis M. Ritchie
 | C Primer Plus | Stephen Prata | College of Marin in Kentfield | 6 | Pearson | 2014 | English
@@ -183,8 +189,8 @@ https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 推荐开课学期：1。
 ### C++ / C++
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | C++ Primer | Josée Lajoie |  | 6 | Addison-Wesley Professional | 2020/11/2 | English
 || Stanley B. Lippman
 || Barbara E. Moo
@@ -192,8 +198,8 @@ https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 我认为C++应当是必修的。因为相比Java、Python、C#等语言，C / C++更加贴近硬件。打好C / C++的基础，有利于尽快建立对计算机整体的认识，形成硬件软件结合的基本思想。此外，许多其它高级语言的语法和代码风格都可以在C++中找到。如果在熟悉C++以后再去学习其他的语言，学习速率就会快得多，因为要学习的很多内容都是自己已经熟悉了的。
 ### 数字逻辑电路 / Digital Logic Circuit
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | 数字设计基础与应用 | 邓元庆 | 陆军工程大学 | 2 | 清华大学出版社 |  | 简体中文
 || 关宇 | ?
 || 贾鹏 | ?
@@ -206,8 +212,8 @@ https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 推荐开课学期：3
 ### 汇编语言 / Assembly Language
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Assembly Language for x86 Processors, 8th edition | Kip R. Irvine | Florida International University | 8 | Pearson | 2019/8/27 | English | Recommended by @himself65
 #### 说明
 本课程是操作系统、组成原理两门专业必修课的基础。
@@ -218,8 +224,8 @@ https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 ## 专业必修
 ### 数据结构 / Data Structures
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | 数据结构（C++版） | 邓俊辉 | 清华大学 | 3 | 清华大学出版社 |  | 简体中文
 | 数据结构习题解析 | 邓俊辉 | 清华大学 | 3 | 清华大学出版社 |  | 简体中文
 | 数据结构（C语言版） | 严蔚敏 | 清华大学 | 2 | 中国工信出版集团 | 2015/2 | 简体中文
@@ -237,8 +243,8 @@ https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
 推荐开课学期：3
 ### 操作系统 / Operating Systems
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Operating System: Three Easy Pieces | Remzi H. Arpaci-Dusseau | University of Wisconsin-Madison |  |  |  | English
 || Andrea C. Arpaci-Dusseau | University of Wisconsin-Madison
 || Peter Reiher | University of California, Los Angeles
@@ -264,8 +270,8 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 推荐开课学期：4
 ### 计算机组成原理 / Computer Organization
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Computer Organization and Design: The Hardware/Software Interface | David A Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
 || John L. Hennessy | Stanford University
 | Computer Systems: A Programmer's Perspective | Randal E. Bryant | Carnegie Mellon University |  | Pearson |  | English
@@ -278,8 +284,8 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 推荐开课学期：4
 ### 计算机网络 / Computer Networking
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Computer Networking: A Top-Down Approach | James F. Kurose | University of Massachusetts, Amherst | 8 | Pearson | 2020-Spring | English
 || Keith W. Ross | New York University
 | 计算机网络 | 谢希仁 | 陆军工程大学 | 7 | 电子工业出版社 | 2017 | 简体中文
@@ -289,8 +295,8 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 推荐开课学期：5
 ### 数据库 / Database
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Database System Concepts | Abraham Silberschatz | Yale University | 7 | McGraw-Hill Higher Education | 2019/2/19 | English | Recommended by @vczh
 | 数据库系统概论 | 王珊 | 中国人民大学 | 5 | 高等教育出版社 | 2014 | 简体中文
 || 萨师煊 | 中国人民大学
@@ -300,8 +306,8 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 推荐开课学期：5
 ### 编译原理 / The Principle of Compilation
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Compilers: Principles, Techniques, and Tools | Alfred V.Aho | Columbia University |  |  |  | English
 || Ravi Sethi | University of Arizona
 || Jeffrey D.Ullman | Stanford University
@@ -312,8 +318,8 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 ## 基础选修
 ### Java
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Thinking in Java | Bruce Eckel |  | 4 | Pearson | 2006/2/20 | English
 | Head First Java | Bert Bates |  | 2 | O'Reilly Media | 2005/2/22 | English
 || Kathy Sierra |
@@ -321,8 +327,8 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 随着Java的更新，有部分特性已经被弃用，请注意及时查阅最新文档。
 ### Python
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Python Crash Course | Eric Matthes |  | 2 |  | 2019/5/3 | English
 | Python Cookbook | David Beazley |  | 3 |  | 2013/5/23 | English
 || Brian K. Jones
@@ -335,8 +341,8 @@ https://docs.python.org/3/ 上具有非常丰富的官方文档。
 Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的老代码的 Python 脚本，否则请选用 Python 3。
 ### C#
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Head First C# | Andrew Stellman |  | 4 |  | 2020/12 | English
 || Jill Alison Hart
 | Illustrated C# | Cal Schrotenboer |  | 5 |  | 2018 | English
@@ -350,8 +356,8 @@ https://docs.microsoft.com/en-us/dotnet/csharp/
 ## 专业选修
 ### 计算机体系结构 / Computer Architecture
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Computer Architecture, A Quantitative Approach | David A Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
 || John L. Hennessy | Stanford University
 | Computer Organization and Architecture: Designing for Performance | William Stallings |  | 11 | Pearson | 2018/3/1 | English
@@ -359,8 +365,8 @@ https://docs.microsoft.com/en-us/dotnet/csharp/
 要求较高的院校可能将体系结构列为专业必修课。
 ### 算法 / Algorithms
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Introduction to Algorithms | Thomas H. Cormen |  | 3 | MIT Press | 2009/7/31 | English
 || Charles E. Leiserson
 || Ronlad L. Rivest
