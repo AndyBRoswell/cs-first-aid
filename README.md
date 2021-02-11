@@ -296,15 +296,23 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Compilers: Principles, Techniques, and Tools | Alfred V.Aho | Columbia University |  |  |  | English
+|| Ravi Sethi | University of Arizona
+|| Jeffrey D.Ullman | Stanford University
+| Modern Compiler Implementation in C | Andrew W. Appel |  |  |  |  | English
+| Advanced Compiler Design and Implementation | Steven Muchnick |  |  |  |  | English
 #### 说明
 推荐开课学期：6
-
 ## 基础选修
 ### Java
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| Thinking in Java | Bruce Eckel |  | 4 | Pearson | 2006/2/20 | English
+| Head First Java | Bert Bates |  | 2 | O'Reilly Media | 2005/2/22 | English
+|| Kathy Sierra |
 #### 说明
+随着Java的更新，有部分特性已经被弃用，请注意及时查阅最新文档。
 ### Python
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注
