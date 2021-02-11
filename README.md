@@ -229,6 +229,8 @@ C++标准的正式版是要收费的，网上只能找到免费的定稿前的�
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Assembly Language for x86 Processors, 8th edition | Kip R. Irvine | Florida International University | 8 | Pearson | 2019/8/27 | English | Recommended by @himself65
 #### 说明
+感谢 @himself65 推荐了《Assembly Language for x86 Processors》。
+
 本课程是操作系统、组成原理两门专业必修课的基础。
 
 非常多的学校（甚至包括有的顶校）还在教8086的汇编，哎……
@@ -314,6 +316,8 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 | 数据库系统概论 | 王珊 | 中国人民大学 | 5 | 高等教育出版社 | 2014 | 简体中文
 || 萨师煊 | 中国人民大学
 #### 说明
+感谢 @vczh 推荐了《Database System Concepts》。
+
 人大的《数据库系统概论》比较坑的地方在于，它上面的不少SQL语句在很多数据库产品里面都是不能被识别的。理论部分总体还OK。
 
 推荐开课学期：5
