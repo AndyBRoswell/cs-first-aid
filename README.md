@@ -390,11 +390,13 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 || Jeffrey D.Ullman | Stanford University
 | Modern Compiler Implementation in C | Andrew W. Appel |  |  |  |  | English
 | Advanced Compiler Design and Implementation | Steven Muchnick |  |  |  |  | English
+| Compiler Construction: Principles and Practice | Kenneth C. Louden | San Jose State University | | | | English
 
 #### 说明
 推荐开课学期：6
 
 ## 基础选修
+
 ### Java
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
@@ -402,8 +404,10 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 | Thinking in Java | Bruce Eckel |  | 4 | Pearson | 2006/2/20 | English
 | Head First Java | Bert Bates |  | 2 | O'Reilly Media | 2005/2/22 | English
 || Kathy Sierra |
+
 #### 说明
 随着 Java 的更新，有部分特性已经被弃用，请注意及时查阅最新文档（https://docs.oracle.com/en/java/ ）。
+
 ### Python
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
@@ -414,10 +418,12 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 | Python语言程序设计基础 | 嵩天 | 北京理工大学 | 2 |  | 2017/2 | 简体中文
 || 礼欣 | 北京理工大学
 || 黄天羽 | 北京理工大学
+
 #### 说明
 https://docs.python.org/3/ 上具有非常丰富的官方文档。
 
 Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的老代码的 Python 脚本，否则请选用 Python 3。
+
 ### C#
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
@@ -426,11 +432,16 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 || Jill Alison Hart
 | Illustrated C# | Cal Schrotenboer |  | 5 |  | 2018 | English
 || Daniel Solis
+
 #### 说明
 Microsoft 为 C# 准备了非常丰富的官方文档： https://docs.microsoft.com/en-us/dotnet/csharp/
+
 ### HTML+CSS+JS
+
 #### 说明
+
 ## 专业选修
+
 ### 计算机体系结构 / Computer Architecture
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
@@ -438,8 +449,10 @@ Microsoft 为 C# 准备了非常丰富的官方文档： https://docs.microsoft.
 | Computer Architecture, A Quantitative Approach | David A Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
 || John L. Hennessy | Stanford University
 | Computer Organization and Architecture: Designing for Performance | William Stallings |  | 11 | Pearson | 2018/3/1 | English
+
 #### 说明
 要求较高的院校可能将体系结构列为专业必修课。
+
 ### 算法 / Algorithms
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
@@ -456,12 +469,14 @@ Microsoft 为 C# 准备了非常丰富的官方文档： https://docs.microsoft.
 || 刘田 | 北京大学
 || 张立昂 | 北京大学
 || 王捍贫 | 北京大学
+
 #### 说明
 公开课包括但不限于：
 
 https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654
 
 算法设计与分析（北京大学）&emsp;主讲：屈婉玲
+
 ### 机器学习 / Machine Learning
 #### 课本
 
@@ -470,6 +485,7 @@ https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654
 #### 课本
 
 #### 说明
+
 # 第二章 我应该参加哪些活动？
 
 # 第三章 哪些事情应当尽早完成或尽早开始？
