@@ -195,13 +195,16 @@ https://www.bilibili.com/video/BV12s411h7v4?from=search&seid=1209165925049325951
 | 线性代数 | 李炯生 | 中国科学技术大学 || 中国科学技术大学出版社 | 1989 | 简体中文
 || 查建国 | 中国科学技术大学
 | Algebra | Michael Artin | Massachusetts Institute of Technology | 2 | Pearson | 2010 | English
-| Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  | English | 前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/index-1.html
+| Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  | English 
 ||Joseph Rabinoff | Duke University |
 | 基础代数 | 席南华 | 中国科学院大学 ||||简体中文
 | Linear Algebra Done Right | Sheldon Axler | University of California, Berkeley | 3 |  | 2015 | English
 || Kenneth Ribet | San Francisco State University
 
 #### 说明
+
+GATech 的《Interactive Linear Algebra》，可前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/chap-algebra.html
+
 李炯生等编著的《线性代数》可选 2010 年第 2 版。但是，原书面向的是中国科学技术大学数学系或少年班，难度较大，不建议数学功底较弱的同学选用。
 
 如果你具有一定的线代基础，那么 MIT 的教材《Introduction to Linear Algebra》及其公开课可能难度偏低（不够深入）。
