@@ -463,12 +463,14 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | Computer Networking: A Top-Down Approach | James F. Kurose | University of Massachusetts, Amherst | 8 | Pearson | 2020-Spring | English
 || Keith W. Ross | New York University
-| 计算机网络 | 谢希仁 | 陆军工程大学 | 7 | 电子工业出版社 | 2017 | 简体中文
+| 计算机网络 | 谢希仁 | 陆军工程大学 | 8 | 电子工业出版社 | 2021/6 | 简体中文
 
 #### 说明
-谢的《计算机网络》，我们老师说如果用的中文教材的话基本都是用这本。同时这本书也是很多学校考研指定的参考书。用于和《自顶向下方法》互为补充也是很不错的。
+关于谢的《计算机网络》，我们老师说：如果大学用的是中文教材，那么基本都是用这本。同时，这本书也是很多学校的计算机类考研指定的参考书。用于和《自顶向下方法》互为补充，也是很不错的。
 
 注：有的学校的人工智能等方向不将《计算机网络》列为必修课。
+
+《自顶向下方法》第 8 版删去了第 7 版的第 9 章 “多媒体网络”，作者说明称：由于多媒体应用越来越流行，因此他们选择将这些内容编入前 8 个章节。从书中移除的内容都可以在书本的配套网站找到。
 
 推荐开课学期：5
 
@@ -493,12 +495,14 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| Compilers: Principles, Techniques, and Tools | Alfred V.Aho | Columbia University |  |  |  | English
+| Compilers: Principles, Techniques, and Tools | Alfred V.Aho | Columbia University | 2 | Pearson/Addison Wesley | 2006 | English
 || Ravi Sethi | University of Arizona
 || Jeffrey D.Ullman | Stanford University
-| Modern Compiler Implementation in C | Andrew W. Appel |  |  |  |  | English
-| Advanced Compiler Design and Implementation | Steven Muchnick |  |  |  |  | English
-| Compiler Construction: Principles and Practice | Kenneth C. Louden | San Jose State University | | | | English
+| Modern Compiler Implementation in C | Andrew W. Appel | Princeton University |  | Cambridge University Press | 2004 | English
+| Advanced Compiler Design and Implementation | Steven S. Muchnick |  |  | Morgan Kaufmann | 1997 | English
+| Compiler Construction: Principles and Practice | Kenneth C. Louden | San Jose State University | | | 1997 | English
+| Engineering a Compiler | Keith D. Cooper | Rice University | 2 | Morgan Kaufmann / Elsevier Science & Technology | 2011 | English |
+|| Linda Torczon | Rice University
 
 #### 说明
 我们学院的情况是：软工必修，信安选修。
