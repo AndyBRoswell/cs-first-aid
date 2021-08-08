@@ -445,7 +445,7 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| Computer Organization and Design: The Hardware/Software Interface | David A Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
+| Computer Organization and Design: The Hardware/Software Interface | David A. Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
 || John L. Hennessy | Stanford University
 | Computer Systems: A Programmer's Perspective | Randal E. Bryant | Carnegie Mellon University |  | Pearson |  | English
 || David R. O'Hallaron | Carnegie Mellon University
@@ -546,6 +546,7 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 || Jill Alison Hart
 | Illustrated C# | Cal Schrotenboer |  | 5 |  | 2018 | English
 || Daniel Solis
+| C# 程序设计教程 | 唐大仕 | 北京大学 | 2 | 清华大学出版社；北京交通大学出版社 | 2018/3 | 简体中文 |
 
 #### 说明
 Microsoft 为 C# 准备了非常丰富的官方文档： https://docs.microsoft.com/en-us/dotnet/csharp/
