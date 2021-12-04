@@ -191,15 +191,18 @@ https://www.bilibili.com/video/BV12s411h7v4?from=search&seid=1209165925049325951
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: |
 | 高等代数 | 丘维声 | 北京大学 | 2 | 清华大学出版社 | 2019/6 | 简体中文
+||| 西安交通大学
 | Introduction to Linear Algebra | Gilbert Strang | Massachusetts Institute of Technology | 5 | 2016 |  | English
 | 线性代数 | 李炯生 | 中国科学技术大学 || 中国科学技术大学出版社 | 1989 | 简体中文
 || 查建国 | 中国科学技术大学
 | Algebra | Michael Artin | Massachusetts Institute of Technology | 2 | Pearson | 2010 | English
 | Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  | English 
 ||Joseph Rabinoff | Duke University |
-| 基础代数 | 席南华 | 中国科学院大学 ||||简体中文
+| 基础代数 | 席南华 | 中国科学院大学 |||| 简体中文
 | Linear Algebra Done Right | Sheldon Axler | University of California, Berkeley | 3 |  | 2015 | English
 || Kenneth Ribet | San Francisco State University
+| 线性代数 | 李尚志 | 中国科学技术大学 |||| 简体中文
+||| 北京航空航天大学
 
 #### 说明
 
