@@ -66,6 +66,15 @@ Hardware is cheap. Programmers are expensive.
   - 内置存储尽量必选 SSD，防震；可选 HDD，相同价格下容量大。
   - 外置存储 SSD 或 HDD 均可。
   - 尽量购买大容量的产品。
+- 云盘：
+  - Google Drive：单人免费 15 GB。
+  - OneDrive：单人免费 5 GB。
+    - 有用户反映：OneDrive 的同步机制不是高度可靠，导致自己的数据丢失。
+    - 使用 edu 邮箱虽然能开通 1 TB 的存储空间，但所在高校或科研院所的管理员**能够查看并修改存储内容**。注意事项参见 https://blog.csdn.net/COFACTOR/article/details/103261624 。
+  - Mega 网盘。
+  - 百度网盘：5 GB + 1024 GB。
+    - 有用户反映：百度网盘的 “秒传” 功能可能 “撞哈希”，导致误判不同文件为相同文件。
+  - 微云：单人免费 10 GB。
 
 ## 电子书
 
@@ -105,7 +114,23 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
 
 经济条件不错的，不建议勤工俭学。
 - 与志愿活动不同。勤工俭学会有少量的工资，因此不可以算作志愿活动。
-- 实在有闲的情况除外（现在已经基本不可能，除非是有条件继承家产的各种二代）。
+- 实在有闲的情况除外（按照现在的卷情，已经基本不可能，除非是有条件继承家产的各种二代）。
+
+### 开通自己学校或科研机构的 edu 邮箱
+具体方式一般可参见就读单位的官网，或询问本单位的相关人员。
+
+许多软件使用教育邮箱注册可享受极大优惠。例如：
+- Visual Studio Community。**只有通过教育邮箱才可以使用**。另外两个版本 Professional 和 Enterprise 都是收费的。
+  - 注：Windows 平台的 VS 主要使用 C# 开发，GUI 框架为 WPF。实践表明，Windows 系统中，其运行速度显著快于 JetBrains 系列 IDE（Java + Swing）。美中不足的是，Visual Studio 尚不支持在 Linux 系统中运行。
+- JetBrains 全家桶——**免费，免费，免费！** 举例：
+  - CLion：跨平台 C++ IDE
+  - IntelliJ IDEA：最流行的 Java IDE（也支持 Kotlin）
+  - Rider：跨平台 C# IDE
+  - PyCharm：广受好评的 Python IDE
+  - WebStorm：不错的 Web 开发 IDE
+
+顺带一提，不仅仅是计算机行业的软件，其它领域也可以享受到教育优惠。例如：
+- Sonarworks SoundID Reference：校正监听音箱和监听耳机。折扣力度很多都在 40% 以上。
 
 ### 千万不要高估自己的记忆力
 能记下来的就记下来，特别是那些主要靠记忆的、零散的知识点。
