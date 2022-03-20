@@ -177,8 +177,9 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
 - 程艺版本的较新，但网上暂时没有配套的公开课。
 - 薛春华、徐森林编著的《习题全解》有解析。
 - 限于时间和篇幅，这里没有列出更多课本。多年以来，国内外的几代科教工作者留下了相当多的优秀教材，比如张筑生的《数学分析》和 Владимир Антонович Зорич（B. A. 卓里奇）的《数学分析》共 2 卷（**“难得惨绝人寰”**）。
+- 中国科学院大学微积分 A 班选用卓里奇《数学分析》。
 
-
+**大学的数学分析、高等代数、概率统计、普通物理等课程都已相当成熟的。因此，教材的影响没有那么大，教材之间的差距也没有那么大。如果纠结选择哪一本，不妨随机抽选。只要不是实在写得太烂，教材本身基本上不会带来大问题。**
 
 推荐开课学期：1 ~ 2。
 
@@ -211,12 +212,12 @@ http://www.dean.pku.edu.cn/userfiles/upload/download/202009220815142452.pdf
 
 ### 高等代数 || 线性代数 / Linear Algebra
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注 | 
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 高等代数 | 丘维声 | 北京大学 | 2 | 清华大学出版社 | 2019/6 | 简体中文
 ||| 西安交通大学
 | Introduction to Linear Algebra | Gilbert Strang | Massachusetts Institute of Technology | 5 | 2016 |  | English
-| 线性代数 | 李炯生 | 中国科学技术大学 || 中国科学技术大学出版社 | 1989 | 简体中文
+| 线性代数 | 李炯生 | 中国科学技术大学 || 中国科学技术大学出版社 | 1989 | 简体中文 | **困难**
 || 查建国 | 中国科学技术大学
 | Algebra | Michael Artin | Massachusetts Institute of Technology | 2 | Pearson | 2010 | English
 | Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  | English 
@@ -228,12 +229,10 @@ http://www.dean.pku.edu.cn/userfiles/upload/download/202009220815142452.pdf
 ||| 北京航空航天大学
 
 #### 说明
-
-GATech 的《Interactive Linear Algebra》，可前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/chap-algebra.html
-
-李炯生等编著的《线性代数》可选 2010 年第 2 版。但是，原书面向的是中国科学技术大学数学系或少年班，难度较大，不建议数学功底较弱的同学选用。
-
-如果你具有一定的线代基础，那么 MIT 的教材《Introduction to Linear Algebra》及其公开课可能难度偏低（不够深入）。
+- GATech 的《Interactive Linear Algebra》，可前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/chap-algebra.html
+- 李炯生等编著的《线性代数》可选 2010 年第 2 版。但是，原书面向的是中国科学技术大学数学系或少年班，难度较大，不建议数学功底较弱的同学选用。
+- 如果你具有一定的线代基础，那么 MIT 的教材《Introduction to Linear Algebra》及其公开课可能难度偏低（不够深入）。
+- 中国科学院大学数学系有班级选用 Алексей Иванович Кострикин（柯斯特利金）的《代数学引论》。
 
  “高等代数” 是苏联的说法，在欧美高校中没有对应的课程。在中国内地，“高等代数” 一般在数学系开设，内容比 “线性代数” 课程要多。
 
@@ -241,37 +240,34 @@ GATech 的《Interactive Linear Algebra》，可前往以下网页在线浏览�
 
 推荐开课学期：1 ~ 2。
 
-#### 例
-南京大学人工智能学院要求学习两个学期的高等代数。
-
-北京大学 “图灵班” 要求学习高等代数。
+#### 院校开课情况选讲
+- 南京大学人工智能学院要求学习两个学期的高等代数。
+- 北京大学 “图灵班” 要求学习高等代数。
 
 #### 公开课与参考资料
 包括但不限于：
 
-https://www.bilibili.com/video/BV19W411G7QU?from=search&seid=14404683565163581636
-
-高等代数（北京大学）&emsp;主讲：丘维声
-
-本课程是面向清华大学物理系学生的基础必修课。
-
-建议倍速：≤ 1.5 x
-
-https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371
-
-Introduction to Linear Algebra（Massachusetts Institute of Technology）&emsp;主讲：Gilbert Strang
-
-建议倍速：≤ 1.5 x
-
-https://www.bilibili.com/video/BV1ys411472E
-
-（参考资料）线性代数的本质&emsp;主讲：3Blue1Brown
+- https://www.bilibili.com/video/BV19W411G7QU?from=search&seid=14404683565163581636
+- 高等代数（北京大学）&emsp;主讲：丘维声
+- 本课程是面向清华大学物理系学生的基础必修课。
+- 建议倍速：≤ 1.5 x
+- 
+- https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371
+- Introduction to Linear Algebra（Massachusetts Institute of Technology）&emsp;主讲：Gilbert Strang
+- 建议倍速：≤ 1.5 x
+- https://www.bilibili.com/video/BV1ys411472E
+- 
+- （参考资料）线性代数的本质&emsp;主讲：3Blue1Brown
 
 ### 离散数学 / Discrete Mathematics
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Discrete Mathematics and its Applications | Kenneth H. Rosen |  | 8 | McGraw-Hill Higher Education | 2018/7/9 | English
+| 离散数学 | 左孝凌 | 上海交通大学 |||| 简体中文
+| 离散数学教程 | 屈婉玲 | 北京大学 |  | 北京大学出版社 | 2014/2 | 简体中文
+|| 耿素云 | 北京大学
+|| 张立昂 | 北京大学
 | 离散数学教程 | 耿素云 | 北京大学 |  | 北京大学出版社 | 2009/7 | 简体中文
 || 屈婉玲 | 北京大学
 || 王捍贫 | 北京大学
@@ -282,23 +278,31 @@ https://www.bilibili.com/video/BV1ys411472E
 
 #### 说明
 离散数学为计算机类专业的必修课。常学习两个学期，也有许多学校学习一个学期，少数学校三个学期。
+离散数学的学习内容主要包括：
+- 数理逻辑
+- 集合论
+- 代数系统（代数结构） / 近世代数（抽象代数）
+- 组合数学
+- 图论
+- 数论
 
-#### 例
-北京大学计算机类专业（含 “图灵班” ）学习三个学期的离散数学。
+在数学类专业，这些内容一般会单独开课。但在计算机类专业，对掌握这些知识的要求要低很多（例如，只教简单的命题逻辑和一阶逻辑，基础的集合论与图论、抽象代数，以及初等数论，等等），因此通常把授课内容合并在一起，统称 “离散数学”。
+
+#### 院校开课情况选讲
+- 北京大学计算机类专业（含 “图灵班” ）学习三个学期的离散数学。
 
 推荐开课学期：1 ~ 2。
 
 #### 公开课
 包括但不限于：
 
-https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
-
-离散数学（北京大学）&emsp;主讲：刘田、屈婉玲、王捍贫
+- https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
+- 离散数学（北京大学）&emsp;主讲：刘田、屈婉玲、王捍贫
 
 ### 概率论与数理统计 / Probability Theory and Statistics
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 概率论与数理统计 | 陈希孺 | 中国科学技术大学 |  | 中国科学技术大学出版社 | 2009 | 简体中文
 | 概率论与数理统计 | 徐全智 | 电子科技大学 |  | 高等教育出版社 | 2004 | 简体中文
 || 吕恕 | 电子科技大学
@@ -311,7 +315,7 @@ https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
 ### 物理 / Physics
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 大学物理学 | 张三慧 | 清华大学 | 4 | 清华大学出版社 |  | 简体中文
 | 普通物理学 | 程守洙 | 南京大学 | 7 | 高等教育出版社 | 2016 | 简体中文
 || 江之永 | 南京大学
@@ -319,24 +323,23 @@ https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
 || 周雨青 | 东南大学
 
 #### 说明
-内地各大学通常将大学物理列为工科公共必修课，修习一到两个学期。化学等工科可能需要学习两个学期；生物、医学、农学等专业一般安排一个学期。
+内地各大学通常将大学物理列为工科公共必修课，修习一到两个学期。
+- 化学等工科可能需要学习两个学期；
+- 生物、医学、农学等专业一般安排一个学期。
 
 一般地，普通物理为物理类专业的必修课程，常分为力学、热学、电磁学、光学和原子物理学五门课。大学物理是非物理专业的公共基础课，也包括力、热、电、光、原，但课时明显比物理系少，学习内容和难度也比物理系低。
 
 物理苦手可以选择难度偏低的《物理学教程》，东南大学编写。
 
-大学物理可以巩固微积分的掌握。因此，一般在学习完单变量微积分以后开始学习。
+大学物理可以巩固微积分的掌握。因此，一般在学习完单变量微积分（高等数学 I）以后开始学习。
 
 推荐开课学期：1 ~ 2。
 
-#### 例
-(*) 中国科学技术大学计算机科学与技术专业 2020 级培养方案要求学习三个学期的物理类课程，包括：
-
-第一学期：力学 B、热学 B。
-
-第二学期：大学物理-基础实验 A、电磁学 C。
-
-第三学期：大学物理-综合实验、光学 B、原子物理 B。
+#### 院校开课情况选讲
+(*) 中国科学技术大学计算机科学与技术专业 2020 级培养方案要求学习三个学期的物理类课程：
+- 第一学期：力学 B、热学 B。
+- 第二学期：大学物理-基础实验 A、电磁学 C。
+- 第三学期：大学物理-综合实验、光学 B、原子物理 B。
 
 学有余力的学霸与学神可以考虑尝试。
 
@@ -347,36 +350,45 @@ https://catalog.ustc.edu.cn/plan
 #### 公开课
 包括但不限于：
 
-https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
-
-普通物理学（清华大学）&emsp;主讲：杨振宁
+- https://www.bilibili.com/video/BV1Fx411T7sV?from=search&seid=3309839293019551596
+- 普通物理学（清华大学）&emsp;主讲：杨振宁
 
 ### C 语言 / C Programming Language
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 |The C Programming Language | Brian W. Kernighan |  |  |  | 2019/9/6 | English
 || Dennis M. Ritchie
 | C Primer Plus | Stephen Prata | College of Marin in Kentfield | 6 | Pearson | 2014 | English
 
 #### 说明
-许多专业课给出的代码示例是用 C 语言编写的。同时，如果想走嵌入式 / 内核等方向，对 C 语言的掌握是必不可少的。
+许多专业课给出的代码示例是用 C / C++ 语言编写的。同时，如果想走嵌入式 / 内核等方向，对 C 语言的掌握是必不可少的。
+
+自 1972 年推出以来，C 语言已经发布了多个版本。C 语言在 1989 年首次标准化，得到的标准称为 ANSI C（C89）。此后，又陆续发布了 C95、C99、C11 和 C17（2018-10 发布）版本。预计在 2023 年发布新的版本，非正式版本号 C2x。学习 C 语言时，需要注意了解新版本的特性。
+
+2022 年 2 月：Linux 内核将从 C89 迁移至 C11。
 
 推荐开课学期：1。
 ### C++ / C++
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | C++ Primer | Josée Lajoie |  | 6 | Addison-Wesley Professional | 2020/11/2 | English
 || Stanley B. Lippman
 || Barbara E. Moo
 
 #### 说明
-笔者认为，C++ 应当是必修的。这是因为：相比 Java、Python、C# 等语言，C / C++ 更加贴近硬件。打好 C / C++ 的基础，有利于尽快建立对计算机整体的认识，形成硬件软件结合的基本思想。此外，许多其它高级语言的语法和代码风格等，都可以在 C++ 中找到。如果在熟悉 C++ 以后再去学习其它语言，学习速率就会快得多，因为要学习的很多内容都是自己已经接触过了的。
+笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等语言，C / C++ 更加贴近硬件。打好 C / C++ 的基础，有利于尽快建立对计算机整体的认识，形成硬件软件结合的基本思想。此外，许多其它高级语言的语法和代码风格等，都可以在 C++ 中找到。如果在熟悉 C++ 以后再去学习其它语言，学习速率就会快得多，因为要学习的很多内容都是自己已经接触过了的。
 
 C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草稿（final draft），最终草稿与正式标准一般只有顺序上的区别。
 
 可以到 http://cplusplus.com/ 和 https://en.cppreference.com/w/ 查阅资料（中文版： https://zh.cppreference.com/w/ ）。
+
+Microsoft 的官方文档 https://docs.microsoft.com/en-us/cpp/cpp 也是非常不错的学习现代 C++（Modern C++）的材料。不过，Microsoft 的文档给出的自然是 Microsoft Visual C++（MSVC）的参考，可能与官方标准有一定差异。
+
+不同的 C / C++ 编译器（compiler）对 C / C++ 标准的实现是有出入的，但常见的语法一般都遵循标准。
+
+自 1985 年发布以来，C++ 已经更新了数个版本，主要包括 C++98、C++03、C++11、C++14、C++17、C++20。C++23 标准基本已经接近完成，预计将在 2023 年发布。
 
 “一年精通，三年熟悉，五年了解，十年用过”，C++ 作为编程语言的复杂度在世界上数一数二，1 个学期能学到的全部知识，充其量连皮毛都算不上。想要掌握 C++，一个学期的学习自然是远远不够的。如果你想向图形学、游戏、高性能计算、操作系统、高频交易等方向发展，或者想成为库作者，就更有必要将 C++ 的基础打扎实。因为这些方面需要的软件对性能的要求是很高的。C++ 是编写高性能软件的必备语言。
 
@@ -387,7 +399,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 ### 数字逻辑电路 / Digital Logic Circuit
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 数字设计基础与应用 | 邓元庆 | 陆军工程大学 | 2 | 清华大学出版社 |  | 简体中文
 || 关宇 | ?
 || 贾鹏 | ?
@@ -409,7 +421,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 ### 汇编语言 / Assembly Language
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Assembly Language for x86 Processors, 8th edition | Kip R. Irvine | Florida International University | 8 | Pearson | 2019/8/27 | English | Recommended by @himself65
 #### 说明
 感谢 @himself65 推荐了《Assembly Language for x86 Processors》。
@@ -424,7 +436,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 ### 数据结构 / Data Structures
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 数据结构（C++版） | 邓俊辉 | 清华大学 | 3 | 清华大学出版社 |  | 简体中文
 | 数据结构习题解析 | 邓俊辉 | 清华大学 | 3 | 清华大学出版社 |  | 简体中文
 | 数据结构（C语言版） | 严蔚敏 | 清华大学 | 2 | 中国工信出版集团 | 2015/2 | 简体中文
@@ -445,7 +457,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 ### 操作系统 / Operating Systems
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Operating System: Three Easy Pieces | Remzi H. Arpaci-Dusseau | University of Wisconsin-Madison |  |  |  | English
 || Andrea C. Arpaci-Dusseau | University of Wisconsin-Madison
 || Peter Reiher | University of California, Los Angeles
@@ -474,7 +486,7 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 ### 计算机组成原理 / Computer Organization
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Computer Organization and Design: The Hardware/Software Interface | David A. Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
 || John L. Hennessy | Stanford University
 | Computer Systems: A Programmer's Perspective | Randal E. Bryant | Carnegie Mellon University |  | Pearson |  | English
@@ -490,7 +502,7 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 ### 计算机网络 / Computer Networking
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Computer Networking: A Top-Down Approach | James F. Kurose | University of Massachusetts, Amherst | 8 | Pearson | 2020-Spring | English
 || Keith W. Ross | New York University
 | 计算机网络 | 谢希仁 | 陆军工程大学 | 8 | 电子工业出版社 | 2021/6 | 简体中文
@@ -507,7 +519,7 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 ### 数据库 / Database
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Database System Concepts | Abraham Silberschatz | Yale University | 7 | McGraw-Hill Higher Education | 2019/2/19 | English | Recommended by @vczh
 | 数据库系统概论 | 王珊 | 中国人民大学 | 5 | 高等教育出版社 | 2014 | 简体中文
 || 萨师煊 | 中国人民大学
@@ -524,7 +536,7 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 ### 编译原理 / The Principle of Compilation
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Compilers: Principles, Techniques, and Tools | Alfred V.Aho | Columbia University | 2 | Pearson/Addison Wesley | 2006 | English
 || Ravi Sethi | University of Arizona
 || Jeffrey D.Ullman | Stanford University
@@ -544,7 +556,7 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 ### Java
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Thinking in Java | Bruce Eckel |  | 4 | Pearson | 2006/2/20 | English
 | Head First Java | Bert Bates |  | 2 | O'Reilly Media | 2005/2/22 | English
 || Kathy Sierra |
@@ -555,7 +567,7 @@ http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese
 ### Python
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Python Crash Course | Eric Matthes |  | 2 |  | 2019/5/3 | English
 | Python Cookbook | David Beazley |  | 3 |  | 2013/5/23 | English
 || Brian K. Jones
@@ -571,7 +583,7 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 ### C#
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Head First C# | Andrew Stellman |  | 4 |  | 2020/12 | English
 || Jill Alison Hart
 | Illustrated C# | Cal Schrotenboer |  | 5 |  | 2018 | English
@@ -594,7 +606,7 @@ Microsoft 为 C# 准备了非常丰富的官方文档： https://docs.microsoft.
 ### 计算机体系结构 / Computer Architecture
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Computer Architecture, A Quantitative Approach | David A Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
 || John L. Hennessy | Stanford University
 | Computer Organization and Architecture: Designing for Performance | William Stallings |  | 11 | Pearson | 2018/3/1 | English
@@ -605,7 +617,7 @@ Microsoft 为 C# 准备了非常丰富的官方文档： https://docs.microsoft.
 ### 算法 / Algorithms
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :----: | :----: | :----: | :----: | :----: | :----: | :----: |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | Introduction to Algorithms | Thomas H. Cormen |  | 3 | MIT Press | 2009/7/31 | English
 || Charles E. Leiserson
 || Ronlad L. Rivest
