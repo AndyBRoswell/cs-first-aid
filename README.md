@@ -745,7 +745,7 @@ https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654
 
 # 附录二&emsp;推荐读物
 
-本部分最后更新于：2021/2/11
+本部分最后更新于：2022/4/24
 
 CS自救指北&emsp;迟先生
 
@@ -754,5 +754,9 @@ https://survivesjtu.gitbook.io/survivesjtumanual/fu-lu/ben-ke-sheng-zhuan-ye-jie
 退学&emsp;himself65
 
 https://www.himself65.com/quit-qhnu/
+
+CS 自学指南
+
+https://csdiy.wiki/
 
 # 后记&emsp;人和人年和月都太内卷
