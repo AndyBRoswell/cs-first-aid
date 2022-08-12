@@ -132,7 +132,7 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
 
 不要去抢那些零碎的优惠。比如：
 - 学校附近某个奶茶店开张，为了几块十来块的优惠去排队一个下午。真的很没有必要。况且，奶茶喝多了也不好。
-- 笔者做志愿活动期间，看到过有商家在某小区门口搞活动，奖品无非是粽子或者其它一些简单的吃的，或者一二十块这种程度的返现，结果那小区里外好多人（特别是老人家）就在那里折腾了一上午。真替他们觉得累。
+- 笔者做志愿活动期间，看到过有商家在某小区门口搞活动，奖品无非是粽子或者其它一些简单的吃的，或者一二十块这种程度的返现，结果那小区里外好多人（特别是老人家）就在那里挤着来参加，折腾了一上午。真替他们觉得累。
 - “瓜分XX亿”？收皮啦你！
 
 经济条件不错的，不建议勤工俭学。
@@ -144,18 +144,18 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
 
 许多软件使用教育邮箱注册可享受极大优惠。例如：
 - Visual Studio Community。**只有通过教育邮箱才可以使用**。另外两个版本 Professional 和 Enterprise 都是收费的。
-  - 注：Windows 平台的 VS 主要使用 C# 开发，GUI 框架为 WPF。实践表明，Windows 系统中，其运行速度显著快于 JetBrains 系列 IDE（Java + Swing）。美中不足的是，Visual Studio 尚不支持在 Linux 系统中运行。
+  - Windows 平台的 VS 主要使用 C# 开发，GUI 框架为 WPF。实践表明，Windows 系统中，其运行速度显著快于 JetBrains 系列 IDE（Java + Swing）。美中不足的是，Visual Studio 尚不支持在 Linux 系统中运行。
   - 请及时升级到 Visual Studio 2022 新版本。因为 VS2022 是 64 位的，允许使用超过 4 GB 的内存，并提升运行于 64 位环境下的性能，有利于顺利打开超大规模的解决方案（solution，VS 里面一个 solution 包含若干个工程或项目，也就是 project，很多 IDE 都只有 project 的概念）。另外，代码补全的改进获得了开发者们的较多好评。
 - JetBrains 全家桶——**免费，免费，免费！** 举例：
   - CLion：跨平台 C++ IDE
-  - IntelliJ IDEA：最流行的 Java IDE（也支持 Kotlin 等语言）
+  - IntelliJ IDEA：最流行的 Java IDE（也支持 Kotlin、Groovy、Scala 等需要 JVM 的语言）
   - Rider：跨平台 C# IDE
   - PyCharm：广受好评的 Python IDE
   - WebStorm：相当不错的 Web 开发 IDE
 - Microsoft Office Home & Student
 
 顺带一提，不仅仅是计算机行业的软件，其它领域也有机会充分享受教育优惠。例如：
-- Sonarworks SoundID Reference：校正监听音箱和监听耳机。教育优惠的折扣力度很多都在 40% 以上。
+- Sonarworks SoundID Reference：校正监听音箱和监听耳机的频响曲线和延迟。教育优惠的折扣力度经常都在 40% 以上。
 
 ### 千万不要高估自己的记忆力
 能记下来的就记下来，特别是那些主要靠记忆的、零散的知识点。
