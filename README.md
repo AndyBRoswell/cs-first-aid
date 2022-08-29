@@ -185,7 +185,7 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
 - 每天做一些数学题，微积分之类的。
 - 提前去刷 LeetCode 或 HackerRank，或者到各大学校的 Online Judge（OJ）上做算法题。
 - 在开源站点上找一些具有自己感兴趣的功能的软件，模仿它们的实现。
-  - 常见的知名开源网站：GitHub、GitLab、BitBucket、SourceForge、Gitee、Jira……
+  - 常见的知名开源网站：GitHub、GitLab、BitBucket、SourceForge、Gitee ……
   - 并不是所有高 Star 的开源项目都具有良好的代码结构。每个程序员都应当形成最适合自己的一套代码风格。
 
 ### 自动化
