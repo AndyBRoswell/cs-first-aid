@@ -596,7 +596,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Compilers: Principles, Techniques, and Tools | Alfred V.Aho | Columbia University | 2 | Pearson/Addison Wesley | 2006 | English
+| Compilers: Principles, Techniques, and Tools | Alfred V. Aho | Columbia University | 2 | Pearson/Addison Wesley | 2006 | English
 || Ravi Sethi | University of Arizona
 || Jeffrey D.Ullman | Stanford University
 | Modern Compiler Implementation in C | Andrew W. Appel | Princeton University |  | Cambridge University Press | 2004 | English
