@@ -527,7 +527,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Operating System: Three Easy Pieces | Remzi H. Arpaci-Dusseau | University of Wisconsin-Madison |  |  |  | English
+| Operating Systems: Three Easy Pieces | Remzi H. Arpaci-Dusseau | University of Wisconsin-Madison |  |  |  | English
 || Andrea C. Arpaci-Dusseau | University of Wisconsin-Madison
 || Peter Reiher | University of California, Los Angeles
 | 计算机操作系统 | 汤小丹 | ? | 4 | 西安电子科技大学出版社 | 2014 | 简体中文
