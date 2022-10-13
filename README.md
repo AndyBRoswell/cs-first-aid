@@ -151,18 +151,20 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
 
 ### 开通自己学校或科研机构的 edu 邮箱
 
-具体方式一般可参见就读单位的官网，或询问本单位的相关人员。
+具体方式一般可参见就读单位的官方网站，或询问本单位的相关人员。
 
 许多软件使用教育邮箱注册可享受极大优惠。例如：
 - Visual Studio Community。**只有通过教育邮箱才可以使用**。另外两个版本 Professional 和 Enterprise 都是收费的。
-  - Windows 平台的 VS 主要使用 C# 开发，GUI 框架为 WPF。实践表明，Windows 系统中，其运行速度显著快于 JetBrains 系列 IDE（Java + Swing）。美中不足的是，Visual Studio 尚不支持在 Linux 系统中运行。
+  - Windows 平台的 VS 主要使用 C# 开发，GUI 框架为 WPF。大量实践表明，在 Windows 系统中，其运行速度显著快于 JetBrains 系列 IDE（Java + Swing）。美中不足的是，Visual Studio 尚不支持在 Linux 系统中运行。
   - 请及时升级到 Visual Studio 2022 新版本。因为 VS2022 是 64 位的，允许使用超过 4 GB 的内存，并提升运行于 64 位环境下的性能，有利于顺利打开超大规模的解决方案（solution，VS 里面一个 solution 包含若干个工程或项目，也就是 project，很多 IDE 都只有 project 的概念）。另外，代码补全的改进获得了开发者们的较多好评。
-- JetBrains 全家桶——**免费，免费，免费（不要再去找破解版了）！！** 举例：
-  - CLion：跨平台 C++ IDE
-  - IntelliJ IDEA：最流行的 Java IDE（也支持 Kotlin、Groovy、Scala 等需要 JVM 的语言）
+- 非教育用户需要付费使用的 JetBrains 全家桶——**免费，免费，免费（不要再去找破解版了）！！** 举例：
+  - CLion：跨平台 C++ IDE，通过 CMake 完成构建自动化
+  - IntelliJ IDEA：最流行的 Java IDE，支持 Kotlin、Groovy、Scala 等需要 JVM 的语言，支持使用 Spring 全家桶等 Web 框架的开发
   - Rider：跨平台 C# IDE
-  - PyCharm：广受好评的 Python IDE
-  - WebStorm：相当不错的 Web 开发 IDE
+  - PyCharm：广受好评的 Python IDE，支持 Django 等框架
+  - WebStorm：相当不错的 Web 开发 IDE，支持 Angular、React、Vue 等前端框架
+  - DataGrip：支持操纵众多主流的数据库，成熟的关系型数据库和新兴的非关系数据库都有
+  - Fleet（即将发布）：有望挑战 Visual Studio Code 的文本编辑器
 - Microsoft Office Home & Student
 
 顺带一提，不仅仅是计算机行业的软件，其它领域也有机会充分享受教育优惠。例如：
