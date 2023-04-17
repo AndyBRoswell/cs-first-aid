@@ -237,7 +237,7 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
 
 # 第一章&emsp;课程、教材与公开课
 
-本部分最后更新于：2022/8/19
+本部分最后更新于：2023/4/17
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -722,7 +722,7 @@ Kotlin in Action
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Introduction to Algorithms | Thomas H. Cormen |  | 3 | MIT Press | 2009/7/31 | English
+| Introduction to Algorithms | Thomas H. Cormen |  | 4 | MIT Press | 2022/4/5 | English
 || Charles E. Leiserson
 || Ronlad L. Rivest
 || Clifford Stein
