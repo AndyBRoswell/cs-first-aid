@@ -36,7 +36,7 @@
 
 # 第零章&emsp;提升效率的工具与思想
 
-本部分最后更新于：2022/12/26
+本部分最后更新于：2023/04/28
 
 ## 计算机
 
@@ -171,7 +171,7 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
   - Fleet（正在公测）：有望挑战 Visual Studio Code 的文本编辑器
 - Microsoft Office Home & Student
 
-GitHub 学生开发包：https://education.github.com/pack
+GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.com/pack
 
 顺带一提，不仅仅是计算机行业的软件，其它领域也有机会充分享受教育优惠。例如：
 - Sonarworks SoundID Reference：校正监听音箱和监听耳机的频响曲线和延迟。教育优惠的折扣力度经常都在 40% 以上。
@@ -239,7 +239,7 @@ GitHub 学生开发包：https://education.github.com/pack
 
 # 第一章&emsp;课程、教材与公开课
 
-本部分最后更新于：2023/4/17
+本部分最后更新于：2023/04/28
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -302,14 +302,12 @@ http://www.dean.pku.edu.cn/userfiles/upload/download/202009220815142452.pdf
 包括但不限于：
 
 - 复旦和中科大的数学分析课程，在网上都可以找到公开课。建议倍速：1.5 x ~ 2 x。
-- https://www.bilibili.com/video/BV1ZW411e7PF?from=search&seid=12091659250493259510
-- 
-- 数学分析（中国科学技术大学）&emsp;主讲：史济怀
-- 公开课录制时间比较早（2003 年秋开始录制），音质比较渣，而且有少量的视频有内容缺损。凑合着看吧。
-- https://www.bilibili.com/video/BV12s411h7v4?from=search&seid=12091659250493259510
-- 
-- 数学分析（复旦大学）&emsp;主讲：陈纪修
-- 有比较多的同学反映，中科大的数分比复旦的要难。大家可以根据自己实际的情况选择。
+  - 数学分析（中国科学技术大学）&emsp;主讲：史济怀
+    - https://www.bilibili.com/video/BV1ZW411e7PF?from=search&seid=12091659250493259510
+    - 公开课录制时间比较早（2003 年秋开始录制），音质比较渣，而且有少量的视频有内容缺损。凑合着看吧。
+  - 数学分析（复旦大学）&emsp;主讲：陈纪修
+    - https://www.bilibili.com/video/BV12s411h7v4?from=search&seid=12091659250493259510
+    - 有比较多的同学反映，中科大的数分比复旦的要难。大家可以根据自己实际的情况选择。
 
 ### 高等代数 || 线性代数 / Linear Algebra
 #### 课本
@@ -351,17 +349,16 @@ http://www.dean.pku.edu.cn/userfiles/upload/download/202009220815142452.pdf
 #### 公开课与参考资料
 包括但不限于：
 
-- https://www.bilibili.com/video/BV19W411G7QU?from=search&seid=14404683565163581636
 - 高等代数（北京大学）&emsp;主讲：丘维声
-- 本课程是面向清华大学物理系学生的基础必修课。
-- 建议倍速：≤ 1.5 x
-- 
-- https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371
+  - https://www.bilibili.com/video/BV19W411G7QU?from=search&seid=14404683565163581636
+  - 本课程是面向清华大学物理系学生的基础必修课。
+  - 建议倍速：≤ 1.5 x
 - Introduction to Linear Algebra（Massachusetts Institute of Technology）&emsp;主讲：Gilbert Strang
-- 建议倍速：≤ 1.5 x
-- https://www.bilibili.com/video/BV1ys411472E
-- 
+  - https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371
+  - 建议倍速：≤ 1.5 x
 - （参考资料）线性代数的本质&emsp;主讲：3Blue1Brown
+  - https://www.bilibili.com/video/BV1ys411472E
+  - 注意：线性代数基础较好的同学可能会感觉本视频讲解得过慢。
 
 ### 离散数学 / Discrete Mathematics
 #### 课本
@@ -388,12 +385,13 @@ http://www.dean.pku.edu.cn/userfiles/upload/download/202009220815142452.pdf
 - 代数系统（代数结构） / 近世代数（抽象代数）
 - 组合数学
 - 图论
-- 数论
+- 初等数论
 
 在数学类专业，这些内容一般会单独开课。但在计算机类专业，对掌握这些知识的要求要低很多（例如，只教简单的命题逻辑和一阶逻辑，基础的集合论与图论、抽象代数，以及初等数论，等等），因此通常把授课内容合并在一起，统称 “离散数学”。
 
 #### 院校开课情况选讲
 - 北京大学计算机类专业（含 “图灵班” ）学习三个学期的离散数学。
+- 北京大学为《离散数学》课程编著的教材具有多个不同的版本。其中，屈婉玲、耿素云、王捍贫编著，北京大学出版社 2009 年出版的《离散数学教程》是难度最高的版本，为北京大学计算机系本科生所使用。
 
 推荐开课学期：1 ~ 2。
 
@@ -470,7 +468,7 @@ https://catalog.ustc.edu.cn/plan
 
 自 1972 年推出以来，C 语言已经发布了多个版本。C 语言在 1989 年首次标准化，得到的标准称为 ANSI C（C89）。此后，又陆续发布了 C95、C99、C11 和 C17（2018-10 发布）版本。预计在 2023 年发布新的版本，非正式版本号 C2x。学习 C 语言时，需要注意了解新版本的特性。
 
-2022 年 2 月，Linux 内核作者 Linus Torvalds 表示，Linux 内核将从 C89 迁移至 C11。
+2022 年 2 月，Linux 内核作者 Linus Torvalds 表示：Linux 内核将从 C89 迁移至 C11。
 
 推荐开课学期：1。
 ### C++ / C++
@@ -480,8 +478,8 @@ https://catalog.ustc.edu.cn/plan
 | C++ Primer | Josée Lajoie |  | 6 | Addison-Wesley Professional | 2023 | English
 || Stanley B. Lippman
 || Barbara E. Moo
-| A Tour of C++ | Bjarne Stroustrup |  | Addison-Wesley Professional | 2022-09-24 | English
-| Professional C++ | Marc Gregoire | Microsoft |  | 2021-02 | English
+| A Tour of C++ | Bjarne Stroustrup |  | 3 | Addison-Wesley Professional | 2022-09-24 | English
+| Professional C++ | Marc Gregoire | Microsoft | 5 | 2021-02 | English
 ||| Belgian C++ Users Group
 
 #### 说明
@@ -527,7 +525,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 
 本来想修订一下笔记，然而由于时间关系，暂时鸽了。
 
-推荐开课学期：3
+推荐开课学期：2 ~ 3
 
 ### 汇编语言 / Assembly Language
 #### 课本
@@ -541,7 +539,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 
 非常多的学校（甚至包括有的顶校）还在教 8086 的汇编，哎……
 
-推荐开课学期：3 ~ 4（最好在学习操作系统和计算机组成原理等专业课之前就开始学习；与这些专业课同步学习亦可）
+推荐开课学期：2 ~ 4（最好在学习操作系统和计算机组成原理等专业课之前就开始学习；与这些专业课同步学习亦可）
 
 ## 专业必修
 ### 数据结构 / Data Structures
@@ -563,7 +561,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 
 其实严蔚敏的《数据结构》倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢。想考研的同学最好学习 / 复习本书。
 
-推荐开课学期：3
+推荐开课学期：2 ~ 3
 
 ### 操作系统 / Operating Systems
 #### 课本
@@ -583,7 +581,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 - OSTEP 作者主页上有英文版，中文版不能直接从主页里找到，且不会像英文版那样随时更新。前往 http://pages.cs.wisc.edu/~remzi/OSTEP/ 获得最新版本。 http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese 为中译版。
 - 汤子瀛等编著的《计算机操作系统》为内地众多知名高校的计算机类专业考研的指定参考书，其中部分内容可以作为 OSTEP 的补充。
 
-推荐开课学期：4
+推荐开课学期：3 ~ 4
 
 ### 计算机组成原理 / Computer Organization
 #### 课本
@@ -599,7 +597,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 #### 说明
 考研的同学可以以唐朔飞的《计算机组成原理》为参考资料。
 
-推荐开课学期：4
+推荐开课学期：3 ~ 4
 
 ### 计算机网络 / Computer Networking
 #### 课本
@@ -616,7 +614,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 
 《自顶向下方法》第 8 版删去了第 7 版的第 9 章 “多媒体网络”，作者说明称：由于多媒体应用越来越流行，因此他们选择将这些内容编入前 8 个章节。从书中移除的内容都可以在书本的配套网站找到。
 
-推荐开课学期：5
+推荐开课学期：3 ~ 5
 
 ### 数据库 / Database
 #### 课本
@@ -632,7 +630,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 
 我们学院的情况是：软工必修，信安选修。
 
-推荐开课学期：5
+推荐开课学期：3 ~ 5
 
 ### 编译原理 / The Principle of Compilation
 #### 课本
@@ -650,7 +648,7 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 #### 说明
 我们学院的情况是：软工必修，信安选修。
 
-推荐开课学期：6
+推荐开课学期：4 ~ 6
 
 ## 基础选修
 
