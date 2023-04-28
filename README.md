@@ -479,7 +479,7 @@ https://catalog.ustc.edu.cn/plan
 || Stanley B. Lippman
 || Barbara E. Moo
 | A Tour of C++ | Bjarne Stroustrup |  | 3 | Addison-Wesley Professional | 2022-09-24 | English
-| Professional C++ | Marc Gregoire | Microsoft | 5 | 2021-02 | English
+| Professional C++ | Marc Gregoire | Microsoft | 5 | Wrox | 2021-02 | English
 ||| Belgian C++ Users Group
 
 #### 说明
