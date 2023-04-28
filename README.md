@@ -475,7 +475,7 @@ https://catalog.ustc.edu.cn/plan
 #### 课本
 | 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| C++ Primer | Josée Lajoie |  | 6 | Addison-Wesley Professional | 2023 | English
+| C++ Primer | Josée Lajoie |  | 6 | Addison-Wesley Professional | 2023? | English
 || Stanley B. Lippman
 || Barbara E. Moo
 | A Tour of C++ | Bjarne Stroustrup |  | 3 | Addison-Wesley Professional | 2022-09-24 | English
@@ -483,7 +483,7 @@ https://catalog.ustc.edu.cn/plan
 ||| Belgian C++ Users Group
 
 #### 说明
-笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等高级语言，C / C++ 更加贴近硬件。打好 C / C++ 的基础，有利于尽快建立对计算机的主要部件与计算机整体的认识，形成硬件软件结合的基本思想，对计算机将如何执行自己编写的语句有一个更加明确的思路。
+笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等高级语言，C / C++ 更加贴近硬件，因而暴露了计算机工作时涉及的许多原理与细节。打好 C / C++ 的基础，有利于尽快建立对计算机的主要部件与计算机整体的认识，对计算机将如何执行自己编写的语句有一个更加明确的思路。
 
 此外，许多其它高级语言的语法和代码风格等，都可以在 C++ 中找到。如果在熟悉 C++ 以后再去学习其它语言，学习速率就会快得多，因为要学习的很多内容都是自己已经接触过了的。
 
