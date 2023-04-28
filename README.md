@@ -171,6 +171,8 @@ ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在�
   - Fleet（正在公测）：有望挑战 Visual Studio Code 的文本编辑器
 - Microsoft Office Home & Student
 
+GitHub 学生开发包：https://education.github.com/pack
+
 顺带一提，不仅仅是计算机行业的软件，其它领域也有机会充分享受教育优惠。例如：
 - Sonarworks SoundID Reference：校正监听音箱和监听耳机的频响曲线和延迟。教育优惠的折扣力度经常都在 40% 以上。
 
@@ -478,6 +480,9 @@ https://catalog.ustc.edu.cn/plan
 | C++ Primer | Josée Lajoie |  | 6 | Addison-Wesley Professional | 2023 | English
 || Stanley B. Lippman
 || Barbara E. Moo
+| A Tour of C++ | Bjarne Stroustrup |  | Addison-Wesley Professional | 2022-09-24 | English
+| Professional C++ | Marc Gregoire | Microsoft |  | 2021-02 | English
+||| Belgian C++ Users Group
 
 #### 说明
 笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等高级语言，C / C++ 更加贴近硬件。打好 C / C++ 的基础，有利于尽快建立对计算机的主要部件与计算机整体的认识，形成硬件软件结合的基本思想，对计算机将如何执行自己编写的语句有一个更加明确的思路。
@@ -497,6 +502,8 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 “一年精通，三年熟悉，五年了解，十年用过”，C++ 作为编程语言的复杂度在世界上数一数二，1 个学期能学到的全部知识，充其量连皮毛都算不上。想要掌握 C++，一个学期的学习自然是远远不够的。如果你想向工业软件、图形学、游戏、高性能计算、操作系统、高频交易等方向发展，或者想成为库作者，就更有必要将 C++ 的基础打扎实。因为这些方面需要的软件对性能的要求是很高的。C++ 是编写高性能软件的必备语言。
 
 (*) Rust 是近几年开始快速发展的语言之一，有机会在日后达到与 C++ 分庭抗礼的地位。感兴趣的同学也可以学习 Rust。
+
+更多 C++ 书目：https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
 
 建议开课学期：1 ~ 2。
 
