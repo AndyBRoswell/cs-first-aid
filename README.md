@@ -535,17 +535,10 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 ### 操作系统 / Operating Systems
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Operating Systems: Three Easy Pieces | Remzi H. Arpaci-Dusseau | University of Wisconsin-Madison |  |  |  | English
-|| Andrea C. Arpaci-Dusseau | University of Wisconsin-Madison
-|| Peter Reiher | University of California, Los Angeles
-| 计算机操作系统 | 汤小丹 | ? | 4 | 西安电子科技大学出版社 | 2014 | 简体中文
-|| 梁红兵 | ?
-|| 哲凤屏 | ?
-|| 汤子瀛 | 杭州电子科技大学
-| Operating System Concepts | Abraham Silberschatz | Yale University | 10 | Wiley | 2018/5/4 | English
-| Modern Operating Systems | Andrew S. Tanenbaum | Vrije Universiteit Amsterdam | 4 | Pearson | 2016/3/25 | English
+[1] 	Remzi H. Arpaci-Dusseau, Andrea C. Arpaci-Dusseau and Peter Reiher, Operating Systems: Three Easy Pieces.  
+[2] 	汤小丹, 梁红兵, 哲凤屏 and 汤子瀛, 计算机操作系统, 4 ed., 西安电子科技大学出版社, 2014.  
+[3] 	Abraham Silberschatz, Operating System Concepts, 10 ed., Wiley, 2018.  
+[4] 	Andrew S. Tanenbaum, Modern Operating Systems, 5 ed., Pearson, 2022.  
 
 #### 说明
 - OSTEP 作者主页上有英文版，中文版不能直接从主页里找到，且不会像英文版那样随时更新。前往 http://pages.cs.wisc.edu/~remzi/OSTEP/ 获得最新版本。 http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese 为中译版。
@@ -555,14 +548,12 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 ### 计算机组成原理 / Computer Organization
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Computer Organization and Design: The Hardware/Software Interface | David A. Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
-|| John L. Hennessy | Stanford University
-| Computer Systems: A Programmer's Perspective | Randal E. Bryant | Carnegie Mellon University |  | Pearson |  | English
-|| David R. O'Hallaron | Carnegie Mellon University
-| 计算机组成原理 | 唐朔飞 | 哈尔滨工业大学 | 3 | 高等教育出版社 | 2020/10 | 简体中文
-| 计算机组成原理——学习指导与习题解答 | 唐朔飞 | 哈尔滨工业大学 | 2 | 高等教育出版社 |  | 简体中文
+[1] 	D. A. Patterson and J. L. Hennessy, Computer Organization and Design ARM Edition: The Hardware Software Interface, 1 ed., Morgan Kaufmann, 2016.  
+[2] 	David A. Patterson and John L. Hennessy, Computer Organization and Design MIPS Edition: The Hardware/Software Interface, 2 ed., Morgan Kaufmann, 2020.  
+[3] 	David A. Patterson and John L. Hennessy, Computer Organization and Design RISC-V Edition: The Hardware Software Interface, 2 ed., Morgan Kaufmann, 2020.  
+[4] 	Randal E. Bryant and David R. O'Hallaron, Computer Systems: A Programmer's Perspective, 3 ed., Pearson, 2015.  
+[5] 	唐朔飞, 计算机组成原理, 3 ed., 高等教育出版社, 2020.  
+[6] 	唐朔飞, 计算机组成原理——学习指导与习题解答, 2 ed., 高等教育出版社, 2012.  
 
 #### 说明
 考研的同学可以以唐朔飞的《计算机组成原理》为参考资料。
