@@ -437,11 +437,9 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 ### C 语言 / C Programming Language
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-|The C Programming Language | Brian W. Kernighan |  |  |  | 2019/9/6 | English
-|| Dennis M. Ritchie
-| C Primer Plus | Stephen Prata | College of Marin in Kentfield | 6 | Pearson | 2014 | English
+[1] 	Brian W. Kernighan and Dennis M. Ritchie, The C Programming Language, 2 ed., 1988.  
+[2] 	S. Prata, C Primer Plus, 6 ed., Pearson, 2013.  
+[3] 	Microsoft, "C Language Reference," 3 8 2021. [Online]. Available: https://learn.microsoft.com/en-us/cpp/c-language/c-language-reference. [Accessed 4 8 2023]. 
 
 #### 说明
 许多专业课给出的代码示例是用 C / C++ 语言编写的。同时，如果想走嵌入式、内核、驱动等方向，对 C 语言的掌握是必不可少的。
