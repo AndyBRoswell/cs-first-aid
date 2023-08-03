@@ -516,19 +516,17 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 ## 专业必修
 ### 数据结构 / Data Structures
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 数据结构（C++版） | 邓俊辉 | 清华大学 | 3 | 清华大学出版社 |  | 简体中文
-| 数据结构习题解析 | 邓俊辉 | 清华大学 | 3 | 清华大学出版社 |  | 简体中文
-| 数据结构（C语言版） | 严蔚敏 | 清华大学 | 2 | 中国工信出版集团 | 2015/2 | 简体中文
-|| 李冬梅 | ? || 人民邮电出版社
-|| 吴伟民 | 广东工业大学
-| 数据结构习题解析与实验指导 | 李冬梅 | ? | 2 | 中国工信出版集团 | 2015/2 | 简体中文
-|| 张琪 | ? || 人民邮电出版社
-| Data Structures & Algorithm Analysis in C++ | Mark Allen Weiss | Florida International University | 4 | Pearson | 2013/6/23 | English
-| The Algorithm Design Manual | Steven S Skiena | Stony Brook University | 2 | Springer | 2011/4/27 | English
+[1] 	邓俊辉, 数据结构（C++语言版）, 3 ed., 北京: 清华大学出版社, 2013.  
+[2] 	严蔚敏, 李冬梅 and 吴伟民, 数据结构（C语言版）, 2 ed., 北京: 中国工信出版集团, 2015.  
+[3] 	邓俊辉, 数据结构习题解析, 3 ed., 北京: 清华大学出版社, 2013.  
+[4] 	李冬梅 and 张琪, 数据结构习题解析与实验指导, 中国工信出版集团, 2015.  
+[5] 	Mark Allen Weiss, Data Structures & Algorithm Analysis in C++, 4 ed., Pearson, 2013.  
+[6] 	Clifford A. Shaffer, Data Structures and Algorithm Analysis, 3 ed., 2013.  
+[7] 	Steven S. Skiena, The Algorithm Design Manual, 3 ed., Springer, 2020.  
 
 #### 说明
+[7] 	Steven S. Skiena, The Algorithm Design Manual, 3 ed., Springer, 2020.  可直接获取电子版：https://people.cs.vt.edu/shaffer/Book/C++3elatest.pdf 。
+
 有的学校的对应课程为 “数据结构与算法” 。
 
 其实严蔚敏的《数据结构》倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢。想考研的同学最好学习 / 复习本书。
