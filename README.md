@@ -246,7 +246,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 # 第一章&emsp;课程、教材与公开课
 
-本部分最后更新于：2023/08/03
+本部分最后更新于：2023/08/04
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -448,17 +448,16 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 2022 年 2 月，Linux 内核作者 Linus Torvalds 表示：Linux 内核将从 C89 迁移至 C11。
 
+不同的 C 编译器（compiler）对 C 标准的实现是有出入的，但常见的语法一般都遵循标准。
+
 推荐开课学期：1。
+
 ### C++ / C++
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| C++ Primer | Josée Lajoie |  | 6 | Addison-Wesley Professional | 2023? | English
-|| Stanley B. Lippman
-|| Barbara E. Moo
-| A Tour of C++ | Bjarne Stroustrup |  | 3 | Addison-Wesley Professional | 2022-09-24 | English
-| Professional C++ | Marc Gregoire | Microsoft | 5 | Wrox | 2021-02 | English
-||| Belgian C++ Users Group
+[1] 	Stanley B. Lippman, Josée Lajoie and Barbara E. Moo, C++ Primer, 5 ed., Addison Wesley, 2012.  
+[2] 	Microsoft, "C++ Language Reference," 3 8 2021. [Online]. Available: https://learn.microsoft.com/en-us/cpp/cpp/cpp-language-reference. [Accessed 4 8 2023].  
+[3] 	Bjarne Stroustrup, A Tour of C++, 3 ed., Pearson, 2022.  
+[4] 	Marc Gregoire, Professional C++, 5 ed., Wrox, 2021.  
 
 #### 说明
 笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等高级语言，C / C++ 更加贴近硬件，因而暴露了计算机工作时涉及的许多原理与细节。打好 C / C++ 的基础，有利于尽快建立对计算机的主要部件与计算机整体的认识，对计算机将如何执行自己编写的语句有一个更加明确的思路。
@@ -471,7 +470,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 【★】Microsoft 的官方文档 https://docs.microsoft.com/en-us/cpp/cpp 也是非常不错的学习现代 C++（Modern C++）的材料。不过，Microsoft 的文档给出的自然是 Microsoft Visual C++（MSVC）的参考，可能与官方标准有一定差异。中文版：https://docs.microsoft.com/zh-cn/cpp/cpp/ （提示：本主题的部分内容可能是由机器翻译）。
 
-不同的 C / C++ 编译器（compiler）对 C / C++ 标准的实现是有出入的，但常见的语法一般都遵循标准。
+不同的 C++ 编译器对 C++ 标准的实现是有出入的，但常见的语法一般都遵循标准。
 
 自 1985 年发布以来，C++ 已经更新了数个版本，主要包括 C++98、C++03、C++11、C++14、C++17、C++20。C++23 标准基本已经接近完成，预计将在 2023 年发布。学习 C++ 时，尤其需要注意 C++11 以来的新特性。
 
