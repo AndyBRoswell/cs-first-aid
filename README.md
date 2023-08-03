@@ -264,7 +264,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 ## 基础必修（公共必修）
 
-从列出的若干本课本中任选一本（不包括习题集）。
+从列出的若干本课本中任选一本（不包括学习指导和习题集）。
 
 ### 数学分析 || 高等数学（微积分） / Mathematical Analysis || Calculus
 #### 课本
@@ -279,7 +279,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 [9] 	薛春华 and 徐森林, 数学分析精选习题全解, 北京: 清华大学出版社, 2009.  
 
 #### 说明
-网络上可获取的公开课可能使用旧版的教材。但影响不大。  
+网络上可获取的公开课可能使用旧版的教材。但使用新版的影响应当不大。  
 多年以来，国内外的几代科教工作者留下了相当多的优秀教材。限于时间和篇幅，这里没有列出更多课本。  
 **大学的数学分析、高等代数、概率统计、普通物理等课程都已相当成熟的。因此，教材的影响没有那么大，教材之间的差距也没有那么大。如果纠结选择哪一本，不妨随机抽选。只要不是实在写得太烂，教材本身基本上不会带来大问题。**
 
@@ -313,32 +313,28 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 ### 高等代数 || 线性代数 / Linear Algebra
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 | 备注 | 
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 高等代数 | 丘维声 | 北京大学 | 2 | 清华大学出版社 | 2019/6 | 简体中文
-||| 西安交通大学
-| Introduction to Linear Algebra | Gilbert Strang | Massachusetts Institute of Technology | 5 | 2016 |  | English
-| 线性代数 | 李炯生 | 中国科学技术大学 || 中国科学技术大学出版社 | 1989 | 简体中文 | **困难**
-|| 查建国 | 中国科学技术大学
-| Algebra | Michael Artin | Massachusetts Institute of Technology | 2 | Pearson | 2010 | English
-| Interactive Linear Algebra | Dan Margalit | Georgia Institute of Technology |  |  |  | English 
-||Joseph Rabinoff | Duke University |
-| 基础代数 | 席南华 | 中国科学院大学 |||| 简体中文
-| Linear Algebra Done Right | Sheldon Axler | University of California, Berkeley | 3 |  | 2015 | English
-|| Kenneth Ribet | San Francisco State University
-| 线性代数 | 李尚志 | 中国科学技术大学 |||| 简体中文
-||| 北京航空航天大学
-| 线性代数的几何意义 | 任广千 || 1 | 西安电子科技大学出版社 | 2015/7 | 简体中文
-|| 谢聪
-|| 胡翠芳
+[1] 	丘维声, 高等代数, 1 ed., 北京: 清华大学出版社, 2010.  
+[2] 	丘维声, 高等代数, 2 ed., 北京: 清华大学出版社, 2019.  
+[3] 	李炯生 and 查建国, 线性代数, 1 ed., 合肥, 安徽: 中国科学技术大学出版社, 1989.  
+[4] 	李炯生, 查建国 and 王新茂, 线性代数, 2 ed., 合肥, 安徽: 中国科学技术大学出版社, 2010.  
+[5] 	Michael Artin, Algebra, 2 ed., Boston, Massachusetts: Addison Wesley, 2010.  
+[6] 	Dan Margalit and Joseph Rabinoff, Interactive Linear Algebra, Atlanta, Georgia, 2019.  
+[7] 	席南华, 基础代数, 北京: 科学出版社, 2016.  
+[8] 	Sheldon Axler and Kenneth Ribet, Linear Algebra Done Right, 3 ed., Springer, 2015.  
+[9] 	李尚志, 线性代数, 北京: 高等教育出版社.  
+[10] 	Алексей Иванович Кострикин, 代数学引论, 北京: 高等教育出版社, 2011.  
+[11] 	任广千, 谢聪 and 胡翠芳, 线性代数的几何意义, 1 ed., 西安, 陕西: 西安电子科技大学出版社, 2015.  
 
 #### 说明
 - GATech 的《Interactive Linear Algebra》，可前往以下网页在线浏览：https://textbooks.math.gatech.edu/ila/chap-algebra.html
-- 李炯生等编著的《线性代数》可选 2010 年第 2 版。但是，原书面向的是中国科学技术大学数学系或少年班，难度较大，不建议数学功底较弱的同学选用。
+- 《Linear Algebra Done Right》第 4 版预计在 2023 年 11 月出版，电子版将可免费获取。
+- 李炯生等编著的《线性代数》面向的是中国科学技术大学数学系或少年班，难度较大，不建议数学功底较弱的同学选用。
 - 如果你具有一定的线代基础，那么 MIT 的教材《Introduction to Linear Algebra》及其公开课可能难度偏低（不够深入）。
-- 中国科学院大学数学系有班级选用 Алексей Иванович Кострикин（柯斯特利金）的《代数学引论》。
+- 中国科学院大学数学系有班级选用 А. И. Кострикин（柯斯特利金）的《代数学引论》。
 
  “高等代数” 是苏联的说法，在欧美高校中没有对应的课程。在中国内地，“高等代数” 一般在数学、物理类专业开设，内容比 “线性代数” 课程要多。
+
+网络上可获取的公开课可能使用旧版的教材。但使用新版的影响应当不大。  
 
 一般地，学习一到两个学期。
 
@@ -355,6 +351,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
   - https://www.bilibili.com/video/BV19W411G7QU?from=search&seid=14404683565163581636
   - 本课程是面向清华大学物理系学生的基础必修课。
   - 建议倍速：≤ 1.5 x
+  - 配套教材：[1] 	丘维声, 高等代数, 1 ed., 北京: 清华大学出版社, 2010.
 - Introduction to Linear Algebra（Massachusetts Institute of Technology）&emsp;主讲：Gilbert Strang
   - https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371
   - 建议倍速：≤ 1.5 x
