@@ -439,7 +439,6 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 #### 课本
 [1] 	Brian W. Kernighan and Dennis M. Ritchie, The C Programming Language, 2 ed., 1988.  
 [2] 	S. Prata, C Primer Plus, 6 ed., Pearson, 2013.  
-[3] 	Microsoft, "C Language Reference," 3 8 2021. [Online]. Available: https://learn.microsoft.com/en-us/cpp/c-language/c-language-reference. [Accessed 4 8 2023]. 
 
 #### 说明
 许多专业课给出的代码示例是用 C / C++ 语言编写的。同时，如果想走嵌入式、内核、驱动等方向，对 C 语言的掌握是必不可少的。
@@ -449,6 +448,10 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 2022 年 2 月，Linux 内核作者 Linus Torvalds 表示：Linux 内核将从 C89 迁移至 C11。
 
 不同的 C 编译器（compiler）对 C 标准的实现是有出入的，但常见的语法一般都遵循标准。
+
+可以到 https://en.cppreference.com/w/c 查阅资料。中文版： https://zh.cppreference.com/w/c 。
+
+Microsoft 的官方文档 https://learn.microsoft.com/en-us/cpp/c-language/c-language-reference 也是非常不错的 C 语言的参考资料。不过，Microsoft 的文档给出的自然是 Microsoft C 的参考。中文版：https://learn.microsoft.com/zh-cn/cpp/c-language/c-language-reference 。
 
 推荐开课学期：1。
 
@@ -468,7 +471,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 可以到 http://cplusplus.com/ 和 https://en.cppreference.com/w/ 查阅资料。中文版： https://zh.cppreference.com/w/ 。
 
-【★】Microsoft 的官方文档 https://docs.microsoft.com/en-us/cpp/cpp 也是非常不错的学习现代 C++（Modern C++）的材料。不过，Microsoft 的文档给出的自然是 Microsoft Visual C++（MSVC）的参考，可能与官方标准有一定差异。中文版：https://docs.microsoft.com/zh-cn/cpp/cpp/ （提示：本主题的部分内容可能是由机器翻译）。
+【★】Microsoft 的官方文档 https://docs.microsoft.com/en-us/cpp/cpp/cpp-language-reference 也是非常不错的学习现代 C++（Modern C++）的材料。不过，Microsoft 的文档给出的自然是 Microsoft Visual C++（MSVC）的参考，可能与官方标准有一定差异。中文版：https://docs.microsoft.com/zh-cn/cpp/cpp/cpp-language-reference （提示：本主题的部分内容可能是由机器翻译）。
 
 不同的 C++ 编译器对 C++ 标准的实现是有出入的，但常见的语法一般都遵循标准。
 
@@ -476,9 +479,9 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 “一年精通，三年熟悉，五年了解，十年用过”，C++ 作为编程语言的复杂度在世界上数一数二，1 个学期能学到的全部知识，充其量连皮毛都算不上。想要掌握 C++，一个学期的学习自然是远远不够的。如果你想向工业软件、图形学、游戏、高性能计算、操作系统、高频交易等方向发展，或者想成为库作者，就更有必要将 C++ 的基础打扎实。因为这些方面需要的软件对性能的要求是很高的。C++ 是编写高性能软件的必备语言。
 
-(*) Rust 是近几年开始快速发展的语言之一，有机会在日后达到与 C++ 分庭抗礼的地位。感兴趣的同学也可以学习 Rust。
-
 更多 C++ 书目：https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
+
+(*) Rust 是近几年开始快速发展的语言之一，有机会在日后达到与 C++ 分庭抗礼的地位。感兴趣的同学也可以学习 Rust。
 
 建议开课学期：1 ~ 2。
 
