@@ -487,19 +487,12 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 ### 数字逻辑电路 / Digital Logic Circuit
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 数字设计基础与应用 | 邓元庆 | 陆军工程大学 | 2 | 清华大学出版社 |  | 简体中文
-|| 关宇 | 陆军工程大学
-|| 贾鹏 | 陆军工程大学
-|| 石会 | ?
+[1] 	邓元庆, 关宇, 贾鹏 and 石会, 数字设计基础与应用, 2 ed., 清华大学出版社, 2010.  
 
 #### 说明
 本课程是专业必修课计算机组成原理的基础。
 
-数电的书我没有去找别的，反正我们学校用的是这本。计算机类专业的可以不用买书，看我的笔记：
-
-https://blog.csdn.net/COFACTOR/article/details/103862541
+数电的书我没有去找别的，反正我们学校用的是这本。计算机类专业的可以不用买书，看我的笔记：https://blog.csdn.net/COFACTOR/article/details/103862541
 
 至少在目前来看，足够不卡住后面的学习了。
 
@@ -509,9 +502,8 @@ https://blog.csdn.net/COFACTOR/article/details/103862541
 
 ### 汇编语言 / Assembly Language
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Assembly Language for x86 Processors, 8th edition | Kip R. Irvine | Florida International University | 8 | Pearson | 2019/8/27 | English | Recommended by @himself65
+[1] 	Kip R. Irvine, Assembly Language for x86 Processors, 8 ed., Pearson, 2019.  
+
 #### 说明
 感谢 @himself65 推荐了《Assembly Language for x86 Processors》。
 
