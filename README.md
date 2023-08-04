@@ -874,12 +874,8 @@ https://csdiy.wiki/
 
 ---
 
-原曲&emsp;在晴朗的天空下
-
-林&emsp;夕&emsp;词
-
-李宗盛&emsp;曲
-
-成&emsp;龙&emsp;黄耀明&emsp;周华健&emsp;李宗盛&emsp;歌
-
-年&emsp;代&emsp;1993
+原曲&emsp;在晴朗的天空下  
+林&emsp;夕&emsp;词  
+李宗盛&emsp;曲  
+成&emsp;龙&emsp;黄耀明&emsp;周华健&emsp;李宗盛&emsp;歌  
+年&emsp;代&emsp;1993  
