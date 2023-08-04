@@ -590,16 +590,13 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 ### 编译原理 / The Principle of Compilation
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Compilers: Principles, Techniques, and Tools | Alfred V. Aho | Columbia University | 2 | Pearson/Addison Wesley | 2006 | English
-|| Ravi Sethi | University of Arizona
-|| Jeffrey D.Ullman | Stanford University
-| Modern Compiler Implementation in C | Andrew W. Appel | Princeton University |  | Cambridge University Press | 2004 | English
-| Advanced Compiler Design and Implementation | Steven S. Muchnick |  |  | Morgan Kaufmann | 1997 | English
-| Compiler Construction: Principles and Practice | Kenneth C. Louden | San Jose State University | | | 1997 | English
-| Engineering a Compiler | Keith D. Cooper | Rice University | 2 | Morgan Kaufmann / Elsevier Science & Technology | 2011 | English |
-|| Linda Torczon | Rice University
+[1] 	Alfred V. Aho, Ravi Sethi and Jeffrey D.Ullman, Compilers: Principles, Techniques, and Tools, 2 ed., Pearson/Addison Wesley, 2006.  
+[2] 	Andrew W. Appel, Modern Compiler Implementation in C, Cambridge University Press, 2004.  
+[3] 	Steven S. Muchnick, Advanced Compiler Design and Implementation, Morgan Kaufmann, 1997.  
+[4] 	Kenneth C. Louden, Compiler Construction: Principles and Practice, Cengage Learning, 1997.  
+[5] 	Dick Grune and Ceriel J. H. Jacobs, Parsing Techniques: A Practical Guide, 2 ed., Springer, 2008.  
+[6] 	Dick Grune, Kees van Reeuwijk, Henri E. Bal, Ceriel J. H. Jacobs and Koen Langendoen, Modern Compiler Design, 2 ed., Springer, 2012.  
+[7] 	Keith D. Cooper and Linda Torczon, Engineering a Compiler, 3 ed., Morgan Kaufmann / Elsevier Science & Technology, 2022.  
 
 #### 说明
 我们学院的情况是：软工必修，信安选修。
