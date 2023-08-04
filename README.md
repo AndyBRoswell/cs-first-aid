@@ -607,61 +607,54 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 ### Java
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Thinking in Java | Bruce Eckel |  | 4 | Pearson | 2006/2/20 | English
-| Head First Java | Bert Bates |  | 2 | O'Reilly Media | 2005/2/22 | English
-|| Kathy Sierra |
+[1] 	Bruce Eckel, Thinking in Java, 4 ed., Pearson, 2006.  
+[2] 	Bert Bates and Kathy Sierra, Head First Java, 3 ed., O'Reilly Media, 2022.  
 
 #### 说明
 【★】随着 Java 的更新，有部分特性已经被弃用，请注意及时查阅最新文档（https://docs.oracle.com/en/java/ ）。
 
 ### Python
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Python Crash Course | Eric Matthes |  | 2 |  | 2019/5/3 | English
-| Python Cookbook | David Beazley |  | 3 |  | 2013/5/23 | English
-|| Brian K. Jones
-| Python语言程序设计基础 | 嵩天 | 北京理工大学 | 2 |  | 2017/2 | 简体中文
-|| 礼欣 | 北京理工大学
-|| 黄天羽 | 北京理工大学
+[1] 	Eric Matthes, Python Crash Course, 3 ed., No Starch Press, 2023.  
+[2] 	David Beazley and Brian K. Jones, Python Cookbook, 3 ed., O'Reilly, 2013.  
+[3] 	嵩天, 礼欣 and 黄天羽, Python语言程序设计基础, 2 ed., 北京: 高等教育出版社, 2017.  
+[4] 	Python Software Foundation, "The Python Tutorial," 4 8 2023. [Online]. Available: https://docs.python.org/3/tutorial/index.html. [Accessed 4 8 2023]. 
 
 #### 说明
-【★】https://docs.python.org/3/ 上具有非常丰富的官方文档。
+【★】https://docs.python.org/3/ 上具有非常丰富的官方文档。**建议先使用官方文档[4]进行学习**。
 
 Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的老代码的 Python 脚本，否则请选用 Python 3。
 
 ### C#
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Head First C# | Andrew Stellman |  | 4 |  | 2020/12 | English
-|| Jill Alison Hart
-| Illustrated C# | Cal Schrotenboer |  | 5 |  | 2018 | English
-|| Daniel Solis
-| C# 程序设计教程 | 唐大仕 | 北京大学 | 2 | 清华大学出版社；北京交通大学出版社 | 2018/3 | 简体中文 |
+[1] 	Andrew Stellman and Jill Alison Hart, Head First C#, 4 ed., O'Reilly Media, 2021.  
+[2] 	Cal Schrotenboer and Daniel Solis, Illustrated C# 7, 5 ed., Apress, 2018.  
+[3] 	唐大仕, C#程序设计教程, 2 ed., 北京: 清华大学出版社 北京交通大学出版社, 2018.  
+[4] 	Microsoft, "C# Documentation," 4 5 2023. [Online]. Available: https://learn.microsoft.com/en-us/dotnet/csharp/. [Accessed 4 8 2023]. 
 
 #### 说明
-【★】Microsoft 为 C# 准备了非常丰富的官方文档： https://docs.microsoft.com/en-us/dotnet/csharp 。可作为相当不错的自学材料。中文版： https://docs.microsoft.com/zh-cn/dotnet/csharp/ 。
+【★】Microsoft 为 C# 准备了非常丰富的官方文档[4]，**建议首先通过官方文档进行学习**。中文版： https://docs.microsoft.com/zh-cn/dotnet/csharp/ 。
 
 ### Android 开发
-
-【★】Google 官方： https://developer.android.com/guide
-
-第一行代码——Android（第 3 版）&emsp;郭霖
-
-Kotlin in Action
+[1] 	Google, "Developer Guides," [Online]. Available: https://developer.android.com/guide. [Accessed 4 8 2023]. 
+[2] 	郭霖, 第一行代码 Android, 3 ed., 人民邮电出版社, 2020.  
 
 #### 说明
+【★】**建议首先通过官方文档[1]进行学习**。
+
+### Kotlin
+[1] 	JetBrains, "Kotlin Docs," 25 7 2023. [Online]. Available: https://kotlinlang.org/docs. [Accessed 4 8 2023]. 
+
+#### 说明 
+【★】**建议首先通过官方文档[1]进行学习**。注意：**Kotlin 官方文档可能会默认你具备一定的 Java 基础**。  
+JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。 
 
 ### HTML+CSS+JS
-
-- W3Schools
-- Codecademy
-- 【★】MDN (https://developer.mozilla.org/en-US/docs/Learn)
+[1] 	Mozilla Foundation, "Learn Web Development," 20 6 2023. [Online]. Available: https://developer.mozilla.org/en-US/docs/Learn. [Accessed 4 8 2023].  
 
 #### 说明
+【★】**建议首先通过[1]进行学习**。注意：MDN 的中文版文档虽有志愿者进行翻译，但通常不是最新的，因此推荐直接使用英文版。
+其余网站也可参考，例如：https://www.w3schools.com/ 、https://www.runoob.com/ 、https://www.codecademy.com/ 。
 
 ## 专业选修
 
