@@ -621,8 +621,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 [4] 	Python Software Foundation, "The Python Tutorial," 4 8 2023. [Online]. Available: https://docs.python.org/3/tutorial/index.html. [Accessed 4 8 2023]. 
 
 #### 说明
-【★】https://docs.python.org/3/ 上具有非常丰富的官方文档。**建议先使用官方文档[4]进行学习**。
-
+【★】https://docs.python.org/3/ 上具有非常丰富的官方文档。**建议先使用官方文档[4]进行学习**。  
 Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的老代码的 Python 脚本，否则请选用 Python 3。
 
 ### C#
@@ -660,38 +659,23 @@ JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。
 
 ### 计算机体系结构 / Computer Architecture
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Computer Architecture, A Quantitative Approach | David A Patterson | University of California, Berkeley | 6 | Morgan Kaufmann | 2020/11/20 | English
-|| John L. Hennessy | Stanford University
-| Computer Organization and Architecture: Designing for Performance | William Stallings |  | 11 | Pearson | 2018/3/1 | English
+[1] 	David A. Patterson and John L. Hennessy, Computer Architecture: A Quantitative Approach, 6 ed., Morgan Kaufmann, 2020.  
+[2] 	William Stallings, Computer Organization and Architecture: Designing for Performance, Pearson, 2018.  
 
 #### 说明
 要求较高的院校可能将体系结构列为专业必修课。
 
 ### 算法 / Algorithms
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Introduction to Algorithms | Thomas H. Cormen |  | 4 | MIT Press | 2022/4/5 | English
-|| Charles E. Leiserson
-|| Ronlad L. Rivest
-|| Clifford Stein
-| 算法设计与分析 | 屈婉玲 | 北京大学 | 2 | 清华大学出版社 | 2016/2 | 简体中文
-|| 刘田 | 北京大学
-|| 张立昂 | 北京大学
-|| 王捍贫 | 北京大学
-| 算法设计与分析习题解答与学习指导 | 屈婉玲 | 北京大学 | 2 | 清华大学出版社 | 2016/3 | 简体中文
-|| 刘田 | 北京大学
-|| 张立昂 | 北京大学
-|| 王捍贫 | 北京大学
+[1] 	Thomas H. Cormen, Charles E. Leiserson, Ronlad L. Rivest and Clifford Stein, Introduction to Algorithms, 4 ed., MIT Press, 2022.  
+[2] 	屈婉玲, 刘田, 张立昂 and 王捍贫, 算法设计与分析, 3 ed., 北京: 科学出版社, 2020.  
+[3] 	屈婉玲, 刘田, 张立昂 and 王捍贫, 算法设计与分析习题解答与学习指导, 3 ed., 北京: 科学出版社, 2020.  
 
 #### 说明
 公开课包括但不限于：
 
-https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654
-
-算法设计与分析（北京大学）&emsp;主讲：屈婉玲
+- 算法设计与分析（北京大学）&emsp;主讲：屈婉玲
+  - https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654
 
 ### 机器学习 / Machine Learning
 #### 课本
