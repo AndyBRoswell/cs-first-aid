@@ -562,11 +562,9 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 ### 计算机网络 / Computer Networking
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Computer Networking: A Top-Down Approach | James F. Kurose | University of Massachusetts, Amherst | 8 | Pearson | 2020-Spring | English
-|| Keith W. Ross | New York University
-| 计算机网络 | 谢希仁 | 陆军工程大学 | 8 | 电子工业出版社 | 2021/6 | 简体中文
+[1] 	James F. Kurose and Keith W. Ross, Computer Networking: A Top-Down Approach, 8 ed., Pearson, 2020.  
+[2] 	谢希仁, 计算机网络, 8 ed., 电子工业出版社, 2021.  
+[3] 	Andrew S. Tanenbaum, Nick Feamster and David J. Wetherall, Computer Networks, 6 ed., Pearson, 2020.  
 
 #### 说明
 关于谢希仁编著的《计算机网络》，我们老师说：如果用的是中文教材，那么基本都是用这本。同时，这本书也是很多学校的计算机类考研指定的参考书。用于和《自顶向下方法》互为补充，也是很不错的。
@@ -579,11 +577,8 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 ### 数据库 / Database
 #### 课本
-| 书名 | 作者 | 作者所在单位 | 版次 | 出版社 | 出版日期 | 语言 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Database System Concepts | Abraham Silberschatz | Yale University | 7 | McGraw-Hill Higher Education | 2019/2/19 | English | Recommended by @vczh
-| 数据库系统概论 | 王珊 | 中国人民大学 | 5 | 高等教育出版社 | 2014 | 简体中文
-|| 萨师煊 | 中国人民大学
+[1] 	Abraham Silberschatz, Database System Concepts, 7 ed., McGraw-Hill Higher Education, 2019.  
+[2] 	王珊, 杜小勇 and 陈红, 数据库系统概论, 6 ed., 北京: 高等教育出版社, 2023.  
 
 #### 说明
 - 感谢 @vczh 推荐了《Database System Concepts》。
