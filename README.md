@@ -1,6 +1,6 @@
 # CS 自救指南&emsp;CS First Aid: A Vital Guide for CSE Students
 
-最后更新：2023/08/08
+最后更新：2023/08/16
 
 这是主要针对将在中国内地就读计算机类专业或已在中国内地就读计算机类专业但有考虑留学的学生们准备的一份自救指南。
 
@@ -265,7 +265,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 # 第一章&emsp;课程、教材与公开课
 
-本部分最后更新于：2023/08/08
+本部分最后更新于：2023/08/16
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -322,7 +322,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
   - 数学分析（中国科学技术大学）&emsp;主讲：史济怀
     - https://www.bilibili.com/video/BV1ZW411e7PF?from=search&seid=12091659250493259510
     - 公开课录制时间比较早（2003 年秋开始录制），音质比较渣，而且有少量的视频有内容缺损。凑合着看吧。
-    - 配套教材：[1] 	常庚哲 and 史济怀, 数学分析教程, 1 ed., 北京: 高等教育出版社, 2003.  
+    - 配套教材：[1]
   - 数学分析 B（中国科学技术大学少年班）&emsp;主讲：程艺
     - https://www.bilibili.com/video/BV1Lv411r7wa/?spm_id_from=333.337.search-card.all.click
     - https://www.bilibili.com/video/BV1HV411J7sH/?spm_id_from=333.337.search-card.all.click
@@ -346,11 +346,11 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 [12] 	David C. Lay, Steven R. Lay and Judi J. McDonald, Linear Algebra and Its Applications, Pearson, 2021.  
 
 #### 说明
-- 《Interactive Linear Algebra》，可在线阅览：https://textbooks.math.gatech.edu/ila/chap-algebra.html。
-- 《Linear Algebra Done Right》第 4 版预计在 2023 年 11 月出版，电子版将可免费获取。
-- 李炯生等编著的《线性代数》面向的是中国科学技术大学数学系或少年班，**难度大，不建议数学功底较弱的同学选用**。
+- [6]可在线阅览：https://textbooks.math.gatech.edu/ila/chap-algebra.html。
+- [4]的第 4 版预计在 2023 年 11 月出版，电子版将可免费获取。
+- 李炯生等编著的《线性代数》[3][4]面向的是中国科学技术大学数学系或少年班，**难度大，不建议数学功底较弱的同学选用**。
 - 如果你具有一定的线代基础，那么 MIT 的教材《Introduction to Linear Algebra》及其公开课可能难度偏低（不够深入）。
-- 中国科学院大学数学系有班级选用 А. И. Кострикин（柯斯特利金）的《代数学引论》。
+- 中国科学院大学数学系有班级选用 А. И. Кострикин（柯斯特利金）的《代数学引论》[10]。
 
  “高等代数” 是苏联的说法，在欧美高校中没有对应的课程。在中国内地，“高等代数” 一般在数学、物理类专业开设，内容比 “线性代数” 课程要多。
 
@@ -370,7 +370,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
   - https://www.bilibili.com/video/BV19W411G7QU?from=search&seid=14404683565163581636
   - 本课程是面向清华大学物理系学生的基础必修课。
   - 建议倍速：≤ 1.5 x
-  - 配套教材：[1] 	丘维声, 高等代数, 1 ed., 北京: 清华大学出版社, 2010.
+  - 配套教材：[1]
 - Introduction to Linear Algebra（Massachusetts Institute of Technology）&emsp;主讲：Gilbert Strang
   - https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371
   - 建议倍速：≤ 1.5 x
@@ -407,8 +407,9 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 #### 公开课
 包括但不限于：
-- https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
 - 离散数学（北京大学）&emsp;主讲：刘田、屈婉玲、王捍贫
+  - https://www.bilibili.com/video/BV1BW411n7gw?from=search&seid=4574874822332206232
+  - 配套教材：[5]
 
 ### 概率论与数理统计 / Probability Theory and Statistics
 #### 课本
@@ -434,7 +435,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 一般地，普通物理为物理类专业的必修课程，常分为力学、热学、电磁学、光学和原子物理学五门课。大学物理是非物理专业的公共基础课，也包括力、热、电、光、原，但课时明显比物理系少，学习内容和难度也比物理系低。
 
-物理苦手可以选择难度偏低的《物理学教程》，东南大学马文蔚、周雨青编写。
+物理苦手可以选择难度偏低的《物理学教程》[3]，东南大学马文蔚、周雨青编写。
 
 大学物理可以巩固微积分的掌握。因此，一般在学习完单变量微积分（高等数学 I）以后开始学习。
 
@@ -488,7 +489,7 @@ Microsoft 的官方文档 https://learn.microsoft.com/en-us/cpp/c-language/c-lan
 C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草稿（final draft），最终草稿与正式标准一般只有顺序上的区别。
 
 可以到 http://cplusplus.com/ 和 https://en.cppreference.com/w/ 查阅资料。中文版： https://zh.cppreference.com/w/。  
-【★】Microsoft 的官方文档 https://docs.microsoft.com/en-us/cpp/cpp/cpp-language-reference 也是非常不错的学习现代 C++（Modern C++）的材料。不过，Microsoft 的文档给出的自然是 Microsoft Visual C++（MSVC）的参考，可能与官方标准有一定差异。中文版：https://docs.microsoft.com/zh-cn/cpp/cpp/cpp-language-reference （提示：本主题的部分内容可能是由机器翻译）。
+【★】Microsoft 的官方文档[2]是非常不错的学习现代 C++（Modern C++）的材料。不过，Microsoft 的文档给出的自然是 Microsoft Visual C++（MSVC）的参考，可能与官方标准有一定差异。中文版：https://docs.microsoft.com/zh-cn/cpp/cpp/cpp-language-reference （提示：本主题的部分内容可能是由机器翻译）。
 
 不同的 C++ 编译器对 C++ 标准的实现是有出入的，但常见的语法一般都遵循标准。
 
@@ -543,7 +544,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 有的学校的对应课程为 “数据结构与算法” 。
 
-其实严蔚敏的《数据结构》倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢。想考研的同学最好学习 / 复习本书。
+其实严蔚敏的《数据结构》[2]倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢。想考研的同学最好学习 / 复习本书。
 
 推荐开课学期：2 ~ 3
 
@@ -555,7 +556,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 [4] 	Andrew S. Tanenbaum, Modern Operating Systems, 5 ed., Pearson, 2022.  
 
 #### 说明
-- OSTEP 作者主页上有英文版，中文版不能直接从主页里找到，且不会像英文版那样随时更新。前往 http://pages.cs.wisc.edu/~remzi/OSTEP/ 获得最新版本。 http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese 为中译版。
+- OSTEP[1]作者主页上有英文版，中文版不能直接从主页里找到，且不会像英文版那样随时更新。前往 http://pages.cs.wisc.edu/~remzi/OSTEP/ 获得最新版本。 http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese 为中译版。
 - 汤子瀛等编著的《计算机操作系统》为内地众多知名高校的计算机类专业考研的指定参考书，其中部分内容可以作为 OSTEP 的补充。
 
 推荐开课学期：3 ~ 4
