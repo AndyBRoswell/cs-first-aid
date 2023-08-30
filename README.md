@@ -625,7 +625,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 [2] 	Bert Bates and Kathy Sierra, Head First Java, 3 ed., O'Reilly Media, 2022.  
 
 #### 说明
-【★】随着 Java 的更新，有部分特性已经被弃用，请注意及时查阅最新文档（https://docs.oracle.com/en/java/）。
+【★】随着 Java 的更新，有部分特性已经被弃用，请注意及时查阅最新文档（https://docs.oracle.com/en/java/ ）。
 
 ### Python
 #### 课本
@@ -829,7 +829,7 @@ JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。
 
 本部分最后更新于：2022/07/02
 
-CS自救指北&emsp;迟先生（https://github.com/skyzh）
+CS自救指北&emsp;迟先生（https://github.com/skyzh ）
 
 https://survivesjtu.gitbook.io/survivesjtumanual/fu-lu/ben-ke-sheng-zhuan-ye-jie-shao-todo/cs-zi-jiu-zhi-bei
 
