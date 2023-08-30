@@ -849,7 +849,7 @@ JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。
 
 # 附录二&emsp;推荐读物
 
-本部分最后更新于：2022/08/30
+本部分最后更新于：2023/08/30
 
 CS自救指北&emsp;迟先生（https://github.com/skyzh ）
 
