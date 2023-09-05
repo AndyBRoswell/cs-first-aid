@@ -690,7 +690,7 @@ JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。
 
 #### 说明
 【★】**建议首先通过[1]进行学习**。注意：MDN 的中文版文档虽有志愿者进行翻译，但通常不是最新的，因此推荐直接使用英文版。
-其余网站也可参考。如：https://www.w3schools.com/ 、https://www.runoob.com/ 、https://www.codecademy.com/。
+其余网站也可参考。如：https://www.w3schools.com/ 、https://www.runoob.com/ 、https://www.codecademy.com/、https://web.dev/ 。
 
 ## 专业选修
 
