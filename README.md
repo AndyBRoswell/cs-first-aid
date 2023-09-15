@@ -716,12 +716,12 @@ JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。
 
 ### 机器学习 / Machine Learning
 #### 课本
-[1] 	Christopher M. Bishop, Pattern Recognition and Machine Learning, Springer, 2006. 
-[2] 	周志华, 机器学习, 清华大学出版社, 2016. 
-[3] 	谢文睿 and 秦州, 机器学习公式详解, 人民邮电出版社, 2021. 
-[4] 	李航, 机器学习方法, 清华大学出版社, 2022. 
-[5] 	Ian Goodfellow, Yoshua Bengio and Aaron Courville, Deep Learning, MIT Press, 2016. 
-[6] 	邱锡鹏, 神经网络与深度学习, 2021. 
+[1] 	Christopher M. Bishop, Pattern Recognition and Machine Learning, Springer, 2006.  
+[2] 	周志华, 机器学习, 清华大学出版社, 2016.  
+[3] 	谢文睿 and 秦州, 机器学习公式详解, 人民邮电出版社, 2021.  
+[4] 	李航, 机器学习方法, 清华大学出版社, 2022.  
+[5] 	Ian Goodfellow, Yoshua Bengio and Aaron Courville, Deep Learning, MIT Press, 2016.  
+[6] 	邱锡鹏, 神经网络与深度学习, 2021.  
 
 #### 说明
 电子版：[[1]](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)[[6]](https://nndl.github.io/nndl-book.pdf)
