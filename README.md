@@ -1,6 +1,6 @@
 # CS 自救指南&emsp;CS First Aid: A Vital Guide for CSE Students
 
-最后更新：2023/09/11
+最后更新：2023/09/15
 
 这是主要针对将在中国内地就读计算机类专业或已在中国内地就读计算机类专业但有考虑留学的学生们准备的一份自救指南。
 
@@ -285,7 +285,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 # 第一章&emsp;课程、教材与公开课
 
-本部分最后更新于：2023/08/30
+本部分最后更新于：2023/09/15
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -685,8 +685,9 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 【★】**建议首先通过官方文档[1]进行学习**。注意：**Kotlin 官方文档可能会默认你具备一定的 Java 基础**。  
 JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。 
 
-### Web 前端
+### Web 开发
 [1] 	Mozilla Foundation, "Learn Web Development," 20 6 2023. [Online]. Available: https://developer.mozilla.org/en-US/docs/Learn. [Accessed 4 8 2023].  
+[2] 	陈恒 and 李正光, SSM + Spring Boot + Vue.js 3全栈开发从入门到实战, 清华大学出版社, 2022. 
 
 #### 说明
 【★】**建议首先通过[1]进行学习**。注意：MDN 的中文版文档虽有志愿者进行翻译，但通常不是最新的，因此推荐直接使用英文版。
@@ -715,8 +716,15 @@ JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。
 
 ### 机器学习 / Machine Learning
 #### 课本
+[1] 	Christopher M. Bishop, Pattern Recognition and Machine Learning, Springer, 2006. 
+[2] 	周志华, 机器学习, 清华大学出版社, 2016. 
+[3] 	谢文睿 and 秦州, 机器学习公式详解, 人民邮电出版社, 2021. 
+[4] 	李航, 机器学习方法, 清华大学出版社, 2022. 
+[5] 	Ian Goodfellow, Yoshua Bengio and Aaron Courville, Deep Learning, MIT Press, 2016. 
+[6] 	邱锡鹏, 神经网络与深度学习, 2021. 
 
 #### 说明
+电子版：[[1]](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)[[6]](https://nndl.github.io/nndl-book.pdf)
 
 ### 自然语言处理 / Natural Language Processing
 #### 课本
