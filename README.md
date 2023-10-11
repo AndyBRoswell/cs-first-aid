@@ -672,7 +672,7 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 [3] 的 WinForms 部分仅供参考。除非维护老项目，否则不推荐学习。学习 C# 的 GUI 框架可以从 WPF 入手。UWP 已经被弃用；而 WinUI 3 和 MAUI 较新，Bug 或许还很多，触发这些来自依赖的 bug 可能严重影响开发效率。
 
 ### Android 开发
-[1] 	Google, "Developer Guides," [Online]. Available: https://developer.android.com/guide. [Accessed 4 8 2023]. 
+[1] 	Google, "Developer Guides," [Online]. Available: https://developer.android.com/guide. [Accessed 4 8 2023].  
 [2] 	郭霖, 第一行代码 Android, 3 ed., 人民邮电出版社, 2020.  
 
 #### 说明
