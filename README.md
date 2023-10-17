@@ -708,8 +708,10 @@ JetBrains 推荐的 Kotlin 书籍：https://kotlinlang.org/docs/books.html 。
 [1] 	Thomas H. Cormen, Charles E. Leiserson, Ronlad L. Rivest and Clifford Stein, Introduction to Algorithms, 4 ed., MIT Press, 2022.  
 [2] 	屈婉玲, 刘田, 张立昂 and 王捍贫, 算法设计与分析, 3 ed., 北京: 科学出版社, 2020.  
 [3] 	屈婉玲, 刘田, 张立昂 and 王捍贫, 算法设计与分析习题解答与学习指导, 3 ed., 北京: 科学出版社, 2020.  
+[4] 	Jeff Erickson, Algorithms, 1 ed., 2019.  
 
 #### 说明
+电子版：[[4]](http://jeffe.cs.illinois.edu/teaching/algorithms)
 公开课包括但不限于：
 - 算法设计与分析（北京大学）&emsp;主讲：屈婉玲
   - https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654
