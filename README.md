@@ -1,6 +1,6 @@
 # CS 自救指南&emsp;CS First Aid: A Vital Guide for CSE Students
 
-最后更新：2024/02/26
+最后更新：2024/02/27
 
 这是主要针对将在中国内地就读计算机类专业或已在中国内地就读计算机类专业但有考虑留学的学生们准备的一份自救指南。
 
@@ -288,7 +288,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 
 # 第一章&emsp;课程、教材与公开课
 
-本部分最后更新于：2023/09/15
+本部分最后更新于：2024/02/27
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -369,7 +369,7 @@ GitHub 学生开发包需要通过 edu 邮箱注册：https://education.github.c
 [12] 	David C. Lay, Steven R. Lay and Judi J. McDonald, Linear Algebra and Its Applications, Pearson, 2021.  
 
 #### 说明
-- [10]不是教材。
+- [11]不是教材。
 - [6]可在线阅览：https://textbooks.math.gatech.edu/ila/chap-algebra.html。
 - [4]的第 4 版预计在 2023 年 11 月出版，电子版将可免费获取。
 - 李炯生等编著的《线性代数》[3][4]面向的是中国科学技术大学数学系或少年班，**难度大，不建议数学功底较弱的同学选用**。
