@@ -615,6 +615,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 #### 说明
 - 感谢 [@vczh](https://github.com/vczh) 推荐了《Database System Concepts》。
 - 人大的《数据库系统概论》[2]比较坑的地方在于，它上面的不少 SQL 语句在很多数据库产品里面都是不能被识别的。理论部分总体还 OK。
+- 注意：不同数据库产品使用不同的 **SQL 方言**（SQL dialects），它们与作为标准的 ANSI SQL 不完全相同。如：Oracle DB 使用 PL/SQL，而 Microsoft SQL Server（MSSQL）使用 Transcat-SQL（T-SQL）。
 
 我们学院的情况是：软工必修，信安选修。
 
