@@ -645,7 +645,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 [3] 	Oracle, "Learn Java," 26 3 2024. [Online]. Available: https://dev.java/learn/. [Accessed 31 3 2024].  
 
 #### 说明
-【★】[3] 是 Oracle 官方的教程，推荐。
+【★】[3] 是 Oracle 官方的教程，推荐。  
 【★】随着 Java 的更新，有部分特性已经被弃用，请注意及时查阅最新文档（https://docs.oracle.com/en/java/ ）。
 
 ### Python
