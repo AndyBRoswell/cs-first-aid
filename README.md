@@ -294,7 +294,7 @@
 
 ### 善用人工智能
 
-很遗憾，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和基础设施的开发与测试人员等。
+很遗憾，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和基础设施（标准库、操作系统、数据库、编译器等）的开发与测试人员等。
 
 对于普通人，别无选择，只能通过与 AI 充分合作，来降低被迅速淘汰的概率。
 - ChatGPT 能够回答多方面的问题并编写一些简单的代码，但它不联网，因而能力受限。
@@ -520,7 +520,7 @@ Microsoft 的[官方文档](https://learn.microsoft.com/en-us/cpp/c-language/c-l
 
 C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草稿（final draft），最终草稿与正式标准一般只有顺序上的区别。
 
-可以到 (cplusplus)[http://cplusplus.com/] 和 [cppreference](https://en.cppreference.com/w/) 查阅资料。[中文版](https://zh.cppreference.com/w/)  
+可以到 [cplusplus](http://cplusplus.com/) 和 [cppreference](https://en.cppreference.com/w/) 查阅资料。[中文版](https://zh.cppreference.com/w/)  
 【★】Microsoft 的官方文档[2]是非常不错的学习现代 C++（Modern C++）的材料。不过，Microsoft 的文档给出的自然是 Microsoft Visual C++（MSVC）的参考，可能与官方标准有一定差异。[中文版](https://docs.microsoft.com/zh-cn/cpp/cpp/cpp-language-reference)（提示：本主题的部分内容可能是由机器翻译）。
 
 不同的 C++ 编译器对 C++ 标准的实现是有出入的，但常见的语法一般都遵循标准。  
