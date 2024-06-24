@@ -643,6 +643,10 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 推荐开课学期：3 ~ 5
 
+### 形式语言与自动机 / Formal Languages and Automata
+#### 课本
+[1] 	Peter Linz and Susan H. Rodger, An Introduction to Formal Languages and Automata, 7 ed., Jones & Bartlett Learning, 2023.  
+
 ### 编译原理 || 编译器设计 / Principles of Compilation || Compiler Design
 #### 课本
 [1] 	Alfred V. Aho, Ravi Sethi and Jeffrey D.Ullman, Compilers: Principles, Techniques, and Tools, 2 ed., Pearson/Addison Wesley, 2006.  
@@ -657,10 +661,6 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 我们学院的情况是：软工必修，信安选修。
 
 推荐开课学期：4 ~ 6
-
-### 形式语言与自动机 / Formal Languages and Automata
-#### 课本
-[1] 	Peter Linz and Susan H. Rodger, An Introduction to Formal Languages and Automata, 7 ed., Jones & Bartlett Learning, 2023.  
 
 ## 基础选修
 
