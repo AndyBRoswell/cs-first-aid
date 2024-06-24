@@ -534,6 +534,14 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 建议开课学期：1 ~ 2。
 
+### Web 开发
+[1] 	Mozilla Foundation, "Learn Web Development," 20 6 2023. [Online]. Available: https://developer.mozilla.org/en-US/docs/Learn. [Accessed 4 8 2023].  
+[2] 	陈恒 and 李正光, SSM + Spring Boot + Vue.js 3全栈开发从入门到实战, 清华大学出版社, 2022. 
+
+#### 说明
+【★】**建议首先通过[1]进行学习**。注意：MDN 的中文版文档虽有志愿者进行翻译，但通常不是最新的，因此推荐直接使用英文版。
+其余网站也可参考。如：[W3Schools](https://www.w3schools.com/) 、[菜鸟教程](https://www.runoob.com/) 、[CodeCademy](https://www.codecademy.com/)、[web.dev](https://web.dev/)。
+
 ### 数字电子学 / Digital Electronics
 #### 课本
 [1] 	邓元庆, 关宇, 贾鹏 and 石会, 数字设计基础与应用, 2 ed., 清华大学出版社, 2010.  
@@ -580,14 +588,6 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 其实严蔚敏的《数据结构》[2]倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢。想考研的同学最好学习 / 复习本书。
 
 推荐开课学期：2 ~ 3
-
-### Web 开发
-[1] 	Mozilla Foundation, "Learn Web Development," 20 6 2023. [Online]. Available: https://developer.mozilla.org/en-US/docs/Learn. [Accessed 4 8 2023].  
-[2] 	陈恒 and 李正光, SSM + Spring Boot + Vue.js 3全栈开发从入门到实战, 清华大学出版社, 2022. 
-
-#### 说明
-【★】**建议首先通过[1]进行学习**。注意：MDN 的中文版文档虽有志愿者进行翻译，但通常不是最新的，因此推荐直接使用英文版。
-其余网站也可参考。如：[W3Schools](https://www.w3schools.com/) 、[菜鸟教程](https://www.runoob.com/) 、[CodeCademy](https://www.codecademy.com/)、[web.dev](https://web.dev/)。
 
 ### 操作系统 / Operating Systems
 #### 课本
