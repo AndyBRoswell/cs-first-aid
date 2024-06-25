@@ -298,12 +298,12 @@
 
 对于普通人，别无选择，只能通过与 AI 充分合作，来降低被迅速淘汰的概率。
 - ChatGPT 能够回答多方面的问题并编写一些简单的代码，但它不联网，因而能力受限。
-- 相比之下，[Bing Chat（Microsoft Copilot）](https://copilot.microsoft.com/)能够通过搜索网络内容来增加答案的准确率。[GitHub Copilot](https://github.com/features/copilot) 的代码补全则使用公开仓库中的代码进行训练，是高度针对本行业的人工智能。两者均能为编程和报告撰写等日常任务提供相当多的帮助。
+- 相比之下，[Bing Chat (Microsoft Copilot)](https://copilot.microsoft.com/) 能够通过搜索网络内容来增加答案的准确率。[GitHub Copilot](https://github.com/features/copilot) 的代码补全则使用公开仓库中的代码进行训练，是高度针对本行业的人工智能。两者均能为编程和报告撰写等日常任务提供相当多的帮助。
 - 你应当有能力判断人工智能给出的计算机相关知识的作答是否准确。这意味着你要认真对待下述课程与相应技能的培养，包括信息检索的能力。
 
 # 第一章&emsp;课程、教材与公开课
 
-本章最后更新于：2024/06/24
+本章最后更新于：2024/06/25
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -402,7 +402,7 @@
   - 本课程是面向清华大学物理系学生的基础必修课。
   - 建议倍速：≤ 1.5 x
   - 配套教材：[1]
-- [Introduction to Linear Algebra（Massachusetts Institute of Technology）](https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371)&emsp;主讲：Gilbert Strang
+- [Introduction to Linear Algebra (Massachusetts Institute of Technology)](https://www.bilibili.com/video/BV1ix411f7Yp?from=search&seid=2805254012188999371)&emsp;主讲：Gilbert Strang
   - 建议倍速：≤ 1.5 x
 - [（参考资料）线性代数的本质](https://www.bilibili.com/video/BV1ys411472E)&emsp;主讲：3Blue1Brown
   - 注意：线性代数基础较好的同学可能会感觉本视频讲解得过慢。
@@ -514,7 +514,7 @@ Microsoft 的[官方文档](https://learn.microsoft.com/en-us/cpp/c-language/c-l
 笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等高级语言，C / C++ 更加贴近硬件，因而暴露了计算机工作时涉及的许多原理与细节。打好 C / C++ 的基础，有利于尽快建立对计算机整体及主要部件的认识，对计算机将如何执行自己编写的语句有一个更加明确而充满细节的思路。  
 此外，许多其它高级语言的语法和代码风格等，都可以在 C++ 中找到。如果在熟悉 C++ 以后再去学习其它语言，学习速率就会快得多，因为要学习的很多内容都是自己已经接触过了的。
 
-再次提醒：可使用 [Bing Chat（Microsoft Copilot）](https://copilot.microsoft.com/)等人工智能辅助自己的学习。虽然此类人工智能在绝大多数时候都能提供正确答案，但你仍然需要结合已有知识、参考资料与搜索引擎，自行判断人工智能给出的计算机相关知识的作答是否准确。
+再次提醒：可使用 [Bing Chat )Microsoft Copilot)](https://copilot.microsoft.com/) 等人工智能辅助自己的学习。虽然此类人工智能在绝大多数时候都能提供正确答案，但你仍然需要结合已有知识、参考资料与搜索引擎，自行判断人工智能给出的计算机相关知识的作答是否准确。
 
 C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草稿（final draft），最终草稿与正式标准一般只有顺序上的区别。
 
@@ -528,7 +528,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 [更多 C++ 书目](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
 
 #### 试行性学习方法
-- 有反馈称《C++ Primer》[1]相对冗长。一种替代方案是：先学习[2]一段时间后，继续学习[2]的同时开始学习 C++ 作者编写的[3]。由于[2]是参考而非教程，使用 [Bing Chat（Microsoft Copilot）](https://copilot.microsoft.com/)等人工智能挑选可以作为入门的章节；向人工智能积极提问，并适时反馈自己的学习情况，以在需要时及时调整。
+- 有反馈称《C++ Primer》[1]相对冗长。一种替代方案是：先学习[2]一段时间后，继续学习[2]的同时开始学习 C++ 作者编写的[3]。由于[2]是参考而非教程，使用 [Bing Chat (Microsoft Copilot)](https://copilot.microsoft.com/) 等人工智能挑选可以作为入门的章节；向人工智能积极提问，并适时反馈自己的学习情况，以在需要时及时调整。
 - Rust 是近几年开始快速发展的语言之一，有机会在日后达到与 C++ 分庭抗礼的地位。感兴趣的同学也可以学习 Rust。
 
 建议开课学期：1 ~ 2。
