@@ -1,6 +1,6 @@
 # CS 自救指南&emsp;CS First Aid: A Vital Guide for CSE Students
 
-最后更新：2024/06/24
+最后更新：2024/06/25
 
 主要目标人群：
 - （将）在中国内地就读计算机类专业的
@@ -58,7 +58,7 @@
 
 # 第零章&emsp;提升效率的工具与思想
 
-本章最后更新于：2024/06/24
+本章最后更新于：2024/06/25
 
 ## 计算机
 
@@ -298,7 +298,7 @@
 
 对于普通人，别无选择，只能通过与 AI 充分合作，来降低被迅速淘汰的概率。
 - ChatGPT 能够回答多方面的问题并编写一些简单的代码，但它不联网，因而能力受限。
-- 相比之下，[Bing Chat（Microsoft Copilot）](https://copilot.microsoft.com/)能够通过搜索网络内容来增加答案的准确率。[GitHub Copilot](https://github.com/features/copilot)的代码补全则使用公开仓库中的代码进行训练，是高度针对本行业的人工智能。两者均能为编程和报告撰写等日常任务提供相当多的帮助。
+- 相比之下，[Bing Chat（Microsoft Copilot）](https://copilot.microsoft.com/)能够通过搜索网络内容来增加答案的准确率。[GitHub Copilot](https://github.com/features/copilot) 的代码补全则使用公开仓库中的代码进行训练，是高度针对本行业的人工智能。两者均能为编程和报告撰写等日常任务提供相当多的帮助。
 - 你应当有能力判断人工智能给出的计算机相关知识的作答是否准确。这意味着你要认真对待下述课程与相应技能的培养，包括信息检索的能力。
 
 # 第一章&emsp;课程、教材与公开课
