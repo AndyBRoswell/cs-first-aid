@@ -302,6 +302,7 @@
     - [Premiere Pro 脚本](https://ppro-scripting.docsforadobe.dev/introduction/extendscript-overview.html)和 [After Effects 脚本](https://helpx.adobe.com/after-effects/using/scripts.html)都是使用 [ExtendScript](https://extendscript.docsforadobe.dev/introduction/extendscript-overview.html)（JavaScript 的 Adobe 扩展）编写的
     - Davinci Resolve 和 Blackmagic Fusion 使用 Lua 开发插件（称为 [Fuse](https://documents.blackmagicdesign.com/UserManuals/Fusion_Fuse_SDK.pdf)）
     - VEGAS Pro [提供 .NET API 用于编写脚本](https://www.vegascreativesoftware.com/in/downloads/)
+    - Blender [使用 Python 编写自动化脚本](https://docs.blender.org/manual/en/latest/advanced/scripting/introduction.html)
 
 ### 善用人工智能
 
