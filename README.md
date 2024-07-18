@@ -619,7 +619,6 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 #### 说明
 - OSTEP[1]作者主页上有英文版，中文版不能直接从主页里找到，且不会像英文版那样随时更新。[在此](http://pages.cs.wisc.edu/~remzi/OSTEP/)获得最新版本。[中译版](http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese)
 - 汤子瀛等编著的《计算机操作系统》[2]为内地众多知名高校的计算机类专业考研的指定参考书，其中部分内容可以作为 OSTEP 的补充。
-
 - [计算机本科生花大量时间写编译器，操作系统是不是不务正业？](https://www.zhihu.com/question/321433640)
 - [为啥南京大学蒋炎岩老师的操作系统课那么难?](https://www.zhihu.com/question/598621331)
 
