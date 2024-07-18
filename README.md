@@ -544,6 +544,14 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 建议开课学期：1 ~ 2。
 
+### Shell
+
+\[TBC\]
+
+### 软件测试
+
+\[TBC\]
+
 ### Web 开发
 [1] 	Mozilla Foundation, "Learn Web Development," 20 6 2023. [Online]. Available: https://developer.mozilla.org/en-US/docs/Learn. [Accessed 4 8 2023].  
 [2] 	陈恒 and 李正光, SSM + Spring Boot + Vue.js 3全栈开发从入门到实战, 清华大学出版社, 2022. 
