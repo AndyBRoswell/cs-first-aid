@@ -294,7 +294,14 @@
 - 基本目标：避免使用计算机做大量重复的手工工作。按照这个目标，寻找合适的自动化方案并实施。
 - 一般地，**不要重复造轮子**。你能想到的想法，其他人就一定都想不到或者还没有公开实现吗？虽然自己动手写一些“造轮子”的项目的确有助于训练基本功，但不必花费过多的时间。编写代码的过程中，经常要询问自己：我写的项目与同类项目相比，有哪些改进或创新？
 - 一些已经问世多年并具有一定市占的大型软件，在使用它们时更要注意这一点：许多你正在重复地、手动进行的工作，实际上极有可能已有相应的功能能够高效地自动化完成你的需求。因此，多去网上搜一搜。
-  - Microsoft Office 自动化可以通过[使用 Office.js 编写 Office 插件（add-in）](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/develop-overview)来完成。也可以使用 [OXML SDK](https://learn.microsoft.com/en-us/office/open-xml/open-xml-sdk)来批量操纵 Office Open XML（OOXML）文件（自 Office 2007 起，Excel、PowerPoint、Word 文档全部采用 OOXML 格式），但要求显然更高。
+  - Microsoft Office 自动化可以通过[使用 Office.js 编写 Office 插件（add-in）](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/develop-overview)来完成。也可以使用 [OXML SDK](https://learn.microsoft.com/en-us/office/open-xml/open-xml-sdk) 来批量操纵 Office Open XML（OOXML）文件（自 Office 2007 起，Excel、PowerPoint、Word 文档全部采用 OOXML 格式），但要求显然更高。
+  - 许多非线性编辑（非编，non-linear editing，NLE）和视觉特效（visual effects，VFX）软件都提供了自动化机制：
+    - 3ds Max 提供 [C++ SDK、.NET API、Python 脚本和 MAXScript 脚本的支持](https://help.autodesk.com/view/MAXDEV/2022/ENU/?guid=MAXDEV_Overview_overview_html)
+    - Maya 支持[通过 MEL、Python 和 Dash 编写脚本](https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-1C6C0BC0-002C-4035-ADC7-97AD2F390190)
+    - Cinema 4D 提供 [Python SDK](https://developers.maxon.net/docs/py/2024_0_0a/manuals/manual_py_in_c4d.html)
+    - [Premiere Pro 脚本](https://ppro-scripting.docsforadobe.dev/introduction/extendscript-overview.html)和 [After Effects 脚本](https://helpx.adobe.com/after-effects/using/scripts.html)都是使用 [ExtendScript](https://extendscript.docsforadobe.dev/introduction/extendscript-overview.html)（JavaScript 的 Adobe 扩展）编写的
+    - Davinci Resolve 和 Blackmagic Fusion 使用 Lua 开发插件（称为 [Fuse](https://documents.blackmagicdesign.com/UserManuals/Fusion_Fuse_SDK.pdf)）
+    - VEGAS Pro [提供 .NET API 用于编写脚本](https://www.vegascreativesoftware.com/in/downloads/)
 
 ### 善用人工智能
 
@@ -307,7 +314,7 @@
 
 # 第一章&emsp;课程、教材与公开课
 
-本章最后更新于：2024/06/25
+本章最后更新于：2024/07/18
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -518,7 +525,7 @@ Microsoft 的[官方文档](https://learn.microsoft.com/en-us/cpp/c-language/c-l
 笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等高级语言，C / C++ 更加贴近硬件，因而暴露了计算机工作时涉及的许多原理与细节。打好 C / C++ 的基础，有利于尽快建立对计算机整体及主要部件的认识，对计算机将如何执行自己编写的语句有一个更加明确而充满细节的思路。  
 此外，许多其它高级语言的语法和代码风格等，都可以在 C++ 中找到。如果在熟悉 C++ 以后再去学习其它语言，学习速率就会快得多，因为要学习的很多内容都是自己已经接触过了的。
 
-再次提醒：可使用 [Bing Chat )Microsoft Copilot)](https://copilot.microsoft.com/) 等人工智能辅助自己的学习。虽然此类人工智能在绝大多数时候都能提供正确答案，但你仍然需要结合已有知识、参考资料与搜索引擎，自行判断人工智能给出的计算机相关知识的作答是否准确。
+再次提醒：可使用 [Bing Chat (Microsoft Copilot)](https://copilot.microsoft.com/) 等人工智能辅助自己的学习。虽然此类人工智能在绝大多数时候都能提供正确答案，但你仍然需要结合已有知识、参考资料与搜索引擎，自行判断人工智能给出的计算机相关知识的作答是否准确。
 
 C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草稿（final draft），最终草稿与正式标准一般只有顺序上的区别。
 
