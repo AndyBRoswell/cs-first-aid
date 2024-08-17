@@ -276,10 +276,10 @@
 
 是的，相信你也猜到了：**只是完成课内的要求，是远远不够的**。在平日，就需要不断地进行各种各样的积累。**不熟悉计算机的同学**（比如，因为出身边远地区，经济比较困难；或者因为初中和高中的学业问题而被管得死死的，结果大学之前一直都很少接触计算机）**更要对此引起高度重视**。方法有很多，这里按照个人经验提出一些较为可行的：
 - 多看本行业及其它相关行业的新闻。这些网站随手就能搜到很多，选几个内容比较符合兴趣的就行。
-- 选择自己感兴趣的，或较大概率作为日后发展方向的细分行业：可以是 Web、音视频、服务端、操作系统、体系结构、嵌入式、云、数据库、无人驾驶，等等，了解这些行业目前主要应用哪些技术（以及相应的软件）、取得了哪些主要的重大发展成果、日后的发展趋势，等等。例：
+- 选择自己感兴趣的，或较大概率作为日后发展方向的细分行业：可以是 Web、音视频、服务端、操作系统、体系结构、嵌入式、云、数据库、无人驾驶、工业软件，等等，了解这些行业目前主要应用哪些技术（以及相应的软件）、取得了哪些主要的重大发展成果、日后的发展趋势，等等。例：
   - React、 Vue、Angular 是前端开发的主流框架；Spring 全家桶在 Web 开发中的重要地位，等等；跨平台等需求正越发受到重视。
   - 音视频开发总是离不开 FFmpeg；C / C++ 一般都是首选的编程语言。
-  - 关系数据库已高度成熟，常见的关系数据库产品有 Oracle DB、MySQL / MariaDB、PostgreSQL、Microsoft SQL Server 等；非关系数据库有文档型数据库（如 MongoDB）、图数据库、时间序列数据库、空间数据库，等等；主流的数据库产品通常都支持多个模型，而不仅仅是关系模型，如：各大关系数据库也在陆续添加 JSON 等非关系数据的支持。
+  - 关系数据库已高度成熟，常见的关系数据库产品有 Oracle DB、MySQL / MariaDB、PostgreSQL、Microsoft SQL Server 等；非关系数据库有文档型数据库（如 MongoDB）、图数据库、时间序列数据库、空间（地理信息）数据库、键值数据库、面向对象数据库，等等；主流的数据库产品通常都支持多个模型，而不仅仅是关系模型，如：各大关系数据库也在陆续添加 JSON、XML 等非关系数据的支持。
     - [DB-ENGINES 数据库排名](https://db-engines.com/en/ranking)
   - 常见的编程语言，如 C / C++、Java、Python、C#、Kotlin、JavaScript / TypeScript，等等，有什么主要特点，适合或不适合哪些领域；它们的较新版本具有何种改进，有利于解决哪些需求 / 痛点，等等。
   - 人工智能行业的发展成果，譬如：近年来的许多汽车都支持辅助驾驶；语音输入正在普及，准确率不断上升，甚至方言的识别率也能做到比较高；翻译网站的翻译结果正在变得越来越接近信、达、雅的标准；与此同时，人工智能还面临许多问题，譬如：神经网络实质上是一个黑箱，人们目前还不能得知神经网络能够产生特定输出的具体 / 本质的原因；目前人工智能成果的落地，主要还是依靠暴力堆数据、堆算力，导致更多成果的大规模投入应用受到瓶颈（**再次强调：即便如此，这也与包括初级软件工程师在内的无数岗位正在被取代不矛盾！**）；作为风口行业，人工智能产业也没有逃脱不良现象：总有大量人员骗取投资，捞完就跑，大量相关企业其实并没有太多技术功底，等等。
@@ -290,33 +290,35 @@
 ### 尽早熟悉生产力工具的使用
 
 比如：各类 IDE（集成开发环境）、Microsoft Office、LaTeX，等等。这部分时间是不能省的。不愿意额外花时间去学这些东西，短期来看虽然节省了时间，但从长期来看，带来的麻烦在时间上的开销大得多。
-- 实在不想折腾 LaTeX 的，可以使用 Microsoft Word 敲公式。随着版本的更新，Word 公式编辑器的许多操作正越来越接近 LaTeX 。
+- 实在不想折腾 LaTeX 的，可以使用 Microsoft Word 敲公式。随着版本的更新，Word 公式编辑器的许多操作正越来越接近 LaTeX。
 
-假如实在不想跟相关的教程去学，那么可以试着：每当用这些软件做某项工作觉得很麻烦时，就去网上搜索可能提高效率的操作方法。
+假如确实不想跟相关的教程去学，那么可以试着：每当用这些软件做某项工作觉得很麻烦时，就去网上搜索可能提高效率的操作方法。
 
 ### 自动化
 
 觉得用计算机做某件事很麻烦，就可以去想怎样将其自动化。常见的途径是：搜索相关的软件，或自己编程实现。
-- 基本目标：避免使用计算机做大量重复的手工工作。按照这个目标，寻找合适的自动化方案并实施。
+- 基本目标：**避免使用计算机做大量重复的手工工作**。按照这个目标，寻找合适的自动化方案并实施。
 - 一般地，**不要重复造轮子**。你能想到的想法，其他人就一定都想不到或者还没有公开实现吗？虽然自己动手写一些“造轮子”的项目的确有助于训练基本功，但不必花费过多的时间。编写代码的过程中，经常要询问自己：我写的项目与同类项目相比，有哪些改进或创新？
 - 一些已经问世多年并具有一定市占的大型软件，在使用它们时更要注意这一点：许多你正在重复地、手动进行的工作，实际上极有可能已有相应的功能能够高效地自动化完成你的需求。因此，多去网上搜一搜。
-  - Microsoft Office 自动化可以通过[使用 Office.js 编写 Office 插件（add-in）](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/develop-overview)来完成。也可以使用 [OXML SDK](https://learn.microsoft.com/en-us/office/open-xml/open-xml-sdk) 来批量操纵 Office Open XML（OOXML）文件（自 Office 2007 起，Excel、PowerPoint、Word 文档全部采用 OOXML 格式），但要求显然更高。
-  - 许多非线性编辑（非编，non-linear editing，NLE）和视觉特效（visual effects，VFX）软件都提供了自动化机制：
+  - Microsoft Office 自动化可以通过[使用 Office.js 编写 Office 插件（add-in）](https://learn.microsoft.com/en-us/office/dev/add-ins/develop/develop-overview)来完成。也可以使用 [OXML SDK](https://learn.microsoft.com/en-us/office/open-xml/open-xml-sdk) 来批量操纵 Office Open XML（OOXML）文件（自 Office 2007 起，Excel、PowerPoint、Word 文档全部采用 OOXML 格式），但对编程能力的要求显然高得多。
+  - 许多非线性编辑（非编，NLE）和视觉特效（VFX）软件都提供了自动化机制：
     - 3ds Max 提供 [C++ SDK、.NET API、Python 脚本和 MAXScript 脚本的支持](https://help.autodesk.com/view/MAXDEV/2022/ENU/?guid=MAXDEV_Overview_overview_html)
     - Maya 支持[通过 MEL、Python 和 Dash 编写脚本](https://help.autodesk.com/view/MAYAUL/2022/ENU/?guid=GUID-1C6C0BC0-002C-4035-ADC7-97AD2F390190)
     - Cinema 4D 提供 [Python SDK](https://developers.maxon.net/docs/py/2024_0_0a/manuals/manual_py_in_c4d.html)
     - [Premiere Pro 脚本](https://ppro-scripting.docsforadobe.dev/introduction/extendscript-overview.html)和 [After Effects 脚本](https://helpx.adobe.com/after-effects/using/scripts.html)都是使用 [ExtendScript](https://extendscript.docsforadobe.dev/introduction/extendscript-overview.html)（JavaScript 的 Adobe 扩展）编写的
-    - Davinci Resolve 和 Blackmagic Fusion 使用 Lua 开发插件（称为 [Fuse](https://documents.blackmagicdesign.com/UserManuals/Fusion_Fuse_SDK.pdf)）
+    - Blackmagic Design 旗下的 Davinci Resolve 和 Fusion 使用 Lua 开发插件（称为 [Fuse](https://documents.blackmagicdesign.com/UserManuals/Fusion_Fuse_SDK.pdf)）
     - VEGAS Pro [提供 .NET API 用于编写脚本](https://www.vegascreativesoftware.com/in/downloads/)
     - Blender [使用 Python 编写自动化脚本](https://docs.blender.org/manual/en/latest/advanced/scripting/introduction.html)
+  - Steinberg VST 插件使用 C++ 编写，用于扩展数字音频工作站（DAW）的功能。[VST SDK](https://steinbergmedia.github.io/vst3_doc/vstsdk/index.html)
 
 ### 善用人工智能
 
-很遗憾，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和基础设施（标准库、操作系统、数据库、编译器等）的开发与测试人员等。
+遗憾的是，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和基础设施（标准库、操作系统、数据库、编译器等）的开发与测试人员等。
 
 对于普通人，别无选择，只能通过与 AI 充分合作，来降低被迅速淘汰的概率。
 - ChatGPT 能够回答多方面的问题并编写一些简单的代码，但它不联网，因而能力受限。
 - 相比之下，[Bing Chat (Microsoft Copilot)](https://copilot.microsoft.com/) 能够通过搜索网络内容来增加答案的准确率。[GitHub Copilot](https://github.com/features/copilot) 的代码补全则使用公开仓库中的代码进行训练，是高度针对本行业的人工智能。两者均能为编程和报告撰写等日常任务提供相当多的帮助。
+  - 近期发现 Bing Chat 对计算机相关问题的正答率有所下降，但**不影响人工智能正在取代海量工作的结论**。
 - 你应当有能力判断人工智能给出的计算机相关知识的作答是否准确。这意味着你要认真对待下述课程与相应技能的培养，包括信息检索的能力。
 
 # 第一章&emsp;课程、教材与公开课
