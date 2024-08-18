@@ -410,7 +410,8 @@
 - Gaussian、ChemDraw
 - Solidworks、CATIA、AutoCAD
 - Unity、Unreal、CryEngine、Godot
-- Adobe Creative Cloud、3DS Max、Maya、Blender、Cinema 4D、DaVinci Resolve、Houdini、ZBrush、Redshift、OctaneRender、Arnold、V-Ray
+- Adobe Creative Cloud、ZBrush、Final Cut Pro X、3DS Max、Maya、Blender、Cinema 4D、DaVinci Resolve、Houdini、Redshift、OctaneRender、Arnold、V-Ray
+- Ableton Live、FL Studio、Pro Tools、Logic Pro X、Cubase、Studio One
 - ……
 </details>
 </details>
