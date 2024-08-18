@@ -336,7 +336,7 @@
   - 语言服务器：clangd、OmniSharp、tsserver
   - linter：clang-tidy、eslint、pylint
   - 构建自动化：CMake、Make、NMake、MSBuild、Ant、Maven、Gradle、Ninja、qmake、xmake
-    - 很多老项目还使用 M4 和 Autoconf 等；部分项目可能使用 Xamarin。
+    - 很多老项目还使用 M4 和 Autoconf 等。
   - Boost、Qt
 - 操作系统内核与其它底层设施
   - NT 内核、Linux 内核、XNU
@@ -364,7 +364,7 @@
   - 人工智能：CNTK、NLTK、TensorFlow、Torch、Keras、MXNet
   - 大数据：Hadoop、Spark
   - GUI：WPF、WinUI、MAUI、GTK、Qt Widgets、Qt Quick、wxWidgets、LVGL、Electron、JetPack Compose、Compose Multiplatform、Swing、JavaFX、Avalonia
-    - 许多老旧项目使用 Microsoft Foundation Class（MFC）和 WinForms。
+    - 许多老旧项目使用 Microsoft Foundation Class（MFC）和 WinForms；部分项目可能使用 Xamarin。
   - Web 前端：React、Vue、Angular、Blazor、jQuery、Bootstrap、Tailwind
   - Web 后端：Spring、ASP.NET、ASP.NET Core、Django、Flask、FastAPI
     - 对象关系映射（ORM）框架：MyBatis、MyBatis-Plus、Entity Framework、Entity Framework Core
@@ -794,7 +794,7 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 
 #### 说明
 【★】Microsoft 为 C# 准备了非常丰富的官方文档[4]，**建议首先通过官方文档进行学习**。[中文版](https://docs.microsoft.com/zh-cn/dotnet/csharp/)  
-[3] 的 WinForms 部分仅供参考。除非维护老项目，否则不推荐学习。学习 C# 的 GUI 框架可以从 [WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/?view=netdesktop-8.0) 入手。WinUI 2 所属的 UWP 已经被弃用，因而不要学习 WinUI 2；而 WinUI 3 和 MAUI 较新，Bug 或许还很多，触发这些来自依赖的 bug 可能严重影响开发效率。
+[3] 的 WinForms 部分仅供参考。除非维护老项目，否则不推荐学习。学习 C# 的 GUI 框架可以从 [WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/?view=netdesktop-8.0) 入手。WinUI 2 所属的 UWP 已经被弃用，因而不要学习 WinUI 2；针对移动平台的 Xamarin 也已停止支持。而 WinUI 3 和 MAUI 较新，Bug 或许还很多，触发这些来自依赖的 bug 可能严重影响开发效率。
 
 ### Android 开发
 [1] 	Google, "Developer Guides," [Online]. Available: https://developer.android.com/guide. [Accessed 4 8 2023].  
