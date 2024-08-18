@@ -324,7 +324,34 @@
 
 ### 善用人工智能
 
-遗憾的是，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和基础设施（标准库、操作系统、数据库、编译器等）的开发与测试人员等。
+遗憾的是，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和基础设施的开发与测试人员等。
+以下属于基础设施：
+- 编程语言的标准库与工具链，以及高度针对特定编程语言的库或框架
+  - 标准库：C 标准库、C++ 标准库、.NET 基础类库（BCL）
+  - 编译器：MSVC、GCC、Clang、Intel C++ Compiler (ICC)、Roslyn、javac、rustc
+  - 解释器：Google V8、SpiderMonkey、CPython
+  - 运行时（Runtime）：JVM、CLR、Android Runtime（ART）
+  - 交互环境：Kotlin Interactive (ki)、C# Interactive (csi)、Python REPL、Julia REPL、R REPL
+  - 语言服务器：clangd、OmniSharp、tsserver
+  - linter：clang-tidy、eslint、pylint
+  - Boost、Qt
+- 操作系统内核与其它底层设施
+  - NT 内核、Linux 内核、XNU
+  - Windows Runtime (WinRT)
+- 数据库内核
+- 驱动
+  - 硬件驱动，如：显卡驱动、声卡驱动、网卡驱动、总线驱动
+  - 软件驱动，如：VMWare Tools、ODBC / OLE DB
+- 虚拟化平台
+  - Hyper-V、ESXi、VMWare Workstation、VirtualBox
+- 服务器
+  - nginx、tomcat、IIS、kestrel
+- 中间件
+- 搜索引擎
+- 通信协议
+- 其它特定领域的底层库或框架
+
+注意：虽然这些岗位的可替代性低，但**并不代表相关的职位多**。
 
 对于普通人，别无选择，只能通过与 AI 充分合作，来降低被迅速淘汰的概率。
 - ChatGPT 能够回答多方面的问题并编写一些简单的代码，但它不联网，因而能力受限。
