@@ -329,13 +329,14 @@
 以下属于基础设施：
 - 编程语言的标准库与工具链，以及高度针对特定编程语言的库或框架
   - 标准库：C 标准库、C++ 标准库、.NET 基础类库（BCL）
-  - 编译器：MSVC、GCC、Clang、Intel C++ Compiler (ICC)、Roslyn、javac、rustc
+  - 编译器：MSVC、GCC、Clang、Intel C++ Compiler (ICC)、Roslyn、javac、kotlinc、rustc
   - 解释器：Google V8、SpiderMonkey、CPython
-  - 运行时（Runtime）：Java Virtual Machine (JVM)、Common Language Runtime (CLR)、Android Runtime（ART）
+  - 运行时（Runtime）：Java Virtual Machine (JVM)、Common Language Runtime (CLR)、Android Runtime（ART）、Node.js
   - 交互环境：Kotlin Interactive (ki)、C# Interactive (csi)、Python REPL、Julia REPL、R REPL
   - 语言服务器：clangd、OmniSharp、tsserver
   - linter：clang-tidy、eslint、pylint
   - 构建自动化：CMake、Make、NMake、MSBuild、Ant、Maven、Gradle、Ninja、qmake、xmake
+    - 很多老项目还使用 M4 和 Autoconf 等。
   - Boost、Qt
 - 操作系统内核与其它底层设施
   - NT 内核、Linux 内核、XNU
@@ -358,7 +359,12 @@
   - 科学 / 高性能计算：CUDA、OpenMP、MPI、MKL、BLAS、LAPACK、NumPy、Octave
   - 人工智能：CNTK、NLTK、TensorFlow、Torch、Keras、MXNet
   - 大数据：Hadoop、Spark
-  - GUI：WinForms、WPF、WinUI 2、WinUI 3、MAUI、GTK、Qt Widgets、Qt Quick、wxWidgets、LVGL、Electron、JetPack Compose、Compose Multiplatform
+  - GUI：WPF、WinUI、MAUI、GTK、Qt Widgets、Qt Quick、wxWidgets、LVGL、Electron、JetPack Compose、Compose Multiplatform、Swing、JavaFX、Avalonia
+    - 许多老旧项目使用 Microsoft Foundation Class（MFC）和 WinForms。
+  - Web 前端：React、Vue、Angular、Blazor、jQuery、Bootstrap、Tailwind
+  - Web 后端：Spring、ASP.NET、ASP.NET Core、Django、Flask、FastAPI
+    - 对象关系映射（ORM）框架：MyBatis、MyBatis-Plus、Entity Framework、Entity Framework Core
+    - 许多老旧项目使用 ASP.NET Web Forms、Struts 2、Hibernate。
 
 注意：虽然这些岗位的可替代性低，但**并不代表相关的职位多**。
 
