@@ -1,6 +1,6 @@
 # CS 自救指南&emsp;CS First Aid: A Vital Guide for CSE Students
 
-最后更新：2024/08/17
+最后更新：2024/08/18
 
 主要目标人群：
 - （将）在中国内地就读计算机类专业的
@@ -63,7 +63,7 @@
 
 # 第零章&emsp;提升效率的工具与思想
 
-本章最后更新于：2024/08/17
+本章最后更新于：2024/08/18
 
 ## 计算机
 
@@ -166,6 +166,16 @@
 ## 备份
 
 做好**多重**备份（本地 + 网盘、乃至异地备份），特别是学习资料和其它重要数据。
+
+## 免费的云服务
+
+主流云厂商提供了一些长期免费（always free）的服务。
+- [Azure](https://azure.microsoft.com/en-in/pricing/free-services/)
+- [AWS](https://aws.amazon.com/free)
+- [GCP](https://cloud.google.com/free)
+- [Oracle Cloud](https://www.oracle.com/cloud/free/)
+- [IBM Cloud](https://www.ibm.com/cloud/free)
+- [DigitalOcean](https://www.digitalocean.com/pricing)
 
 ## 其它软件
 
