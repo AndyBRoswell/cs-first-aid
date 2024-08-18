@@ -354,6 +354,8 @@
   - ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
 - 自动化测试框架
   - Google Test（GTest）、Qt Test、JUnit、Mockito、NUnit、xUnit.NET、PyTest、unittest、Selenium
+- Shell
+  - Bash、zsh、fish、cmd、PowerShell
 - 搜索引擎
 - 通信协议
 - 其它特定领域的底层库、框架或套件等
