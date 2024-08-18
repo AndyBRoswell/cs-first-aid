@@ -401,6 +401,7 @@ Bash、zsh、fish、cmd、PowerShell
 - Web 后端：Spring MVC、ASP.NET、ASP.NET Core、Django、Flask、FastAPI
   - 对象关系映射（ORM）框架：MyBatis、MyBatis-Plus、Spring Data JPA、Entity Framework、Entity Framework Core
   - 许多老旧项目使用 ASP.NET Web Forms、Struts 2、Hibernate。
+- ……
 </details>
 <details>
 <summary>大型的工业（行业）软件等</summary>
@@ -410,6 +411,7 @@ Bash、zsh、fish、cmd、PowerShell
 - Solidworks、CATIA、AutoCAD
 - Unity、Unreal、CryEngine、Godot
 - Adobe Creative Cloud、3DS Max、Maya、Blender、Cinema 4D、DaVinci Resolve、Houdini、ZBrush、Redshift、Octane、Arnold、V-Ray
+- ……
 </details>
 </details>
 
