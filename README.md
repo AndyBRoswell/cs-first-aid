@@ -324,9 +324,7 @@
 
 ### 善用人工智能
 
-遗憾的是，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和基础设施的开发与测试人员等。
-
-以下属于基础设施：
+遗憾的是，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和某些重要软件的开发与测试人员等。以下是一些典例。可以看出大部分属于基础设施：
 - 编程语言的标准库与工具链，以及高度针对特定编程语言的库或框架
   - 标准库：C 标准库、C++ 标准库、.NET 基础类库（BCL）
   - 编译器：MSVC、GCC、Clang、Intel C++ Compiler (ICC)、Roslyn、javac、kotlinc、rustc
@@ -369,6 +367,7 @@
   - Web 后端：Spring MVC、ASP.NET、ASP.NET Core、Django、Flask、FastAPI
     - 对象关系映射（ORM）框架：MyBatis、MyBatis-Plus、Spring Data JPA、Entity Framework、Entity Framework Core
     - 许多老旧项目使用 ASP.NET Web Forms、Struts 2、Hibernate。
+- 工业软件
 
 注意：虽然这些岗位的可替代性低，但**并不代表相关的职位多**。
 
