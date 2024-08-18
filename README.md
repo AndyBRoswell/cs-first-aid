@@ -331,7 +331,7 @@
   - 标准库：C 标准库、C++ 标准库、.NET 基础类库（BCL）
   - 编译器：MSVC、GCC、Clang、Intel C++ Compiler (ICC)、Roslyn、javac、rustc
   - 解释器：Google V8、SpiderMonkey、CPython
-  - 运行时（Runtime）：JVM、CLR、Android Runtime（ART）
+  - 运行时（Runtime）：Java Virtual Machine (JVM)、Common Language Runtime (CLR)、Android Runtime（ART）
   - 交互环境：Kotlin Interactive (ki)、C# Interactive (csi)、Python REPL、Julia REPL、R REPL
   - 语言服务器：clangd、OmniSharp、tsserver
   - linter：clang-tidy、eslint、pylint
