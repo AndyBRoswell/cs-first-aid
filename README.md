@@ -325,7 +325,11 @@
 ### 善用人工智能
 
 遗憾的是，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和某些重要软件的开发与测试人员等。以下是一些典例。可以看出大部分属于基础设施：
-- 编程语言的标准库与工具链，以及高度针对特定编程语言的库或框架
+<details>
+<summary>点此展开</summary>
+<details>
+<summary>编程语言的标准库与工具链，以及高度针对特定编程语言的库或框架</summary>
+
   - 标准库：C 标准库、C++ 标准库、.NET 基础类库（BCL）
   - 编译器：MSVC、GCC、Clang、Intel C++ Compiler (ICC)、Roslyn、javac、kotlinc、rustc
   - 解释器：Google V8、SpiderMonkey、CPython
@@ -336,40 +340,76 @@
   - 构建自动化：CMake、Make、NMake、MSBuild、Ant、Maven、Gradle、Ninja、qmake、xmake
     - 很多老项目还使用 M4 和 Autoconf 等。
   - Boost、Qt
-- 操作系统内核与其它底层设施
+</details>
+<details>
+<summary>操作系统内核与其它底层设施</summary>
+
   - NT 内核、Linux 内核、XNU
   - Windows Runtime (WinRT)
-- 数据库内核
-- 驱动
+</details>
+<details>
+<summary>数据库内核</summary>
+</details>
+<details>
+<summary>驱动</summary>
+
   - 硬件驱动，如：显卡驱动、声卡驱动、网卡驱动、总线驱动
   - 软件驱动，如：VMWare Tools、ODBC / OLE DB
-- 虚拟化
+</details>
+<details>
+<summary>虚拟化</summary>
+
   - 虚拟机：Hyper-V、ESXi、VMWare Workstation、VirtualBox、QEMU
   - 操作系统层虚拟化（容器）：Docker、Podman、LXC、OpenShift、Kubernetes
-- 服务器
-  - nginx、httpd、Tomcat、IIS、Kestrel、Exchange Server
-- 中间件
-  - ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
-- 自动化测试框架
-  - Google Test（GTest）、Qt Test、JUnit、Mockito、NUnit、xUnit.NET、PyTest、unittest、Selenium
-- Shell
-  - Bash、zsh、fish、cmd、PowerShell
-- 搜索引擎
-- 通信协议
-- 其它特定领域的底层库、框架或套件等
-  - 音视频：FFmpeg、HandBrake、x264、x265、libaom、libflac
-  - 科学 / 高性能计算：CUDA、OpenMP、MPI、MKL、BLAS、LAPACK、NumPy、Octave
-  - 人工智能：CNTK、NLTK、TensorFlow、Torch、Keras、MXNet
-  - 大数据：Hadoop、Spark
-  - GUI：WPF、WinUI、MAUI、GTK、Qt Widgets、Qt Quick、wxWidgets、LVGL、Electron、JetPack Compose、Compose Multiplatform、Swing、JavaFX、Avalonia
-    - 许多老旧项目使用 Microsoft Foundation Class（MFC）和 WinForms；部分项目可能使用 Xamarin。
-  - Web 前端：React、Vue、Angular、Blazor、jQuery、Bootstrap、Tailwind
-  - Web 后端：Spring MVC、ASP.NET、ASP.NET Core、Django、Flask、FastAPI
-    - 对象关系映射（ORM）框架：MyBatis、MyBatis-Plus、Spring Data JPA、Entity Framework、Entity Framework Core
-    - 许多老旧项目使用 ASP.NET Web Forms、Struts 2、Hibernate。
-- 工业软件
+</details>
+<details>
+<summary>服务器</summary>
 
-注意：虽然这些岗位的可替代性低，但**并不代表相关的职位多**。
+nginx、httpd、Tomcat、IIS、Kestrel、Exchange Server
+</details>
+<details>
+<summary>中间件</summary>
+
+ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
+</details>
+<details>
+<summary>自动化测试框架</summary>
+
+Google Test (GTest)、Qt Test、JUnit、Mockito、NUnit、xUnit.NET、PyTest、unittest、Selenium
+</details>
+<details>
+<summary>Shell</summary>
+
+Bash、zsh、fish、cmd、PowerShell
+</details>
+<details>
+<summary>搜索引擎</summary>
+</details>
+<details>
+<summary>通信协议</summary>
+</details>
+<details>
+<summary>其它特定领域的底层库、框架或套件等</summary>
+
+- 音视频：FFmpeg、HandBrake、x264、x265、libaom、libflac
+- 科学 / 高性能计算：CUDA、OpenMP、MPI、MKL、BLAS、LAPACK、NumPy、Octave
+- 人工智能：CNTK、NLTK、TensorFlow、Torch、Keras、MXNet
+- 大数据：Hadoop、Spark
+- GUI：WPF、WinUI、MAUI、GTK、Qt Widgets、Qt Quick、wxWidgets、LVGL、Electron、JetPack Compose、Compose Multiplatform、Swing、JavaFX、Avalonia
+  - 许多老旧项目使用 Microsoft Foundation Class（MFC）和 WinForms；部分项目可能使用 Xamarin。
+- Web 前端：React、Vue、Angular、Blazor、jQuery、Bootstrap、Tailwind
+- Web 后端：Spring MVC、ASP.NET、ASP.NET Core、Django、Flask、FastAPI
+  - 对象关系映射（ORM）框架：MyBatis、MyBatis-Plus、Spring Data JPA、Entity Framework、Entity Framework Core
+  - 许多老旧项目使用 ASP.NET Web Forms、Struts 2、Hibernate。
+</details>
+<details>
+<summary>大型的工业（行业）软件等</summary>
+
+- MATLAB / Mathematica
+</details>
+</details>
+
+注意：虽然这些岗位的可替代性较低，但**并不代表相关的职位必然足够多**。
 
 对于普通人，别无选择，只能通过与 AI 充分合作，来降低被迅速淘汰的概率。
 - ChatGPT 能够回答多方面的问题并编写一些简单的代码，但它不联网，因而能力受限。
