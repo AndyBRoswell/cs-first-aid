@@ -336,7 +336,7 @@
   - 语言服务器：clangd、OmniSharp、tsserver
   - linter：clang-tidy、eslint、pylint
   - 构建自动化：CMake、Make、NMake、MSBuild、Ant、Maven、Gradle、Ninja、qmake、xmake
-    - 很多老项目还使用 M4 和 Autoconf 等。
+    - 很多老项目还使用 M4 和 Autoconf 等；部分项目可能使用 Xamarin。
   - Boost、Qt
 - 操作系统内核与其它底层设施
   - NT 内核、Linux 内核、XNU
