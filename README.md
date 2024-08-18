@@ -345,13 +345,14 @@
   - 软件驱动，如：VMWare Tools、ODBC / OLE DB
 - 虚拟化
   - 虚拟机：Hyper-V、ESXi、VMWare Workstation、VirtualBox
-  - 操作系统层虚拟化（容器）：Docker、Podman、OpenShift、LXC、Kubernetes
+  - 操作系统层虚拟化（容器）：Docker、Podman、LXC、OpenShift、Kubernetes
 - 服务器
   - nginx、httpd、Tomcat、IIS、kestrel、Exchange Server
 - 中间件
   - ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
 - 搜索引擎
 - 通信协议
+  - [网络协议列表](https://en.wikipedia.org/wiki/List_of_network_protocols_(OSI_model))
 - 其它特定领域的底层库、框架或套件等
   - 音视频：FFmpeg、HandBrake、x264、x265、libaom、libflac
   - 科学 / 高性能计算：CUDA、OpenMP、MPI、MKL、BLAS、LAPACK、NumPy、Octave
