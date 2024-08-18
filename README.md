@@ -349,9 +349,11 @@
   - 虚拟机：Hyper-V、ESXi、VMWare Workstation、VirtualBox、QEMU
   - 操作系统层虚拟化（容器）：Docker、Podman、LXC、OpenShift、Kubernetes
 - 服务器
-  - nginx、httpd、Tomcat、IIS、kestrel、Exchange Server
+  - nginx、httpd、Tomcat、IIS、Kestrel、Exchange Server
 - 中间件
   - ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
+- 自动化测试框架
+  - Google Test（GTest）、Qt Test、JUnit、Mockito、NUnit、xUnit.NET、PyTest、unittest、Selenium
 - 搜索引擎
 - 通信协议
 - 其它特定领域的底层库、框架或套件等
