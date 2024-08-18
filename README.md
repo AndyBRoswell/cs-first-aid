@@ -352,7 +352,6 @@
   - ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
 - 搜索引擎
 - 通信协议
-  - [网络协议列表](https://en.wikipedia.org/wiki/List_of_network_protocols_(OSI_model))
 - 其它特定领域的底层库、框架或套件等
   - 音视频：FFmpeg、HandBrake、x264、x265、libaom、libflac
   - 科学 / 高性能计算：CUDA、OpenMP、MPI、MKL、BLAS、LAPACK、NumPy、Octave
@@ -704,6 +703,17 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 - 关于谢希仁编著的《计算机网络》[2]，我们老师说：如果用的是中文教材，那么基本都是用这本。同时，这本书也是很多学校的计算机类考研指定的参考书。用于和《自顶向下方法》互为补充，也是很不错的。
 - 有的学校的人工智能等方向不将《计算机网络》列为必修课。
 - 《自顶向下方法》[1]第 8 版删去了第 7 版的第 9 章 “多媒体网络”，作者说明称：由于多媒体应用越来越流行，因此他们选择将这些内容编入前 8 个章节。从书中移除的内容都可以在书本的[配套网站](https://gaia.cs.umass.edu/kurose_ross/index.php)找到。
+
+#### 参考阅读
+- [网络协议列表](https://en.wikipedia.org/wiki/List_of_network_protocols_(OSI_model))
+- [Internet 协议栈（TCP/IP）](https://en.wikipedia.org/wiki/Internet_protocol_suite)
+- [分类：应用层协议](https://en.wikipedia.org/wiki/Category:Application_layer_protocols)
+- [分类：表示层协议](https://en.wikipedia.org/wiki/Category:Presentation_layer_protocols)
+- [分类：会话层协议](https://en.wikipedia.org/wiki/Category:Session_layer_protocols)
+- [分类：运输层协议](https://en.wikipedia.org/wiki/Category:Transport_layer_protocols)
+- [分类：网络层协议](https://en.wikipedia.org/wiki/Category:Internet_layer_protocols)
+- [分类：链路层协议](https://en.wikipedia.org/wiki/Category:Link_protocols)
+- [分类：物理层协议](https://en.wikipedia.org/wiki/Category:Physical_layer_protocols)
 
 推荐开课学期：3 ~ 5
 
