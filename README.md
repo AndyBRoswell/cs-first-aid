@@ -345,11 +345,17 @@
 - 虚拟化平台
   - Hyper-V、ESXi、VMWare Workstation、VirtualBox
 - 服务器
-  - nginx、tomcat、IIS、kestrel
+  - nginx、httpd、Tomcat、IIS、kestrel、Exchange Server
 - 中间件
+  - ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
 - 搜索引擎
 - 通信协议
-- 其它特定领域的底层库或框架
+- 其它特定领域的底层库、框架或套件等
+  - 音视频：FFmpeg、HandBrake、x264、x265、libaom、libflac
+  - 科学 / 高性能计算：CUDA、OpenMP、MPI、MKL、BLAS、LAPACK、NumPy、Octave
+  - 人工智能：CNTK、NLTK、TensorFlow、Torch、Keras、MXNet
+  - 大数据：Hadoop、Spark
+  - GUI：WinForms、WPF、WinUI 2、WinUI 3、MAUI、GTK、Qt Widgets、Qt Quick、wxWidgets、LVGL、Electron、JetPack Compose、Compose Multiplatform
 
 注意：虽然这些岗位的可替代性低，但**并不代表相关的职位多**。
 
@@ -361,7 +367,7 @@
 
 # 第一章&emsp;课程、教材与公开课
 
-本章最后更新于：2024/07/18
+本章最后更新于：2024/08/18
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -762,7 +768,7 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 
 #### 说明
 【★】Microsoft 为 C# 准备了非常丰富的官方文档[4]，**建议首先通过官方文档进行学习**。[中文版](https://docs.microsoft.com/zh-cn/dotnet/csharp/)  
-[3] 的 WinForms 部分仅供参考。除非维护老项目，否则不推荐学习。学习 C# 的 GUI 框架可以从 [WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/?view=netdesktop-8.0) 入手。UWP 已经被弃用；而 WinUI 3 和 MAUI 较新，Bug 或许还很多，触发这些来自依赖的 bug 可能严重影响开发效率。
+[3] 的 WinForms 部分仅供参考。除非维护老项目，否则不推荐学习。学习 C# 的 GUI 框架可以从 [WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/?view=netdesktop-8.0) 入手。WinUI 2 所属的 UWP 已经被弃用，因而不要学习 WinUI 2；而 WinUI 3 和 MAUI 较新，Bug 或许还很多，触发这些来自依赖的 bug 可能严重影响开发效率。
 
 ### Android 开发
 [1] 	Google, "Developer Guides," [Online]. Available: https://developer.android.com/guide. [Accessed 4 8 2023].  
