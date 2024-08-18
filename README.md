@@ -327,7 +327,7 @@
 遗憾的是，绝大多数工作的本质都是简单而重复的。这意味着现有的人工智能很快将能胜任它们。至于那些（哪怕只是相对）不易被取代的工作，都是无一例外的超高要求。本行业的例子包括算法工程师和某些重要软件的开发与测试人员等。以下是一些典例。可以看出大部分属于基础设施：
 <details>
 <summary>点此展开</summary>
-<details>
+<details open>
 <summary>编程语言的标准库与工具链，以及高度针对特定编程语言的库或框架</summary>
 
   - 标准库：C 标准库、C++ 标准库、.NET 基础类库（BCL）
@@ -341,54 +341,54 @@
     - 很多老项目还使用 M4 和 Autoconf 等。
   - Boost、Qt
 </details>
-<details>
+<details open>
 <summary>操作系统内核与其它底层设施</summary>
 
   - NT 内核、Linux 内核、XNU
   - Windows Runtime (WinRT)
 </details>
-<details>
+<details open>
 <summary>数据库内核</summary>
 </details>
-<details>
+<details open>
 <summary>驱动</summary>
 
   - 硬件驱动，如：显卡驱动、声卡驱动、网卡驱动、总线驱动
   - 软件驱动，如：VMWare Tools、ODBC / OLE DB
 </details>
-<details>
+<details open>
 <summary>虚拟化</summary>
 
   - 虚拟机：Hyper-V、ESXi、VMWare Workstation、VirtualBox、QEMU
   - 操作系统层虚拟化（容器）：Docker、Podman、LXC、OpenShift、Kubernetes
 </details>
-<details>
+<details open>
 <summary>服务器</summary>
 
 nginx、httpd、Tomcat、IIS、Kestrel、Exchange Server
 </details>
-<details>
+<details open>
 <summary>中间件</summary>
 
 ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
 </details>
-<details>
+<details open>
 <summary>自动化测试框架</summary>
 
 Google Test (GTest)、Qt Test、JUnit、Mockito、NUnit、xUnit.NET、PyTest、unittest、Selenium
 </details>
-<details>
+<details open>
 <summary>Shell</summary>
 
 Bash、zsh、fish、cmd、PowerShell
 </details>
-<details>
+<details open>
 <summary>搜索引擎</summary>
 </details>
-<details>
+<details open>
 <summary>通信协议</summary>
 </details>
-<details>
+<details open>
 <summary>其它特定领域的底层库、框架或套件等</summary>
 
 - 音视频：FFmpeg、HandBrake、x264、x265、libaom、libflac
@@ -403,14 +403,14 @@ Bash、zsh、fish、cmd、PowerShell
   - 许多老旧项目使用 ASP.NET Web Forms、Struts 2、Hibernate。
 - ……
 </details>
-<details>
+<details open>
 <summary>大型的工业（行业）软件等</summary>
 
 - MATLAB、Mathematica、Maple
 - Gaussian、ChemDraw
 - Solidworks、CATIA、AutoCAD
 - Unity、Unreal、CryEngine、Godot
-- Adobe Creative Cloud、3DS Max、Maya、Blender、Cinema 4D、DaVinci Resolve、Houdini、ZBrush、Redshift、Octane、Arnold、V-Ray
+- Adobe Creative Cloud、3DS Max、Maya、Blender、Cinema 4D、DaVinci Resolve、Houdini、ZBrush、Redshift、OctaneRender、Arnold、V-Ray
 - ……
 </details>
 </details>
