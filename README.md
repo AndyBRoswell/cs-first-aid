@@ -343,8 +343,9 @@
 - 驱动
   - 硬件驱动，如：显卡驱动、声卡驱动、网卡驱动、总线驱动
   - 软件驱动，如：VMWare Tools、ODBC / OLE DB
-- 虚拟化平台
-  - Hyper-V、ESXi、VMWare Workstation、VirtualBox
+- 虚拟化
+  - 虚拟机：Hyper-V、ESXi、VMWare Workstation、VirtualBox
+  - 操作系统层虚拟化（容器）：Docker、Podman、OpenShift、LXC、Kubernetes
 - 服务器
   - nginx、httpd、Tomcat、IIS、kestrel、Exchange Server
 - 中间件
