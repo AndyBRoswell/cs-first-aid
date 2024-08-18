@@ -366,8 +366,8 @@
   - GUI：WPF、WinUI、MAUI、GTK、Qt Widgets、Qt Quick、wxWidgets、LVGL、Electron、JetPack Compose、Compose Multiplatform、Swing、JavaFX、Avalonia
     - 许多老旧项目使用 Microsoft Foundation Class（MFC）和 WinForms；部分项目可能使用 Xamarin。
   - Web 前端：React、Vue、Angular、Blazor、jQuery、Bootstrap、Tailwind
-  - Web 后端：Spring、ASP.NET、ASP.NET Core、Django、Flask、FastAPI
-    - 对象关系映射（ORM）框架：MyBatis、MyBatis-Plus、Entity Framework、Entity Framework Core
+  - Web 后端：Spring MVC、ASP.NET、ASP.NET Core、Django、Flask、FastAPI
+    - 对象关系映射（ORM）框架：MyBatis、MyBatis-Plus、Spring Data JPA、Entity Framework、Entity Framework Core
     - 许多老旧项目使用 ASP.NET Web Forms、Struts 2、Hibernate。
 
 注意：虽然这些岗位的可替代性低，但**并不代表相关的职位多**。
