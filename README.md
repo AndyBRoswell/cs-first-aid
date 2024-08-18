@@ -405,7 +405,11 @@ Bash、zsh、fish、cmd、PowerShell
 <details>
 <summary>大型的工业（行业）软件等</summary>
 
-- MATLAB / Mathematica
+- MATLAB、Mathematica、Maple
+- Gaussian、ChemDraw
+- Solidworks、CATIA、AutoCAD
+- Unity、Unreal、CryEngine、Godot
+- Adobe Creative Cloud、3DS Max、Maya、Blender、Cinema 4D、DaVinci Resolve、Houdini、ZBrush、Redshift、Octane、Arnold、V-Ray
 </details>
 </details>
 
