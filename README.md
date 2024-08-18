@@ -365,22 +365,22 @@
 <details open>
 <summary>服务器</summary>
 
-nginx、httpd、Tomcat、IIS、Kestrel、Exchange Server
+- nginx、httpd、Tomcat、IIS、Kestrel、Exchange Server
 </details>
 <details open>
 <summary>中间件</summary>
 
-ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
+- ZeroMQ（ZMQ）、RabbitMQ、kafka、gRPC
 </details>
 <details open>
 <summary>自动化测试框架</summary>
 
-Google Test (GTest)、Qt Test、JUnit、Mockito、NUnit、xUnit.NET、PyTest、unittest、Selenium
+- Google Test (GTest)、Qt Test、JUnit、Mockito、NUnit、xUnit.NET、PyTest、unittest、Selenium
 </details>
 <details open>
 <summary>Shell</summary>
 
-Bash、zsh、fish、cmd、PowerShell
+- Bash、zsh、fish、cmd、PowerShell
 </details>
 <details open>
 <summary>搜索引擎</summary>
