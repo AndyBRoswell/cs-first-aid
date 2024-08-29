@@ -762,7 +762,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 [2] 	唐朔飞, 计算机组成原理, 3 ed., 高等教育出版社, 2020.  
 [3] 	唐朔飞, 计算机组成原理——学习指导与习题解答, 2 ed., 高等教育出版社, 2012.  
 [4] 	David A. Patterson and John L. Hennessy, Computer Organization and Design ARM Edition: The Hardware Software Interface, 1 ed., Morgan Kaufmann, 2016.  
-[5] 	David A. Patterson and John L. Hennessy, Computer Organization and Design MIPS Edition: The Hardware/Software Interface, 2 ed., Morgan Kaufmann, 2020.  
+[5] 	David A. Patterson and John L. Hennessy, Computer Organization and Design MIPS Edition: The Hardware/Software Interface, 6 ed., Morgan Kaufmann, 2020.  
 [6] 	David A. Patterson and John L. Hennessy, Computer Organization and Design RISC-V Edition: The Hardware Software Interface, 2 ed., Morgan Kaufmann, 2020.  
 
 #### 说明
