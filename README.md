@@ -1,6 +1,6 @@
 # CS 自救指南&emsp;CS First Aid: A Vital Guide for CSE Students
 
-最后更新：2024/08/22
+最后更新：2024/08/29
 
 主要目标人群：
 - （将）在中国内地就读计算机类专业的
@@ -63,7 +63,7 @@
 
 # 第零章&emsp;提升效率的工具与思想
 
-本章最后更新于：2024/08/22
+本章最后更新于：2024/08/29
 
 ## 计算机
 
@@ -81,10 +81,15 @@
   - 升级 CPU 和 GPU 的优先级位于增加内存与硬盘容量之后。除非硬性要求，例如：需要二级地址转换（SLAT）运行高版本的虚拟机监视程序（VMM，如 Hyper-V、VMWare Workstation、VirtualBox），或需要 Tensor Core 加速推理与训练。
 - 不玩单机游戏，三四千来块（预算多一点的可以放宽到不低于五千）的机器通常也够做开发了。但是，
   - **内存和硬盘的容量一定要管够**。
-    - 最低配置（不推荐）：内存容量不少于 16 GB，硬盘总容量不少于约 500 GB。
-    - 次低配置：内存容量不少于 32 GB，硬盘总容量不少于约 1 TB。
-    - 推荐配置：内存容量不少于 64 GB，硬盘总容量不少于约 2 TB。
-    - 大量软件的体积都在不断膨胀。在 Windows 下，有的软件还会强制安装到 C 盘，或将自己产生的数据记录到 C 盘（无法更改这些目录）。为使 C 盘空间尽量大，避免对硬盘划分过多的分区；只建立单个分区最好。
+    - 内存容量：
+      - 最低（**不推荐**）：不少于 16 GB。
+      - 次低：不少于 32 GB。
+      - 推荐：不少于 64 ~ 128 GB。
+    - 硬盘容量：
+      - 最低（**不推荐**）：容量不少于 500 GB。
+      - 次低：不少于 1 TB。
+      - 推荐：不少于 2 ~ 4 TB。
+    - 大量软件的体积都在不断膨胀。在 Windows 下，有的软件还会强制安装到 C 盘，或将自己产生的数据记录到 C 盘（且无法更改这些目录）。为使 C 盘空间尽量大，避免对硬盘划分过多的分区；只建立单个分区最好。
   - 需要在本地运行机器学习训练任务的，配置需要高不少（CPU、显卡、内存、硬盘）。
 - 不优先选择采用低压 U 的笔记本。除非你确实十分在意轻薄、续航、发热。
   - 近年来，低压 CPU 提升不少，日常的轻负载应用的性能表现往往不错，且同时能维持相对低的功耗。
@@ -233,7 +238,9 @@
 
 许多软件使用教育邮箱注册可享受极大优惠。例如：
 - [Visual Studio Community](https://visualstudio.microsoft.com/vs/community/)。**只有通过教育邮箱才可以使用，并且免费**。另外两个版本 Professional 和 Enterprise 都是收费的。
-  - Windows 平台的 VS 主要使用 C# 开发，GUI 框架为 WPF。大量实践表明，在 Windows 系统中，其运行速度显著快于 JetBrains 系列 IDE（Java + Swing）。美中不足的是，Visual Studio 尚不支持在 Linux 系统中运行。
+  - Windows 平台的 VS 主要使用 C# 开发，GUI 框架为 WPF（也有一部分 WinForms 或老旧的 C++ GUI 部件，猜测使用了 MFC）。大量实践表明，在 Windows 系统中，其运行速度显著快于 JetBrains 系列 IDE（Java / Kotlin + Swing）。美中不足的是，Visual Studio 尚不支持在 Linux 系统中运行。
+    - SQL Server [已经可以运行在 Linux 上](https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-overview)。可能在未来的某一天，我们也会等来 Visual Studio 或 Microsoft Office 的原生 Linux 版本。但我个人感觉概率不大。
+    - Visual Studio for Mac 已经停止开发，最后一个版本的支持将于 2024 年 8 月 31 日结束。[详情](https://devblogs.microsoft.com/visualstudio/visual-studio-for-mac-retirement-announcement/)
   - 请及时升级到 Visual Studio 2022 新版本。因为 VS2022 是 64 位的，允许使用超过 4 GB 的内存，并提升运行于 64 位环境下的性能，有利于顺利打开超大规模的解决方案（solution，VS 里面一个 solution 包含若干个工程或项目，也就是 project，很多 IDE 都只有 project 的概念）。另外，代码补全的改进也获得了较多来自开发者的好评。
 - 非教育用户需要付费使用的 [JetBrains 全家桶](https://www.jetbrains.com/)，对教育用户**免费，免费，免费（不要再去找破解版了）！！** 举例：
   - CLion：跨平台 C++ IDE，通过 CMake 完成构建自动化（CMake 已成为跨平台构建自动化的事实标准）。
@@ -438,7 +445,7 @@
 
 # 第一章&emsp;课程、教材与公开课
 
-本章最后更新于：2024/08/18
+本章最后更新于：2024/08/29
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -751,16 +758,16 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 ### 计算机组成原理 / Computer Organization
 #### 课本
-[1] 	D. A. Patterson and J. L. Hennessy, Computer Organization and Design ARM Edition: The Hardware Software Interface, 1 ed., Morgan Kaufmann, 2016.  
-[2] 	David A. Patterson and John L. Hennessy, Computer Organization and Design MIPS Edition: The Hardware/Software Interface, 2 ed., Morgan Kaufmann, 2020.  
-[3] 	David A. Patterson and John L. Hennessy, Computer Organization and Design RISC-V Edition: The Hardware Software Interface, 2 ed., Morgan Kaufmann, 2020.  
-[4] 	Randal E. Bryant and David R. O'Hallaron, Computer Systems: A Programmer's Perspective, 3 ed., Pearson, 2015.  
-[5] 	唐朔飞, 计算机组成原理, 3 ed., 高等教育出版社, 2020.  
-[6] 	唐朔飞, 计算机组成原理——学习指导与习题解答, 2 ed., 高等教育出版社, 2012.  
+[1] 	Randal E. Bryant and David R. O'Hallaron, Computer Systems: A Programmer's Perspective, 3 ed., Pearson, 2015.  
+[2] 	唐朔飞, 计算机组成原理, 3 ed., 高等教育出版社, 2020.  
+[3] 	唐朔飞, 计算机组成原理——学习指导与习题解答, 2 ed., 高等教育出版社, 2012.  
+[4] 	David A. Patterson and John L. Hennessy, Computer Organization and Design ARM Edition: The Hardware Software Interface, 1 ed., Morgan Kaufmann, 2016.  
+[5] 	David A. Patterson and John L. Hennessy, Computer Organization and Design MIPS Edition: The Hardware/Software Interface, 2 ed., Morgan Kaufmann, 2020.  
+[6] 	David A. Patterson and John L. Hennessy, Computer Organization and Design RISC-V Edition: The Hardware Software Interface, 2 ed., Morgan Kaufmann, 2020.  
 
 #### 说明
-- 考研的同学可以以唐朔飞的《计算机组成原理》[5]及其习题解答[6]为参考资料。
-- 部分同学反映：CSAPP[4]难度偏低，对于进入计算机类专业之前已时常接触计算机并具有一些基础的同学来说过于简单且冗赘。对于此种情况，推荐《计算机组成与设计》[1][2][3]。
+- 考研的同学可以以唐朔飞的《计算机组成原理》[2]及其习题解答[3]为参考资料。
+- 部分同学反映：CSAPP[1]难度偏低，对于进入计算机类专业之前已时常接触计算机并具有一些基础的同学来说过于简单且冗赘。对于此种情况，推荐《计算机组成与设计》[4] [5] [6]。
 
 推荐开课学期：3 ~ 4
 
