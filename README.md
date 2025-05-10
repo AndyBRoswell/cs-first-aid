@@ -850,7 +850,7 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 #### 说明
 我们学院的情况是：软工必修，信安选修。
 
-建议先修课程：[形式语言与自动机](#形式语言与自动机--formal-languages-and-automata)  
+建议先修课程：[数据结构](#数据结构--data-structures)、[形式语言与自动机](#形式语言与自动机--formal-languages-and-automata)  
 推荐开课学期：4 ~ 6
 
 ## 基础选修
