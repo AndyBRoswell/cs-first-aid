@@ -17,7 +17,7 @@
 
 # 公告
 
-本《自救指南》并未停更。由于作者身体原因，近期以来未及时依照就业市场变化继续修订。不久后将有重大更新发布。
+本《自救指南》并未停更。由于作者身体原因，近期以来未及时依照就业市场变化继续修订。**不久后将有重大更新发布。**
 
 # 前言&emsp;在那内卷时代，没有置身于事外
 
@@ -442,7 +442,8 @@
 注意：虽然这些岗位的可替代性较低，但**并不代表相关的职位必然足够多**。
 
 对于普通人，别无选择，只能通过与 AI 充分合作，来降低被迅速淘汰的概率。
-- [ChatGPT](chatgpt.com)
+
+- [ChatGPT](https://chatgpt.com)
 - [Bing Chat (Microsoft Copilot)](https://copilot.microsoft.com/)
 - [GitHub Copilot](https://github.com/features/copilot)
 - [Perplexity AI](https://www.perplexity.ai/)
@@ -451,13 +452,13 @@
 - [Grok](https://grok.com)
 - [DeepSeek](https://chat.deepseek.com/)
 
-- 近期发现 Bing Chat、Perplexity 等对计算机相关问题的正答率有所下降，不排除是因为访问量过大而对模型进行了调整，令回应每个请求消耗的算力与能源更少。尽管如此，**不影响人工智能正在取代海量工作的结论**。
+- 近期发现 Bing Chat、Perplexity 等对计算机相关问题的正答率有所下降，不排除是因为访问量过大而对模型进行了调整，令回应每个请求消耗的算力与能源更少。而 ChatGPT 新发布的几个模型在回答涉本专业的问题时并没有明显改进。尽管如此，**不影响人工智能正在取代海量工作的结论**。
   - 很多人说，有和 AI 对线的功夫，自己早就能写完代码了。**这个观点是正确的，但我们这么想有个 * 用，老板和股东们又不这么想！他们早就裁员成瘾了，让别瞎 ** 裁员就跟要他们命似的。**
 - 你应当有能力判断人工智能给出的计算机相关知识的作答是否准确。这意味着你要认真对待下述[课程](#第一章课程教材与公开课)与相应技能的培养，包括信息检索的能力。
 
 # 第一章&emsp;课程、教材与公开课
 
-本章最后更新于：2024/08/29
+本章最后更新于：2025/05/10
 
 > “上清华的课比上清华简单多了。” 
 > 
@@ -484,6 +485,7 @@
 [7] 	张筑生, 数学分析新讲 重排本, 北京: 北京大学出版社, 2021.  
 [8] 	Владимир Антонович Зорич, 数学分析, 北京: 高等教育出版社, 2019.  
 [9] 	薛春华 and 徐森林, 数学分析精选习题全解, 北京: 清华大学出版社, 2009.  
+[10] 	T. M. Apostol, Mathematical Analysis, Addison Wesley, 1974.  
 
 #### 说明
 网络上可获取的公开课可能使用旧版的教材。但使用新版的影响应当不大。  
@@ -668,7 +670,7 @@ Microsoft 的[官方文档](https://learn.microsoft.com/en-us/cpp/c-language/c-l
 笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等高级语言，C / C++ 更加贴近硬件，因而暴露了计算机工作时涉及的许多原理与细节。打好 C / C++ 的基础，有利于尽快建立对计算机整体及主要部件的认识，对计算机将如何执行自己编写的语句有一个更加明确而充满细节的思路。  
 此外，许多其它高级语言的语法和代码风格等，都可以在 C++ 中找到。如果在熟悉 C++ 以后再去学习其它语言，学习速率就会快得多，因为要学习的很多内容都是自己已经接触过了的。
 
-再次提醒：可使用 [Bing Chat (Microsoft Copilot)](https://copilot.microsoft.com/) 等人工智能辅助自己的学习。虽然此类人工智能在绝大多数时候都能提供正确答案，但你仍然需要结合已有知识、参考资料与搜索引擎，自行判断人工智能给出的计算机相关知识的作答是否准确。
+再次提醒：可使用人工智能辅助自己的学习。虽然此类人工智能在绝大多数时候都能提供正确答案，但你仍然需要结合已有知识、参考资料与搜索引擎，自行判断人工智能给出的计算机相关知识的作答是否准确。
 
 C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草稿（final draft），最终草稿与正式标准一般只有顺序上的区别。
 
@@ -684,12 +686,14 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 [更多 C++ 书目](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
 
 #### 试行性学习方法
-- 有反馈称《C++ Primer》[1]相对冗长。一种替代方案是：先学习[2]一段时间后，继续学习[2]的同时开始学习 C++ 作者编写的[3]。由于[2]是参考而非教程，使用 [Bing Chat (Microsoft Copilot)](https://copilot.microsoft.com/) 等人工智能挑选可以作为入门的章节；向人工智能积极提问，并适时反馈自己的学习情况，以在需要时及时调整。
-- Rust 是近几年开始快速发展的语言之一，有机会在日后达到与 C++ 分庭抗礼的地位。感兴趣的同学也可以学习 Rust。
+- 有反馈称《C++ Primer》[1]相对冗长。一种替代方案是：先学习[2]一段时间后，继续学习[2]的同时开始学习 C++ 作者编写的[3]。由于[2]是参考而非教程，使用人工智能挑选可以作为入门的章节；向人工智能积极提问，并适时反馈自己的学习情况，以在需要时及时调整。
+- Rust 是近几年开始快速发展的语言之一，有机会在日后达到与 C++ 分庭抗礼的地位。感兴趣的同学也可以学习 Rust（但强烈不推荐跳过 C++）。
 
 建议开课学期：1 ~ 2。
 
 ### Shell
+
+Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, from Microsoft Learn: https://learn.microsoft.com/en-us/powershell/scripting/learn/more-powershell-learning  
 
 \[TBC\]
 
@@ -714,7 +718,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 本课程是专业必修课计算机组成原理的基础。
 
-数电的书我没有去找别的，反正我们学校用的是这本。计算机类专业的可以不用买书，看我的[笔记](https://blog.csdn.net/COFACTOR/article/details/103862541)。至少在目前来看，足够不卡住后面的学习了。  
+数电的书我没有去找别的，反正我们学校用的是这本。计算机类专业的可以不用买书，看我的[笔记](https://blog.csdn.net/COFACTOR/article/details/103862541)，或学习[《Computer Organization and Design》](#计算机组成原理--computer-organization)的附录。至少在目前来看，足够不卡住后面的学习了。  
 本来想修订一下笔记，然而由于时间关系，暂时鸽了。
 
 推荐开课学期：2 ~ 3
@@ -732,6 +736,8 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 
 推荐开课学期：2 ~ 4（最好在学习操作系统和计算机组成原理等专业课之前就开始学习；与这些专业课同步学习亦可）
 
+时间较紧的，可以暂时跳过，并在需要汇编知识时（如，操作系统开发、CPU 模拟、二进制安全）再继续学习
+
 ## 专业必修
 ### 数据结构 / Data Structures
 #### 课本
@@ -746,7 +752,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 #### 说明
 可直接获取[7]的[电子版](https://people.cs.vt.edu/shaffer/Book/C++3elatest.pdf)。
 
-有的学校的对应课程为 “数据结构与算法” 。
+有的学校的对应课程为 “数据结构与算法”（DSA）。
 
 其实严蔚敏的《数据结构》[2]倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢。想考研的同学最好学习 / 复习本书。
 
@@ -759,6 +765,9 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 [3] 	Abraham Silberschatz, Operating System Concepts, 10 ed., Wiley, 2018.  
 [4] 	Andrew S. Tanenbaum, Modern Operating Systems, 5 ed., Pearson, 2022.  
 [5] 	陈海波 and 夏虞斌, 操作系统：原理与实现, 机械工业出版社, 2023.  
+[6] 	P. Yosifovich, M. E. Russinovich, A. Ionescu and D. A. Solomon, Windows Internals, Part 1: System architecture, processes, threads, memory management, and more, 7 ed., vol. 1, Microsoft Press, 2017.   
+[7] 	P. Yosifovich, M. E. Russinovich, A. Ionescu and D. A. Solomon, Windows Internals, Part 2, vol. 2, Microsoft Press, 2017.   
+
 
 #### 说明
 - OSTEP[1]作者主页上有英文版，中文版不能直接从主页里找到，且不会像英文版那样随时更新。[在此](http://pages.cs.wisc.edu/~remzi/OSTEP/)获得最新版本。[中译版](http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese)
@@ -815,7 +824,7 @@ C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草
 #### 说明
 - 感谢 [@vczh](https://github.com/vczh) 推荐了《Database System Concepts》。
 - 人大的《数据库系统概论》[2]比较坑的地方在于，它上面的不少 SQL 语句在很多数据库产品里面都是不能被识别的。理论部分总体还 OK。
-- 注意：不同数据库产品使用不同的 **SQL 方言**（SQL dialects），它们与作为标准的 ANSI SQL 不完全相同。如：Oracle DB 使用 PL/SQL，而 Microsoft SQL Server（MSSQL）使用 Transcat-SQL（T-SQL）。
+- 注意：不同数据库产品使用不同的 **SQL 方言**（SQL dialects），它们与作为标准的 ANSI SQL 不完全相同。如：Oracle DB 使用 PL/SQL，Microsoft SQL Server（MSSQL）使用 Transcat-SQL（T-SQL），PostgreSQL 使用 PL/pgSQL。
 - 我们学院的情况是：软工必修，信安选修。
 
 推荐开课学期：3 ~ 5
