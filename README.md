@@ -716,7 +716,7 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 #### 说明
 一些学校可能将本课程称作：数字电路、数字逻辑、数字电子技术，等等。
 
-本课程是专业必修课计算机组成原理的基础。
+本课程是专业必修课[计算机组成原理](#计算机组成原理--computer-organization)的基础。
 
 数电的书我没有去找别的，反正我们学校用的是这本。计算机类专业的可以不用买书，看我的[笔记](https://blog.csdn.net/COFACTOR/article/details/103862541)，或学习[《Computer Organization and Design》](#计算机组成原理--computer-organization)的附录。至少在目前来看，足够不卡住后面的学习了。  
 本来想修订一下笔记，然而由于时间关系，暂时鸽了。
@@ -756,6 +756,7 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 
 其实严蔚敏的《数据结构》[2]倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢。想考研的同学最好学习 / 复习本书。
 
+建议先修课程：[C++](#c--c)  
 推荐开课学期：2 ~ 3
 
 ### 操作系统 / Operating Systems
@@ -768,13 +769,13 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 [6] 	P. Yosifovich, M. E. Russinovich, A. Ionescu and D. A. Solomon, Windows Internals, Part 1: System architecture, processes, threads, memory management, and more, 7 ed., vol. 1, Microsoft Press, 2017.   
 [7] 	P. Yosifovich, M. E. Russinovich, A. Ionescu and D. A. Solomon, Windows Internals, Part 2, vol. 2, Microsoft Press, 2017.   
 
-
 #### 说明
 - OSTEP[1]作者主页上有英文版，中文版不能直接从主页里找到，且不会像英文版那样随时更新。[在此](http://pages.cs.wisc.edu/~remzi/OSTEP/)获得最新版本。[中译版](http://pages.cs.wisc.edu/~remzi/OSTEP/Chinese)
 - 汤子瀛等编著的《计算机操作系统》[2]为内地众多知名高校的计算机类专业考研的指定参考书，其中部分内容可以作为 OSTEP 的补充。
 - [计算机本科生花大量时间写编译器，操作系统是不是不务正业？](https://www.zhihu.com/question/321433640)
 - [为啥南京大学蒋炎岩老师的操作系统课那么难?](https://www.zhihu.com/question/598621331)
 
+建议先修课程：[数据结构](#数据结构--data-structures)  
 推荐开课学期：3 ~ 4
 
 ### 计算机组成原理 / Computer Organization
@@ -790,6 +791,7 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 - 考研的同学可以以唐朔飞的《计算机组成原理》[2]及其习题解答[3]为参考资料。
 - 部分同学反映：CSAPP[1]难度偏低，对于进入计算机类专业之前已时常接触计算机并具有一些基础的同学来说过于简单且冗赘。对于此种情况，推荐《计算机组成与设计》[4] [5] [6]。
 
+建议先修课程：[数据结构](#数据结构--data-structures)  
 推荐开课学期：3 ~ 4
 
 ### 计算机网络 / Computer Networking
@@ -801,7 +803,7 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 #### 说明
 - 关于谢希仁编著的《计算机网络》[2]，我们老师说：如果用的是中文教材，那么基本都是用这本。同时，这本书也是很多学校的计算机类考研指定的参考书。用于和《自顶向下方法》互为补充，也是很不错的。
 - 有的学校的人工智能等方向不将《计算机网络》列为必修课。
-- 《自顶向下方法》[1]第 8 版删去了第 7 版的第 9 章 “多媒体网络”，作者说明称：由于多媒体应用越来越流行，因此他们选择将这些内容编入前 8 个章节。从书中移除的内容都可以在书本的[配套网站](https://gaia.cs.umass.edu/kurose_ross/index.php)找到。
+- 《自顶向下方法》[1]第 8 版删去了第 7 版的第 9 章 “多媒体网络”，作者说明称：由于多媒体应用越来越流行，因此他们选择将这些内容编入前 8 个章节。从书中移除的内容都可以在书本的[配套网站](https://gaia.cs.umass.edu/kurose_ross/index.php)找到。该官方网站还具有 slides 和练习题。
 
 #### 参考阅读
 - [网络协议列表](https://en.wikipedia.org/wiki/List_of_network_protocols_(OSI_model))
@@ -814,6 +816,7 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 - [分类：链路层协议](https://en.wikipedia.org/wiki/Category:Link_protocols)
 - [分类：物理层协议](https://en.wikipedia.org/wiki/Category:Physical_layer_protocols)
 
+建议先修课程：[数据结构](#数据结构--data-structures)  
 推荐开课学期：3 ~ 5
 
 ### 数据库 / Database
@@ -827,6 +830,7 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 - 注意：不同数据库产品使用不同的 **SQL 方言**（SQL dialects），它们与作为标准的 ANSI SQL 不完全相同。如：Oracle DB 使用 PL/SQL，Microsoft SQL Server（MSSQL）使用 Transcat-SQL（T-SQL），PostgreSQL 使用 PL/pgSQL。
 - 我们学院的情况是：软工必修，信安选修。
 
+建议先修课程：[数据结构](#数据结构--data-structures)  
 推荐开课学期：3 ~ 5
 
 ### 形式语言与自动机 / Formal Languages and Automata
@@ -846,6 +850,7 @@ Microsoft. (2022, 9 21). PowerShell learning resources. Retrieved 5 10, 2025, fr
 #### 说明
 我们学院的情况是：软工必修，信安选修。
 
+建议先修课程：[形式语言与自动机](#形式语言与自动机--formal-languages-and-automata)  
 推荐开课学期：4 ~ 6
 
 ## 基础选修
@@ -882,6 +887,15 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 【★】Microsoft 为 C# 准备了非常丰富的官方文档[4]，**建议首先通过官方文档进行学习**。[中文版](https://docs.microsoft.com/zh-cn/dotnet/csharp/)  
 [3] 的 WinForms 部分仅供参考。除非维护老项目，否则不推荐学习。学习 C# 的 GUI 框架可以从 [WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/?view=netdesktop-8.0) 入手。WinUI 2 所属的 UWP 已经被弃用，因而不要学习 WinUI 2；针对移动平台的 Xamarin 也已停止支持。而 WinUI 3 和 MAUI 较新，Bug 或许还很多，触发这些来自依赖的 bug 可能严重影响开发效率。
 
+### Kotlin
+[1] 	JetBrains, "Kotlin Docs," 25 7 2023. [Online]. Available: https://kotlinlang.org/docs. [Accessed 4 8 2023]. 
+
+#### 说明 
+【★】**建议首先通过官方文档[1]进行学习**。注意：**Kotlin 官方文档默认你具备一定的 Java 基础**。  
+[JetBrains 推荐的 Kotlin 书籍](https://kotlinlang.org/docs/books.html) 
+
+建议先修课程：[Java](#java)  
+
 ### Android 开发
 [1] 	Google, "Developer Guides," [Online]. Available: https://developer.android.com/guide. [Accessed 4 8 2023].  
 [2] 	郭霖, 第一行代码 Android, 3 ed., 人民邮电出版社, 2020.  
@@ -889,12 +903,7 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 #### 说明
 【★】**建议首先通过官方文档[1]进行学习**。
 
-### Kotlin
-[1] 	JetBrains, "Kotlin Docs," 25 7 2023. [Online]. Available: https://kotlinlang.org/docs. [Accessed 4 8 2023]. 
-
-#### 说明 
-【★】**建议首先通过官方文档[1]进行学习**。注意：**Kotlin 官方文档默认你具备一定的 Java 基础**。  
-[JetBrains 推荐的 Kotlin 书籍](https://kotlinlang.org/docs/books.html) 
+建议先修课程：[Kotlin](#kotlin)
 
 ## 专业选修
 
@@ -905,6 +914,8 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 
 #### 说明
 要求较高的院校可能将体系结构列为专业必修课。
+
+建议先修课程：[计算机组成原理](#计算机组成原理--computer-organization)
 
 ### 算法 / Algorithms
 #### 课本
@@ -918,6 +929,8 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 公开课包括但不限于：
 - [算法设计与分析（北京大学）](https://www.bilibili.com/video/BV1Ls411W7PB?from=search&seid=9038077306193741654)&emsp;主讲：屈婉玲
 
+建议先修课程：[数据结构](#数据结构--data-structures)
+
 ### 机器学习 / Machine Learning
 #### 课本
 [1] 	Christopher M. Bishop, Pattern Recognition and Machine Learning, Springer, 2006.  
@@ -929,6 +942,8 @@ Python 2 已经被弃用。除非需要编写兼容已有的、不易重构的�
 
 #### 说明
 电子版：[[1]](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf)[[6]](https://nndl.github.io/nndl-book.pdf)
+
+建议先修课程：[数学分析](#数学分析--高等数学微积分--mathematical-analysis--calculus)、[线性代数](#高等代数--线性代数--linear-algebra)、[概率论与数理统计](#概率论与数理统计--probability-theory-and-statistics)  
 
 ### 自然语言处理 / Natural Language Processing
 #### 课本
