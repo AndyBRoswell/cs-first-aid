@@ -1,1 +1,4 @@
 .internal/
+node_modules/
+.idea/
+.astro/
