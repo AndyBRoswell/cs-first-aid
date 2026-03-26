@@ -1,0 +1,25 @@
+{
+  "name": "cs-first-aid",
+  "version": "0.0.0",
+  "description": "A Vital Guide for CSE Students",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyBRoswell/cs-first-aid.git"
+  },
+  "author": "AndyBRoswell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AndyBRoswell/cs-first-aid/issues"
+  },
+  "homepage": "https://github.com/AndyBRoswell/cs-first-aid#readme",
+  "dependencies": {
+    "astro": "^6.0.8"
+  }
+}
