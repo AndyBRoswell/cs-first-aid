@@ -1,4 +1,6 @@
 ---
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 import '../styles/global.css'
 ---
 
@@ -11,9 +13,11 @@ import '../styles/global.css'
   <title>CS自救指南</title>
 </head>
 <body>
+<Header/>
 <h1>CS自救指南</h1>
-<ul>
-  <li><a href="/ch/前言/">前言</a></li>
-</ul>
+<Footer/>
+<script>
+  import "../scripts/menu.js"
+</script>
 </body>
 </html>
