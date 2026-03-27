@@ -19,6 +19,10 @@ body {
   box-sizing: border-box;
 }
 
+.title {
+  font-size: 2.5em;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 1rem 0;
   /*font-size: 2.5rem;*/
