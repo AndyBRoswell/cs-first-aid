@@ -1,5 +1,6 @@
 ---
+const chapters = Object.values(import.meta.glob('../pages/ch/*.md', { eager: true }))
 ---
 <div id="main-menu" class="nav-links">
-  <a href="/ch/Preface/">前言</a>
+  {chapters.map((chapter: any) => (<a href={chapter.url}>{chapter.frontmatter.title}</a>))}
 </div>
