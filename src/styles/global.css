@@ -1,3 +1,7 @@
+:root {
+  --text-color: #f0f6fc
+}
+
 html {
   background-color: #0d1117;
   font-family: sans-serif;
@@ -15,17 +19,21 @@ body {
   box-sizing: border-box;
 }
 
+.title {
+  font-size: 2.5em;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 1rem 0;
   /*font-size: 2.5rem;*/
-  color: #f0f6fc;
+  color: var(--text-color);
 }
 
 /* nav styles */
 .menu {
-  background-color: #0d0950;
+  background-color: #1f1f1f;
   border: none;
-  color: #fff;
+  color: var(--text-color);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 5px 10px;
