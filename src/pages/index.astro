@@ -1,23 +1,6 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import '../styles/global.css'
+import BaseLayout from '../layouts/base_layout.astro';
 ---
-
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-  <meta name="viewport" content="width=device-width"/>
-  <meta name="generator" content={Astro.generator}>
-  <title>CS自救指南</title>
-</head>
-<body>
-<Header/>
-<h1>CS自救指南</h1>
-<Footer/>
-<script>
-  import "../scripts/menu.js"
-</script>
-</body>
-</html>
+<BaseLayout page_title="CS First Aid: Home">
+  <h2>Inside layout</h2>
+</BaseLayout>
