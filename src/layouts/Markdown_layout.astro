@@ -1,11 +1,11 @@
 ---
 import '../styles/global.css'
-import BaseLayout from './base_layout.astro';
-const { frontmatter } = Astro.props;
+import Base_Layout from './base_layout.astro' // Component and layout names always start with a capital letter
+const { frontmatter } = Astro.props
 ---
-<BaseLayout page_title={frontmatter.title}>
+<Base_Layout page_title={frontmatter.title}>
 <h1 class="title">{frontmatter.title}</h1>
 <p>{frontmatter.author}</p>
 <p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
 <slot/>
-</BaseLayout>
+</Base_Layout>
