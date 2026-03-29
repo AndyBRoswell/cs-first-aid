@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/AndyBRoswell/cs-first-aid#readme",
   "dependencies": {
-    "astro": "^6.0.8"
+    "@astrojs/preact": "^5.1.0",
+    "astro": "^6.0.8",
+    "preact": "^10.29.0"
   }
 }
