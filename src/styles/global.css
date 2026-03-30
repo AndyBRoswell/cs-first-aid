@@ -1,10 +1,14 @@
 :root {
-  --text-color: #f0f6fc
+  --text-color-in-dark-mode: #f0f6fc
 }
 
 html {
-  background-color: #0d1117;
   font-family: sans-serif;
+}
+
+html.dark {
+  background-color: #0d1117;
+  color: var(--text-color-in-dark-mode);
 }
 
 body {
@@ -25,18 +29,23 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 1rem 0;
-  /*font-size: 2.5rem;*/
-  color: var(--text-color);
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p {
+  color: var(--text-color-in-dark-mode);
 }
 
 /* nav styles */
 .menu {
-  background-color: #1f1f1f;
   border: none;
-  color: var(--text-color);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 5px 10px;
+}
+
+.dark .menu {
+  background-color: #1f1f1f;
+  color: var(--text-color-in-dark-mode);
 }
 
 .nav-links {
@@ -53,11 +62,19 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.dark .nav-links a {
   color: #4493f8;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
+  background-color: #dfdfdf;
+}
+
+.dark .nav-links a:hover,
+.dark .nav-links a:focus {
   background-color: #1f1f1f;
 }
 
