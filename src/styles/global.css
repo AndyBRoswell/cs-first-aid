@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 1rem 0;
 }
 
-.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, .dark p {
+.dark :where(h1, h2, h3, h4, h5, h6, p) {
   color: var(--text-color-in-dark-mode);
 }
 
