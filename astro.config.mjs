@@ -14,12 +14,6 @@ export default defineConfig({
           './src/styles/docs.css',
         ],
         sidebar: [
-          //{ slug: 'preface/preface' },
-          //{ slug: 'courses-textbooks-and-references/intro' },
-          // {
-            // label: 'Preface',
-            // link: '/preface/preface/',
-          // },
           'preface/preface',
           {
             label: '课程、教科书与参考资料',
