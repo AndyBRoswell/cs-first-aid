@@ -259,7 +259,7 @@
           </group>
         </group>
         <!-- Available: https://URL.com/ -->
-        <group delimiter=": " prefix=" ">
+        <group delimiter=": " prefix=" " suffix=" ">
           <text term="available at" text-case="capitalize-first"/>
           <text variable="URL"/>
         </group>
@@ -487,6 +487,7 @@
             <text macro="page"/>
           </group>
           <text macro="access"/>
+          <text variable="note"/>
         </else-if>
         <else-if type="article-magazine article-newspaper broadcast interview manuscript map patent personal_communication song speech thesis webpage" match="any">
           <group delimiter=", " suffix=".">
