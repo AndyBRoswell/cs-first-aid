@@ -1,6 +1,9 @@
-import Cite from "citation-js";
+import citation_js from "@citation-js/core";
+const { Cite, plugins } = citation_js;
+import '@citation-js/plugin-csl'
 
 import * as CSL_Data from './CSL_data.ts'
+import bibliography_style from './ieee.csl?raw'
 
 export type Link = string | { display_text?: string, link: string, }
 
@@ -33,8 +36,10 @@ export type Course_Videos = {
   note?: string
 }
 
+const CSL_config = plugins.config.get('@csl')
+CSL_config.templates.add('custom', bibliography_style)
 const output_format: object = {
-  template: 'ieee',
+  template: 'custom',
 }
 
 export function print_bibliography(data: { [key: string]: Course_Material[] }): { [key: string]: string } {
