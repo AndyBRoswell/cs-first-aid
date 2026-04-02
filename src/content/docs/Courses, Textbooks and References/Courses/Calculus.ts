@@ -1,4 +1,7 @@
+import Cite from 'citation-js'
+
 import * as base from './base.ts'
+import type { Course_Material } from "./base.ts";
 
 export const info: base.Course = {
   canonical_name: '微积分',
@@ -53,4 +56,10 @@ export const info: base.Course = {
       URL: 'https://book.douban.com/subject/2025549/',
     },
   ]
+}
+
+export const References: { [key: string]: Course_Material[] } = {
+  Textbooks: new Cite(info.textbooks).format('bibliography', {
+    template: 'ieee',
+  })
 }
