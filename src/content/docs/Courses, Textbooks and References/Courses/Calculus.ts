@@ -35,7 +35,7 @@ export const info: base.Course = {
         accessed: {
           "date-parts": [ [ 2026, 4, 2 ], ],
         },
-        note: 'Printed ver: 9780135732588',
+        note: 'Printed ver 9780135732588',
       },
       {
         type: 'book',
