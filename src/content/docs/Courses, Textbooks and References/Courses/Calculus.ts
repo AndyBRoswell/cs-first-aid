@@ -65,4 +65,4 @@ export const info: base.Course = {
   }
 }
 
-export const References = base.print_bibliography(info.materials!)
+export const bib = base.print_bibliography(info.materials!)
