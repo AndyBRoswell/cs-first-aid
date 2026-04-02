@@ -8,8 +8,10 @@ tags: [ ]
 
 import * as Course from './Calculus'
 
+# 教科书
+
 <pre>
-  <code>
-    {Course.References.textbooks}
-  </code>
+{Course.bib.printed.textbooks}
 </pre>
+
+《Calculus: A Complete Course》{Course.bib.parsed.textbooks.format('citation', { entry: 'Calculus: A Complete Course', template: 'custom', })}是首选。
