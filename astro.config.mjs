@@ -10,6 +10,9 @@ export default defineConfig({
     starlight(
       {
         title: 'CS First Aid',
+        components: {
+          PageTitle: './src/components/PageTitle.astro',
+        },
         customCss: [
           './src/styles/docs.css',
         ],
