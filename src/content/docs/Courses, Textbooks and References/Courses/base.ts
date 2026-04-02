@@ -1,4 +1,4 @@
-// import Cite from '@citation-js'
+import Cite from 'citation-js'
 import * as CSL_Data from './CSL_data.ts'
 
 export type Link = string | { display_text?: string, link: string, }
