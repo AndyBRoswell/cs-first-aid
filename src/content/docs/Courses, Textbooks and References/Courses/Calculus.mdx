@@ -11,5 +11,7 @@ import * as Course from './Calculus'
 # 教科书
 
 <pre>
-{Course.References.textbooks}
+{Course.bib.printed.textbooks}
 </pre>
+
+{Course.bib.parsed.textbooks.format('citation', { entry: 'Calculus: A Complete Course'})}是首选。
