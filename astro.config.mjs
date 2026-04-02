@@ -21,7 +21,7 @@ export default defineConfig({
               'courses-textbooks-and-references/intro',
               {
                 label: '课程',
-                autogenerate: { directory: 'courses-textbooks-and-references/courses' }
+                autogenerate: { directory: 'Courses, Textbooks and References/Courses' }
               }
             ]
           }
