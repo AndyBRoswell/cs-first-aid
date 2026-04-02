@@ -1,4 +1,5 @@
 // Created by Claude Sonnet 4.6 (Extended Thinking)
+// Schema: https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json
 
 // 📦 Item types
 export type Item_Type =
