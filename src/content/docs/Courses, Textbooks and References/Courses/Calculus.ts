@@ -32,7 +32,10 @@ export const info: base.Course = {
         ISBN: '9780135766781',
         language: 'en-CA',
         URL: 'https://www.pearson.com/en-ca/subject-catalog/p/calculus-a-complete-course/P200000002479/9780135766781',
-        note: 'Printed ver: 9780135732588',
+        accessed: {
+          "date-parts": [ [ 2026, 4, 2 ], ],
+        },
+        note: 'Printed ver 9780135732588',
       },
       {
         type: 'book',
@@ -54,9 +57,12 @@ export const info: base.Course = {
         "collection-title": "普通高等教育“十五”国家级规划教材",
         language: "zh-CN",
         URL: 'https://book.douban.com/subject/2025549/',
+        accessed: {
+          "date-parts": [ [ 2026, 4, 2 ], ],
+        },
       },
     ]
   }
 }
 
-export const References = base.print_bibliography(info.materials!)
+export const bib = base.print_bibliography(info.materials!)

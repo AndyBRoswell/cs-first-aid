@@ -1,3 +1,9 @@
 :root {
   --sl-content-width: 80rem;
 }
+
+pre {
+  white-space: pre-wrap; /* Core: Preserves whitespaces while allowing automatic line breaks */
+  word-wrap: break-word; /* Compatibility fallback: Prevents long continuous strings (e.g., URLs or hashes) from overflowing */
+  overflow-wrap: anywhere; /* Modern browsers: Ensures text wraps at any character if necessary */
+}

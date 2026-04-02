@@ -36,16 +36,25 @@ export type Course_Videos = {
   note?: string
 }
 
+export type formatted_references = {
+  parsed: { [key: string]: typeof Cite }
+  printed: { [key: string]: string }
+}
+
 const CSL_config = plugins.config.get('@csl')
 CSL_config.templates.add('custom', bibliography_style)
-const output_format: object = {
+const bib_format: object = {
   template: 'custom',
 }
 
-export function print_bibliography(data: { [key: string]: Course_Material[] }): { [key: string]: string } {
-  const ret: { [key: string]: string } = {}
+export function print_bibliography(data: { [key: string]: Course_Material[] }): formatted_references {
+  const ret: formatted_references = {
+    parsed: {},
+    printed: {},
+  }
   for (const [ key, value ] of Object.entries(data)) {
-    ret[key] = new Cite(data[key], value).format('bibliography', output_format)
+    ret['parsed'][key] = new Cite(data[key], value)
+    ret['printed'][key] = ret['parsed'][key].format('bibliography', bib_format)
   }
   return ret
 }
