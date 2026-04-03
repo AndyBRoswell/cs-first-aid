@@ -1,11 +1,12 @@
 ---
 title: 微积分
-pubDate: 2026-04-02
+pubDate: 2026-04-03
 description: /
 author: AndyBRoswell
 tags: [ ]
 ---
 
+import * as base from './base'
 import * as Course from './Calculus'
 
 # 教科书
@@ -14,4 +15,6 @@ import * as Course from './Calculus'
 {Course.bib.printed.textbooks}
 </pre>
 
-《Calculus: A Complete Course》{Course.bib.parsed.textbooks.format('citation', { entry: 'Calculus: A Complete Course', template: 'custom', })}是首选。
+《Calculus: A Complete Course》{base.cite(Course.bib.parsed.textbooks, 'Calculus: A Complete Course')}是首选，此书为多所院校数学系或数学要求较高的理工类专业采用。
+
+T. M. Apostol 著《微积分》两卷{base.cite(Course.bib.parsed.textbooks, [ `Apostol's Calculus I`, `Apostol's Calculus II`, ])}主要面向数学系；内容相对较旧（1960 年代出版）；线性代数部分可以跳过。
