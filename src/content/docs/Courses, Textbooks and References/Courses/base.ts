@@ -54,7 +54,7 @@ export function print_bibliography(data: { [key: string]: Course_Material[] }): 
     printed: {},
   }
   for (const [ key, value ] of Object.entries(data)) {
-    ret['parsed'][key] = new citation_js.Cite(data[key], value)
+    ret['parsed'][key] = new citation_js.Cite(value)
     ret['printed'][key] = ret['parsed'][key].format('bibliography', bib_format)
   }
   return ret
