@@ -1,9 +1,5 @@
-// import Cite from 'citation-js'
-
 import * as base from './base.ts'
 import type { Course_Material } from "./base.ts";
-import { getImage } from "astro/assets";
-import { family } from "detect-libc";
 
 export const info: base.Course = {
   canonical_name: '微积分',
