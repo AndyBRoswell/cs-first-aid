@@ -43,7 +43,9 @@ export type formatted_references = {
 const CSL_config = citation_js.plugins.config.get('@csl')
 CSL_config.templates.add('custom', bibliography_style)
 const bib_format: object = {
+  format: 'html',
   template: 'custom',
+  hyperlinks: true,
 }
 
 export function print_bibliography(data: { [key: string]: Course_Material[] }): formatted_references {
@@ -52,7 +54,7 @@ export function print_bibliography(data: { [key: string]: Course_Material[] }): 
     printed: {},
   }
   for (const [ key, value ] of Object.entries(data)) {
-    ret['parsed'][key] = new citation_js.Cite(data[key], value)
+    ret['parsed'][key] = new citation_js.Cite(value)
     ret['printed'][key] = ret['parsed'][key].format('bibliography', bib_format)
   }
   return ret

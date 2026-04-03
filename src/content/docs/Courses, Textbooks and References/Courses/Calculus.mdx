@@ -13,9 +13,9 @@ import * as Course from './Calculus'
 
 ## 教科书
 
-<pre>
-{Course.bib.printed.textbooks}
-</pre>
+<div set:html={Course.bib.printed.textbooks}/>
+
+### 说明
 
 - 《Calculus: A Complete Course》{base.cite(Course.bib.parsed.textbooks, 'Calculus: A Complete Course')}为首选，此书为多所院校数学系或数学要求较高的理工类专业采用。
   - [Single Variable Calculus (XB_41007) @ VU](https://studiegids.vu.nl/en/Bachelor/2025-2026/mathematics/XB_41007)
@@ -26,9 +26,9 @@ import * as Course from './Calculus'
 
 ### 未被选择的书目
 
-<pre>
-{Course.excluded_bib.printed.textbooks}
-</pre>
+<div set:html={Course.excluded_bib.printed.textbooks}/>
+
+#### 说明
 
 - 本项目推荐的基础必修课《微积分》的难度基准是：不低于同济大学数学系主编《高等数学》（参见下文）。
   - Stewart 微积分{base.cite(Course.excluded_bib.parsed.textbooks, [ `Stewart Calculus`, `Stewart Calculus: Early Transcendentals` ])}、Princeton 微积分读本{base.cite(Course.excluded_bib.parsed.textbooks, `Princeton Calculus Reader`)}的难度低于同济高数。
@@ -36,9 +36,9 @@ import * as Course from './Calculus'
 
 ## 其它参考
 
-<pre>
-{Course.bib.printed.other}
-</pre>
+<div set:html={Course.bib.printed.other}/>
+
+### 说明
 
 - 个人认为，同济高数{base.cite(Course.bib.parsed.other, [ `同济八版高数上`, `同济八版高数下`, ])}大问题基本没有，但总体缺乏出彩的地方，只能说中规中矩，可以凑合用。
 - 注意到有观点称 Thomas 微积分{base.cite(Course.bib.parsed.other, [ `Thomas' Calculus`, `Thomas' Calculus: Early Transcendentals` ])} 的难度总体低于同济高数，但差别不大。
