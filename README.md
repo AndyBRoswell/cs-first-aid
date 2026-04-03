@@ -34,8 +34,8 @@
 - 更改格式，增强可读性
 
 新版预览：
-- https://cs-first-aid.netlify.app/
-- https://cs-first-aid.pages.dev/
+- https://cs-first-aid.netlify.app/ (main)
+- https://cs-first-aid.pages.dev/ (dev)
 
 # 前言&emsp;在那内卷时代，没有置身于事外
 
