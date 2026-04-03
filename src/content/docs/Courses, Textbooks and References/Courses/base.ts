@@ -1,5 +1,4 @@
 import citation_js from "@citation-js/core";
-const { Cite, plugins } = citation_js;
 import '@citation-js/plugin-csl'
 
 import * as CSL_Data from './CSL_data.ts'
@@ -37,11 +36,11 @@ export type Course_Videos = {
 }
 
 export type formatted_references = {
-  parsed: { [key: string]: typeof Cite }
+  parsed: { [key: string]: typeof citation_js.Cite }
   printed: { [key: string]: string }
 }
 
-const CSL_config = plugins.config.get('@csl')
+const CSL_config = citation_js.plugins.config.get('@csl')
 CSL_config.templates.add('custom', bibliography_style)
 const bib_format: object = {
   template: 'custom',
@@ -53,8 +52,17 @@ export function print_bibliography(data: { [key: string]: Course_Material[] }): 
     printed: {},
   }
   for (const [ key, value ] of Object.entries(data)) {
-    ret['parsed'][key] = new Cite(data[key], value)
+    ret['parsed'][key] = new citation_js.Cite(data[key], value)
     ret['printed'][key] = ret['parsed'][key].format('bibliography', bib_format)
   }
   return ret
+}
+
+export function cite(parsed_cite: typeof citation_js.Cite, ids: string | string[]): string {
+  const id_list = Array.isArray(ids) ? ids : [ ids ]
+  const indices = id_list.map((id) => {
+    const index = parsed_cite.data.findIndex((item: any) => item.id === id)
+    return index !== -1 ? index + 1 : '?'
+  })
+  return `[${indices.join(', ')}]`
 }
