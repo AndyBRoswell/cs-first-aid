@@ -43,7 +43,9 @@ export type formatted_references = {
 const CSL_config = citation_js.plugins.config.get('@csl')
 CSL_config.templates.add('custom', bibliography_style)
 const bib_format: object = {
+  format: 'html',
   template: 'custom',
+  hyperlinks: true,
 }
 
 export function print_bibliography(data: { [key: string]: Course_Material[] }): formatted_references {
