@@ -334,10 +334,11 @@
     </layout>
   </citation>
   <!-- Bibliography -->
-  <bibliography entry-spacing="0" second-field-align="flush">
+<!--   <bibliography entry-spacing="0" second-field-align="flush"> -->
+  <bibliography entry-spacing="0">
     <layout>
       <!-- Citation Number -->
-      <text variable="citation-number" prefix="[" suffix="]"/>
+      <text variable="citation-number" prefix="[" suffix="] "/>
       <!-- Author(s) -->
       <text macro="author" suffix=", "/>
       <!-- Rest of Citation -->
