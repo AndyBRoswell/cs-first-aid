@@ -64,5 +64,5 @@ export function cite(parsed_cite: typeof citation_js.Cite, ids: string | string[
     const index = parsed_cite.data.findIndex((item: any) => item.id === id)
     return index !== -1 ? index + 1 : '?'
   })
-  return `[${indices.join(', ')}]`
+  return `[${indices.join('][')}]`
 }
