@@ -1,3 +1,4 @@
+// @ts-ignore
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 
