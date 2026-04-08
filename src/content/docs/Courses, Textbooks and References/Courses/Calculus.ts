@@ -1,5 +1,5 @@
-import * as base from './base.ts'
-import type { Course_Material } from "./base.ts";
+import * as base from '../base.ts'
+import type { Course_Material } from "../base.ts";
 
 export const info: base.Course = {
   canonical_name: '微积分',
