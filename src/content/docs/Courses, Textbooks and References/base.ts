@@ -64,7 +64,7 @@ export function print_bibliography(data: { [key: string]: Course_Material[] }): 
 export function cite(parsed_cite: typeof citation_js.Cite, ids: string | string[]): string {
   const id_list = Array.isArray(ids) ? ids : [ ids ]
   const indices = id_list.map((id) => {
-    const index = parsed_cite.data.findIndex((item: any) => item.id === id)
+    const index = parsed_cite.data.findIndex((item: any) => item.id === id) // Use linear search since item count is very few [e.g. <=32]
     return index !== -1 ? index + 1 : '?'
   })
   return `[${indices.join('][')}]`
