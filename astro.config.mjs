@@ -25,8 +25,9 @@ export default defineConfig({
               // {
               //   label: '课程',
               //   autogenerate: { directory: 'Courses, Textbooks and References/Courses' }
-              // }
-              'courses-textbooks-and-references/courses/calculus'
+              // },
+              'courses-textbooks-and-references/courses/calculus',
+              'courses-textbooks-and-references/courses/mathematical-analysis',
             ]
           }
         ],
