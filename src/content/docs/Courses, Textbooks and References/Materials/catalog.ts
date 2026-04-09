@@ -12,7 +12,11 @@ export function add(IDs: (PropertyKey | bigint | object)[], material: base.Cours
         m.set(ID, material)
         break
       case 'object':
-        m.set(JSON.stringify(ID), material)
+        if (Array.isArray(IDs)) { // n-tuple only
+          m.set(JSON.stringify(ID), material)
+        } else {
+          throw new Error(`ID cannot be string-indexed object`)
+        }
     }
   }
 }
