@@ -20,5 +20,5 @@ const book: base.Course_Material = {
 
 catalog.add([
   'Adams Calculus',
-  'Calculus: A Complete Course',
+  book.id,
 ], book)

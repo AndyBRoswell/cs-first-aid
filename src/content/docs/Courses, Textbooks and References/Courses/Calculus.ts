@@ -2,6 +2,13 @@ import * as base from '../base.ts'
 import type { Course_Material } from "../base.ts";
 import * as catalog from '../Materials/catalog.ts'
 import '../Materials/Adams Calculus.ts'
+import '../Materials/龚昇 简明微积分.ts'
+import '../Materials/同济高数.ts'
+import '../Materials/Apostol Calculus.ts'
+import '../Materials/Thomas Calculus.ts'
+import '../Materials/Strang Calculus.ts'
+import '../Materials/Stewart Calculus.ts'
+import '../Materials/Princeton Calculus Reader.ts'
 
 export const info: base.Course = {
   canonical_name: '微积分',
@@ -10,133 +17,16 @@ export const info: base.Course = {
   materials: {
     textbooks: [
       catalog.get('Adams Calculus'),
-      {
-        type: 'book',
-        id: '简明微积分',
-        author: [ { literal: '龚昇', } ],
-        title: '简明微积分',
-        edition: 4,
-        publisher: '高等教育出版社',
-        "publisher-place": '北京市',
-        issued: { "date-parts": [ [ 2006, 4, 28 ], ], },
-        "number-of-pages": 565,
-        ISBN: '978-7-04-018693-2',
-        "collection-title": "普通高等教育“十五”国家级规划教材",
-        language: "zh-CN",
-        URL: 'https://www.hep.com.cn/book/show/4fbfa3b9-aa86-41c2-be72-84ac7d0b87b2',
-        accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      },
+      catalog.get('简明微积分'),
     ],
     other: [
-      {
-        type: 'book',
-        id: '同济高数上',
-        author: [ { literal: '同济大学数学科学学院' } ],
-        title: '高等数学 第八版 上册',
-        volume: 1,
-        edition: 8,
-        publisher: '高等教育出版社',
-        "publisher-place": '北京市',
-        issued: { "date-parts": [ [ 2023, ], ], },
-        ISBN: '978-7-04-058981-8',
-        "number-of-pages": 440,
-        language: 'zh-CN',
-        URL: 'https://www.hep.com.cn/book/show/9bbb9470-3576-4736-8bf7-018b8b5fb298',
-        accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      },
-      {
-        type: 'book',
-        id: '同济高数下',
-        author: [ { literal: '同济大学数学科学学院' } ],
-        title: '高等数学 第八版 下册',
-        volume: 2,
-        edition: 8,
-        publisher: '高等教育出版社',
-        "publisher-place": '北京市',
-        issued: { "date-parts": [ [ 2023, ], ], },
-        ISBN: '978-7-04-058868-2',
-        "number-of-pages": 480,
-        language: 'zh-CN',
-        URL: 'https://www.hep.com.cn/book/show/3c03343f-fa8a-4fbc-94aa-15ff4e23b964',
-        accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      },
-      {
-        type: 'book',
-        id: `Apostol Calculus I`,
-        author: [ { given: 'Tom Mike', family: 'Apostol', }, ],
-        title: 'CALCULUS VOLUME I: One-Variable Calculus, with an Introduction to Linear Algebra',
-        volume: 1,
-        edition: 2,
-        editor: [ { given: 'George', family: 'Springer', }, ],
-        publisher: 'John Wiley & Sons, Inc.',
-        "publisher-place": 'US',
-        issued: { "date-parts": [ [ 1967, ] ], },
-        ISBN: '0471000051',
-        language: 'en-US',
-        URL: 'https://www.wiley.com/en-us/Calculus%2C+Volume+1%2C+2nd+Edition-p-9781119496731',
-        accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      },
-      {
-        type: 'book',
-        id: `Apostol Calculus II`,
-        author: [ { given: 'Tom Mike', family: 'Apostol', }, ],
-        title: 'CALCULUS VOLUME II: Multi Variable Calculus and Linear Algebra, with Applications to Differential Equations and Probability',
-        volume: 2,
-        edition: 2,
-        editor: [ { given: 'George', family: 'Springer', }, ],
-        publisher: 'John Wiley & Sons, Inc.',
-        "publisher-place": 'US',
-        issued: { "date-parts": [ [ 1969, ], ], },
-        ISBN: '0471000078',
-        language: 'en-US',
-        URL: 'https://www.wiley.com/en-us/Calculus%2C+Volume+2%2C+2nd+Edition-p-9781119496762',
-        accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      },
-      {
-        type: 'book',
-        id: `Thomas Calculus`,
-        author: [
-          { given: 'Joel R.', family: 'Hass' }, { given: 'Christopher E.', family: 'Heil' },
-          { given: 'Maurice D.', family: 'Weir' }, { given: 'Przemyslaw', family: 'Bogacki' },
-        ],
-        title: `Thomas Calculus`,
-        edition: 15,
-        publisher: 'Pearson',
-        "publisher-place": 'US',
-        issued: { "date-parts": [ [ 2022, 12, 29 ], ], },
-        ISBN: '9780137616077',
-        URL: 'https://www.pearson.com/en-us/subject-catalog/p/thomas-calculus/P200000007103/9780137616077?format=eTextbook_lifetime',
-        accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      },
-      {
-        type: 'book',
-        id: `Thomas Calculus: Early Transcendentals`,
-        author: [
-          { given: 'Joel R.', family: 'Hass' }, { given: 'Christopher E.', family: 'Heil' },
-          { given: 'Maurice D.', family: 'Weir' }, { given: 'Przemyslaw', family: 'Bogacki' },
-        ],
-        title: `Thomas Calculus: Early Transcendentals`,
-        edition: 15,
-        publisher: 'Pearson',
-        "publisher-place": 'US',
-        issued: { "date-parts": [ [ 2022, 2, 28 ], ], },
-        ISBN: '9780137559824',
-        URL: 'https://www.pearson.com/en-us/subject-catalog/p/thomas-calculus-early-transcendentals/P200000007104/9780137559824?format=eTextbook_lifetime',
-        accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      },
-      {
-        type: 'book',
-        id: 'G. Strang, Calculus',
-        author: [ { given: 'William Gilbert', family: 'Strang' }, ],
-        title: 'Calculus',
-        edition: 3,
-        publisher: 'WELLESLEY-CAMBRIDGE PRESS',
-        "publisher-place": 'Wellesley, MA',
-        issued: { "date-parts": [ [ 2026, 4, 3 ], ], },
-        ISBN: '978-09802327-5-2',
-        URL: 'https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/resources/mitres_18_001_f17_full_book_pdf/',
-        accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      },
+      catalog.get('同济高数上'),
+      catalog.get('同济高数下'),
+      catalog.get('Apostol Calculus I'),
+      catalog.get('Apostol Calculus II'),
+      catalog.get('Thomas Calculus'),
+      catalog.get('Thomas Calculus Early Transcendentals'),
+      catalog.get('Strang Calculus'),
     ]
   }
 }
@@ -147,52 +37,9 @@ export const excluded_materials: {
   textbooks: Course_Material[]
 } = {
   textbooks: [
-    {
-      type: 'book',
-      id: 'Stewart Calculus',
-      author: [
-        { given: 'James', family: 'Stewart', }, { given: 'Saleem', family: 'Watson' },
-        { given: 'Daniel K.', family: 'Clegg' },
-      ],
-      title: 'Stewart Calculus',
-      edition: 9,
-      publisher: 'Cengage Learning',
-      "publisher-place": 'Boston, MA',
-      issued: { "date-parts": [ [ 2020, 4, 30 ], ], },
-      ISBN: '9780357711491',
-      URL: 'https://www.cengage.com/c/calculus-9e-stewart-clegg-watson/9781337624183/',
-      accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-    },
-    {
-      type: 'book',
-      id: 'Stewart Calculus: Early Transcendentals',
-      author: [
-        { given: 'James', family: 'Stewart', }, { given: 'Saleem', family: 'Watson' },
-        { given: 'Daniel K.', family: 'Clegg' },
-      ],
-      title: 'Stewart Calculus: Early Transcendentals',
-      edition: 9,
-      publisher: 'Cengage Learning',
-      "publisher-place": 'Boston, MA',
-      issued: { "date-parts": [ [ 2020, 1, 9 ], ], },
-      ISBN: '9780357687901',
-      URL: 'https://www.cengage.com/c/calculus-early-transcendentals-9e-stewart-clegg-watson/9781337613927/',
-      accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-    },
-    {
-      type: 'book',
-      id: 'Princeton Calculus Reader',
-      author: [ { given: 'Adrian D.', family: 'Banner' }, ],
-      title: 'The Calculus Lifesaver: All the Tools You Need to Excel at Calculus',
-      edition: 1,
-      publisher: 'Princeton University Press',
-      "publisher-place": 'Princeton, NJ',
-      issued: { "date-parts": [ [ 2009, 11, 28 ], ], },
-      "number-of-pages": 752,
-      ISBN: '9781400835782',
-      URL: 'https://press.princeton.edu/books/ebook/9781400835782/the-calculus-lifesaver-pdf?srsltid=AfmBOops83rJhcGuw-fa0Bu44xMu49g0lGUuYIANhrxpdDl-qjG2pwW-',
-      accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-    },
+    catalog.get('Stewart Calculus'),
+    catalog.get('Stewart Calculus Early Transcendentals'),
+    catalog.get('Princeton Calculus Reader'),
   ]
 }
 
