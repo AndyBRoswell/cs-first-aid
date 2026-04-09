@@ -1,6 +1,6 @@
 import * as base from '../base.ts'
 
-const m = new Map<any, base.Course_Material>
+const m = new Map<PropertyKey | bigint | object, base.Course_Material>
 
 export function add(IDs: (PropertyKey | bigint | object)[], material: base.Course_Material) {
   for (const ID of IDs) {
