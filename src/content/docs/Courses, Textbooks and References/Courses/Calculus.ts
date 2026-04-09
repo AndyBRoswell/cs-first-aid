@@ -75,7 +75,7 @@ export const info: base.Course = {
       },
       {
         type: 'book',
-        id: `Apostol's Calculus I`,
+        id: `Apostol Calculus I`,
         author: [ { given: 'Tom Mike', family: 'Apostol', }, ],
         title: 'CALCULUS VOLUME I: One-Variable Calculus, with an Introduction to Linear Algebra',
         volume: 1,
@@ -91,7 +91,7 @@ export const info: base.Course = {
       },
       {
         type: 'book',
-        id: `Apostol's Calculus II`,
+        id: `Apostol Calculus II`,
         author: [ { given: 'Tom Mike', family: 'Apostol', }, ],
         title: 'CALCULUS VOLUME II: Multi Variable Calculus and Linear Algebra, with Applications to Differential Equations and Probability',
         volume: 2,
