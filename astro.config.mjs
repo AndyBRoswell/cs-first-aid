@@ -21,11 +21,13 @@ export default defineConfig({
           {
             label: '课程、教科书与参考资料',
             items: [
-              'courses-textbooks-and-references/intro',
-              {
-                label: '课程',
-                autogenerate: { directory: 'Courses, Textbooks and References/Courses' }
-              }
+              'courses-textbooks-and-references',
+              // {
+              //   label: '课程',
+              //   autogenerate: { directory: 'Courses, Textbooks and References/Courses' }
+              // },
+              'courses-textbooks-and-references/courses/calculus',
+              'courses-textbooks-and-references/courses/mathematical-analysis',
             ]
           }
         ],
