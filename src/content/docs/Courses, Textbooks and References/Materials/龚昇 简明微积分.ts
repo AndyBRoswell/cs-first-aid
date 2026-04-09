@@ -1,7 +1,7 @@
 import * as catalog from './catalog.ts'
 import * as base from '../base.ts'
 
-const book: base.Course_Material = {
+const book = {
   type: 'book',
   id: '简明微积分',
   author: [ { literal: '龚昇', } ],
@@ -16,8 +16,8 @@ const book: base.Course_Material = {
   language: "zh-CN",
   URL: 'https://www.hep.com.cn/book/show/4fbfa3b9-aa86-41c2-be72-84ac7d0b87b2',
   accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-}
+} satisfies base.Course_Material
 
 catalog.add([
-  '简明微积分'
+  book.id,
 ], book)

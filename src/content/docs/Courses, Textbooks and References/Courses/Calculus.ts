@@ -10,7 +10,7 @@ import '../Materials/Strang Calculus.ts'
 import '../Materials/Stewart Calculus.ts'
 import '../Materials/Princeton Calculus Reader.ts'
 
-export const info: base.Course = {
+export const info = {
   canonical_name: '微积分',
   names: [ '微积分', '高等数学', ],
   tags: [ '基础必修', ],
@@ -29,18 +29,18 @@ export const info: base.Course = {
       catalog.get('Strang Calculus'),
     ]
   }
-}
+} satisfies base.Course
 
 export const bib = base.print_bibliography(info.materials!)
 
-export const excluded_materials: {
-  textbooks: Course_Material[]
-} = {
+export const excluded_materials = {
   textbooks: [
     catalog.get('Stewart Calculus'),
     catalog.get('Stewart Calculus Early Transcendentals'),
     catalog.get('Princeton Calculus Reader'),
   ]
+} satisfies {
+  textbooks: Course_Material[]
 }
 
 export const excluded_bib = base.print_bibliography(excluded_materials)
