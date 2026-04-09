@@ -1,14 +1,14 @@
-import * as base from '../base.ts'
-import type { Course_Material } from "../base.ts";
-import * as catalog from '../Materials/catalog.ts'
-import '../Materials/Adams Calculus.ts'
-import '../Materials/龚昇 简明微积分.ts'
-import '../Materials/同济高数.ts'
-import '../Materials/Apostol Calculus.ts'
-import '../Materials/Thomas Calculus.ts'
-import '../Materials/Strang Calculus.ts'
-import '../Materials/Stewart Calculus.ts'
-import '../Materials/Princeton Calculus Reader.ts'
+import * as base from '../../base.ts'
+import type { Course_Material } from "../../base.ts";
+import * as catalog from '../../Materials/catalog.ts'
+import '../../Materials/Adams Calculus.ts'
+import '../../Materials/龚昇 简明微积分.ts'
+import '../../Materials/同济高数.ts'
+import '../../Materials/Apostol Calculus.ts'
+import '../../Materials/Thomas Calculus.ts'
+import '../../Materials/Strang Calculus.ts'
+import '../../Materials/Stewart Calculus.ts'
+import '../../Materials/Princeton Calculus Reader.ts'
 
 export const info = {
   canonical_name: '微积分',
