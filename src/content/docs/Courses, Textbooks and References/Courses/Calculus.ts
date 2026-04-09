@@ -107,12 +107,12 @@ export const info: base.Course = {
       },
       {
         type: 'book',
-        id: `Thomas' Calculus`,
+        id: `Thomas Calculus`,
         author: [
           { given: 'Joel R.', family: 'Hass' }, { given: 'Christopher E.', family: 'Heil' },
           { given: 'Maurice D.', family: 'Weir' }, { given: 'Przemyslaw', family: 'Bogacki' },
         ],
-        title: `Thomas' Calculus`,
+        title: `Thomas Calculus`,
         edition: 15,
         publisher: 'Pearson',
         "publisher-place": 'US',
@@ -123,12 +123,12 @@ export const info: base.Course = {
       },
       {
         type: 'book',
-        id: `Thomas' Calculus: Early Transcendentals`,
+        id: `Thomas Calculus: Early Transcendentals`,
         author: [
           { given: 'Joel R.', family: 'Hass' }, { given: 'Christopher E.', family: 'Heil' },
           { given: 'Maurice D.', family: 'Weir' }, { given: 'Przemyslaw', family: 'Bogacki' },
         ],
-        title: `Thomas' Calculus: Early Transcendentals`,
+        title: `Thomas Calculus: Early Transcendentals`,
         edition: 15,
         publisher: 'Pearson',
         "publisher-place": 'US',
