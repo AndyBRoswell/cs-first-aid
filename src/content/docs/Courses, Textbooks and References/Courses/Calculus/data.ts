@@ -1,5 +1,4 @@
 import * as base from '../../base.ts'
-import type { Course_Material } from "../../base.ts";
 import * as catalog from '../../Materials/catalog.ts'
 import '../../Materials/Adams Calculus.ts'
 import '../../Materials/龚昇 简明微积分.ts'
@@ -40,7 +39,7 @@ export const excluded_materials = {
     catalog.get('Princeton Calculus Reader'),
   ]
 } satisfies {
-  textbooks: Course_Material[]
+  textbooks: base.Course_Material[]
 }
 
 export const excluded_bib = base.print_bibliography(excluded_materials)
