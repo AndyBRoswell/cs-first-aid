@@ -1,5 +1,7 @@
 import * as base from '../base.ts'
 import type { Course_Material } from "../base.ts";
+import * as catalog from '../Materials/catalog.ts'
+import '../Materials/Adams Calculus.ts'
 
 export const info: base.Course = {
   canonical_name: '微积分',
@@ -7,22 +9,7 @@ export const info: base.Course = {
   tags: [ '基础必修', ],
   materials: {
     textbooks: [
-      {
-        type: 'book',
-        id: 'Calculus: A Complete Course',
-        author: [ { given: 'Robert A.', family: 'Adams', }, { given: 'Christopher', family: 'Essex', }, ],
-        title: 'Calculus: A Complete Course',
-        edition: 10,
-        publisher: 'Pearson',
-        "publisher-place": 'Toronto, ON',
-        issued: { "date-parts": [ [ 2021, ], ], },
-        "number-of-pages": 1200,
-        ISBN: '9780135766781',
-        language: 'en-CA',
-        URL: 'https://www.pearson.com/en-ca/subject-catalog/p/calculus-a-complete-course/P200000002479/9780135766781',
-        accessed: { "date-parts": [ [ 2026, 4, 2 ], ], },
-        note: 'Printed ver 9780135732588',
-      },
+      catalog.get('Adams Calculus'),
       {
         type: 'book',
         id: '简明微积分',
