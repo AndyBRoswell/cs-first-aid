@@ -21,6 +21,6 @@ export function add(IDs: (PropertyKey | bigint | object)[], material: base.Cours
   }
 }
 
-export function get(ID: any): base.Course_Material {
+export function get(ID: PropertyKey | bigint | object): base.Course_Material {
   return m.get(ID)!
 }
