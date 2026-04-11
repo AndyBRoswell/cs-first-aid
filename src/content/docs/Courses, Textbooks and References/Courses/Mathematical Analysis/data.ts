@@ -24,6 +24,8 @@ export const info = {
       catalog.get('常庚哲 史济怀 数分 2026下'),
       catalog.get('陈纪修 於崇华 金路 数分2版上'),
       catalog.get('陈纪修 於崇华 金路 数分2版下'),
+      catalog.get('陈纪修 於崇华 金路 数分上'),
+      catalog.get('陈纪修 於崇华 金路 数分下'),
       catalog.get('薛春华 徐森林 数分1'),
       catalog.get('薛春华 徐森林 数分2'),
       catalog.get('薛春华 徐森林 金亚东 数分3'),
@@ -34,6 +36,8 @@ export const info = {
     problem_sets: [
       catalog.get('陈纪修 於崇华 金路 数分习题2版上'),
       catalog.get('陈纪修 於崇华 金路 数分习题2版下'),
+      catalog.get('陈纪修 於崇华 金路 数分习题上'),
+      catalog.get('陈纪修 於崇华 金路 数分习题下'),
       catalog.get('薛春华 徐森林 数分习题上'),
       catalog.get('薛春华 徐森林 数分习题下'),
     ],
