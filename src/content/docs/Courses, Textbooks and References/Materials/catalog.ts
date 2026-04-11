@@ -1,8 +1,10 @@
 import * as base from '../base.ts'
 
-const m = new Map<PropertyKey | bigint | object, base.Course_Material>
+type ID_t = PropertyKey | bigint | object
 
-export function add(IDs: (PropertyKey | bigint | object)[], material: base.Course_Material) {
+const m = new Map<ID_t, base.Course_Material>
+
+export function add(IDs: ID_t[], material: base.Course_Material) {
   for (const ID of IDs) {
     switch (typeof ID) {
       case 'string':
@@ -21,6 +23,6 @@ export function add(IDs: (PropertyKey | bigint | object)[], material: base.Cours
   }
 }
 
-export function get(ID: PropertyKey | bigint | object): base.Course_Material {
+export function get(ID: ID_t): base.Course_Material {
   return m.get(ID)!
 }
