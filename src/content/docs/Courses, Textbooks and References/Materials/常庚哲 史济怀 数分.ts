@@ -4,7 +4,7 @@ import * as base from '../base.ts'
 const books = [
   {
     type: 'book',
-    id: `常庚哲 史济怀 数分 2003 上`,
+    id: `常庚哲 史济怀 数分 2003上`,
     author: [ { literal: '常庚哲' }, { literal: '史济怀' } ],
     title: '数学分析教程',
     volume: 1,
@@ -21,7 +21,7 @@ const books = [
   },
   {
     type: 'book',
-    id: `常庚哲 史济怀 数分 2003 下`,
+    id: `常庚哲 史济怀 数分 2003下`,
     author: [ { literal: '常庚哲' }, { literal: '史济怀' } ],
     title: '数学分析教程',
     volume: 2,
@@ -38,7 +38,7 @@ const books = [
   },
   {
     type: 'book',
-    id: '常庚哲 史济怀 数分 2026 上',
+    id: '常庚哲 史济怀 数分 2026上',
     author: [ { literal: '常庚哲' }, { literal: '史济怀' } ],
     title: '数学分析教程（上册）',
     volume: 1,
@@ -52,7 +52,7 @@ const books = [
   },
   {
     type: 'book',
-    id: '常庚哲 史济怀 数分 2026 下',
+    id: '常庚哲 史济怀 数分 2026下',
     author: [ { literal: '常庚哲' }, { literal: '史济怀' } ],
     title: '数学分析教程（下册）',
     volume: 2,
