@@ -1,6 +1,7 @@
 import * as base from '../base.ts'
 
-type ID_t = PropertyKey | bigint | object
+type legal_value_types_for_ID = PropertyKey | bigint
+type ID_t = legal_value_types_for_ID | object
 
 const m = new Map<ID_t, base.Course_Material>
 
