@@ -17,9 +17,10 @@ export type Course = {
   tags?: string[]
   prerequisites?: Course[]
   materials?: {
-    textbooks?: Course_Material[]
+    main?: Course_Material[]
     problem_sets?: Course_Material[]
     other?: Course_Material[]
+    excluded?: Course_Material[]
   }
   videos?: Course_Videos[]
   note?: string

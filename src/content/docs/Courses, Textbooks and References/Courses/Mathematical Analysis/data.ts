@@ -17,7 +17,7 @@ export const info = {
   names: [ '数学分析', ],
   tags: [ '基础选修', ],
   materials: {
-    textbooks: [
+    main: [
       catalog.get('常庚哲 史济怀 数分 2003上'),
       catalog.get('常庚哲 史济怀 数分 2003下'),
       catalog.get('常庚哲 史济怀 数分 2026上'),
