@@ -6,7 +6,7 @@ type legal_objects_for_ID = {
   ordered_author?: string | string[]
   title?: string,
   edition?: string | number
-  date?: string
+  date?: string | number
   vol?: string | number
 }
 const legal_object_keys_for_ID = [
@@ -17,7 +17,7 @@ const legal_object_keys_for_ID = [
   'date',
   'vol',
 ]
-type ID_t = legal_primitives_for_ID | [ legal_objects_for_ID, ...legal_primitives_for_ID[] ] | legal_objects_for_ID
+export type ID_t = legal_primitives_for_ID | [ legal_objects_for_ID, ...legal_primitives_for_ID[] ] | legal_objects_for_ID
 
 const m = new Map<ID_t, base.Course_Material>
 
