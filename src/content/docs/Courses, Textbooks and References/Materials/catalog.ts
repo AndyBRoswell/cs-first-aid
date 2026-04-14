@@ -33,7 +33,13 @@ export function canonical_ID(ID: ID_t): ID_t {
       if (Array.isArray(ID)) { return JSON.stringify(ID) } // ordered n-tuple
       else {
         const CID = structuredClone(ID)
-        if ('unordered_author' in CID && Array.isArray(CID.unordered_author)) { CID.unordered_author.sort() }
+        if ('unordered_author' in CID) {
+          if (Array.isArray(CID.unordered_author) === false) { CID.unordered_author = [ CID.unordered_author ] }
+          else { CID.unordered_author.sort() }
+        }
+        if ('ordered_author' in CID) {
+          if (Array.isArray(CID.ordered_author) === false) { CID.ordered_author = [ CID.ordered_author ] }
+        }
         return JSON.stringify(CID, legal_object_keys_for_ID)
       }
   }
