@@ -60,7 +60,7 @@ const items = [
       ISBN: '978-7-5603-8073-5',
       language: 'zh-CN',
     },
-  }
+  },
 ] satisfies catalog.pair[]
 
 for (const { id, material } of items) { catalog.add(id, material) }
