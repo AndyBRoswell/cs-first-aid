@@ -31,7 +31,11 @@ export function canonical_ID(ID: ID_t): ID_t {
       return ID
     case 'object':
       if (Array.isArray(ID)) { return JSON.stringify(ID) } // ordered n-tuple
-      else { return JSON.stringify(ID, legal_object_keys_for_ID) }
+      else {
+        const CID = structuredClone(ID)
+        if ('unordered_author' in CID && Array.isArray(CID.unordered_author)) { CID.unordered_author.sort() }
+        return JSON.stringify(CID, legal_object_keys_for_ID)
+      }
   }
 }
 
