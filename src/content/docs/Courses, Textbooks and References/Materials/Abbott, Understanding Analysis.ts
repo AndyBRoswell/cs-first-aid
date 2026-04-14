@@ -1,9 +1,9 @@
-import * as base from '../base.ts'
 import * as catalog from './catalog.ts'
 
 const items = [
   {
     id: [
+      'Understanding Analysis',
       'Abbott, Understanding Analysis',
       'Abbott, Understanding Analysis, 2e',
       'Abbott, Understanding Analysis, 2015',
@@ -29,10 +29,7 @@ const items = [
       accessed: { "date-parts": [ [ 2026, 4, 10 ], ], },
     }
   }
-] satisfies {
-  id: catalog.ID_t[],
-  material: base.Course_Material,
-}[]
+] satisfies catalog.pair[]
 
 for (const item of items) {
   catalog.add(item.id, item.material)
