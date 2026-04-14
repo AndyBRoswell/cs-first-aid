@@ -35,10 +35,10 @@
 
 新版预览：
 - main:
+  - ⭐https://cs-first-aid.pages.dev/
   - https://cs-first-aid.netlify.app/
-  - https://cs-first-aid.pages.dev/ 
 - dev:
-  - https://cs-first-aid-dev.pages.dev/
+  - ⭐https://cs-first-aid-dev.pages.dev/
 
 # 前言&emsp;在那内卷时代，没有置身于事外
 
