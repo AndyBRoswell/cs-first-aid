@@ -28,9 +28,7 @@ const items = [
       URL: 'https://link.springer.com/book/10.1007/978-1-4939-2712-8',
       accessed: { "date-parts": [ [ 2026, 4, 10 ], ], },
     }
-  }
+  },
 ] satisfies catalog.pair[]
 
-for (const item of items) {
-  catalog.add(item.id, item.material)
-}
+for (const item of items) { catalog.add(item.id, item.material) }
