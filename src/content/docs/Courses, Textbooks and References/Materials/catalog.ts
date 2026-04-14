@@ -18,6 +18,7 @@ const legal_object_keys_for_ID = [
   'vol',
 ]
 export type ID_t = legal_primitives_for_ID | [ legal_objects_for_ID, ...legal_primitives_for_ID[] ] | legal_objects_for_ID
+export type pair = { id: ID_t[], material: base.Course_Material, }
 
 const m = new Map<ID_t, base.Course_Material>
 
