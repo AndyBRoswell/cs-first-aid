@@ -30,6 +30,6 @@ const items = [
       note: 'Printed ver 9780135732588',
     }
   }
-] satisfies catalog.pair[]
+] satisfies catalog.Item[]
 
-for (const item of items) { catalog.add(item.id, item.material) }
+catalog.add_items(items)

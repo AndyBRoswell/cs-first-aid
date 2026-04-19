@@ -6,9 +6,13 @@ import '../../Materials/薛春华 徐森林 数分.ts'
 import '../../Materials/何琛 史济怀 徐森林 数分.ts'
 import '../../Materials/陈纪修 於崇华 金路 数分习题.ts'
 import '../../Materials/薛春华 徐森林 数分习题.ts'
+import '../../Materials/程艺 陈卿 李平 数分.ts'
+import '../../Materials/张筑生 数分.ts'
 import '../../Materials/H&N Applied Analysis.ts'
 import '../../Materials/Abbott, Understanding Analysis.ts'
 import '../../Materials/Pugh, Real Mathematical Analysis.ts'
+import '../../Materials/Apostol, Mathematical Analysis.ts'
+import '../../Materials/Rudin PMA.ts'
 import '../../Materials/刘思齐 数分选书.ts'
 import '../../Materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
 
@@ -29,6 +33,12 @@ export const info = {
       catalog.get('薛春华 徐森林 数分1'),
       catalog.get('薛春华 徐森林 数分2'),
       catalog.get('薛春华 徐森林 金亚东 数分3'),
+      catalog.get('程艺 陈卿 李平 数分1'),
+      catalog.get('程艺 陈卿 李平 数分2'),
+      catalog.get('程艺 陈卿 李平 许斌 数分3'),
+      catalog.get('张筑生 数分1'),
+      catalog.get('张筑生 数分2'),
+      catalog.get('张筑生 数分3'),
       catalog.get('H&N Applied Analysis'),
       catalog.get('Abbott, Understanding Analysis'),
       catalog.get('Pugh, Real Mathematical Analysis'),
@@ -45,6 +55,8 @@ export const info = {
       catalog.get('何琛 史济怀 徐森林 数分1'),
       catalog.get('何琛 史济怀 徐森林 数分2'),
       catalog.get('何琛 史济怀 徐森林 数分3'),
+      catalog.get('Apostol, Mathematical Analysis'),
+      catalog.get('Rudin PMA'),
       catalog.get('刘思齐 数分选书'),
       catalog.get('我为何不建议初学者用清华丘班数分讲义学数分'),
     ],
