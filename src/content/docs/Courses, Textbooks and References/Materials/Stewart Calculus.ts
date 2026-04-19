@@ -55,6 +55,6 @@ const items = [
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
   }
-] satisfies catalog.pair[]
+] satisfies catalog.Item[]
 
-for (const item of items) { catalog.add(item.id, item.material) }
+catalog.add_items(items)

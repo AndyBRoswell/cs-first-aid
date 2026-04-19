@@ -63,6 +63,6 @@ const items = [
       URL: 'https://book.douban.com/subject/35632006/',
     },
   },
-] satisfies catalog.pair[]
+] satisfies catalog.Item[]
 
-for (const { id, material } of items) { catalog.add(id, material) }
+catalog.add_items(items)

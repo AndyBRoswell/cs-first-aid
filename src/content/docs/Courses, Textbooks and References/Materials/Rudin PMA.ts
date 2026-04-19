@@ -24,6 +24,6 @@ const items = [
       note: 'ISBN10: 007054234X/007054235X/0070856133',
     }
   },
-] satisfies catalog.pair[]
+] satisfies catalog.Item[]
 
-for (const item of items) { catalog.add(item.id, item.material)}
+catalog.add_items(items)

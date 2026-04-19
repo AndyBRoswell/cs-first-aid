@@ -22,6 +22,6 @@ const items = [
       note: 'Postscript ver: https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
     }
   },
-] satisfies catalog.pair[]
+] satisfies catalog.Item[]
 
-for (const item of items) { catalog.add(item.id, item.material) }
+catalog.add_items(items)
