@@ -22,6 +22,6 @@ const items = [
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/mathematical-analysis-a-modern-approach-to-advanced-calculus/P200000006077/9780201002881',
     },
   },
-] satisfies catalog.pair[]
+] satisfies catalog.Item[]
 
-for (const item of items) { catalog.add(item.id, item.material) }
+catalog.add_items(items)

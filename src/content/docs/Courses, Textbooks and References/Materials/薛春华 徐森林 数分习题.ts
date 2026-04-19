@@ -41,6 +41,6 @@ const items = [
       language: 'zh-CN',
     },
   },
-] satisfies catalog.pair[]
+] satisfies catalog.Item[]
 
-for (const { id, material } of items) { catalog.add(id, material) }
+catalog.add_items(items)

@@ -110,6 +110,6 @@ const items = [
       URL: 'https://www.hep.com.cn/book/show/1a6e300d-e88f-4fbc-9948-70086231c265'
     },
   },
-] satisfies catalog.pair[]
+] satisfies catalog.Item[]
 
-for (const item of items) { catalog.add(item.id, item.material) }
+catalog.add_items(items)
