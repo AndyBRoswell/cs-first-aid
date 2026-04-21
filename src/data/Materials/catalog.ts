@@ -1,4 +1,4 @@
-import * as base from '../base.ts'
+import * as base from '../../content/docs/Courses, Textbooks and References/base.ts'
 
 type legal_primitives_for_ID = PropertyKey | bigint
 type legal_objects_for_ID = {
