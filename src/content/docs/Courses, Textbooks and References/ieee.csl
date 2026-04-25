@@ -132,6 +132,12 @@
       </substitute>
     </names>
   </macro>
+  <macro name="translator">
+    <names variable="translator">
+      <name and="text" delimiter=", " initialize-with=". "/>
+      <label form="short" prefix=", " text-case="capitalize-first"/>
+    </names>
+  </macro>
   <macro name="editor">
     <names variable="editor">
       <name initialize-with=". " delimiter=", " and="text"/>
@@ -316,7 +322,7 @@
         <group delimiter=", " suffix=". ">
           <text variable="collection-title"/>
           <text variable="collection-number" prefix="no. "/>
-          <text variable="volume" prefix="vol. "/>
+<!--           <text variable="volume" prefix="vol. "/> -->
         </group>
       </if>
     </choose>
@@ -479,6 +485,7 @@
         <else-if type="bill book graphic legal_case legislation report song" match="any">
           <group delimiter=", " suffix=". ">
             <text macro="title"/>
+            <text macro="translator"/>
             <text macro="locators"/>
           </group>
           <text macro="collection"/>
