@@ -3,15 +3,15 @@ import * as catalog from './catalog.ts'
 const items = [
   {
     id: [
-      '程艺 陈卿 李平 数分1',
+      '程艺 数分1',
       { unordered_author: [ '程艺', '陈卿', '李平' ], title: '数学分析讲义（第一册）'},
       { unordered_author: [ '程艺', '陈卿', '李平' ], title: '数学分析讲义（第一册）', date: 2019 },
     ],
     material: {
-      id: '程艺 陈卿 李平 数分1',
+      id: '程艺 数分1',
       type: 'book',
       title: '数学分析讲义（第一册）',
-      author: [ { literal: '程艺' }, { literal: '陈卿' }, { literal: '李平' } ],
+      author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' } ],
       'collection-title': '中国科学技术大学数学丛书',
       publisher: '高等教育出版社',
       'publisher-place': '北京',
@@ -24,15 +24,15 @@ const items = [
   },
   {
     id: [
-      '程艺 陈卿 李平 数分2',
+      '程艺 数分2',
       { unordered_author: [ '程艺', '陈卿', '李平' ], title: '数学分析讲义（第二册）'},
       { unordered_author: [ '程艺', '陈卿', '李平' ], title: '数学分析讲义（第二册）', date: 2020 },
     ],
     material: {
-      id: '程艺 陈卿 李平 数分2',
+      id: '程艺 数分2',
       type: 'book',
       title: '数学分析讲义（第二册）',
-      author: [ { literal: '程艺' }, { literal: '陈卿' }, { literal: '李平' } ],
+      author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' } ],
       'collection-title': '中国科学技术大学数学丛书',
       publisher: '高等教育出版社',
       'publisher-place': '北京',
@@ -45,15 +45,15 @@ const items = [
   },
   {
     id: [
-      '程艺 陈卿 李平 许斌 数分3',
+      '程艺 数分3',
       { unordered_author: [ '程艺', '陈卿', '李平', '许斌' ], title: '数学分析讲义（第三册）'},
       { unordered_author: [ '程艺', '陈卿', '李平', '许斌' ], title: '数学分析讲义（第三册）', date: 2020 },
     ],
     material: {
-      id: '程艺 陈卿 李平 许斌 数分3',
+      id: '程艺 数分3',
       type: 'book',
       title: '数学分析讲义（第三册）',
-      author: [ { literal: '程艺' }, { literal: '陈卿' }, { literal: '李平' }, { literal: '许斌' } ],
+      author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' }, { family: '许', given: '斌' } ],
       'collection-title': '中国科学技术大学数学丛书',
       publisher: '高等教育出版社',
       'publisher-place': '北京',
