@@ -14,10 +14,24 @@ export default defineConfig({
       },
       components: {
         PageTitle: './src/components/PageTitle.astro',
+        Header: './src/components/docs_header.astro',
       },
+      social: [
+        { icon: 'github', label: 'GitHub', href: 'https://github.com/AndyBRoswell/cs-first-aid' },
+      ],
       customCss: [
         './src/styles/docs.css',
       ],
+      locales: {
+        root: {
+          label: '简体中文',
+          lang: 'zh-CN',
+        },
+        en: {
+          label: 'English',
+          lang: 'en',
+        }
+      },
       sidebar: [
         {
           label: '前言',
@@ -52,20 +66,10 @@ export default defineConfig({
                 'en': 'Mathematical Analysis',
               },
               slug: 'courses-textbooks-and-references/courses/mathematical-analysis',
-            }
+            },
           ]
         }
       ],
-      locales: {
-        root: {
-          label: '简体中文',
-          lang: 'zh-CN',
-        },
-        en: {
-          label: 'English',
-          lang: 'en',
-        }
-      }
     })
   ],
   experimental: {

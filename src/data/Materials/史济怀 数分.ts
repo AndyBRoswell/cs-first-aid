@@ -3,15 +3,15 @@ import * as catalog from './catalog.ts'
 const items = [
   {
     id: [
-      `常庚哲 史济怀 数分 2003上`,
+      `史济怀 数分 2003上`,
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', edition: 2, },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', date: 2003, },
     ],
     material: {
       type: 'book',
-      id: `常庚哲 史济怀 数分 2003上`,
-      author: [ { literal: '常庚哲' }, { literal: '史济怀' } ],
+      id: `史济怀 数分 2003上`,
+      author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程（上册）',
       volume: 1,
       edition: 2,
@@ -28,15 +28,15 @@ const items = [
   },
   {
     id: [
-      `常庚哲 史济怀 数分 2003下`,
+      `史济怀 数分 2003下`,
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', edition: 2, },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', date: 2003, },
     ],
     material: {
       type: 'book',
-      id: `常庚哲 史济怀 数分 2003下`,
-      author: [ { literal: '常庚哲' }, { literal: '史济怀' } ],
+      id: `史济怀 数分 2003下`,
+      author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程（下册）',
       volume: 2,
       edition: 2,
@@ -53,15 +53,15 @@ const items = [
   },
   {
     id: [
-      `常庚哲 史济怀 数分 2026上`,
+      `史济怀 数分 2026上`,
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', edition: 4, },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', date: 2026, },
     ],
     material: {
       type: 'book',
-      id: '常庚哲 史济怀 数分 2026上',
-      author: [ { literal: '常庚哲' }, { literal: '史济怀' } ],
+      id: `史济怀 数分 2026上`,
+      author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程（上册）',
       volume: 1,
       edition: 4,
@@ -75,15 +75,15 @@ const items = [
   },
   {
     id: [
-      '常庚哲 史济怀 数分 2026下',
+      `史济怀 数分 2026下`,
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', edition: 4, },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', date: 2026, },
     ],
     material: {
       type: 'book',
-      id: '常庚哲 史济怀 数分 2026下',
-      author: [ { literal: '常庚哲' }, { literal: '史济怀' } ],
+      id: `史济怀 数分 2026下`,
+      author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程（下册）',
       volume: 2,
       edition: 4,

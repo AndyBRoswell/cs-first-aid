@@ -10,7 +10,7 @@ const items = [
     material: {
       type: 'book',
       id: '何琛 史济怀 徐森林 数分1',
-      author: [ { literal: '何琛' }, { literal: '史济怀' }, { literal: '徐森林' } ],
+      author: [ { family: '何', given: '琛' }, { family: '史', given: '济怀' }, { family: '徐', given: '森林' } ],
       title: '数学分析 第一册（一元微积分）',
       volume: 1,
       publisher: '高等教育出版社',
@@ -28,7 +28,7 @@ const items = [
     material: {
       type: 'book',
       id: '何琛 史济怀 徐森林 数分2',
-      author: [ { literal: '何琛' }, { literal: '史济怀' }, { literal: '徐森林' } ],
+      author: [ { family: '何', given: '琛' }, { family: '史', given: '济怀' }, { family: '徐', given: '森林' } ],
       title: '数学分析 第二册（多元微积分）',
       volume: 2,
       publisher: '高等教育出版社',
@@ -46,7 +46,7 @@ const items = [
     material: {
       type: 'book',
       id: '何琛 史济怀 徐森林 数分3',
-      author: [ { literal: '何琛' }, { literal: '史济怀' }, { literal: '徐森林' } ],
+      author: [ { family: '何', given: '琛' }, { family: '史', given: '济怀' }, { family: '徐', given: '森林' } ],
       title: '数学分析 第三册（无穷级数和广义积分）',
       volume: 3,
       publisher: '高等教育出版社',

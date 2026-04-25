@@ -3,15 +3,15 @@ import * as catalog from './catalog.ts'
 const items = [
   {
     id: [
-      '薛春华 徐森林 数分1',
-      '薛春华 徐森林 数分 2021 1',
+      '徐森林 数分1',
+      '徐森林 数分 2021 1',
       { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析（第1册）', },
       { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析（第1册）', date: 2021, },
     ],
     material: {
       type: 'book',
-      id: '薛春华 徐森林 数分1',
-      author: [ { literal: '徐森林' }, { literal: '薛春华' } ],
+      id: '徐森林 数分1',
+      author: [ { family: '徐', given: '森林' }, { family: '薛', given: '春华' } ],
       title: '数学分析（第1册）',
       volume: 1,
       publisher: '哈尔滨工业大学出版社',
@@ -23,15 +23,15 @@ const items = [
   },
   {
     id: [
-      '薛春华 徐森林 数分2',
-      '薛春华 徐森林 数分 2021 2',
+      '徐森林 数分2',
+      '徐森林 数分 2021 2',
       { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析（第2册）', },
       { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析（第2册）', date: 2021, },
     ],
     material: {
       type: 'book',
-      id: '薛春华 徐森林 数分2',
-      author: [ { literal: '徐森林' }, { literal: '薛春华' } ],
+      id: '徐森林 数分2',
+      author: [ { family: '徐', given: '森林' }, { family: '薛', given: '春华' } ],
       title: '数学分析（第2册）',
       volume: 2,
       publisher: '哈尔滨工业大学出版社',
@@ -43,15 +43,15 @@ const items = [
   },
   {
     id: [
-      '薛春华 徐森林 金亚东 数分3',
-      '薛春华 徐森林 金亚东 数分 2021 3',
+      '徐森林 数分3',
+      '徐森林 数分 2021 3',
       { unordered_author: [ '薛春华', '徐森林', '金亚东' ], title: '数学分析（第3册）', },
       { unordered_author: [ '薛春华', '徐森林', '金亚东' ], title: '数学分析（第3册）', date: 2021, },
     ],
     material: {
       type: 'book',
-      id: '薛春华 徐森林 金亚东 数分3',
-      author: [ { literal: '徐森林' }, { literal: '金亚东' }, { literal: '薛春华' } ],
+      id: '徐森林 数分3',
+      author: [ { family: '徐', given: '森林' }, { literal: '金亚东' }, { family: '薛', given: '春华' } ],
       title: '数学分析（第3册）',
       volume: 3,
       publisher: '哈尔滨工业大学出版社',
