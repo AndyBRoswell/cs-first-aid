@@ -13,6 +13,7 @@ import '../../../../../data/Materials/Abbott, Understanding Analysis.ts'
 import '../../../../../data/Materials/Pugh, Real Mathematical Analysis.ts'
 import '../../../../../data/Materials/Apostol, Mathematical Analysis.ts'
 import '../../../../../data/Materials/Rudin PMA.ts'
+import '../../../../../data/Materials/Zorich, Mathematical Analysis.ts'
 import '../../../../../data/Materials/刘思齐 数分选书.ts'
 import '../../../../../data/Materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
 
@@ -57,6 +58,8 @@ export const info = {
       catalog.get('何琛 史济怀 徐森林 数分3'),
       catalog.get('Apostol, Mathematical Analysis'),
       catalog.get('Rudin PMA'),
+      catalog.get('Zorich, Mathematical Analysis 1'),
+      catalog.get('Zorich, Mathematical Analysis 2'),
       catalog.get('刘思齐 数分选书'),
       catalog.get('我为何不建议初学者用清华丘班数分讲义学数分'),
     ],
