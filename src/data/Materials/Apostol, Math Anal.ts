@@ -3,6 +3,8 @@ import * as catalog from './catalog.ts'
 const items = [
   {
     id: [
+      'Apostol, Math Anal',
+      'Apostol, Math Anal, 2e',
       'Apostol, Mathematical Analysis',
       'Apostol, Mathematical Analysis, 2e',
       { unordered_author: 'Apostol', title: 'Mathematical Analysis', },

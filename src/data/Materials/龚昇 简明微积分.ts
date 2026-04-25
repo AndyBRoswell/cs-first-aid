@@ -13,7 +13,7 @@ const items = [
     material: {
       type: 'book',
       id: '简明微积分',
-      author: [ { literal: '龚昇', } ],
+      author: [ { given: '昇', family: '龚' } ],
       title: '简明微积分',
       edition: 4,
       publisher: '高等教育出版社',
