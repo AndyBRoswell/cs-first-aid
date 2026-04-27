@@ -1,4 +1,5 @@
-import * as base from '../../base.ts'
+import * as docs_base from '../../../base.ts'
+import * as courses_base from '../../../../../data/courses/base.ts'
 import * as catalog from '../../../../../data/Materials/catalog.ts'
 import '../../../../../data/Materials/史济怀 数分.ts'
 import '../../../../../data/Materials/陈纪修 数分.ts'
@@ -64,6 +65,6 @@ export const info = {
       catalog.get('我为何不建议初学者用清华丘班数分讲义学数分'),
     ],
   }
-} satisfies base.Course
+} satisfies courses_base.Course
 
-export const bib = base.print_bibliography(info.materials!)
+export const bib = docs_base.print_bibliography(info.materials!)
