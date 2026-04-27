@@ -1,4 +1,5 @@
-import * as base from '../../base.ts'
+import * as docs_base from '../../../base.ts'
+import * as courses_base from '../../../../../data/courses/base.ts'
 import * as catalog from '../../../../../data/Materials/catalog.ts'
 import '../../../../../data/Materials/Adams Calculus.ts'
 import '../../../../../data/Materials/龚昇 简明微积分.ts'
@@ -33,6 +34,6 @@ export const info = {
       catalog.get('Princeton Calculus Reader'),
     ]
   }
-} satisfies base.Course
+} satisfies courses_base.Course
 
-export const bib = base.print_bibliography(info.materials!)
+export const bib = docs_base.print_bibliography(info.materials!)

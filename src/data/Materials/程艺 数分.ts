@@ -10,7 +10,7 @@ const items = [
     material: {
       id: '程艺 数分1',
       type: 'book',
-      title: '数学分析讲义（第一册）',
+      title: '数学分析讲义',
       author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' } ],
       'collection-title': '中国科学技术大学数学丛书',
       publisher: '高等教育出版社',
@@ -31,7 +31,7 @@ const items = [
     material: {
       id: '程艺 数分2',
       type: 'book',
-      title: '数学分析讲义（第二册）',
+      title: '数学分析讲义',
       author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' } ],
       'collection-title': '中国科学技术大学数学丛书',
       publisher: '高等教育出版社',
@@ -52,7 +52,7 @@ const items = [
     material: {
       id: '程艺 数分3',
       type: 'book',
-      title: '数学分析讲义（第三册）',
+      title: '数学分析讲义',
       author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' }, { family: '许', given: '斌' } ],
       'collection-title': '中国科学技术大学数学丛书',
       publisher: '高等教育出版社',
