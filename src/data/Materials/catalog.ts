@@ -1,4 +1,4 @@
-import * as base from '../../content/docs/Courses, Textbooks and References/base.ts'
+import * as CSL_data from './CSL_data.ts'
 
 type legal_primitives_for_ID = PropertyKey | bigint
 type legal_objects_for_ID = {
@@ -18,9 +18,9 @@ const legal_object_keys_for_ID = [
   'vol',
 ]
 export type ID_t = legal_primitives_for_ID | [ legal_objects_for_ID, ...legal_primitives_for_ID[] ] | legal_objects_for_ID
-export type Item = { id: ID_t[], material: base.Course_Material, }
+export type Item = { id: ID_t[], material: CSL_data.Item, }
 
-const m = new Map<ID_t, base.Course_Material>
+const m = new Map<ID_t, CSL_data.Item>
 
 export function canonical_ID(ID: ID_t): ID_t {
   switch (typeof ID) {
@@ -53,10 +53,10 @@ export function add_item(p: Item) {
   add(p.id, p.material)
 }
 
-export function add(IDs: ID_t[], material: base.Course_Material) {
+export function add(IDs: ID_t[], material: CSL_data.Item) {
   for (const ID of IDs) { m.set(canonical_ID(ID), material) }
 }
 
-export function get(ID: ID_t): base.Course_Material {
+export function get(ID: ID_t): CSL_data.Item {
   return m.get(ID)!
 }

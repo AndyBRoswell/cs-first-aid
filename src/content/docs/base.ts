@@ -2,40 +2,8 @@
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 
-import * as CSL_Data from './CSL_data.ts'
+import * as CSL_data from '../../data/Materials/CSL_data.ts'
 import bibliography_style from './ieee.csl?raw'
-
-export type Link = string | { display_text?: string, link: string, }
-
-export type Course_Material = (CSL_Data.Item | Link)
-
-export type Course = {
-  canonical_name?: string
-  names: string[]
-  code?: string | number
-  description?: string
-  tags?: string[]
-  prerequisites?: Course[]
-  materials?: {
-    main?: Course_Material[]
-    problem_sets?: Course_Material[]
-    other?: Course_Material[]
-    excluded?: Course_Material[]
-  }
-  videos?: Course_Videos[]
-  note?: string
-}
-
-export type Course_Videos = {
-  title: string
-  for: Course[]
-  institution?: string[]
-  lecturers: string[]
-  URLs: Link[]
-  materials: Course_Material[]
-  suggested_playback_speeds?: number[]
-  note?: string
-}
 
 export type formatted_references = {
   parsed: { [key: string]: typeof citation_js.Cite }
@@ -50,7 +18,7 @@ const bib_format: object = {
   hyperlinks: true,
 }
 
-export function print_bibliography(data: { [key: string]: Course_Material[] }): formatted_references {
+export function print_bibliography(data: { [key: string]: CSL_data.Item[] }): formatted_references {
   const ret: formatted_references = {
     parsed: {},
     printed: {},
