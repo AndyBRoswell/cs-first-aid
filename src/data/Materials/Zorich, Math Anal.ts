@@ -3,9 +3,15 @@ import * as catalog from './catalog.ts'
 const items = [
   {
     id: [
-      'Zorich, Math Anal 1',
-      'Zorich, Mathematical Analysis 1',
-      { unordered_author: 'Zorich', title: 'Mathematical Analysis', vol: 1 },
+      'Zorich, 数分1',
+      'Zorich, 数学分析1',
+      'Zorich, 数学分析（第一卷）',
+      { unordered_author: 'Zorich', title: '数学分析', volume: 1, },
+      { unordered_author: 'Zorich', title: '数学分析', date: 2019, volume: 1, },
+      { unordered_author: 'Zorich', title: '数学分析', edition: 7, volume: 1, },
+      { unordered_author: 'Zorich', title: '数学分析（第一卷）', },
+      { unordered_author: 'Zorich', title: '数学分析（第一卷）', date: 2019, },
+      { unordered_author: 'Zorich', title: '数学分析（第一卷）', edition: 7, },
     ],
     material: {
       type: 'book',
@@ -27,9 +33,15 @@ const items = [
   // 📗 第二卷
   {
     id: [
-      'Zorich, Math Anal 2',
-      'Zorich, Mathematical Analysis 2',
-      { unordered_author: 'Zorich', title: 'Mathematical Analysis', vol: 2 },
+      'Zorich, 数分2',
+      'Zorich, 数学分析2',
+      'Zorich, 数学分析（第二卷）',
+      { unordered_author: 'Zorich', title: '数学分析', volume: 2, },
+      { unordered_author: 'Zorich', title: '数学分析', date: 2019, volume: 2, },
+      { unordered_author: 'Zorich', title: '数学分析', edition: 7, volume: 2, },
+      { unordered_author: 'Zorich', title: '数学分析（第二卷）', },
+      { unordered_author: 'Zorich', title: '数学分析（第二卷）', date: 2019, },
+      { unordered_author: 'Zorich', title: '数学分析（第二卷）', edition: 7, },
     ],
     material: {
       type: 'book',

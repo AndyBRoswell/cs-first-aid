@@ -1,4 +1,5 @@
-import * as base from '../../base.ts'
+import * as docs_base from '../../../base.ts'
+import * as courses_base from '../../../../../data/courses/base.ts'
 import * as catalog from '../../../../../data/Materials/catalog.ts'
 import '../../../../../data/Materials/史济怀 数分.ts'
 import '../../../../../data/Materials/陈纪修 数分.ts'
@@ -14,6 +15,7 @@ import '../../../../../data/Materials/Pugh, Real Mathematical Analysis.ts'
 import '../../../../../data/Materials/Apostol, Math Anal.ts'
 import '../../../../../data/Materials/Rudin PMA.ts'
 import '../../../../../data/Materials/Zorich, Math Anal.ts'
+import "../../../../../data/Materials/Fikhtengol'ts, Calculus.ts"
 import '../../../../../data/Materials/刘思齐 数分选书.ts'
 import '../../../../../data/Materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
 
@@ -25,8 +27,8 @@ export const info = {
     main: [
       catalog.get('史济怀 数分 2003上'),
       catalog.get('史济怀 数分 2003下'),
-      catalog.get('史济怀 数分 2026上'),
-      catalog.get('史济怀 数分 2026下'),
+      catalog.get('史济怀 数分上'),
+      catalog.get('史济怀 数分下'),
       catalog.get('陈纪修 数分2版上'),
       catalog.get('陈纪修 数分2版下'),
       catalog.get('陈纪修 数分上'),
@@ -58,12 +60,15 @@ export const info = {
       catalog.get('何琛 史济怀 徐森林 数分3'),
       catalog.get('Apostol, Math Anal'),
       catalog.get('Rudin PMA'),
-      catalog.get('Zorich, Math Anal 1'),
-      catalog.get('Zorich, Math Anal 2'),
+      catalog.get('Zorich, 数分1'),
+      catalog.get('Zorich, 数分2'),
+      catalog.get(`Fikhtengol'ts, 微积分1`),
+      catalog.get(`Fikhtengol'ts, 微积分2`),
+      catalog.get(`Fikhtengol'ts, 微积分3`),
       catalog.get('刘思齐 数分选书'),
       catalog.get('我为何不建议初学者用清华丘班数分讲义学数分'),
     ],
   }
-} satisfies base.Course
+} satisfies courses_base.Course
 
-export const bib = base.print_bibliography(info.materials!)
+export const bib = docs_base.print_bibliography(info.materials!)
