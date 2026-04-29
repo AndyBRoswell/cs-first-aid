@@ -144,6 +144,13 @@ export default defineConfig({
               },
               items: [
                 {
+                  label: '概述',
+                  translations: {
+                    en: 'Overview',
+                  },
+                  slug: '',
+                },
+                {
                   label: '数理逻辑',
                   translations: {
                     en: 'Mathematical Logic',
