@@ -2,8 +2,11 @@
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "jsxImportSource": "preact",
+    "jsxImportSource": "astro",
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
+    "paths": {
+      "@/*": ["src/*"]
+    }
   }
 }
