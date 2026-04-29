@@ -768,16 +768,9 @@ export default defineConfig({
               slug: '',
             },
             {
-              label: 'Token 费率必然暴涨',
+              label: '假定 Token 费率不断下降是极其危险的',
               translations: {
-                en: 'Token Prices Will Definitely Be Significantly Higher',
-              },
-              slug: '',
-            },
-            {
-              label: '软件质量将不断下滑',
-              translations: {
-                en: 'Software Quality Is Going to Be Worse and Worse',
+                en: 'Assuming a Continuously Decreasing Cost-per-Token Is Immensely Dangerous',
               },
               slug: '',
             },
@@ -789,6 +782,13 @@ export default defineConfig({
               slug: '',
             },
             {
+              label: '软件质量将不断下滑',
+              translations: {
+                en: 'Software Quality Is Going to Be Worse and Worse',
+              },
+              slug: '',
+            },
+            {
               label: 'Web 开发与客户端开发正成为常识',
               translations: {
                 en: 'Web Development and Client Development Are Becoming Common Sense'
@@ -796,9 +796,16 @@ export default defineConfig({
               slug: '',
             },
             {
-              label: '计算机+',
+              label: '低代码/无代码是死路',
               translations: {
-                en: 'Computer Science+',
+                en: 'Low-Code/No-Code Are Dead Paths',
+              },
+              slug: '',
+            },
+            {
+              label: '通解：计算机+',
+              translations: {
+                en: 'General Solution: Computer Science+',
               },
               slug: '',
             },
