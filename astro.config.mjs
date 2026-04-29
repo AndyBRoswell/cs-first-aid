@@ -487,7 +487,7 @@ export default defineConfig({
                 en: 'Android Development',
               },
               slug: '',
-            }
+            },
           ],
         }
       ],
