@@ -265,6 +265,13 @@ export default defineConfig({
               slug: '',
             },
             {
+              label: '安全编程',
+              translations: {
+                en: 'Secure Programming',
+              },
+              slug: '',
+            },
+            {
               label: '计算机网络',
               translations: {
                 en: 'Computer Networks',
