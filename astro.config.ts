@@ -41,6 +41,15 @@ export default defineConfig({
           slug: 'preface/preface',
         },
         {
+          label: '提升效率的工具与思想',
+          translations: {
+            en: 'Tools and Ideas to Improve Efficiency',
+          },
+          items: [
+
+          ],
+        },
+        {
           label: '课程、教科书与参考资料',
           translations: {
             en: 'Courses, Textbooks and References',
