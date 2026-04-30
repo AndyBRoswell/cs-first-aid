@@ -1,14 +1,14 @@
-import * as docs_base from '../../../base.ts'
-import * as courses_base from '../../../../../data/courses/base.ts'
-import * as catalog from '../../../../../data/Materials/catalog.ts'
-import '../../../../../data/Materials/Adams Calculus.ts'
-import '../../../../../data/Materials/龚昇 简明微积分.ts'
-import '../../../../../data/Materials/同济高数.ts'
-import '../../../../../data/Materials/Apostol Calculus.ts'
-import '../../../../../data/Materials/Thomas Calculus.ts'
-import '../../../../../data/Materials/Strang Calculus.ts'
-import '../../../../../data/Materials/Stewart Calculus.ts'
-import '../../../../../data/Materials/Princeton Calculus Reader.ts'
+import * as docs_base from '../../base.ts'
+import * as data_type from '@/types/data.ts'
+import * as catalog from '@/data/Materials/catalog.ts'
+import '@/data/Materials/Adams Calculus.ts'
+import '@/data/Materials/龚昇 简明微积分.ts'
+import '@/data/Materials/同济高数.ts'
+import '@/data/Materials/Apostol Calculus.ts'
+import '@/data/Materials/Thomas Calculus.ts'
+import '@/data/Materials/Strang Calculus.ts'
+import '@/data/Materials/Stewart Calculus.ts'
+import '@/data/Materials/Princeton Calculus Reader.ts'
 
 export const info = {
   canonical_name: '微积分',
@@ -34,6 +34,6 @@ export const info = {
       catalog.get('Princeton Calculus Reader'),
     ]
   }
-} satisfies courses_base.Course
+} satisfies data_type.Course
 
 export const bib = docs_base.print_bibliography(info.materials!)
