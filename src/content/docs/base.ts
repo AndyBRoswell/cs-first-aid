@@ -2,7 +2,7 @@
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 
-import * as CSL_data from '../../data/Materials/CSL_data.ts'
+import * as CSL_data from '../../types/CSL_data.ts'
 import bibliography_style from './ieee.csl?raw'
 
 export type formatted_references = {

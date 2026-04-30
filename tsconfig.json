@@ -5,6 +5,7 @@
     "jsxImportSource": "astro",
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
