@@ -1,5 +1,6 @@
-import * as base from '../base.ts'
-import * as CSL_data from '../Materials/CSL_data.ts'
+import * as CSL_Data from './CSL_data.ts'
+
+export type Link = string | { display_text?: string, link: string, }
 
 export type Course = {
   canonical_name?: string
@@ -9,10 +10,10 @@ export type Course = {
   tags?: string[]
   prerequisites?: Course[]
   materials?: {
-    main?: CSL_data.Item[]
-    problem_sets?: CSL_data.Item[]
-    other?: CSL_data.Item[]
-    excluded?: CSL_data.Item[]
+    main?: CSL_Data.Item[]
+    problem_sets?: CSL_Data.Item[]
+    other?: CSL_Data.Item[]
+    excluded?: CSL_Data.Item[]
   }
   videos?: Course_Videos[]
   note?: string
@@ -23,8 +24,8 @@ export type Course_Videos = {
   for: Course[]
   institution?: string[]
   lecturers: string[]
-  URLs: base.Link[]
-  materials: CSL_data.Item[]
+  URLs: Link[]
+  materials: CSL_Data.Item[]
   suggested_playback_speeds?: number[]
   note?: string
 }
