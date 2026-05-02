@@ -32,15 +32,6 @@ export function print_bibliography(data: { [key: string]: CSL_data.Item[] }): fo
   return ret
 }
 
-// export function cite(parsed_cite: typeof citation_js.Cite, ids: string | string[]): string {
-//   const id_list = Array.isArray(ids) ? ids : [ ids ]
-//   const indices = id_list.map((id) => {
-//     const index = parsed_cite.data.findIndex((item: any) => item.id === id) // Use linear search since item count is very few [e.g. <= 32]. any is used cause Citation.js lacks type info
-//     return index !== -1 ? index + 1 : '?'
-//   })
-//   return `[${indices.join('][')}]`
-// }
-
 export function cite(parsed_cite: typeof citation_js.Cite, ids: ID_t | ID_t[]): string {
   const id_list = Array.isArray(ids) ? ids : [ ids ]
   const indices: (number | string)[] = id_list.map((id: ID_t) => {
