@@ -25,6 +25,6 @@ const items = [
       note: 'ISBN10: 007054234X/007054235X/0070856133',
     }
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

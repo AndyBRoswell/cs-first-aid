@@ -25,6 +25,6 @@ const items = [
       note: 'https://zhuanlan.zhihu.com/p/563317174',
     }
   }
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

@@ -1,7 +1,7 @@
 // Created by Claude Sonnet 4.6 (Extended Thinking). Revised by AndyBRoswell.
 // Schema: https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json
 
-import type { Link } from "@/types/data.ts";
+import * as Data_Type from "@/types/data.ts";
 
 // 📦 Item types
 export type Item_Type =
@@ -78,7 +78,7 @@ export interface Date_Variable {
 }
 
 // 📄 A single bibliographic item
-export interface Item {
+export type Item = {
   // ✅ Required
   type: Item_Type
   id: string | number
@@ -198,13 +198,34 @@ export interface Item {
   custom?: Record<string, unknown>
 }
 
+declare const _ISBN: unique symbol
+export type ISBN = string & { readonly [_ISBN]: true }
+
+export function check_ISBN(str: string): str is ISBN { // Created by Gemini 3.1 Pro in Web App. Revised by AndyBRoswell.
+  const sanitized_str = str.replace(/[-\s]/g, '').toUpperCase()
+  if (/^(?:97[89])?\d{9}[\dX]$/.test(sanitized_str) === false) { return false }
+  let s: number = 0
+  switch (sanitized_str.length) {
+    case 10:
+      for (let i = 0; i < 9; i++) { s += parseInt(sanitized_str[i]!) * (10 - i) }
+      const d = sanitized_str[9] === 'X' ? 10 : parseInt(sanitized_str[9]!)
+      return (s + d) % 11 === 0
+    case 13:
+      for (let i = 0; i < 13; i++) { s += parseInt(sanitized_str[i]!) * (i % 2 === 0 ? 1 : 3) }
+      return s % 10 === 0
+    default: return false
+  }
+}
+
 export type Custom = {
   [key: string]: unknown
+  tag?: string[]
   'collection-title-short'?: string
-  free_material?: Link[]
+  free_material?: Data_Type.Link[]
   for?: unknown
+  companion?: (Data_Type.ID_t | Data_Type.Course)[]
   institution?: string[]
-  lecturer?: (string | Name_Variable)[]
-  URL?: Link[]
-  suggested_playback_speed?: number[]
+  lecturer?: Name_Variable[]
+  URL?: Data_Type.Link[]
+  suggested_playback_speed?: (number | string)[]
 }

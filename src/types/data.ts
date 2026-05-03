@@ -1,9 +1,12 @@
 import * as CSL_Data from './CSL_data.ts'
 
-type ID_primitive = PropertyKey | bigint
-type ID_object = {
-  unordered_author?: string | string[]
-  ordered_author?: string | string[]
+type ID_primitive = string | number | bigint
+type ID_object =
+  (
+    | { unordered_author?: string | string[], ordered_author?: never, }
+    | { unordered_author?: never, ordered_author?: string | string[], }
+    )
+  & {
   title?: string,
   edition?: string | number
   date?: string | number
@@ -18,35 +21,39 @@ export const legal_object_keys_for_ID = [
   'edition',
   'date',
   'volume',
+  'part',
+  'type',
 ]
 export type ID_t = ID_primitive | [ ID_primitive, ...ID_primitive[] ] | ID_object
-export type Item = { id: ID_t[], material: CSL_Data.Item, }
+export type Entry = { id: ID_t[], material: Material, }
 
 export type Link = string | {
   link: string,
-  tag?: unknown,
+  tag?: string[],
   display_text?: string,
   note?: string,
 }
 
 export type Course = {
   canonical_name?: string
-  names: string[]
+  name: string[]
   code?: string | number
   description?: string
-  tags?: string[]
-  prerequisites?: Course[]
-  materials?: {
-    text?: CSL_Data.Item[]
-    problem_sets?: CSL_Data.Item[]
-    audios?: CSL_Data.Item[]
-    videos?: Course_Videos[]
-    other?: CSL_Data.Item[]
-    excluded?: CSL_Data.Item[]
+  tag?: string[]
+  prerequisite?: Course[]
+  material?: {
+    text?: Material[]
+    problem_set?: Material[]
+    audio?: Material[]
+    video?: Video[]
+    other?: Material[]
+    excluded?: Material[]
   }
   note?: string
 }
- export type Course_Videos = CSL_Data.Item & {
-   [key: string]: unknown
-   custom?: CSL_Data.Custom
- }
+
+export type Material = CSL_Data.Item
+
+export type Video = Material & {
+  custom?: CSL_Data.Custom
+}
