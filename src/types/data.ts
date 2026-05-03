@@ -8,6 +8,7 @@ type ID_object = {
   edition?: string | number
   date?: string | number
   volume?: string | number
+  type?: string
 }
 export const legal_object_keys_for_ID = [
   'unordered_author',
@@ -38,12 +39,13 @@ export type Course = {
     text?: CSL_Data.Item[]
     problem_sets?: CSL_Data.Item[]
     audios?: CSL_Data.Item[]
-    videos?: CSL_Data.Item[] & {
-      [key: string]: unknown
-      custom?: CSL_Data.Custom[]
-    }
+    videos?: Course_Videos[]
     other?: CSL_Data.Item[]
     excluded?: CSL_Data.Item[]
   }
   note?: string
 }
+ export type Course_Videos = CSL_Data.Item & {
+   [key: string]: unknown
+   custom?: CSL_Data.Custom
+ }

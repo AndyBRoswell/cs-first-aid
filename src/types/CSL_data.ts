@@ -204,7 +204,7 @@ export type Custom = {
   free_material?: Link[]
   for?: unknown
   institution?: string[]
-  lecturer?: string[]
+  lecturer?: (string | Name_Variable)[]
   URL?: Link[]
   suggested_playback_speed?: number[]
 }
