@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -16,8 +17,10 @@ const items = [
       type: 'book',
       id: 'Apostol Calculus I',
       author: [ { given: 'Tom Mike', family: 'Apostol', }, ],
-      title: 'CALCULUS VOLUME I: One-Variable Calculus, with an Introduction to Linear Algebra',
+      title: 'CALCULUS',
+      "number-of-volumes": 2,
       volume: 1,
+      "volume-title": 'One-Variable Calculus, with an Introduction to Linear Algebra',
       edition: 2,
       editor: [ { given: 'George', family: 'Springer', }, ],
       publisher: 'John Wiley & Sons, Inc.',
@@ -44,8 +47,10 @@ const items = [
       type: 'book',
       id: 'Apostol Calculus II',
       author: [ { given: 'Tom Mike', family: 'Apostol', }, ],
-      title: 'CALCULUS VOLUME II: Multi Variable Calculus and Linear Algebra, with Applications to Differential Equations and Probability',
+      title: 'CALCULUS',
+      "number-of-volumes": 2,
       volume: 2,
+      "volume-title": 'Multi Variable Calculus and Linear Algebra, with Applications to Differential Equations and Probability',
       edition: 2,
       editor: [ { given: 'George', family: 'Springer', }, ],
       publisher: 'John Wiley & Sons, Inc.',
@@ -57,6 +62,6 @@ const items = [
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)

@@ -1,24 +1,6 @@
 import * as CSL_Data from '@/types/CSL_data.ts'
-
-type ID_primitive = PropertyKey | bigint
-type ID_object = {
-  unordered_author?: string | string[]
-  ordered_author?: string | string[]
-  title?: string,
-  edition?: string | number
-  date?: string | number
-  volume?: string | number
-}
-const legal_object_keys_for_ID = [
-  'unordered_author',
-  'ordered_author',
-  'title',
-  'edition',
-  'date',
-  'volume',
-]
-type ID_t = ID_primitive | [ ID_primitive, ...ID_primitive[] ] | ID_object
-export type Item = { id: ID_t[], material: CSL_Data.Item, }
+import type { ID_t, Item } from "@/types/data.ts";
+import { legal_object_keys_for_ID } from "@/types/data.ts";
 
 const m = new Map<ID_t, CSL_Data.Item>
 

@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -15,14 +16,15 @@ const items = [
       type: "book",
       title: "数学分析习题全解指南",
       author: [
-        { literal: "陈纪修" }, { literal: "徐惠平" }, { literal: '周渊'},
-        { literal: '金路', }, { literal: '邱维元'}
+        { literal: "陈纪修" }, { literal: "徐惠平" }, { literal: '周渊' },
+        { literal: '金路', }, { literal: '邱维元' }
       ],
       publisher: "高等教育出版社",
       "publisher-place": "北京",
       volume: 1,
+      "number-of-volumes": 2,
       edition: 2,
-      issued: { "date-parts": [[2005, 7]] },
+      issued: { "date-parts": [ [ 2005, 7 ] ] },
       "number-of-pages": 262,
       ISBN: "9787040166187",
       "collection-title": "数学类专业学习辅导丛书",
@@ -44,14 +46,14 @@ const items = [
       type: "book",
       title: "数学分析习题全解指南",
       author: [
-        { literal: "陈纪修" }, { literal: "徐惠平" }, { literal: '周渊'},
-        { literal: '金路', }, { literal: '邱维元'}
+        { literal: "陈纪修" }, { literal: "徐惠平" }, { literal: '周渊' },
+        { literal: '金路', }, { literal: '邱维元' }
       ],
       publisher: "高等教育出版社",
       "publisher-place": "北京",
       volume: 1,
       edition: 2,
-      issued: { "date-parts": [[2005]] },
+      issued: { "date-parts": [ [ 2005 ] ] },
       ISBN: "9787040173857",
       "collection-title": "数学类专业学习辅导丛书",
       language: "zh-CN",
@@ -78,6 +80,7 @@ const items = [
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2020, 4, 27 ] ] },
       volume: 1,
+      "number-of-volumes": 2,
       edition: 3,
       "number-of-pages": 244,
       language: 'zh-CN',
@@ -104,12 +107,13 @@ const items = [
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2020, 6, 17 ] ] },
       volume: 2,
+      "number-of-volumes": 2,
       edition: 3,
       "number-of-pages": 260,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/1a6e300d-e88f-4fbc-9948-70086231c265'
     },
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)

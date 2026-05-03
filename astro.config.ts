@@ -1,7 +1,6 @@
 import { defineConfig } from "astro/config";
 import preact from "@astrojs/preact";
 import starlight from "@astrojs/starlight";
-// @ts-ignore
 import * as sidebar_content from './src/components/sidebar/content.ts'
 
 // https://astro.build/config

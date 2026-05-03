@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -18,6 +19,7 @@ const items = [
       publisher: '北京大学出版社',
       'collection-title': '21世纪数学规划教材·数学基础课系列',
       volume: 1,
+      "number-of-volumes": 3,
       'number-of-pages': 296,
       issued: { 'date-parts': [ [ 2021, 9 ] ] },
       ISBN: '9787301322796',
@@ -41,6 +43,7 @@ const items = [
       publisher: '北京大学出版社',
       'collection-title': '21世纪数学规划教材·数学基础课系列',
       volume: 2,
+      "number-of-volumes": 3,
       issued: { 'date-parts': [ [ 2021, 8 ] ] },
       ISBN: '9787301323373',
       URL: 'https://book.douban.com/subject/35601300/',
@@ -63,12 +66,13 @@ const items = [
       publisher: '北京大学出版社',
       'collection-title': '21世纪数学规划教材·数学基础课系列',
       volume: 3,
+      "number-of-volumes": 3,
       'number-of-pages': 372,
       issued: { 'date-parts': [ [ 2021, 10 ] ] },
       ISBN: '9787301323724',
       URL: 'https://book.douban.com/subject/35632006/',
     },
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)

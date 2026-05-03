@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -22,6 +23,6 @@ const items = [
       note: 'Postscript ver: https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
     }
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)
