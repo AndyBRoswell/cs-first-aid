@@ -205,16 +205,12 @@ export function check_ISBN(str: string): str is ISBN { // Created by Gemini 3.1 
   const sanitized_str = str.replace(/[-\s]/g, '').toUpperCase()
   if (/^(?:97[89])?\d{9}[\dX]$/.test(sanitized_str) === false) { return false }
   let s: number = 0
-  // let d: number
   switch (sanitized_str.length) {
     case 10:
       for (let i = 0; i < 9; i++) { s += parseInt(sanitized_str[i]!) * (10 - i) }
       const d = sanitized_str[9] === 'X' ? 10 : parseInt(sanitized_str[9]!)
       return (s + d) % 11 === 0
     case 13:
-      // for (let i = 0; i < 12; i++) { s += parseInt(sanitized_str[i]!) * (i % 2 === 0 ? 1 : 3) }
-      // d = parseInt(sanitized_str[12]!)
-      // return (10 - (s % 10)) % 10 === d
       for (let i = 0; i < 13; i++) { s += parseInt(sanitized_str[i]!) * (i % 2 === 0 ? 1 : 3) }
       return s % 10 === 0
     default: return false
