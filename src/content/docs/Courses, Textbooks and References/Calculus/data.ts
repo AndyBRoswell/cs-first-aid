@@ -15,7 +15,7 @@ export const info = {
   names: [ '微积分', '高等数学', ],
   tags: [ '基础必修', ],
   materials: {
-    main: [
+    text: [
       catalog.get('Adams Calculus'),
       catalog.get('简明微积分'),
     ],
