@@ -31,6 +31,6 @@ const items = [
       note: 'Printed ver 9780135732588',
     }
   }
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

@@ -1,7 +1,7 @@
 // Created by Claude Sonnet 4.6 (Extended Thinking). Revised by AndyBRoswell.
 // Schema: https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json
 
-import type { Link } from "@/types/data.ts";
+import * as Data_Type from "@/types/data.ts";
 
 // 📦 Item types
 export type Item_Type =
@@ -201,10 +201,11 @@ export interface Item {
 export type Custom = {
   [key: string]: unknown
   'collection-title-short'?: string
-  free_material?: Link[]
+  free_material?: Data_Type.Link[]
   for?: unknown
+  companion?: (Data_Type.ID_t | Data_Type.Course)[]
   institution?: string[]
   lecturer?: (string | Name_Variable)[]
-  URL?: Link[]
-  suggested_playback_speed?: number[]
+  URL?: Data_Type.Link[]
+  suggested_playback_speed?: (number | string)[]
 }

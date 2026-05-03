@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from "@/types/CSL_data.ts";
 
 const items = [
   {
@@ -20,9 +21,21 @@ const items = [
       language: 'en-US',
       URL: 'https://www.math.ucdavis.edu/%7Ehunter/book/pdfbook.html',
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ] },
-      note: 'Postscript ver: https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
+      note: 'PostScript ver: https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
+      custom: {
+        free_material: [
+          {
+            display_text: 'Chapters in PDF',
+            link: 'https://www.math.ucdavis.edu/%7Ehunter/book/pdfbook.html',
+          },
+          {
+            display_text: 'Chapters in PostScript',
+            link: 'https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
+          },
+        ]
+      } satisfies CSL_Data.Custom,
     }
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

@@ -71,6 +71,6 @@ const items = [
       language: 'zh-CN',
     },
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

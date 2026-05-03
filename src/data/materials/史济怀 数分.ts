@@ -83,6 +83,11 @@ const items = [
       accessed: { "date-parts": [ [ 2026, 5, 3 ] ], },
       custom: {
         lecturer: [ { family: '史', given: '济怀' } ],
+        companion: [
+          `史济怀 数分 2003上`,
+          `史济怀 数分 2003下`,
+        ],
+        suggested_playback_speed: [ 1.5, 2, ],
       } satisfies CSL_Data.Custom
     }
   },
@@ -142,6 +147,6 @@ const items = [
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ], },
     },
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

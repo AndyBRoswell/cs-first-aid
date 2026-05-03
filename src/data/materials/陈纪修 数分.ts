@@ -59,6 +59,34 @@ const items = [
   },
   {
     id: [
+      '陈纪修 数分 公开课',
+      '陈纪修 数分 2008 公开课',
+      '陈纪修 数分 公开课 2008',
+      { unordered_author: [ '陈纪修' ], title: '数学分析', type: '公开课', },
+      { unordered_author: [ '陈纪修' ], title: '数学分析', date: 2008, type: '公开课', }
+    ],
+    material: {
+      type: 'motion_picture',
+      id: '陈纪修 数分 2008 公开课',
+      title: '数学分析 复旦 陈纪修',
+      issued: { "date-parts": [ [ 2017, 1, 16 ] ] },
+      "event-date": { "date-parts": [ [ 2008, 9, 1 ] ] },
+      "event-place": '复旦大学',
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV12s411h7v4',
+      accessed: { "date-parts": [ [ 2026, 5, 3 ] ] },
+      custom: {
+        lecturer: [ { family: '陈', given: '纪修' } ],
+        companion: [
+          "陈纪修 数分 2004上",
+          "陈纪修 数分 2004下",
+        ],
+        suggested_playback_speed: [ 1.5, 2, ],
+      }
+    } satisfies Data_Type.Video,
+  },
+  {
+    id: [
       "陈纪修 数分上",
       "陈纪修 数分3版上",
       "陈纪修 数分 2019上",
@@ -84,29 +112,6 @@ const items = [
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/0a11ff88-10f2-4a3a-8780-c45c4cbe2187'
     },
-  },
-  {
-    id: [
-      '陈纪修 数分 公开课',
-      '陈纪修 数分 2008 公开课',
-      '陈纪修 数分 公开课 2008',
-      { unordered_author: [ '陈纪修' ], title: '数学分析', type: '公开课', },
-      { unordered_author: [ '陈纪修' ], title: '数学分析', date: 2008, type: '公开课', }
-    ],
-    material: {
-      type: 'motion_picture',
-      id: '陈纪修 数分 2008 公开课',
-      title: '数学分析 复旦 陈纪修',
-      issued: { "date-parts": [ [ 2017, 1, 16 ] ] },
-      "event-date": { "date-parts": [ [ 2008, 9, 1 ] ] },
-      "event-place": '复旦大学',
-      language: 'zh-CN',
-      URL: 'https://www.bilibili.com/video/BV12s411h7v4',
-      accessed: { "date-parts": [ [ 2026, 5, 3 ] ] },
-      custom: {
-        lecturer: [ { family: '陈', given: '纪修' } ]
-      }
-    } satisfies Data_Type.Course_Videos,
   },
   {
     id: [
@@ -136,6 +141,6 @@ const items = [
       URL: 'https://www.hep.com.cn/book/show/c02b721f-7269-462e-9af2-8e5d12af173e'
     },
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

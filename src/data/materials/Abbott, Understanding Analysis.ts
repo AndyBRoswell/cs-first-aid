@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -28,8 +29,11 @@ const items = [
       language: 'en-US',
       URL: 'https://link.springer.com/book/10.1007/978-1-4939-2712-8',
       accessed: { "date-parts": [ [ 2026, 4, 10 ], ], },
-    }
+      custom: {
+        "collection-title-short": 'UTM',
+      } satisfies CSL_Data.Custom,
+    },
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)
