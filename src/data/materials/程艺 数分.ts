@@ -85,8 +85,9 @@ const items = [
       accessed: { 'date-parts': [ [ 2026, 5, 3 ] ] },
       custom: {
         lecturer: [ { family: '程', given: '艺' } ],
+        companion: [ '程艺 数分1' ],
       }
-    } satisfies Data_Type.Course_Videos,
+    } satisfies Data_Type.Video,
   },
   {
     id: [
@@ -105,9 +106,10 @@ const items = [
       accessed: { 'date-parts': [ [ 2026, 5, 3 ] ] },
       custom: {
         lecturer: [ { family: '程', given: '艺' } ],
+        companion: [ '程艺 数分2' ],
       }
-    } satisfies Data_Type.Course_Videos,
+    } satisfies Data_Type.Video,
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)
