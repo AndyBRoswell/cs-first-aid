@@ -1,5 +1,7 @@
-// Created by Claude Sonnet 4.6 (Extended Thinking)
+// Created by Claude Sonnet 4.6 (Extended Thinking). Revised by AndyBRoswell.
 // Schema: https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json
+
+import type { Link } from "@/types/data.ts";
 
 // 📦 Item types
 export type Item_Type =
@@ -66,8 +68,8 @@ export interface Name_Variable {
 // Outer array: 1–2 entries (date range); inner tuple: [year, month?, day?]
 export interface Date_Variable {
   'date-parts'?: [
-    [string | number, (string | number)?, (string | number)?],
-    ([string | number, (string | number)?, (string | number)?])?,
+    [ string | number, (string | number)?, (string | number)? ],
+    ([ string | number, (string | number)?, (string | number)? ])?,
   ]
   season?: string | number
   circa?: string | number | boolean
@@ -194,4 +196,15 @@ export interface Item {
 
   // 🗃️ Arbitrary key-value store (preferred over `note` for machine data)
   custom?: Record<string, unknown>
+}
+
+export type Custom = {
+  [key: string]: unknown
+  'collection-title-short'?: string
+  free_material?: Link[]
+  for?: unknown
+  institution?: string[]
+  lecturer?: string[]
+  URL?: Link[]
+  suggested_playback_speed?: number[]
 }
