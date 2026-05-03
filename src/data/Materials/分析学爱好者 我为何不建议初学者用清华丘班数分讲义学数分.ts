@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -22,6 +23,6 @@ const items = [
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ] },
     }
   }
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)
