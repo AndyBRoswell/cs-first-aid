@@ -95,6 +95,6 @@ const items = [
       accessed: { 'date-parts': [ [ 2026, 4, 27 ] ] },
     },
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

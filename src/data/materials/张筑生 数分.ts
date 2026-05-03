@@ -73,6 +73,6 @@ const items = [
       URL: 'https://book.douban.com/subject/35632006/',
     },
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

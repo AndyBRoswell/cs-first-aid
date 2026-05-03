@@ -25,6 +25,6 @@ const items = [
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/mathematical-analysis-a-modern-approach-to-advanced-calculus/P200000006077/9780201002881',
     },
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)

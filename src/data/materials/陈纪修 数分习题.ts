@@ -51,7 +51,8 @@ const items = [
       ],
       publisher: "高等教育出版社",
       "publisher-place": "北京",
-      volume: 1,
+      volume: 2,
+      "number-of-volumes": 2,
       edition: 2,
       issued: { "date-parts": [ [ 2005 ] ] },
       ISBN: "9787040173857",
@@ -114,6 +115,6 @@ const items = [
       URL: 'https://www.hep.com.cn/book/show/1a6e300d-e88f-4fbc-9948-70086231c265'
     },
   },
-] satisfies Data_Type.Item[]
+] satisfies Data_Type.Entry[]
 
 catalog.add_items(items)
