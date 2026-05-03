@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -17,6 +18,7 @@ const items = [
       type: 'book',
       id: 'Zorich, Math Anal 1',
       title: '数学分析',
+      "number-of-volumes": 2,
       volume: 1,
       edition: 7,
       author:[ { given: 'Владимир Антонович', family: 'Зорич' } ],
@@ -47,6 +49,7 @@ const items = [
       type: 'book',
       id: 'Zorich, Math Anal 2',
       title: '数学分析',
+      "number-of-volumes": 2,
       volume: 2,
       edition: 7,
       author:[ { given: 'Владимир Антонович', family: 'Зорич' } ],
@@ -60,6 +63,6 @@ const items = [
       accessed: { 'date-parts': [[ 2026, 4, 25 ] ] },
     },
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)

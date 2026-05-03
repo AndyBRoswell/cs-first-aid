@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -18,6 +19,7 @@ const items = [
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程',
       volume: 1,
+      "number-of-volumes": 2,
       edition: 2,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
@@ -47,6 +49,7 @@ const items = [
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程',
       volume: 2,
+      "number-of-volumes": 2,
       edition: 2,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
@@ -77,6 +80,7 @@ const items = [
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程',
       volume: 1,
+      "number-of-volumes": 2,
       edition: 4,
       publisher: '中国科学技术大学出版社',
       "publisher-place": "安徽省 合肥市",
@@ -104,6 +108,7 @@ const items = [
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程',
       volume: 2,
+      "number-of-volumes": 2,
       edition: 4,
       publisher: '中国科学技术大学出版社',
       "publisher-place": "安徽省 合肥市",
@@ -113,6 +118,6 @@ const items = [
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ], },
     },
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)

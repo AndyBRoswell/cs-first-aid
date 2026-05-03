@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -19,6 +20,7 @@ const items = [
       publisher: "高等教育出版社",
       "publisher-place": "北京",
       volume: 1,
+      "number-of-volumes": 2,
       edition: 2,
       issued: { "date-parts": [ [ 2004, 6, 1 ] ] },
       "number-of-pages": 419,
@@ -46,6 +48,7 @@ const items = [
       publisher: "高等教育出版社",
       "publisher-place": "北京",
       volume: 2,
+      "number-of-volumes": 2,
       edition: 2,
       issued: { "date-parts": [ [ 2004, 10, 1 ] ] },
       ISBN: "9787040155495",
@@ -71,6 +74,7 @@ const items = [
       title: '数学分析',
       author: [ { family: '陈', given: '纪修' }, { family: '於', given: '崇华' }, { family: '金', given: '路' } ],
       volume: 1,
+      "number-of-volumes": 2,
       edition: 3,
       ISBN: '978-7-04-051571-8',
       publisher: '高等教育出版社',
@@ -98,6 +102,7 @@ const items = [
       title: '数学分析',
       author: [ { family: '陈', given: '纪修' }, { family: '於', given: '崇华' }, { family: '金', given: '路' } ],
       volume: 2,
+      "number-of-volumes": 2,
       edition: 3,
       ISBN: '978-7-04-051630-2',
       publisher: '高等教育出版社',
@@ -108,6 +113,6 @@ const items = [
       URL: 'https://www.hep.com.cn/book/show/c02b721f-7269-462e-9af2-8e5d12af173e'
     },
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)

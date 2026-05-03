@@ -1,4 +1,5 @@
 import * as catalog from '../../data/Materials/catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -21,6 +22,7 @@ const items = [
       translator: [ { family: '杨', given: '弢亮' }, { family: '叶', given: '彦谦' } ],
       editor: [ { family: '郭', given: '思旭' }],
       title: '微积分学教程',
+      "number-of-volumes": 3,
       volume: 1,
       edition: 8,
       publisher: '高等教育出版社',
@@ -50,6 +52,7 @@ const items = [
       translator: [ { family: '徐', given: '献瑜' }, { family: '冷', given: '生明' }, { family: '梁', given: '文骐' } ],
       editor: [ { family: '郭', given: '思旭' }],
       title: '微积分学教程',
+      "number-of-volumes": 3,
       volume: 2,
       edition: 8,
       publisher: '高等教育出版社',
@@ -79,6 +82,7 @@ const items = [
       translator: [ { family: '路', given: '见可' }, { family: '余', given: '家荣' }, { family: '吴', given: '亲仁' } ],
       editor: [ { family: '郭', given: '思旭' }],
       title: '微积分学教程',
+      "number-of-volumes": 3,
       volume: 3,
       edition: 8,
       publisher: '高等教育出版社',
@@ -91,6 +95,6 @@ const items = [
       accessed: { 'date-parts': [ [ 2026, 4, 27 ] ] },
     },
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)
