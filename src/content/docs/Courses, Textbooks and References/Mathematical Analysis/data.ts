@@ -24,7 +24,7 @@ export const info = {
   names: [ '数学分析', ],
   tags: [ '基础选修', ],
   materials: {
-    main: [
+    text: [
       catalog.get('史济怀 数分 2003上'),
       catalog.get('史济怀 数分 2003下'),
       catalog.get('史济怀 数分上'),
