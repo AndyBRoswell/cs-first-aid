@@ -20,7 +20,12 @@ export const legal_object_keys_for_ID = [
 export type ID_t = ID_primitive | [ ID_primitive, ...ID_primitive[] ] | ID_object
 export type Item = { id: ID_t[], material: CSL_Data.Item, }
 
-export type Link = string | { display_text?: string, link: string, }
+export type Link = string | {
+  link: string,
+  tag?: unknown,
+  display_text?: string,
+  note?: string,
+}
 
 export type Course = {
   canonical_name?: string
@@ -30,22 +35,15 @@ export type Course = {
   tags?: string[]
   prerequisites?: Course[]
   materials?: {
-    main?: CSL_Data.Item[]
+    text?: CSL_Data.Item[]
     problem_sets?: CSL_Data.Item[]
+    audios?: CSL_Data.Item[]
+    videos?: CSL_Data.Item[] & {
+      [key: string]: unknown
+      custom?: CSL_Data.Custom[]
+    }
     other?: CSL_Data.Item[]
     excluded?: CSL_Data.Item[]
   }
-  videos?: Course_Videos[]
-  note?: string
-}
-
-export type Course_Videos = {
-  title: string
-  for: Course[]
-  institution?: string[]
-  lecturers: string[]
-  URLs: Link[]
-  materials: CSL_Data.Item[]
-  suggested_playback_speeds?: number[]
   note?: string
 }
