@@ -5,7 +5,7 @@ import '@citation-js/plugin-csl'
 import * as CSL_data from '@/types/CSL_data.ts'
 import bibliography_style from './ieee.csl?raw'
 import type { ID_t, } from "@/types/data.ts";
-import * as catalog from '@/data/Materials/catalog.ts'
+import * as catalog from '../../data/materials/catalog.ts'
 
 export type formatted_references = {
   parsed: { [key: string]: typeof citation_js.Cite }

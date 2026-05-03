@@ -1,4 +1,4 @@
-import * as catalog from '../../data/Materials/catalog.ts'
+import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
 
 const items = [
