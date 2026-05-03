@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 import * as Data_Type from '@/types/data.ts'
 
 const items = [
@@ -61,6 +62,29 @@ const items = [
       URL: 'https://www.hep.com.cn/book/show/957740b1-218e-45b7-847d-b0c3d0c711eb',
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ], },
     },
+  },
+  {
+    id: [
+      '史济怀 数分 公开课',
+      '史济怀 数分 2003 公开课',
+      '史济怀 数分 公开课 2003',
+      { unordered_author: [ '史济怀' ], title: '数学分析', type: '公开课', },
+      { unordered_author: [ '史济怀' ], title: '数学分析', date: 2003, type: '公开课', }
+    ],
+    material: {
+      type: 'motion_picture',
+      id: '史济怀 数分 2003 公开课',
+      title: '【数学分析】中科大-史济怀',
+      "event-date": { "date-parts": [ [ 2003, 9, ] ], },
+      "event-place": '中国科学技术大学少年班学院',
+      issued: { "date-parts": [ [ 2018, 1, 28 ] ], },
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV1ZW411e7PF',
+      accessed: { "date-parts": [ [ 2026, 5, 3 ] ], },
+      custom: {
+        lecturer: [ { family: '史', given: '济怀' } ],
+      } satisfies CSL_Data.Custom
+    }
   },
   {
     id: [

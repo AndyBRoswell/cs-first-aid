@@ -8,6 +8,7 @@ type ID_object = {
   edition?: string | number
   date?: string | number
   volume?: string | number
+  part?: string | number
   type?: string
 }
 export const legal_object_keys_for_ID = [

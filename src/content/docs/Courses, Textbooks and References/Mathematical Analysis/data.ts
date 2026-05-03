@@ -46,6 +46,12 @@ export const info = {
       catalog.get('Abbott, Understanding Analysis'),
       catalog.get('Pugh, Real Mathematical Analysis'),
     ],
+    videos: [
+      catalog.get('史济怀 数分 公开课') as data_type.Course_Videos,
+      catalog.get('陈纪修 数分 公开课') as data_type.Course_Videos,
+      catalog.get('程艺 数分B1 公开课') as data_type.Course_Videos,
+      catalog.get('程艺 数分B2 公开课') as data_type.Course_Videos,
+    ],
     problem_sets: [
       catalog.get('陈纪修 数分习题2版上'),
       catalog.get('陈纪修 数分习题2版下'),

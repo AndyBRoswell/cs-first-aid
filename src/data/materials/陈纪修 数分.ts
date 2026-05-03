@@ -87,6 +87,29 @@ const items = [
   },
   {
     id: [
+      '陈纪修 数分 公开课',
+      '陈纪修 数分 2008 公开课',
+      '陈纪修 数分 公开课 2008',
+      { unordered_author: [ '陈纪修' ], title: '数学分析', type: '公开课', },
+      { unordered_author: [ '陈纪修' ], title: '数学分析', date: 2008, type: '公开课', }
+    ],
+    material: {
+      type: 'motion_picture',
+      id: '陈纪修 数分 2008 公开课',
+      title: '数学分析 复旦 陈纪修',
+      issued: { "date-parts": [ [ 2017, 1, 16 ] ] },
+      "event-date": { "date-parts": [ [ 2008, 9, 1 ] ] },
+      "event-place": '复旦大学',
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV12s411h7v4',
+      accessed: { "date-parts": [ [ 2026, 5, 3 ] ] },
+      custom: {
+        lecturer: [ { family: '陈', given: '纪修' } ]
+      }
+    } satisfies Data_Type.Course_Videos,
+  },
+  {
+    id: [
       "陈纪修 数分下",
       "陈纪修 数分3版下",
       "陈纪修 数分 2019下",
