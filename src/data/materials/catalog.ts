@@ -1,5 +1,6 @@
 import type { ID_t, Entry, Material } from "@/types/data.ts";
 import { legal_object_keys_for_ID } from "@/types/data.ts";
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const m = new Map<ID_t, Material>
 
@@ -34,6 +35,7 @@ export function add_item(p: Entry) {
 }
 
 export function add(IDs: ID_t[], material: Material) {
+  if ('ISBN' in material) { if (CSL_Data.check_ISBN(material.ISBN) === false) { throw new Error(`Invalid ISBN ${material.ISBN}`) } }
   for (const ID of IDs) { m.set(canonical_ID(ID), material) }
 }
 
