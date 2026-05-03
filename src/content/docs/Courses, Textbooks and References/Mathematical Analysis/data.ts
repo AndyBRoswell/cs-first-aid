@@ -1,30 +1,30 @@
 import * as docs_base from '../../base.ts'
 import * as data_type from '@/types/data.ts'
-import * as catalog from '@/data/Materials/catalog.ts'
-import '@/data/Materials/史济怀 数分.ts'
-import '@/data/Materials/陈纪修 数分.ts'
-import '@/data/Materials/徐森林 数分.ts'
-import '@/data/Materials/何琛 史济怀 徐森林 数分.ts'
-import '@/data/Materials/陈纪修 数分习题.ts'
-import '@/data/Materials/徐森林 数分习题.ts'
-import '@/data/Materials/程艺 数分.ts'
-import '@/data/Materials/张筑生 数分.ts'
-import '@/data/Materials/H&N Applied Analysis.ts'
-import '@/data/Materials/Abbott, Understanding Analysis.ts'
-import '@/data/Materials/Pugh, Real Mathematical Analysis.ts'
-import '@/data/Materials/Apostol, Math Anal.ts'
-import '@/data/Materials/Rudin PMA.ts'
-import '@/data/Materials/Zorich, Math Anal.ts'
-import "@/data/Materials/Fikhtengol'ts, Calculus.ts"
-import '@/data/Materials/刘思齐 数分选书.ts'
-import '@/data/Materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
+import * as catalog from '../../../../data/materials/catalog.ts'
+import '../../../../data/materials/史济怀 数分.ts'
+import '../../../../data/materials/陈纪修 数分.ts'
+import '../../../../data/materials/徐森林 数分.ts'
+import '../../../../data/materials/何琛 史济怀 徐森林 数分.ts'
+import '../../../../data/materials/陈纪修 数分习题.ts'
+import '../../../../data/materials/徐森林 数分习题.ts'
+import '../../../../data/materials/程艺 数分.ts'
+import '../../../../data/materials/张筑生 数分.ts'
+import '../../../../data/materials/H&N Applied Analysis.ts'
+import '../../../../data/materials/Abbott, Understanding Analysis.ts'
+import '../../../../data/materials/Pugh, Real Mathematical Analysis.ts'
+import '../../../../data/materials/Apostol, Math Anal.ts'
+import '../../../../data/materials/Rudin PMA.ts'
+import '../../../../data/materials/Zorich, Math Anal.ts'
+import "../../../../data/materials/Fikhtengol'ts, Calculus.ts"
+import '../../../../data/materials/刘思齐 数分选书.ts'
+import '../../../../data/materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
 
 export const info = {
   canonical_name: '数学分析',
   names: [ '数学分析', ],
   tags: [ '基础选修', ],
   materials: {
-    main: [
+    text: [
       catalog.get('史济怀 数分 2003上'),
       catalog.get('史济怀 数分 2003下'),
       catalog.get('史济怀 数分上'),
@@ -45,6 +45,12 @@ export const info = {
       catalog.get('H&N Applied Analysis'),
       catalog.get('Abbott, Understanding Analysis'),
       catalog.get('Pugh, Real Mathematical Analysis'),
+    ],
+    videos: [
+      catalog.get('史济怀 数分 公开课') as data_type.Course_Videos,
+      catalog.get('陈纪修 数分 公开课') as data_type.Course_Videos,
+      catalog.get('程艺 数分B1 公开课') as data_type.Course_Videos,
+      catalog.get('程艺 数分B2 公开课') as data_type.Course_Videos,
     ],
     problem_sets: [
       catalog.get('陈纪修 数分习题2版上'),

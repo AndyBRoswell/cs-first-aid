@@ -1,4 +1,5 @@
 import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
 
 const items = [
   {
@@ -16,7 +17,7 @@ const items = [
       "title-short": 'PMA',
       author: [ { given: 'Walter', family: 'Rudin' } ],
       publisher: 'McGraw-Hill Education',
-      issued: { 'date-parts': [ [ 1976 ] ] },
+      issued: { 'date-parts': [ [ 1976, ] ] },
       edition: 3,
       ISBN: '9780070542358',
       language: 'en-US',
@@ -24,6 +25,6 @@ const items = [
       note: 'ISBN10: 007054234X/007054235X/0070856133',
     }
   },
-] satisfies catalog.Item[]
+] satisfies Data_Type.Item[]
 
 catalog.add_items(items)
