@@ -1,14 +1,14 @@
 import * as docs_base from '../../base.ts'
 import * as data_type from '@/types/data.ts'
-import * as catalog from '@/data/Materials/catalog.ts'
-import '@/data/Materials/Adams Calculus.ts'
-import '@/data/Materials/龚昇 简明微积分.ts'
-import '@/data/Materials/同济高数.ts'
-import '@/data/Materials/Apostol Calculus.ts'
-import '@/data/Materials/Thomas Calculus.ts'
-import '@/data/Materials/Strang Calculus.ts'
-import '@/data/Materials/Stewart Calculus.ts'
-import '@/data/Materials/Princeton Calculus Reader.ts'
+import * as catalog from '../../../../data/materials/catalog.ts'
+import '../../../../data/materials/Adams Calculus.ts'
+import '../../../../data/materials/龚昇 简明微积分.ts'
+import '../../../../data/materials/同济高数.ts'
+import '../../../../data/materials/Apostol Calculus.ts'
+import '../../../../data/materials/Thomas Calculus.ts'
+import '../../../../data/materials/Strang Calculus.ts'
+import '../../../../data/materials/Stewart Calculus.ts'
+import '../../../../data/materials/Princeton Calculus Reader.ts'
 
 export const info = {
   canonical_name: '微积分',
