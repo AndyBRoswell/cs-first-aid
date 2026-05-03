@@ -29,23 +29,23 @@ export type Entry = { id: ID_t[], material: Material, }
 
 export type Link = string | {
   link: string,
-  tag?: unknown,
+  tag?: string[],
   display_text?: string,
   note?: string,
 }
 
 export type Course = {
   canonical_name?: string
-  names: string[]
+  name: string[]
   code?: string | number
   description?: string
-  tags?: string[]
-  prerequisites?: Course[]
-  materials?: {
+  tag?: string[]
+  prerequisite?: Course[]
+  material?: {
     text?: Material[]
-    problem_sets?: Material[]
-    audios?: Material[]
-    videos?: Video[]
+    problem_set?: Material[]
+    audio?: Material[]
+    video?: Video[]
     other?: Material[]
     excluded?: Material[]
   }

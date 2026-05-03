@@ -200,6 +200,7 @@ export interface Item {
 
 export type Custom = {
   [key: string]: unknown
+  tag?: string[]
   'collection-title-short'?: string
   free_material?: Data_Type.Link[]
   for?: unknown
