@@ -68,6 +68,46 @@ const items = [
       URL: 'https://www.hep.com.cn/book/show/a5fc1e0f-5469-414a-a804-a577bdb8aa55'
     }
   },
+  {
+    id: [
+      '程艺 数分B1 公开课',
+      { unordered_author: [ '程艺' ], title: '数学分析', part: 'B1', type: '公开课', },
+    ],
+    material: {
+      type: 'motion_picture',
+      id: '程艺 数分B1 公开课',
+      author: [ { literal: '中国科大少年班学院', } ],
+      title: '高等数学-微积分 《数学分析B1》【中科大少年班精品课】 程艺教授（104讲）',
+      "event-place": '中国科学技术大学少年班学院',
+      issued: { "date-parts": [ [ 2020, 11, 10 ] ] },
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV1Lv411r7wa',
+      accessed: { 'date-parts': [ [ 2026, 5, 3 ] ] },
+      custom: {
+        lecturer: [ { family: '程', given: '艺' } ],
+      }
+    } satisfies Data_Type.Course_Videos,
+  },
+  {
+    id: [
+      '程艺 数分B2 公开课',
+      { unordered_author: [ '程艺' ], title: '数学分析', part: 'B2', type: '公开课', },
+    ],
+    material: {
+      type: 'motion_picture',
+      id: '程艺 数分B2 公开课',
+      author: [ { literal: '中国科大少年班学院', } ],
+      title: '高等数学-微积分 《数学分析B2》 【中科大少年班精品课】 程艺教授 （94讲）',
+      "event-place": '中国科学技术大学少年班学院',
+      issued: { "date-parts": [ [ 2021, 4, 19 ] ] },
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV1HV411J7sH',
+      accessed: { 'date-parts': [ [ 2026, 5, 3 ] ] },
+      custom: {
+        lecturer: [ { family: '程', given: '艺' } ],
+      }
+    } satisfies Data_Type.Course_Videos,
+  },
 ] satisfies Data_Type.Item[]
 
 catalog.add_items(items)
