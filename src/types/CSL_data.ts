@@ -78,7 +78,7 @@ export interface Date_Variable {
 }
 
 // 📄 A single bibliographic item
-export interface Item {
+export type Item = {
   // ✅ Required
   type: Item_Type
   id: string | number
@@ -206,7 +206,7 @@ export type Custom = {
   for?: unknown
   companion?: (Data_Type.ID_t | Data_Type.Course)[]
   institution?: string[]
-  lecturer?: (string | Name_Variable)[]
+  lecturer?: Name_Variable[]
   URL?: Data_Type.Link[]
   suggested_playback_speed?: (number | string)[]
 }
