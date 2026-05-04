@@ -1,10 +1,10 @@
-import type { ID_t, Entry, Material } from "@/types/data.ts";
+import type { ID_t, Entry, Material, ID_primitive } from "@/types/data.ts";
 import { legal_object_keys_for_ID } from "@/types/data.ts";
 import * as CSL_Data from '@/types/CSL_data.ts'
 
 const m = new Map<ID_t, Material>
 
-export function canonical_ID(ID: ID_t): ID_t {
+export function canonical_ID(ID: ID_t): ID_primitive {
   switch (typeof ID) {
     case 'string':
     case 'number':
@@ -40,5 +40,7 @@ export function add(IDs: ID_t[], material: Material) {
 }
 
 export function get(ID: ID_t): Material {
-  return m.get(ID)!
+  const CID = canonical_ID(ID)
+  if (m.has(CID)) { return m.get(CID)! }
+  else { throw new Error(`Failed to fetch any entry with ID ${ID}`) }
 }
