@@ -16,6 +16,7 @@ import '@/data/materials/Apostol, Math Anal.ts'
 import '@/data/materials/Rudin PMA.ts'
 import '@/data/materials/Zorich, Math Anal.ts'
 import "@/data/materials/Fikhtengol'ts, Calculus.ts"
+import '@/data/materials/Courant&John, Introduction to Calculus and Analysis.ts'
 import '@/data/materials/刘思齐 数分选书.ts'
 import '@/data/materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
 
@@ -66,6 +67,9 @@ export const info = {
       catalog.get('何琛 史济怀 徐森林 数分3'),
       catalog.get('Apostol, Math Anal'),
       catalog.get('Rudin PMA'),
+      catalog.get('Introduction to Calculus and Analysis I'),
+      catalog.get('Introduction to Calculus and Analysis II/1'),
+      catalog.get('Introduction to Calculus and Analysis II/2'),
       catalog.get('Zorich, 数分1'),
       catalog.get('Zorich, 数分2'),
       catalog.get(`Fikhtengol'ts, 微积分1`),
