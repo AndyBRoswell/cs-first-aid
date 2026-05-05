@@ -10,7 +10,6 @@ const items = [
       `史济怀 数分上 2003`,
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程', edition: 2, volume: 1 },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程', date: 2003, volume: 1 },
-      { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', edition: 2, },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（上册）', date: 2003, },
     ],
@@ -40,7 +39,6 @@ const items = [
       `史济怀 数分下 2003`,
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程', edition: 2, volume: 2 },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程', date: 2003, volume: 2, },
-      { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', edition: 2, },
       { unordered_author: [ '常庚哲', '史济怀' ], title: '数学分析教程（下册）', date: 2003, },
     ],
@@ -68,8 +66,6 @@ const items = [
       '史济怀 数分 公开课',
       '史济怀 数分 2003 公开课',
       '史济怀 数分 公开课 2003',
-      { unordered_author: [ '史济怀' ], title: '数学分析', type: '公开课', },
-      { unordered_author: [ '史济怀' ], title: '数学分析', date: 2003, type: '公开课', }
     ],
     material: {
       type: 'motion_picture',

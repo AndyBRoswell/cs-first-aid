@@ -36,7 +36,11 @@ export function add_item(p: Entry) {
 
 export function add(IDs: ID_t[], material: Material) {
   if ('ISBN' in material) { if (CSL_Data.check_ISBN(material.ISBN) === false) { throw new Error(`Invalid ISBN ${material.ISBN}`) } }
-  for (const ID of IDs) { m.set(canonical_ID(ID), material) }
+  for (const ID of IDs) {
+    const CID = canonical_ID(ID)
+    if (m.has(CID)) { throw new Error(`ID ${CID} already exists. Material: ${JSON.stringify(material, null, 2)}`) ; }
+    m.set(CID, material)
+  }
 }
 
 export function get(ID: ID_t): Material {
