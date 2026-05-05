@@ -6,7 +6,17 @@ const items = [
   {
     id: [
       'Pugh, Real Mathematical Analysis',
+      'Pugh, Real Mathematical Analysis, 2e',
+      'Pugh, Real Mathematical Analysis, 2015',
+      'C. C. Pugh, Real Mathematical Analysis',
+      'C. C. Pugh, Real Mathematical Analysis, 2e',
+      'C. C. Pugh, Real Mathematical Analysis, 2015',
       { unordered_author: 'Pugh', title: 'Real Mathematical Analysis', },
+      { unordered_author: 'Pugh', title: 'Real Mathematical Analysis', edition: 2, },
+      { unordered_author: 'Pugh', title: 'Real Mathematical Analysis', date: 2015, },
+      { unordered_author: 'C. C. Pugh', title: 'Real Mathematical Analysis', },
+      { unordered_author: 'C. C. Pugh', title: 'Real Mathematical Analysis', edition: 2, },
+      { unordered_author: 'C. C. Pugh', title: 'Real Mathematical Analysis', date: 2015, },
     ],
     material: {
       type: 'book',
@@ -18,7 +28,7 @@ const items = [
       "publisher-place": 'New York, NY',
       issued: { "date-parts": [ [ 2015, ], ], },
       "number-of-pages": 478,
-      ISBN: '978-3-319-17771-7',
+      ISBN: '978-3-319-17771-7' as CSL_Data.ISBN,
       "collection-title": 'Undergraduate Texts in Mathematics',
       "collection-editor": [ { given: 'Sheldon Jay', family: 'Axler' }, { given: 'Kenneth Alan', family: 'Ribet' }, ],
       language: 'en-US',

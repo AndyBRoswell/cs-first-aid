@@ -1,17 +1,18 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
     id: [
       'Apostol Calculus I',
       `Apostol's Calculus I`,
-      'Apostol, Calculus Vol I',
-      'Apostol, Calculus Vol I, 2e',
-      'Apostol, Calculus Vol I, 1967',
-      { unordered_author: 'Apostol', title: 'Calculus Vol I', },
-      { unordered_author: 'Apostol', title: 'Calculus Vol I', edition: 2, },
-      { unordered_author: 'Apostol', title: 'Calculus Vol I', date: 1967, },
+      'T. M. Apostol, Calculus Vol I',
+      'T. M. Apostol, Calculus Vol I, 2e',
+      'T. M. Apostol, Calculus Vol I, 1967',
+      { unordered_author: 'T. M. Apostol', title: 'Calculus', volume: 1, },
+      { unordered_author: 'T. M. Apostol', title: 'Calculus', edition: 2, volume: 1, },
+      { unordered_author: 'T. M. Apostol', title: 'Calculus', date: 1967, volume: 1,},
     ],
     material: {
       type: 'book',
@@ -26,7 +27,7 @@ const items = [
       publisher: 'John Wiley & Sons, Inc.',
       "publisher-place": 'US',
       issued: { "date-parts": [ [ 1967, ] ], },
-      ISBN: '0471000051',
+      ISBN: '0471000051' as CSL_Data.ISBN,
       language: 'en-US',
       URL: 'https://www.wiley.com/en-us/Calculus%2C+Volume+1%2C+2nd+Edition-p-9781119496731',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
@@ -56,7 +57,7 @@ const items = [
       publisher: 'John Wiley & Sons, Inc.',
       "publisher-place": 'US',
       issued: { "date-parts": [ [ 1969, ], ], },
-      ISBN: '0471000078',
+      ISBN: '0471000078' as CSL_Data.ISBN,
       language: 'en-US',
       URL: 'https://www.wiley.com/en-us/Calculus%2C+Volume+2%2C+2nd+Edition-p-9781119496762',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },

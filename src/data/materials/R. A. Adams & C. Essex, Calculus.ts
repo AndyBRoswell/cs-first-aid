@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -7,12 +8,15 @@ const items = [
       'Calculus: A Complete Course',
       'Adams Calculus',
       `Adams' Calculus`,
-      'Adams, Calculus: A Complete Course',
-      'Adams, Calculus: A Complete Course, 10e',
-      'Adams, Calculus: A Complete Course, 2021',
-      { unordered_author: 'Adams', title: 'Calculus: A Complete Course', },
-      { unordered_author: 'Adams', title: 'Calculus: A Complete Course', edition: 10, },
-      { unordered_author: 'Adams', title: 'Calculus: A Complete Course', date: 2021, },
+      'Adams&Essex, Calculus: A Complete Course',
+      'R. A. Adams and C. Essex, Calculus: A Complete Course',
+      'Adams&Essex, Calculus: A Complete Course, 10e',
+      'R. A. Adams and C. Essex, Calculus: A Complete Course, 10e',
+      'Adams&Essex, Calculus: A Complete Course, 2021',
+      'R. A. Adams and C. Essex, Calculus: A Complete Course, 2021',
+      { unordered_author: [ 'R. A. Adams', 'C. Essex' ], title: 'Calculus: A Complete Course', },
+      { unordered_author: [ 'R. A. Adams', 'C. Essex' ], title: 'Calculus: A Complete Course', edition: 10, },
+      { unordered_author: [ 'R. A. Adams', 'C. Essex' ], title: 'Calculus: A Complete Course', date: 2021, },
     ],
     material: {
       type: 'book',
@@ -24,7 +28,7 @@ const items = [
       "publisher-place": 'Toronto, ON',
       issued: { "date-parts": [ [ 2021, ], ], },
       "number-of-pages": 1200,
-      ISBN: '9780135766781',
+      ISBN: '9780135766781' as CSL_Data.ISBN,
       language: 'en-CA',
       URL: 'https://www.pearson.com/en-ca/subject-catalog/p/calculus-a-complete-course/P200000002479/9780135766781',
       accessed: { "date-parts": [ [ 2026, 4, 2 ], ], },

@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -24,7 +25,7 @@ const items = [
       publisher: 'Cengage Learning',
       "publisher-place": 'Boston, MA',
       issued: { "date-parts": [ [ 2020, 4, 30 ], ], },
-      ISBN: '9780357711491',
+      ISBN: '9780357711491' as CSL_Data.ISBN,
       URL: 'https://www.cengage.com/c/calculus-9e-stewart-clegg-watson/9781337624183/',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
@@ -35,9 +36,9 @@ const items = [
       'Stewart, Calculus: Early Transcendentals',
       'Stewart, Calculus: Early Transcendentals, 9e',
       'Stewart, Calculus: Early Transcendentals, 2020',
-      { unordered_author: 'Stewart', title: 'Calculus', },
-      { unordered_author: 'Stewart', title: 'Calculus', edition: 9, },
-      { unordered_author: 'Stewart', title: 'Calculus', date: 2020, },
+      { unordered_author: 'Stewart', title: 'Calculus: Early Transcendentals', },
+      { unordered_author: 'Stewart', title: 'Calculus: Early Transcendentals', edition: 9, },
+      { unordered_author: 'Stewart', title: 'Calculus: Early Transcendentals', date: 2020, },
     ],
     material: {
       type: 'book',
@@ -51,7 +52,7 @@ const items = [
       publisher: 'Cengage Learning',
       "publisher-place": 'Boston, MA',
       issued: { "date-parts": [ [ 2020, 1, 9 ], ], },
-      ISBN: '9780357687901',
+      ISBN: '9780357687901' as CSL_Data.ISBN,
       URL: 'https://www.cengage.com/c/calculus-early-transcendentals-9e-stewart-clegg-watson/9781337613927/',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },

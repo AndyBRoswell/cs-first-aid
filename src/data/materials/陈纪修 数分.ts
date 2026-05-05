@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -24,7 +25,7 @@ const items = [
       edition: 2,
       issued: { "date-parts": [ [ 2004, 6, 1 ] ] },
       "number-of-pages": 419,
-      ISBN: "9787040138528",
+      ISBN: "9787040138528" as CSL_Data.ISBN,
       "collection-title": "面向21世纪课程教材（数学类）",
       language: "zh-CN",
       URL: "https://book.douban.com/subject/1231379/"
@@ -51,7 +52,7 @@ const items = [
       "number-of-volumes": 2,
       edition: 2,
       issued: { "date-parts": [ [ 2004, 10, 1 ] ] },
-      ISBN: "9787040155495",
+      ISBN: "9787040155495" as CSL_Data.ISBN,
       "collection-title": "面向21世纪课程教材（数学类）",
       language: "zh-CN",
       URL: "https://book.douban.com/subject/1239801/"
@@ -104,7 +105,7 @@ const items = [
       volume: 1,
       "number-of-volumes": 2,
       edition: 3,
-      ISBN: '978-7-04-051571-8',
+      ISBN: '978-7-04-051571-8' as CSL_Data.ISBN,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2019, 4, 30 ] ] },
@@ -132,7 +133,7 @@ const items = [
       volume: 2,
       "number-of-volumes": 2,
       edition: 3,
-      ISBN: '978-7-04-051630-2',
+      ISBN: '978-7-04-051630-2' as CSL_Data.ISBN,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2019, 5, 30 ] ] },
