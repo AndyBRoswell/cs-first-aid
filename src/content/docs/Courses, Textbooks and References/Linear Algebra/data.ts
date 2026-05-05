@@ -22,6 +22,7 @@ export const I_info = {
       catalog.get('丘维声 高代上'),
       catalog.get('丘维声 高代指导书 上'),
       catalog.get('ILA6'),
+      catalog.get('LADW'),
       catalog.get('Interactive Linear Algebra'),
     ],
     video: [
@@ -45,7 +46,6 @@ export const II_info = {
       catalog.get('丘维声 高代下'),
       catalog.get('丘维声 高代指导书 下'),
       catalog.get('LADR'),
-      catalog.get('LADW'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra'),
     ],
     video: [
