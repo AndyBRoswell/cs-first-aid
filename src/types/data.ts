@@ -1,7 +1,7 @@
 import * as CSL_Data from './CSL_data.ts'
 
-type ID_primitive = string | number | bigint
-type ID_object =
+export type ID_primitive = string | number | bigint
+export type ID_object =
   (
     | { unordered_author?: string | string[], ordered_author?: never, }
     | { unordered_author?: never, ordered_author?: string | string[], }

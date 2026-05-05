@@ -228,4 +228,5 @@ export type Custom = {
   lecturer?: Name_Variable[]
   URL?: Data_Type.Link[]
   suggested_playback_speed?: (number | string)[]
+  'collection-title'?: string[]
 }
