@@ -7,12 +7,12 @@ const items = [
     id: [
       'Apostol Calculus I',
       `Apostol's Calculus I`,
-      'Apostol, Calculus Vol I',
-      'Apostol, Calculus Vol I, 2e',
-      'Apostol, Calculus Vol I, 1967',
-      { unordered_author: 'Apostol', title: 'Calculus Vol I', },
-      { unordered_author: 'Apostol', title: 'Calculus Vol I', edition: 2, },
-      { unordered_author: 'Apostol', title: 'Calculus Vol I', date: 1967, },
+      'T. M. Apostol, Calculus Vol I',
+      'T. M. Apostol, Calculus Vol I, 2e',
+      'T. M. Apostol, Calculus Vol I, 1967',
+      { unordered_author: 'T. M. Apostol', title: 'Calculus', volume: 1, },
+      { unordered_author: 'T. M. Apostol', title: 'Calculus', edition: 2, volume: 1, },
+      { unordered_author: 'T. M. Apostol', title: 'Calculus', date: 1967, volume: 1,},
     ],
     material: {
       type: 'book',

@@ -7,11 +7,17 @@ const items = [
     id: [
       'Understanding Analysis',
       'Abbott, Understanding Analysis',
+      'S. Abbott, Understanding Analysis',
       'Abbott, Understanding Analysis, 2e',
+      'S. Abbott, Understanding Analysis, 2e',
       'Abbott, Understanding Analysis, 2015',
+      'S. Abbott, Understanding Analysis, 2015',
       { unordered_author: 'Abbott', title: 'Understanding Analysis', },
+      { unordered_author: 'S. Abbott', title: 'Understanding Analysis', },
       { unordered_author: 'Abbott', title: 'Understanding Analysis', edition: 2, },
+      { unordered_author: 'S. Abbott', title: 'Understanding Analysis', edition: 2, },
       { unordered_author: 'Abbott', title: 'Understanding Analysis', date: 2015, },
+      { unordered_author: 'S. Abbott', title: 'Understanding Analysis', date: 2015, },
     ],
     material: {
       type: 'book',

@@ -6,7 +6,17 @@ const items = [
   {
     id: [
       'Pugh, Real Mathematical Analysis',
+      'Pugh, Real Mathematical Analysis, 2e',
+      'Pugh, Real Mathematical Analysis, 2015',
+      'C. C. Pugh, Real Mathematical Analysis',
+      'C. C. Pugh, Real Mathematical Analysis, 2e',
+      'C. C. Pugh, Real Mathematical Analysis, 2015',
       { unordered_author: 'Pugh', title: 'Real Mathematical Analysis', },
+      { unordered_author: 'Pugh', title: 'Real Mathematical Analysis', edition: 2, },
+      { unordered_author: 'Pugh', title: 'Real Mathematical Analysis', date: 2015, },
+      { unordered_author: 'C. C. Pugh', title: 'Real Mathematical Analysis', },
+      { unordered_author: 'C. C. Pugh', title: 'Real Mathematical Analysis', edition: 2, },
+      { unordered_author: 'C. C. Pugh', title: 'Real Mathematical Analysis', date: 2015, },
     ],
     material: {
       type: 'book',
