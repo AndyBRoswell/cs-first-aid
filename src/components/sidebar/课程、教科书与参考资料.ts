@@ -38,21 +38,21 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Overview',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/linear-algebra',
         },
         {
           label: '线性代数I',
           translations: {
             en: 'Linear Algebra I',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/linear-algebra/i',
         },
         {
           label: '线性代数II',
           translations: {
             en: 'Linear Algebra II',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/linear-algebra/ii',
         },
       ],
     },
