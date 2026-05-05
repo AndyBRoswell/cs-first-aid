@@ -52,8 +52,6 @@ export type Course = {
   note?: string
 }
 
-export type Material = CSL_Data.Item & { ISBN?: CSL_Data.ISBN }
+export type Material = CSL_Data.Item & { ISBN?: CSL_Data.ISBN } & { custom?: CSL_Data.Custom}
 
-export type Video = Material & {
-  custom?: CSL_Data.Custom
-}
+export type Video = Material
