@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -23,7 +24,7 @@ const items = [
       publisher: 'Pearson',
       "publisher-place": 'US',
       issued: { "date-parts": [ [ 2022, 12, 29 ], ], },
-      ISBN: '9780137616077',
+      ISBN: '9780137616077' as CSL_Data.ISBN,
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/thomas-calculus/P200000007103/9780137616077?format=eTextbook_lifetime',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
@@ -49,7 +50,7 @@ const items = [
       publisher: 'Pearson',
       "publisher-place": 'US',
       issued: { "date-parts": [ [ 2022, 2, 28 ], ], },
-      ISBN: '9780137559824',
+      ISBN: '9780137559824' as CSL_Data.ISBN,
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/thomas-calculus-early-transcendentals/P200000007104/9780137559824?format=eTextbook_lifetime',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },

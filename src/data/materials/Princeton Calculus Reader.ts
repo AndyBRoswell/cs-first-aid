@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -19,7 +20,7 @@ const items = [
       "publisher-place": 'Princeton, NJ',
       issued: { "date-parts": [ [ 2009, 11, 28 ], ], },
       "number-of-pages": 752,
-      ISBN: '9781400835782',
+      ISBN: '9781400835782' as CSL_Data.ISBN,
       URL: 'https://press.princeton.edu/books/ebook/9781400835782/the-calculus-lifesaver-pdf?srsltid=AfmBOops83rJhcGuw-fa0Bu44xMu49g0lGUuYIANhrxpdDl-qjG2pwW-',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     }

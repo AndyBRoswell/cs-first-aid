@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -17,7 +18,7 @@ const items = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       issued: { 'date-parts': [ [ 2019, 3, 13 ] ] },
-      ISBN: '978-7-04-051033-1',
+      ISBN: '978-7-04-051033-1' as CSL_Data.ISBN,
       volume: 1,
       "number-of-volumes": 3,
       language: 'zh-CN',
@@ -39,7 +40,7 @@ const items = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       issued: { 'date-parts': [ [ 2020, 1, 15 ] ] },
-      ISBN: '978-7-04-053309-5',
+      ISBN: '978-7-04-053309-5' as CSL_Data.ISBN,
       volume: 2,
       "number-of-volumes": 3,
       language: 'zh-CN',
@@ -61,7 +62,7 @@ const items = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       issued: { 'date-parts': [ [ 2020, 8, 20 ] ] },
-      ISBN: '978-7-04-054247-9',
+      ISBN: '978-7-04-054247-9' as CSL_Data.ISBN,
       volume: 3,
       "number-of-volumes": 3,
       language: 'zh-CN',

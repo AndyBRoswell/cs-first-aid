@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -21,7 +22,7 @@ const items = [
       publisher: '哈尔滨工业大学出版社',
       "publisher-place": '黑龙江省 哈尔滨市',
       issued: { "date-parts": [ [ 2021, 3, ] ], },
-      ISBN: '978-7-5603-8050-6',
+      ISBN: '978-7-5603-8050-6' as CSL_Data.ISBN,
       language: 'zh-CN',
     },
   },
@@ -44,7 +45,7 @@ const items = [
       publisher: '哈尔滨工业大学出版社',
       "publisher-place": '黑龙江省 哈尔滨市',
       issued: { "date-parts": [ [ 2021, 3, ] ], },
-      ISBN: '978-7-5603-8172-5',
+      ISBN: '978-7-5603-8172-5' as CSL_Data.ISBN,
       language: 'zh-CN',
     },
   },
@@ -67,7 +68,7 @@ const items = [
       publisher: '哈尔滨工业大学出版社',
       "publisher-place": '黑龙江省 哈尔滨市',
       issued: { "date-parts": [ [ 2021, 3, ] ], },
-      ISBN: '978-7-5603-8073-5',
+      ISBN: '978-7-5603-8073-5' as CSL_Data.ISBN,
       language: 'zh-CN',
     },
   },
