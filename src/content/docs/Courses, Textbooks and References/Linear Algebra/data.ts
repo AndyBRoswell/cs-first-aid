@@ -2,7 +2,7 @@ import * as docs_base from '@/content/docs/base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/data/materials/Strang, Introduction to Linear Algebra.ts'
-import '@/data/materials/Margalit&Rabinoff, Interactive Linear Algebra.ts'
+import '@/data/materials/GATech, Interactive Linear Algebra.ts'
 import '@/data/materials/Axler, Linear Algebra Done Right.ts'
 import '@/data/materials/Treil, Linear Algebra Done Wrong.ts'
 import '@/data/materials/Meyer, Matrix Analysis and Applied Linear Algebra.ts'
@@ -40,7 +40,6 @@ export const II_info = {
       catalog.get('蓝以中 高代下'),
       catalog.get('LADR'),
       catalog.get('LADW'),
-      catalog.get('P. D. Lax, Linear Algebra and Its Applications'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra'),
     ],
     video: [
@@ -50,6 +49,7 @@ export const II_info = {
 
     ],
     other: [
+      catalog.get('P. D. Lax, Linear Algebra and Its Applications'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide'),
     ],
   }

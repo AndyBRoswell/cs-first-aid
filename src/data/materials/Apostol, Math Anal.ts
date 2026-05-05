@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -21,7 +22,7 @@ const items = [
       publisher: 'Addison-Wesley',
       issued: { 'date-parts': [ [ 1974 ] ] },
       language: 'en-US',
-      ISBN: '9780201002881',
+      ISBN: '9780201002881' as CSL_Data.ISBN,
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/mathematical-analysis-a-modern-approach-to-advanced-calculus/P200000006077/9780201002881',
     },
   },

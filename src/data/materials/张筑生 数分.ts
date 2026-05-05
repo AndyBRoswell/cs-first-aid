@@ -1,5 +1,6 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
@@ -22,7 +23,7 @@ const items = [
       "number-of-volumes": 3,
       'number-of-pages': 296,
       issued: { 'date-parts': [ [ 2021, 9 ] ] },
-      ISBN: '9787301322796',
+      ISBN: '9787301322796' as CSL_Data.ISBN,
       URL: 'https://book.douban.com/subject/35597851/',
     },
   },
@@ -45,7 +46,7 @@ const items = [
       volume: 2,
       "number-of-volumes": 3,
       issued: { 'date-parts': [ [ 2021, 8 ] ] },
-      ISBN: '9787301323373',
+      ISBN: '9787301323373' as CSL_Data.ISBN,
       URL: 'https://book.douban.com/subject/35601300/',
     },
   },
@@ -69,7 +70,7 @@ const items = [
       "number-of-volumes": 3,
       'number-of-pages': 372,
       issued: { 'date-parts': [ [ 2021, 10 ] ] },
-      ISBN: '9787301323724',
+      ISBN: '9787301323724' as CSL_Data.ISBN,
       URL: 'https://book.douban.com/subject/35632006/',
     },
   },
