@@ -7,6 +7,12 @@ import '@/data/materials/S. Axler, Linear Algebra Done Right.ts'
 import '@/data/materials/S. R. Treil, Linear Algebra Done Wrong.ts'
 import '@/data/materials/C. D. Meyer, Matrix Analysis and Applied Linear Algebra.ts'
 import '@/data/materials/P. D. Lax, Linear Algebra and Its Applications.ts'
+import '@/data/materials/R. A. Horn & C. R. Johnson, Matrix Analysis.ts'
+import '@/data/materials/S. R. Garcia & R. A. Horn, Matrix Mathematics.ts'
+import '@/data/materials/L. N. Trefethen & D. Bau, Numerical Linear Algebra.ts'
+import '@/data/materials/T. S. Shores, Applied Linear Algebra and Matrix Analysis.ts'
+import '@/data/materials/E. B. Saff & A. D. Snider, Matrix Fundamentals.ts'
+import '@/data/materials/Jun Lu, Matrix Decomposition and Applications.ts'
 import '@/data/materials/蓝以中 高代.ts'
 import '@/data/materials/丘维声 高代.ts'
 import '@/data/materials/分析学爱好者 我为什么推荐你使用丘维声学习高等代数.ts'
@@ -24,6 +30,8 @@ export const I_info = {
       catalog.get('ILA6'),
       catalog.get('LADW'),
       catalog.get('Interactive Linear Algebra'),
+      catalog.get('T. S. Shores, Applied Linear Algebra and Matrix Analysis'),
+      catalog.get('E. B. Saff and A. D. Snider, Matrix Fundamentals'),
     ],
     video: [
       catalog.get('丘维声 高代 公开课'),
@@ -47,6 +55,9 @@ export const II_info = {
       catalog.get('丘维声 高代指导书 下'),
       catalog.get('LADR'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra'),
+      catalog.get('R. A. Horn and C. R. Johnson, Matrix Analysis'),
+      catalog.get('S. R. Garcia and R. A. Horn, Matrix Mathematics'),
+      catalog.get('Lloyd N. Trefethen and David Bau III, Numerical Linear Algebra'),
     ],
     video: [
       catalog.get('丘维声 高代 公开课'),
@@ -55,6 +66,7 @@ export const II_info = {
     other: [
       catalog.get('P. D. Lax, Linear Algebra and Its Applications'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide'),
+      catalog.get('Jun Lu, Matrix Decomposition and Applications'),
       catalog.get('我为什么推荐你使用丘维声学习高等代数'),
     ],
   }
