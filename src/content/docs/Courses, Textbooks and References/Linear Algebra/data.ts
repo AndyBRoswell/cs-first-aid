@@ -7,7 +7,7 @@ import '@/data/materials/Axler, Linear Algebra Done Right.ts'
 import '@/data/materials/Treil, Linear Algebra Done Wrong.ts'
 import '@/data/materials/Meyer, Matrix Analysis and Applied Linear Algebra.ts'
 import '@/data/materials/Lax, Linear Algebra and Its Applications.ts'
-import '@/data/materials/蓝以中 高等代数简明教程.ts'
+import '@/data/materials/蓝以中 高代.ts'
 
 export const I_info = {
   canonical_name: '线性代数I',

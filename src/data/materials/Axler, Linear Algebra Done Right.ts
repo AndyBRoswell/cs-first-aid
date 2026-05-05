@@ -24,7 +24,7 @@ const items = [
       author: [ { given: 'Sheldon', family: 'Axler' } ],
       title: 'Linear Algebra Done Right',
       edition: 4,
-      issued: { 'date-parts': [ [ 2024 ] ] },
+      issued: { 'date-parts': [ [ 2026, 4, 26 ] ] },
       publisher: 'Springer',
       language: 'en-US',
       URL: 'https://linear.axler.net/LADR4e.pdf',
