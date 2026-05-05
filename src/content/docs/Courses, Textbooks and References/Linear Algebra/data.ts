@@ -8,6 +8,8 @@ import '@/data/materials/Treil, Linear Algebra Done Wrong.ts'
 import '@/data/materials/Meyer, Matrix Analysis and Applied Linear Algebra.ts'
 import '@/data/materials/Lax, Linear Algebra and Its Applications.ts'
 import '@/data/materials/蓝以中 高代.ts'
+import '@/data/materials/丘维声 高代.ts'
+import '@/data/materials/分析学爱好者 我为什么推荐你使用丘维声学习高等代数.ts'
 
 export const I_info = {
   canonical_name: '线性代数I',
@@ -16,17 +18,18 @@ export const I_info = {
   material: {
     text: [
       catalog.get('蓝以中 高代上'),
+      catalog.get('丘维声 高代1版上'),
+      catalog.get('丘维声 高代上'),
+      catalog.get('丘维声 高代指导书 上'),
       catalog.get('ILA6'),
       catalog.get('Interactive Linear Algebra'),
     ],
     video: [
-
+      catalog.get('丘维声 高代 公开课'),
     ],
-    problem_set: [
-
-    ],
+    problem_set: [],
     other: [
-
+      catalog.get('我为什么推荐你使用丘维声学习高等代数'),
     ],
   }
 } satisfies data_type.Course
@@ -38,19 +41,21 @@ export const II_info = {
   material: {
     text: [
       catalog.get('蓝以中 高代下'),
+      catalog.get('丘维声 高代1版下'),
+      catalog.get('丘维声 高代下'),
+      catalog.get('丘维声 高代指导书 下'),
       catalog.get('LADR'),
       catalog.get('LADW'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra'),
     ],
     video: [
-
+      catalog.get('丘维声 高代 公开课'),
     ],
-    problem_set: [
-
-    ],
+    problem_set: [],
     other: [
       catalog.get('P. D. Lax, Linear Algebra and Its Applications'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide'),
+      catalog.get('我为什么推荐你使用丘维声学习高等代数'),
     ],
   }
 } satisfies data_type.Course
