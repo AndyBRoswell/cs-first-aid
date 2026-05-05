@@ -7,6 +7,7 @@ import '@/data/materials/Axler, Linear Algebra Done Right.ts'
 import '@/data/materials/Treil, Linear Algebra Done Wrong.ts'
 import '@/data/materials/Meyer, Matrix Analysis and Applied Linear Algebra.ts'
 import '@/data/materials/Lax, Linear Algebra and Its Applications.ts'
+import '@/data/materials/蓝以中 高等代数简明教程.ts'
 
 export const I_info = {
   canonical_name: '线性代数I',
@@ -14,6 +15,7 @@ export const I_info = {
   tag: [ '基础必修', ],
   material: {
     text: [
+      catalog.get('蓝以中 高代上'),
       catalog.get('ILA6'),
       catalog.get('Interactive Linear Algebra'),
     ],
@@ -35,6 +37,7 @@ export const II_info = {
   tag: [ '基础选修', ],
   material: {
     text: [
+      catalog.get('蓝以中 高代下'),
       catalog.get('LADR'),
       catalog.get('LADW'),
       catalog.get('P. D. Lax, Linear Algebra and Its Applications'),
