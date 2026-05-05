@@ -220,8 +220,9 @@ export function check_ISBN(str: string): str is ISBN { // Created by Gemini 3.1 
 export type Custom = {
   [key: string]: unknown
   tag?: string[]
+  subtitle?: string
   'collection-title-short'?: string
-  free_material?: Data_Type.Link[]
+  free_material?: Data_Type.Link[] | Record<string, Data_Type.Link | Data_Type.Link[]>
   for?: unknown
   companion?: (Data_Type.ID_t | Data_Type.Course)[]
   institution?: string[]
