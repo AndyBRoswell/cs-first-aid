@@ -19,6 +19,8 @@ import "@/data/materials/Fikhtengol'ts, Calculus.ts"
 import '@/data/materials/Courant&John, Introduction to Calculus and Analysis.ts'
 import '@/data/materials/刘思齐 数分选书.ts'
 import '@/data/materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
+import '@/data/materials/分析学爱好者 尽管数分教材千千万，但我却建议你学陈纪修.ts'
+import '@/data/materials/分析学爱好者 对常见数分课本&习题集的快速版点评.ts'
 
 export const info = {
   canonical_name: '数学分析',
@@ -76,6 +78,8 @@ export const info = {
       catalog.get(`Fikhtengol'ts, 微积分2`),
       catalog.get(`Fikhtengol'ts, 微积分3`),
       catalog.get('刘思齐 数分选书'),
+      catalog.get('对常见数分课本&习题集的快速版点评'),
+      catalog.get('尽管数分教材千千万，但我却建议你学陈纪修'),
       catalog.get('我为何不建议初学者用清华丘班数分讲义学数分'),
     ],
   }
