@@ -14,7 +14,7 @@ const items = [
     ],
     material: {
       type: 'motion_picture',
-      id: '我为何不建议初学者用清华丘班数分讲义学数分',
+      id: '分析学爱好者, 我为何不建议初学者用清华丘班数分讲义学数分',
       author: [ { literal: '分析学爱好者' } ],
       title: '我为何不建议初学者用清华丘班数分讲义学数分',
       issued: { "date-parts": [ [ 2025, 9, 15 ] ] },
