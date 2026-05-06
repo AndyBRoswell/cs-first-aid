@@ -224,7 +224,7 @@ export type Custom = {
   'collection-title-short'?: string
   free_material?: Data_Type.Link[] | Record<string, Data_Type.Link | Data_Type.Link[]>
   for?: unknown
-  companion?: (Data_Type.ID_t | Data_Type.Course)[]
+  companion?: (Data_Type.ID_t | Data_Type.Material | Data_Type.Course)[]
   institution?: string[]
   lecturer?: Name_Variable[]
   URL?: Data_Type.Link[]
