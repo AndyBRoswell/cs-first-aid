@@ -3,6 +3,15 @@ import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/data/materials/屈婉玲 离散数学.ts'
 import '@/data/materials/屈婉玲 离散数学教程.ts'
+import '@/data/materials/K. H. Rosen, Discrete Mathematics and Its Applications.ts'
+import '@/data/materials/M. Huth et al., Logic in Computer Science.ts'
+import '@/data/materials/CMU, Logic and Proof.ts'
+import '@/data/materials/J. A. Bondy et al., Graph Theory.ts'
+import '@/data/materials/D. B. West, Introduction to Graph Theory.ts'
+import '@/data/materials/J. M. Harris et al., Combinatorics and Graph Theory.ts'
+import '@/data/materials/席南华 基础代数.ts'
+import '@/data/materials/Kostrikin, 代数学引论.ts'
+import '@/data/materials/王树禾 图论.ts'
 
 export const Mathematical_Logic = {
   canonical_name: '数理逻辑',
@@ -12,15 +21,20 @@ export const Mathematical_Logic = {
     text: [
       catalog.get('屈婉玲 离散数学'),
       catalog.get('屈婉玲 离散数学教程'),
+      catalog.get('Logic and Proof'),
+    ],
+    video: [
+      catalog.get('北京大学 离散数学 公开课'),
     ],
     problem_set: [
       catalog.get('屈婉玲 离散数学习题解析'),
       catalog.get('屈婉玲 离散数学学习指导与习题解析'),
     ],
-    video: [
-      catalog.get('北京大学 离散数学 公开课'),
+    other: [
+      catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
+      catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
+      catalog.get('M. Huth and M. Ryan, Logic in Computer Science'),
     ],
-    other: [],
   }
 } satisfies data_type.Course
 
@@ -32,15 +46,19 @@ export const Set_Theory = {
     text: [
       catalog.get('屈婉玲 离散数学'),
       catalog.get('屈婉玲 离散数学教程'),
+      catalog.get('Logic and Proof'),
+    ],
+    video: [
+      catalog.get('北京大学 离散数学 公开课'),
     ],
     problem_set: [
       catalog.get('屈婉玲 离散数学习题解析'),
       catalog.get('屈婉玲 离散数学学习指导与习题解析'),
     ],
-    video: [
-      catalog.get('北京大学 离散数学 公开课'),
+    other: [
+      catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
+      catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
     ],
-    other: [],
   }
 } satisfies data_type.Course
 
@@ -52,15 +70,22 @@ export const Graph_Theory = {
     text: [
       catalog.get('屈婉玲 离散数学'),
       catalog.get('屈婉玲 离散数学教程'),
+      catalog.get('D. B. West, Introduction to Graph Theory'),
+      catalog.get('J. M. Harris et al., Combinatorics and Graph Theory'),
+    ],
+    video: [
+      catalog.get('北京大学 离散数学 公开课'),
     ],
     problem_set: [
       catalog.get('屈婉玲 离散数学习题解析'),
       catalog.get('屈婉玲 离散数学学习指导与习题解析'),
     ],
-    video: [
-      catalog.get('北京大学 离散数学 公开课'),
+    other: [
+      catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
+      catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
+      catalog.get('J. A. Bondy and U. S. R. Murty, Graph Theory'),
+      catalog.get('王树禾 图论'),
     ],
-    other: [],
   }
 } satisfies data_type.Course
 
@@ -73,14 +98,17 @@ export const Abstract_Algebra = {
       catalog.get('屈婉玲 离散数学'),
       catalog.get('屈婉玲 离散数学教程'),
     ],
+    video: [
+      catalog.get('北京大学 离散数学 公开课'),
+    ],
     problem_set: [
       catalog.get('屈婉玲 离散数学习题解析'),
       catalog.get('屈婉玲 离散数学学习指导与习题解析'),
     ],
-    video: [
-      catalog.get('北京大学 离散数学 公开课'),
+    other: [
+      catalog.get('席南华 基础代数3'),
+      catalog.get('Kostrikin, 代数学引论3'),
     ],
-    other: [],
   }
 } satisfies data_type.Course
 
@@ -92,15 +120,19 @@ export const Combinatorics = {
     text: [
       catalog.get('屈婉玲 离散数学'),
       catalog.get('屈婉玲 离散数学教程'),
+      catalog.get('J. M. Harris et al., Combinatorics and Graph Theory'),
+    ],
+    video: [
+      catalog.get('北京大学 离散数学 公开课'),
     ],
     problem_set: [
       catalog.get('屈婉玲 离散数学习题解析'),
       catalog.get('屈婉玲 离散数学学习指导与习题解析'),
     ],
-    video: [
-      catalog.get('北京大学 离散数学 公开课'),
+    other: [
+      catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
+      catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
     ],
-    other: [],
   }
 } satisfies data_type.Course
 
@@ -111,12 +143,16 @@ export const Number_Theory = {
   material: {
     text: [
       catalog.get('屈婉玲 离散数学'),
+      catalog.get('Logic and Proof'),
     ],
+    video: [],
     problem_set: [
       catalog.get('屈婉玲 离散数学学习指导与习题解析')
     ],
-    video: [],
-    other: [],
+    other: [
+      catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
+      catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
+    ],
   }
 } satisfies data_type.Course
 
