@@ -115,6 +115,7 @@ export const Abstract_Algebra = {
     other: [
       catalog.get('席南华 基础代数3'),
       catalog.get('Kostrikin, 代数学引论3'),
+      catalog.get('Kostrikin, 代数学习题集'),
       catalog.get('D. S. Dummit and R. M. Foote, Abstract Algebra'),
       catalog.get('S. Lang, Undergraduate Algebra'),
       catalog.get('S. Lang, Algebra'),
