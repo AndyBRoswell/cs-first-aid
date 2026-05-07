@@ -221,13 +221,13 @@ export type Custom = {
   [key: string]: unknown
   tag?: string[]
   subtitle?: string
-  'collection-title-short'?: string
+  'collection-title-short'?: string | string[]
   free_material?: Data_Type.Link[] | Record<string, Data_Type.Link | Data_Type.Link[]>
   for?: unknown
-  companion?: (Data_Type.ID_t | Data_Type.Course)[]
+  companion?: (Data_Type.ID_t | Data_Type.Material | Data_Type.Course)[]
   institution?: string[]
   lecturer?: Name_Variable[]
   URL?: Data_Type.Link[]
   suggested_playback_speed?: (number | string)[]
-  'collection-title'?: string[]
+  'collection-title'?: string | string[]
 }

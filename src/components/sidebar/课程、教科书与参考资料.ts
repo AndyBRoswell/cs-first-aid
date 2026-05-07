@@ -103,49 +103,49 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Overview',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/discrete-mathematics',
         },
         {
           label: '数理逻辑',
           translations: {
             en: 'Mathematical Logic',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/discrete-mathematics/mathematical-logic',
         },
         {
           label: '集合论',
           translations: {
             en: 'Set Theory',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/discrete-mathematics/set-theory',
         },
         {
           label: '图论',
           translations: {
             en: 'Graph Theory',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/discrete-mathematics/graph-theory',
         },
         {
           label: '抽象代数',
           translations: {
             en: 'Abstract Algebra',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/discrete-mathematics/abstract-algebra',
         },
         {
           label: '组合数学',
           translations: {
             en: 'Combinatorics',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/discrete-mathematics/combinatorics',
         },
         {
           label: '数论',
           translations: {
             en: 'Number Theory',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/discrete-mathematics/number-theory',
         },
       ],
     },
