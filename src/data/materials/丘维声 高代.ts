@@ -83,9 +83,12 @@ const items = [
       URL: 'https://www.bilibili.com/video/BV1jR4y1M78W',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       custom: {
-        tag: [ '高等代数' ],
         institution: [ '清华大学' ],
         lecturer: [ { family: '丘', given: '维声' } ],
+        companion: [
+          { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 1, },
+          { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 2, },
+        ],
       } satisfies CSL_Data.Custom,
     } satisfies Data_Type.Material,
   },

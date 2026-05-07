@@ -8,6 +8,7 @@ export type ID_object =
     )
   & {
   title?: string,
+  subtitle?: string,
   edition?: string | number
   date?: string | number
   volume?: string | number
@@ -18,6 +19,7 @@ export const legal_object_keys_for_ID = [
   'unordered_author',
   'ordered_author',
   'title',
+  'subtitle',
   'edition',
   'date',
   'volume',
