@@ -16,6 +16,7 @@ import '@/data/materials/E. B. Saff & A. D. Snider, Matrix Fundamentals.ts'
 import '@/data/materials/Jun Lu, Matrix Decomposition and Applications.ts'
 import '@/data/materials/S. Lang, Linear Algebra.ts'
 import '@/data/materials/M. Artin, Algebra.ts'
+import '@/data/materials/S. J. Leon, Linear Algebra with Applications.ts'
 import '@/data/materials/丘维声 高代.ts'
 import '@/data/materials/丘维声 简明线性代数.ts'
 import '@/data/materials/蓝以中 高代.ts'
@@ -46,6 +47,7 @@ export const I_info = {
       catalog.get('Interactive Linear Algebra'),
       catalog.get('T. S. Shores, Applied Linear Algebra and Matrix Analysis'),
       catalog.get('E. B. Saff and A. D. Snider, Matrix Fundamentals'),
+      catalog.get('S. J. Leon et al., Linear Algebra with Applications'),
     ],
     video: [
       catalog.get('丘维声 高代 公开课'),
