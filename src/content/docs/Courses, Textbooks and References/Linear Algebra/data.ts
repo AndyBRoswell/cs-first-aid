@@ -41,6 +41,7 @@ export const I_info = {
       catalog.get('丘维声 高代上'),
       catalog.get('丘维声 高代指导书 上'),
       catalog.get('陈发来 线代I'),
+      catalog.get('陈发来 线性代数与解析几何'),
       catalog.get('ILA6'),
       catalog.get('D. C. Lay et al., Linear Algebra and Its Applications'),
       catalog.get('LADW'),
