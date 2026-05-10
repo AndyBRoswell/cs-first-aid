@@ -20,12 +20,15 @@ import '@/data/materials/S. J. Leon, Linear Algebra with Applications.ts'
 import '@/data/materials/丘维声 高代.ts'
 import '@/data/materials/丘维声 简明线性代数.ts'
 import '@/data/materials/蓝以中 高代.ts'
-import '@/data/materials/李炯生 线代.ts'
+import '@/data/materials/李炯生 等 线代.ts'
 import '@/data/materials/李尚志 线代.ts'
 import '@/data/materials/席南华 基础代数.ts'
 import '@/data/materials/任广千 谢聪 胡翠芳 线性代数的几何意义.ts'
-import '@/data/materials/陈发来 线代 非数.ts'
-import '@/data/materials/陈发来 线代解几.ts'
+import '@/data/materials/陈发来 等 线代 非数.ts'
+import '@/data/materials/陈发来 等 线代解几.ts'
+import '@/data/materials/张贤科 许甫华 高代.ts'
+import '@/data/materials/张贤科 高代.ts'
+import '@/data/materials/谢启鸿 等 高代.ts'
 import '@/data/materials/Kostrikin, 代数学引论.ts'
 import '@/data/materials/分析学爱好者 我为什么推荐你使用丘维声学习高等代数.ts'
 
@@ -42,6 +45,10 @@ export const I_info = {
       catalog.get('丘维声 高代指导书 上'),
       catalog.get('陈发来 线代I'),
       catalog.get('陈发来 线性代数与解析几何'),
+      catalog.get('谢启鸿 高等代数学 第3版'),
+      catalog.get('谢启鸿 高等代数 第3版'),
+      catalog.get('谢启鸿 高等代数学'),
+      catalog.get('谢启鸿 高等代数'),
       catalog.get('ILA6'),
       catalog.get('D. C. Lay et al., Linear Algebra and Its Applications'),
       catalog.get('LADW'),
@@ -53,6 +60,7 @@ export const I_info = {
     video: [
       catalog.get('丘维声 高代 公开课'),
       catalog.get('陈发来 线性代数B1 公开课 2021级'),
+      catalog.get('谢启鸿 高代 公开课'),
     ],
     problem_set: [],
     other: [
@@ -60,6 +68,8 @@ export const I_info = {
       catalog.get('席南华 基础代数1'),
       catalog.get('李尚志 线代'),
       catalog.get('李尚志 线代指导'),
+      catalog.get('张贤科 许甫华 高代'),
+      catalog.get('张贤科 高代'),
       catalog.get('S. Lang, Linear Algebra'),
       catalog.get('M. Artin, Algebra'),
       catalog.get('线性代数的几何意义'),
@@ -81,6 +91,10 @@ export const II_info = {
       catalog.get('丘维声 高代1版下'),
       catalog.get('丘维声 高代下'),
       catalog.get('丘维声 高代指导书 下'),
+      catalog.get('谢启鸿 高等代数学 第3版'),
+      catalog.get('谢启鸿 高等代数 第3版'),
+      catalog.get('谢启鸿 高等代数学'),
+      catalog.get('谢启鸿 高等代数'),
       catalog.get('LADR'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra'),
       catalog.get('R. A. Horn and C. R. Johnson, Matrix Analysis'),
@@ -89,6 +103,7 @@ export const II_info = {
     ],
     video: [
       catalog.get('丘维声 高代 公开课'),
+      catalog.get('谢启鸿 高代 公开课'),
     ],
     problem_set: [],
     other: [
@@ -96,8 +111,10 @@ export const II_info = {
       catalog.get('席南华 基础代数2'),
       catalog.get('李尚志 线代'),
       catalog.get('李尚志 线代指导'),
-      catalog.get('M. Artin, Algebra'),
+      catalog.get('张贤科 许甫华 高代'),
+      catalog.get('张贤科 高代'),
       catalog.get('S. Lang, Linear Algebra'),
+      catalog.get('M. Artin, Algebra'),
       catalog.get('P. D. Lax, Linear Algebra and Its Applications'),
       catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide'),
       catalog.get('Jun Lu, Matrix Decomposition and Applications'),
