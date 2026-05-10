@@ -5,5 +5,5 @@ export const Recommended_Reading_Materials = {
   translations: {
     en: 'Recommended Reading Materials',
   },
-  items: [],
+  slug: '',
 } satisfies SidebarItem

@@ -1,0 +1,125 @@
+import * as catalog from './catalog.ts'
+import * as Data_Type from '@/types/data.ts'
+import * as CSL_Data from '@/types/CSL_data.ts'
+
+const items = [
+  {
+    id: [
+      '谢启鸿 高等代数学',
+      '谢启鸿 姚慕生 吴泉水 高等代数学',
+      '谢启鸿, 姚慕生, 吴泉水, 高等代数学',
+      '谢启鸿, 姚慕生, 吴泉水, 高等代数学, 第4版',
+      { unordered_author: [ '谢启鸿', '姚慕生', '吴泉水' ], title: '高等代数学', edition: 4, },
+      { unordered_author: [ '谢启鸿', '姚慕生', '吴泉水' ], title: '高等代数学', date: 2022, },
+    ],
+    material: {
+      type: 'book',
+      id: '谢启鸿, 姚慕生, 吴泉水, 高等代数学, 第4版',
+      title: '高等代数学',
+      author: [ { family: '谢', given: '启鸿' }, { family: '姚', given: '慕生' }, { family: '吴', given: '泉水' } ],
+      edition: 4,
+      issued: { 'date-parts': [ [ 2022, 10 ] ] },
+      publisher: '复旦大学出版社',
+      "number-of-pages": 474,
+      ISBN: '978-7-309-16336-0' as CSL_Data.ISBN,
+      language: 'zh-CN',
+      "collection-title": '普通高等教育“十二五”国家级规划教材',
+      URL: 'https://www.fudanpress.com/505429541603282944/detail/book?bookId=387892&bookIdentifier=352220686345d7&company_id=569&company_identifier=2959846655452a&navGuid=505756482248159232',
+      accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
+    },
+  },
+  {
+    id: [
+      '谢启鸿 高等代数',
+      '谢启鸿 姚慕生 高等代数',
+      '谢启鸿, 姚慕生, 高等代数',
+      '谢启鸿, 姚慕生, 高等代数, 第4版',
+      { unordered_author: [ '谢启鸿', '姚慕生' ], title: '高等代数', edition: 4, },
+      { unordered_author: [ '谢启鸿', '姚慕生' ], title: '高等代数', date: 2022, },
+    ],
+    material: {
+      type: 'book',
+      id: '谢启鸿, 姚慕生, 高等代数, 第4版',
+      title: '高等代数',
+      author: [ { family: '谢', given: '启鸿' }, { family: '姚', given: '慕生' } ],
+      edition: 4,
+      issued: { 'date-parts': [ [ 2022, 10 ] ] },
+      publisher: '复旦大学出版社',
+      "number-of-pages": 627,
+      ISBN: '978-7-309-16352-0' as CSL_Data.ISBN,
+      language: 'zh-CN',
+      URL: 'https://www.fudanpress.com/505429541603282944/detail/book?bookId=387893&bookIdentifier=550759686345d8&company_id=569&company_identifier=2959846655452a&navGuid=505756482248159232',
+      accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
+    },
+  },
+  {
+    id: [
+      '谢启鸿 高等代数学 3版',
+      '谢启鸿 高等代数学 第3版',
+      '姚慕生 吴泉水 谢启鸿 高等代数学 第3版',
+      '姚慕生, 吴泉水, 谢启鸿, 高等代数学, 第3版',
+      { unordered_author: [ '姚慕生', '吴泉水', '谢启鸿' ], title: '高等代数学', edition: 3, },
+      { unordered_author: [ '姚慕生', '吴泉水', '谢启鸿' ], title: '高等代数学', date: 2014, },
+    ],
+    material: {
+      type: 'book',
+      id: '姚慕生, 吴泉水, 谢启鸿, 高等代数学, 第3版',
+      title: '高等代数学',
+      author: [ { family: '姚', given: '慕生' }, { family: '吴', given: '泉水' }, { family: '谢', given: '启鸿' } ],
+      edition: 3,
+      issued: { 'date-parts': [ [ 2014, 9 ] ] },
+      publisher: '复旦大学出版社',
+      ISBN: '978-7-309-10989-4' as CSL_Data.ISBN,
+      "collection-title": '普通高等教育“十二五”国家级规划教材',
+      language: 'zh-CN',
+      URL: 'https://www.fudanpress.com/505429541603282944/detail/book?bookId=382947&bookIdentifier=7829146863320f&company_id=569&company_identifier=2959846655452a&navGuid=505756482248159232',
+      accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
+    },
+  },
+  {
+    id: [
+      '谢启鸿 高等代数 3版',
+      '谢启鸿 高等代数 第3版',
+      '姚慕生 谢启鸿 高等代数 第3版',
+      '姚慕生, 谢启鸿, 高等代数, 第3版',
+      { unordered_author: [ '姚慕生', '谢启鸿' ], title: '高等代数', edition: 3, },
+      { unordered_author: [ '姚慕生', '谢启鸿' ], title: '高等代数', date: 2015, },
+    ],
+    material: {
+      type: 'book',
+      id: '姚慕生, 谢启鸿, 高等代数, 第3版',
+      title: '高等代数',
+      author: [ { family: '姚', given: '慕生' }, { family: '谢', given: '启鸿' } ],
+      edition: 3,
+      issued: { 'date-parts': [ [ 2015, 8 ] ] },
+      publisher: '复旦大学出版社',
+      ISBN: '978-7-309-11776-9' as CSL_Data.ISBN,
+      language: 'zh-CN',
+      URL: 'https://www.fudanpress.com/505429541603282944/detail/book?bookId=383616&bookIdentifier=7410686863349d&company_id=569&company_identifier=2959846655452a&navGuid=505756482248159232',
+      accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
+    },
+  },
+  {
+    id: [
+      '谢启鸿 高代 公开课',
+    ],
+    material: {
+      type: 'motion_picture',
+      id: '谢启鸿 高代 公开课',
+      title: '【数学专业课】高等代数学-复旦大学-谢启鸿-高清',
+      author: [ { family: '谢', given: '启鸿' } ],
+      publisher: 'bilibili',
+      "event-place": '复旦大学',
+      issued: { 'date-parts': [ [ 2019, 12, 14 ] ] },
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV1mJ411r7ZB/',
+      accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
+      custom: {
+        lecturer: [ { family: '谢', given: '启鸿' } ],
+        companion: [ { unordered_author: [ '姚慕生', '吴泉水', '谢启鸿' ], title: '高等代数学', edition: 3, }, ],
+      },
+    },
+  },
+] satisfies Data_Type.Entry[]
+
+catalog.add_items(items)
