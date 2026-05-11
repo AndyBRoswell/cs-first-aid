@@ -17,6 +17,7 @@ import '@/data/materials/席南华 基础代数.ts'
 import '@/data/materials/Kostrikin, 代数学引论.ts'
 import '@/data/materials/王树禾 图论.ts'
 import '@/data/materials/丘维声 近世代数.ts'
+import '@/data/materials/冯克勤 等 近世代数引论.ts'
 
 export const Mathematical_Logic = {
   canonical_name: '数理逻辑',
@@ -114,6 +115,7 @@ export const Abstract_Algebra = {
     ],
     other: [
       catalog.get('席南华 基础代数3'),
+      catalog.get('冯克勤 等 近世代数引论'),
       catalog.get('Kostrikin, 代数学引论3'),
       catalog.get('Kostrikin, 代数学习题集'),
       catalog.get('D. S. Dummit and R. M. Foote, Abstract Algebra'),
