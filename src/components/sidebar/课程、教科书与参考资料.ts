@@ -182,7 +182,7 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Introduction to Programming (C++)',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/introduction-to-programming-c',
     },
     {
       label: '软件测试',
