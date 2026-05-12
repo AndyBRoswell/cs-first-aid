@@ -178,11 +178,26 @@ export const Courses_Textbooks_and_References = {
       slug: '',
     },
     {
-      label: '程序设计入门（C++）',
+      label: 'C++程序设计',
       translations: {
-        en: 'Introduction to Programming (C++)',
+        en: 'C++ Programming',
       },
-      slug: 'courses-textbooks-and-references/introduction-to-programming-c',
+      items: [
+        {
+          label: '概述',
+          translations: {
+            en: 'Overview',
+          },
+          slug: 'courses-textbooks-and-references/cpp-programming',
+        },
+        {
+          label: '程序设计入门（C++程序设计I）',
+          translations: {
+            en: 'Introduction to Programming (C++ Programming I)',
+          },
+          slug: 'courses-textbooks-and-references/cpp-programming/i',
+        },
+      ],
     },
     {
       label: '软件测试',
