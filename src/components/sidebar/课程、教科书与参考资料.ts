@@ -41,14 +41,14 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/linear-algebra',
         },
         {
-          label: '线性代数I',
+          label: '线性代数 I',
           translations: {
             en: 'Linear Algebra I',
           },
           slug: 'courses-textbooks-and-references/linear-algebra/i',
         },
         {
-          label: '线性代数II',
+          label: '线性代数 II',
           translations: {
             en: 'Linear Algebra II',
           },
@@ -178,7 +178,7 @@ export const Courses_Textbooks_and_References = {
       slug: '',
     },
     {
-      label: 'C++程序设计',
+      label: 'C++ 程序设计',
       translations: {
         en: 'C++ Programming',
       },
@@ -191,7 +191,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/cpp-programming',
         },
         {
-          label: '程序设计入门（C++程序设计I）',
+          label: '程序设计入门（C++ 程序设计 I）',
           translations: {
             en: 'Introduction to Programming (C++ Programming I)',
           },
