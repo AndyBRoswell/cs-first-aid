@@ -442,21 +442,21 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'C Programming Language',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/c-programming',
     },
     {
       label: 'C# 程序设计',
       translations: {
         en: 'C# Programming Language',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/csharp-programming',
     },
     {
       label: 'Java 程序设计',
       translations: {
         en: 'Java Programming Language',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/java-programming',
     },
     {
       label: 'Kotlin 程序设计',
