@@ -30,10 +30,11 @@ export type ID_t = ID_primitive | [ ID_primitive, ...ID_primitive[] ] | ID_objec
 export type Entry = { id: ID_t[], material: Material, }
 
 export type Link = string | {
-  link: string,
-  tag?: string[],
-  display_text?: string,
-  note?: string,
+  link: string
+  license?: string
+  tag?: string[]
+  display_text?: string
+  note?: string
 }
 
 export type Course = {
