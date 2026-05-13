@@ -4,18 +4,22 @@ import * as catalog from '@/data/materials/catalog.ts'
 import '@/data/materials/Microsoft C++ Docs.ts'
 import '@/data/materials/Bjarne Stroustrup, PPP C++.ts'
 import '@/data/materials/Bjarne Stroustrup, A Tour of C++.ts'
+import '@/data/materials/M. Gregoire, Professional C++.ts'
+import '@/data/materials/cppreference.ts'
 
 export const I_info = {
   canonical_name: '程序设计入门（C++）',
-  name: [ '程序设计入门（C++）', 'C++程序设计I', ],
+  name: [ '程序设计入门（C++）', 'C++程序设计I', 'C++ I', ],
   tag: [ '基础必修' ],
   material: {
     text: [
       catalog.get('PPP3'),
       catalog.get({ unordered_author: 'B. Stroustrup', title: 'A Tour of C++', }),
+      catalog.get({ unordered_author: 'M. Gregoire', title: 'Professional C++', }),
     ],
     other: [
       catalog.get({ unordered_author: 'Microsoft', title: 'C++ Language Reference' }),
+      catalog.get('cppreference'),
     ],
   }
 } satisfies data_type.Course
