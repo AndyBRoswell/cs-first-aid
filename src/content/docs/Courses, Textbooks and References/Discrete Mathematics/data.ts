@@ -13,6 +13,7 @@ import '@/data/materials/J. A. Beachy et al., Abstract Algebra.ts'
 import '@/data/materials/Dummit & Foote, Abstract Algebra.ts'
 import '@/data/materials/S. Lang, Undergraduate Algebra.ts'
 import '@/data/materials/S. Lang, Algebra.ts'
+import '@/data/materials/T. W. Judson, AATA.ts'
 import '@/data/materials/席南华 基础代数.ts'
 import '@/data/materials/Kostrikin, 代数学引论.ts'
 import '@/data/materials/王树禾 图论.ts'
@@ -105,6 +106,7 @@ export const Abstract_Algebra = {
       catalog.get('屈婉玲 离散数学教程'),
       catalog.get('丘维声 近世代数'),
       catalog.get('J. A. Beachy and W. D. Blair, Abstract Algebra'),
+      catalog.get('T. W. Judson, AATA'),
     ],
     video: [
       catalog.get('北京大学 离散数学 公开课'),

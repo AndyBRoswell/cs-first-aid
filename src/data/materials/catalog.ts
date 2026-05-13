@@ -46,5 +46,5 @@ export function add(IDs: ID_t[], material: Material) {
 export function get(ID: ID_t): Material {
   const CID = canonical_ID(ID)
   if (m.has(CID)) { return m.get(CID)! }
-  else { throw new Error(`Failed to fetch any entry with ID ${ID}`) }
+  else { throw new Error(`Failed to fetch any entry with ID ${JSON.stringify(ID, null, 2)}`) }
 }
