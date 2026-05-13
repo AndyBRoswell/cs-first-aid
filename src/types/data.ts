@@ -7,8 +7,8 @@ export type ID_object =
     | { unordered_author?: never, ordered_author?: string | string[], }
     )
   & {
-  title?: string,
-  subtitle?: string,
+  title?: string
+  subtitle?: string
   edition?: string | number
   date?: string | number
   volume?: string | number
