@@ -470,7 +470,7 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Python Programming Language',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/python-programming',
     },
     {
       label: 'Android 开发',
