@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/AndyBRoswell/cs-first-aid#readme",
   "dependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.2",
     "@astrojs/compiler-rs": "^0.1.8",
     "@astrojs/preact": "^5.1.0",
     "@astrojs/starlight": "^0.38.2",
@@ -28,5 +28,8 @@
     "citation-js": "^0.7.22",
     "preact": "^10.29.0",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "fast-glob": "^3.3.3"
   }
 }
