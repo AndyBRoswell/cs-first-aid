@@ -1,8 +1,9 @@
 import * as docs_base from '@/content/docs/base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
-import '@/data/materials/Jens Gustedt, Modern C.ts'
-import '@/data/materials/cppreference.c.ts'
+import '@/content/docs/Courses, Textbooks and References/import course material.ts'
+// import '@/data/materials/Jens Gustedt, Modern C.ts'
+// import '@/data/materials/cppreference.c.ts'
 
 export const info = {
   canonical_name: 'C 程序设计',

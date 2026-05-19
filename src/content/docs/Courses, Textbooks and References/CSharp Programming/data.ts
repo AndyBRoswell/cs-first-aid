@@ -1,8 +1,9 @@
 import * as docs_base from '@/content/docs/base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
-import '@/data/materials/A. Stellman et al., Head First C♯.ts'
-import '@/data/materials/Microsoft, A tour of the C♯ language.ts'
+import '@/content/docs/Courses, Textbooks and References/import course material.ts'
+// import '@/data/materials/A. Stellman et al., Head First C♯.ts'
+// import '@/data/materials/Microsoft, A tour of the C♯ language.ts'
 
 export const info = {
   canonical_name: 'C# 程序设计',
