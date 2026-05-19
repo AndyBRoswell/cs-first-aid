@@ -76,7 +76,9 @@ export const II_info = {
       catalog.get('丘维声 高代 公开课'),
       catalog.get('谢启鸿 高代 公开课'),
     ],
-    problem_set: [],
+    problem_set: [
+      catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide'),
+    ],
     other: [
       catalog.get('李炯生 线代'),
       catalog.get('席南华 基础代数2'),
@@ -87,7 +89,6 @@ export const II_info = {
       catalog.get('S. Lang, Linear Algebra'),
       catalog.get('M. Artin, Algebra'),
       catalog.get('P. D. Lax, Linear Algebra and Its Applications'),
-      catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide'),
       catalog.get('Jun Lu, Matrix Decomposition and Applications'),
       catalog.get('线性代数的几何意义'),
       catalog.get('Kostrikin, 代数学引论2'),
