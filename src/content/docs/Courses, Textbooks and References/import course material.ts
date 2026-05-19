@@ -23,7 +23,7 @@ import '@/data/materials/C. C. Pugh, Real Mathematical Analysis.ts'
 import '@/data/materials/T. M. Apostol, Mathematical Analysis.ts'
 import '@/data/materials/Rudin PMA.ts'
 import '@/data/materials/Zorich, Mathematical Analysis.ts'
-import "@/data/materials/Fikhtengol\'ts, Calculus.ts"
+import '@/data/materials/Fikhtengol\'ts, Calculus.ts'
 import '@/data/materials/R. Courant & F. John, Introduction to Calculus and Analysis.ts'
 import '@/data/materials/刘思齐 数分选书.ts'
 import '@/data/materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
