@@ -1,14 +1,34 @@
-import { defineConfig } from "astro/config";
-import preact from "@astrojs/preact";
-import starlight from "@astrojs/starlight";
-import { Preface } from "./src/components/sidebar/前言.ts";
-import { Tools_and_Ideas_to_Improve_Efficiency } from "./src/components/sidebar/提升效率的工具与思想.ts";
-import { Courses_Textbooks_and_References } from "./src/components/sidebar/课程、教科书与参考资料.ts";
-import { Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible } from "./src/components/sidebar/需要尽早开始或完成的事项.ts";
-import { Future_Trends } from "./src/components/sidebar/未来趋势.ts";
-import { FAQ } from "./src/components/sidebar/常见问题.ts";
-import { Recommended_Reading_Materials } from "./src/components/sidebar/推荐读物.ts";
-import { Epilog } from "./src/components/sidebar/后记.ts";
+import { defineConfig } from "astro/config"
+import preact from "@astrojs/preact"
+import starlight from "@astrojs/starlight"
+import fast_glob from 'fast-glob'
+import { Preface } from "./src/components/sidebar/前言.ts"
+import { Tools_and_Ideas_to_Improve_Efficiency } from "./src/components/sidebar/提升效率的工具与思想.ts"
+import { Courses_Textbooks_and_References } from "./src/components/sidebar/课程、教科书与参考资料.ts"
+import { Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible } from "./src/components/sidebar/需要尽早开始或完成的事项.ts"
+import { Future_Trends } from "./src/components/sidebar/未来趋势.ts"
+import { FAQ } from "./src/components/sidebar/常见问题.ts"
+import { Recommended_Reading_Materials } from "./src/components/sidebar/推荐读物.ts"
+import { Epilog } from "./src/components/sidebar/后记.ts"
+
+function import_course_materials() {
+  const virtualId = 'virtual:import-course-materials'
+  const resolvedId = '\0' + virtualId
+  return {
+    name: 'vite-plugin-import-course-materials',
+    resolveId(id: string) {
+      if (id === virtualId) { return resolvedId }
+      return
+    },
+    load(id: string) {
+      if (id === resolvedId) {
+        const course_materials = fast_glob.sync('./src/data/materials/*.ts')
+        return course_materials.map(path => `import ${JSON.stringify(path)}`).join('\n')
+      }
+      return
+    }
+  }
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -57,6 +77,11 @@ export default defineConfig({
       ],
     })
   ],
+  vite: {
+    plugins: [
+      import_course_materials(),
+    ]
+  },
   experimental: {
     rustCompiler: true,
   },

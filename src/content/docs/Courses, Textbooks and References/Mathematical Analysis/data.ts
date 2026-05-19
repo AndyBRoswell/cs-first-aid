@@ -1,26 +1,7 @@
 import * as docs_base from '../../base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
-import '@/data/materials/史济怀 等 数分.ts'
-import '@/data/materials/陈纪修 等 数分.ts'
-import '@/data/materials/徐森林 等 数分.ts'
-import '@/data/materials/何琛 史济怀 徐森林 数分.ts'
-import '@/data/materials/陈纪修 等 数分习题.ts'
-import '@/data/materials/徐森林 等 数分习题.ts'
-import '@/data/materials/程艺 等 数分.ts'
-import '@/data/materials/张筑生 数分.ts'
-import '@/data/materials/H&N Applied Analysis.ts'
-import '@/data/materials/S. Abbott, Understanding Analysis.ts'
-import '@/data/materials/C. C. Pugh, Real Mathematical Analysis.ts'
-import '@/data/materials/T. M. Apostol, Mathematical Analysis.ts'
-import '@/data/materials/Rudin PMA.ts'
-import '@/data/materials/Zorich, Mathematical Analysis.ts'
-import "@/data/materials/Fikhtengol'ts, Calculus.ts"
-import '@/data/materials/R. Courant & F. John, Introduction to Calculus and Analysis.ts'
-import '@/data/materials/刘思齐 数分选书.ts'
-import '@/data/materials/分析学爱好者 我为何不建议初学者用清华丘班数分讲义学数分.ts'
-import '@/data/materials/分析学爱好者 尽管数分教材千千万，但我却建议你学陈纪修.ts'
-import '@/data/materials/分析学爱好者 对常见数分课本&习题集的快速版点评.ts'
+import '@/content/docs/Courses, Textbooks and References/import course material.ts'
 
 export const info = {
   canonical_name: '数学分析',
