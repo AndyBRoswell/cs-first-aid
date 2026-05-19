@@ -2,9 +2,6 @@ import * as docs_base from '@/content/docs/base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/content/docs/Courses, Textbooks and References/import course material.ts'
-// import '@/data/materials/PSF, The Python Tutorial.ts'
-// import '@/data/materials/E. Matthes, Python Crash Course.ts'
-// import '@/data/materials/嵩天 等 Python.ts'
 
 export const info = {
   canonical_name: 'Python 程序设计',

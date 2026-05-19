@@ -2,12 +2,6 @@ import * as docs_base from '@/content/docs/base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/content/docs/Courses, Textbooks and References/import course material.ts'
-// import '@/data/materials/Microsoft C++ Docs.ts'
-// import '@/data/materials/Bjarne Stroustrup, PPP C++.ts'
-// import '@/data/materials/Bjarne Stroustrup, A Tour of C++.ts'
-// import '@/data/materials/M. Gregoire, Professional C++.ts'
-// import '@/data/materials/cppreference.ts'
-// import '@/data/materials/The Definitive C++ Book Guide and List.ts'
 
 export const I_info = {
   canonical_name: '程序设计入门（C++）',
