@@ -17,7 +17,7 @@ const items = [
       type: 'book',
       id: 'S. J. Leon and L. de Pillis, Linear Algebra with Applications, Global Edition, 10',
       title: 'Linear Algebra with Applications, Global Edition',
-      author: [ { given: 'Steven J.', family: 'Leon' }, { given: 'Lisette', family: 'de Pillis' } ],
+      author: [ { given: 'Steven J.', family: 'Leon' }, { given: 'Lisette G.', "non-dropping-particle": 'de', family: 'Pillis' } ],
       language: 'en-GB',
       edition: 10,
       publisher: 'Pearson',
