@@ -15,7 +15,7 @@ const items = [
       type: 'book',
       id: 'Jeremy Avigad, Robert Y. Lewis, and Floris van Doorn, Logic and Proof',
       title: 'Logic and Proof',
-      author: [ { given: 'Jeremy', family: 'Avigad' }, { given: 'Robert Y.', family: 'Lewis' }, { given: 'Floris', family: 'van Doorn' } ],
+      author: [ { given: 'Jeremy', family: 'Avigad' }, { given: 'Robert Y.', family: 'Lewis' }, { given: 'Floris', "dropping-particle": 'van', family: 'Doorn' } ],
       version: '3.18.4',
       issued: { 'date-parts': [ [ 2021, 12, 4 ] ] },
       language: 'en-US',
