@@ -20,37 +20,37 @@ export const Future_Trends = {
       },
       items: [
         {
-          label: '假定 Token 费率不断下降是极其危险的',
+          label: 'Token 费率不断下降不是理所当然',
           translations: {
-            en: 'Assuming a Continuously Decreasing Cost-per-Token Is Immensely Dangerous',
+            en: 'The Decline of Cost-per-Token Is Not Inevitable',
           },
           slug: '',
         },
         {
-          label: '不要指望免费与低价权益的长期性',
+          label: '免费与廉价权益未必长久持续',
           translations: {
-            en: `Don't Expect the Long-Term Availability of Free and Low-Cost Benefits`,
+            en: 'Free and Budget Benefits Are Not Guaranteed to Last Long',
           },
           slug: '',
         },
         {
-          label: '本行业的产品与服务质量将不断下滑',
+          label: '本行业的众多产品与服务的质量正不断下滑',
           translations: {
-            en: 'The Quality of Products and Services in This Industry Is Going to Be Worse and Worse',
+            en: 'The Quality of Various Products and Services in This Industry Is Declining',
           },
           slug: '',
         },
         {
-          label: '厂商们：闭嘴，拿钱来！',
+          label: '无处不在的成本压力：从订阅制暴增与内存/硬盘价格暴涨说开去',
           translations: {
-            en: 'Vendors: Shut up and bring your money!',
+            en: 'Cost Pressure Everywhere: Talking from the Surges of Subscriptions and Memory/Disk Prices',
           },
           slug: '',
         },
         {
-          label: '凭什么认为数据会继续免费分享给你？',
+          label: '长期免费访问的幻觉：由多所高校禁止未登录访问培养方案/公开课想到的',
           translations: {
-            en: 'Why Do You Think Data Will Continue to Be Shared with You for Free?',
+            en: 'The Illusion of Long-Term Free Access: Thoughts on the Prohibition of Access to Curricula/Open Courses of Multiple Universities Without Logins',
           },
           slug: '',
         },
@@ -72,14 +72,14 @@ export const Future_Trends = {
         {
           label: '资源受限下的设计决策',
           translations: {
-            en: 'Design Decisions under the Constraints of Resources',
+            en: 'Design Decisions under Resource Limits',
           },
           slug: '',
         },
         {
-          label: '低代码/无代码是死路',
+          label: '低代码/无代码的天花板',
           translations: {
-            en: 'Low-Code/No-Code Are Dead Paths',
+            en: 'The Ceiling of Low-Code/No-Code',
           },
           slug: '',
         },
