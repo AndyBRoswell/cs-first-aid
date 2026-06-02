@@ -20,44 +20,65 @@ export const Future_Trends = {
       },
       items: [
         {
-          label: '假定 Token 费率不断下降是极其危险的',
-          translations: {
-            en: 'Assuming a Continuously Decreasing Cost-per-Token Is Immensely Dangerous',
-          },
-          slug: '',
-        },
-        {
-          label: '不要指望免费与低价权益的长期性',
-          translations: {
-            en: `Don't Expect the Long-Term Availability of Free and Low-Cost Benefits`,
-          },
-          slug: '',
-        },
-        {
-          label: '本行业的产品与服务质量将不断下滑',
-          translations: {
-            en: 'The Quality of Products and Services in This Industry Is Going to Be Worse and Worse',
-          },
-          slug: '',
-        },
-        {
-          label: '厂商们：闭嘴，拿钱来！',
-          translations: {
-            en: 'Vendors: Shut up and bring your money!',
-          },
-          slug: '',
-        },
-        {
-          label: '凭什么认为数据会继续免费分享给你？',
-          translations: {
-            en: 'Why Do You Think Data Will Continue to Be Shared with You for Free?',
-          },
-          slug: '',
-        },
-        {
           label: '以 Web 开发与客户端开发为代表的知识与技能正成为常识',
           translations: {
             en: 'Knowledge and Skills Such as Web Development and Client Development Are Becoming Common Sense',
+          },
+          slug: '',
+        },
+        {
+          label: 'Token 费率不断下降不是理所当然',
+          translations: {
+            en: 'The Decline of Cost-per-Token Is Not Inevitable',
+          },
+          slug: '',
+        },
+        {
+          label: '免费与廉价套餐/权益未必长久持续',
+          translations: {
+            en: 'Free and Budget Plans/Benefits Are Not Guaranteed to Last Long',
+          },
+          slug: '',
+        },
+        {
+          label: '本行业的众多产品与服务的质量正不断下滑却不降价',
+          translations: {
+            en: 'The Quality of Various Products and Services in This Industry Is Declining but without Price Reduction',
+          },
+          slug: '',
+        },
+        {
+          label: '无处不在的成本压力：从订阅制暴增与内存/硬盘价格暴涨说开去',
+          translations: {
+            en: 'Cost Pressure Everywhere: Talking from the Surges of Subscriptions and Memory/Disk Prices',
+          },
+          slug: '',
+        },
+        {
+          label: '长期免费访问的幻觉：由多所高校禁止未登录访问培养方案/公开课想到的',
+          translations: {
+            en: 'The Illusion of Long-Term Free Access: Thoughts on the Prohibition of Access to Curricula/Open Courses of Multiple Universities Without Logins',
+          },
+          slug: '',
+        },
+        {
+          label: '搜索结果的劣化',
+          translations: {
+            en: 'The Degradation of Search Results',
+          },
+          slug: '',
+        },
+        {
+          label: '闭源潮',
+          translations: {
+            en: 'The Tide of Closed-Source',
+          },
+          slug: '',
+        },
+        {
+          label: 'AI 的红蓝不对称',
+          translations: {
+            en: 'The Red-Blue Asymmetry of AI',
           },
           slug: '',
         },
@@ -70,23 +91,44 @@ export const Future_Trends = {
       },
       items: [
         {
+          label: '低代码/无代码的天花板',
+          translations: {
+            en: 'The Ceiling of Low-Code/No-Code',
+          },
+          slug: '',
+        },
+        {
+          label: '离云',
+          translations: {
+            en: 'Off-Cloud',
+          },
+          slug: '',
+        },
+        {
           label: '资源受限下的设计决策',
           translations: {
-            en: 'Design Decisions under the Constraints of Resources',
+            en: 'Design Decisions under Resource Limits',
           },
           slug: '',
         },
         {
-          label: '低代码/无代码是死路',
+          label: '坚持开源免费',
           translations: {
-            en: 'Low-Code/No-Code Are Dead Paths',
+            en: 'Persist in Open-Source and Free of Charge',
           },
           slug: '',
         },
         {
-          label: '图灵完备的信息检索',
+          label: '做好多方面的安全措施',
           translations: {
-            en: 'Turing-Complete Information Retrieval',
+            en: 'Implement Multiple Aspects of Security Measures Well',
+          },
+          slug: '',
+        },
+        {
+          label: '搜索框的边界之外：可编程信息检索',
+          translations: {
+            en: 'Beyond the Boundaries of Search Boxes: Programmable Information Retrieval',
           },
           slug: '',
         },

@@ -2,9 +2,10 @@
   "name": "cs-first-aid",
   "version": "0.0.0",
   "description": "A Vital Guide for CSE Students",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
@@ -31,6 +32,8 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
     "fast-glob": "^3.3.3"
   }
 }
