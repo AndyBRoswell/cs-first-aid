@@ -20,6 +20,13 @@ export const Future_Trends = {
       },
       items: [
         {
+          label: '以 Web 开发与客户端开发为代表的知识与技能正成为常识',
+          translations: {
+            en: 'Knowledge and Skills Such as Web Development and Client Development Are Becoming Common Sense',
+          },
+          slug: '',
+        },
+        {
           label: 'Token 费率不断下降不是理所当然',
           translations: {
             en: 'The Decline of Cost-per-Token Is Not Inevitable',
@@ -27,16 +34,16 @@ export const Future_Trends = {
           slug: '',
         },
         {
-          label: '免费与廉价权益未必长久持续',
+          label: '免费与廉价套餐/权益未必长久持续',
           translations: {
-            en: 'Free and Budget Benefits Are Not Guaranteed to Last Long',
+            en: 'Free and Budget Plans/Benefits Are Not Guaranteed to Last Long',
           },
           slug: '',
         },
         {
-          label: '本行业的众多产品与服务的质量正不断下滑',
+          label: '本行业的众多产品与服务的质量正不断下滑却不降价',
           translations: {
-            en: 'The Quality of Various Products and Services in This Industry Is Declining',
+            en: 'The Quality of Various Products and Services in This Industry Is Declining but without Price Reduction',
           },
           slug: '',
         },
@@ -55,9 +62,23 @@ export const Future_Trends = {
           slug: '',
         },
         {
-          label: '以 Web 开发与客户端开发为代表的知识与技能正成为常识',
+          label: '搜索结果的劣化',
           translations: {
-            en: 'Knowledge and Skills Such as Web Development and Client Development Are Becoming Common Sense',
+            en: 'The Degradation of Search Results',
+          },
+          slug: '',
+        },
+        {
+          label: '闭源潮',
+          translations: {
+            en: 'The Tide of Closed-Source',
+          },
+          slug: '',
+        },
+        {
+          label: 'AI 的红蓝不对称',
+          translations: {
+            en: 'The Red-Blue Asymmetry of AI',
           },
           slug: '',
         },
@@ -70,13 +91,6 @@ export const Future_Trends = {
       },
       items: [
         {
-          label: '资源受限下的设计决策',
-          translations: {
-            en: 'Design Decisions under Resource Limits',
-          },
-          slug: '',
-        },
-        {
           label: '低代码/无代码的天花板',
           translations: {
             en: 'The Ceiling of Low-Code/No-Code',
@@ -84,9 +98,37 @@ export const Future_Trends = {
           slug: '',
         },
         {
-          label: '图灵完备的信息检索',
+          label: '离云',
           translations: {
-            en: 'Turing-Complete Information Retrieval',
+            en: 'Off-Cloud',
+          },
+          slug: '',
+        },
+        {
+          label: '资源受限下的设计决策',
+          translations: {
+            en: 'Design Decisions under Resource Limits',
+          },
+          slug: '',
+        },
+        {
+          label: '坚持开源免费',
+          translations: {
+            en: 'Persist in Open-Source and Free of Charge',
+          },
+          slug: '',
+        },
+        {
+          label: '做好多方面的安全措施',
+          translations: {
+            en: 'Implement Multiple Aspects of Security Measures Well',
+          },
+          slug: '',
+        },
+        {
+          label: '搜索框的边界之外：可编程信息检索',
+          translations: {
+            en: 'Beyond the Boundaries of Search Boxes: Programmable Information Retrieval',
           },
           slug: '',
         },
