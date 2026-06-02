@@ -2,9 +2,9 @@
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 
-import bibliography_style from './ieee.csl?raw'
+import default_bib_style from './ieee.csl?raw'
 import type { ID_t, Material, } from "@/types/data.ts";
-import * as catalog from '../../data/materials/catalog.ts'
+import * as catalog from '@/data/materials/catalog.ts'
 
 export type formatted_references = {
   parsed: { [key: string]: typeof citation_js.Cite }
@@ -12,10 +12,11 @@ export type formatted_references = {
 }
 
 const CSL_config = citation_js.plugins.config.get('@csl')
-CSL_config.templates.add('custom', bibliography_style)
+const default_bib_style_name = 'IEEE Custom'
+CSL_config.templates.add(default_bib_style_name, default_bib_style)
 const bib_format: object = {
   format: 'html',
-  template: 'custom',
+  template: default_bib_style_name,
   hyperlinks: true,
 }
 

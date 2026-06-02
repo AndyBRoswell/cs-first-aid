@@ -347,6 +347,13 @@ export const Courses_Textbooks_and_References = {
       slug: '',
     },
     {
+      label: '设计模式',
+      translations: {
+        en: 'Design Patterns',
+      },
+      slug: '',
+    },
+    {
       label: '计算机体系结构',
       translations: {
         en: 'Computer Architecture',

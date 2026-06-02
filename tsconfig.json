@@ -3,6 +3,7 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "astro",
+    "module": "nodenext",
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
     "baseUrl": ".",
