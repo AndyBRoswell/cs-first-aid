@@ -1,7 +1,7 @@
 import * as docs_base from '../../base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
-import '@/content/docs/Courses, Textbooks and References/import course material.ts'
+import '@/content/docs/Courses, Textbooks and References/import course materials.ts'
 
 export const info = {
   canonical_name: '数学分析',
