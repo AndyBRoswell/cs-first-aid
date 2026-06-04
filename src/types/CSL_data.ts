@@ -83,7 +83,7 @@ export type ID = string | number
 export type Item = {
   // ✅ Required
   type: Item_Type
-  id: string | number
+  id: ID
 
   // 🔑 Identifiers & locale metadata
   'citation-key'?: string
