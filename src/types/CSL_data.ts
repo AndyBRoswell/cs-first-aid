@@ -77,6 +77,8 @@ export interface Date_Variable {
   raw?: string
 }
 
+export type ID = string | number
+
 // 📄 A single bibliographic item
 export type Item = {
   // ✅ Required
