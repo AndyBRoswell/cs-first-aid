@@ -37,6 +37,10 @@ export type Link = string | {
   note?: string
 }
 
+export type Stringified_JSON = string
+export type Hierarchical_Name_Of_References = Stringified_JSON
+export type Hierarchical_References = Material[] | { [key: Hierarchical_Name_Of_References]: Material[] | Hierarchical_References }
+
 export type Course = {
   canonical_name?: string
   name: string[]
@@ -44,14 +48,7 @@ export type Course = {
   description?: string
   tag?: string[]
   prerequisite?: Course[]
-  material?: {
-    text?: Material[]
-    problem_set?: Material[]
-    audio?: Material[]
-    video?: Video[]
-    other?: Material[]
-    excluded?: Material[]
-  }
+  material: Hierarchical_References
   note?: string
 }
 
