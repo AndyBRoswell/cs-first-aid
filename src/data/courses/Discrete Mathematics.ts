@@ -1,7 +1,7 @@
 import * as docs_base from '@/content/docs/base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
-import '@/content/docs/Courses, Textbooks and References/import course material.ts'
+import '@/data/courses/import course materials.ts'
 
 export const Mathematical_Logic = {
   canonical_name: '数理逻辑',
