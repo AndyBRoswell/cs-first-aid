@@ -37,6 +37,11 @@ export type Link = string | {
   note?: string
 }
 
+export type Stringified_JSON = string
+export type Scope_Name_Of_References = Stringified_JSON
+export type Scoped_References = Material[] | { [key: Scope_Name_Of_References]: Material[] | Scoped_References }
+export type Scoped_ID_t = { ID: ID_t, scope?: Scope_Name_Of_References }
+
 export type Course = {
   canonical_name?: string
   name: string[]
@@ -44,14 +49,7 @@ export type Course = {
   description?: string
   tag?: string[]
   prerequisite?: Course[]
-  material?: {
-    text?: Material[]
-    problem_set?: Material[]
-    audio?: Material[]
-    video?: Video[]
-    other?: Material[]
-    excluded?: Material[]
-  }
+  material: Scoped_References
   note?: string
 }
 

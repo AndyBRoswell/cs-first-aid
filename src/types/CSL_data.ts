@@ -77,11 +77,13 @@ export interface Date_Variable {
   raw?: string
 }
 
+export type ID = string | number
+
 // 📄 A single bibliographic item
 export type Item = {
   // ✅ Required
   type: Item_Type
-  id: string | number
+  id: ID
 
   // 🔑 Identifiers & locale metadata
   'citation-key'?: string
@@ -201,7 +203,12 @@ export type Item = {
 declare const _ISBN: unique symbol
 export type ISBN = string & { readonly [_ISBN]: true }
 
-export function check_ISBN(str: string): str is ISBN { // Created by Gemini 3.1 Pro in Web App. Revised by AndyBRoswell.
+export function ensure_ISBN(str: string): ISBN {
+  if (is_ISBN(str) === false) { throw new Error(`Invalid ISBN ${str}`) }
+  return str
+}
+
+export function is_ISBN(str: string): str is ISBN { // Created by Gemini 3.1 Pro in Web App. Revised by AndyBRoswell.
   const sanitized_str = str.replace(/[-\s]/g, '').toUpperCase()
   if (/^(?:97[89])?\d{9}[\dX]$/.test(sanitized_str) === false) { return false }
   let s: number = 0
