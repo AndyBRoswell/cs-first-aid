@@ -17,12 +17,14 @@ const prettified_default_bib_style: object = {
   hyperlinks: true,
 }
 
-test('@citation-js/plugin-csl.output.citation', { tag: [ '@citation-js/plugin-csl.output.citation', ], }, async () => {
-  let cite = new citation_js.Cite([
-    { id: 'a', title: 'Item A', issued: { 'date-parts': [ [ 2016 ] ] } },
-    { id: 'b', title: 'Item B', issued: { 'date-parts': [ [ 2017 ] ] } },
-    { id: 'c', title: 'Item C', issued: { 'date-parts': [ [ 2018 ] ] } }
-  ])
+// https://citation.js.org/api/0.7/module-@citation-js_plugin-csl.output.html
+const cite = new citation_js.Cite([
+  { id: 'a', title: 'Item A', issued: { 'date-parts': [ [ 2016 ] ] } },
+  { id: 'b', title: 'Item B', issued: { 'date-parts': [ [ 2017 ] ] } },
+  { id: 'c', title: 'Item C', issued: { 'date-parts': [ [ 2018 ] ] } }
+])
+
+test('@citation-js/plugin-csl.output.citation', { tag: [ '@citation-js/plugin-csl.output.citation', ], }, () => {
   expect(cite.format('citation')).toEqual('(Item A, 2016; Item B, 2017; Item C, 2018)')
   expect(cite.format('citation', { entry: [ 'a', 'b' ] })).toEqual('(Item A, 2016; Item B, 2017)')
   expect(cite.format('citation', { entry: 'a' })).toEqual('(Item A, 2016)')
