@@ -13,7 +13,7 @@ import * as bib from '@/content/docs/bib.ts'
 
 ## 教科书
 
-<div set:html={printed_bib[JSON.stringify(['text'])]}/>
+<div set:html={printed_bib[JSON.stringify(['text', 'selected'])]}/>
 
 ### 说明
 
@@ -24,11 +24,11 @@ import * as bib from '@/content/docs/bib.ts'
   - [Calculus Variant 3 (2WCB0) @ TU/e](https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=2WCB0&collegejaar=2025)
 - 龚昇《简明微积分》{bib.cite(mangled_references, '简明微积分')}对于基础相对薄弱的同学可能较难。
 
-## 未被选择的书目
+### 未被选择的书目
 
-<div set:html={printed_bib[JSON.stringify(['excluded'])]}/>
+<div set:html={printed_bib[JSON.stringify(['text', 'excluded'])]}/>
 
-### 说明
+#### 说明
 
 - 本项目推荐的基础必修课《微积分》的难度基准是：不低于同济大学数学系主编《高等数学》{bib.cite(mangled_references, [ `同济高数上`, `同济高数下`, ])}。
 - Stewart 微积分{bib.cite(mangled_references, [ `Stewart Calculus`, `Stewart Calculus Early Transcendentals` ])}、Princeton 微积分读本{bib.cite(mangled_references, `Princeton Calculus Reader`)}的难度低于同济高数。
@@ -36,7 +36,7 @@ import * as bib from '@/content/docs/bib.ts'
 
 ## 其它参考
 
-<div set:html={printed_bib[JSON.stringify(['other'])]}/>
+<div set:html={printed_bib[JSON.stringify(['other', 'text'])]}/>
 
 ### 说明
 
