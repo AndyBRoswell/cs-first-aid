@@ -20,9 +20,9 @@ export const Future_Trends = {
       },
       items: [
         {
-          label: '以 Web 开发与客户端开发为代表的知识与技能正成为常识',
+          label: '正在成为常识的计算机素养：数据分析、Web / 客户端开发……',
           translations: {
-            en: 'Knowledge and Skills Such as Web Development and Client Development Are Becoming Common Sense',
+            en: 'Computer Literacy Becoming Common Sense: Data Analysis, Web / Client Development...',
           },
           slug: '',
         },
