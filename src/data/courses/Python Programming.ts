@@ -1,4 +1,3 @@
-import * as docs_base from '@/content/docs/base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/data/courses/import course materials.ts'
@@ -11,11 +10,9 @@ export const info = {
     text: [
       catalog.get({ unordered_author: 'Python Software Foundation', title: 'The Python Tutorial' }),
     ],
-    other: [
+    reference: [
       catalog.get({ unordered_author: 'E. Matthes', title: 'Python Crash Course', }),
       catalog.get({ unordered_author: [ '嵩天', '黄天羽', '杨雅婷' ], title: 'Python语言程序设计基础', }),
     ],
   }
 } satisfies data_type.Course
-
-export const bib = docs_base.print_bibliography(info.material!)
