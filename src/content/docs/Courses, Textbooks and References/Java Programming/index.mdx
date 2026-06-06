@@ -6,15 +6,15 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import * as docs_base from '@/content/docs/base.ts'
-import * as Course from '@/data/courses/Java Programming.ts'
+import { printed_bib, mangled_references } from './data.ts'
+import * as bib from '@/content/docs/bib.ts'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={Course.bib.printed.text}/>
+<div set:html={printed_bib[JSON.stringify(['text'])]}/>
 
 ## 参考资料
 
-<div set:html={Course.bib.printed.other}/>
+<div set:html={printed_bib[JSON.stringify(['reference'])]}/>
