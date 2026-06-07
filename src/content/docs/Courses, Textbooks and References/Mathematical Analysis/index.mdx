@@ -6,26 +6,48 @@ author: AndyBRoswell
 tags: [ 基础选修, ]
 ---
 
-import * as docs_base from '../../base'
-import * as Course from '@/data/courses/Mathematical Analysis.ts'
+import { printed_bib, mangled_references } from './data.ts'
+import * as bib from '@/content/docs/bib.ts'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={Course.bib.printed.text}/>
+### 中文
+
+<div set:html={printed_bib[JSON.stringify([ 'text', 'zh' ])]}/>
+
+### 英文
+
+<div set:html={printed_bib[JSON.stringify([ 'text', 'en' ])]}/>
 
 ## 公开课
 
-<div set:html={Course.bib.printed.video}/>
+### 中文
+
+<div set:html={printed_bib[JSON.stringify([ 'open_course', 'zh' ])]}/>
 
 ## 习题集
 
-<div set:html={Course.bib.printed.problem_set}/>
+### 中文
 
-## 其它参考
+<div set:html={printed_bib[JSON.stringify([ 'problem_set', 'zh' ])]}/>
 
-<div set:html={Course.bib.printed.other}/>
+## 参考资料
+
+### 教科书
+
+#### 中文
+
+<div set:html={printed_bib[JSON.stringify([ 'reference', 'text', 'zh' ])]}/>
+
+#### 英文
+
+<div set:html={printed_bib[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+
+### 视频
+
+<div set:html={printed_bib[JSON.stringify([ 'reference', 'video' ])]}/>
 
 # 院校开课情况选讲
 
