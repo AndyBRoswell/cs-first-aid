@@ -6,23 +6,61 @@ author: AndyBRoswell
 tags: [ 基础必修 ]
 ---
 
-import * as docs_base from '@/content/docs/base.ts'
-import * as Course from '@/data/courses/Linear Algebra.ts'
+import { I_printed_bib, I_mangled_references, } from './data.ts'
+import * as bib from '@/content/docs/bib.ts'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={Course.I_bib.printed.text}/>
+### 中文
+
+<div set:html={I_printed_bib[JSON.stringify([ 'text', 'zh' ])]}/>
+
+### 英文
+
+<div set:html={I_printed_bib[JSON.stringify([ 'text', 'en' ])]}/>
 
 ### 说明
 
-基础必修课《线性代数I》的基准难度是：不低于 D. C. Lay et al., Linear Algebra and Its Applications{docs_base.cite(Course.I_bib.parsed.text, `D. C. Lay et al., Linear Algebra and Its Applications`)}。
+基础必修课《线性代数I》的基准难度是：不低于 D. C. Lay et al., Linear Algebra and Its Applications{bib.cite(I_mangled_references, `D. C. Lay et al., Linear Algebra and Its Applications`)}。
+
+## 指导书
+
+### 中文
+
+<div set:html={I_printed_bib[JSON.stringify([ 'guide', 'zh' ])]}/>
 
 ## 公开课
 
-<div set:html={Course.I_bib.printed.video}/>
+### 中文
+
+<div set:html={I_printed_bib[JSON.stringify([ 'open_course', 'zh' ])]}/>
 
 ## 其它参考
 
-<div set:html={Course.I_bib.printed.other}/>
+### 教科书
+
+#### 中文
+
+<div set:html={I_printed_bib[JSON.stringify([ 'reference', 'text', 'zh' ])]}/>
+
+#### 英文
+
+<div set:html={I_printed_bib[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+
+### 指导书
+
+#### 中文
+
+<div set:html={I_printed_bib[JSON.stringify([ 'reference', 'guide', 'zh' ])]}/>
+
+### 习题集
+
+#### 中文
+
+<div set:html={I_printed_bib[JSON.stringify([ 'reference', 'problem_set', 'zh' ])]}/>
+
+### 视频
+
+<div set:html={I_printed_bib[JSON.stringify([ 'reference', 'video' ])]}/>
