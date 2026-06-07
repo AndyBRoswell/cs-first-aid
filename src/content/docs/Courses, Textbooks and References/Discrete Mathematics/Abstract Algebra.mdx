@@ -6,23 +6,47 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import * as docs_base from '@/content/docs/base.ts'
-import * as Course from '@/data/courses/Discrete Mathematics.ts'
+import { printed_bib, mangled_references, } from './data.ts'
+import * as bib from '@/content/docs/bib.ts'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={Course.bib.Abstract_Algebra.printed.text}/>
+### 中文
+
+<div set:html={printed_bib.Abstract_Algebra[JSON.stringify([ 'text', 'zh' ])]}/>
+
+### 英文
+
+<div set:html={printed_bib.Abstract_Algebra[JSON.stringify([ 'text', 'en' ])]}/>
 
 ## 公开课
 
-<div set:html={Course.bib.Abstract_Algebra.printed.video}/>
+### 中文
 
-## 习题集
+<div set:html={printed_bib.Abstract_Algebra[JSON.stringify([ 'open_course', 'zh' ])]}/>
 
-<div set:html={Course.bib.Abstract_Algebra.printed.problem_set}/>
+## 学习指导
 
-## 其它参考
+### 中文
 
-<div set:html={Course.bib.Abstract_Algebra.printed.other}/>
+<div set:html={printed_bib.Abstract_Algebra[JSON.stringify([ 'guide', 'zh' ])]}/>
+
+## 参考资料
+
+### 教科书
+
+#### 中文
+
+<div set:html={printed_bib.Abstract_Algebra[JSON.stringify([ 'reference', 'text', 'zh' ])]}/>
+
+#### 英文
+
+<div set:html={printed_bib.Abstract_Algebra[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+
+### 习题集
+
+#### 中文
+
+<div set:html={printed_bib.Abstract_Algebra[JSON.stringify([ 'reference', 'problem_set', 'zh' ])]}/>
