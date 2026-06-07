@@ -1,4 +1,3 @@
-import * as docs_base from '@/content/docs/base.ts'
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/data/courses/import course materials.ts'
@@ -11,10 +10,8 @@ export const info = {
     text: [
       catalog.get({ unordered_author: 'Oracle', title: 'Learn Java', }),
     ],
-    other: [
+    reference: [
       catalog.get({ unordered_author: [ 'K. Sierra', 'B. Bates', 'T. Gee' ], title: 'Head First Java', }),
     ],
   }
 } satisfies data_type.Course
-
-export const bib = docs_base.print_bibliography(info.material!)

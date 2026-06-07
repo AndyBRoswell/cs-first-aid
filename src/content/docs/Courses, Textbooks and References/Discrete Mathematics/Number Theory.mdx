@@ -6,23 +6,37 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import * as docs_base from '@/content/docs/base.ts'
-import * as Course from '@/data/courses/Discrete Mathematics.ts'
+import { printed_bib, mangled_references, } from './data.ts'
+import * as bib from '@/content/docs/bib.ts'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={Course.bib.Number_Theory.printed.text}/>
+### 中文
 
-## 公开课
+<div set:html={printed_bib.Number_Theory[JSON.stringify([ 'text', 'zh' ])]}/>
 
+### 英文
 
+<div set:html={printed_bib.Number_Theory[JSON.stringify([ 'text', 'en' ])]}/>
 
-## 习题集
+## 学习指导
 
-<div set:html={Course.bib.Number_Theory.printed.problem_set}/>
+### 中文
 
-## 其它参考
+<div set:html={printed_bib.Number_Theory[JSON.stringify([ 'guide', 'zh' ])]}/>
 
-<div set:html={Course.bib.Number_Theory.printed.other}/>
+## 参考资料
+
+### 教科书
+
+#### 英文
+
+<div set:html={printed_bib.Number_Theory[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+
+### 学习指导
+
+#### 英文
+
+<div set:html={printed_bib.Number_Theory[JSON.stringify([ 'reference', 'guide', 'en' ])]}/>

@@ -6,23 +6,43 @@ author: AndyBRoswell
 tags: [ 基础必修 ]
 ---
 
-import * as docs_base from '@/content/docs/base.ts'
-import * as Course from '@/data/courses/Discrete Mathematics.ts'
+import { printed_bib, mangled_references, } from './data.ts'
+import * as bib from '@/content/docs/bib.ts'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={Course.bib.Set_Theory.printed.text}/>
+### 中文
+
+<div set:html={printed_bib.Set_Theory[JSON.stringify([ 'text', 'zh' ])]}/>
+
+### 英文
+
+<div set:html={printed_bib.Set_Theory[JSON.stringify([ 'text', 'en' ])]}/>
 
 ## 公开课
 
-<div set:html={Course.bib.Set_Theory.printed.video}/>
+### 中文
 
-## 习题集
+<div set:html={printed_bib.Set_Theory[JSON.stringify([ 'open_course', 'zh' ])]}/>
 
-<div set:html={Course.bib.Set_Theory.printed.problem_set}/>
+## 学习指导
 
-## 其它参考
+### 中文
 
-<div set:html={Course.bib.Set_Theory.printed.other}/>
+<div set:html={printed_bib.Set_Theory[JSON.stringify([ 'guide', 'zh' ])]}/>
+
+## 参考资料
+
+### 教科书
+
+#### 英文
+
+<div set:html={printed_bib.Set_Theory[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+
+### 学习指导
+
+#### 英文
+
+<div set:html={printed_bib.Set_Theory[JSON.stringify([ 'reference', 'guide', 'en' ])]}/>

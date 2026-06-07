@@ -6,23 +6,67 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import * as docs_base from '@/content/docs/base.ts'
-import * as Course from '@/data/courses/Linear Algebra.ts'
+import { II_printed_bib, II_mangled_references, } from './data.ts'
+import * as bib from '@/content/docs/bib.ts'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={Course.II_bib.printed.text}/>
+### 中文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'text', 'zh' ])]}/>
+
+### 英文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'text', 'en' ])]}/>
+
+## 指导书
+
+### 中文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'guide', 'zh' ])]}/>
+
+### 英文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'guide', 'en' ])]}/>
 
 ## 公开课
 
-<div set:html={Course.II_bib.printed.video}/>
+### 中文
 
-## 习题集
+<div set:html={II_printed_bib[JSON.stringify([ 'open_course', 'zh' ])]}/>
 
-<div set:html={Course.II_bib.printed.problem_set}/>
+## 参考资料
 
-## 其它参考
+### 教科书
 
-<div set:html={Course.II_bib.printed.other}/>
+#### 中文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'reference', 'text', 'zh' ])]}/>
+
+#### 英文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+
+### 指导书
+
+#### 中文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'reference', 'guide', 'zh' ])]}/>
+
+### 视频
+
+<div set:html={II_printed_bib[JSON.stringify([ 'reference', 'video' ])]}/>
+
+### 习题集
+
+#### 中文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'reference', 'problem_set', 'zh' ])]}/>
+
+### 其它
+
+#### 英文
+
+<div set:html={II_printed_bib[JSON.stringify([ 'reference', 'other', 'en' ])]}/>
