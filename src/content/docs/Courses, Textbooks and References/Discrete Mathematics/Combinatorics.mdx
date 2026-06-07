@@ -6,23 +6,43 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import * as docs_base from '@/content/docs/base.ts'
-import * as Course from '@/data/courses/Discrete Mathematics.ts'
+import { printed_bib, mangled_references, } from './data.ts'
+import * as bib from '@/content/docs/bib.ts'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={Course.bib.Combinatorics.printed.text}/>
+### 中文
+
+<div set:html={printed_bib.Combinatorics[JSON.stringify([ 'text', 'zh' ])]}/>
+
+### 英文
+
+<div set:html={printed_bib.Combinatorics[JSON.stringify([ 'text', 'en' ])]}/>
 
 ## 公开课
 
-<div set:html={Course.bib.Combinatorics.printed.video}/>
+### 中文
 
-## 习题集
+<div set:html={printed_bib.Combinatorics[JSON.stringify([ 'open_course', 'zh' ])]}/>
 
-<div set:html={Course.bib.Combinatorics.printed.problem_set}/>
+## 学习指导
 
-## 其它参考
+### 中文
 
-<div set:html={Course.bib.Combinatorics.printed.other}/>
+<div set:html={printed_bib.Combinatorics[JSON.stringify([ 'guide', 'zh' ])]}/>
+
+## 参考资料
+
+### 教科书
+
+#### 英文
+
+<div set:html={printed_bib.Combinatorics[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+
+### 学习指导
+
+#### 英文
+
+<div set:html={printed_bib.Combinatorics[JSON.stringify([ 'reference', 'guide', 'en' ])]}/>
