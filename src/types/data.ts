@@ -14,8 +14,9 @@ export type ID_object =
   volume?: string | number
   part?: string | number
   type?: string
+  note?: string
 }
-export const legal_object_keys_for_ID = [
+export const legal_keys_of_ID_object = [
   'unordered_author',
   'ordered_author',
   'title',
@@ -25,6 +26,7 @@ export const legal_object_keys_for_ID = [
   'volume',
   'part',
   'type',
+  'note',
 ]
 export type ID_t = ID_primitive | [ ID_primitive, ...ID_primitive[] ] | ID_object
 export type Entry = { id: ID_t[], material: Material, }
@@ -53,6 +55,6 @@ export type Course = {
   note?: string
 }
 
-export type Material = CSL_Data.Item & { ISBN?: CSL_Data.ISBN } & { custom?: CSL_Data.Custom }
+export type Material = CSL_Data.Item & { custom?: CSL_Data.Custom }
 
 export type Video = Material
