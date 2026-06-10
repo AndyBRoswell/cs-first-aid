@@ -1,5 +1,5 @@
 import type { ID_t, Entry, Material, ID_primitive } from "@/types/data.ts";
-import { legal_object_keys_for_ID } from "@/types/data.ts";
+import { legal_keys_of_ID_object } from "@/types/data.ts";
 import * as CSL_Data from '@/types/CSL_data.ts'
 
 const m = new Map<ID_t, Material>
@@ -21,7 +21,7 @@ export function canonical_ID(ID: ID_t): ID_primitive {
         if ('ordered_author' in CID) {
           if (Array.isArray(CID.ordered_author) === false) { CID.ordered_author = [ CID.ordered_author ] }
         }
-        return JSON.stringify(CID, legal_object_keys_for_ID)
+        return JSON.stringify(CID, legal_keys_of_ID_object)
       }
   }
 }
