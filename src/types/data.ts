@@ -15,7 +15,7 @@ export type ID_object =
   part?: string | number
   type?: string
 }
-export const legal_object_keys_for_ID = [
+export const legal_keys_of_ID_object = [
   'unordered_author',
   'ordered_author',
   'title',
