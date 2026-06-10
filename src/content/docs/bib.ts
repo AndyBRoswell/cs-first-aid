@@ -2,12 +2,12 @@
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import { parse } from 'node-html-parser'
-import default_bib_style from './ieee.csl?raw'
+import default_bib_style from './IEEE.custom.csl?raw'
 import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name_Of_References, Material, } from "@/types/data.ts";
 import * as catalog from '@/data/materials/catalog.ts'
 
 const CSL_config = citation_js.plugins.config.get('@csl')
-const default_bib_style_name = 'IEEE Custom'
+const default_bib_style_name = 'IEEE [Custom]'
 CSL_config.templates.add(default_bib_style_name, default_bib_style)
 const prettified_default_bib_style: object = {
   format: 'html',
