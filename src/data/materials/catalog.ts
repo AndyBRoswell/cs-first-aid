@@ -1,4 +1,4 @@
-import type { ID_t, Entry, Material, ID_primitive } from "@/types/data.ts";
+import type { ID_t, Entry, Material, ID_primitive, ID_object } from "@/types/data.ts";
 import { legal_keys_of_ID_object } from "@/types/data.ts";
 import * as CSL_Data from '@/types/CSL_data.ts'
 
@@ -24,6 +24,35 @@ export function canonical_ID(ID: ID_t): ID_primitive {
         return JSON.stringify(CID, legal_keys_of_ID_object)
       }
   }
+}
+
+export type params_of_canonical_ID_enumeration = {
+  group: (keyof ID_object)[][]
+  optional?: boolean
+  values?: {
+    unordered_author?: (ID_object['unordered_author'] | CSL_Data.Item['author'])[]
+    ordered_author?: (ID_object['ordered_author'] | CSL_Data.Item['author'])[]
+    title?: (ID_object['title'])[]
+    subtitle?: (ID_object['subtitle'])[]
+    edition?: (ID_object['edition'])[]
+    date?: (ID_object['date'] | CSL_Data.Item['issued'])[]
+    volume?: (ID_object['volume'])[]
+    part?: (ID_object['part'])[]
+    type?: (ID_object['type'])[]
+    note?: (ID_object['note'])[]
+  }
+}[]
+
+export function enumerate_canonical_IDs(
+  groups: params_of_canonical_ID_enumeration = [
+    { group: [ [ 'unordered_author' ], [ 'ordered_author' ] ] },
+    { group: [ [ 'title', 'subtitle' ] ] },
+    { group: [ [ 'edition' ], [ 'date' ] ], optional: true, },
+    { group: [ [ 'volume', 'part' ] ] },
+  ],
+  material?: Material,
+): ID_t[] {
+// todo
 }
 
 export function add_items(p: Entry[]) {
