@@ -1,7 +1,7 @@
 // @ts-ignore [citation-js doesn't have ts support]
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
-import { parse } from 'node-html-parser'
+import node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl?raw'
 import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name_Of_References, Material, } from "@/types/data.ts";
 import * as catalog from '@/data/materials/catalog.ts'
@@ -65,12 +65,12 @@ export function mangle_references(references: Scoped_References): Mangled_Refere
 
 export function print_bibliography(mangled: Mangled_References): { [key: Scope_Name_Of_References]: string } {
   const raw_bib = mangled.flattened.format('bibliography', prettified_default_bib_style)
-  const original_HTML_root = parse(raw_bib)
+  const original_HTML_root = node_html_parser.parse(raw_bib)
   const csl_entry = original_HTML_root.querySelectorAll('[class="csl-entry"]')
   const partitioned_bib: { [key: Scope_Name_Of_References]: string } = {}
   for (const [ key, value ] of Object.entries(mangled.range)) {
     const [ start, end ] = value
-    const new_HTML_root = parse(`<div class="csl-bib-body"></div>`)
+    const new_HTML_root = node_html_parser.parse(`<div class="csl-bib-body"></div>`)
     const target_entries = csl_entry.slice(start, end)
     for (const entry of target_entries) { new_HTML_root.appendChild(entry) }
     partitioned_bib[key] = new_HTML_root.toString()
