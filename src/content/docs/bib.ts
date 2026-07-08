@@ -29,6 +29,7 @@ type mangling_action =
 export type Mangled_References = { flattened: typeof citation_js.Cite, range: Record<Scope_Name_Of_References, [ number, number ]> }
 
 // TODO: Test case for loop detection
+// Created by Gemini 3.1 Pro Extended. Revised by AndyBRoswell.
 export function mangle_references(references: Scoped_References): Mangled_References { // flat and partition
   const ret: Mangled_References = {
     flattened: new citation_js.Cite(),
