@@ -82,7 +82,4 @@ export default defineConfig({
       import_course_materials(),
     ]
   },
-  experimental: {
-    rustCompiler: true,
-  },
 });
