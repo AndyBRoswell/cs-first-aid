@@ -12,3 +12,5 @@ export const pino_arg: pino.LoggerOptions = {
     }
   }
 }
+
+export const test_server = process.env.test_server || 'http://localhost:4321'
