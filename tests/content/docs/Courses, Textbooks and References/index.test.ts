@@ -13,10 +13,10 @@ function on_pageerror(errors: Error[], error: Error) {
 }
 
 test('course list', { tag: [ '@course list' ] }, async ({ page, context }) => {
-  const prefix: string = 'http://localhost:4321/courses-textbooks-and-references'
+  const prefix: string = `${util.test_server}/courses-textbooks-and-references`
   const errors: Error[] = []
   page.on('pageerror', (error: Error) => on_pageerror(errors, error))
-  const response = await page.goto(`${prefix}/#%E8%AF%BE%E7%A8%8B%E5%88%97%E8%A1%A8`)
+  const response = await page.goto(`${prefix}/#%E8%AF%BE%E7%A8%8B%E5%88%97%E8%A1%A8`) // courses-textbooks-and-references/#课程列表
   expect(response!.status()).toBe(200)
   expect(errors).toHaveLength(0)
   const course_list = page.getByTestId('course list')
