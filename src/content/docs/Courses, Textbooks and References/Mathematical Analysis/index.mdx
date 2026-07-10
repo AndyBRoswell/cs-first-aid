@@ -15,23 +15,23 @@ import * as bib from '@/content/docs/bib.ts'
 
 ### 中文
 
-<div set:html={printed_bib[JSON.stringify([ 'text', 'zh' ])]}/>
+<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'text', 'zh' ])]}/>
 
 ### 英文
 
-<div set:html={printed_bib[JSON.stringify([ 'text', 'en' ])]}/>
+<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'text', 'en' ])]}/>
 
 ## 公开课
 
 ### 中文
 
-<div set:html={printed_bib[JSON.stringify([ 'open_course', 'zh' ])]}/>
+<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'open_course', 'zh' ])]}/>
 
 ## 习题集
 
 ### 中文
 
-<div set:html={printed_bib[JSON.stringify([ 'problem_set', 'zh' ])]}/>
+<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'problem_set', 'zh' ])]}/>
 
 ## 参考资料
 
@@ -39,15 +39,15 @@ import * as bib from '@/content/docs/bib.ts'
 
 #### 中文
 
-<div set:html={printed_bib[JSON.stringify([ 'reference', 'text', 'zh' ])]}/>
+<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'reference', 'text', 'zh' ])]}/>
 
 #### 英文
 
-<div set:html={printed_bib[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
 
 ### 视频
 
-<div set:html={printed_bib[JSON.stringify([ 'reference', 'video' ])]}/>
+<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'reference', 'video' ])]}/>
 
 # 院校开课情况选讲
 
