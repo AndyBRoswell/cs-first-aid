@@ -45,7 +45,7 @@ export default defineConfig({
       },
       components: {
         PageTitle: './src/components/PageTitle.astro',
-        Header: './src/components/docs_header.astro',
+        SocialIcons: './src/components/SocialIcons.astro',
       },
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/AndyBRoswell/cs-first-aid' },

@@ -11,7 +11,7 @@ const CSL_config = citation_js.plugins.config.get('@csl')
 const default_bib_style_name = 'IEEE Custom'
 const default_bib_style_file = node_path.resolve(import.meta.dirname, '../../src/content/docs/IEEE.custom.csl')
 const default_bib_style = node_fs.readFileSync(default_bib_style_file, 'utf8')
-CSL_config.templates.add(default_bib_style_name, default_bib_style)
+CSL_config.styles.add(default_bib_style_name, default_bib_style)
 const prettified_default_bib_style: object = {
   format: 'html',
   template: default_bib_style_name,
