@@ -1,9 +1,0 @@
----
-import Base_Layout from '../layouts/base_layout.astro' // Component and layout names always start with a capital letter
-import Greeting from '../components/greeting.jsx'
----
-<Base_Layout page_title="CS First Aid: Home">
-  <Greeting client:load messages={
-    [...Array(16).keys()].map(num => num.toString(16).toUpperCase())
-  }/>
-</Base_Layout>
