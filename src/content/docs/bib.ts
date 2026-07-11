@@ -8,7 +8,7 @@ import * as catalog from '@/data/materials/catalog.ts'
 
 const CSL_config = citation_js.plugins.config.get('@csl')
 const default_bib_style_name = 'IEEE [Custom]'
-CSL_config.templates.add(default_bib_style_name, default_bib_style)
+CSL_config.styles.add(default_bib_style_name, default_bib_style)
 const prettified_default_bib_style: object = {
   format: 'html',
   template: default_bib_style_name,
