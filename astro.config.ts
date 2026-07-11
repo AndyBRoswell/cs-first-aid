@@ -36,7 +36,7 @@ export default defineConfig({
     preact(),
     starlight({
       title: {
-        'zh-CN': 'CS 自救指南',
+        'zh-CN': '计算机科学急救指南',
         en: 'CS First Aid',
       },
       tableOfContents: {
