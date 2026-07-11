@@ -8,13 +8,14 @@ tags: [ 基础必修 ]
 
 import { printed_bib, mangled_references } from './data.ts'
 import * as bib from '@/content/docs/bib.ts'
+import References from '@/components/References.astro'
 
 # 学习材料
 
 ## 教科书
 
-<div set:html={printed_bib[JSON.stringify(['text'])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify(['text'])} />
 
 ## 参考资料
 
-<div set:html={printed_bib[JSON.stringify(['reference'])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify(['reference'])} />
