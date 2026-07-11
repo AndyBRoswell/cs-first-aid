@@ -8,6 +8,7 @@ tags: [ 基础选修, ]
 
 import { printed_bib, mangled_references } from './data.ts'
 import * as bib from '@/content/docs/bib.ts'
+import References from '@/components/References.astro'
 
 # 学习材料
 
@@ -15,23 +16,23 @@ import * as bib from '@/content/docs/bib.ts'
 
 ### 中文
 
-<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'text', 'zh' ])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'text', 'zh' ])}/>
 
 ### 英文
 
-<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'text', 'en' ])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'text', 'en' ])}/>
 
 ## 公开课
 
 ### 中文
 
-<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'open_course', 'zh' ])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'open_course', 'zh' ])}/>
 
 ## 习题集
 
 ### 中文
 
-<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'problem_set', 'zh' ])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'problem_set', 'zh' ])}/>
 
 ## 参考资料
 
@@ -39,15 +40,15 @@ import * as bib from '@/content/docs/bib.ts'
 
 #### 中文
 
-<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'reference', 'text', 'zh' ])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'reference', 'text', 'zh' ])}/>
 
 #### 英文
 
-<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'reference', 'text', 'en' ])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'reference', 'text', 'en' ])}/>
 
 ### 视频
 
-<div data-testid="References" set:html={printed_bib[JSON.stringify([ 'reference', 'video' ])]}/>
+<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'reference', 'video' ])}/>
 
 # 院校开课情况选讲
 

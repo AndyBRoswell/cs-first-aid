@@ -1,0 +1,5 @@
+---
+const { printed_bib, scope_name, } = Astro.props
+---
+
+<div class="References" data-scope_name={scope_name} set:html={printed_bib[scope_name]}></div>
