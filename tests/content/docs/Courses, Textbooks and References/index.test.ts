@@ -1,12 +1,10 @@
-import { test, expect } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 import pino from 'pino'
 import * as util from '../../../util.ts'
 
-const pino_arg = util.pino_arg
+const logger = pino(util.pino_arg)
 
-const logger = pino(pino_arg)
-
-test('course list', { tag: [ '@course list' ] }, async ({ page, context }) => {
+test('course list', { tag: [ '@Courses, Textbooks and References', '@course list' ] }, async ({ page, context }) => {
   const prefix: string = `${util.test_server}/courses-textbooks-and-references`
   const errors: Error[] = []
   page.on('pageerror', (error: Error) => util.on_pageerror(errors, error))
