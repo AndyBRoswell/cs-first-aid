@@ -1,12 +1,11 @@
-import { expect, test } from '@playwright/test';
+import { expect } from '@playwright/test';
 import pino from 'pino'
 import * as util from '../../../util.ts'
 
 const logger = pino(util.pino_arg)
 
-test('course list', { tag: [ '@Courses, Textbooks and References', '@course list' ] }, async ({ page, context }) => {
+util.test('course list', { tag: [ '@Courses, Textbooks and References', '@course list' ] }, async ({ page, context, errors }) => {
   const prefix: string = `${util.test_server}/courses-textbooks-and-references`
-  const errors: Error[] = []
   page.on('pageerror', (error: Error) => util.on_pageerror(errors, error))
   const response = await page.goto(`${prefix}/#%E8%AF%BE%E7%A8%8B%E5%88%97%E8%A1%A8`) // courses-textbooks-and-references/#课程列表
   expect(response!.status()).toBe(200)

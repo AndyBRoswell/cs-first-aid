@@ -1,3 +1,4 @@
+import { test as base } from '@playwright/test'
 import pino from 'pino'
 
 export const pino_arg: pino.LoggerOptions = {
@@ -20,3 +21,13 @@ export function on_pageerror(errors: Error[], error: Error) {
   if (error.message.includes('error loading dynamically imported module')) return
   errors.push(error)
 }
+
+export type Common_Fixture = {
+  errors: Error[],
+}
+
+export const test = base.extend<Common_Fixture>({
+  errors: async({}, use) => {
+    await use([])
+  }
+})
