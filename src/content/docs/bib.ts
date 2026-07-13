@@ -27,6 +27,7 @@ type mangling_action =
   | { type: typeof mangling_action_ID.end_key, path: string[], start: number, }
 
 export type Mangled_References = { flattened: typeof citation_js.Cite, range: Record<Scope_Name_Of_References, [ number, number ]> }
+export type Printed_Bibliography = { [key: Scope_Name_Of_References]: string }
 
 // TODO: Test case for loop detection
 // Created by Gemini 3.1 Pro Extended. Revised by AndyBRoswell.
@@ -63,11 +64,11 @@ export function mangle_references(references: Scoped_References): Mangled_Refere
   return ret
 }
 
-export function print_bibliography(mangled: Mangled_References): { [key: Scope_Name_Of_References]: string } {
+export function print_bibliography(mangled: Mangled_References): Printed_Bibliography {
   const raw_bib = mangled.flattened.format('bibliography', prettified_default_bib_style)
   const original_HTML_root = node_html_parser.parse(raw_bib)
   const csl_entry = original_HTML_root.querySelectorAll('[class="csl-entry"]')
-  const partitioned_bib: { [key: Scope_Name_Of_References]: string } = {}
+  const partitioned_bib: Printed_Bibliography = {}
   for (const [ key, value ] of Object.entries(mangled.range)) {
     const [ start, end ] = value
     const new_HTML_root = node_html_parser.parse(`<div class="csl-bib-body"></div>`)
