@@ -1,4 +1,4 @@
-import { expect } from '@playwright/test';
+import { expect, type Locator } from '@playwright/test';
 import pino from 'pino'
 import * as util from '../../../../util.ts'
 import * as data from "@/types/data.ts";
@@ -10,12 +10,14 @@ util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calculus'
   page.on('pageerror', (error: Error) => util.on_pageerror(errors, error))
   expect(response!.status()).toBe(200)
   expect(errors).toHaveLength(0)
-  const References_locators = await page.locator('.References').all()
+  const main = page.getByRole('main')
+  const References_locators = await main.locator('.References').all()
   for (const locator of References_locators) {
     const csl_entries = await locator.locator('[data-csl-entry-id]').all()
     await expect(locator).toHaveAttribute('data-scope_name')
     const material_segment = JSON.parse((await locator.getAttribute('data-material_segment'))!) as Array<data.Material>
     expect(material_segment.length).toEqual(csl_entries.length)
   }
-  await page.getByRole('heading', { name: '教科书', level: 3 })
+  let References_locator: Locator
+
 })
