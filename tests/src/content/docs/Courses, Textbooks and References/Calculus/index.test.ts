@@ -22,7 +22,6 @@ util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calculus'
   }
   let References: Locator, CSS_escaped_scope_name: string
   CSS_escaped_scope_name = cssesc(JSON.stringify([ 'text', 'selected' ]), util.cssesc_options)
-  logger.debug(CSS_escaped_scope_name)
   References = main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
   await expect(References.locator('..').getByRole('heading', { level: 2, name: '教科书' })).toHaveCount(1)
 })
