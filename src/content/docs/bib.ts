@@ -3,7 +3,7 @@ import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl?raw'
-import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name_Of_References, Material, } from "@/types/data.ts";
+import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, } from "@/types/data.ts";
 import * as catalog from '@/data/materials/catalog.ts'
 
 const CSL_config = citation_js.plugins.config.get('@csl')
@@ -26,8 +26,8 @@ type mangling_action =
   | { type: typeof mangling_action_ID.start_key, path: string[], node: Scoped_References, }
   | { type: typeof mangling_action_ID.end_key, path: string[], start: number, }
 
-export type Mangled_References = { flattened: typeof citation_js.Cite, range: Record<Scope_Name_Of_References, [ number, number ]> }
-export type Printed_Bibliography = { [key: Scope_Name_Of_References]: string }
+export type Mangled_References = { flattened: typeof citation_js.Cite, range: Record<Serialized_Scope_Name, [ number, number ]> }
+export type Printed_Bibliography = { [key: Serialized_Scope_Name]: string }
 
 // TODO: Test case for loop detection
 // Created by Gemini 3.1 Pro Extended. Revised by AndyBRoswell.

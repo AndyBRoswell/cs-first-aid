@@ -1,10 +1,10 @@
 ---
-import type { Scoped_References } from "@/types/data.ts";
+import type { Scope_Name, Scoped_References } from "@/types/data.ts";
 import type { Printed_Bibliography } from "@/content/docs/bib.ts";
 export interface Props {
   materials: Scoped_References,
   printed_bib: Printed_Bibliography,
-  scope_name: Array<string>,
+  scope_name: Scope_Name,
 }
 const { materials, printed_bib, scope_name, } = Astro.props
 let material_segment = materials
