@@ -6,10 +6,11 @@ import '@citation-js/plugin-csl'
 import node_fs from 'node:fs'
 import node_path from 'node:path'
 import node_html_parser from 'node-html-parser'
+import * as util from '@tests/util.ts'
 
 const CSL_config = citation_js.plugins.config.get('@csl')
 const default_bib_style_name = 'IEEE Custom'
-const default_bib_style_file = node_path.resolve(import.meta.dirname, '../../src/content/docs/IEEE.custom.csl')
+const default_bib_style_file = node_path.resolve(util.source_root, 'content/docs/IEEE.custom.csl')
 const default_bib_style = node_fs.readFileSync(default_bib_style_file, 'utf8')
 CSL_config.styles.add(default_bib_style_name, default_bib_style)
 const prettified_default_bib_style: object = {
