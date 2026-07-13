@@ -1,7 +1,9 @@
-import { expect, type Locator } from '@playwright/test';
+import { expect, type Locator } from '@playwright/test'
 import pino from 'pino'
 import * as util from '../../../../util.ts'
-import * as data from "@/types/data.ts";
+import * as data from "@/types/data.ts"
+// @ts-ignore [css.escape doesn't have ts support]
+import cssesc from 'cssesc'
 
 const logger = pino(util.pino_arg)
 
@@ -18,6 +20,9 @@ util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calculus'
     const material_segment = JSON.parse((await locator.getAttribute('data-material_segment'))!) as Array<data.Material>
     expect(material_segment.length).toEqual(csl_entries.length)
   }
-  let References_locator: Locator
-
+  let References: Locator, CSS_escaped_scope_name: string
+  CSS_escaped_scope_name = cssesc(JSON.stringify([ 'text', 'selected' ]), { quotes: 'double' })
+  logger.debug(CSS_escaped_scope_name)
+  References = main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
+  await expect(References.locator('..').getByRole('heading', { level: 2, name: '教科书' })).toHaveCount(1)
 })
