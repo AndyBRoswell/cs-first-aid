@@ -34,8 +34,10 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
+    "@types/cssesc": "^3.0.2",
     "@types/node": "^26.0.0",
     "@types/pino": "^7.0.4",
+    "cssesc": "^3.0.0",
     "fast-glob": "^3.3.3",
     "typescript": "^6.0.3"
   }
