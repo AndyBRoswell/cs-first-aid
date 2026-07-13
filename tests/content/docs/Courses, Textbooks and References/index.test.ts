@@ -1,6 +1,6 @@
 import { expect } from '@playwright/test';
 import pino from 'pino'
-import * as util from '../../../util.ts'
+import * as util from '@tests/util.ts'
 
 const logger = pino(util.pino_arg)
 

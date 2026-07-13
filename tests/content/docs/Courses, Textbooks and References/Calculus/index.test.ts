@@ -1,6 +1,6 @@
 import { expect, type Locator } from '@playwright/test'
 import pino from 'pino'
-import * as util from '../../../../util.ts'
+import * as util from '@tests/util.ts'
 import * as data from "@/types/data.ts"
 // @ts-ignore [css.escape doesn't have ts support]
 import cssesc from 'cssesc'
