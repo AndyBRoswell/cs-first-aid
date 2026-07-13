@@ -41,7 +41,8 @@ export type Link = string | {
 
 export type Stringified_JSON = string
 export type Scope_Name_Of_References = Stringified_JSON
-export type Scoped_References = Material[] | { [key: Scope_Name_Of_References]: Material[] | Scoped_References }
+export type Segment_Of_Scope_Name_Of_References = string
+export type Scoped_References = Material[] | { [key: Segment_Of_Scope_Name_Of_References]: Material[] | Scoped_References }
 export type Scoped_ID_t = { ID: ID_t, scope?: Scope_Name_Of_References }
 
 export type Course = {
