@@ -3,7 +3,7 @@ import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl?raw'
-import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name_Of_References, Material, } from "@/types/data.ts";
+import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, } from "@/types/data.ts";
 import * as catalog from '@/data/materials/catalog.ts'
 
 const CSL_config = citation_js.plugins.config.get('@csl')
@@ -26,7 +26,8 @@ type mangling_action =
   | { type: typeof mangling_action_ID.start_key, path: string[], node: Scoped_References, }
   | { type: typeof mangling_action_ID.end_key, path: string[], start: number, }
 
-export type Mangled_References = { flattened: typeof citation_js.Cite, range: Record<Scope_Name_Of_References, [ number, number ]> }
+export type Mangled_References = { flattened: typeof citation_js.Cite, range: Record<Serialized_Scope_Name, [ number, number ]> }
+export type Printed_Bibliography = { [key: Serialized_Scope_Name]: string }
 
 // TODO: Test case for loop detection
 // Created by Gemini 3.1 Pro Extended. Revised by AndyBRoswell.
@@ -63,11 +64,11 @@ export function mangle_references(references: Scoped_References): Mangled_Refere
   return ret
 }
 
-export function print_bibliography(mangled: Mangled_References): { [key: Scope_Name_Of_References]: string } {
+export function print_bibliography(mangled: Mangled_References): Printed_Bibliography {
   const raw_bib = mangled.flattened.format('bibliography', prettified_default_bib_style)
   const original_HTML_root = node_html_parser.parse(raw_bib)
   const csl_entry = original_HTML_root.querySelectorAll('[class="csl-entry"]')
-  const partitioned_bib: { [key: Scope_Name_Of_References]: string } = {}
+  const partitioned_bib: Printed_Bibliography = {}
   for (const [ key, value ] of Object.entries(mangled.range)) {
     const [ start, end ] = value
     const new_HTML_root = node_html_parser.parse(`<div class="csl-bib-body"></div>`)
