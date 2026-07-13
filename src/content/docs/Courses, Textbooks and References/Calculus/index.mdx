@@ -10,41 +10,43 @@ import { printed_bib, course_material, mangled_references } from './data.ts'
 import * as bib from '@/content/docs/bib.ts'
 import References from '@/components/References.astro'
 
-# 学习材料
-
-## 教科书
-
-<References materials={course_material} printed_bib={printed_bib} scope_name={['text', 'selected']} />
-
-### 说明
-
-- 《Calculus: A Complete Course》{bib.cite(mangled_references, 'Calculus: A Complete Course')}为首选，此书为多所院校数学系或数学要求较高的理工类专业采用。
-  - [Single Variable Calculus (XB_41007) @ VU](https://studiegids.vu.nl/en/Bachelor/2025-2026/mathematics/XB_41007)
-  - [Multivariable Calculus (XB_41008) @ VU](https://studiegids.vu.nl/en/Bachelor/2025-2026/mathematics/XB_41008)
-  - [Calculus Variant 2 (2WBB0) @ TU/e](https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=2WBB0&collegejaar=2025)
-  - [Calculus Variant 3 (2WCB0) @ TU/e](https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=2WCB0&collegejaar=2025)
-- 龚昇《简明微积分》{bib.cite(mangled_references, '简明微积分')}对于基础相对薄弱的同学可能较难。
-
-### 未被选择的书目
-
-<References materials={course_material} printed_bib={printed_bib} scope_name={['text', 'excluded']} />
-
-#### 说明
-
-- 本项目推荐的基础必修课《微积分》的难度基准是：不低于同济大学数学系主编《高等数学》{bib.cite(mangled_references, [ `同济高数上`, `同济高数下`, ])}。
-- Stewart 微积分{bib.cite(mangled_references, [ `Stewart Calculus`, `Stewart Calculus Early Transcendentals` ])}、Princeton 微积分读本{bib.cite(mangled_references, `Princeton Calculus Reader`)}的难度低于同济高数。
-- 再次强调：本项目总体的难度基准为**荣誉ECE/EECS项目**。
-
-## 其它参考
-
-<References materials={course_material} printed_bib={printed_bib} scope_name={['other', 'text']} />
-
-### 说明
-
-- 个人认为，同济高数{bib.cite(mangled_references, [ `同济高数上`, `同济高数下`, ])}大问题基本没有，但总体缺乏出彩的地方，只能说中规中矩，可以凑合用。
-- 注意到有观点称 Thomas 微积分{bib.cite(mangled_references, [ `Thomas Calculus`, `Thomas Calculus Early Transcendentals` ])} 的难度总体低于同济高数，但差别不大。
-- T. M. Apostol 著《微积分》两卷{bib.cite(mangled_references, [ `Apostol Calculus I`, `Apostol Calculus II`, ])}主要面向数学系；内容相对较旧（1960 年代出版）；线性代数部分可以跳过。
-
-# 院校开课情况选讲
-
-一般而言，《微积分》开设 2 个学期（semester）/学段（period），主要内容分别是单变量微积分与多变量微积分。部分院校可能会拆成 3 个学期/学段，矢量微积分等内容常安排在第 3 学期/学段。
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'text', 'selected' ]}/>
+    <section>
+      ### 说明
+      - 《Calculus: A Complete Course》{bib.cite(mangled_references, 'Calculus: A Complete Course')}为首选，此书为多所院校数学系或数学要求较高的理工类专业采用。
+        - [Single Variable Calculus (XB_41007) @ VU](https://studiegids.vu.nl/en/Bachelor/2025-2026/mathematics/XB_41007)
+        - [Multivariable Calculus (XB_41008) @ VU](https://studiegids.vu.nl/en/Bachelor/2025-2026/mathematics/XB_41008)
+        - [Calculus Variant 2 (2WBB0) @ TU/e](https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=2WBB0&collegejaar=2025)
+        - [Calculus Variant 3 (2WCB0) @ TU/e](https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=2WCB0&collegejaar=2025)
+      - 龚昇《简明微积分》{bib.cite(mangled_references, '简明微积分')}对于基础相对薄弱的同学可能较难。
+    </section>
+    <section>
+      ### 未被选择的书目
+      <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'text', 'excluded' ]}/>
+      <section>
+        #### 说明
+        - 本项目推荐的基础必修课《微积分》的难度基准是：不低于同济大学数学系主编《高等数学》{bib.cite(mangled_references, [ `同济高数上`, `同济高数下`, ])}。
+        - Stewart 微积分{bib.cite(mangled_references, [ `Stewart Calculus`, `Stewart Calculus Early Transcendentals` ])}、Princeton 微积分读本{bib.cite(mangled_references, `Princeton Calculus Reader`)}的难度低于同济高数。
+        - 再次强调：本项目总体的难度基准为**荣誉ECE/EECS项目**。
+      </section>
+    </section>
+  </section>
+  <section>
+    ## 其它参考
+    <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'other', 'text' ]}/>
+    <section>
+      ### 说明
+      - 个人认为，同济高数{bib.cite(mangled_references, [ `同济高数上`, `同济高数下`, ])}大问题基本没有，但总体缺乏出彩的地方，只能说中规中矩，可以凑合用。
+      - 注意到有观点称 Thomas 微积分{bib.cite(mangled_references, [ `Thomas Calculus`, `Thomas Calculus Early Transcendentals` ])} 的难度总体低于同济高数，但差别不大。
+      - T. M. Apostol 著《微积分》两卷{bib.cite(mangled_references, [ `Apostol Calculus I`, `Apostol Calculus II`, ])}主要面向数学系；内容相对较旧（1960 年代出版）；线性代数部分可以跳过。
+    </section>
+  </section>
+</section>
+<section>
+  # 院校开课情况选讲
+  一般而言，《微积分》开设 2 个学期（semester）/学段（period），主要内容分别是单变量微积分与多变量微积分。部分院校可能会拆成 3 个学期/学段，矢量微积分等内容常安排在第 3 学期/学段。
+</section>
