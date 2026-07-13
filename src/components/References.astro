@@ -14,4 +14,4 @@ for (const name_segment of scope_name) {
 }
 ---
 
-<div class="References" data-scope_name={scope_name} data-material_segment={JSON.stringify(material_segment)} set:html={printed_bib[JSON.stringify(scope_name)]}></div>
+<div class="References" data-scope_name={JSON.stringify(scope_name)} data-material_segment={JSON.stringify(material_segment)} set:html={printed_bib[JSON.stringify(scope_name)]}></div>
