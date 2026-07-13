@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础必修 ]
 ---
 
-import { printed_bib, mangled_references, } from './data.ts'
+import { printed_bib, course_material, } from './data.ts'
 import * as bib from '@/content/docs/bib.ts'
 import References from '@/components/References.astro'
 
@@ -16,23 +16,23 @@ import References from '@/components/References.astro'
 
 ### 中文
 
-<References printed_bib={printed_bib.Mathematical_Logic} scope_name={JSON.stringify([ 'text', 'zh' ])}/>
+<References materials={course_material.Mathematical_Logic} printed_bib={printed_bib.Mathematical_Logic} scope_name={[ 'text', 'zh' ]}/>
 
 ### 英文
 
-<References printed_bib={printed_bib.Mathematical_Logic} scope_name={JSON.stringify([ 'text', 'en' ])}/>
+<References materials={course_material.Mathematical_Logic} printed_bib={printed_bib.Mathematical_Logic} scope_name={[ 'text', 'en' ]}/>
 
 ## 公开课
 
 ### 中文
 
-<References printed_bib={printed_bib.Mathematical_Logic} scope_name={JSON.stringify([ 'open_course', 'zh' ])}/>
+<References materials={course_material.Mathematical_Logic} printed_bib={printed_bib.Mathematical_Logic} scope_name={[ 'open_course', 'zh' ]}/>
 
 ## 学习指导
 
 ### 中文
 
-<References printed_bib={printed_bib.Mathematical_Logic} scope_name={JSON.stringify([ 'guide', 'zh' ])}/>
+<References materials={course_material.Mathematical_Logic} printed_bib={printed_bib.Mathematical_Logic} scope_name={[ 'guide', 'zh' ]}/>
 
 ## 其它参考
 
@@ -40,10 +40,10 @@ import References from '@/components/References.astro'
 
 #### 英文
 
-<References printed_bib={printed_bib.Mathematical_Logic} scope_name={JSON.stringify([ 'reference', 'text', 'en' ])}/>
+<References materials={course_material.Mathematical_Logic} printed_bib={printed_bib.Mathematical_Logic} scope_name={[ 'reference', 'text', 'en' ]}/>
 
 ### 学习指导
 
 #### 英文
 
-<References printed_bib={printed_bib.Mathematical_Logic} scope_name={JSON.stringify([ 'reference', 'guide', 'en' ])}/>
+<References materials={course_material.Mathematical_Logic} printed_bib={printed_bib.Mathematical_Logic} scope_name={[ 'reference', 'guide', 'en' ]}/>
