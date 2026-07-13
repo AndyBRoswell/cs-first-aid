@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import { printed_bib, mangled_references } from './data.ts'
+import { printed_bib, course_material } from './data.ts'
 import * as bib from '@/content/docs/bib.ts'
 import References from '@/components/References.astro'
 
@@ -14,8 +14,8 @@ import References from '@/components/References.astro'
 
 ## 教科书
 
-<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'text' ])}/>
+<References materials={course_material} printed_bib={printed_bib} scope_name={[ 'text' ]}/>
 
 ## 参考资料
 
-<References printed_bib={printed_bib} scope_name={JSON.stringify([ 'reference' ])}/>
+<References materials={course_material} printed_bib={printed_bib} scope_name={[ 'reference' ]}/>

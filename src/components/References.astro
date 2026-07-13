@@ -1,5 +1,17 @@
 ---
-const { printed_bib, scope_name, } = Astro.props
+import type { Scoped_References } from "@/types/data.ts";
+import type { Printed_Bibliography } from "@/content/docs/bib.ts";
+export interface Props {
+  materials: Scoped_References,
+  printed_bib: Printed_Bibliography,
+  scope_name: Array<string>,
+}
+const { materials, printed_bib, scope_name, } = Astro.props
+let material_segment = materials
+for (const name_segment of scope_name) {
+  // @ts-ignore: In this case, type of `materials` must be object
+  material_segment = material_segment[name_segment]!
+}
 ---
 
-<div class="References" data-scope_name={scope_name} set:html={printed_bib[scope_name]}></div>
+<div class="References" data-scope_name={scope_name} data-material_segment={JSON.stringify(material_segment)} set:html={printed_bib[JSON.stringify(scope_name)]}></div>

@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础必修, ]
 ---
 
-import { printed_bib, mangled_references } from './data.ts'
+import { printed_bib, course_material, mangled_references } from './data.ts'
 import * as bib from '@/content/docs/bib.ts'
 import References from '@/components/References.astro'
 
@@ -14,7 +14,7 @@ import References from '@/components/References.astro'
 
 ## 教科书
 
-<References printed_bib={printed_bib} scope_name={JSON.stringify(['text', 'selected'])} />
+<References materials={course_material} printed_bib={printed_bib} scope_name={['text', 'selected']} />
 
 ### 说明
 
@@ -27,7 +27,7 @@ import References from '@/components/References.astro'
 
 ### 未被选择的书目
 
-<References printed_bib={printed_bib} scope_name={JSON.stringify(['text', 'excluded'])} />
+<References materials={course_material} printed_bib={printed_bib} scope_name={['text', 'excluded']} />
 
 #### 说明
 
@@ -37,7 +37,7 @@ import References from '@/components/References.astro'
 
 ## 其它参考
 
-<References printed_bib={printed_bib} scope_name={JSON.stringify(['other', 'text'])} />
+<References materials={course_material} printed_bib={printed_bib} scope_name={['other', 'text']} />
 
 ### 说明
 
