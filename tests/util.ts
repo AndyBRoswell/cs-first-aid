@@ -1,6 +1,7 @@
 import { test as base } from '@playwright/test'
 import pino from 'pino'
 import node_path from 'node:path'
+import * as cssesc from 'cssesc'
 
 export const pino_arg: pino.LoggerOptions = {
   level: process.env.log_level || 'info',
@@ -35,3 +36,5 @@ export const test = base.extend<Common_Fixture>({
     await use([])
   }
 })
+
+export const cssesc_options: Readonly<Partial<cssesc.Options>> = { quotes: 'double', }
