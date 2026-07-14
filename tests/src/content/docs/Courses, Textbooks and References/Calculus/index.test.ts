@@ -8,8 +8,8 @@ import cssesc from 'cssesc'
 
 const logger = pino(util.pino_arg)
 
-util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calculus' ] }, async ({ page, errors }) => {
-  await src_util.goto(page, errors, `${util.test_server}/courses-textbooks-and-references/calculus`)
+src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calculus' ] }, async ({ page }) => {
+  await page.goto(`${util.test_server}/courses-textbooks-and-references/calculus`)
 
   const main = page.getByRole('main')
 
