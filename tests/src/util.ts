@@ -1,4 +1,4 @@
-import { test as base, type Page, expect } from '@playwright/test'
+import { test as base, type Page, type Locator, expect } from '@playwright/test'
 
 export const test = base.extend({
   page: async ({ page }, use) => {
@@ -18,3 +18,7 @@ export const test = base.extend({
     await use(page)
   }
 })
+
+export async function everyone_occurs(locator: Locator, patterns: Iterable<string | RegExp>) {
+  for (const pattern of patterns) { await expect(locator).toHaveText(pattern) }
+}

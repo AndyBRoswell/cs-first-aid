@@ -29,17 +29,21 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
   await expect(heading).toHaveCount(1)
   section = section.locator('section', { has: page.getByRole('heading', { level: 3, name: '说明' }) }) // NOTE: the `Locator` passed to `has` must stem from `page`
   await expect(section).toHaveCount(1)
-  await expect(section).toHaveText(/《Calculus: A Complete Course》/)
-  await expect(section).toHaveText(/Single Variable Calculus/)
-  await expect(section).toHaveText(/《简明微积分》/)
+  await src_util.everyone_occurs(section, [
+    /《Calculus: A Complete Course》/,
+    /Single Variable Calculus/,
+    /《简明微积分》/,
+  ])
 
   CSS_escaped_scope_name = cssesc(JSON.stringify([ 'text', 'excluded', ]), util.cssesc_options)
   References = main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
   section = References.locator('..')
   heading = section.getByRole('heading', { level: 3, name: '未被选择的书目' })
   await expect(heading).toHaveCount(1)
-  await expect(section).toHaveText(/不低于同济大学数学系主编《高等数学》/)
-  await expect(section).toHaveText(/荣誉.*ECE.+EECS/)
+  await src_util.everyone_occurs(section, [
+    /不低于同济大学数学系主编《高等数学》/,
+    /荣誉.*ECE.+EECS/,
+  ])
 
   CSS_escaped_scope_name = cssesc(JSON.stringify([ 'other', 'text', ]), util.cssesc_options)
   References = main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
@@ -48,9 +52,11 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
   await expect(heading).toHaveCount(1)
   section = section.locator('section', { has: page.getByRole('heading', { level: 3, name: '说明' }) }) // NOTE: the `Locator` passed to `has` must stem from `page`
   await expect(section).toHaveCount(1)
-  await expect(section).toHaveText(/同济/)
-  await expect(section).toHaveText(/Thomas/)
-  await expect(section).toHaveText(/Apostol/)
+  await src_util.everyone_occurs(section, [
+    /同济/,
+    /Thomas/,
+    /Apostol/,
+  ])
 
   heading = main.getByRole('heading', { level: 1, name: '院校开课情况选讲' })
   await expect(heading).toHaveCount(1)
