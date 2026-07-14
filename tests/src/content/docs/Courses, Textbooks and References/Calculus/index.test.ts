@@ -3,8 +3,6 @@ import pino from 'pino'
 import * as util from '@tests/util.ts'
 import * as src_util from '@tests/src/util.ts'
 import * as course_util from '@tests/src/content/docs/Courses, Textbooks and References/util.ts'
-// @ts-ignore [css.escape doesn't have ts support]
-import cssesc from 'cssesc'
 
 const logger = pino(util.pino_arg)
 
@@ -17,13 +15,12 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
 
   await expect(main.locator('#_top')).toHaveText('微积分')
 
-  let section: Locator, heading: Locator, References: Locator, CSS_escaped_scope_name: string
+  let section: Locator, heading: Locator, References: Locator//, CSS_escaped_scope_name: string
 
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
 
-  CSS_escaped_scope_name = cssesc(JSON.stringify([ 'text', 'selected', ]), util.cssesc_options)
-  References = main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
+  References = await course_util.locate_references(main, [ 'text', 'selected' ])
   section = References.locator('..')
   heading = section.getByRole('heading', { level: 2, name: '教科书' })
   await expect(heading).toHaveCount(1)
@@ -35,8 +32,7 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
     /《简明微积分》/,
   ])
 
-  CSS_escaped_scope_name = cssesc(JSON.stringify([ 'text', 'excluded', ]), util.cssesc_options)
-  References = main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
+  References = await course_util.locate_references(main, [ 'text', 'excluded' ])
   section = References.locator('..')
   heading = section.getByRole('heading', { level: 3, name: '未被选择的书目' })
   await expect(heading).toHaveCount(1)
@@ -45,8 +41,7 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
     /荣誉.*ECE.+EECS/,
   ])
 
-  CSS_escaped_scope_name = cssesc(JSON.stringify([ 'other', 'text', ]), util.cssesc_options)
-  References = main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
+  References = await course_util.locate_references(main, [ 'other', 'text', ])
   section = References.locator('..')
   heading = section.getByRole('heading', { level: 2, name: '其它参考' })
   await expect(heading).toHaveCount(1)
