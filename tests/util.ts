@@ -1,4 +1,3 @@
-import { test as base } from '@playwright/test'
 import pino from 'pino'
 import node_path from 'node:path'
 import * as cssesc from 'cssesc'
@@ -21,20 +20,5 @@ export const project_root = node_path.resolve(import.meta.dirname, '..')
 export const source_root = node_path.resolve(project_root, 'src')
 export const test_root = node_path.resolve(project_root, 'tests')
 export const test_server = process.env.test_server || 'http://localhost:4321'
-
-export function on_pageerror(errors: Error[], error: Error) {
-  if (error.message.includes('error loading dynamically imported module')) return
-  errors.push(error)
-}
-
-export type Common_Fixture = {
-  errors: Error[],
-}
-
-export const test = base.extend<Common_Fixture>({
-  errors: async({}, use) => {
-    await use([])
-  }
-})
 
 export const cssesc_options: Readonly<Partial<cssesc.Options>> = { quotes: 'double', }
