@@ -1,10 +1,7 @@
 import { expect, type Locator } from '@playwright/test'
-import pino from 'pino'
 import * as util from '@tests/util.ts'
 import * as src_util from '@tests/src/util.ts'
 import * as course_util from '@tests/src/content/docs/Courses, Textbooks and References/util.ts'
-
-const logger = pino(util.pino_arg)
 
 src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calculus' ] }, async ({ page }) => {
   await page.goto(`${util.test_server}/courses-textbooks-and-references/calculus`)
@@ -15,7 +12,7 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
 
   await expect(main.locator('#_top')).toHaveText('微积分')
 
-  let section: Locator, heading: Locator, References: Locator//, CSS_escaped_scope_name: string
+  let section: Locator, heading: Locator, References: Locator
 
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
