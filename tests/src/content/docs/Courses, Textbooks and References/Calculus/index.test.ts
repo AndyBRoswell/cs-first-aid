@@ -1,6 +1,7 @@
 import { expect, type Locator } from '@playwright/test'
 import pino from 'pino'
 import * as util from '@tests/util.ts'
+import * as src_util from '@tests/src/util.ts'
 import * as data from "@/types/data.ts"
 // @ts-ignore [css.escape doesn't have ts support]
 import cssesc from 'cssesc'
@@ -8,10 +9,7 @@ import cssesc from 'cssesc'
 const logger = pino(util.pino_arg)
 
 util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calculus' ] }, async ({ page, errors }) => {
-  const response = await page.goto(`${util.test_server}/courses-textbooks-and-references/calculus`)
-  page.on('pageerror', (error: Error) => util.on_pageerror(errors, error))
-  expect(response!.status()).toBe(200)
-  expect(errors).toHaveLength(0)
+  await src_util.goto(page, errors, `${util.test_server}/courses-textbooks-and-references/calculus`)
 
   const main = page.getByRole('main')
 
