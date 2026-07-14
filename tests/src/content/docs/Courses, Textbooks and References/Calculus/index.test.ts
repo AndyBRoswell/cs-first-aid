@@ -42,7 +42,7 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
   section = References.locator('..')
   heading = section.getByRole('heading', { level: 2, name: '其它参考' })
   await expect(heading).toHaveCount(1)
-  section = section.locator('section', { has: page.getByRole('heading', { level: 3, name: '说明' }) }) // NOTE: the `Locator` passed to `has` must stem from `page`
+  section = section.locator('section', { has: page.getByRole('heading', { level: 3, name: '说明' }) })
   await expect(section).toHaveCount(1)
   await src_util.everyone_occurs(section, [
     /同济/,
@@ -52,4 +52,11 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
 
   heading = main.getByRole('heading', { level: 1, name: '院校开课情况选讲' })
   await expect(heading).toHaveCount(1)
+  section = heading.locator('xpath=ancestor::section[1]')
+  await src_util.everyone_occurs(section, [
+    /学期/,
+    /单变量微积分/,
+    /多变量微积分/,
+    /(矢量|向量)微积分/,
+  ])
 })
