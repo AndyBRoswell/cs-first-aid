@@ -19,6 +19,6 @@ export const test = base.extend({
   }
 })
 
-export async function everyone_occurs(locator: Locator, patterns: Iterable<string | RegExp>) {
+export async function everyone_occurs(locator: Locator, patterns: Iterable<string | RegExp>) { // expect these pattern occur in any sequence
   for (const pattern of patterns) { await expect(locator).toHaveText(pattern) }
 }
