@@ -16,4 +16,10 @@ src_util.test('Linear Algebra I', { tag: [ '@Courses, Textbooks and References',
 
   section = main.locator('section', { has: page.getByRole('heading', { level: 1, name: '学习材料' }) })
   await expect(section).toHaveCount(1)
+  section = section.locator('section', { has: page.getByRole('heading', { level: 2, name: '教科书' }) })
+  await expect(section).toHaveCount(1)
+  section = section.locator('section', { has: page.getByRole('heading', { level: 3, name: '中文' }) })
+  await expect(section).toHaveCount(1)
+  References = course_util.locate_references(section, [ 'text', 'zh' ])
+  await expect(References).toHaveCount(1)
 })
