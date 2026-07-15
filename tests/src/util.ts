@@ -22,3 +22,8 @@ export const test = base.extend({
 export async function everyone_occurs(locator: Locator, patterns: Iterable<string | RegExp>) { // expect these pattern occur in any sequence
   for (const pattern of patterns) { await expect(locator).toHaveText(pattern) }
 }
+
+export function locate_parent(from: Locator, tag_name: string, level: number) {
+  if (Number.isInteger(level) === false || level <= 0) { throw new Error('Level must be a positive integer.') }
+  return from.locator(`xpath=ancestor::${tag_name}[${level}]`)
+}
