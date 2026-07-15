@@ -10,58 +10,67 @@ import { I_printed_bib, I_course_material, I_mangled_references } from './data.t
 import * as bib from '@/content/docs/bib.ts'
 import References from '@/components/References.astro'
 
-# 学习材料
-
-## 教科书
-
-### 中文
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'text', 'zh' ]}/>
-
-### 英文
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'text', 'en' ]}/>
-
-### 说明
-
-基础必修课《线性代数I》的基准难度是：不低于 D. C. Lay et al., Linear Algebra and Its Applications{bib.cite(I_mangled_references, `D. C. Lay et al., Linear Algebra and Its Applications`)}。
-
-## 指导书
-
-### 中文
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'guide', 'zh' ]}/>
-
-## 公开课
-
-### 中文
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'open_course', 'zh' ]}/>
-
-## 其它参考
-
-### 教科书
-
-#### 中文
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'text', 'zh' ]}/>
-
-#### 英文
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'text', 'en' ]}/>
-
-### 指导书
-
-#### 中文
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'guide', 'zh' ]}/>
-
-### 习题集
-
-#### 中文
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
-
-### 视频
-
-<References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'video' ]}/>
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <section>
+      ### 中文
+      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'text', 'zh' ]}/>
+    </section>
+    <section>
+      ### 英文
+      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'text', 'en' ]}/>
+    </section>
+    <section>
+      ### 说明
+      基础必修课《线性代数I》的基准难度是：不低于 D. C. Lay et al., Linear Algebra and Its Applications{bib.cite(I_mangled_references, `D. C. Lay et al., Linear Algebra and Its Applications`)}。
+    </section>
+  </section>
+  <section>
+    ## 指导书
+    <section>
+      ### 中文
+      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'guide', 'zh' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 公开课
+    <section>
+      ### 中文
+      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'open_course', 'zh' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 其它参考
+    <section>
+      ### 教科书
+      <section>
+        #### 中文
+        <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'text', 'zh' ]}/>
+      </section>
+      <section>
+        #### 英文
+        <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'text', 'en' ]}/>
+      </section>
+    </section>
+    <section>
+      ### 指导书
+      <section>
+        #### 中文
+        <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'guide', 'zh' ]}/>
+      </section>
+    </section>
+    <section>
+      ### 习题集
+      <section>
+        #### 中文
+        <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
+      </section>
+    </section>
+    <section>
+      ### 视频
+      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'video' ]}/>
+    </section>
+  </section>
+</section>

@@ -10,44 +10,52 @@ import { printed_bib, course_material, } from './data.ts'
 import * as bib from '@/content/docs/bib.ts'
 import References from '@/components/References.astro'
 
-# 学习材料
-
-## 教科书
-
-### 中文
-
-<References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'text', 'zh' ]}/>
-
-### 英文
-
-<References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'text', 'en' ]}/>
-
-## 公开课
-
-### 中文
-
-<References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'open_course', 'zh' ]}/>
-
-## 学习指导
-
-### 中文
-
-<References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'guide', 'zh' ]}/>
-
-## 参考资料
-
-### 教科书
-
-#### 中文
-
-<References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'reference', 'text', 'zh' ]}/>
-
-#### 英文
-
-<References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'reference', 'text', 'en' ]}/>
-
-### 习题集
-
-#### 中文
-
-<References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <section>
+      ### 中文
+      <References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'text', 'zh' ]}/>
+    </section>
+    <section>
+      ### 英文
+      <References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'text', 'en' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 公开课
+    <section>
+      ### 中文
+      <References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'open_course', 'zh' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 学习指导
+    <section>
+      ### 中文
+      <References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'guide', 'zh' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 参考资料
+    <section>
+      ### 教科书
+      <section>
+        #### 中文
+        <References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'reference', 'text', 'zh' ]}/>
+      </section>
+      <section>
+        #### 英文
+        <References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'reference', 'text', 'en' ]}/>
+      </section>
+    </section>
+    <section>
+      ### 习题集
+      <section>
+        #### 中文
+        <References materials={course_material.Abstract_Algebra} printed_bib={printed_bib.Abstract_Algebra} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
+      </section>
+    </section>
+  </section>
+</section>

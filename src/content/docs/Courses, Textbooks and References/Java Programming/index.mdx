@@ -10,12 +10,14 @@ import { printed_bib, course_material } from './data.ts'
 import * as bib from '@/content/docs/bib.ts'
 import References from '@/components/References.astro'
 
-# 学习材料
-
-## 教科书
-
-<References materials={course_material} printed_bib={printed_bib} scope_name={[ 'text' ]}/>
-
-## 参考资料
-
-<References materials={course_material} printed_bib={printed_bib} scope_name={[ 'reference' ]}/>
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'text' ]}/>
+  </section>
+  <section>
+    ## 参考资料
+    <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'reference' ]}/>
+  </section>
+</section>
