@@ -52,7 +52,7 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
 
   heading = main.getByRole('heading', { level: 1, name: '院校开课情况选讲' })
   await expect(heading).toHaveCount(1)
-  section = heading.locator('xpath=ancestor::section[1]')
+  section = src_util.locate_parent(heading, 'section', 1)
   await src_util.everyone_occurs(section, [
     /学期/,
     /单变量微积分/,
