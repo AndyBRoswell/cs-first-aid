@@ -4,7 +4,7 @@ import * as data from "@/types/data.ts";
 import cssesc from "cssesc";
 import * as util from "@tests/util.ts";
 
-export async function locate_references(main: Locator, scope_name: data.Scope_Name) {
+export function locate_references(main: Locator, scope_name: data.Scope_Name) {
   const CSS_escaped_scope_name = cssesc(JSON.stringify(scope_name), util.cssesc_options)
   return main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
 }
