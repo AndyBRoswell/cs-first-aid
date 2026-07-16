@@ -12,7 +12,7 @@ src_util.test('Linear Algebra I', { tag: [ '@Courses, Textbooks and References',
 
   await expect(main.locator('#_top')).toHaveText(/线性代数\s*I/)
 
-  let section: Locator, heading: Locator, References: Locator
+  let section: Locator, References: Locator
 
   References = course_util.locate_references(main, [ 'text', 'zh' ])
   await src_util.everyone_occurs(References, [
