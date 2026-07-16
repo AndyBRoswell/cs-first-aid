@@ -12,61 +12,52 @@ src_util.test('Mathematical Analysis', { tag: [ '@Courses, Textbooks and Referen
 
   await expect(main.locator('#_top')).toHaveText('数学分析')
 
-  let section: Locator, heading: Locator, References: Locator
+  let heading: Locator, References: Locator
 
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
 
-  References = await course_util.locate_references(main, [ 'text', 'zh' ])
-  section = References.locator('..')
-  heading = section.getByRole('heading', { level: 3, name: '中文' })
-  await expect(heading).toHaveCount(1)
-  References = await course_util.locate_references(main, [ 'text', 'en' ])
-  section = References.locator('..')
-  heading = section.getByRole('heading', { level: 3, name: '英文' })
-  await expect(heading).toHaveCount(1)
-  section = section.locator('..')
-  heading = section.getByRole('heading', { level: 2, name: '教科书' })
-  await expect(heading).toHaveCount(1)
+  References = course_util.locate_references(main, [ 'text', 'zh' ])
+  await src_util.everyone_occurs(References, [
+    /史济怀/,
+    /陈纪修/,
+    /徐森林/,
+    /程艺/,
+    /张筑生/,
+    /数学分析教程/,
+    /数学分析讲义/,
+    /数学分析新讲/,
+  ])
 
-  References = await course_util.locate_references(main, [ 'open_course', 'zh' ])
-  section = References.locator('..')
-  heading = section.getByRole('heading', { level: 3, name: '中文' })
-  await expect(heading).toHaveCount(1)
-  section = section.locator('..')
-  heading = section.getByRole('heading', { level: 2, name: '公开课' })
-  await expect(heading).toHaveCount(1)
+  References = course_util.locate_references(main, [ 'text', 'en' ])
+  await src_util.everyone_occurs(References, [
+    /Hunter/,
+    /Abbott/,
+    /Pugh/,
+    /Applied Analysis/,
+    /Understanding Analysis/,
+    /Real Mathematical Analysis/,
+  ])
 
-  References = await course_util.locate_references(main, [ 'problem_set', 'zh' ])
-  section = References.locator('..')
-  heading = section.getByRole('heading', { level: 3, name: '中文' })
-  await expect(heading).toHaveCount(1)
-  section = section.locator('..')
-  heading = section.getByRole('heading', { level: 2, name: '习题集' })
-  await expect(heading).toHaveCount(1)
+  References = course_util.locate_references(main, [ 'open_course', 'zh' ])
+  await src_util.everyone_occurs(References, [
+    /史济怀/,
+    /陈纪修/,
+    /程艺/,
+  ])
 
-  References = await course_util.locate_references(main, [ 'reference', 'text', 'zh' ])
-  section = References.locator('..')
-  heading = section.getByRole('heading', { level: 4, name: '中文' })
-  await expect(heading).toHaveCount(1)
-  References = await course_util.locate_references(main, [ 'reference', 'text', 'en' ])
-  section = References.locator('..')
-  heading = section.getByRole('heading', { level: 4, name: '英文' })
-  await expect(heading).toHaveCount(1)
-  section = section.locator('..')
-  heading = section.getByRole('heading', { level: 3, name: '教科书' })
-  await expect(heading).toHaveCount(1)
-  References = await course_util.locate_references(main, [ 'reference', 'video', 'zh' ])
-  section = References.locator('..')
-  heading = section.getByRole('heading', { level: 4, name: '中文' })
-  await expect(heading).toHaveCount(1)
-  section = section.locator('..')
-  heading = section.getByRole('heading', { level: 3, name: '视频' })
-  await expect(heading).toHaveCount(1)
-  section = section.locator('..')
-  heading = section.getByRole('heading', { level: 2, name: '参考资料' })
-  await expect(heading).toHaveCount(1)
+  References = course_util.locate_references(main, [ 'problem_set', 'zh' ])
+  await src_util.everyone_occurs(References, [
+    /陈纪修/,
+    /徐森林/,
+  ])
 
-  heading = main.getByRole('heading', { level: 1, name: '院校开课情况选讲' })
-  await expect(heading).toHaveCount(1)
+  References = course_util.locate_references(main, [ 'reference', 'video', 'zh' ])
+  await src_util.everyone_occurs(References, [
+    /我真的不懂分析/,
+    /分析学爱好者/,
+    /选择/,
+    /常见/,
+    /丘班/,
+  ])
 })
