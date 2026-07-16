@@ -1,5 +1,4 @@
 import { defineConfig } from "astro/config"
-import preact from "@astrojs/preact"
 import starlight from "@astrojs/starlight"
 import fast_glob from 'fast-glob'
 import { Preface } from "./src/components/sidebar/前言.ts"
@@ -33,7 +32,6 @@ function import_course_materials() {
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    preact(),
     starlight({
       title: {
         'zh-CN': '计算机科学急救指南',
