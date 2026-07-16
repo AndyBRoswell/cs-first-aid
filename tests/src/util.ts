@@ -23,7 +23,7 @@ export async function everyone_occurs(locator: Locator, patterns: Iterable<strin
   for (const pattern of patterns) { await expect(locator).toHaveText(pattern) }
 }
 
-export function locate_parent(from: Locator, tag_name: string, level: number) {
+export function locate_parent(from: Locator, tag_name: string, level: number = 1) {
   if (Number.isInteger(level) === false || level <= 0) { throw new Error('Level must be a positive integer.') }
   return from.locator(`xpath=ancestor::${tag_name}[${level}]`)
 }
