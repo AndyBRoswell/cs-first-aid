@@ -1,7 +1,7 @@
 import { expect, type Locator } from '@playwright/test'
 import * as util from '@tests/util.ts'
-import * as src_util from '@tests/src/util.ts'
-import * as course_util from '@tests/src/content/docs/Courses, Textbooks and References/util.ts'
+import * as src_util from '@tests/e2e/src/util.ts'
+import * as course_util from '@tests/e2e/src/content/docs/Courses, Textbooks and References/util.ts'
 
 src_util.test('Linear Algebra I', { tag: [ '@Courses, Textbooks and References', '@Linear Algebra I', '@Linear Algebra', '@LinAlg', ] }, async ({ page }) => {
   await page.goto(`${util.test_server}/courses-textbooks-and-references/linear-algebra/i`)
