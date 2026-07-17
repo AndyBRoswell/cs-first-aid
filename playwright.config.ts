@@ -13,7 +13,7 @@ import node_os from 'node:os'
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir: './tests/e2e',
   timeout: 0, // See https://playwright.dev/docs/test-timeouts
   /* Run tests in files in parallel */
   fullyParallel: true,
