@@ -22,7 +22,6 @@
   "dependencies": {
     "@astrojs/check": "^0.9.2",
     "@astrojs/compiler-rs": "^0.3.0",
-    "@astrojs/preact": "^5.1.0",
     "@astrojs/starlight": "^0.41.3",
     "@citation-js/core": "^0.8.2",
     "@citation-js/plugin-csl": "^0.8.2",
