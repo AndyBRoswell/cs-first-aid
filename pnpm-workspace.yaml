@@ -1,0 +1,3 @@
+allowBuilds:
+  citation-js: true
+  esbuild: true
