@@ -30,12 +30,12 @@ export type params_of_canonical_ID_enumeration = {
   group: (keyof ID_object)[][]
   optional?: boolean
   values?: {
-    unordered_author?: (ID_object['unordered_author'] | CSL_Data.Item['author'])[]
-    ordered_author?: (ID_object['ordered_author'] | CSL_Data.Item['author'])[]
+    unordered_author?: (ID_object['unordered_author'])[]
+    ordered_author?: (ID_object['ordered_author'])[]
     title?: (ID_object['title'])[]
     subtitle?: (ID_object['subtitle'])[]
     edition?: (ID_object['edition'])[]
-    date?: (ID_object['date'] | CSL_Data.Item['issued'])[]
+    date?: (ID_object['date'])[]
     volume?: (ID_object['volume'])[]
     part?: (ID_object['part'])[]
     type?: (ID_object['type'])[]
