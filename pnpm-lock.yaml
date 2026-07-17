@@ -54,9 +54,6 @@ importers:
       '@types/node':
         specifier: ^26.0.0
         version: 26.1.1
-      '@types/pino':
-        specifier: ^7.0.4
-        version: 7.0.4
       cssesc:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1189,9 +1186,6 @@ packages:
 
   '@types/node@26.1.1':
     resolution: {integrity: sha512-nxAkRSVkN1Y0JC1W8ky/fTfkGsMmcrRsbx+3XoZE+rMOX71kLYTV7fLXpqud1GpbpP5TuffXFqfX7fH2GgZREw==}
-
-  '@types/pino@7.0.4':
-    resolution: {integrity: sha512-yKw1UbZOTe7vP1xMQT+oz3FexwgIpBTrM+AC62vWgAkNRULgLTJWfYX+H5/sKPm8VXFbIcXkC3VZPyuaNioZFg==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -4099,10 +4093,6 @@ snapshots:
   '@types/node@26.1.1':
     dependencies:
       undici-types: 8.3.0
-
-  '@types/pino@7.0.4':
-    dependencies:
-      pino: 10.3.1
 
   '@types/sax@1.2.7':
     dependencies:
