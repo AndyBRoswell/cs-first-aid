@@ -1,7 +1,7 @@
 import { test, expect } from 'vitest';
 import fast_cartesian from 'fast-cartesian';
 
-test('fast-cartesian', { tag: [ 'fast-cartesian', ] }, () => {
+test('fast-cartesian', { tags: [ 'fast-cartesian', ] }, () => {
   // https://github.com/ehmicky/fast-cartesian/blob/main/README.md
   let sets: any[][], expected, actual
 
