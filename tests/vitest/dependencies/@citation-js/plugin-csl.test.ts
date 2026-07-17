@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from 'vitest';
 
 // @ts-ignore [citation-js doesn't have ts support]
 import citation_js from "@citation-js/core";
@@ -26,7 +26,7 @@ const cite = new citation_js.Cite([
   { id: 'c', title: 'Item C', issued: { 'date-parts': [ [ 2018 ] ] } }
 ])
 
-test('@citation-js/plugin-csl.output.citation', { tag: [ '@citation-js/plugin-csl.output.citation', ], }, () => {
+test('@citation-js/plugin-csl.output.citation', { tags: [ '@citation-js/plugin-csl.output.citation', ], }, () => {
   expect(node_html_parser.parse(cite.format('citation')).textContent).toEqual('(Item A, 2016; Item B, 2017; Item C, 2018)')
   expect(node_html_parser.parse(cite.format('citation', { entry: [ 'a', 'b' ] })).textContent).toEqual('(Item A, 2016; Item B, 2017)')
   expect(node_html_parser.parse(cite.format('citation', { entry: 'a' })).textContent).toEqual('(Item A, 2016)')
