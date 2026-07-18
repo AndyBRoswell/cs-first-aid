@@ -44,7 +44,7 @@ export type Scope_Name = string[]
 export type Serialized_Scope_Name = Stringified_JSON
 export type Segment_Of_Scope_Name = string
 export type Scoped_References = Material[] | { [key: Segment_Of_Scope_Name]: Material[] | Scoped_References }
-export type Scoped_ID_t = { ID: ID_t, scope?: Serialized_Scope_Name }
+export type Scoped_ID_t = { ID: ID_t, scope: Serialized_Scope_Name }
 
 export type Course = {
   canonical_name?: string
