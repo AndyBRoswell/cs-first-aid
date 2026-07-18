@@ -29,7 +29,10 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
   await expect(section).toHaveCount(1)
   await src_util.everyone_occurs(section, [
     /《Calculus: A Complete Course》/,
-    /Single Variable Calculus/,
+    /XB_41007/,
+    /XB_41008/,
+    /2WBB0/,
+    /2WCB0/,
     /《简明微积分》/,
   ])
 
