@@ -2,7 +2,7 @@
 node_modules/
 .idea/
 .astro/
-.dist
+dist/
 
 # Playwright
 /test-results/
