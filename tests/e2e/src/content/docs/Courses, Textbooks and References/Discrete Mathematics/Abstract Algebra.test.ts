@@ -1,6 +1,7 @@
 import { expect, type Locator } from '@playwright/test'
 import * as util from '@tests/util.ts'
 import * as src_util from '@tests/e2e/src/util.ts'
+import * as docs_util from '@tests/e2e/src/content/docs/util.ts'
 import * as course_util from '@tests/e2e/src/content/docs/Courses, Textbooks and References/util.ts'
 
 src_util.test('Abstract Algebra', { tag: [ '@Courses, Textbooks and References', '@Discrete Mathematics', '@Abstract Algebra' ] }, async ({ page }) => {
@@ -10,7 +11,7 @@ src_util.test('Abstract Algebra', { tag: [ '@Courses, Textbooks and References',
 
   await course_util.check_references(main)
 
-  await expect(main.locator('#_top')).toHaveText(/抽象代数/)
+  await docs_util.check_title(main, /抽象代数/)
 
   let section: Locator, heading: Locator, References: Locator
 
