@@ -67,7 +67,7 @@ export function mangle_references(references: Scoped_References): Mangled_Refere
 export function print_bibliography(mangled: Mangled_References): Printed_Bibliography {
   const raw_bib = mangled.flattened.format('bibliography', prettified_default_bib_style)
   const original_HTML_root = node_html_parser.parse(raw_bib)
-  const csl_entry = original_HTML_root.querySelectorAll('[class="csl-entry"]')
+  const csl_entry = original_HTML_root.querySelectorAll('.csl-entry')
   const partitioned_bib: Printed_Bibliography = {}
   for (const [ key, value ] of Object.entries(mangled.range)) {
     const [ start, end ] = value
