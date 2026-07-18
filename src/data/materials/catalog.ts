@@ -29,18 +29,7 @@ export function canonical_ID(ID: ID_t): ID_primitive {
 export type params_of_canonical_ID_enumeration = {
   group: (keyof ID_object)[][]
   optional?: boolean
-  values?: {
-    unordered_author?: (ID_object['unordered_author'])[]
-    ordered_author?: (ID_object['ordered_author'])[]
-    title?: (ID_object['title'])[]
-    subtitle?: (ID_object['subtitle'])[]
-    edition?: (ID_object['edition'])[]
-    date?: (ID_object['date'])[]
-    volume?: (ID_object['volume'])[]
-    part?: (ID_object['part'])[]
-    type?: (ID_object['type'])[]
-    note?: (ID_object['note'])[]
-  }
+  values?: { [key in keyof ID_object]?: { value: ID_object[key][], override?: boolean } }
 }[]
 
 export function enumerate_canonical_IDs(
