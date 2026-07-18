@@ -80,14 +80,14 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
 }
 
 // It seems citation.js can't number the citations correctly when using IEEE style. Implemented it from scratch instead.
-export function cite(mangled: Mangled_References, IDs: (ID_t | Scoped_ID_t) | (ID_t | Scoped_ID_t)[]): string {
+// todo: add locator
+export function cite(mangled: Mangled_References, IDs: (ID_t | Scoped_ID_t)[]): string { // mimic \cite[]{}
   const indices: number[] = []
-  if (Array.isArray(IDs)) { for (const ID of IDs) { indices.push(_cite(mangled, ID)) } }
-  else { indices.push(_cite(mangled, IDs)) }
+  for (const ID of IDs) { indices.push(cite_one(mangled, ID)) }
   return `[${indices.join('][')}]`
 }
 
-function _cite(mangled: Mangled_References, ID: (ID_t | Scoped_ID_t)): number {
+function cite_one(mangled: Mangled_References, ID: (ID_t | Scoped_ID_t)): number {
   let search_scope: [ number, number ]
   let NID: ID_t // normalized ID
   if (typeof ID === 'object' && "ID" in ID) { // Scoped_ID_t

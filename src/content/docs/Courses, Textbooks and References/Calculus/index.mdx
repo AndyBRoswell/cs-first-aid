@@ -17,12 +17,12 @@ import References from '@/components/References.astro'
     <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'text', 'selected' ]}/>
     <section>
       ### 说明
-      - 《Calculus: A Complete Course》{bib.cite(mangled_references, 'Calculus: A Complete Course')}为首选，此书为多所院校数学系或数学要求较高的理工类专业采用。
+      - 《Calculus: A Complete Course》{bib.cite(mangled_references, [ 'Calculus: A Complete Course' ])}为首选，此书为多所院校数学系或数学要求较高的理工类专业采用。
         - [Single Variable Calculus (XB_41007) @ VU](https://studiegids.vu.nl/en/Bachelor/2025-2026/mathematics/XB_41007)
         - [Multivariable Calculus (XB_41008) @ VU](https://studiegids.vu.nl/en/Bachelor/2025-2026/mathematics/XB_41008)
         - [Calculus Variant 2 (2WBB0) @ TU/e](https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=2WBB0&collegejaar=2025)
         - [Calculus Variant 3 (2WCB0) @ TU/e](https://tue.osiris-student.nl/onderwijscatalogus/extern/cursus?cursuscode=2WCB0&collegejaar=2025)
-      - 龚昇《简明微积分》{bib.cite(mangled_references, '简明微积分')}对于基础相对薄弱的同学可能较难。
+      - 龚昇《简明微积分》{bib.cite(mangled_references, [ '简明微积分' ])}对于基础相对薄弱的同学可能较难。
     </section>
     <section>
       ### 未被选择的书目
@@ -30,7 +30,7 @@ import References from '@/components/References.astro'
       <section>
         #### 说明
         - 本项目推荐的基础必修课《微积分》的难度基准是：不低于同济大学数学系主编《高等数学》{bib.cite(mangled_references, [ `同济高数上`, `同济高数下`, ])}。
-        - Stewart 微积分{bib.cite(mangled_references, [ `Stewart Calculus`, `Stewart Calculus Early Transcendentals` ])}、Princeton 微积分读本{bib.cite(mangled_references, `Princeton Calculus Reader`)}的难度低于同济高数。
+        - Stewart 微积分{bib.cite(mangled_references, [ `Stewart Calculus`, `Stewart Calculus Early Transcendentals` ])}、Princeton 微积分读本{bib.cite(mangled_references, [ 'Princeton Calculus Reader' ])}的难度低于同济高数。
         - 再次强调：本项目总体的难度基准为**荣誉ECE/EECS项目**。
       </section>
     </section>
