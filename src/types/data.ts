@@ -7,14 +7,14 @@ export type ID_object =
     | { unordered_author?: never, ordered_author?: string | string[], }
     )
   & {
-  title?: string
-  subtitle?: string
-  edition?: string | number
+  title?: CSL_Data.Item['title']
+  subtitle?: CSL_Data.Custom['subtitle']
+  edition?: CSL_Data.Item['edition']
   date?: string | number
-  volume?: string | number
-  part?: string | number
-  type?: string
-  note?: string
+  volume?: CSL_Data.Item['volume']
+  part?: CSL_Data.Item['part']
+  type?: CSL_Data.Item['type']
+  note?: CSL_Data.Item['note']
 }
 export const legal_keys_of_ID_object = [
   'unordered_author',
