@@ -62,7 +62,7 @@ export function enumerate_canonical_IDs(
           case 'date':
             break // todo: use citation-js to print bib for a dummy item
           default:
-            break
+            break // todo
         }
       }
     }
