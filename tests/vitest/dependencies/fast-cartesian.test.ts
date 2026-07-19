@@ -2,9 +2,9 @@ import { test, expect } from 'vitest';
 import fast_cartesian from 'fast-cartesian';
 
 test('fast-cartesian', { tags: [ 'fast-cartesian', ] }, () => {
-  // https://github.com/ehmicky/fast-cartesian/blob/main/README.md
   let sets: any[][], expected, actual
 
+  // https://github.com/ehmicky/fast-cartesian/blob/main/README.md
   sets = [
     [ 'red', 'blue' ],
     [ 'circle', 'square' ],
@@ -30,6 +30,7 @@ test('fast-cartesian', { tags: [ 'fast-cartesian', ] }, () => {
   ]
   expect(actual).toEqual(expected)
 
+  // examples from this project
   sets = [
     [
       [ 'G1C1c1', 'G1C1c2' ],
@@ -65,6 +66,42 @@ test('fast-cartesian', { tags: [ 'fast-cartesian', ] }, () => {
     [
       [ 'G1C2c1', 'G1C2c2', 'G1C2c3', 'G1C2c4', ], [ 'G2C3c1', 'G2C3c2' ], [ 'G3C1c1' ],
     ],
+  ]
+  expect(actual).toEqual(expected)
+
+  sets = [
+    [ [ 'unordered_author' ], [ 'ordered_author' ] ],
+    [ [ 'title', 'subtitle' ] ],
+    [ [ 'edition' ], [ 'date' ] ],
+    [ [ 'volume', 'part' ] ]
+  ]
+  actual = fast_cartesian(sets)
+  expected = [
+    [
+      [ 'unordered_author' ], [ 'title', 'subtitle' ], [ 'edition' ], [ 'volume', 'part' ]
+    ],
+    [
+      [ 'unordered_author' ], [ 'title', 'subtitle' ], [ 'date' ], [ 'volume', 'part' ]
+    ],
+    [
+      [ 'ordered_author' ], [ 'title', 'subtitle' ], [ 'edition' ], [ 'volume', 'part' ]
+    ],
+    [
+      [ 'ordered_author' ], [ 'title', 'subtitle' ], [ 'date' ], [ 'volume', 'part' ]
+    ],
+  ]
+  expect(actual).toEqual(expected)
+
+  sets = [
+    [ true ],
+    [ true ],
+    [ true, false ],
+    [ true ],
+  ]
+  actual = fast_cartesian(sets)
+  expected = [
+    [ true, true, true, true ],
+    [ true, true, false, true ]
   ]
   expect(actual).toEqual(expected)
 })
