@@ -22,3 +22,6 @@ export const test_root = node_path.resolve(project_root, 'tests')
 export const test_server = process.env.test_server || 'http://localhost:4321'
 
 export const cssesc_options: Readonly<Partial<cssesc.Options>> = { quotes: 'double', }
+
+export const linesep = /\r\n?|\n/
+export const linesep_stripper = /[\r\n]+/
