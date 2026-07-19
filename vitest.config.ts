@@ -14,6 +14,15 @@ export default defineConfig({
       {
         name: 'cssesc',
       },
+      {
+        name: 'IEEE.custom.csl',
+      },
+      {
+        name: 'get_rendered_author.csl',
+      },
+      {
+        name: 'src/data/materials/get_rendered_author.csl',
+      },
     ],
   },
   resolve: {

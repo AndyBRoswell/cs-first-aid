@@ -19,14 +19,13 @@ const prettified_default_bib_style: object = {
   hyperlinks: true,
 }
 
-// https://citation.js.org/api/0.7/module-@citation-js_plugin-csl.output.html
-const cite = new citation_js.Cite([
-  { id: 'a', title: 'Item A', issued: { 'date-parts': [ [ 2016 ] ] } },
-  { id: 'b', title: 'Item B', issued: { 'date-parts': [ [ 2017 ] ] } },
-  { id: 'c', title: 'Item C', issued: { 'date-parts': [ [ 2018 ] ] } }
-])
-
-test('@citation-js/plugin-csl.output.citation', { tags: [ '@citation-js/plugin-csl.output.citation', ], }, () => {
+test('@citation-js/plugin-csl.output.citation', { tags: [ '@citation-js/plugin-csl.output.citation', 'IEEE.custom.csl' ], }, () => {
+  // https://citation.js.org/api/0.7/module-@citation-js_plugin-csl.output.html
+  const cite = new citation_js.Cite([
+    { id: 'a', title: 'Item A', issued: { 'date-parts': [ [ 2016 ] ] } },
+    { id: 'b', title: 'Item B', issued: { 'date-parts': [ [ 2017 ] ] } },
+    { id: 'c', title: 'Item C', issued: { 'date-parts': [ [ 2018 ] ] } }
+  ])
   expect(node_html_parser.parse(cite.format('citation')).textContent).toEqual('(Item A, 2016; Item B, 2017; Item C, 2018)')
   expect(node_html_parser.parse(cite.format('citation', { entry: [ 'a', 'b' ] })).textContent).toEqual('(Item A, 2016; Item B, 2017)')
   expect(node_html_parser.parse(cite.format('citation', { entry: 'a' })).textContent).toEqual('(Item A, 2016)')
@@ -36,3 +35,4 @@ test('@citation-js/plugin-csl.output.citation', { tags: [ '@citation-js/plugin-c
     ...prettified_default_bib_style
   })).textContent).toEqual('[1, p. 1234]')
 })
+
