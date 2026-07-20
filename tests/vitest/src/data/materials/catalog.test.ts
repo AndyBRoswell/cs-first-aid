@@ -5,7 +5,7 @@ import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import node_fs from 'node:fs'
 import node_path from 'node:path'
-import * as util from '@tests/util.ts'
+import * as util from '@/util.ts'
 import * as CSL_data from '@/types/CSL_data.ts'
 
 const CSL_config = citation_js.plugins.config.get('@csl')

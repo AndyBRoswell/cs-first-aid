@@ -1,5 +1,5 @@
 import { expect, type Locator } from '@playwright/test'
-import * as util from '@tests/util.ts'
+import * as util from '@/util.ts'
 import * as src_util from '@tests/e2e/src/util.ts'
 import * as docs_util from '@tests/e2e/src/content/docs/util.ts'
 import * as course_util from '@tests/e2e/src/content/docs/Courses, Textbooks and References/util.ts'

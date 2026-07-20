@@ -6,7 +6,7 @@ import '@citation-js/plugin-csl'
 import node_fs from 'node:fs'
 import node_path from 'node:path'
 import node_html_parser from 'node-html-parser'
-import * as util from '@tests/util.ts'
+import * as util from '@/util.ts'
 
 const CSL_config = citation_js.plugins.config.get('@csl')
 const default_bib_style_name = 'IEEE Custom'
