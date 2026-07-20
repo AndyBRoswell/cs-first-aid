@@ -4,6 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 import Cartesian_product from "fast-cartesian";
 import node_fs_promises from 'node:fs/promises';
 import node_path from 'node:path'
+import _ from 'lodash-es'
 import * as util from '@/util.ts'
 
 const m = new Map<ID_t, Material>
@@ -108,5 +109,6 @@ export function get(ID: ID_t): Material {
 }
 
 export async function dump(output_path = node_path.join(util.project_root, 'local/course_materials.json')) {
-  await node_fs_promises.writeFile(output_path, JSON.stringify(Array.from(m.values()), null, 2), 'utf8');
+  const dedup_values = _.uniqWith(Array.from(m.values()), _.isEqual)
+  await node_fs_promises.writeFile(output_path, JSON.stringify(dedup_values, null, 2), 'utf8');
 }
