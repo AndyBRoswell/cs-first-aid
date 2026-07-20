@@ -1,9 +1,10 @@
 import { expect } from '@playwright/test';
 import pino from 'pino'
-import * as util from '@/util.ts'
+import * as common_util from '@/util.ts'
+import * as util from '@tests/util.ts'
 import * as src_util from '@tests/e2e/src/util.ts'
 
-const logger = pino(util.pino_arg)
+const logger = pino(common_util.pino_arg)
 
 src_util.test('course list', { tag: [ '@Courses, Textbooks and References', '@course list' ] }, async ({ page, context }) => {
   const prefix: string = `${util.test_server}/courses-textbooks-and-references`

@@ -2,6 +2,9 @@ import type { ID_t, Entry, Material, ID_primitive, ID_object } from "@/types/dat
 import { legal_keys_of_ID_object } from "@/types/data.ts";
 import * as CSL_Data from '@/types/CSL_data.ts'
 import Cartesian_product from "fast-cartesian";
+import node_fs_promises from 'node:fs/promises';
+import node_path from 'node:path'
+import * as util from '@/util.ts'
 
 const m = new Map<ID_t, Material>
 
@@ -102,4 +105,8 @@ export function get(ID: ID_t): Material {
   const CID = canonical_ID(ID)
   if (m.has(CID)) { return m.get(CID)! }
   else { throw new Error(`Failed to fetch any entry with ID ${JSON.stringify(ID, null, 2)}`) }
+}
+
+export async function dump(output_path = node_path.join(util.project_root, 'local/course_materials.json')) {
+  await node_fs_promises.writeFile(output_path, JSON.stringify(Array.from(m.values()), null, 2), 'utf8');
 }

@@ -3,6 +3,7 @@ node_modules/
 .idea/
 .astro/
 dist/
+local/
 
 # Playwright
 /test-results/

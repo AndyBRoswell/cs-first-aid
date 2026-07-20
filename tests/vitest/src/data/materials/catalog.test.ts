@@ -5,11 +5,12 @@ import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import node_fs from 'node:fs'
 import node_path from 'node:path'
-import * as util from '@/util.ts'
+import * as common_util from '@/util.ts'
+import * as test_util from '@tests/util.ts'
 import * as CSL_data from '@/types/CSL_data.ts'
 
 const CSL_config = citation_js.plugins.config.get('@csl')
-const get_rendered_author = node_fs.readFileSync(node_path.resolve(util.source_root, 'data/materials/get_rendered_author.csl'), 'utf8')
+const get_rendered_author = node_fs.readFileSync(node_path.resolve(test_util.source_root, 'data/materials/get_rendered_author.csl'), 'utf8')
 CSL_config.styles.add('get_rendered_author', get_rendered_author)
 
 test('src/data/materials/get_rendered_author.csl', { tags: [ 'src/data/materials/get_rendered_author.csl' ] }, () => {
@@ -92,6 +93,6 @@ test('src/data/materials/get_rendered_author.csl', { tags: [ 'src/data/materials
   const items = []
   for (const [ index, name ] of names.entries()) { items.push({ id: index, author: name.original }) }
   const cite = new citation_js.Cite(items)
-  const output = cite.format('bibliography', style).split(util.linesep_stripper)
+  const output = cite.format('bibliography', style).split(common_util.linesep_stripper)
   for (const [ index, name ] of names.entries()) { expect(output[index]).toBe(name.rendered) }
 })
