@@ -4,8 +4,11 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 import Cartesian_product from "fast-cartesian";
 import node_fs_promises from 'node:fs/promises';
 import node_path from 'node:path'
+import pino from 'pino'
 import _ from 'lodash-es'
 import * as util from '@/util.ts'
+
+const logger = pino(util.pino_arg)
 
 const m = new Map<ID_t, Material>
 
@@ -113,5 +116,6 @@ export async function dump_locally(output_path = node_path.join(util.project_roo
     await node_fs_promises.mkdir(node_path.dirname(output_path), { recursive: true })
     const dedup_values = _.uniqWith(Array.from(m.values()), _.isEqual)
     await node_fs_promises.writeFile(output_path, JSON.stringify(dedup_values, null, 2), 'utf8');
+    logger.info(`All imported materials saved at ${output_path}`)
   }
 }
