@@ -28,36 +28,47 @@ export function canonical_ID(ID: ID_t): ID_primitive {
 }
 
 export type params_of_canonical_ID_enumeration = {
-  choice: (keyof ID_object)[][]
+  choices: (keyof ID_object)[][]
   optional?: boolean
   values?: { [key in keyof ID_object]?: { value: ID_object[key][], override?: boolean } } // todo: handle extra values/values used to override
 }[]
 
 export function enumerate_canonical_IDs(
   groups: params_of_canonical_ID_enumeration = [
-    { choice: [ [ 'unordered_author' ], [ 'ordered_author' ] ] },
-    { choice: [ [ 'title', 'subtitle' ] ] },
-    { choice: [ [ 'edition' ], [ 'date' ] ], optional: true, },
-    { choice: [ [ 'volume', 'part' ] ] },
+    { choices: [ [ 'unordered_author' ], [ 'ordered_author' ] ] },
+    { choices: [ [ 'title', 'subtitle' ] ] },
+    { choices: [ [ 'edition' ], [ 'date' ] ], optional: true, },
+    { choices: [ [ 'volume', 'part' ] ] },
   ],
   material?: Material,
 ): ID_t[] {
   const ret: ID_t[] = []
+
+  // A task represents a combination of enabled groups.
   const enum_task_components = new Array<boolean[]>(groups.length).fill([])
   for (const [ index, group ] of groups.entries()) {
     enum_task_components[index]!.push(true)
     if (group.optional === true) { enum_task_components[index]!.push(false) }
   }
   const enum_tasks = Cartesian_product(enum_task_components) // ex. TTTT and TTFT for the default of `groups`
+
   for (const task of enum_tasks) {
-    const target_choices = []
-    for (const [ index, enabled ] of task.entries()) { if (enabled) { target_choices.push(groups[index]!.choice) } }
-    let ID_component_combinations = Cartesian_product(target_choices)
-    for (const combination of ID_component_combinations) {
-      const ID: ID_t = {}
-      for (const component in combination) {
-        switch (component) {
-          case 'unordered_author': case 'ordered_author':
+    // Each group may have multiple choices. Only 1 choice can be picked for each group during a task.
+    const current_target_choices = []
+    for (const [ index, enabled ] of task.entries()) { if (enabled) { current_target_choices.push(groups[index]!.choices) } } // Pick selected (enabled) groups of this task.
+
+    // Generate all possible combinations of key choices according to the current enabled groups,
+    // e.g.
+    //  [['unordered_author'], ['title', 'subtitle'], ['edition'], ['volume', 'part']]
+    //  [['unordered_author'], ['title', 'subtitle'], ['date'],    ['volume', 'part']]
+    //  ...
+    let key_combis = Cartesian_product(current_target_choices)
+    for (const key_combi of key_combis) {
+      const ID: ID_object = {}
+      for (const key in key_combi) {
+        switch (key) {
+          case 'unordered_author':
+          case 'ordered_author':
             break // todo: use citation-js to print bib for a dummy item
           case 'date':
             break // todo: use citation-js to print bib for a dummy item
