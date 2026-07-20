@@ -108,7 +108,10 @@ export function get(ID: ID_t): Material {
   else { throw new Error(`Failed to fetch any entry with ID ${JSON.stringify(ID, null, 2)}`) }
 }
 
-export async function dump(output_path = node_path.join(util.project_root, 'local/course_materials.json')) {
-  const dedup_values = _.uniqWith(Array.from(m.values()), _.isEqual)
-  await node_fs_promises.writeFile(output_path, JSON.stringify(dedup_values, null, 2), 'utf8');
+export async function dump(output_path = node_path.join(util.project_root, 'local/materials.json')) {
+  if (!process.env.CI && process.env.export_materials) {
+    await node_fs_promises.mkdir(node_path.dirname(output_path), { recursive: true })
+    const dedup_values = _.uniqWith(Array.from(m.values()), _.isEqual)
+    await node_fs_promises.writeFile(output_path, JSON.stringify(dedup_values, null, 2), 'utf8');
+  }
 }
