@@ -1,4 +1,3 @@
-// const course_materials = import.meta.glob('./src/data/materials/*.ts', { eager: true });
-// console.log(course_materials)
+const course_materials = import.meta.glob('../materials/*.ts', { eager: true });
 
-import 'virtual:import-course-materials'
+// import 'virtual:import-course-materials'

@@ -10,6 +10,11 @@ import { FAQ } from "./src/components/sidebar/常见问题.ts"
 import { Recommended_Reading_Materials } from "./src/components/sidebar/推荐读物.ts"
 import { Epilog } from "./src/components/sidebar/后记.ts"
 
+/**
+ * @deprecated
+ * This plugin is no longer used. See `@/data/courses/import course materials.ts`.
+ * Previously `import.meta.glob` didn't work due to unknown reasons so this Vite plugin was used as a workaround.
+ */
 function import_course_materials() {
   const virtualId = 'virtual:import-course-materials'
   const resolvedId = '\0' + virtualId
@@ -76,8 +81,6 @@ export default defineConfig({
     })
   ],
   vite: {
-    plugins: [
-      import_course_materials(),
-    ]
+    plugins: []
   },
 });
