@@ -9,24 +9,20 @@ export const info = {
   material: {
     text: {
       selected: [
-        catalog.get('Adams Calculus'),
-        catalog.get('简明微积分'),
+        ...catalog.all().filter(material => /Calculus: A Complete Course/.test(material.title!)),
+        ...catalog.all().filter(material => /简明微积分/.test(material.title!)),
       ],
       excluded: [
-        catalog.get('Stewart Calculus'),
-        catalog.get('Stewart Calculus Early Transcendentals'),
+        ...catalog.all().filter(material => /Stewart Calculus/.test(material.title!)),
         catalog.get('Princeton Calculus Reader'),
       ],
     },
     other: {
       text: [
-        catalog.get('同济高数上'),
-        catalog.get('同济高数下'),
-        catalog.get('Apostol Calculus I'),
-        catalog.get('Apostol Calculus II'),
-        catalog.get('Thomas Calculus'),
-        catalog.get('Thomas Calculus Early Transcendentals'),
-        catalog.get('Strang Calculus'),
+        ...catalog.all().filter(material => material.author?.length === 1 && /^同济大学数学/.test(material.author![0]!.literal!) && /高等数学/.test(material.title!)),
+        ...catalog.all().filter(material => material.author?.length === 1 && /Apostol/.test(material.author![0]!.family!) && /^Calculus$/i.test(material.title!)),
+        ...catalog.all().filter(material => /Thomas Calculus/i.test(material.title!)),
+        ...catalog.all().filter(material => material.author?.length === 1 && /Strang/.test(material.author![0]!.family!) && /Calculus/i.test(material.title!)),
       ]
     },
   }
