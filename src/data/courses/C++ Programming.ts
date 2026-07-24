@@ -9,13 +9,13 @@ export const I_info = {
   material: {
     text: [
       catalog.get('PPP3'),
-      catalog.get({ unordered_author: 'B. Stroustrup', title: 'A Tour of C++', }),
-      catalog.get({ unordered_author: 'M. Gregoire', title: 'Professional C++', }),
+      ...catalog.all().filter(item => item.title === 'A Tour of C++'),
+      ...catalog.all().filter(item => item.title === 'Professional C++'),
     ],
     reference: [
-      catalog.get({ unordered_author: 'Microsoft', title: 'C++ Language Reference' }),
+      ...catalog.all().filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
       catalog.get('cppreference'),
-      catalog.get('The Definitive C++ Book Guide and List'),
+      ...catalog.all().filter(item => item.title === 'The Definitive C++ Book Guide and List'),
     ],
   }
 } satisfies data_type.Course

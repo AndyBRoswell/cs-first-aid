@@ -8,7 +8,7 @@ export const info = {
   tag: [ '基础选修' ],
   material: {
     text: [
-      catalog.get({ unordered_author: 'J. Gustedt', title: 'Modern C', }),
+      ...catalog.all().filter(item => item.title === 'Modern C' && item.issued!["date-parts"]![0][0] as number >= 2024)
     ],
     reference: [
       catalog.get('cppreference.com/c'),
