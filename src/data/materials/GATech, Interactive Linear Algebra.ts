@@ -4,6 +4,7 @@ import * as Data_Type from '@/types/data.ts'
 const items = [
   {
     id: [
+      'GATech ILA',
       'Interactive Linear Algebra',
       'Margalit and Rabinoff, Linear Algebra',
       'D. Margalit and J. Rabinoff, Linear Algebra',
