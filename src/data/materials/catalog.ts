@@ -118,6 +118,8 @@ export function get(ID: ID_t): Readonly<Material> {
   else { throw new Error(`Failed to fetch any entry with ID ${JSON.stringify(ID, null, 2)}`) }
 }
 
+export function filter(predicate: (current_material: Material) => unknown): Readonly<typeof v> { return v.filter(predicate) }
+
 export function all(): Readonly<typeof v> { return v }
 
 export async function dump_locally(output_path = node_path.join(util.project_root, 'local/materials.json')) {
