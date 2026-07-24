@@ -6,11 +6,14 @@ import node_fs_promises from 'node:fs/promises';
 import node_path from 'node:path'
 import pino from 'pino'
 import _ from 'lodash-es'
+import * as ohash from 'ohash'
 import * as util from '@/util.ts'
 
 const logger = pino(util.pino_arg)
 
 const m = new Map<ID_t, Material>
+const v: Material[] = []
+const h = new Set()
 
 export function canonical_ID(ID: ID_t): ID_primitive {
   switch (typeof ID) {
@@ -102,20 +105,26 @@ export function add(IDs: ID_t[], material: Material) {
     const CID = canonical_ID(ID)
     if (m.has(CID)) { throw new Error(`ID ${CID} already exists. Material: ${JSON.stringify(material, null, 2)}`) ; }
     m.set(CID, material)
+    const hash = ohash.hash(material)
+    if (h.has(hash) === false) {
+      v.push(material);
+      h.add(hash)
+    }
   }
 }
 
-export function get(ID: ID_t): Material {
+export function get(ID: ID_t): Readonly<Material> {
   const CID = canonical_ID(ID)
   if (m.has(CID)) { return m.get(CID)! }
   else { throw new Error(`Failed to fetch any entry with ID ${JSON.stringify(ID, null, 2)}`) }
 }
 
+export function all(): Readonly<typeof v> { return v }
+
 export async function dump_locally(output_path = node_path.join(util.project_root, 'local/materials.json')) {
   if (!process.env.CI && process.env.export_materials) {
     await node_fs_promises.mkdir(node_path.dirname(output_path), { recursive: true })
-    const dedup_values = _.uniqWith(Array.from(m.values()), _.isEqual)
-    await node_fs_promises.writeFile(output_path, JSON.stringify(dedup_values, null, 2), 'utf8');
+    await node_fs_promises.writeFile(output_path, JSON.stringify(v, null, 2), 'utf8');
     logger.info(`All imported materials saved at ${output_path}`)
   }
 }
