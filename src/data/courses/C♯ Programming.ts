@@ -9,10 +9,10 @@ export const info = {
   tag: [ '基础选修' ],
   material: {
     text: [
-      ...catalog.all().filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && util.default_collator.compare(item.title!, 'A tour of the C# language') === 0)
+      ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && util.default_collator.compare(item.title!, 'A tour of the C# language') === 0)
     ],
     reference: [
-      ...catalog.all().filter(item => item.title === 'Head First C#')
+      ...catalog.filter(item => util.default_collator.compare(item.title!, 'Head First C#') === 0)
     ]
   }
 } satisfies data_type.Course
