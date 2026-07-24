@@ -25,5 +25,5 @@ export const linesep_stripper = /[\r\n]+/
 
 export const supported_locales = [ 'en-US' ]
 export const collator = new Map<string, Intl.Collator>()
-for (const locale of supported_locales) { collator.set(locale, new Intl.Collator(locale)) }
+for (const locale of supported_locales) { collator.set(locale, new Intl.Collator(locale, { sensitivity: 'base' })) }
 export const default_collator = collator.get('en-US')!
