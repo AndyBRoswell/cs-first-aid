@@ -5,7 +5,6 @@ import Cartesian_product from "fast-cartesian";
 import node_fs_promises from 'node:fs/promises';
 import node_path from 'node:path'
 import pino from 'pino'
-import _ from 'lodash-es'
 import * as ohash from 'ohash'
 import * as util from '@/util.ts'
 
