@@ -104,11 +104,11 @@ export function add(IDs: ID_t[], material: Material) {
     const CID = canonical_ID(ID)
     if (m.has(CID)) { throw new Error(`ID ${CID} already exists. Material: ${JSON.stringify(material, null, 2)}`) ; }
     m.set(CID, material)
-    const hash = ohash.hash(material)
-    if (h.has(hash) === false) {
-      v.push(material);
-      h.add(hash)
-    }
+  }
+  const hash = ohash.hash(material)
+  if (h.has(hash) === false) {
+    v.push(material);
+    h.add(hash)
   }
 }
 
