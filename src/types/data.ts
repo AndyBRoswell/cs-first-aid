@@ -57,6 +57,13 @@ export type Course = {
   note?: string
 }
 
-export type Material = CSL_Data.Item & { custom?: CSL_Data.Custom }
+export type Non_Empty_Array<T> = [ T, ...T[] ]
 
-export type Video = Material
+export type Material = CSL_Data.Item & { custom?: CSL_Data.Custom }
+export type Book = Material & {
+  type: 'book'
+  author: Non_Empty_Array<CSL_Data.Name_Variable>
+  title: string
+  issued: CSL_Data.Date_Variable
+}
+export type Video = Material & { type: 'motion_picture' | 'broadcast' }
