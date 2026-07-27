@@ -26,4 +26,7 @@ export const linesep_stripper = /[\r\n]+/
 export const supported_locales = [ 'en-US' ]
 export const collator = new Map<string, Intl.Collator>()
 for (const locale of supported_locales) { collator.set(locale, new Intl.Collator(locale, { sensitivity: 'base' })) }
-export const default_collator = collator.get('en-US')!
+export const default_locale = 'en-US'
+export const default_collator = collator.get(default_locale)!
+
+export function ieq(a: string, b: string, locale: string = default_locale): boolean { return collator.get(locale)!.compare(a, b) === 0 }

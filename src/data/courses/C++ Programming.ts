@@ -10,13 +10,13 @@ export const I_info = {
   material: {
     text: [
       catalog.get('PPP3'),
-      ...catalog.filter(item => util.default_collator.compare(item.title!, 'A Tour of C++') === 0),
-      ...catalog.filter(item => util.default_collator.compare(item.title!, 'Professional C++') === 0),
+      ...catalog.filter(item => util.ieq(item.title!, 'A Tour of C++')),
+      ...catalog.filter(item => util.ieq(item.title!, 'Professional C++')),
     ],
     reference: [
       ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
       catalog.get('cppreference'),
-      ...catalog.filter(item => util.default_collator.compare(item.title!, 'The Definitive C++ Book Guide and List') === 0),
+      ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
     ],
   }
 } satisfies data_type.Course
