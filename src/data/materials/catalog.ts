@@ -118,7 +118,17 @@ export function get(ID: ID_t): Readonly<Material> {
   else { throw new Error(`Failed to fetch any entry with ID ${JSON.stringify(ID, null, 2)}`) }
 }
 
-export function filter(predicate: (current_material: Material) => unknown): Readonly<typeof v> { return v.filter(predicate) }
+export type Filter_Options = {
+  min_count?: number
+  max_count?: number
+}
+
+export function filter(predicate: (current_material: Material) => unknown, options: Filter_Options = {}): Readonly<typeof v> {
+  const results = v.filter(predicate)
+  if (results.length < (options.min_count ?? 1)) { throw new Error(`Filter returned ${results.length} results, which is less than minimum value ${options.min_count}`) }
+  if (results.length > (options.max_count ?? Number.MAX_SAFE_INTEGER)) { throw new Error(`Filter returned ${results.length} results, which is more than maximum value ${options.max_count}`) }
+  return results
+}
 
 export function all(): Readonly<typeof v> { return v }
 
