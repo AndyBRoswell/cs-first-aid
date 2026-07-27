@@ -21,9 +21,9 @@ export const info = {
     other: {
       text: [
         ...catalog.filter(material => material.author?.length === 1 && /^同济大学数学/.test(material.author![0]!.literal!) && /高等数学/.test(material.title!)),
-        ...catalog.filter(material => material.author?.length === 1 && /Apostol/.test(material.author![0]!.family!) && util.default_collator.compare(material.title!, 'Calculus') === 0),
+        ...catalog.filter(material => material.author?.length === 1 && /Apostol/.test(material.author![0]!.family!) && util.ieq(material.title!, 'Calculus')),
         ...catalog.filter(material => /Thomas Calculus/i.test(material.title!)),
-        ...catalog.filter(material => material.author?.length === 1 && /Strang/.test(material.author![0]!.family!) && util.default_collator.compare(material.title!, 'Calculus') === 0),
+        ...catalog.filter(material => material.author?.length === 1 && /Strang/.test(material.author![0]!.family!) && util.ieq(material.title!, 'Calculus')),
       ]
     },
   }
