@@ -107,7 +107,7 @@ export function add(IDs: ID_t[], material: Material) {
   }
   const hash = ohash.hash(material)
   if (h.has(hash) === false) {
-    v.push(material);
+    v.push(material)
     h.add(hash)
   }
 }
@@ -135,7 +135,7 @@ export function all(): Readonly<typeof v> { return v }
 export async function dump_locally(output_path = node_path.join(util.project_root, 'local/materials.json')) {
   if (!process.env.CI && process.env.export_materials) {
     await node_fs_promises.mkdir(node_path.dirname(output_path), { recursive: true })
-    await node_fs_promises.writeFile(output_path, JSON.stringify(v, null, 2), 'utf8');
+    await node_fs_promises.writeFile(output_path, JSON.stringify(v, null, 2), 'utf8')
     logger.info(`All imported materials saved at ${output_path}`)
   }
 }
