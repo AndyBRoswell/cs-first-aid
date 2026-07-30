@@ -1,6 +1,8 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
 import * as CSL_Data from '@/types/CSL_data.ts'
+import * as util from '@/util.ts'
+import * as _ from '@/libraries/lodash-es.ts'
 
 const items = [
   {
@@ -99,6 +101,11 @@ const items = [
       accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
     },
   },
+] satisfies Data_Type.Entry[]
+
+catalog.add_items(items)
+
+catalog.add_items([
   {
     id: [
       '谢启鸿 高代 公开课',
@@ -116,10 +123,17 @@ const items = [
       accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
       custom: {
         lecturer: [ { family: '谢', given: '启鸿' } ],
-        companion: [ { unordered_author: [ '姚慕生', '吴泉水', '谢启鸿' ], title: '高等代数学', edition: 3, }, ],
+        companion: [ ...catalog.filter(
+          m =>
+            m.type === 'book'
+            && 'author' in m
+            && m.author.some(a => _.isEqual(a, { family: '谢', given: '启鸿' }))
+            && util.ieq(m.title!, '高等代数学')
+            && m.edition === 3
+          ,
+          { max_count: 1 }
+        ) ]
       },
     },
   },
-] satisfies Data_Type.Entry[]
-
-catalog.add_items(items)
+])
