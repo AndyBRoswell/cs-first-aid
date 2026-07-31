@@ -1,6 +1,7 @@
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/data/courses/import course materials.ts'
+import * as util from '@/util.ts'
 
 export const I_info = {
   canonical_name: '线性代数I',
@@ -9,68 +10,64 @@ export const I_info = {
   material: {
     text: {
       zh: [
-        catalog.get('蓝以中 高代上'),
-        catalog.get('丘维声 简明线性代数'),
-        catalog.get('丘维声 高代1版上'),
-        catalog.get('丘维声 高代上'),
-        catalog.get('丘维声 高代指导书 上'),
-        catalog.get('陈发来 线代I'),
-        catalog.get('陈发来 线性代数与解析几何'),
-        catalog.get('谢启鸿 高等代数学 第3版'),
-        catalog.get('谢启鸿 高等代数 第3版'),
-        catalog.get('谢启鸿 高等代数学'),
-        catalog.get('谢启鸿 高等代数'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '蓝' && author.given === '以中') && util.ieq(item.title!, '高等代数简明教程') && item.volume === 1, { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '丘' && author.given === '维声') && util.ieq(item.title!, '简明线性代数'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '丘' && author.given === '维声') && util.ieq(item.title!, '高等代数') && item.volume === 1, { max_count: 2 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '丘' && author.given === '维声') && util.ieq(item.title!, '高等代数学习指导书') && item.volume === 1, { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '陈' && author.given === '发来') && util.ieq(item.title!, '线性代数 I'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '陈' && author.given === '发来') && util.ieq(item.title!, '线性代数与解析几何'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '谢' && author.given === '启鸿') && (util.ieq(item.title!, '高等代数学') || util.ieq(item.title!, '高等代数')), { max_count: 4 }),
       ],
       en: [
         catalog.get('ILA6'),
-        catalog.get('D. C. Lay et al., Linear Algebra and Its Applications'),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Lay') && item.title?.startsWith('Linear Algebra and Its Applications'), { max_count: 1 }),
         catalog.get('LADW'),
-        catalog.get('Interactive Linear Algebra'),
-        catalog.get('T. S. Shores, Applied Linear Algebra and Matrix Analysis'),
-        catalog.get('E. B. Saff and A. D. Snider, Matrix Fundamentals'),
-        catalog.get('S. J. Leon et al., Linear Algebra with Applications'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Interactive Linear Algebra'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Shores') && util.ieq(item.title!, 'Applied Linear Algebra and Matrix Analysis'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Saff') && util.ieq(item.title!, 'Matrix Fundamentals'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Leon') && item.title?.startsWith('Linear Algebra with Applications'), { max_count: 1 }),
       ],
     },
     guide: {
       zh: [
-        catalog.get('线性代数的几何意义'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '线性代数的几何意义'), { max_count: 1 }),
       ],
     },
     open_course: {
       zh: [
-        catalog.get('丘维声 高代 公开课'),
-        catalog.get('陈发来 线性代数B1 公开课 2021级'),
-        catalog.get('谢启鸿 高代 公开课'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '丘' && lecturer.given === '维声') && item['event-place'] === '清华大学', { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '陈' && lecturer.given === '发来'), { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '谢' && lecturer.given === '启鸿') && item['event-place'] === '复旦大学', { max_count: 1 }),
       ],
     },
     problem_set: [],
     reference: {
       text: {
         zh: [
-          catalog.get('李炯生 线代'),
-          catalog.get('席南华 基础代数1'),
-          catalog.get('李尚志 线代'),
-          catalog.get('张贤科 许甫华 高代'),
-          catalog.get('张贤科 高代'),
-          catalog.get('Kostrikin, 代数学引论1'),
+          ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '炯生') && util.ieq(item.title!, '线性代数'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '席' && author.given === '南华') && util.ieq(item.title!, '基础代数') && item.volume === 1, { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '尚志') && util.ieq(item.title!, '线性代数（数学专业用）'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '张' && author.given === '贤科') && util.ieq(item.title!, '高等代数学'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '张' && author.given === '贤科') && util.ieq(item.title!, '高等线性代数'), { max_count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学引论') && item.volume === 1, { max_count: 1 }),
         ],
         en: [
-          catalog.get('M. Artin, Algebra'),
-          catalog.get('S. Lang, Linear Algebra'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Artin') && util.ieq(item.title!, 'Algebra'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Lang') && util.ieq(item.title!, 'Linear Algebra'), { max_count: 1 }),
         ],
       },
       guide: {
         zh: [
-          catalog.get('李尚志 线代指导'),
+          ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '尚志') && util.ieq(item.title!, '线性代数学习指导'), { max_count: 1 }),
         ],
       },
       problem_set: {
         zh: [
-          catalog.get('Kostrikin, 代数学习题集'),
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学习题集'), { max_count: 1 }),
         ],
       },
       video: [
-        catalog.get('我为什么推荐你使用丘维声学习高等代数'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.author?.some(author => author.literal === '分析学爱好者') && util.ieq(item.title!, '我为什么推荐你使用丘维声学习高等代数'), { max_count: 1 }),
       ],
     }
   }
@@ -83,70 +80,66 @@ export const II_info = {
   material: {
     text: {
       zh: [
-        catalog.get('蓝以中 高代下'),
-        catalog.get('丘维声 简明线性代数'),
-        catalog.get('丘维声 高代1版下'),
-        catalog.get('丘维声 高代下'),
-        catalog.get('丘维声 高代指导书 下'),
-        catalog.get('谢启鸿 高等代数学 第3版'),
-        catalog.get('谢启鸿 高等代数 第3版'),
-        catalog.get('谢启鸿 高等代数学'),
-        catalog.get('谢启鸿 高等代数'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '蓝' && author.given === '以中') && util.ieq(item.title!, '高等代数简明教程') && item.volume === 2, { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '丘' && author.given === '维声') && util.ieq(item.title!, '简明线性代数'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '丘' && author.given === '维声') && util.ieq(item.title!, '高等代数') && item.volume === 2, { max_count: 2 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '丘' && author.given === '维声') && util.ieq(item.title!, '高等代数学习指导书') && item.volume === 2, { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '谢' && author.given === '启鸿') && (util.ieq(item.title!, '高等代数学') || util.ieq(item.title!, '高等代数')), { max_count: 4 }),
       ],
       en: [
         catalog.get('LADR'),
-        catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra'),
-        catalog.get('R. A. Horn and C. R. Johnson, Matrix Analysis'),
-        catalog.get('S. R. Garcia and R. A. Horn, Matrix Mathematics'),
-        catalog.get('Lloyd N. Trefethen and David Bau III, Numerical Linear Algebra'),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Meyer') && util.ieq(item.title!, 'Matrix Analysis and Applied Linear Algebra'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Horn') && util.ieq(item.title!, 'Matrix Analysis'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Garcia') && util.ieq(item.title!, 'Matrix Mathematics'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Trefethen') && util.ieq(item.title!, 'Numerical Linear Algebra'), { max_count: 1 }),
       ]
     },
     guide: {
       zh: [
-        catalog.get('线性代数的几何意义'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '线性代数的几何意义'), { max_count: 1 }),
       ],
       en: [
-        catalog.get('C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide'),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Meyer') && util.ieq(item.title!, 'Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide'), { max_count: 1 }),
       ],
     },
     open_course: {
       zh: [
-        catalog.get('丘维声 高代 公开课'),
-        catalog.get('谢启鸿 高代 公开课'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '丘' && lecturer.given === '维声') && item['event-place'] === '清华大学', { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '谢' && lecturer.given === '启鸿') && item['event-place'] === '复旦大学', { max_count: 1 }),
       ],
     },
     reference: {
       text: {
         zh: [
-          catalog.get('李炯生 线代'),
-          catalog.get('席南华 基础代数2'),
-          catalog.get('李尚志 线代'),
-          catalog.get('张贤科 许甫华 高代'),
-          catalog.get('张贤科 高代'),
-          catalog.get('Kostrikin, 代数学引论2'),
+          ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '炯生') && util.ieq(item.title!, '线性代数'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '席' && author.given === '南华') && util.ieq(item.title!, '基础代数') && item.volume === 2, { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '尚志') && util.ieq(item.title!, '线性代数（数学专业用）'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '张' && author.given === '贤科') && util.ieq(item.title!, '高等代数学'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '张' && author.given === '贤科') && util.ieq(item.title!, '高等线性代数'), { max_count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学引论') && item.volume === 2, { max_count: 1 }),
         ],
         en: [
-          catalog.get('S. Lang, Linear Algebra'),
-          catalog.get('M. Artin, Algebra'),
-          catalog.get('P. D. Lax, Linear Algebra and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Lang') && util.ieq(item.title!, 'Linear Algebra'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Artin') && util.ieq(item.title!, 'Algebra'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Lax') && util.ieq(item.title!, 'Linear Algebra and Its Applications'), { max_count: 1 }),
         ],
       },
       guide: {
         zh: [
-          catalog.get('李尚志 线代指导'),
+          ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '尚志') && util.ieq(item.title!, '线性代数学习指导'), { max_count: 1 }),
         ],
       },
       video: [
-        catalog.get('我为什么推荐你使用丘维声学习高等代数'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.author?.some(author => author.literal === '分析学爱好者') && util.ieq(item.title!, '我为什么推荐你使用丘维声学习高等代数'), { max_count: 1 }),
       ],
       problem_set: {
         zh: [
-          catalog.get('Kostrikin, 代数学习题集'),
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学习题集'), { max_count: 1 }),
         ],
       },
       other: {
         en: [
-          catalog.get('Jun Lu, Matrix Decomposition and Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Lu' && author.given === 'Jun') && util.ieq(item.title!, 'Matrix Decomposition and Applications'), { max_count: 1 }),
         ],
       }
     },
