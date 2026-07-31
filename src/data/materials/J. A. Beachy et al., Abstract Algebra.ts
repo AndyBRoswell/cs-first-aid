@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'J. A. Beachy and W. D. Blair, Abstract Algebra',
-      'J. A. Beachy and W. D. Blair, Abstract Algebra, 2019',
-      'J. A. Beachy and W. D. Blair, Abstract Algebra, 4e',
-      { unordered_author: [ 'J. A. Beachy', 'W. D. Blair' ], title: 'Abstract Algebra', },
-      { unordered_author: [ 'J. A. Beachy', 'W. D. Blair' ], title: 'Abstract Algebra', date: 2019, },
-      { unordered_author: [ 'J. A. Beachy', 'W. D. Blair' ], title: 'Abstract Algebra', edition: 4, },
     ],
     material: {
       type: 'book',

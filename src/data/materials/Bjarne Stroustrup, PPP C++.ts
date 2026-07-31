@@ -6,10 +6,6 @@ const items = [
   {
     id: [
       'PPP3',
-      'B. Stroustrup, Programming: Principles and Practice Using C++',
-      'B. Stroustrup, "Programming: Principles and Practice Using C++,"',
-      'B. Stroustrup, "Programming: Principles and Practice Using C++," 3e',
-      { unordered_author: 'B. Stroustrup', title: 'Programming: Principles and Practice Using C++', edition: 3 },
     ],
     material: {
       type: 'book',

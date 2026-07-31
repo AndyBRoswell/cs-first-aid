@@ -4,13 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '李尚志 线代',
-      '李尚志 线性代数（数学专业用）',
-      '李尚志 线性代数（数学专业用） 2006',
-      { unordered_author: '李尚志', title: '线性代数（数学专业用）' },
-      { unordered_author: '李尚志', title: '线性代数（数学专业用）', date: 2006 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '李尚志 线性代数（数学专业用） 2006',
@@ -28,14 +22,7 @@ const items = [
     },
   },
   {
-    id: [
-      '李尚志 线代指导',
-      '李尚志 线性学习指导',
-      '李尚志 线性代数学习指导',
-      '李尚志 线性代数学习指导 2015',
-      { unordered_author: '李尚志', title: '线性代数学习指导' },
-      { unordered_author: '李尚志', title: '线性代数学习指导', date: 2015 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '李尚志 线性代数学习指导 2015',

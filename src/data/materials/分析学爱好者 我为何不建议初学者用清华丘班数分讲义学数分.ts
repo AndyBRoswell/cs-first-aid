@@ -5,12 +5,6 @@ const items = [
   {
     id: [
       '我为何不建议初学者用清华丘班数分讲义学数分',
-      '分析学爱好者, 我为何不建议初学者用清华丘班数分讲义学数分',
-      '王宇鹏, 我为何不建议初学者用清华丘班数分讲义学数分',
-      { unordered_author: '分析学爱好者', title: '我为何不建议初学者用清华丘班数分讲义学数分', },
-      { unordered_author: '王宇鹏', title: '我为何不建议初学者用清华丘班数分讲义学数分', },
-      { unordered_author: '分析学爱好者', title: '我为何不建议初学者用清华丘班数分讲义学数分', date: 2025, },
-      { unordered_author: '王宇鹏', title: '我为何不建议初学者用清华丘班数分讲义学数分', date: 2025, },
     ],
     material: {
       type: 'motion_picture',

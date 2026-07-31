@@ -5,12 +5,6 @@ const items = [
   {
     id: [
       '我为什么推荐你使用丘维声学习高等代数',
-      '分析学爱好者, 我为什么推荐你使用丘维声学习高等代数',
-      '王宇鹏, 我为什么推荐你使用丘维声学习高等代数',
-      { unordered_author: '分析学爱好者', title: '我为什么推荐你使用丘维声学习高等代数', },
-      { unordered_author: '王宇鹏', title: '我为什么推荐你使用丘维声学习高等代数', },
-      { unordered_author: '分析学爱好者', title: '我为什么推荐你使用丘维声学习高等代数', date: 2025, },
-      { unordered_author: '王宇鹏', title: '我为什么推荐你使用丘维声学习高等代数', date: 2025, },
     ],
     material: {
       type: 'motion_picture',

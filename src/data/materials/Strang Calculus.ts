@@ -5,14 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'Strang Calculus',
-      `Strang's Calculus`,
-      'Strang, Calculus',
-      'Strang, Calculus, 3e',
-      'Strang, Calculus, 2017',
-      { unordered_author: 'Strang', title: 'Calculus', },
-      { unordered_author: 'Strang', title: 'Calculus', edition: 3, },
-      { unordered_author: 'Strang', title: 'Calculus', date: 2017, },
     ],
     material: {
       type: 'book',

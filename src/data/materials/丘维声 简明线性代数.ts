@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      '丘维声 简明线性代数',
-      '丘维声 简明线性代数 第2版',
-      '丘维声 简明线性代数 2024',
-      { unordered_author: '丘维声', title: '简明线性代数', },
-      { unordered_author: '丘维声', title: '简明线性代数', date: 2024, },
-      { unordered_author: '丘维声', title: '简明线性代数', edition: 2, },
     ],
     material: {
       type: 'book',

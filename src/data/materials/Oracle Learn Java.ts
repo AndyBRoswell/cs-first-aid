@@ -5,7 +5,6 @@ const items = [
   {
     id: [
       'dev.java/learn',
-      { unordered_author: 'Oracle', title: 'Learn Java' },
     ],
     material: {
       type: 'webpage',

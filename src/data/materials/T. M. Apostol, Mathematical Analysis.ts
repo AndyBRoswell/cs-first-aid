@@ -5,13 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'Apostol, Math Anal',
-      'Apostol, Math Anal, 2e',
-      'T. M. Apostol, Mathematical Analysis',
-      'T. M. Apostol, Mathematical Analysis, 2e',
-      { unordered_author: 'T. M. Apostol', title: 'Mathematical Analysis', },
-      { unordered_author: 'T. M. Apostol', title: 'Mathematical Analysis', edition: 2, },
-      { unordered_author: 'T. M. Apostol', title: 'Mathematical Analysis', date: 1974, },
     ],
     material: {
       type: 'book',

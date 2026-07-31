@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'S. R. Garcia and R. A. Horn, Matrix Mathematics',
-      'S. R. Garcia and R. A. Horn, Matrix Mathematics, 2e',
-      'S. R. Garcia and R. A. Horn, Matrix Mathematics, 2023',
-      { unordered_author: [ 'S. R. Garcia', 'R. A. Horn' ], title: 'Matrix Mathematics' },
-      { unordered_author: [ 'S. R. Garcia', 'R. A. Horn' ], title: 'Matrix Mathematics', date: 2023 },
-      { unordered_author: [ 'S. R. Garcia', 'R. A. Horn' ], title: 'Matrix Mathematics', edition: 2 },
     ],
     material: {
       type: 'book',

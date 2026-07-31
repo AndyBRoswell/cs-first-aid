@@ -5,13 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'J. M. Harris et al., Combinatorics and Graph Theory',
-      'J. M. Harris, J. L. Hirst, and M. J. Mossinghoff, Combinatorics and Graph Theory',
-      'J. M. Harris, J. L. Hirst, and M. J. Mossinghoff, Combinatorics and Graph Theory, 2e',
-      'J. M. Harris, J. L. Hirst, and M. J. Mossinghoff, Combinatorics and Graph Theory, 2008',
-      { unordered_author: [ 'J. M. Harris', 'J. L. Hirst', 'M. J. Mossinghoff' ], title: 'Combinatorics and Graph Theory', edition: 2, },
-      { unordered_author: [ 'J. M. Harris', 'J. L. Hirst', 'M. J. Mossinghoff' ], title: 'Combinatorics and Graph Theory', date: 2008, },
-      { unordered_author: [ 'J. M. Harris', 'J. L. Hirst', 'M. J. Mossinghoff' ], title: 'Combinatorics and Graph Theory', },
     ],
     material: {
       type: 'book',

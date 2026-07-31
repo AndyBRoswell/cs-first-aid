@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'S. Lang, Algebra',
-      'S. Lang, Algebra, 3e',
-      { unordered_author: 'S. Lang', title: 'Algebra', edition: 3, },
     ],
     material: {
       type: 'book',

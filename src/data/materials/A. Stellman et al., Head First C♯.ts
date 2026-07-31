@@ -5,11 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'A. Stellman et al., Head First C#',
-      'A. Stellman et al., Head First C#, 5e',
-      { unordered_author: [ 'A. Stellman', 'J. Greene' ], title: 'Head First C#' },
-      { unordered_author: [ 'A. Stellman', 'J. Greene' ], title: 'Head First C#', edition: 5 },
-      { unordered_author: [ 'A. Stellman', 'J. Greene' ], title: 'Head First C#', date: 2024 },
     ],
     material: {
       type: 'book',

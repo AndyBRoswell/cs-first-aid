@@ -5,11 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'K. Sierra, B. Bates, T. Gee, Head First Java, 3e',
-      'K. Sierra, B. Bates, T. Gee, Head First Java, 3rd ed.',
-      { unordered_author: [ 'K. Sierra', 'B. Bates', 'T. Gee' ], title: 'Head First Java', },
-      { unordered_author: [ 'K. Sierra', 'B. Bates', 'T. Gee' ], title: 'Head First Java', edition: 3 },
-      { unordered_author: [ 'K. Sierra', 'B. Bates', 'T. Gee' ], title: 'Head First Java', date: 2022 },
     ],
     material: {
       type: 'book',

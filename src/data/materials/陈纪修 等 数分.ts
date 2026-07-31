@@ -5,13 +5,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      "陈纪修 数分2版上",
       "陈纪修 数分 2004上",
-      "陈纪修 数分上 2004",
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析", edition: 2, volume: 1, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析", date: 2004, volume: 1, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析 第二版", volume: 1 },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析 第二版 上册", },
     ],
     material: {
       id: "陈纪修 数分2版上",
@@ -33,13 +27,7 @@ const items = [
   },
   {
     id: [
-      "陈纪修 数分2版下",
       "陈纪修 数分 2004下",
-      "陈纪修 数分下 2004",
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析", edition: 2, volume: 2, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析", date: 2004, volume: 2, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析 第二版", volume: 2, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析 第二版 下册", },
     ],
     material: {
       id: "陈纪修 数分2版下",
@@ -59,13 +47,7 @@ const items = [
     },
   },
   {
-    id: [
-      '陈纪修 数分 公开课',
-      '陈纪修 数分 2008 公开课',
-      '陈纪修 数分 公开课 2008',
-      { unordered_author: [ '陈纪修' ], title: '数学分析', type: '公开课', },
-      { unordered_author: [ '陈纪修' ], title: '数学分析', date: 2008, type: '公开课', }
-    ],
+    id: [],
     material: {
       type: 'motion_picture',
       id: '陈纪修 数分 2008 公开课',
@@ -87,16 +69,7 @@ const items = [
     } satisfies Data_Type.Video,
   },
   {
-    id: [
-      "陈纪修 数分上",
-      "陈纪修 数分3版上",
-      "陈纪修 数分 2019上",
-      "陈纪修 数分上 2019",
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析", edition: 3, volume: 1, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析", date: 2019, volume: 1, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析 第三版", volume: 1, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析 第三版 上册", },
-    ],
+    id: [],
     material: {
       id: '陈纪修 数分上',
       type: 'book',
@@ -115,16 +88,7 @@ const items = [
     },
   },
   {
-    id: [
-      "陈纪修 数分下",
-      "陈纪修 数分3版下",
-      "陈纪修 数分 2019下",
-      "陈纪修 数分下 2019",
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析", edition: 3, volume: 2, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析", date: 2019, volume: 2, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析 第三版", volume: 2, },
-      { unordered_author: [ "陈纪修", "於崇华", "金路" ], title: "数学分析 第三版 下册", },
-    ],
+    id: [],
     material: {
       id: '陈纪修 数分下',
       type: 'book',

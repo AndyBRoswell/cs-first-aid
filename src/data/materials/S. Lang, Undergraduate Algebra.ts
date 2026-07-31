@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'S. Lang, Undergraduate Algebra',
-      'S. Lang, Undergraduate Algebra, 3e',
-      'S. Lang, Undergraduate Algebra, 2005',
-      { unordered_author: 'S. Lang', title: 'Undergraduate Algebra', edition: 3, },
-      { unordered_author: 'S. Lang', title: 'Undergraduate Algebra', date: 2005, },
-      { unordered_author: 'S. Lang', title: 'Undergraduate Algebra', },
     ],
     material: {
       type: 'book',

@@ -5,10 +5,6 @@ const items = [
   {
     id: [
       'LADW',
-      'Treil, Linear Algebra Done Wrong',
-      'S. R. Treil, Linear Algebra Done Wrong',
-      { unordered_author: 'Treil', title: 'Linear Algebra Done Wrong' },
-      { unordered_author: 'S. R. Treil', title: 'Linear Algebra Done Wrong' },
     ],
     material: {
       type: 'book',

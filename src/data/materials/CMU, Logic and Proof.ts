@@ -6,10 +6,6 @@ const items = [
   {
     id: [
       'Logic and Proof',
-      'J. Avigad et al., Logic and Proof',
-      'J. Avigad, R. Y. Lewis, and F. van Doorn, Logic and Proof',
-      'Jeremy Avigad, Robert Y. Lewis, and Floris van Doorn, Logic and Proof',
-      { unordered_author: [ 'J. Avigad', 'R. Y. Lewis', 'F. van Doorn' ], title: 'Logic and Proof', },
     ],
     material: {
       type: 'book',

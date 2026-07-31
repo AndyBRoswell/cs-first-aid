@@ -6,9 +6,6 @@ const items = [
   {
     id: [
       'mscppref',
-      'Microsoft, C++ Language Reference, 2025',
-      { unordered_author: 'Microsoft', title: 'C++ Language Reference' },
-      { unordered_author: 'Microsoft', title: 'C++ Language Reference', date: 2025 },
     ],
     material: {
       type: 'webpage',

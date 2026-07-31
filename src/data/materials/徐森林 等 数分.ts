@@ -4,14 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '徐森林 数分1',
-      '徐森林 数分 2021 1',
-      { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析', volume: 1, },
-      { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析', date: 2021, volume: 1, },
-      { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析（第1册）', },
-      { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析（第1册）', date: 2021, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '徐森林 数分1',
@@ -27,14 +20,7 @@ const items = [
     },
   },
   {
-    id: [
-      '徐森林 数分2',
-      '徐森林 数分 2021 2',
-      { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析', volume: 2, },
-      { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析', date: 2021, volume: 2, },
-      { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析（第2册）', },
-      { unordered_author: [ '薛春华', '徐森林' ], title: '数学分析（第2册）', date: 2021, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '徐森林 数分2',
@@ -50,14 +36,7 @@ const items = [
     },
   },
   {
-    id: [
-      '徐森林 数分3',
-      '徐森林 数分 2021 3',
-      { unordered_author: [ '薛春华', '徐森林', '金亚东' ], title: '数学分析', volume: 3, },
-      { unordered_author: [ '薛春华', '徐森林', '金亚东' ], title: '数学分析', date: 2021, volume: 3, },
-      { unordered_author: [ '薛春华', '徐森林', '金亚东' ], title: '数学分析（第3册）', },
-      { unordered_author: [ '薛春华', '徐森林', '金亚东' ], title: '数学分析（第3册）', date: 2021, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '徐森林 数分3',

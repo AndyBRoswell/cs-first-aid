@@ -4,15 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '蓝以中 高代上',
-      '蓝以中 高代3版上',
-      '蓝以中 高代 2023上',
-      '蓝以中, 高等代数简明教程 上册（第三版）, 2023',
-      { unordered_author: '蓝以中', title: '高等代数简明教程', volume: 1 },
-      { unordered_author: '蓝以中', title: '高等代数简明教程', date: 2023, volume: 1 },
-      { unordered_author: '蓝以中', title: '高等代数简明教程', edition: 3, volume: 1 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '蓝以中, 高等代数简明教程 上册（第三版）, 2023',
@@ -39,15 +31,7 @@ const items = [
     } satisfies CSL_Data.Item,
   },
   {
-    id: [
-      '蓝以中 高代下',
-      '蓝以中 高代3版下',
-      '蓝以中 高代 2023下',
-      '蓝以中, 高等代数简明教程 下册（第三版）, 2023',
-      { unordered_author: '蓝以中', title: '高等代数简明教程', volume: 2 },
-      { unordered_author: '蓝以中', title: '高等代数简明教程', date: 2023, volume: 2 },
-      { unordered_author: '蓝以中', title: '高等代数简明教程', edition: 3, volume: 2 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '蓝以中, 高等代数简明教程 下册（第三版）, 2023',

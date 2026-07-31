@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'S. Lang, Linear Algebra',
-      'S. Lang, Linear Algebra, 3e',
-      'S. Lang, Linear Algebra, 1987',
-      { unordered_author: 'S. Lang', title: 'Linear Algebra' },
-      { unordered_author: 'S. Lang', title: 'Linear Algebra', date: 1987 },
-      { unordered_author: 'S. Lang', title: 'Linear Algebra', edition: 3 },
     ] satisfies Data_Type.ID_t[],
     material: {
       type: 'book',

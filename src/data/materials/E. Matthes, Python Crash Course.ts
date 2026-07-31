@@ -5,10 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'E. Matthes, Python Crash Course, 3e',
-      { unordered_author: 'E. Matthes', title: 'Python Crash Course', },
-      { unordered_author: 'E. Matthes', title: 'Python Crash Course', date: 2022, },
-      { unordered_author: 'E. Matthes', title: 'Python Crash Course', edition: 3, },
     ],
     material: {
       type: 'book',

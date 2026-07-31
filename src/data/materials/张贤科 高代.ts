@@ -4,14 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '张贤科 高代',
-      '张贤科 高等线性代数',
-      '张贤科, 高等线性代数',
-      '张贤科, 高等线性代数, 2012',
-      { unordered_author: '张贤科', title: '高等线性代数' },
-      { unordered_author: '张贤科', title: '高等线性代数', date: 2012 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '张贤科, 高等线性代数, 2012',

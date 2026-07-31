@@ -5,16 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      `Fikhtengol'ts, 微积分1`,
-      `G. M. Fikhtengol'ts, 微积分1`,
-      `Fikhtengol'ts, 微积分学教程1`,
-      `G. M. Fikhtengol'ts, 微积分学教程1`,
-      `Fikhtengol'ts, 微积分学教程（第一卷）`,
-      `G. M. Fikhtengol'ts, 微积分学教程（第一卷）`,
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程', volume: 1 },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程', edition: 8, volume: 1 },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程(第一卷)' },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程(第一卷)', edition: 8 },
     ],
     material: {
       type: 'book',
@@ -39,16 +29,6 @@ const items = [
   },
   {
     id: [
-      `Fikhtengol'ts, 微积分2`,
-      `G. M. Fikhtengol'ts, 微积分2`,
-      `Fikhtengol'ts, 微积分学教程2`,
-      `G. M. Fikhtengol'ts, 微积分学教程2`,
-      `Fikhtengol'ts, 微积分学教程（第二卷）`,
-      `G. M. Fikhtengol'ts, 微积分学教程（第二卷）`,
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程', volume: 2, },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程', edition: 8, volume: 2, },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程(第二卷)' },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程(第二卷)', edition: 8 },
     ],
     material: {
       type: 'book',
@@ -73,16 +53,6 @@ const items = [
   },
   {
     id: [
-      `Fikhtengol'ts, 微积分3`,
-      `G. M. Fikhtengol'ts, 微积分3`,
-      `Fikhtengol'ts, 微积分学教程3`,
-      `G. M. Fikhtengol'ts, 微积分学教程3`,
-      `Fikhtengol'ts, 微积分学教程（第三卷）`,
-      `G. M. Fikhtengol'ts, 微积分学教程（第三卷）`,
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程', volume: 3, },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程', edition: 8, volume: 3, },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程(第三卷)' },
-      { unordered_author: [ `G. M. Fikhtengol'ts` ], title: '微积分学教程(第三卷)', edition: 8 },
     ],
     material: {
       type: 'book',

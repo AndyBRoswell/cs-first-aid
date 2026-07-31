@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      '丘维声 近世代数',
-      '丘维声 近世代数 2015',
-      { unordered_author: '丘维声', title: '近世代数', date: 2015, },
     ],
     material: {
       type: 'book',

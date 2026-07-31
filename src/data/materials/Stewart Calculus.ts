@@ -6,12 +6,6 @@ const items = [
   {
     id: [
       'Stewart Calculus',
-      'Stewart, Calculus',
-      'Stewart, Calculus, 9e',
-      'Stewart, Calculus, 2020',
-      { unordered_author: 'Stewart', title: 'Calculus', },
-      { unordered_author: 'Stewart', title: 'Calculus', edition: 9, },
-      { unordered_author: 'Stewart', title: 'Calculus', date: 2020, },
     ],
     material: {
       type: 'book',
@@ -33,12 +27,6 @@ const items = [
   {
     id: [
       'Stewart Calculus Early Transcendentals',
-      'Stewart, Calculus: Early Transcendentals',
-      'Stewart, Calculus: Early Transcendentals, 9e',
-      'Stewart, Calculus: Early Transcendentals, 2020',
-      { unordered_author: 'Stewart', title: 'Calculus: Early Transcendentals', },
-      { unordered_author: 'Stewart', title: 'Calculus: Early Transcendentals', edition: 9, },
-      { unordered_author: 'Stewart', title: 'Calculus: Early Transcendentals', date: 2020, },
     ],
     material: {
       type: 'book',

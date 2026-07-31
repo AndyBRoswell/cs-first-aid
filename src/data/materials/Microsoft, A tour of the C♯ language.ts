@@ -4,9 +4,6 @@ import * as Data_Type from '@/types/data.ts'
 const items = [
   {
     id: [
-      'Microsoft, A tour of the C# language',
-      'Microsoft, "A tour of the C# language," 2026',
-      { unordered_author: 'Microsoft', title: 'A tour of the C# language' },
     ],
     material: {
       type: 'webpage',

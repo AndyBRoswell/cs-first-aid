@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'M. Gregoire, Professional C++',
-      'M. Gregoire, Professional C++, 6e',
-      'M. Gregoire, Professional C++, 6th ed.',
-      { unordered_author: [ 'M. Gregoire' ], title: 'Professional C++' },
-      { unordered_author: [ 'M. Gregoire' ], title: 'Professional C++', date: 2024 },
-      { unordered_author: [ 'M. Gregoire' ], title: 'Professional C++', edition: 6 },
     ],
     material: {
       type: 'book',

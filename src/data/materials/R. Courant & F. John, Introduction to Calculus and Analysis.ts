@@ -6,11 +6,6 @@ const items = [
   {
     id: [
       'Introduction to Calculus and Analysis I',
-      'Courant and John, Introduction to Calculus and Analysis I',
-      'R. Courant and F. John, Introduction to Calculus and Analysis I',
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis I' },
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis', date: 1999, volume: 1, },
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis', edition: 1, volume: 1, },
     ],
     material: {
       type: 'book',
@@ -46,11 +41,6 @@ const items = [
   {
     id: [
       'Introduction to Calculus and Analysis II/1',
-      'Courant and John, Introduction to Calculus and Analysis II/1',
-      'R. Courant and F. John, Introduction to Calculus and Analysis II/1',
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis II/1' },
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis II', date: 2000, volume: 2, part: 1, },
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis II', edition: 1, volume: 2, part: 1, },
     ],
     material: {
       type: 'book',
@@ -87,11 +77,6 @@ const items = [
   {
     id: [
       'Introduction to Calculus and Analysis II/2',
-      'Courant and John, Introduction to Calculus and Analysis II/2',
-      'R. Courant and F. John, Introduction to Calculus and Analysis II/2',
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis II/2' },
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis II', date: 2000, volume: 2, part: 2, },
-      { unordered_author: [ 'R. Courant', 'F. John' ], title: 'Introduction to Calculus and Analysis II', edition: 1, volume: 2, part: 2, },
     ],
     material: {
       type: 'book',

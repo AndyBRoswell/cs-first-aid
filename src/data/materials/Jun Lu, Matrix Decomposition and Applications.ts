@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'Jun Lu, Matrix Decomposition and Applications',
-      { unordered_author: 'Jun Lu', title: 'Matrix Decomposition and Applications' },
-      { unordered_author: 'Jun Lu', title: 'Matrix Decomposition and Applications', date: 2022 },
     ],
     material: {
       type: 'article',
