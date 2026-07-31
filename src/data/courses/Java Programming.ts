@@ -1,6 +1,7 @@
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/data/courses/import course materials.ts'
+import * as util from '@/util.ts'
 
 export const info = {
   canonical_name: 'Java 程序设计',
@@ -8,10 +9,10 @@ export const info = {
   tag: [ '基础选修' ],
   material: {
     text: [
-      catalog.get({ unordered_author: 'Oracle', title: 'Learn Java', }),
+      ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Oracle' && util.ieq(item.title!, 'Learn Java'), { max_count: 1 }),
     ],
     reference: [
-      catalog.get({ unordered_author: [ 'K. Sierra', 'B. Bates', 'T. Gee' ], title: 'Head First Java', }),
+      ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Head First Java'), { max_count: 1 }),
     ],
   }
 } satisfies data_type.Course

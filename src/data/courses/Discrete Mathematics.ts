@@ -1,6 +1,7 @@
 import * as data_type from '@/types/data.ts'
 import * as catalog from '@/data/materials/catalog.ts'
 import '@/data/courses/import course materials.ts'
+import * as util from '@/util.ts'
 
 export const Mathematical_Logic = {
   canonical_name: '数理逻辑',
@@ -9,35 +10,35 @@ export const Mathematical_Logic = {
   material: {
     text: {
       zh: [
-        catalog.get('屈婉玲 离散数学'),
-        catalog.get('屈婉玲 离散数学教程'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学教程'), { max_count: 1 }),
       ],
       en: [
-        catalog.get('Logic and Proof'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Logic and Proof'), { max_count: 1 }),
       ]
     },
     open_course: {
       zh: [
-        catalog.get('北京大学 离散数学 公开课'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
       ],
     },
     guide: {
       zh: [
-        catalog.get('屈婉玲 离散数学习题解析'),
-        catalog.get('屈婉玲 离散数学学习指导与习题解析'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学习题解析'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学学习指导与习题解析'), { max_count: 1 }),
       ],
     },
     reference: {
       text: {
         zh: [],
         en: [
-          catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
-          catalog.get('M. Huth and M. Ryan, Logic in Computer Science'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Discrete Mathematics and Its Applications'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Huth') && item.title?.startsWith('Logic in Computer Science'), { max_count: 1 }),
         ],
       },
       guide: {
         en: [
-          catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Student\'s Solutions Guide for Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
       },
     },
@@ -51,33 +52,33 @@ export const Set_Theory = {
   material: {
     text: {
       zh: [
-        catalog.get('屈婉玲 离散数学'),
-        catalog.get('屈婉玲 离散数学教程'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学教程'), { max_count: 1 }),
       ],
       en: [
-        catalog.get('Logic and Proof'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Logic and Proof'), { max_count: 1 }),
       ]
     },
     open_course: {
       zh: [
-        catalog.get('北京大学 离散数学 公开课'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
       ],
     },
     guide: {
       zh: [
-        catalog.get('屈婉玲 离散数学习题解析'),
-        catalog.get('屈婉玲 离散数学学习指导与习题解析'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学习题解析'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学学习指导与习题解析'), { max_count: 1 }),
       ],
     },
     reference: {
       text: {
         en: [
-          catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
       },
       guide: {
         en: [
-          catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Student\'s Solutions Guide for Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
       },
     },
@@ -91,38 +92,38 @@ export const Graph_Theory = {
   material: {
     text: {
       zh: [
-        catalog.get('屈婉玲 离散数学'),
-        catalog.get('屈婉玲 离散数学教程'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学教程'), { max_count: 1 }),
       ],
       en: [
-        catalog.get('D. B. West, Introduction to Graph Theory'),
-        catalog.get('J. M. Harris et al., Combinatorics and Graph Theory'),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'West') && util.ieq(item.title!, 'Introduction to Graph Theory'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Harris') && util.ieq(item.title!, 'Combinatorics and Graph Theory'), { max_count: 1 }),
       ],
     },
     open_course: {
       zh: [
-        catalog.get('北京大学 离散数学 公开课'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
       ],
     },
     guide: {
       zh: [
-        catalog.get('屈婉玲 离散数学习题解析'),
-        catalog.get('屈婉玲 离散数学学习指导与习题解析'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学习题解析'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学学习指导与习题解析'), { max_count: 1 }),
       ],
     },
     reference: {
       text: {
         zh: [
-          catalog.get('王树禾 图论'),
+          ...catalog.filter(item => item.author?.some(author => author.family === '王' && author.given === '树禾') && util.ieq(item.title!, '图论'), { max_count: 1 }),
         ],
         en: [
-          catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
-          catalog.get('J. A. Bondy and U. S. R. Murty, Graph Theory'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Discrete Mathematics and Its Applications'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Bondy') && util.ieq(item.title!, 'Graph Theory'), { max_count: 1 }),
         ],
       },
       guide: {
         en: [
-          catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Student\'s Solutions Guide for Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
       },
     },
@@ -136,42 +137,42 @@ export const Abstract_Algebra = {
   material: {
     text: {
       zh: [
-        catalog.get('屈婉玲 离散数学'),
-        catalog.get('屈婉玲 离散数学教程'),
-        catalog.get('丘维声 近世代数'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学教程'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '丘' && author.given === '维声') && util.ieq(item.title!, '近世代数'), { max_count: 1 }),
       ],
       en: [
-        catalog.get('J. A. Beachy and W. D. Blair, Abstract Algebra'),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Beachy') && util.ieq(item.title!, 'Abstract Algebra'), { max_count: 1 }),
         catalog.get('T. W. Judson, AATA'),
       ],
     },
     open_course: {
       zh: [
-        catalog.get('北京大学 离散数学 公开课'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
       ],
     },
     guide: {
       zh: [
-        catalog.get('屈婉玲 离散数学习题解析'),
-        catalog.get('屈婉玲 离散数学学习指导与习题解析'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学习题解析'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学学习指导与习题解析'), { max_count: 1 }),
       ],
     },
     reference: {
       text: {
         zh: [
-          catalog.get('席南华 基础代数3'),
-          catalog.get('冯克勤 等 近世代数引论'),
-          catalog.get('Kostrikin, 代数学引论3'),
+          ...catalog.filter(item => item.author?.some(author => author.family === '席' && author.given === '南华') && util.ieq(item.title!, '基础代数') && item.volume === 3, { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === '冯' && author.given === '克勤') && util.ieq(item.title!, '近世代数引论'), { max_count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学引论') && item.volume === 3, { max_count: 1 }),
         ],
         en: [
-          catalog.get('D. S. Dummit and R. M. Foote, Abstract Algebra'),
-          catalog.get('S. Lang, Undergraduate Algebra'),
-          catalog.get('S. Lang, Algebra'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Dummit') && util.ieq(item.title!, 'Abstract Algebra'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Lang') && util.ieq(item.title!, 'Undergraduate Algebra'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Lang') && util.ieq(item.title!, 'Algebra'), { max_count: 1 }),
         ],
       },
       problem_set: {
         zh: [
-          catalog.get('Kostrikin, 代数学习题集'),
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学习题集'), { max_count: 1 }),
         ],
       },
     },
@@ -185,33 +186,33 @@ export const Combinatorics = {
   material: {
     text: {
       zh: [
-        catalog.get('屈婉玲 离散数学'),
-        catalog.get('屈婉玲 离散数学教程'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学教程'), { max_count: 1 }),
       ],
       en: [
-        catalog.get('J. M. Harris et al., Combinatorics and Graph Theory'),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Harris') && util.ieq(item.title!, 'Combinatorics and Graph Theory'), { max_count: 1 }),
       ]
     },
     open_course: {
       zh: [
-        catalog.get('北京大学 离散数学 公开课'),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
       ],
     },
     guide: {
       zh: [
-        catalog.get('屈婉玲 离散数学习题解析'),
-        catalog.get('屈婉玲 离散数学学习指导与习题解析'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学习题解析'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学学习指导与习题解析'), { max_count: 1 }),
       ],
     },
     reference: {
       text: {
         en: [
-          catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
       },
       guide: {
         en: [
-          catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Student\'s Solutions Guide for Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
       },
     },
@@ -225,27 +226,27 @@ export const Number_Theory = {
   material: {
     text: {
       zh: [
-        catalog.get('屈婉玲 离散数学'),
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学'), { max_count: 1 }),
       ],
       en: [
-        catalog.get('Logic and Proof'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Logic and Proof'), { max_count: 1 }),
       ],
     },
     video: [],
     guide: {
       zh: [
-        catalog.get('屈婉玲 离散数学学习指导与习题解析')
+        ...catalog.filter(item => item.author?.some(author => author.family === '屈' && author.given === '婉玲') && util.ieq(item.title!, '离散数学学习指导与习题解析'), { max_count: 1 }),
       ],
     },
     reference: {
       text: {
         en: [
-          catalog.get('K. H. Rosen, Discrete Mathematics and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
       },
       guide: {
         en: [
-          catalog.get('K. H. Rosen, Student\'s Solutions Guide for Discrete Mathematics and Its Applications'),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Student\'s Solutions Guide for Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
       },
     },
