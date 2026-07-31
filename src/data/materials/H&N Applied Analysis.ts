@@ -6,11 +6,6 @@ const items = [
   {
     id: [
       'H&N Applied Analysis',
-      'Hunter & Nachtergaele, Applied Analysis',
-      'Hunter and Nachtergaele, Applied Analysis',
-      'Hunter and Nachtergaele, Applied Analysis, 2005',
-      { unordered_author: [ 'Hunter', 'Nachtergaele' ], title: 'Applied Analysis', },
-      { unordered_author: [ 'Hunter', 'Nachtergaele' ], title: 'Applied Analysis', date: 2005, },
     ],
     material: {
       type: 'book',

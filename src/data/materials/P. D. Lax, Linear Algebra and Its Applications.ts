@@ -5,18 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'Lax, Linear Algebra and Its Applications',
-      'P. D. Lax, Linear Algebra and Its Applications',
-      'Lax, Linear Algebra and Its Applications, 2e',
-      'P. D. Lax, Linear Algebra and Its Applications, 2e',
-      'Lax, Linear Algebra and Its Applications, 2007',
-      'P. D. Lax, Linear Algebra and Its Applications, 2007',
-      { unordered_author: 'Lax', title: 'Linear Algebra and Its Applications' },
-      { unordered_author: 'P. D. Lax', title: 'Linear Algebra and Its Applications' },
-      { unordered_author: 'Lax', title: 'Linear Algebra and Its Applications', date: 2007 },
-      { unordered_author: 'P. D. Lax', title: 'Linear Algebra and Its Applications', date: 2007 },
-      { unordered_author: 'Lax', title: 'Linear Algebra and Its Applications', edition: 2 },
-      { unordered_author: 'P. D. Lax', title: 'Linear Algebra and Its Applications', edition: 2 },
     ],
     material: {
       type: 'book',

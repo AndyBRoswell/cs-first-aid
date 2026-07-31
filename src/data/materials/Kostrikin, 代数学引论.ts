@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'Kostrikin, 代数学引论1',
-      'A. I. Kostrikin, 代数学引论, 2 ed., vol. 1',
-      { unordered_author: 'A. I. Kostrikin', title: '代数学引论', volume: 1 },
     ],
     material: {
       type: 'book',
@@ -32,9 +29,6 @@ const items = [
   },
   {
     id: [
-      'Kostrikin, 代数学引论2',
-      'A. I. Kostrikin, 代数学引论, 2007, vol. 2',
-      { unordered_author: 'A. I. Kostrikin', title: '代数学引论', volume: 2 },
     ],
     material: {
       type: 'book',
@@ -59,9 +53,6 @@ const items = [
   },
   {
     id: [
-      'Kostrikin, 代数学引论3',
-      'A. I. Kostrikin, 代数学引论, 2 ed., vol. 3',
-      { unordered_author: 'A. I. Kostrikin', title: '代数学引论', volume: 3 },
     ],
     material: {
       type: 'book',
@@ -86,9 +77,6 @@ const items = [
   },
   {
     id: [
-      'Kostrikin, 代数学习题集',
-      'A. I. Kostrikin, 代数学习题集, 4 ed.',
-      { unordered_author: 'A. I. Kostrikin', title: '代数学习题集' },
     ],
     material: {
       type: 'book',

@@ -5,11 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'M. Huth and M. Ryan, Logic in Computer Science',
-      'M. Huth and M. Ryan, Logic in Computer Science, 2e',
-      'M. Huth and M. Ryan, Logic in Computer Science, 2e, 2004',
-      { unordered_author: [ 'M. Huth', 'M. Ryan' ], title: 'Logic in Computer Science', edition: 2, },
-      { unordered_author: [ 'M. Huth', 'M. Ryan' ], title: 'Logic in Computer Science', date: 2004, },
     ],
     material: {
       type: 'book',

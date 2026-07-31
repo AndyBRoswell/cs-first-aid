@@ -7,8 +7,6 @@ const items = [
     id: [
       'Princeton Calculus Reader',
       'The Calculus Lifesaver',
-      'Banner, The Calculus Lifesaver',
-      { unordered_author: 'Banner', title: 'The Calculus Lifesaver', },
     ],
     material: {
       type: 'book',

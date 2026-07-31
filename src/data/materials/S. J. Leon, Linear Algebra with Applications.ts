@@ -5,13 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'S. J. Leon et al., Linear Algebra with Applications',
-      'S. J. Leon and L. de Pillis, Linear Algebra with Applications',
-      'S. J. Leon and L. de Pillis, Linear Algebra with Applications, 10e',
-      'S. J. Leon and L. de Pillis, Linear Algebra with Applications, 2020',
-      { unordered_author: [ 'S. J. Leon', 'L. de Pillis' ], title: 'Linear Algebra with Applications', },
-      { unordered_author: [ 'S. J. Leon', 'L. de Pillis' ], title: 'Linear Algebra with Applications', date: 2020, },
-      { unordered_author: [ 'S. J. Leon', 'L. de Pillis' ], title: 'Linear Algebra with Applications', edition: 10, },
     ],
     material: {
       type: 'book',

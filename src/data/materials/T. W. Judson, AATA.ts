@@ -6,8 +6,6 @@ const items = [
   {
     id: [
       'T. W. Judson, AATA',
-      'T. W. Judson, Abstract Algebra: Theory and Applications',
-      { unordered_author: 'T. W. Judson', title: 'Abstract Algebra: Theory and Applications', },
     ],
     material: {
       type: 'book',

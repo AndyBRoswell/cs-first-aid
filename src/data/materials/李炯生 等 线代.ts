@@ -4,14 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '李炯生 线代',
-      '李炯生 线代2版',
-      '李炯生 线代 2010',
-      '李炯生 查建国 王新茂 线性代数 2010',
-      { unordered_author: [ '李炯生', '查建国', '王新茂' ], title: '线性代数', edition: 2 },
-      { unordered_author: [ '李炯生', '查建国', '王新茂' ], title: '线性代数', date: 2010 },
-    ] satisfies Data_Type.ID_t[],
+    id: [] satisfies Data_Type.ID_t[],
     material: {
       type: 'book',
       id: '李炯生 查建国 王新茂 线性代数 2010',

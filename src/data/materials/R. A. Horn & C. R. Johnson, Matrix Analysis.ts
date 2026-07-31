@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'R. A. Horn and C. R. Johnson, Matrix Analysis',
-      'R. A. Horn and C. R. Johnson, Matrix Analysis, 2e',
-      'R. A. Horn and C. R. Johnson, Matrix Analysis, 2012',
-      { unordered_author: [ 'R. A. Horn', 'C. R. Johnson' ], title: 'Matrix Analysis' },
-      { unordered_author: [ 'R. A. Horn', 'C. R. Johnson' ], title: 'Matrix Analysis', date: 2012 },
-      { unordered_author: [ 'R. A. Horn', 'C. R. Johnson' ], title: 'Matrix Analysis', edition: 2 },
     ],
     material: {
       type: 'book',

@@ -4,10 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '席南华 基础代数1',
-      { unordered_author: '席南华', title: '基础代数', volume: 1 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '席南华 基础代数1',
@@ -26,10 +23,7 @@ const items = [
     },
   } satisfies Data_Type.Entry,
   {
-    id: [
-      '席南华 基础代数2',
-      { unordered_author: '席南华', title: '基础代数', volume: 2 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '席南华 基础代数2',
@@ -47,10 +41,7 @@ const items = [
     },
   } satisfies Data_Type.Entry,
   {
-    id: [
-      '席南华 基础代数3',
-      { unordered_author: '席南华', title: '基础代数', volume: 3 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '席南华 基础代数3',

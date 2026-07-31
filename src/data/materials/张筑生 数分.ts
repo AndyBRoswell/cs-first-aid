@@ -4,13 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '张筑生 数分1',
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）', volume: 1, },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）', date: 2021, volume: 1, },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）（第一册）' },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）（第一册）', date: 2021 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '张筑生 数分1',
@@ -28,13 +22,7 @@ const items = [
     },
   },
   {
-    id: [
-      '张筑生 数分2',
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）', volume: 2, },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）', date: 2021, volume: 2, },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）（第二册）' },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）（第二册）', date: 2021 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '张筑生 数分2',
@@ -51,13 +39,7 @@ const items = [
     },
   },
   {
-    id: [
-      '张筑生 数分3',
-        { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）', volume: 3, },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）', date: 2021, volume: 3, },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）（第三册）' },
-      { unordered_author: [ '张筑生' ], title: '数学分析新讲（重排本）（第三册）', date: 2021 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '张筑生 数分3',

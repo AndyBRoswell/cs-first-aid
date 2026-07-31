@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      '丘维声 高代1版上',
-      '丘维声 高代 2010上',
-      { unordered_author: '丘维声', title: '高等代数', date: 2010, volume: 1 },
       { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 1 },
     ],
     material: {
@@ -37,9 +34,6 @@ const items = [
   },
   {
     id: [
-      '丘维声 高代1版下',
-      '丘维声 高代 2010下',
-      { unordered_author: '丘维声', title: '高等代数', date: 2010, volume: 2 },
       { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 2 },
     ],
     material: {
@@ -69,9 +63,6 @@ const items = [
   },
   {
     id: [
-      '丘维声 高代 公开课',
-      '丘维声 高代 公开课 2011',
-      '丘维声 高代 2011 公开课',
     ],
     material: {
       type: 'motion_picture',
@@ -94,12 +85,6 @@ const items = [
   },
   {
     id: [
-      '丘维声 高代上',
-      '丘维声 高代2版上',
-      '丘维声 高代 2019上',
-      { unordered_author: '丘维声', title: '高等代数', volume: 1 },
-      { unordered_author: '丘维声', title: '高等代数', date: 2019, volume: 1 },
-      { unordered_author: '丘维声', title: '高等代数', edition: 2, volume: 1 },
     ],
     material: {
       type: 'book',
@@ -125,12 +110,6 @@ const items = [
   },
   {
     id: [
-      '丘维声 高代下',
-      '丘维声 高代2版下',
-      '丘维声 高代 2019下',
-      { unordered_author: '丘维声', title: '高等代数', volume: 2 },
-      { unordered_author: '丘维声', title: '高等代数', date: 2019, volume: 2 },
-      { unordered_author: '丘维声', title: '高等代数', edition: 2, volume: 2 },
     ],
     material: {
       type: 'book',
@@ -156,11 +135,6 @@ const items = [
   },
   {
     id: [
-      '丘维声 高代指导书 上',
-      '丘维声 高代指导书2版上',
-      { unordered_author: '丘维声', title: '高等代数学习指导书', volume: 1 },
-      { unordered_author: '丘维声', title: '高等代数学习指导书', date: 2017, volume: 1 },
-      { unordered_author: '丘维声', title: '高等代数学习指导书', edition: 2, volume: 1 },
     ],
     material: {
       type: 'book',
@@ -185,11 +159,6 @@ const items = [
   },
   {
     id: [
-      '丘维声 高代指导书 下',
-      '丘维声 高代指导书2版下',
-      { unordered_author: '丘维声', title: '高等代数学习指导书', volume: 2 },
-      { unordered_author: '丘维声', title: '高等代数学习指导书', date: 2016, volume: 2 },
-      { unordered_author: '丘维声', title: '高等代数学习指导书', edition: 2, volume: 2 },
     ],
     material: {
       type: 'book',

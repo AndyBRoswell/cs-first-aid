@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'T. S. Shores, Applied Linear Algebra and Matrix Analysis',
-      'T. S. Shores, Applied Linear Algebra and Matrix Analysis, 2e',
-      'T. S. Shores, Applied Linear Algebra and Matrix Analysis, 2018',
-      { unordered_author: 'T. S. Shores', title: 'Applied Linear Algebra and Matrix Analysis' },
-      { unordered_author: 'T. S. Shores', title: 'Applied Linear Algebra and Matrix Analysis', date: 2018 },
-      { unordered_author: 'T. S. Shores', title: 'Applied Linear Algebra and Matrix Analysis', edition: 2 },
     ],
     material: {
       type: 'book',

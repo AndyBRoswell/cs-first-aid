@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'D. S. Dummit and R. M. Foote, Abstract Algebra',
-      'D. S. Dummit and R. M. Foote, Abstract Algebra, 3e',
-      'D. S. Dummit and R. M. Foote, Abstract Algebra, 2003',
-      { unordered_author: [ 'D. S. Dummit', 'R. M. Foote' ], title: 'Abstract Algebra', },
-      { unordered_author: [ 'D. S. Dummit', 'R. M. Foote' ], title: 'Abstract Algebra', date: 2003, },
-      { unordered_author: [ 'D. S. Dummit', 'R. M. Foote' ], title: 'Abstract Algebra', edition: 3, },
     ],
     material: {
       type: 'book',

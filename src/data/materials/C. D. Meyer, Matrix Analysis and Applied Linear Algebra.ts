@@ -5,18 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'Meyer, Matrix Analysis and Applied Linear Algebra',
-      'C. D. Meyer, Matrix Analysis and Applied Linear Algebra',
-      'Meyer, Matrix Analysis and Applied Linear Algebra, 2e',
-      'C. D. Meyer, Matrix Analysis and Applied Linear Algebra, 2e',
-      'Meyer, Matrix Analysis and Applied Linear Algebra, 2023',
-      'C. D. Meyer, Matrix Analysis and Applied Linear Algebra, 2023',
-      { unordered_author: 'Meyer', title: 'Matrix Analysis and Applied Linear Algebra' },
-      { unordered_author: 'C. D. Meyer', title: 'Matrix Analysis and Applied Linear Algebra' },
-      { unordered_author: 'Meyer', title: 'Matrix Analysis and Applied Linear Algebra', date: 2023 },
-      { unordered_author: 'C. D. Meyer', title: 'Matrix Analysis and Applied Linear Algebra', date: 2023 },
-      { unordered_author: 'Meyer', title: 'Matrix Analysis and Applied Linear Algebra', edition: 2 },
-      { unordered_author: 'C. D. Meyer', title: 'Matrix Analysis and Applied Linear Algebra', edition: 2 },
     ],
     material: {
       type: 'book',
@@ -45,18 +33,6 @@ const items = [
   },
   {
     id: [
-      'Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide',
-      'C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide',
-      'Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide, 2e',
-      'C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide, 2e',
-      'Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide, 2023',
-      'C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide, 2023',
-      { unordered_author: 'Meyer', title: 'Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide' },
-      { unordered_author: 'C. D. Meyer', title: 'Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide' },
-      { unordered_author: 'Meyer', title: 'Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide', date: 2023 },
-      { unordered_author: 'C. D. Meyer', title: 'Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide', date: 2023 },
-      { unordered_author: 'Meyer', title: 'Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide', edition: 2 },
-      { unordered_author: 'C. D. Meyer', title: 'Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide', edition: 2 },
     ],
     material: {
       type: 'book',

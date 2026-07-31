@@ -5,18 +5,6 @@ const items = [
   {
     id: [
       'LADR',
-      'Axler, Linear Algebra Done Right',
-      'Axler, Linear Algebra Done Right, 4e',
-      'Axler, Linear Algebra Done Right, 2023',
-      'S. Axler, Linear Algebra Done Right',
-      'S. Axler, Linear Algebra Done Right, 4e',
-      'S. Axler, Linear Algebra Done Right, 2023',
-      { unordered_author: 'Axler', title: 'Linear Algebra Done Right' },
-      { unordered_author: 'S. Axler', title: 'Linear Algebra Done Right' },
-      { unordered_author: 'Axler', title: 'Linear Algebra Done Right', date: 2024 },
-      { unordered_author: 'S. Axler', title: 'Linear Algebra Done Right', date: 2024 },
-      { unordered_author: 'Axler', title: 'Linear Algebra Done Right', edition: 4 },
-      { unordered_author: 'S. Axler', title: 'Linear Algebra Done Right', edition: 4 },
     ],
     material: {
       type: 'book',

@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'D. B. West, Introduction to Graph Theory',
-      'D. B. West, Introduction to Graph Theory, 2e',
-      { unordered_author: 'D. B. West', title: 'Introduction to Graph Theory', edition: 2, },
     ],
     material: {
       type: 'book',

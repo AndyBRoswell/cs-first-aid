@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'J. Gustedt, "Modern C," 3rd ed.',
-      { unordered_author: 'J. Gustedt', title: 'Modern C', },
-      { unordered_author: 'J. Gustedt', title: 'Modern C', edition: 3, },
     ],
     material: {
       type: 'book',

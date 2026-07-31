@@ -6,12 +6,6 @@ const items = [
     id: [
       'GATech ILA',
       'Interactive Linear Algebra',
-      'Margalit and Rabinoff, Linear Algebra',
-      'D. Margalit and J. Rabinoff, Linear Algebra',
-      { unordered_author: [ 'Margalit', 'Rabinoff' ], title: 'Interactive Linear Algebra' },
-      { unordered_author: [ 'D. Margalit', 'J. Rabinoff' ], title: 'Interactive Linear Algebra' },
-      { unordered_author: [ 'Margalit', 'Rabinoff' ], title: 'Interactive Linear Algebra', date: 2019 },
-      { unordered_author: [ 'D. Margalit', 'J. Rabinoff' ], title: 'Interactive Linear Algebra', date: 2019 },
     ],
     material: {
       type: 'book',

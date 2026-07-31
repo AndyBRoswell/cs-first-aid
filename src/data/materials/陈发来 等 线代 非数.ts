@@ -4,22 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '陈发来 线代1',
-      '陈发来 线代1 2026',
-      '陈发来 线代I',
-      '陈发来 线代I 2026',
-      '陈发来, 王新茂, 陈效群, 李思敏, 线性代数 I, 2026',
-      {
-        unordered_author: [ '陈发来', '王新茂', '陈效群', '李思敏', ],
-        title: '线性代数 I',
-      },
-      {
-        unordered_author: [ '陈发来', '王新茂', '陈效群', '李思敏', ],
-        title: '线性代数 I',
-        date: 2026,
-      },
-    ],
+    id: [],
     material: {
       id: '陈发来, 王新茂, 陈效群, 李思敏, 线性代数 I, 2026',
       type: 'book',

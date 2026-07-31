@@ -6,13 +6,6 @@ const items = [
   {
     id: [
       'Apostol Calculus I',
-      `Apostol's Calculus I`,
-      'T. M. Apostol, Calculus Vol I',
-      'T. M. Apostol, Calculus Vol I, 2e',
-      'T. M. Apostol, Calculus Vol I, 1967',
-      { unordered_author: 'T. M. Apostol', title: 'Calculus', volume: 1, },
-      { unordered_author: 'T. M. Apostol', title: 'Calculus', edition: 2, volume: 1, },
-      { unordered_author: 'T. M. Apostol', title: 'Calculus', date: 1967, volume: 1,},
     ],
     material: {
       type: 'book',
@@ -36,13 +29,6 @@ const items = [
   {
     id: [
       'Apostol Calculus II',
-      `Apostol's Calculus II`,
-      'Apostol, Calculus Vol II',
-      'Apostol, Calculus Vol II, 2e',
-      'Apostol, Calculus Vol II, 1969',
-      { unordered_author: 'Apostol', title: 'Calculus Vol II', },
-      { unordered_author: 'Apostol', title: 'Calculus Vol II', edition: 2, },
-      { unordered_author: 'Apostol', title: 'Calculus Vol II', date: 1969, },
     ],
     material: {
       type: 'book',

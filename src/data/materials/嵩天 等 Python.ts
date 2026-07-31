@@ -4,15 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '嵩天 Python',
-      '嵩天 等 Python',
-      '嵩天 等 Python 第3版',
-      '嵩天, 黄天羽, 杨雅婷, Python语言程序设计基础, 第3版',
-      { unordered_author: [ '嵩天', '黄天羽', '杨雅婷' ], title: 'Python语言程序设计基础', },
-      { unordered_author: [ '嵩天', '黄天羽', '杨雅婷' ], title: 'Python语言程序设计基础', edition: 3, },
-      { unordered_author: [ '嵩天', '黄天羽', '杨雅婷' ], title: 'Python语言程序设计基础', date: 2024, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '嵩天, 黄天羽, 杨雅婷, Python语言程序设计基础, 第3版',

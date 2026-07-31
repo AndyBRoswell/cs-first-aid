@@ -4,9 +4,6 @@ import * as Data_Type from '@/types/data.ts'
 const items = [
   {
     id: [
-      'PSF, The Python Tutorial',
-      'Python Software Foundation, The Python Tutorial',
-      { unordered_author: 'Python Software Foundation', title: 'The Python Tutorial', },
     ],
     material: {
       type: 'webpage',

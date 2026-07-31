@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'B. Stroustrup, A Tour of C++',
-      'B. Stroustrup, A Tour of C++, 3e',
-      'B. Stroustrup, A Tour of C++, 3rd ed.',
-      { unordered_author: 'B. Stroustrup', title: 'A Tour of C++', },
-      { unordered_author: 'B. Stroustrup', title: 'A Tour of C++', date: 2022, },
-      { unordered_author: 'B. Stroustrup', title: 'A Tour of C++', edition: 3, },
     ],
     material: {
       type: 'book',

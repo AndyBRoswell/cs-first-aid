@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'K. H. Rosen, Discrete Mathematics and Its Applications',
-      'K. H. Rosen, Discrete Mathematics and Its Applications, 2025',
-      { unordered_author: 'K. H. Rosen', title: 'Discrete Mathematics and its Applications', date: 2025, },
     ],
     material: {
       type: 'book',
@@ -32,11 +29,6 @@ const items = [
   },
   {
     id: [
-      `K. H. Rosen, Student's Solutions Guide for Discrete Mathematics and Its Applications`,
-      `K. H. Rosen, Student's Solutions Guide for Discrete Mathematics and Its Applications, 8e`,
-      `K. H. Rosen, Student's Solutions Guide for Discrete Mathematics and Its Applications, 2018`,
-      { unordered_author: 'K. H. Rosen', title: "Student's Solutions Guide for Discrete Mathematics and Its Applications", edition: 8, },
-      { unordered_author: 'K. H. Rosen', title: "Student's Solutions Guide for Discrete Mathematics and Its Applications", date: 2018, },
     ],
     material: {
       type: 'book',

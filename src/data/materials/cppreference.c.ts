@@ -6,7 +6,6 @@ const items = [
   {
     id: [
       'cppreference.com/c',
-      { unordered_author: 'cppreference.com', title: 'C reference', },
     ],
     material: {
       type: 'webpage',

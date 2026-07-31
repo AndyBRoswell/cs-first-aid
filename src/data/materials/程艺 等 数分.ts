@@ -6,8 +6,6 @@ const items = [
   {
     id: [
       '程艺 数分1',
-      { unordered_author: [ '程艺', '陈卿', '李平' ], title: '数学分析讲义（第一册）' },
-      { unordered_author: [ '程艺', '陈卿', '李平' ], title: '数学分析讲义（第一册）', date: 2019 },
     ],
     material: {
       id: '程艺 数分1',
@@ -28,8 +26,6 @@ const items = [
   {
     id: [
       '程艺 数分2',
-      { unordered_author: [ '程艺', '陈卿', '李平' ], title: '数学分析讲义（第二册）' },
-      { unordered_author: [ '程艺', '陈卿', '李平' ], title: '数学分析讲义（第二册）', date: 2020 },
     ],
     material: {
       id: '程艺 数分2',
@@ -48,11 +44,7 @@ const items = [
     },
   },
   {
-    id: [
-      '程艺 数分3',
-      { unordered_author: [ '程艺', '陈卿', '李平', '许斌' ], title: '数学分析讲义（第三册）' },
-      { unordered_author: [ '程艺', '陈卿', '李平', '许斌' ], title: '数学分析讲义（第三册）', date: 2020 },
-    ],
+    id: [],
     material: {
       id: '程艺 数分3',
       type: 'book',
@@ -70,10 +62,7 @@ const items = [
     }
   },
   {
-    id: [
-      '程艺 数分B1 公开课',
-      { unordered_author: [ '程艺' ], title: '数学分析', part: 'B1', type: '公开课', },
-    ],
+    id: [],
     material: {
       type: 'motion_picture',
       id: '程艺 数分B1 公开课',
@@ -91,10 +80,7 @@ const items = [
     } satisfies Data_Type.Video,
   },
   {
-    id: [
-      '程艺 数分B2 公开课',
-      { unordered_author: [ '程艺' ], title: '数学分析', part: 'B2', type: '公开课', },
-    ],
+    id: [],
     material: {
       type: 'motion_picture',
       id: '程艺 数分B2 公开课',

@@ -5,9 +5,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      '屈婉玲 离散数学教程',
       '耿素云 屈婉玲 王捍贫 离散数学教程',
-      { unordered_author: [ '耿素云', '屈婉玲', '王捍贫' ], title: '离散数学教程', date: 2002 },
     ],
     material: {
       id: '耿素云 屈婉玲 王捍贫 离散数学教程',
@@ -27,10 +25,7 @@ const items = [
     } satisfies Data_Type.Material,
   },
   {
-    id: [
-      '北京大学 离散数学 公开课',
-      '刘田 屈婉玲 王捍贫 离散数学 公开课',
-    ],
+    id: [],
     material: {
       type: 'motion_picture',
       id: '刘田 屈婉玲 王捍贫 离散数学 公开课',
@@ -49,11 +44,7 @@ const items = [
     } satisfies Data_Type.Material,
   },
   {
-    id: [
-      '屈婉玲 离散数学习题解析',
-      '屈婉玲 耿素云 王捍贫 刘田 离散数学习题解析',
-      { unordered_author: [ '屈婉玲', '耿素云', '王捍贫', '刘田' ], title: '离散数学习题解析', date: 2008 },
-    ],
+    id: [],
     material: {
       id: '屈婉玲 耿素云 王捍贫 刘田 离散数学习题解析',
       type: 'book',

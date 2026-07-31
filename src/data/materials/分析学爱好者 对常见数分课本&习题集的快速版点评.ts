@@ -5,12 +5,6 @@ const items = [
   {
     id: [
       '对常见数分课本&习题集的快速版点评',
-      '分析学爱好者, 对常见数分课本&习题集的快速版点评',
-      '王宇鹏, 对常见数分课本&习题集的快速版点评',
-      { unordered_author: '分析学爱好者', title: '对常见数分课本&习题集的快速版点评', },
-      { unordered_author: '王宇鹏', title: '对常见数分课本&习题集的快速版点评', },
-      { unordered_author: '分析学爱好者', title: '对常见数分课本&习题集的快速版点评', date: 2022, },
-      { unordered_author: '王宇鹏', title: '对常见数分课本&习题集的快速版点评', date: 2022, },
     ],
     material: {
       type: 'motion_picture',

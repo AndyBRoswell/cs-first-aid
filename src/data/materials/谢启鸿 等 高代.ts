@@ -6,14 +6,7 @@ import * as _ from '@/libraries/lodash-es.ts'
 
 const items = [
   {
-    id: [
-      '谢启鸿 高等代数学',
-      '谢启鸿 姚慕生 吴泉水 高等代数学',
-      '谢启鸿, 姚慕生, 吴泉水, 高等代数学',
-      '谢启鸿, 姚慕生, 吴泉水, 高等代数学, 第4版',
-      { unordered_author: [ '谢启鸿', '姚慕生', '吴泉水' ], title: '高等代数学', edition: 4, },
-      { unordered_author: [ '谢启鸿', '姚慕生', '吴泉水' ], title: '高等代数学', date: 2022, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '谢启鸿, 姚慕生, 吴泉水, 高等代数学, 第4版',
@@ -31,14 +24,7 @@ const items = [
     },
   },
   {
-    id: [
-      '谢启鸿 高等代数',
-      '谢启鸿 姚慕生 高等代数',
-      '谢启鸿, 姚慕生, 高等代数',
-      '谢启鸿, 姚慕生, 高等代数, 第4版',
-      { unordered_author: [ '谢启鸿', '姚慕生' ], title: '高等代数', edition: 4, },
-      { unordered_author: [ '谢启鸿', '姚慕生' ], title: '高等代数', date: 2022, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '谢启鸿, 姚慕生, 高等代数, 第4版',
@@ -55,14 +41,7 @@ const items = [
     },
   },
   {
-    id: [
-      '谢启鸿 高等代数学 3版',
-      '谢启鸿 高等代数学 第3版',
-      '姚慕生 吴泉水 谢启鸿 高等代数学 第3版',
-      '姚慕生, 吴泉水, 谢启鸿, 高等代数学, 第3版',
-      { unordered_author: [ '姚慕生', '吴泉水', '谢启鸿' ], title: '高等代数学', edition: 3, },
-      { unordered_author: [ '姚慕生', '吴泉水', '谢启鸿' ], title: '高等代数学', date: 2014, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '姚慕生, 吴泉水, 谢启鸿, 高等代数学, 第3版',
@@ -79,14 +58,7 @@ const items = [
     },
   },
   {
-    id: [
-      '谢启鸿 高等代数 3版',
-      '谢启鸿 高等代数 第3版',
-      '姚慕生 谢启鸿 高等代数 第3版',
-      '姚慕生, 谢启鸿, 高等代数, 第3版',
-      { unordered_author: [ '姚慕生', '谢启鸿' ], title: '高等代数', edition: 3, },
-      { unordered_author: [ '姚慕生', '谢启鸿' ], title: '高等代数', date: 2015, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '姚慕生, 谢启鸿, 高等代数, 第3版',
@@ -107,9 +79,7 @@ catalog.add_items(items)
 
 catalog.add_items([
   {
-    id: [
-      '谢启鸿 高代 公开课',
-    ],
+    id: [],
     material: {
       type: 'motion_picture',
       id: '谢启鸿 高代 公开课',

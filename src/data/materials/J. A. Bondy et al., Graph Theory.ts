@@ -5,9 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'J. A. Bondy and U. S. R. Murty, Graph Theory',
-      'J. A. Bondy and U. S. R. Murty, Graph Theory, 2008',
-      { unordered_author: [ 'J. A. Bondy', 'U. S. R. Murty', ], title: 'Graph Theory', date: 2008, },
     ],
     material: {
       type: 'book',

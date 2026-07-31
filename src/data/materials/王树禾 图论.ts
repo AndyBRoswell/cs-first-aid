@@ -4,15 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '王树禾 图论',
-      '王树禾, 图论',
-      '王树禾, 图论, 第2版',
-      '王树禾, 图论, 2009',
-      { unordered_author: '王树禾', title: '图论', edition: 2 },
-      { unordered_author: '王树禾', title: '图论', date: 2009 },
-      { unordered_author: '王树禾', title: '图论' },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '王树禾, 图论, 第2版',

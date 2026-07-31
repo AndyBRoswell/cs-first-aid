@@ -6,17 +6,6 @@ const items = [
   {
     id: [
       'Calculus: A Complete Course',
-      'Adams Calculus',
-      `Adams' Calculus`,
-      'Adams&Essex, Calculus: A Complete Course',
-      'R. A. Adams and C. Essex, Calculus: A Complete Course',
-      'Adams&Essex, Calculus: A Complete Course, 10e',
-      'R. A. Adams and C. Essex, Calculus: A Complete Course, 10e',
-      'Adams&Essex, Calculus: A Complete Course, 2021',
-      'R. A. Adams and C. Essex, Calculus: A Complete Course, 2021',
-      { unordered_author: [ 'R. A. Adams', 'C. Essex' ], title: 'Calculus: A Complete Course', },
-      { unordered_author: [ 'R. A. Adams', 'C. Essex' ], title: 'Calculus: A Complete Course', edition: 10, },
-      { unordered_author: [ 'R. A. Adams', 'C. Essex' ], title: 'Calculus: A Complete Course', date: 2021, },
     ],
     material: {
       type: 'book',

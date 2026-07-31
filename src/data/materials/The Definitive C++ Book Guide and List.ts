@@ -5,8 +5,6 @@ const items = [
   {
     id: [
       'The Definitive C++ Book Guide and List',
-      'Stack Overflow Community, The Definitive C++ Book Guide and List',
-      { unordered_author: 'Stack Overflow Community', title: 'The Definitive C++ Book Guide and List', },
     ],
     material: {
       type: 'webpage',

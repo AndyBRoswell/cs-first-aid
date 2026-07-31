@@ -6,9 +6,6 @@ const items = [
   {
     id: [
       '线性代数的几何意义',
-      '任广千 谢聪 胡翠芳 线性代数的几何意义',
-      '任广千 谢聪 胡翠芳 线性代数的几何意义 2015',
-      { unordered_author: [ '任广千', '谢聪', '胡翠芳' ], title: '线性代数的几何意义', date: 2015, },
     ] satisfies Data_Type.ID_t[],
     material: {
       type: 'book',

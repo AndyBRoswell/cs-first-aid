@@ -6,11 +6,6 @@ const items = [
   {
     id: [
       'Thomas Calculus',
-      'Thomas Calculus, 15e',
-      'Thomas Calculus, 2022',
-      { unordered_author: [ 'Hass', 'Heil', 'Weir', 'Bogacki' ], title: 'Thomas Calculus', },
-      { unordered_author: [ 'Hass', 'Heil', 'Weir', 'Bogacki' ], title: 'Thomas Calculus', edition: 15, },
-      { unordered_author: [ 'Hass', 'Heil', 'Weir', 'Bogacki' ], title: 'Thomas Calculus', date: 2022, },
     ],
     material: {
       type: 'book',
@@ -32,11 +27,6 @@ const items = [
   {
     id: [
       'Thomas Calculus Early Transcendentals',
-      'Thomas Calculus: Early Transcendentals, 15e',
-      'Thomas Calculus: Early Transcendentals, 2022',
-      { unordered_author: [ 'Hass', 'Heil', 'Weir', 'Bogacki' ], title: 'Thomas Calculus: Early Transcendentals', },
-      { unordered_author: [ 'Hass', 'Heil', 'Weir', 'Bogacki' ], title: 'Thomas Calculus: Early Transcendentals', edition: 15, },
-      { unordered_author: [ 'Hass', 'Heil', 'Weir', 'Bogacki' ], title: 'Thomas Calculus: Early Transcendentals', date: 2022, },
     ],
     material: {
       type: 'book',

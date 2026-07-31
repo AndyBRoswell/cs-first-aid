@@ -7,9 +7,6 @@ const items = [
     id: [
       'Rudin PMA',
       'Baby Rudin',
-      { unordered_author: 'Rudin', title: 'PMA', },
-      { unordered_author: 'Rudin', title: 'PMA', edition: 3, },
-      { unordered_author: 'Rudin', title: 'PMA', date: 1976, },
     ],
     material: {
       type: 'book',

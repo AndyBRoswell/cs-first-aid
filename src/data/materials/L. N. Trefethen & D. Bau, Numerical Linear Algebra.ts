@@ -5,11 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'Lloyd N. Trefethen and David Bau III, Numerical Linear Algebra',
-      'Lloyd N. Trefethen and David Bau III, Numerical Linear Algebra, 2022',
-      { unordered_author: [ 'L. N. Trefethen', 'D. Bau III' ], title: 'Numerical Linear Algebra' },
-      { unordered_author: [ 'L. N. Trefethen', 'D. Bau III' ], title: 'Numerical Linear Algebra', date: 2023 },
-      { unordered_author: [ 'L. N. Trefethen', 'D. Bau III' ], title: 'Numerical Linear Algebra', edition: '25th Anniversary' },
     ],
     material: {
       type: 'book',

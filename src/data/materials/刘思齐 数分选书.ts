@@ -4,14 +4,7 @@ import * as Data_Type from '@/types/data.ts'
 const items = [
   {
     id: [
-      '刘思齐 数分选书',
       '如何选择一本适合你的《数学分析》教科书？',
-      '我真的不懂分析, 如何选择一本适合你的《数学分析》教科书？',
-      '刘思齐, 如何选择一本适合你的《数学分析》教科书？',
-      { unordered_author: '我真的不懂分析', title: '如何选择一本适合你的《数学分析》教科书？', },
-      { unordered_author: '刘思齐', title: '如何选择一本适合你的《数学分析》教科书？', },
-      { unordered_author: '我真的不懂分析', title: '如何选择一本适合你的《数学分析》教科书？', date: 2020, },
-      { unordered_author: '刘思齐', title: '如何选择一本适合你的《数学分析》教科书？', date: 2020, },
     ],
     material: {
       type: 'motion_picture',

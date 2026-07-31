@@ -6,11 +6,6 @@ const items = [
   {
     id: [
       '简明微积分',
-      '龚昇 简明微积分',
-      '龚昇 简明微积分 第4版',
-      { unordered_author: '龚昇', title: '简明微积分', },
-      { unordered_author: '龚昇', title: '简明微积分', edition: 4, },
-      { unordered_author: '龚昇', title: '简明微积分', date: 2006, },
     ],
     material: {
       type: 'book',

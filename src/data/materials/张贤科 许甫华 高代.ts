@@ -4,13 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '张贤科 许甫华 高代',
-      '张贤科 许甫华 高等代数学',
-      '张贤科 许甫华 高等代数学 第2版',
-      '张贤科 许甫华 高等代数学 2004',
-      { unordered_author: [ '张贤科', '许甫华' ], title: '高等代数学', edition: 2 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '张贤科 许甫华 高等代数学 2004',

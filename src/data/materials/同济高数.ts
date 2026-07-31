@@ -6,12 +6,6 @@ const items = [
   {
     id: [
       '同济高数上',
-      '同济八版高数上',
-      '同济8版高数上',
-      { unordered_author: '同济大学数学科学学院', title: '高等数学', edition: 8, volume: 1, },
-      { unordered_author: '同济大学数学科学学院', title: '高等数学', date: 2023, volume: 1, },
-      { unordered_author: '同济大学数学科学学院', title: '高等数学 第八版', volume: 1, },
-      { unordered_author: '同济大学数学科学学院', title: '高等数学 第八版 上册', },
     ],
     material: {
       type: 'book',
@@ -34,12 +28,6 @@ const items = [
   {
     id: [
       '同济高数下',
-      '同济八版高数下',
-      '同济8版高数下',
-      { unordered_author: '同济大学数学科学学院', title: '高等数学', edition: 8, volume: 2, },
-      { unordered_author: '同济大学数学科学学院', title: '高等数学', date: 2023, volume: 2, },
-      { unordered_author: '同济大学数学科学学院', title: '高等数学 第八版', volume: 2, },
-      { unordered_author: '同济大学数学科学学院', title: '高等数学 第八版 下册', },
     ],
     material: {
       type: 'book',

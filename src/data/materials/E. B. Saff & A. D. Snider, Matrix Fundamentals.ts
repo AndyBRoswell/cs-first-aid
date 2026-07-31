@@ -5,12 +5,6 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 const items = [
   {
     id: [
-      'E. B. Saff and A. D. Snider, Matrix Fundamentals',
-      'E. B. Saff and A. D. Snider, Matrix Fundamentals, 2e',
-      'E. B. Saff and A. D. Snider, Matrix Fundamentals, 2025',
-      { unordered_author: [ 'E. B. Saff', 'A. D. Snider' ], title: 'Matrix Fundamentals' },
-      { unordered_author: [ 'E. B. Saff', 'A. D. Snider' ], title: 'Matrix Fundamentals', date: 2025 },
-      { unordered_author: [ 'E. B. Saff', 'A. D. Snider' ], title: 'Matrix Fundamentals', edition: 2 },
     ],
     material: {
       type: 'book',

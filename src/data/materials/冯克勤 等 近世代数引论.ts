@@ -4,15 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      '冯克勤 近世代数引论',
-      '冯克勤 等 近世代数引论',
-      '冯克勤 李尚志 章璞 近世代数引论',
-      '冯克勤, 李尚志, 章璞, 近世代数引论',
-      '冯克勤, 李尚志, 章璞, 近世代数引论, 第4版',
-      { unordered_author: [ '冯克勤', '李尚志', '章璞' ], title: '近世代数引论', edition: 4, },
-      { unordered_author: [ '冯克勤', '李尚志', '章璞' ], title: '近世代数引论', date: 2018, },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '冯克勤, 李尚志, 章璞, 近世代数引论, 第4版',
