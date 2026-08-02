@@ -117,7 +117,7 @@ export function add(IDs: ID_t[], material: Material) {
   }
 }
 
-export function get(ID: ID_t): Readonly<Material> {
+export function get(ID: ID_t): Material {
   const CID = canonical_ID(ID)
   if (m.has(CID)) { return m.get(CID)! }
   else { throw new Error(`Failed to fetch any entry with ID ${JSON.stringify(ID, null, 2)}`) }
@@ -133,7 +133,7 @@ export const default_filter_options: Required<Filter_Options> = {
   max_count: Number.MAX_SAFE_INTEGER,
 }
 
-export function filter(predicate: (current_material: Material) => unknown, options: Filter_Options = {}): Readonly<typeof v> {
+export function filter(predicate: (current_material: Material) => unknown, options: Filter_Options = {}): typeof v {
   const results = v.filter(predicate)
   if (results.length < (options.min_count ?? default_filter_options.min_count)) {
     throw new Error(`Filter returned ${results.length} results, which is less than minimum value ${options.min_count ?? default_filter_options.min_count}`)
@@ -153,7 +153,7 @@ export function filter(predicate: (current_material: Material) => unknown, optio
   return results
 }
 
-export function all(): Readonly<typeof v> { return v }
+export function all(): typeof v { return v }
 
 export async function dump_locally(output_path = node_path.join(util.project_root, 'local/materials.json')) {
   if (!process.env.CI && process.env.export_materials) {
