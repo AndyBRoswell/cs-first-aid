@@ -71,10 +71,10 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
   const partitioned_bib: Printed_Bibliography = {}
   for (const [ key, value ] of Object.entries(mangled.range)) {
     const [ start, end ] = value
-    const new_HTML_root = node_html_parser.parse(`<div class="csl-bib-body"></div>`)
+    const csl_bib_body = node_html_parser.parse(`<div class="csl-bib-body"></div>`).firstChild as node_html_parser.HTMLElement
     const target_entries = csl_entry.slice(start, end)
-    for (const entry of target_entries) { new_HTML_root.appendChild(entry) }
-    partitioned_bib[key] = new_HTML_root.toString()
+    for (const entry of target_entries) { csl_bib_body.appendChild(entry) }
+    partitioned_bib[key] = csl_bib_body.toString()
   }
   return partitioned_bib
 }
