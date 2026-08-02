@@ -1,8 +1,10 @@
 import * as catalog from '@/data/materials/catalog.ts'
 import * as Data_Type from '@/types/data.ts'
 import * as CSL_Data from '@/types/CSL_data.ts'
+import * as _ from '@/libraries/lodash-es.ts'
+import * as util from '@/util.ts'
 
-const items = [
+const books = [
   {
     id: [
       { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 1 },
@@ -62,30 +64,7 @@ const items = [
     },
   },
   {
-    id: [
-    ],
-    material: {
-      type: 'motion_picture',
-      id: '丘维声 高代 公开课 2011',
-      title: '北大丘维声教授清华高等代数课程1080P高清修复版(全151集)',
-      "event-place": '清华大学',
-      "event-date": { "date-parts": [ [ 2011, ] ] },
-      language: 'zh-CN',
-      URL: 'https://www.bilibili.com/video/BV1jR4y1M78W',
-      accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
-      custom: {
-        institution: [ '清华大学' ],
-        lecturer: [ { family: '丘', given: '维声' } ],
-        companion: [
-          { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 1, },
-          { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 2, },
-        ],
-      } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
-  },
-  {
-    id: [
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '丘维声 高代2版上',
@@ -109,8 +88,7 @@ const items = [
     },
   },
   {
-    id: [
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '丘维声 高代2版下',
@@ -134,8 +112,7 @@ const items = [
     },
   },
   {
-    id: [
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '丘维声 高代指导书2版上',
@@ -158,8 +135,7 @@ const items = [
     },
   },
   {
-    id: [
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '丘维声 高代指导书2版下',
@@ -184,4 +160,39 @@ const items = [
   },
 ] satisfies Data_Type.Entry[]
 
-catalog.add_items(items)
+catalog.add_items(books)
+
+const open_courses = [
+  {
+    id: [],
+    material: {
+      type: 'motion_picture',
+      id: '丘维声 高代 公开课 2011',
+      title: '北大丘维声教授清华高等代数课程1080P高清修复版(全151集)',
+      "event-place": '清华大学',
+      "event-date": { "date-parts": [ [ 2011, ] ] },
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV1jR4y1M78W',
+      accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
+      custom: {
+        institution: [ '清华大学' ],
+        lecturer: [ { family: '丘', given: '维声' } ],
+        companion: catalog.filter(
+          m =>
+            m.type === 'book'
+            &&
+            m.author?.length === 1
+            &&
+            _.isEqual(m.author[0], { family: '丘', given: '维声' })
+            &&
+            util.ieq(m.title!, '高等代数')
+            &&
+            m.edition === 1
+          , { min_count: 2, max_count: 2 }
+        )
+      } satisfies CSL_Data.Custom,
+    } satisfies Data_Type.Video,
+  },
+]
+
+catalog.add_items(open_courses)
