@@ -43,6 +43,10 @@ export type params_of_canonical_ID_enumeration = {
   values?: { [key in keyof ID_object]?: { value: ID_object[key][], override?: boolean } } // todo: handle extra values/values used to override
 }[]
 
+/**
+ * @deprecated
+ * It is now recommended to use `filter` instead.
+ */
 export function enumerate_canonical_IDs(
   groups: params_of_canonical_ID_enumeration = [
     { choices: [ [ 'unordered_author' ], [ 'ordered_author' ] ] },
