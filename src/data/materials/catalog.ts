@@ -124,21 +124,25 @@ export function get(ID: ID_t): Material {
 }
 
 export type Filter_Options = {
+  count?: number
   min_count?: number
   max_count?: number
 }
 
-export const default_filter_options: Required<Filter_Options> = {
+export const default_filter_options: Filter_Options = {
   min_count: 1,
   max_count: Number.MAX_SAFE_INTEGER,
 }
 
 export function filter(predicate: (current_material: Material) => unknown, options: Filter_Options = {}): typeof v {
   const results = v.filter(predicate)
-  if (results.length < (options.min_count ?? default_filter_options.min_count)) {
-    throw new Error(`Filter returned ${results.length} results, which is less than minimum value ${options.min_count ?? default_filter_options.min_count}`)
+  if ('count' in options && results.length !== options.count) {
+    throw new Error(`Filter ${predicate} returned ${results.length} , which does not match the expected count ${options.count}`)
   }
-  if (results.length > (options.max_count ?? default_filter_options.max_count)) {
+  if (results.length < (options.min_count ?? default_filter_options.min_count!)) {
+    throw new Error(`Filter ${predicate} returned ${results.length} results, which is less than minimum value ${options.min_count ?? default_filter_options.min_count}`)
+  }
+  if (results.length > (options.max_count ?? default_filter_options.max_count!)) {
     logger.debug(
       `Results:`
       +
@@ -147,7 +151,7 @@ export function filter(predicate: (current_material: Material) => unknown, optio
       JSON.stringify(results, null, 2)
     )
     throw new Error(
-      `Filter returned ${results.length} results, which is more than maximum value ${options.max_count ?? default_filter_options.max_count}.`
+      `Filter ${predicate} returned ${results.length} results, which is more than maximum value ${options.max_count ?? default_filter_options.max_count}.`
     )
   }
   return results
