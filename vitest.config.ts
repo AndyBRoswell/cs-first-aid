@@ -24,6 +24,9 @@ export default defineConfig({
         name: 'src/data/materials/get_rendered_author.csl',
       },
       {
+        name: 'ISBN',
+      },
+      {
         name: 'ISSN',
       },
     ],
