@@ -1,8 +1,10 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
 import * as CSL_Data from '@/types/CSL_data.ts'
+import * as _ from '@/libraries/lodash-es.ts'
+import * as util from '@/util.ts'
 
-const items = [
+const books = [
   {
     id: [
       '程艺 数分1',
@@ -61,6 +63,11 @@ const items = [
       URL: 'https://www.hep.com.cn/book/show/a5fc1e0f-5469-414a-a804-a577bdb8aa55'
     }
   },
+] satisfies Data_Type.Entry[]
+
+catalog.add_items(books)
+
+const open_courses = [
   {
     id: [],
     material: {
@@ -75,7 +82,15 @@ const items = [
       accessed: { 'date-parts': [ [ 2026, 5, 3 ] ] },
       custom: {
         lecturer: [ { family: '程', given: '艺' } ],
-        companion: [ '程艺 数分1' ],
+        companion: catalog.filter(
+          m =>
+            m.author?.some(a => _.isEqual(a, { family: '程', given: '艺' }))
+            &&
+            util.ieq(m.title!, '数学分析讲义')
+            &&
+            m.volume === 1
+          , { count: 1 }
+        ),
       }
     } satisfies Data_Type.Video,
   },
@@ -93,10 +108,18 @@ const items = [
       accessed: { 'date-parts': [ [ 2026, 5, 3 ] ] },
       custom: {
         lecturer: [ { family: '程', given: '艺' } ],
-        companion: [ '程艺 数分2' ],
+        companion: catalog.filter(
+          m =>
+            util.ieq(m.title!, '数学分析讲义')
+            &&
+            m.author?.some(a => _.isEqual(a, { family: '程', given: '艺' }))
+            &&
+            m.volume === 2
+          , { count: 1 }
+        ),
       }
     } satisfies Data_Type.Video,
   },
-] satisfies Data_Type.Entry[]
+]
 
-catalog.add_items(items)
+catalog.add_items(open_courses)

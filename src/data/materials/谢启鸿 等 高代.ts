@@ -95,17 +95,13 @@ const open_courses = [
         lecturer: [ { family: '谢', given: '启鸿' } ],
         companion: [ ...catalog.filter(
           m =>
-            m.type === 'book'
-            &&
-            'author' in m
-            &&
-            m.author.some(a => _.isEqual(a, { family: '谢', given: '启鸿' }))
-            &&
             util.ieq(m.title!, '高等代数学')
+            &&
+            m.author?.some(a => _.isEqual(a, { family: '谢', given: '启鸿' }))
             &&
             m.edition === 3
           ,
-          { max_count: 1 }
+          { count: 1 }
         ) ]
       } satisfies CSL_Data.Custom,
     } satisfies Data_Type.Video,

@@ -1,8 +1,10 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
 import * as CSL_Data from '@/types/CSL_data.ts'
+import * as _ from '@/libraries/lodash-es.ts'
+import * as util from '@/util.ts'
 
-const items = [
+const books = [
   {
     id: [
       "陈纪修 数分 2004上",
@@ -49,28 +51,6 @@ const items = [
   {
     id: [],
     material: {
-      type: 'motion_picture',
-      id: '陈纪修 数分 2008 公开课',
-      title: '数学分析 复旦 陈纪修',
-      issued: { "date-parts": [ [ 2017, 1, 16 ] ] },
-      "event-date": { "date-parts": [ [ 2008, 9, 1 ] ] },
-      "event-place": '复旦大学',
-      language: 'zh-CN',
-      URL: 'https://www.bilibili.com/video/BV12s411h7v4',
-      accessed: { "date-parts": [ [ 2026, 5, 3 ] ] },
-      custom: {
-        lecturer: [ { family: '陈', given: '纪修' } ],
-        companion: [
-          "陈纪修 数分 2004上",
-          "陈纪修 数分 2004下",
-        ],
-        suggested_playback_speed: [ 1.5, 2, ],
-      }
-    } satisfies Data_Type.Video,
-  },
-  {
-    id: [],
-    material: {
       id: '陈纪修 数分上',
       type: 'book',
       title: '数学分析',
@@ -108,4 +88,36 @@ const items = [
   },
 ] satisfies Data_Type.Entry[]
 
-catalog.add_items(items)
+catalog.add_items(books)
+
+const open_courses = [
+  {
+    id: [],
+    material: {
+      type: 'motion_picture',
+      id: '陈纪修 数分 2008 公开课',
+      title: '数学分析 复旦 陈纪修',
+      issued: { "date-parts": [ [ 2017, 1, 16 ] ] },
+      "event-date": { "date-parts": [ [ 2008, 9, 1 ] ] },
+      "event-place": '复旦大学',
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV12s411h7v4',
+      accessed: { "date-parts": [ [ 2026, 5, 3 ] ] },
+      custom: {
+        lecturer: [ { family: '陈', given: '纪修' } ],
+        companion: catalog.filter(
+          m =>
+            util.ieq(m.title!, '数学分析')
+            &&
+            m.author?.some(a => _.isEqual(a, { family: '陈', given: '纪修' }))
+            &&
+            m.edition === 2
+          , { count: 2 }
+        ),
+        suggested_playback_speed: [ 1.5, 2, ],
+      } satisfies CSL_Data.Custom
+    } satisfies Data_Type.Video,
+  },
+]
+
+catalog.add_items(open_courses)

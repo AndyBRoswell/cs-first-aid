@@ -1,8 +1,9 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
 import * as CSL_Data from '@/types/CSL_data.ts'
+import * as util from '@/util.ts'
 
-const items = [
+const books = [
   {
     id: [
       '耿素云 屈婉玲 王捍贫 离散数学教程',
@@ -27,25 +28,6 @@ const items = [
   {
     id: [],
     material: {
-      type: 'motion_picture',
-      id: '刘田 屈婉玲 王捍贫 离散数学 公开课',
-      title: '离散数学（全）-北京大学',
-      "event-place": '北京大学',
-      issued: { 'date-parts': [ [ 2018, 5, 24 ] ], },
-      accessed: { 'date-parts': [ [ 2026, 5, 7 ] ], },
-      URL: 'https://www.bilibili.com/video/BV1BW411n7gw',
-      language: 'zh-CN',
-      custom: {
-        lecturer: [ { family: '刘', given: '田' }, { family: '屈', given: '婉玲' }, { family: '王', given: '捍贫' }, ],
-        companion: [
-          '耿素云 屈婉玲 王捍贫 离散数学教程',
-        ]
-      } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
-  },
-  {
-    id: [],
-    material: {
       id: '屈婉玲 耿素云 王捍贫 刘田 离散数学习题解析',
       type: 'book',
       author: [ { family: '屈', given: '婉玲' }, { family: '耿', given: '素云' }, { family: '王', given: '捍贫' }, { family: '刘', given: '田' }, ],
@@ -63,4 +45,38 @@ const items = [
   },
 ] satisfies Data_Type.Entry[]
 
-catalog.add_items(items)
+catalog.add_items(books)
+
+const open_courses = [
+  {
+    id: [],
+    material: {
+      type: 'motion_picture',
+      id: '刘田 屈婉玲 王捍贫 离散数学 公开课',
+      title: '离散数学（全）-北京大学',
+      "event-place": '北京大学',
+      issued: { 'date-parts': [ [ 2018, 5, 24 ] ], },
+      accessed: { 'date-parts': [ [ 2026, 5, 7 ] ], },
+      URL: 'https://www.bilibili.com/video/BV1BW411n7gw',
+      language: 'zh-CN',
+      custom: {
+        lecturer: [ { family: '刘', given: '田' }, { family: '屈', given: '婉玲' }, { family: '王', given: '捍贫' }, ],
+        companion: catalog.filter(
+          m =>
+            util.ieq(m.title!, '离散数学教程')
+            &&
+            util.ieq(m.publisher!, '北京大学出版社')
+            &&
+            'issued' in m
+            &&
+            'date-parts' in m.issued
+            &&
+            m.issued['date-parts'][0][0] === 2002
+          , { count: 1 }
+        )
+      } satisfies CSL_Data.Custom,
+    } satisfies Data_Type.Video,
+  },
+]
+
+catalog.add_items(open_courses)

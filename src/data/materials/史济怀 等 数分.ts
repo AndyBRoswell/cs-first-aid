@@ -1,8 +1,10 @@
 import * as catalog from './catalog.ts'
 import * as CSL_Data from '@/types/CSL_data.ts'
 import * as Data_Type from '@/types/data.ts'
+import * as _ from '@/libraries/lodash-es.ts'
+import * as util from '@/util.ts'
 
-const items = [
+const books = [
   {
     id: [
       `史济怀 数分 2003上`,
@@ -52,28 +54,6 @@ const items = [
   {
     id: [],
     material: {
-      type: 'motion_picture',
-      id: '史济怀 数分 2003 公开课',
-      title: '【数学分析】中科大-史济怀',
-      "event-date": { "date-parts": [ [ 2003, 9, ] ], },
-      "event-place": '中国科学技术大学少年班学院',
-      issued: { "date-parts": [ [ 2018, 1, 28 ] ], },
-      language: 'zh-CN',
-      URL: 'https://www.bilibili.com/video/BV1ZW411e7PF',
-      accessed: { "date-parts": [ [ 2026, 5, 3 ] ], },
-      custom: {
-        lecturer: [ { family: '史', given: '济怀' } ],
-        companion: [
-          `史济怀 数分 2003上`,
-          `史济怀 数分 2003下`,
-        ],
-        suggested_playback_speed: [ 1.5, 2, ],
-      } satisfies CSL_Data.Custom
-    }
-  },
-  {
-    id: [],
-    material: {
       type: 'book',
       id: `史济怀 数分 2026上`,
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
@@ -109,4 +89,40 @@ const items = [
   },
 ] satisfies Data_Type.Entry[]
 
-catalog.add_items(items)
+catalog.add_items(books)
+
+const open_courses = [
+  {
+    id: [],
+    material: {
+      type: 'motion_picture',
+      id: '史济怀 数分 2003 公开课',
+      title: '【数学分析】中科大-史济怀',
+      "event-date": { "date-parts": [ [ 2003, 9, ] ], },
+      "event-place": '中国科学技术大学少年班学院',
+      issued: { "date-parts": [ [ 2018, 1, 28 ] ], },
+      language: 'zh-CN',
+      URL: 'https://www.bilibili.com/video/BV1ZW411e7PF',
+      accessed: { "date-parts": [ [ 2026, 5, 3 ] ], },
+      custom: {
+        lecturer: [ { family: '史', given: '济怀' } ],
+        companion: catalog.filter(
+          m =>
+            util.ieq(m.title!, '数学分析教程')
+            &&
+            m.author?.some(a => _.isEqual(a, { family: '史', given: '济怀' }))
+            &&
+            'issued' in m
+            &&
+            'date-parts' in m.issued
+            &&
+            m.issued['date-parts'][0][0] === 2003
+          , { count: 2 }
+        ),
+        suggested_playback_speed: [ 1.5, 2, ],
+      } satisfies CSL_Data.Custom
+    } satisfies Data_Type.Video
+  },
+]
+
+catalog.add_items(open_courses)
