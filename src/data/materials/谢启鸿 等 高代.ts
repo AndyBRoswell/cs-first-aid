@@ -4,7 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 import * as util from '@/util.ts'
 import * as _ from '@/libraries/lodash-es.ts'
 
-const items = [
+const books = [
   {
     id: [],
     material: {
@@ -75,9 +75,9 @@ const items = [
   },
 ] satisfies Data_Type.Entry[]
 
-catalog.add_items(items)
+catalog.add_items(books)
 
-catalog.add_items([
+const open_courses = [
   {
     id: [],
     material: {
@@ -96,14 +96,20 @@ catalog.add_items([
         companion: [ ...catalog.filter(
           m =>
             m.type === 'book'
-            && 'author' in m
-            && m.author.some(a => _.isEqual(a, { family: '谢', given: '启鸿' }))
-            && util.ieq(m.title!, '高等代数学')
-            && m.edition === 3
+            &&
+            'author' in m
+            &&
+            m.author.some(a => _.isEqual(a, { family: '谢', given: '启鸿' }))
+            &&
+            util.ieq(m.title!, '高等代数学')
+            &&
+            m.edition === 3
           ,
           { max_count: 1 }
         ) ]
-      },
-    },
+      } satisfies CSL_Data.Custom,
+    } satisfies Data_Type.Video,
   },
-])
+]
+
+catalog.add_items(open_courses)
