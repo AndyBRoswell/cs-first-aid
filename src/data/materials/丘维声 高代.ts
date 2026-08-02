@@ -179,16 +179,14 @@ const open_courses = [
         lecturer: [ { family: '丘', given: '维声' } ],
         companion: catalog.filter(
           m =>
-            m.type === 'book'
+            util.ieq(m.title!, '高等代数')
             &&
             m.author?.length === 1
             &&
             _.isEqual(m.author[0], { family: '丘', given: '维声' })
             &&
-            util.ieq(m.title!, '高等代数')
-            &&
             m.edition === 1
-          , { min_count: 2, max_count: 2 }
+          , { count: 2 }
         )
       } satisfies CSL_Data.Custom,
     } satisfies Data_Type.Video,

@@ -1,8 +1,10 @@
 import * as catalog from './catalog.ts'
 import * as Data_Type from '@/types/data.ts'
 import * as CSL_Data from '@/types/CSL_data.ts'
+import * as _ from '@/libraries/lodash-es.ts'
+import * as util from '@/util.ts'
 
-const items = [
+const books = [
   {
     id: [
       { unordered_author: [ '陈发来', '陈效群', '李思敏', '王新茂' ], title: '线性代数与解析几何', edition: 2 },
@@ -30,6 +32,11 @@ const items = [
       } satisfies CSL_Data.Custom,
     },
   },
+] satisfies Data_Type.Entry[]
+
+catalog.add_items(books)
+
+const open_course = [
   {
     id: [],
     material: {
@@ -46,12 +53,18 @@ const items = [
       custom: {
         lecturer: [ { family: '陈', given: '发来' } ],
         institution: [ '中国科学技术大学' ],
-        companion: [
-          { unordered_author: [ '陈发来', '陈效群', '李思敏', '王新茂' ], title: '线性代数与解析几何', edition: 2 }
-        ],
+        companion: catalog.filter(
+          m =>
+            util.ieq(m.title!, '线性代数与解析几何')
+            &&
+            m.author?.some(a => _.isEqual(a, { family: '陈', given: '发来' }))
+            &&
+            m.edition === 2
+          , { count: 1 }
+        )
       } satisfies CSL_Data.Custom,
-    },
+    } satisfies Data_Type.Video,
   },
-] satisfies Data_Type.Entry[]
+]
 
-catalog.add_items(items)
+catalog.add_items(open_course)
