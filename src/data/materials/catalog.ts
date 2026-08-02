@@ -136,7 +136,11 @@ export const default_filter_options: Filter_Options = {
 }
 
 export function filter(predicate: (current_material: Material) => unknown, options: Filter_Options = {}): typeof v {
-  const results = v.filter(predicate)
+  return scoped_filter(v, predicate, options)
+}
+
+export function scoped_filter(materials: Material[], predicate: (current_material: Material) => unknown, options: Filter_Options = {}): typeof v {
+  const results = materials.filter(predicate)
   if ('count' in options && results.length !== options.count) {
     throw new Error(`Filter ${predicate} returned ${results.length} , which does not match the expected count ${options.count}`)
   }
