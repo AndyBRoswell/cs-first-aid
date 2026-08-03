@@ -101,12 +101,12 @@ function _cite(mangled: Mangled_References, cite_item: ID_t | Scoped_ID_t | Mate
     case 'object':
       if ('filter' in cite_item) {
         material_filter = (cite_item as Qualified_Material_Filter).filter
-        if ('scope' in cite_item) { search_scope = mangled.range[cite_item.scope]! }
+        if ('scope' in cite_item) { search_scope = mangled.range[JSON.stringify(cite_item.scope)]! }
         if ('options' in cite_item) { filter_options = cite_item.options }
         indices.push(...cite_by_filter(mangled, search_scope, material_filter, filter_options))
       }
       else if ('ID' in cite_item) {
-        search_scope = mangled.range[(cite_item as Scoped_ID_t).scope]!
+        search_scope = mangled.range[JSON.stringify((cite_item as Scoped_ID_t).scope)]!
         ID = (cite_item as Scoped_ID_t).ID
         indices.push(cite_by_ID(mangled, search_scope, ID))
       }

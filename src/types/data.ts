@@ -47,8 +47,8 @@ export type Scope_Name = string[]
 export type Serialized_Scope_Name = Stringified_JSON // intent: index by arbitrary primitive array value instead of by reference
 export type Segment_Of_Scope_Name = string
 export type Scoped_References = Material[] | { [key: Segment_Of_Scope_Name]: Material[] | Scoped_References }
-export type Scoped_ID_t = { scope: Serialized_Scope_Name, ID: ID_t, }
-export type Qualified_Material_Filter = { scope?: Serialized_Scope_Name, filter: Material_Filter, options?: Filter_Options }
+export type Scoped_ID_t = { scope: Scope_Name, ID: ID_t, }
+export type Qualified_Material_Filter = { scope?: Scope_Name, filter: Material_Filter, options?: Filter_Options }
 
 export type Course = {
   canonical_name?: string
