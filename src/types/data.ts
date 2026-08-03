@@ -31,6 +31,8 @@ export const legal_keys_of_ID_object = [
 export type ID_t = ID_primitive | [ ID_primitive, ...ID_primitive[] ] | ID_object
 export type Entry = { id: ID_t[], material: Material, }
 
+export type Material_Filter = (current_material: Material) => unknown
+
 export type Link = string | {
   link: string
   license?: string
@@ -45,6 +47,7 @@ export type Serialized_Scope_Name = Stringified_JSON
 export type Segment_Of_Scope_Name = string
 export type Scoped_References = Material[] | { [key: Segment_Of_Scope_Name]: Material[] | Scoped_References }
 export type Scoped_ID_t = { scope: Serialized_Scope_Name, ID: ID_t, }
+export type Scoped_Filter = { scope: Serialized_Scope_Name, filter: Material_Filter }
 
 export type Course = {
   canonical_name?: string
