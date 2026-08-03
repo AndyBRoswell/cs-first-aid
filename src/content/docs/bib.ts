@@ -3,8 +3,10 @@ import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl?raw'
-import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, } from "@/types/data.ts";
+import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, Material_Filter, Qualified_Material_Filter, } from "@/types/data.ts";
 import * as catalog from '@/data/materials/catalog.ts'
+import { check_filter_results, type Filter_Options } from "@/data/materials/catalog.ts";
+import * as sea from "node:sea";
 
 const CSL_config = citation_js.plugins.config.get('@csl')
 const default_bib_style_name = 'IEEE [Custom]'
@@ -81,9 +83,10 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
 
 // It seems citation.js can't number the citations correctly when using IEEE style. Implemented it from scratch instead.
 // todo: add locator
-export function cite(mangled: Mangled_References, IDs: (ID_t | Scoped_ID_t)[]): string { // mimic \cite[]{}
+export function cite(mangled: Mangled_References, cite_items: (ID_t | Scoped_ID_t | Material_Filter | Qualified_Material_Filter)[]): string { // mimic \cite[]{}
   const indices: number[] = []
-  for (const ID of IDs) { indices.push(cite_one(mangled, ID)) }
+  // for (const item of cite_items) { indices.push(cite_one(mangled, item)) }
+  for (const item of cite_items) { indices.push(..._cite(mangled, item)) }
   return `[${indices.join('][')}]`
 }
 
@@ -94,7 +97,7 @@ function cite_one(mangled: Mangled_References, ID: (ID_t | Scoped_ID_t)): number
     NID = ID.ID as ID_t
     search_scope = mangled.range[ID.scope!]!
   }
-  else {
+  else { // ID_t
     NID = ID as ID_t
     search_scope = [ 0, mangled.flattened.data.length ]
   }
@@ -103,4 +106,59 @@ function cite_one(mangled: Mangled_References, ID: (ID_t | Scoped_ID_t)): number
     if (mangled.flattened.data[i].id === target_material.id) { return i + 1 }
   }
   throw new Error(`Failed to cite any entry with ID ${JSON.stringify(ID, null, 2)}`)
+}
+
+function _cite(mangled: Mangled_References, cite_item: ID_t | Scoped_ID_t | Material_Filter | Qualified_Material_Filter): number[] {
+  let search_scope: [ number, number ] = [ 0, mangled.flattened.data.length ]
+  let ID: ID_t
+  let material_filter: Material_Filter
+  let filter_options: Filter_Options = {}
+  let indices: number[] = []
+  switch (typeof cite_item) {
+    case 'function':
+      indices.push(...cite_by_filter(mangled, search_scope, cite_item as Material_Filter, {}))
+      break
+    case 'object':
+      if ('filter' in cite_item) {
+        material_filter = (cite_item as Qualified_Material_Filter).filter
+        if ('scope' in cite_item) { search_scope = mangled.range[cite_item.scope]! }
+        if ('options' in cite_item) { filter_options = cite_item.options }
+        indices.push(...cite_by_filter(mangled, search_scope, material_filter, filter_options))
+      }
+      else if ('ID' in cite_item) {
+        search_scope = mangled.range[(cite_item as Scoped_ID_t).scope]!
+        ID = (cite_item as Scoped_ID_t).ID
+        indices.push(cite_by_ID(mangled, search_scope, ID))
+      }
+      else {
+        indices.push(cite_by_ID(mangled, search_scope, cite_item as ID_t))
+      }
+      break
+    case 'string':
+    case 'number':
+    case 'bigint':
+      indices.push(cite_by_ID(mangled, search_scope, cite_item as ID_t))
+      break
+  }
+  return indices
+}
+
+function cite_by_ID(mangled: Mangled_References, search_scope: [ number, number ], ID: ID_t): number {
+  const target_material: Material = catalog.get(ID)
+  for (let i = search_scope[0]; i < search_scope[1]; i++) {
+    if (mangled.flattened.data[i].id === target_material.id) { return i + 1 }
+  }
+  throw new Error(`Failed to cite any entry with ID ${JSON.stringify(ID, null, 2)}`)
+}
+
+function cite_by_filter(mangled: Mangled_References, search_scope: [ number, number ], material_filter: Material_Filter, filter_options: Filter_Options): number[] {
+  const ret: number[] = []
+  let target_materials: Material[] = mangled.flattened.data.slice(...search_scope).filter(material_filter)
+  check_filter_results(material_filter, target_materials, filter_options)
+  let material_index = 0
+  for (let i = search_scope[0]; i < search_scope[1]; i++) {
+    if (mangled.flattened.data[i].id === target_materials[material_index]!.id) { ret.push(i + 1) }
+    if (material_index >= target_materials.length) { break }
+  }
+  return ret
 }

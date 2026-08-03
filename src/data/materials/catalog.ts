@@ -141,6 +141,11 @@ export function filter(predicate: Material_Filter, options: Filter_Options = {})
 
 export function scoped_filter(materials: Material[], predicate: Material_Filter, options: Filter_Options = {}): typeof v {
   const results = materials.filter(predicate)
+  check_filter_results(predicate, results, options)
+  return results
+}
+
+export function check_filter_results(predicate: Material_Filter, results: Material[], options: Filter_Options = {}) {
   if ('count' in options && results.length !== options.count) {
     throw new Error(`Filter ${predicate} returned ${results.length} , which does not match the expected count ${options.count}`)
   }
@@ -159,7 +164,6 @@ export function scoped_filter(materials: Material[], predicate: Material_Filter,
       `Filter ${predicate} returned ${results.length} results, which is more than maximum value ${options.max_count ?? default_filter_options.max_count}.`
     )
   }
-  return results
 }
 
 export function all(): typeof v { return v }
