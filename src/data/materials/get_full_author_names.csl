@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only">
+  <info>
+    <title>get_full_author_names</title>
+    <category field="engineering"/>
+    <category field="generic-base"/>
+    <summary></summary>
+    <updated>2026-08-04</updated>
+    <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+  </info>
+  <macro name="author">
+    <names variable="author">
+      <name/>
+      <label form="short" prefix=", " text-case="capitalize-first"/>
+    </names>
+  </macro>
+  <bibliography entry-spacing="0">
+    <layout>
+      <text macro="author"/>
+    </layout>
+  </bibliography>
+</style>
