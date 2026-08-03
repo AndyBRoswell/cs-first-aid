@@ -85,27 +85,8 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
 // todo: add locator
 export function cite(mangled: Mangled_References, cite_items: (ID_t | Scoped_ID_t | Material_Filter | Qualified_Material_Filter)[]): string { // mimic \cite[]{}
   const indices: number[] = []
-  // for (const item of cite_items) { indices.push(cite_one(mangled, item)) }
   for (const item of cite_items) { indices.push(..._cite(mangled, item)) }
   return `[${indices.join('][')}]`
-}
-
-function cite_one(mangled: Mangled_References, ID: (ID_t | Scoped_ID_t)): number {
-  let search_scope: [ number, number ]
-  let NID: ID_t // normalized ID
-  if (typeof ID === 'object' && "ID" in ID) { // Scoped_ID_t
-    NID = ID.ID as ID_t
-    search_scope = mangled.range[ID.scope!]!
-  }
-  else { // ID_t
-    NID = ID as ID_t
-    search_scope = [ 0, mangled.flattened.data.length ]
-  }
-  const target_material: Material = catalog.get(NID)
-  for (let i = search_scope[0]; i < search_scope[1]; i++) {
-    if (mangled.flattened.data[i].id === target_material.id) { return i + 1 }
-  }
-  throw new Error(`Failed to cite any entry with ID ${JSON.stringify(ID, null, 2)}`)
 }
 
 function _cite(mangled: Mangled_References, cite_item: ID_t | Scoped_ID_t | Material_Filter | Qualified_Material_Filter): number[] {
