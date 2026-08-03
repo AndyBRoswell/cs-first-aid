@@ -1,4 +1,5 @@
 import * as CSL_Data from './CSL_data.ts'
+import type { Filter_Options } from "@/data/materials/catalog.ts";
 
 export type ID_primitive = string | number | bigint
 export type ID_object =
@@ -47,7 +48,7 @@ export type Serialized_Scope_Name = Stringified_JSON
 export type Segment_Of_Scope_Name = string
 export type Scoped_References = Material[] | { [key: Segment_Of_Scope_Name]: Material[] | Scoped_References }
 export type Scoped_ID_t = { scope: Serialized_Scope_Name, ID: ID_t, }
-export type Scoped_Filter = { scope: Serialized_Scope_Name, filter: Material_Filter }
+export type Qualified_Material_Filter = { scope?: Serialized_Scope_Name, filter: Material_Filter, options?: Filter_Options }
 
 export type Course = {
   canonical_name?: string
