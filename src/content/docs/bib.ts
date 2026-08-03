@@ -6,7 +6,6 @@ import default_bib_style from './IEEE.custom.csl?raw'
 import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, Material_Filter, Qualified_Material_Filter, } from "@/types/data.ts";
 import * as catalog from '@/data/materials/catalog.ts'
 import { check_filter_results, type Filter_Options } from "@/data/materials/catalog.ts";
-import * as sea from "node:sea";
 
 const CSL_config = citation_js.plugins.config.get('@csl')
 const default_bib_style_name = 'IEEE [Custom]'
