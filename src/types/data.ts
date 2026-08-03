@@ -44,7 +44,7 @@ export type Link = string | {
 
 export type Stringified_JSON = string
 export type Scope_Name = string[]
-export type Serialized_Scope_Name = Stringified_JSON
+export type Serialized_Scope_Name = Stringified_JSON // intent: index by arbitrary primitive array value instead of by reference
 export type Segment_Of_Scope_Name = string
 export type Scoped_References = Material[] | { [key: Segment_Of_Scope_Name]: Material[] | Scoped_References }
 export type Scoped_ID_t = { scope: Serialized_Scope_Name, ID: ID_t, }
