@@ -1,4 +1,4 @@
-import type { ID_t, Entry, Material, ID_primitive, ID_object } from "@/types/data.ts";
+import type { ID_t, Entry, Material, ID_primitive, ID_object, Material_Filter } from "@/types/data.ts";
 import { legal_keys_of_ID_object } from "@/types/data.ts";
 import * as CSL_Data from '@/types/CSL_data.ts'
 import Cartesian_product from "fast-cartesian";
@@ -135,11 +135,11 @@ export const default_filter_options: Filter_Options = {
   max_count: Number.MAX_SAFE_INTEGER,
 }
 
-export function filter(predicate: (current_material: Material) => unknown, options: Filter_Options = {}): typeof v {
+export function filter(predicate: Material_Filter, options: Filter_Options = {}): typeof v {
   return scoped_filter(v, predicate, options)
 }
 
-export function scoped_filter(materials: Material[], predicate: (current_material: Material) => unknown, options: Filter_Options = {}): typeof v {
+export function scoped_filter(materials: Material[], predicate: Material_Filter, options: Filter_Options = {}): typeof v {
   const results = materials.filter(predicate)
   if ('count' in options && results.length !== options.count) {
     throw new Error(`Filter ${predicate} returned ${results.length} , which does not match the expected count ${options.count}`)
