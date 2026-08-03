@@ -9,12 +9,10 @@
     <updated>2026-07-19</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
-  <!-- Macros -->
   <macro name="author">
     <names variable="author">
       <name initialize-with=". "/>
       <label form="short" prefix=", " text-case="capitalize-first"/>
-      <et-al font-style="italic"/>
     </names>
   </macro>
   <bibliography entry-spacing="0">
