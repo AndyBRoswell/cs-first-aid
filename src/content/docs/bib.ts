@@ -5,6 +5,7 @@ import node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl?raw'
 import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, Material_Filter, Qualified_Material_Filter, } from "@/types/data.ts";
 import * as catalog from '@/data/materials/catalog.ts'
+import * as data_type from '@/types/data.ts'
 import { check_filter_results, type Filter_Options } from "@/data/materials/catalog.ts";
 
 const CSL_config = citation_js.plugins.config.get('@csl')
@@ -70,12 +71,27 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
   const original_HTML_root = node_html_parser.parse(raw_bib)
   const csl_entry = original_HTML_root.querySelectorAll('.csl-entry')
   const partitioned_bib: Printed_Bibliography = {}
-  for (const [ key, value ] of Object.entries(mangled.range)) {
-    const [ start, end ] = value
+  for (const [ serialized_scope_name, range ] of Object.entries(mangled.range)) {
+    const [ start, end ] = range
     const csl_bib_body = node_html_parser.parse(`<div class="csl-bib-body"></div>`).firstChild as node_html_parser.HTMLElement
     const target_entries = csl_entry.slice(start, end)
-    for (const entry of target_entries) { csl_bib_body.appendChild(entry) }
-    partitioned_bib[key] = csl_bib_body.toString()
+    for (const [ index, entry ] of target_entries.entries()) {
+      // wrap the original content
+      entry.classList.remove('csl-entry')
+      entry.classList.add('CSL_Entry')
+      const wrapper = node_html_parser.parse(`<div class="csl-entry"></div>`).firstChild as node_html_parser.HTMLElement
+      wrapper.set_content(entry.childNodes)
+      entry.set_content(wrapper)
+      // show custom data of this CSL item
+      const current_CSL_item = mangled.flattened.data[start + index] as data_type.Material
+      if ('custom' in current_CSL_item) {
+        if ('lecturer' in current_CSL_item.custom) {
+          // todo
+        }
+      }
+      csl_bib_body.appendChild(entry)
+    }
+    partitioned_bib[serialized_scope_name] = csl_bib_body.toString()
   }
   return partitioned_bib
 }
