@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'A. Stellman et al., Head First C#, 5e',
       title: 'Head First C#',
       author: [ { given: 'Andrew', family: 'Stellman' }, { given: 'Jennifer', family: 'Greene' } ],
       language: 'en-US',
@@ -22,7 +21,6 @@ const items = [
         subtitle: `A Learner's Guide to Real-World Programming with C# and .NET`,
         Print: {
           type: 'book',
-          id: '[Print] A. Stellman et al., Head First C#, 5e',
           ISBN: '9781098141783' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2024, 8, 13 ] ] },
         } satisfies Data_Type.Material,

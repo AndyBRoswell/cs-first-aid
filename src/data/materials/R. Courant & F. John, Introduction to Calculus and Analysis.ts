@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Courant and John, Introduction to Calculus and Analysis I',
       author: [ { given: 'Richard', family: 'Courant' }, { given: 'Fritz', family: 'John' } ],
       title: 'Introduction to Calculus and Analysis',
       publisher: 'Springer',
@@ -31,7 +30,6 @@ const items = [
         'eBook Packages': 'Springer Book Archive',
         'eBook': {
           type: 'book',
-          id: 'eBook Introduction to Calculus and Analysis I',
           ISBN: '978-3-642-58604-0' as CSL_Data.ISBN,
           issued: { "date-parts": [ [ 2012, 12, 6 ] ] },
         } satisfies Data_Type.Material
@@ -44,7 +42,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Courant and John, Introduction to Calculus and Analysis II/1',
       author: [ { given: 'Richard', family: 'Courant' }, { given: 'Fritz', family: 'John' } ],
       title: 'Introduction to Calculus and Analysis',
       publisher: 'Springer',
@@ -67,7 +64,6 @@ const items = [
         'eBook Packages': 'Springer Book Archive',
         'eBook': {
           type: 'book',
-          id: 'eBook Introduction to Calculus and Analysis II/1',
           ISBN: '978-3-642-57149-7' as CSL_Data.ISBN,
           issued: { "date-parts": [ [ 2012, 12, 6 ] ] },
         } satisfies Data_Type.Material
@@ -80,7 +76,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Courant and John, Introduction to Calculus and Analysis II/2',
       author: [ { given: 'Richard', family: 'Courant' }, { given: 'Fritz', family: 'John' } ],
       title: 'Introduction to Calculus and Analysis',
       publisher: 'Springer',

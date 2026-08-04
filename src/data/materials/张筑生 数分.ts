@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '张筑生 数分1',
       language: 'zh-CN',
       author: [ { given: '筑生', family: '张' } ],
       title: '数学分析新讲（重排本）',
@@ -25,7 +24,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '张筑生 数分2',
       language: 'zh-CN',
       author: [ { given: '筑生', family: '张' } ],
       title: '数学分析新讲（重排本）',
@@ -42,7 +40,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '张筑生 数分3',
       language: 'zh-CN',
       author: [ { given: '筑生', family: '张' } ],
       title: '数学分析新讲（重排本）',

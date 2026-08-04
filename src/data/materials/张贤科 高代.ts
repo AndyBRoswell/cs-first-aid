@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '张贤科, 高等线性代数, 2012',
       author: [ { family: '张', given: '贤科' } ],
       title: '高等线性代数',
       publisher: '高等教育出版社',

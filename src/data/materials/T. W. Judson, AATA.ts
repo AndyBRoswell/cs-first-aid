@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'T. W. Judson, Abstract Algebra: Theory and Applications, 2025',
       title: 'Abstract Algebra: Theory and Applications',
       author: [ { given: 'Thomas W.', family: 'Judson' } ],
       language: 'en-US',
@@ -25,7 +24,6 @@ const items = [
         ],
         Paperback: {
           type: 'book',
-          id: '[Paperback] T. W. Judson, Abstract Algebra: Theory and Applications',
           title: 'Abstract Algebra: Theory and Applications',
           author: [ { given: 'Thomas W.', family: 'Judson' } ],
           language: 'en-US',
@@ -36,7 +34,6 @@ const items = [
         } satisfies Data_Type.Material,
         Hardcover: {
           type: 'book',
-          id: '[Hardcover] T. W. Judson, Abstract Algebra: Theory and Applications, 2023 ed.',
           title: 'Abstract Algebra: Theory and Applications',
           author: [ { given: 'Thomas W.', family: 'Judson' } ],
           language: 'en-US',

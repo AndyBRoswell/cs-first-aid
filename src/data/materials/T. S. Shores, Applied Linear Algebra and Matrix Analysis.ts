@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'T. S. Shores, Applied Linear Algebra and Matrix Analysis, 2e',
       title: 'Applied Linear Algebra and Matrix Analysis',
       author: [ { given: 'Thomas S.', family: 'Shores' } ],
       edition: 2,
@@ -25,13 +24,11 @@ const items = [
       custom: {
         Hardcover: {
           type: 'book',
-          id: '',
           ISBN: '978-3-319-74747-7' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2018, 5, 18 ] ] },
         } satisfies Data_Type.Material,
         Softcover: {
           type: 'book',
-          id: '',
           ISBN: '978-3-030-09067-8' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2019, 1, 12 ] ] },
         } satisfies Data_Type.Material,

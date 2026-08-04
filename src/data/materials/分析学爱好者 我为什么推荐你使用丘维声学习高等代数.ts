@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'motion_picture',
-      id: '分析学爱好者, 我为什么推荐你使用丘维声学习高等代数',
       author: [ { literal: '分析学爱好者' } ],
       title: '我为什么推荐你使用丘维声学习高等代数',
       issued: { "date-parts": [ [ 2025, 9, 23 ] ] },

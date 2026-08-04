@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'D. S. Dummit and R. M. Foote, Abstract Algebra, 3e',
       title: 'Abstract Algebra',
       author: [ { given: 'David Steven', family: 'Dummit' }, { given: 'Richard M.', family: 'Foote' } ],
       publisher: 'Wiley',

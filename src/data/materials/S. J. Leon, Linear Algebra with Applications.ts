@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'S. J. Leon and L. de Pillis, Linear Algebra with Applications, Global Edition, 10',
       title: 'Linear Algebra with Applications, Global Edition',
       author: [ { given: 'Steven J.', family: 'Leon' }, { given: 'Lisette G.', "non-dropping-particle": 'de', family: 'Pillis' } ],
       language: 'en-GB',
@@ -21,7 +20,6 @@ const items = [
       custom: {
         eTextbook: {
           type: 'book',
-          id: '[eTextbook] S. J. Leon and L. de Pillis, Linear Algebra with Applications, 10e',
           issued: { 'date-parts': [ [ 2020, 11, 25 ], ], },
           ISBN: '9781292354873' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,

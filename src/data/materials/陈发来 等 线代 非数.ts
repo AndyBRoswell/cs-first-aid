@@ -6,7 +6,6 @@ const items = [
   {
     id: [],
     material: {
-      id: '陈发来, 王新茂, 陈效群, 李思敏, 线性代数 I, 2026',
       type: 'book',
       title: '线性代数 I',
       author: [ { family: '陈', given: '发来', }, { family: '王', given: '新茂', }, { family: '陈', given: '效群', }, { family: '李', given: '思敏', }, ],

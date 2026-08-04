@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Lax, Linear Algebra and Its Applications, 2e',
       author: [ { given: 'Peter D.', family: 'Lax' } ],
       title: 'Linear Algebra and Its Applications',
       edition: 2,
@@ -24,7 +23,6 @@ const items = [
       custom: {
         'Print': {
           type: 'book',
-          id: '[Print] Lax, Linear Algebra and Its Applications',
           ISBN: '978-0-471-75156-4' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2007, 9 ] ] },
         } satisfies Data_Type.Material,

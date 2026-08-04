@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'B. Stroustrup, "Programming: Principles and Practice Using C++," 3e',
       title: 'Programming: Principles and Practice Using C++',
       author: [ { given: 'Bjarne', family: 'Stroustrup' } ],
       edition: 3,

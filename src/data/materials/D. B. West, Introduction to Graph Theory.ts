@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'D. B. West, Introduction to Graph Theory, 2e',
       author: [ { given: 'Douglas Brent', family: 'West', }, ],
       title: 'Introduction to Graph Theory',
       edition: 2,

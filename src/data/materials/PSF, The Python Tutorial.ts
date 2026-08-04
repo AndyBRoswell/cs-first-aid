@@ -7,7 +7,6 @@ const items = [
     ],
     material: {
       type: 'webpage',
-      id: 'Python Software Foundation, The Python Tutorial',
       title: 'The Python Tutorial',
       author: [ { literal: 'Python Software Foundation' } ],
       issued: { 'date-parts': [ [ 2026, 3, 17 ] ] },

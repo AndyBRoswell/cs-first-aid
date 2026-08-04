@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'webpage',
-      id: 'Stack Overflow Community, The Definitive C++ Book Guide and List',
       title: 'The Definitive C++ Book Guide and List',
       author: [ { literal: 'Stack Overflow Community' } ],
       issued: { 'date-parts': [ [ 2025, 1, 21 ] ] },

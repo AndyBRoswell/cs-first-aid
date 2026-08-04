@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Abbott, Understanding Analysis',
       author: [ { given: 'Stephen', family: 'Abbott' } ],
       title: 'Understanding Analysis',
       edition: 2,

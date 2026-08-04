@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: 'Apostol Calculus I',
       author: [ { given: 'Tom Mike', family: 'Apostol', }, ],
       title: 'CALCULUS',
       "number-of-volumes": 2,
@@ -28,7 +27,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: 'Apostol Calculus II',
       author: [ { given: 'Tom Mike', family: 'Apostol', }, ],
       title: 'CALCULUS',
       "number-of-volumes": 2,

@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: '丘维声 简明线性代数 第2版',
       title: '简明线性代数',
       'collection-title': '普通高等教育十一五国家级规划教材',
       author: [ { family: '丘', given: '维声', }, ],

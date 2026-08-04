@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'motion_picture',
-      id: '分析学爱好者, 对常见数分课本&习题集的快速版点评',
       author: [ { literal: '分析学爱好者' } ],
       title: '对常见数分课本&习题集的快速版点评',
       issued: { "date-parts": [ [ 2022, 8, 18 ] ] },

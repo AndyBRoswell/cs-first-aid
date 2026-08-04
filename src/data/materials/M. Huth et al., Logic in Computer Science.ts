@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'M. Huth and M. Ryan, Logic in Computer Science, 2e',
       title: 'Logic in Computer Science: Modelling and Reasoning about Systems',
       author: [ { family: 'Huth', given: 'Michael' }, { family: 'Ryan', given: 'Mark' } ],
       issued: { 'date-parts': [ [ 2012, 6, 5 ] ] },
@@ -23,7 +22,6 @@ const items = [
       custom: {
         Paperback: {
           type: 'book',
-          id: '[Paperback] M. Huth and M. Ryan, Logic in Computer Science, 2e',
           issued: { 'date-parts': [ [ 2004, 8, 26 ] ] },
           ISBN: '9780521543101' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,

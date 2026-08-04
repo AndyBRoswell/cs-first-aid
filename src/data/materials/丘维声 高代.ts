@@ -9,7 +9,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '丘维声 高代1版上',
       author: [ { family: '丘', given: '维声' } ],
       issued: { 'date-parts': [ [ 2010, 5, 1 ] ] },
       title: '高等代数',
@@ -36,7 +35,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '丘维声 高代1版下',
       author: [ { family: '丘', given: '维声' } ],
       issued: { 'date-parts': [ [ 2010, 9, 1 ] ] },
       title: '高等代数',
@@ -63,7 +61,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '丘维声 高代2版上',
       author: [ { family: '丘', given: '维声' } ],
       issued: { 'date-parts': [ [ 2019, 6, 1 ] ] },
       title: '高等代数',
@@ -87,7 +84,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '丘维声 高代2版下',
       author: [ { family: '丘', given: '维声' } ],
       issued: { 'date-parts': [ [ 2019, 12, 1 ] ] },
       title: '高等代数',
@@ -111,7 +107,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '丘维声 高代指导书2版上',
       author: [ { family: '丘', given: '维声' } ],
       issued: { 'date-parts': [ [ 2017, 12, 1 ] ] },
       title: '高等代数学习指导书',
@@ -134,7 +129,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '丘维声 高代指导书2版下',
       author: [ { family: '丘', given: '维声' } ],
       issued: { 'date-parts': [ [ 2016, 8, 1 ] ] },
       title: '高等代数学习指导书',
@@ -163,7 +157,6 @@ const open_courses = [
     id: [],
     material: {
       type: 'motion_picture',
-      id: '丘维声 高代 公开课 2011',
       title: '北大丘维声教授清华高等代数课程1080P高清修复版(全151集)',
       "event-place": '清华大学',
       "event-date": { "date-parts": [ [ 2011, ] ] },

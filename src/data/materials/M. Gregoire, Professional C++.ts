@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'M. Gregoire, Professional C++, 6th ed.',
       title: 'Professional C++',
       author: [ { given: 'Marc', family: 'Gregoire' } ],
       issued: { 'date-parts': [ [ 2024, 1 ] ] },
@@ -22,7 +21,6 @@ const items = [
       custom: {
         Ebook: {
           type: 'book',
-          id: '[E-Book] M. Gregoire, Professional C++, 6th ed.',
           ISBN: '9781394193189' as CSL_Data.ISBN,
           URL: 'https://www.wiley.com/en-us/Professional+C%2B%2B%2C+6th+Edition-p-9781394193189',
           accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },

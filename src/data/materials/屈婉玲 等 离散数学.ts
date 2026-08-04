@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '屈婉玲 曹永知 耿素云 张立昂 离散数学 第3版',
       author: [ { family: '屈', given: '婉玲' }, { family: '曹', given: '永知' }, { family: '耿', given: '素云' }, { family: '张', given: '立昂' } ],
       title: '离散数学',
       edition: 3,
@@ -28,7 +27,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '屈婉玲 曹永知 耿素云 张立昂 离散数学学习指导与习题解析 第3版',
       author: [ { family: '屈', given: '婉玲' }, { family: '曹', given: '永知' }, { family: '耿', given: '素云' }, { family: '张', given: '立昂' } ],
       title: '离散数学学习指导与习题解析',
       edition: 3,

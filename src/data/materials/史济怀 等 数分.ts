@@ -9,7 +9,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: `史济怀 数分 2003上`,
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程',
       volume: 1,
@@ -30,7 +29,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: `史济怀 数分 2003下`,
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程',
       volume: 2,
@@ -51,7 +49,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: `史济怀 数分 2026上`,
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程',
       volume: 1,
@@ -69,7 +66,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: `史济怀 数分 2026下`,
       author: [ { family: '常', given: '庚哲' }, { family: '史', given: '济怀' } ],
       title: '数学分析教程',
       volume: 2,
@@ -92,7 +88,6 @@ const open_courses = [
     id: [],
     material: {
       type: 'motion_picture',
-      id: '史济怀 数分 2003 公开课',
       title: '【数学分析】中科大-史济怀',
       "event-date": { "date-parts": [ [ 2003, 9, ] ], },
       "event-place": '中国科学技术大学少年班学院',

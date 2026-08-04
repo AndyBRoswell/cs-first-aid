@@ -8,7 +8,6 @@ const books = [
   {
     id: [],
     material: {
-      id: "陈纪修 数分2版上",
       type: "book",
       title: "数学分析",
       author: [ { family: '陈', given: '纪修' }, { family: '於', given: '崇华' }, { family: '金', given: '路' } ],
@@ -28,7 +27,6 @@ const books = [
   {
     id: [],
     material: {
-      id: "陈纪修 数分2版下",
       type: "book",
       title: "数学分析",
       author: [ { family: '陈', given: '纪修' }, { family: '於', given: '崇华' }, { family: '金', given: '路' } ],
@@ -47,7 +45,6 @@ const books = [
   {
     id: [],
     material: {
-      id: '陈纪修 数分上',
       type: 'book',
       title: '数学分析',
       author: [ { family: '陈', given: '纪修' }, { family: '於', given: '崇华' }, { family: '金', given: '路' } ],
@@ -66,7 +63,6 @@ const books = [
   {
     id: [],
     material: {
-      id: '陈纪修 数分下',
       type: 'book',
       title: '数学分析',
       author: [ { family: '陈', given: '纪修' }, { family: '於', given: '崇华' }, { family: '金', given: '路' } ],
@@ -91,7 +87,6 @@ const open_courses = [
     id: [],
     material: {
       type: 'motion_picture',
-      id: '陈纪修 数分 2008 公开课',
       title: '数学分析 复旦 陈纪修',
       issued: { "date-parts": [ [ 2017, 1, 16 ] ] },
       "event-date": { "date-parts": [ [ 2008, 9, 1 ] ] },

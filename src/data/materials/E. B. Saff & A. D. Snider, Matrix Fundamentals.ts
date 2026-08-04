@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'E. B. Saff and A. D. Snider, Matrix Fundamentals, 2e',
       language: 'en-US',
       author: [ { given: 'Edward Barry', family: 'Saff' }, { given: 'Arthur David', family: 'Snider' } ],
       title: 'Matrix Fundamentals',
@@ -26,7 +25,6 @@ const items = [
         subtitle: 'From Equation Solving to Signal Processing',
         Softcover: {
           type: 'book',
-          id: '[Softcover] E. B. Saff and A. D. Snider, Matrix Fundamentals, 2e',
           ISBN: '978-3-031-97221-8' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2025, 8, 1 ] ] },
         } satisfies Data_Type.Material,

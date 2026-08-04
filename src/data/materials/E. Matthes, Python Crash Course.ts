@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'E. Matthes, Python Crash Course, 3e',
       title: 'Python Crash Course',
       author: [ { given: 'Eric', family: 'Matthes', } ],
       language: 'en-US',
@@ -23,7 +22,6 @@ const items = [
         subtitle: 'A Hands-On, Project-Based Introduction to Programming',
         Print: {
           type: 'book',
-          id: 'E_Matthes_Python_Crash_Course_3_print',
           ISBN: '9781718502703' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
       } satisfies CSL_Data.Custom,

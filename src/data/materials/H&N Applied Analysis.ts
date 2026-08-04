@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'H&N Applied Analysis',
       author: [ { given: 'John K.', family: 'Hunter', }, { given: 'Bruno Leo Zulma', family: 'Nachtergaele', }, ],
       title: 'Applied Analysis',
       issued: { "date-parts": [ [ 2005, 7, 21 ] ] },

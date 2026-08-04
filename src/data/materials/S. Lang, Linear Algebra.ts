@@ -8,7 +8,6 @@ const items = [
     ] satisfies Data_Type.ID_t[],
     material: {
       type: 'book',
-      id: 'S. Lang, "Linear Algebra," 3rd ed.',
       title: 'Linear Algebra',
       author: [ { given: 'Serge', family: 'Lang' } ],
       edition: 3,
@@ -30,13 +29,11 @@ const items = [
         'E-ISSN': '2197-5604',
         Hardcover: {
           type: 'book',
-          id: 'S. Lang, Linear Algebra, 3rd ed.',
           ISBN: '978-0-387-96412-6' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 1987, 1, 26 ] ] },
         } satisfies Data_Type.Material,
         Softcover: {
           type: 'book',
-          id: 'S. Lang, Linear Algebra, 3rd ed.',
           issued: { 'date-parts': [ [ 2010, 12, 1 ] ] },
           ISBN: '978-1-4419-3081-1' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,

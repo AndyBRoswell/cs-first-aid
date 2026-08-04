@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '嵩天, 黄天羽, 杨雅婷, Python语言程序设计基础, 第3版',
       title: 'Python语言程序设计基础',
       author: [ { family: '嵩', given: '天' }, { family: '黄', given: '天羽' }, { family: '杨', given: '雅婷' } ],
       issued: { 'date-parts': [ [ 2024, 9, 10 ] ] },

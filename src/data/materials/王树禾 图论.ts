@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '王树禾, 图论, 第2版',
       title: '图论',
       author: [ { family: '王', given: '树禾' } ],
       edition: 2,

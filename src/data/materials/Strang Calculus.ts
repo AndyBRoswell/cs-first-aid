@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'G. Strang, Calculus',
       author: [ { given: 'William Gilbert', family: 'Strang' }, ],
       title: 'Calculus',
       edition: 3,

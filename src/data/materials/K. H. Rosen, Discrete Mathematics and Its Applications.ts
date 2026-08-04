@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Rosen_Discrete_Mathematics_and_its_Applications_9th_ed',
       author: [ { family: 'Rosen', given: 'Kenneth H.' } ],
       title: 'Discrete Mathematics and Its Applications',
       edition: 9,
@@ -21,7 +20,6 @@ const items = [
       custom: {
         Print: {
           type: 'book',
-          id: '[Print] K. H. Rosen, Discrete Mathematics and Its Applications, 2025',
           ISBN: '9781266191541' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
       } satisfies CSL_Data.Custom,
@@ -32,7 +30,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: `K. H. Rosen, Student's Solutions Guide for Discrete Mathematics and Its Applications, 8e`,
       author: [ { family: 'Rosen', given: 'Kenneth H.' } ],
       title: "Student's Solutions Guide for Discrete Mathematics and Its Applications",
       edition: 8,

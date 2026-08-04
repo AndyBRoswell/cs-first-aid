@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '徐森林 数分习题上',
       author: [ { family: '薛', given: '春华' }, { family: '徐', given: '森林' } ],
       title: '数学分析精选习题全解',
       volume: 1,
@@ -23,7 +22,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '徐森林 数分习题下',
       author: [ { family: '薛', given: '春华' }, { family: '徐', given: '森林' } ],
       title: '数学分析精选习题全解',
       volume: 2,

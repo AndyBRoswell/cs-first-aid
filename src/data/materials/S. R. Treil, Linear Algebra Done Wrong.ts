@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'S. Treil, Linear Algebra Done Wrong',
       author: [ { given: 'Sergei Raimondovich', family: 'Treil' } ],
       title: 'Linear Algebra Done Wrong',
       language: 'en-US',

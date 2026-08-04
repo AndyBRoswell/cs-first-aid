@@ -7,7 +7,6 @@ const items = [
     ],
     material: {
       type: 'webpage',
-      id: 'Microsoft, "A tour of the C# language," 2026',
       language: 'en-US',
       author: [ { literal: 'Microsoft' } ],
       issued: { 'date-parts': [ [ 2026, 2, 23 ] ] },

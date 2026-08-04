@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'motion_picture',
-      id: '分析学爱好者, 尽管数分教材千千万，但我却建议你学陈纪修',
       author: [ { literal: '分析学爱好者' } ],
       title: '尽管数分教材千千万，但我却建议你学陈纪修',
       issued: { "date-parts": [ [ 2025, 9, 14 ] ] },

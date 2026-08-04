@@ -9,7 +9,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '谢启鸿, 姚慕生, 吴泉水, 高等代数学, 第4版',
       title: '高等代数学',
       author: [ { family: '谢', given: '启鸿' }, { family: '姚', given: '慕生' }, { family: '吴', given: '泉水' } ],
       edition: 4,
@@ -27,7 +26,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '谢启鸿, 姚慕生, 高等代数, 第4版',
       title: '高等代数',
       author: [ { family: '谢', given: '启鸿' }, { family: '姚', given: '慕生' } ],
       edition: 4,
@@ -44,7 +42,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '姚慕生, 吴泉水, 谢启鸿, 高等代数学, 第3版',
       title: '高等代数学',
       author: [ { family: '姚', given: '慕生' }, { family: '吴', given: '泉水' }, { family: '谢', given: '启鸿' } ],
       edition: 3,
@@ -61,7 +58,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '姚慕生, 谢启鸿, 高等代数, 第3版',
       title: '高等代数',
       author: [ { family: '姚', given: '慕生' }, { family: '谢', given: '启鸿' } ],
       edition: 3,
@@ -82,7 +78,6 @@ const open_courses = [
     id: [],
     material: {
       type: 'motion_picture',
-      id: '谢启鸿 高代 公开课',
       title: '【数学专业课】高等代数学-复旦大学-谢启鸿-高清',
       author: [ { family: '谢', given: '启鸿' } ],
       publisher: 'bilibili',

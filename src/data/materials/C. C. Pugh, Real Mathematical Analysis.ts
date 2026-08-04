@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Pugh, Real Mathematical Analysis',
       author: [ { given: 'Charles Chapman', family: 'Pugh' } ],
       title: 'Real Mathematical Analysis',
       edition: 2,

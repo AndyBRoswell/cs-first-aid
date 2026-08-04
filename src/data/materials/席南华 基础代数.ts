@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '席南华 基础代数1',
       author: [ { family: '席', given: '南华' } ],
       title: '基础代数',
       volume: 1,
@@ -26,7 +25,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '席南华 基础代数2',
       author: [ { family: '席', given: '南华' } ],
       title: '基础代数',
       volume: 2,
@@ -44,7 +42,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '席南华 基础代数3',
       author: [ { family: '席', given: '南华' } ],
       title: '基础代数',
       volume: 3,

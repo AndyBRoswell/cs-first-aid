@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'webpage',
-      id: 'cppreference.com/c',
       title: 'C reference',
       'container-title': 'cppreference.com',
       language: 'en-US',

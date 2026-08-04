@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'J. M. Harris, J. L. Hirst, and M. J. Mossinghoff, Combinatorics and Graph Theory, 2e',
       language: 'en-US',
       author: [ { given: 'John M.', family: 'Harris' }, { given: 'Jeffry L.', family: 'Hirst' }, { given: 'Michael John', family: 'Mossinghoff' } ],
       issued: { 'date-parts': [ [ 2009, 4, 3 ] ] },
@@ -25,13 +24,11 @@ const items = [
       custom: {
         Hardcover: {
           type: 'book',
-          id: '[Hardcover] J. M. Harris, J. L. Hirst, and M. J. Mossinghoff, Combinatorics and Graph Theory, 2nd ed.',
           issued: { "date-parts": [ [ 2008, 9, 19 ] ] },
           ISBN: '9780387797106' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
         Softcover: {
           type: 'book',
-          id: '[Softcover] J. M. Harris, J. L. Hirst, and M. J. Mossinghoff, Combinatorics and Graph Theory, 2nd ed.',
           issued: { "date-parts": [ [ 2010, 12, 1 ] ] },
           ISBN: '978-1-4419-2723-1' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,

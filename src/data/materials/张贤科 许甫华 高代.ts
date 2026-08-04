@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '张贤科 许甫华 高等代数学 2004',
       author: [ { family: '张', given: '贤科' }, { family: '许', given: '甫华' } ],
       editor: [ { family: '刘', given: '颖' } ],
       title: '高等代数学',

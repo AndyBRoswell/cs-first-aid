@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'A. I. Kostrikin, 代数学引论, 2 ed., vol. 1',
       title: '代数学引论',
       'volume-title': '基础代数',
       volume: 1,
@@ -32,7 +31,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'A. I. Kostrikin, 代数学引论, 2007, vol. 2',
       title: '代数学引论',
       'volume-title': '线性代数',
       volume: 2,
@@ -56,7 +54,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'A. I. Kostrikin, 代数学引论, 2 ed., vol. 3',
       title: '代数学引论',
       'volume-title': '基本结构',
       volume: 3,
@@ -80,7 +77,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'A. I. Kostrikin, 代数学习题集, 4 ed.',
       title: '代数学习题集',
       edition: 4,
       'number-of-pages': 456,
