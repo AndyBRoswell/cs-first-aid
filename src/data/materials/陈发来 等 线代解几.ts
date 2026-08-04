@@ -6,9 +6,7 @@ import * as util from '@/util.ts'
 
 const books = [
   {
-    id: [
-      { unordered_author: [ '陈发来', '陈效群', '李思敏', '王新茂' ], title: '线性代数与解析几何', edition: 2 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '陈发来, 王新茂, 陈效群, 李思敏, 线性代数与解析几何, 第2版',

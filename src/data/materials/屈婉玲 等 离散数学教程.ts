@@ -5,9 +5,7 @@ import * as util from '@/util.ts'
 
 const books = [
   {
-    id: [
-      '耿素云 屈婉玲 王捍贫 离散数学教程',
-    ],
+    id: [],
     material: {
       id: '耿素云 屈婉玲 王捍贫 离散数学教程',
       type: 'book',

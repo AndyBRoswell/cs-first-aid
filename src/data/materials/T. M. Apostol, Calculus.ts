@@ -4,9 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      'Apostol Calculus I',
-    ],
+    id: [],
     material: {
       type: 'book',
       id: 'Apostol Calculus I',
@@ -27,9 +25,7 @@ const items = [
     },
   },
   {
-    id: [
-      'Apostol Calculus II',
-    ],
+    id: [],
     material: {
       type: 'book',
       id: 'Apostol Calculus II',

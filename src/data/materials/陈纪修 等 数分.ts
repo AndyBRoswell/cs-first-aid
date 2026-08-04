@@ -6,9 +6,7 @@ import * as util from '@/util.ts'
 
 const books = [
   {
-    id: [
-      "陈纪修 数分 2004上",
-    ],
+    id: [],
     material: {
       id: "陈纪修 数分2版上",
       type: "book",
@@ -28,9 +26,7 @@ const books = [
     },
   },
   {
-    id: [
-      "陈纪修 数分 2004下",
-    ],
+    id: [],
     material: {
       id: "陈纪修 数分2版下",
       type: "book",

@@ -6,9 +6,7 @@ import * as util from '@/util.ts'
 
 const books = [
   {
-    id: [
-      { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 1 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '丘维声 高代1版上',
@@ -35,9 +33,7 @@ const books = [
     },
   },
   {
-    id: [
-      { unordered_author: '丘维声', title: '高等代数', edition: 1, volume: 2 },
-    ],
+    id: [],
     material: {
       type: 'book',
       id: '丘维声 高代1版下',

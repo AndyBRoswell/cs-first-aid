@@ -4,9 +4,7 @@ import * as CSL_Data from '@/types/CSL_data.ts'
 
 const items = [
   {
-    id: [
-      'D. C. Lay et al., Linear Algebra and Its Applications',
-    ],
+    id: [],
     material: {
       type: 'book',
       id: 'D. C. Lay, S. R. Lay, and J. J. McDonald, Linear Algebra and Its Applications, Global Edition, 6th ed.',
