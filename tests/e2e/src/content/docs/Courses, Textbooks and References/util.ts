@@ -32,3 +32,17 @@ export async function check_references(main: Locator) {
     }
   }
 }
+export async function check_cites(main: Locator) {
+  const Cite_locators = await main.locator('.Cite').all()
+  for (const locator of Cite_locators) {
+    const cite_links = await locator.locator('a').all()
+    expect(cite_links.length).toBeGreaterThan(0)
+    for (const link of cite_links) {
+      const index = await link.innerText()
+      expect(index).toMatch(/^\d+$/)
+      const target_ID = `[${index}]`
+      await expect(link).toHaveAttribute('href', `#${target_ID}`)
+      await expect(main.locator(`.CSL_Entry[id="${target_ID}"]`)).toHaveCount(1)
+    }
+  }
+}

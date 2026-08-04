@@ -11,6 +11,8 @@ src_util.test('Linear Algebra I', { tag: [ '@Courses, Textbooks and References',
 
   await course_util.check_references(main)
 
+  await course_util.check_cites(main)
+
   await docs_util.check_title(main, /线性代数\s*I/)
 
   let section: Locator, heading: Locator, References: Locator
