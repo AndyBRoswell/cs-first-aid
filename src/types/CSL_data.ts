@@ -81,9 +81,9 @@ export type ID = string | number
 
 // 📄 A single bibliographic item
 export type Item = {
-  // ✅ Required
+  // ✅ Basic
   type: Item_Type
-  id: ID
+  id?: ID // Make it optional since aliases will be used to index these items.
 
   // 🔑 Identifiers & locale metadata
   'citation-key'?: string
