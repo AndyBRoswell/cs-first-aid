@@ -15,9 +15,9 @@ import node_fs from "node:fs";
 
 const logger = pino(util.pino_arg)
 
-const m = new Map<ID_t, Material>
-const v: Material[] = []
-const h = new Set()
+const m = new Map<ID_t, Material> // map
+const v: Material[] = []          // values
+const d = new Set()               // digests
 
 export function canonical_ID(ID: ID_t): ID_primitive {
   switch (typeof ID) {
@@ -121,11 +121,11 @@ export function add(IDs: ID_t[], material: Material) {
     delete o.id
   }
   else { o = material }
-  const hash = ohash.hash(o)
-  if (h.has(hash) === false) {
+  const digest = ohash.serialize(o)
+  if (d.has(digest) === false) {
     material.id = v.length // automatically generate an id to let citation-js not mistakenly overwrite the existing items due to duplicate ids
     v.push(material)
-    h.add(hash)
+    d.add(digest)
   }
 }
 
