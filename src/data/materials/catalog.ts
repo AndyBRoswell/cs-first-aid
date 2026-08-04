@@ -115,8 +115,11 @@ export function add(IDs: ID_t[], material: Material) {
     if (m.has(CID)) { throw new Error(`ID ${CID} already exists. Material: ${JSON.stringify(material, null, 2)}`) ; }
     m.set(CID, material)
   }
-  const hash = ohash.hash(material)
+  const o = structuredClone(material)
+  delete o.id
+  const hash = ohash.hash(o)
   if (h.has(hash) === false) {
+    material.id = v.length // automatically generate an id to let citation-js not mistakenly overwrite the existing items due to duplicate ids
     v.push(material)
     h.add(hash)
   }
