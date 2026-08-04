@@ -77,13 +77,15 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
     const target_entries = csl_entry.slice(start, end)
     for (const [ index, entry ] of target_entries.entries()) {
       // wrap the original content
+      const off = start + index
       entry.classList.remove('csl-entry')
       entry.classList.add('CSL_Entry')
       const wrapper = node_html_parser.parse(`<div class="csl-entry"></div>`).firstChild as node_html_parser.HTMLElement
       wrapper.set_content(entry.childNodes)
       entry.set_content(wrapper)
+      entry.id = `[${off + 1}]`
       // show custom data of this CSL item
-      const current_CSL_item = mangled.flattened.data[start + index] as data_type.Material
+      const current_CSL_item = mangled.flattened.data[off] as data_type.Material
       if ('custom' in current_CSL_item) {
         const additional = node_html_parser.parse(`<div class="custom"></div>`).firstChild as node_html_parser.HTMLElement
         if ('lecturer' in current_CSL_item.custom) {
