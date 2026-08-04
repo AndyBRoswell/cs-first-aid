@@ -32,6 +32,7 @@ export async function check_references(main: Locator) {
     }
   }
 }
+
 export async function check_cites(main: Locator) {
   const Cite_locators = await main.locator('.Cite').all()
   for (const locator of Cite_locators) {
