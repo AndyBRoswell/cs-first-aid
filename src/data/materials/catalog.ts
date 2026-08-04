@@ -8,6 +8,11 @@ import node_os from 'node:os'
 import pino from 'pino'
 import * as ohash from 'ohash'
 import * as util from '@/util.ts'
+// @ts-ignore [citation-js doesn't have ts support]
+import citation_js from "@citation-js/core";
+import '@citation-js/plugin-csl'
+import get_rendered_author from './get_rendered_author.csl?raw'
+import get_full_author_names from './get_full_author_names.csl?raw'
 
 const logger = pino(util.pino_arg)
 
@@ -174,4 +179,31 @@ export async function dump_locally(output_path = node_path.join(util.project_roo
     await node_fs_promises.writeFile(output_path, JSON.stringify(v, null, 2), 'utf8')
     logger.info(`All imported materials saved at ${output_path}`)
   }
+}
+
+export type name_rendering_options = {
+  full_name?: boolean
+}
+
+export const default_name_rendering_options: name_rendering_options = {
+  full_name: false
+}
+
+const CSL_config = citation_js.plugins.config.get('@csl')
+CSL_config.styles.add('get_rendered_author', get_rendered_author)
+CSL_config.styles.add('get_full_author_names', get_full_author_names)
+
+export function get_rendered_names(names: CSL_Data.Name_Variable[], options: name_rendering_options = {}): string {
+  const dummy_item = [ { id: 0, author: names } ]
+  const cite = new citation_js.Cite(dummy_item)
+  let output
+  switch (options.full_name ?? default_name_rendering_options.full_name) {
+    case true:
+      output = cite.format('bibliography', { template: 'get_full_author_names' })
+      break
+    case false:
+      output = cite.format('bibliography', { template: 'get_rendered_author' })
+      break
+  }
+  return output
 }

@@ -85,9 +85,14 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
       // show custom data of this CSL item
       const current_CSL_item = mangled.flattened.data[start + index] as data_type.Material
       if ('custom' in current_CSL_item) {
+        const additional = node_html_parser.parse(`<div class="custom"></div>`).firstChild as node_html_parser.HTMLElement
         if ('lecturer' in current_CSL_item.custom) {
-          // todo
+          const p = node_html_parser.parse(`<p class="lecturer"></p>`).firstChild as node_html_parser.HTMLElement
+          const lecturer = catalog.get_rendered_names(current_CSL_item.custom.lecturer)
+          p.set_content(`Lecturer: ${lecturer}`)
+          additional.appendChild(p)
         }
+        entry.appendChild(additional)
       }
       csl_bib_body.appendChild(entry)
     }
