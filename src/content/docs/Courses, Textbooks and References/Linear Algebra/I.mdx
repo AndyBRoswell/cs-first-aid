@@ -11,6 +11,7 @@ import * as bib from '@/content/docs/bib.ts'
 import * as util from '@/util.ts'
 import * as _ from '@/libraries/lodash-es.ts'
 import References from '@/components/References.astro'
+import Cite from '@/components/Cite.astro'
 
 <section>
   # 学习材料
@@ -26,21 +27,7 @@ import References from '@/components/References.astro'
     </section>
     <section>
       ### 说明
-      基础必修课《线性代数I》的基准难度是：不低于 D. C. Lay et al., Linear Algebra and Its Applications {
-        bib.cite(
-          I_mangled_references, [
-            {
-              scope: [ 'text', 'en' ],
-              filter:
-                m =>
-                  util.ieq(m.title, 'Linear Algebra and Its Applications')
-                  &&
-                  m.author.some(a => a.given === 'David C.' && a.family === 'Lay'),
-              options: { count: 1 },
-            }
-          ]
-        )
-      }。
+      基础必修课《线性代数I》的基准难度是：不低于 D. C. Lay et al., Linear Algebra and Its Applications<Cite mangled_references={I_mangled_references} cite_items={[ { scope: [ 'text', 'en' ], filter: m => util.ieq(m.title, 'Linear Algebra and Its Applications') && m.author.some(a => a.given === 'David C.' && a.family === 'Lay'), options: { count: 1 }, }]}/>。
     </section>
   </section>
   <section>
