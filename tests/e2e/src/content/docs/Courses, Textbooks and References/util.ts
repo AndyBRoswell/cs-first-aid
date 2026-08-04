@@ -12,9 +12,9 @@ export function locate_references(main: Locator, scope_name: data.Scope_Name) {
 export async function check_references(main: Locator) {
   const References_locators = await main.locator('.References').all()
   for (const locator of References_locators) {
-    const csl_entries = await locator.locator('[data-csl-entry-id]').all()
+    const CSL_entries = await locator.locator('.CSL_Entry').all()
     await expect(locator).toHaveAttribute('data-scope_name')
     const material_segment = JSON.parse((await locator.getAttribute('data-material_segment'))!) as Array<data.Material>
-    expect(material_segment.length).toEqual(csl_entries.length)
+    expect(material_segment.length).toEqual(CSL_entries.length)
   }
 }
