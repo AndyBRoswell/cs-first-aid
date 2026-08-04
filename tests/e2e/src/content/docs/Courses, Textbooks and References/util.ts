@@ -1,7 +1,7 @@
 import { expect, type Locator } from '@playwright/test'
 import * as data from "@/types/data.ts";
 import * as catalog from '@/data/materials/catalog.ts'
-// @ts-ignore [css.escape doesn't have ts support]
+// @ts-ignore [cssesc doesn't have ts support]
 import cssesc from "cssesc";
 import * as util from "@/util.ts";
 
