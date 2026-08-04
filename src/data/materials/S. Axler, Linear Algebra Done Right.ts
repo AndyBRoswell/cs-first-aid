@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Axler, Linear Algebra Done Right',
       author: [ { given: 'Sheldon', family: 'Axler' } ],
       title: 'Linear Algebra Done Right',
       edition: 4,

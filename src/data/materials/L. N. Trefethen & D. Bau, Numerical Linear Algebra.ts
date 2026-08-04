@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Lloyd N. Trefethen and David Bau III, Numerical Linear Algebra, 2022',
       language: 'en-US',
       title: 'Numerical Linear Algebra',
       author: [ { given: 'Lloyd N.', family: 'Trefethen' }, { given: 'David', family: 'Bau', suffix: 'III' } ],
@@ -25,7 +24,6 @@ const items = [
       custom: {
         Softcover: {
           type: 'book',
-          id: '[Softcover] Lloyd N. Trefethen and David Bau III, Numerical Linear Algebra, 2022',
           ISBN: '978-1-61197-715-8' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
       } satisfies CSL_Data.Custom,

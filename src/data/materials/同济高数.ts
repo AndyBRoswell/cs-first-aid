@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: '同济高数上',
       author: [ { literal: '同济大学数学科学学院' } ],
       title: '高等数学',
       volume: 1,
@@ -31,7 +30,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: '同济高数下',
       author: [ { literal: '同济大学数学科学学院' } ],
       title: '高等数学',
       volume: 2,

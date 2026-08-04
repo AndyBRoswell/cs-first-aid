@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Apostol, Mathematical Analysis',
       author: [ { given: 'Tom Mike', family: 'Apostol' } ],
       title: 'Mathematical Analysis: A Modern Approach to Advanced Calculus',
       edition: 2,

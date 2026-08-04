@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'S. R. Garcia and R. A. Horn, Matrix Mathematics, 2e',
       title: 'Matrix Mathematics',
       author: [ { given: 'Stephan Ramon', family: 'Garcia' }, { given: 'Roger Alan', family: 'Horn' } ],
       edition: 2,
@@ -26,7 +25,6 @@ const items = [
         subtitle: 'A Second Course in Linear Algebra',
         Hardback: {
           type: 'book',
-          id: '[Hardback] S. R. Garcia and R. A. Horn, Matrix Mathematics',
           issued: { 'date-parts': [ [ 2023, 5, 23 ] ] },
           ISBN: '9781108837101' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,

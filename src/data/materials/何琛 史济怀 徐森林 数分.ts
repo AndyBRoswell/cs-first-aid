@@ -6,7 +6,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '何琛 史济怀 徐森林 数分1',
       author: [ { family: '何', given: '琛' }, { family: '史', given: '济怀' }, { family: '徐', given: '森林' } ],
       title: '数学分析',
       volume: 1,
@@ -21,7 +20,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '何琛 史济怀 徐森林 数分2',
       author: [ { family: '何', given: '琛' }, { family: '史', given: '济怀' }, { family: '徐', given: '森林' } ],
       title: '数学分析',
       volume: 2,
@@ -36,7 +34,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '何琛 史济怀 徐森林 数分3',
       author: [ { family: '何', given: '琛' }, { family: '史', given: '济怀' }, { family: '徐', given: '森林' } ],
       title: '数学分析',
       volume: 3,

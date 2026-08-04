@@ -10,7 +10,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Princeton Calculus Reader',
       author: [ { given: 'Adrian D.', family: 'Banner' }, ],
       title: 'The Calculus Lifesaver: All the Tools You Need to Excel at Calculus',
       edition: 1,

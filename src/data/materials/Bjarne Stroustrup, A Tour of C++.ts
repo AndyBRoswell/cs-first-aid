@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'B. Stroustrup, A Tour of C++, 3rd ed.',
       title: 'A Tour of C++',
       author: [ { given: 'Bjarne', family: 'Stroustrup', }, ],
       language: 'en-US',

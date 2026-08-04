@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Zorich, Math Anal 1',
       title: '数学分析',
       "number-of-volumes": 2,
       volume: 1,
@@ -30,7 +29,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Zorich, Math Anal 2',
       title: '数学分析',
       "number-of-volumes": 2,
       volume: 2,

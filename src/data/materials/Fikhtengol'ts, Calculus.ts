@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: `G. M. Fikhtengol'ts, 微积分学教程1`,
       language: 'zh-CN',
       author: [ { given: 'Григорий Михайлович', family: 'Фихтенгольц' } ],
       translator: [ { family: '杨', given: '弢亮' }, { family: '叶', given: '彦谦' } ],
@@ -32,7 +31,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: `G. M. Fikhtengol'ts, 微积分学教程2`,
       language: 'zh-CN',
       author: [ { given: 'Григорий Михайлович', family: 'Фихтенгольц' } ],
       translator: [ { family: '徐', given: '献瑜' }, { family: '冷', given: '生明' }, { family: '梁', given: '文骐' } ],
@@ -56,7 +54,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: `G. M. Fikhtengol'ts, 微积分学教程3`,
       language: 'zh-CN',
       author: [ { given: 'Григорий Михайлович', family: 'Фихтенгольц' } ],
       translator: [ { family: '路', given: '见可' }, { family: '余', given: '家荣' }, { family: '吴', given: '亲仁' } ],

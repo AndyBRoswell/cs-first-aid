@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '蓝以中, 高等代数简明教程 上册（第三版）, 2023',
       author: [ { family: '蓝', given: '以中' } ],
       title: '高等代数简明教程',
       edition: 3,
@@ -34,7 +33,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '蓝以中, 高等代数简明教程 下册（第三版）, 2023',
       author: [ { family: '蓝', given: '以中' } ],
       title: '高等代数简明教程',
       edition: 3,

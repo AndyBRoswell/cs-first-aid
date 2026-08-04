@@ -9,7 +9,6 @@ const items = [
     ] satisfies Data_Type.ID_t[],
     material: {
       type: 'book',
-      id: '任广千 谢聪 胡翠芳 线性代数的几何意义 2015',
       title: '线性代数的几何意义',
       author: [ { family: '任', given: '广千' }, { family: '谢', given: '聪' }, { family: '胡', given: '翠芳' } ],
       issued: { 'date-parts': [ [ 2015, 8 ] ] },

@@ -6,7 +6,6 @@ const items = [
   {
     id: [],
     material: {
-      id: "陈纪修 数分习题2版上",
       type: "book",
       title: "数学分析习题全解指南",
       author: [
@@ -29,7 +28,6 @@ const items = [
   {
     id: [],
     material: {
-      id: "陈纪修 数分习题2版下",
       type: "book",
       title: "数学分析习题全解指南",
       author: [
@@ -51,7 +49,6 @@ const items = [
   {
     id: [],
     material: {
-      id: '陈纪修 数分习题上',
       type: 'book',
       title: '数学分析习题全解指南',
       author: [ { family: '陈', given: '纪修' }, { literal: '徐惠平' }, { literal: '周渊' }, { family: '金', given: '路' }, { literal: '邱维元' } ],
@@ -70,7 +67,6 @@ const items = [
   {
     id: [],
     material: {
-      id: '陈纪修 数分习题下',
       type: 'book',
       title: '数学分析习题全解指南',
       author: [ { family: '陈', given: '纪修' }, { literal: '徐惠平' }, { literal: '周渊' }, { family: '金', given: '路' }, { literal: '邱维元' } ],

@@ -10,7 +10,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Rudin PMA',
       title: 'Principles of Mathematical Analysis',
       "title-short": 'PMA',
       author: [ { given: 'Walter', family: 'Rudin' } ],

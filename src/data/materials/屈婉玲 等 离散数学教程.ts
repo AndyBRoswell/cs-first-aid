@@ -7,7 +7,6 @@ const books = [
   {
     id: [],
     material: {
-      id: '耿素云 屈婉玲 王捍贫 离散数学教程',
       type: 'book',
       author: [ { family: '耿', given: '素云' }, { family: '屈', given: '婉玲' }, { family: '王', given: '捍贫' }, ],
       title: '离散数学教程',
@@ -26,7 +25,6 @@ const books = [
   {
     id: [],
     material: {
-      id: '屈婉玲 耿素云 王捍贫 刘田 离散数学习题解析',
       type: 'book',
       author: [ { family: '屈', given: '婉玲' }, { family: '耿', given: '素云' }, { family: '王', given: '捍贫' }, { family: '刘', given: '田' }, ],
       title: '离散数学习题解析',
@@ -50,7 +48,6 @@ const open_courses = [
     id: [],
     material: {
       type: 'motion_picture',
-      id: '刘田 屈婉玲 王捍贫 离散数学 公开课',
       title: '离散数学（全）-北京大学',
       "event-place": '北京大学',
       issued: { 'date-parts': [ [ 2018, 5, 24 ] ], },

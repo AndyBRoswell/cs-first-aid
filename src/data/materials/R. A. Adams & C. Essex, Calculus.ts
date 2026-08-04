@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Calculus: A Complete Course',
       author: [ { given: 'Robert A.', family: 'Adams', }, { given: 'Christopher', family: 'Essex', }, ],
       title: 'Calculus: A Complete Course',
       edition: 10,
@@ -25,7 +24,6 @@ const items = [
       custom: {
         Print: {
           type: 'book',
-          id: '[Printed] Calculus: A Complete Course',
           issued: { "date-parts": [ [ 2021, 1, 26 ], ], },
           ISBN: '9780135732588' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,

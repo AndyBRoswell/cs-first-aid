@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: 'Stewart Calculus',
       author: [
         { given: 'James', family: 'Stewart', }, { given: 'Saleem', family: 'Watson' },
         { given: 'Daniel K.', family: 'Clegg' },
@@ -26,7 +25,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: 'Stewart Calculus Early Transcendentals',
       author: [
         { given: 'James', family: 'Stewart', }, { given: 'Saleem', family: 'Watson' },
         { given: 'Daniel K.', family: 'Clegg' },

@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'K. Sierra, B. Bates, T. Gee, Head First Java, 3e',
       title: 'Head First Java',
       author: [ { given: 'Kathy', family: 'Sierra' }, { given: 'Bert', family: 'Bates' }, { given: 'Trisha', family: 'Gee' } ],
       edition: 3,
@@ -23,12 +22,10 @@ const items = [
       custom: {
         Paperback: {
           type: 'book',
-          id: '[Paperback] K. Sierra, B. Bates, T. Gee, Head First Java, 3e',
           ISBN: '978-1-491-91077-1' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
         Kindle: {
           type: 'book',
-          id: '[Kindle] K. Sierra, B. Bates, T. Gee, Head First Java, 3e',
           ISBN: '978-1491910757' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
       } satisfies CSL_Data.Custom,

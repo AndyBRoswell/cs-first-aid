@@ -10,7 +10,6 @@ const items = [
     ],
     material: {
       type: 'webpage',
-      id: 'cppreference.com',
       title: 'cppreference.com',
       URL: 'https://cppreference.com/',
       accessed: { 'date-parts': [ [ 2026, 5, 13, ], ], },

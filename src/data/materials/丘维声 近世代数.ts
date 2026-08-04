@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: '丘维声 近世代数 2015',
       title: '近世代数',
       author: [ { family: '丘', given: '维声' } ],
       editor: [ { family: '潘', given: '丽娜' } ],

@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'J. A. Bondy and U. S. R. Murty, Graph Theory, 2008',
       title: 'Graph Theory',
       author: [ { given: 'John. Adrian', family: 'Bondy' }, { given: 'Uppaluri Siva Ramachandra', family: 'Murty' }, ],
       issued: { 'date-parts': [ [ 2010, 10, 19 ], ], },
@@ -23,7 +22,6 @@ const items = [
       custom: {
         Hardcover: {
           type: 'book',
-          id: '[Hardcover] J. A. Bondy and U. S. R. Murty, Graph Theory, 2008',
           issued: { 'date-parts': [ [ 2008, 1, 10 ], ], },
           ISBN: '9781846289699' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,

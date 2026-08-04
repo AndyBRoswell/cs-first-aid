@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'S. Lang, Algebra, 3rd ed.',
       title: 'Algebra',
       author: [ { given: 'Serge', family: 'Lang' } ],
       publisher: 'Springer',
@@ -28,13 +27,11 @@ const items = [
       custom: {
         Hardcover: {
           type: 'book',
-          id: '[Hardcover] S. Lang, Algebra, 3e',
           ISBN: '9780387953854' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2002, 1, 8 ] ] },
         } satisfies Data_Type.Material,
         Softcover: {
           type: 'book',
-          id: '[Softcover] S. Lang, Algebra, 3e',
           ISBN: '978-1-4612-6551-1' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2012, 11, 10 ] ] },
         } satisfies Data_Type.Material,

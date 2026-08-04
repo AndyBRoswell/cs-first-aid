@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: '',
       author: [ { given: 'Michael', family: 'Artin' } ],
       title: 'Algebra',
       publisher: 'Pearson',
@@ -24,7 +23,6 @@ const items = [
       custom: {
         Print: {
           type: 'book',
-          id: '[Print] M. Artin, Algebra, 2e',
           ISBN: '9780134689609' as CSL_Data.ISBN,
           issued: { "date-parts": [ [ 2017, 2, 13 ] ] },
           "original-date": { "date-parts": [ [ 2010, 8, 13 ] ] },

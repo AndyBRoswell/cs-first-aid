@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'S. Lang, Undergraduate Algebra, 3rd ed.',
       language: 'en-US',
       author: [ { given: 'Serge', family: 'Lang', } ],
       title: 'Undergraduate Algebra',
@@ -25,13 +24,11 @@ const items = [
       custom: {
         Hardcover: {
           type: 'book',
-          id: '[Hardcover] S. Lang, Undergraduate Algebra, 3e',
           ISBN: '9780387220253' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2005, 3, 21 ] ] },
         } satisfies Data_Type.Material,
         Softcover: {
           type: 'book',
-          id: '[Softcover] S. Lang, Undergraduate Algebra, 3e',
           ISBN: '978-1-4419-1959-5' as CSL_Data.ISBN,
           issued: { 'date-parts': [ [ 2010, 11, 29 ] ] },
         } satisfies Data_Type.Material,

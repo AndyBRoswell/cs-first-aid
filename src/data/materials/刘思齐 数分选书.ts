@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'motion_picture',
-      id: '刘思齐 数分选书',
       author: [ { literal: '我真的不懂分析' } ],
       title: '如何选择一本适合你的《数学分析》教科书？',
       issued: { "date-parts": [ [ 2020, 9, 12 ] ] },

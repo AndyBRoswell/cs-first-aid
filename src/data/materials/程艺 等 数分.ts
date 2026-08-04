@@ -10,7 +10,6 @@ const books = [
       '程艺 数分1',
     ],
     material: {
-      id: '程艺 数分1',
       type: 'book',
       title: '数学分析讲义',
       author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' } ],
@@ -30,7 +29,6 @@ const books = [
       '程艺 数分2',
     ],
     material: {
-      id: '程艺 数分2',
       type: 'book',
       title: '数学分析讲义',
       author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' } ],
@@ -48,7 +46,6 @@ const books = [
   {
     id: [],
     material: {
-      id: '程艺 数分3',
       type: 'book',
       title: '数学分析讲义',
       author: [ { family: '程', given: '艺' }, { family: '陈', given: '卿' }, { family: '李', given: '平' }, { family: '许', given: '斌' } ],
@@ -72,7 +69,6 @@ const open_courses = [
     id: [],
     material: {
       type: 'motion_picture',
-      id: '程艺 数分B1 公开课',
       author: [ { literal: '中国科大少年班学院', } ],
       title: '高等数学-微积分 《数学分析B1》【中科大少年班精品课】 程艺教授（104讲）',
       "event-place": '中国科学技术大学少年班学院',
@@ -98,7 +94,6 @@ const open_courses = [
     id: [],
     material: {
       type: 'motion_picture',
-      id: '程艺 数分B2 公开课',
       author: [ { literal: '中国科大少年班学院', } ],
       title: '高等数学-微积分 《数学分析B2》 【中科大少年班精品课】 程艺教授 （94讲）',
       "event-place": '中国科学技术大学少年班学院',

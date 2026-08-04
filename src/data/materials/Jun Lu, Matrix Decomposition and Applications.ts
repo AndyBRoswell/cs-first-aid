@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'article',
-      id: 'Jun Lu, Matrix Decomposition and Applications',
       author: [ { family: 'Lu', given: 'Jun' } ],
       title: 'Matrix Decomposition and Applications',
       DOI: '10.48550/arXiv.2201.00145',

@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '李尚志 线性代数（数学专业用） 2006',
       title: '线性代数（数学专业用）',
       author: [ { family: '李', given: '尚志' } ],
       issued: { 'date-parts': [ [ 2006, 5, 1 ] ] },
@@ -25,7 +24,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '李尚志 线性代数学习指导 2015',
       title: '线性代数学习指导',
       author: [ { family: '李', given: '尚志' } ],
       issued: { 'date-parts': [ [ 2015, 1 ] ] },

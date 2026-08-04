@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'webpage',
-      id: 'Microsoft, C++ Language Reference, 2025',
       author: [ { literal: 'Microsoft' } ],
       title: 'C++ Language Reference',
       language: 'en-US',

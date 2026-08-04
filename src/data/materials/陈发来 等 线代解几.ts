@@ -9,7 +9,6 @@ const books = [
     id: [],
     material: {
       type: 'book',
-      id: '陈发来, 王新茂, 陈效群, 李思敏, 线性代数与解析几何, 第2版',
       language: 'zh-CN',
       title: '线性代数与解析几何',
       author: [ { family: '陈', given: '发来' }, { family: '陈', given: '效群' }, { family: '李', given: '思敏' }, { family: '王', given: '新茂' } ],
@@ -39,7 +38,6 @@ const open_course = [
     id: [],
     material: {
       type: 'motion_picture',
-      id: '陈发来 线性代数B1 2021',
       title: '高等数学《线性代数B1》 【中科大少年班精品课】 陈发来教授（51讲）',
       "event-date": { "date-parts": [ [ 2022, 2, 22 ] ] },
       author: [ { literal: '中国科大少年班学院' } ],

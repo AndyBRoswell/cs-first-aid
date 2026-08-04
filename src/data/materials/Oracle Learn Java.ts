@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'webpage',
-      id: 'dev.java/learn',
       title: 'Learn Java',
       author: [ { literal: 'Oracle' } ],
       URL: 'https://dev.java/learn/',

@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: `Thomas Calculus`,
       author: [
         { given: 'Joel R.', family: 'Hass' }, { given: 'Christopher E.', family: 'Heil' },
         { given: 'Maurice D.', family: 'Weir' }, { given: 'Przemyslaw', family: 'Bogacki' },
@@ -30,7 +29,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: `Thomas Calculus Early Transcendentals`,
       author: [
         { given: 'Joel R.', family: 'Hass' }, { given: 'Christopher E.', family: 'Heil' },
         { given: 'Maurice D.', family: 'Weir' }, { given: 'Przemyslaw', family: 'Bogacki' },

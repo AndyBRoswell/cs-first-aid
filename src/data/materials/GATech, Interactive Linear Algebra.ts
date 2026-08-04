@@ -9,7 +9,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Margalit and Rabinoff, Linear Algebra',
       author: [ { given: 'Dan', family: 'Margalit' }, { given: 'Joseph', family: 'Rabinoff' } ],
       title: 'Interactive Linear Algebra',
       issued: { 'date-parts': [ [ 2019, 6, 3 ] ] },

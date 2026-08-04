@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'J. Gustedt, "Modern C," 3rd ed.',
       title: 'Modern C',
       author: [ { given: 'Jens', family: 'Gustedt' } ],
       edition: 3,

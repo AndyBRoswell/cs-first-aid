@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'J. A. Beachy and W. D. Blair, Abstract Algebra, 4e',
       title: 'Abstract Algebra',
       author: [ { given: 'John A.', family: 'Beachy' }, { given: 'William D.', family: 'Blair' } ],
       edition: 4,
@@ -23,14 +22,12 @@ const items = [
       custom: {
         VitalSource: {
           type: 'book',
-          id: '[eText] J. A. Beachy and W. D. Blair, Abstract Algebra, 4e',
           ISBN: '9781478638919' as CSL_Data.ISBN,
           URL: 'https://www.vitalsource.com/products/abstract-algebra-john-a-beachy-william-d-v9781478638919',
           accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
         } satisfies Data_Type.Material,
         Kindle: {
           type: 'book',
-          id: '[Kindle] J. A. Beachy and W. D. Blair, Abstract Algebra, 4e',
           issued: { 'date-parts': [ [ 2019, 2, 15 ], ], },
           URL: 'https://www.amazon.com/Abstract-Algebra-John-Beachy-ebook/dp/B07NWXPC5D/',
           accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },

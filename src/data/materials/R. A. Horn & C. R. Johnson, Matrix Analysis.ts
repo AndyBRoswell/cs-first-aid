@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'R. A. Horn and C. R. Johnson, Matrix Analysis, 2e',
       author: [ { given: 'Roger Alan', family: 'Horn' }, { given: 'Charles Royal', family: 'Johnson' } ],
       title: 'Matrix Analysis',
       publisher: 'Cambridge University Press',
@@ -21,12 +20,10 @@ const items = [
       custom: {
         Hardback: {
           type: 'book',
-          id: '[Hardback] R. A. Horn and C. R. Johnson, Matrix Analysis, 2e',
           ISBN: '9780521839402' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
         Paperback: {
           type: 'book',
-          id: '[Paperback] R. A. Horn and C. R. Johnson, Matrix Analysis, 2e',
           ISBN: '9780521548236' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
         URL: [

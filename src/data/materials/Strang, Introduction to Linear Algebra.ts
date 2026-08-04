@@ -11,7 +11,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'Strang, Introduction to Linear Algebra, 6e',
       author: [ { given: 'William Gilbert', family: 'Strang' } ],
       title: 'Introduction to Linear Algebra',
       edition: 6,

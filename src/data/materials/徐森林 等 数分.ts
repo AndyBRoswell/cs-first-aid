@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '徐森林 数分1',
       author: [ { family: '徐', given: '森林' }, { family: '薛', given: '春华' } ],
       title: '数学分析',
       volume: 1,
@@ -23,7 +22,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '徐森林 数分2',
       author: [ { family: '徐', given: '森林' }, { family: '薛', given: '春华' } ],
       title: '数学分析',
       volume: 2,
@@ -39,7 +37,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '徐森林 数分3',
       author: [ { family: '徐', given: '森林' }, { literal: '金亚东' }, { family: '薛', given: '春华' } ],
       title: '数学分析',
       volume: 3,

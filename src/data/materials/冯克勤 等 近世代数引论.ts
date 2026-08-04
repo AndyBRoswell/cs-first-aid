@@ -7,7 +7,6 @@ const items = [
     id: [],
     material: {
       type: 'book',
-      id: '冯克勤, 李尚志, 章璞, 近世代数引论, 第4版',
       language: 'zh-CN',
       author: [ { family: '冯', given: '克勤' }, { family: '李', given: '尚志' }, { family: '章', given: '璞' } ],
       issued: { 'date-parts': [ [ 2018, 12, 1 ] ] },

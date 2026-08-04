@@ -7,7 +7,6 @@ const items = [
     id: [] satisfies Data_Type.ID_t[],
     material: {
       type: 'book',
-      id: '李炯生 查建国 王新茂 线性代数 2010',
       title: '线性代数',
       author: [ { family: '李', given: '炯生' }, { family: '查', given: '建国' }, { family: '王', given: '新茂' } ],
       edition: 2,

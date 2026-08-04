@@ -8,7 +8,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'C. D. Meyer, Matrix Analysis and Applied Linear Algebra, 2e',
       author: [ { given: 'Carl D.', family: 'Meyer' } ],
       title: 'Matrix Analysis and Applied Linear Algebra',
       edition: 2,
@@ -25,7 +24,6 @@ const items = [
       custom: {
         'Print': {
           type: 'book',
-          id: '[Print] C. D. Meyer, Matrix Analysis and Applied Linear Algebra',
           ISBN: '978-1-61197-743-1' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
       } satisfies CSL_Data.Custom,
@@ -36,7 +34,6 @@ const items = [
     ],
     material: {
       type: 'book',
-      id: 'C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide, 2e',
       author: [ { given: 'Carl D.', family: 'Meyer' } ],
       title: 'Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide',
       edition: 2,
@@ -53,7 +50,6 @@ const items = [
       custom: {
         'Print': {
           type: 'book',
-          id: '[Print] C. D. Meyer, Matrix Analysis and Applied Linear Algebra: Study and Solutions Guide, 2e',
           ISBN: ':978-1-61197-745-5' as CSL_Data.ISBN,
         } satisfies Data_Type.Material,
       } satisfies CSL_Data.Custom,
