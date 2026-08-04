@@ -11,6 +11,8 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
 
   await course_util.check_references(main)
 
+  await course_util.check_cites(main)
+
   await docs_util.check_title(main, /微积分/)
 
   let section: Locator, heading: Locator, References: Locator
