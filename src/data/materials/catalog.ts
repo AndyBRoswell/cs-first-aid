@@ -11,8 +11,7 @@ import * as util from '@/util.ts'
 // @ts-ignore [citation-js doesn't have ts support]
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
-import get_rendered_author from './get_rendered_author.csl?raw'
-import get_full_author_names from './get_full_author_names.csl?raw'
+import node_fs from "node:fs";
 
 const logger = pino(util.pino_arg)
 
@@ -190,7 +189,9 @@ export const default_name_rendering_options: name_rendering_options = {
 }
 
 const CSL_config = citation_js.plugins.config.get('@csl')
+const get_rendered_author = node_fs.readFileSync(node_path.resolve(util.source_root, 'data/materials/get_rendered_author.csl'), 'utf8')
 CSL_config.styles.add('get_rendered_author', get_rendered_author)
+const get_full_author_names = node_fs.readFileSync(node_path.resolve(util.source_root, 'data/materials/get_full_author_names.csl'), 'utf8')
 CSL_config.styles.add('get_full_author_names', get_full_author_names)
 
 export function get_rendered_names(names: CSL_Data.Name_Variable[], options: name_rendering_options = {}): string {
@@ -205,5 +206,5 @@ export function get_rendered_names(names: CSL_Data.Name_Variable[], options: nam
       output = cite.format('bibliography', { template: 'get_rendered_author' })
       break
   }
-  return output
+  return output.trim()
 }
