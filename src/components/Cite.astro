@@ -1,0 +1,18 @@
+---
+import type { ID_t, Scoped_ID_t, Material_Filter, Qualified_Material_Filter } from "@/types/data.ts"
+import type { Mangled_References } from "@/content/docs/bib.ts";
+import * as bib from "@/content/docs/bib.ts"
+export interface Props {
+  mangled_references: Mangled_References
+  cite_items: (ID_t | Scoped_ID_t | Material_Filter | Qualified_Material_Filter)[]
+}
+const { mangled_references, cite_items, } = Astro.props
+---
+<span class="Cite" set:html={bib.cite(mangled_references, cite_items)}></span>
+
+<style>
+  .Cite {
+    display: inline;
+    margin-left: 0.25rem;
+  }
+</style>
