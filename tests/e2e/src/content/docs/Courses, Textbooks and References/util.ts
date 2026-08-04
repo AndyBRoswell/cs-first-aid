@@ -24,7 +24,7 @@ export async function check_references(main: Locator) {
         if ('lecturer' in material.custom) {
           const custom_div: Locator = CSL_entries[index]!.locator('.custom')
           const lecturer_p: Locator = custom_div.locator('.lecturer')
-          const rendered_lecturer: string = catalog.get_rendered_names(material.custom.lecturer)
+          const rendered_lecturer: string = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
           const expected = `Lecturer: ` + rendered_lecturer
           await expect(lecturer_p).toHaveText(expected)
         }
