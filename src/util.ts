@@ -1,4 +1,5 @@
 import pino from 'pino'
+import node_fs from 'node:fs'
 import node_path from 'node:path'
 import * as cssesc from 'cssesc'
 
@@ -16,7 +17,15 @@ export const pino_arg: pino.LoggerOptions = {
   }
 }
 
-export const project_root = node_path.resolve(import.meta.dirname, '../../..') // exit from dist/.prerender
+// Climb up directories to locate the project root automatically
+let dir_root = import.meta.dirname
+while (!node_fs.existsSync(node_path.join(dir_root, 'package.json'))) {
+  const parent = node_path.dirname(dir_root)
+  if (parent === dir_root) break // Reached filesystem root
+  dir_root = parent
+}
+export const project_root = dir_root
+export const source_root = node_path.resolve(project_root, 'src')
 
 export const cssesc_options: Readonly<Partial<cssesc.Options>> = { quotes: 'double', }
 
