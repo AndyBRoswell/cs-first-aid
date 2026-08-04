@@ -168,7 +168,10 @@ function cite_by_filter(mangled: Mangled_References, search_scope: [ number, num
   check_filter_results(material_filter, target_materials, filter_options)
   let material_index = 0
   for (let i = search_scope[0]; i < search_scope[1]; i++) {
-    if (mangled.flattened.data[i].id === target_materials[material_index]!.id) { ret.push(i + 1) }
+    if (mangled.flattened.data[i].id === target_materials[material_index]!.id) {
+      ret.push(i + 1)
+      material_index++
+    }
     if (material_index >= target_materials.length) { break }
   }
   return ret
