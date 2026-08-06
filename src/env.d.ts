@@ -29,3 +29,10 @@ declare module 'virtual:starlight/components/SocialIcons' {
   const SocialIcons: typeof import('@astrojs/starlight/components/SocialIcons.astro').default;
   export default SocialIcons;
 }
+
+declare const __meta: {
+  app: {
+    readonly version: string
+    readonly build_time: string
+  }
+}
