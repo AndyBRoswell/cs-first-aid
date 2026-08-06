@@ -9,6 +9,7 @@ import { Future_Trends } from "./src/components/sidebar/未来趋势.ts"
 import { FAQ } from "./src/components/sidebar/常见问题.ts"
 import { Recommended_Reading_Materials } from "./src/components/sidebar/推荐读物.ts"
 import { Epilog } from "./src/components/sidebar/后记.ts"
+import package_json from "./package.json" with { type: 'json' }
 
 /**
  * @deprecated
@@ -36,6 +37,18 @@ function import_course_materials() {
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    define: {
+      __meta: JSON.stringify({
+        app: {
+          version: package_json.version,
+          build_time: new Date().toISOString(),
+
+        }
+      })
+    },
+    plugins: []
+  },
   integrations: [
     starlight({
       title: {
@@ -49,6 +62,7 @@ export default defineConfig({
       components: {
         PageTitle: './src/components/PageTitle.astro',
         SocialIcons: './src/components/SocialIcons.astro',
+        SiteTitle: './src/components/SiteTitle.astro',
       },
       social: [
         { icon: 'github', label: 'GitHub', href: 'https://github.com/AndyBRoswell/cs-first-aid' },
@@ -80,7 +94,4 @@ export default defineConfig({
       ],
     })
   ],
-  vite: {
-    plugins: []
-  },
 });
