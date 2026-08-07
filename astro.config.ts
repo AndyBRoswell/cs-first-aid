@@ -72,6 +72,7 @@ export default defineConfig({
         { icon: 'github', label: 'GitHub', href: 'https://github.com/AndyBRoswell/cs-first-aid' },
       ],
       customCss: [
+        './src/styles/global.css',
         './src/styles/docs.css',
       ],
       locales: {
