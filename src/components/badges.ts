@@ -30,7 +30,7 @@ export function attach(root: ParentNode = document) {
       }
       if (badge_text === undefined) { throw new Error(`Invalid badge meta info: ${JSON.stringify(meta_item, null, 2)}`) }
       badge.textContent = badge_text
-      badge.classList.add('badge', badge_text)
+      badge.classList.add('badge')
       badges.append(badge)
     }
     element.append(badges)
