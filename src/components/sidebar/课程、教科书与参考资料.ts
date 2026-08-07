@@ -38,6 +38,17 @@ export const Courses_Textbooks_and_References = {
         en: 'Mathematical Analysis',
       },
       slug: 'courses-textbooks-and-references/mathematical-analysis',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'dev',
+          {
+            text: {
+              'zh-CN': '数学',
+              en: 'Math',
+            }
+          },
+        ])
+      },
     },
     {
       label: '线性代数',
@@ -51,6 +62,11 @@ export const Courses_Textbooks_and_References = {
             en: 'Overview',
           },
           slug: 'courses-textbooks-and-references/linear-algebra',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '线性代数 I',
@@ -58,6 +74,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Linear Algebra I',
           },
           slug: 'courses-textbooks-and-references/linear-algebra/i',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '线性代数 II',
@@ -65,6 +92,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Linear Algebra II',
           },
           slug: 'courses-textbooks-and-references/linear-algebra/ii',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
       ],
     },
@@ -80,6 +118,11 @@ export const Courses_Textbooks_and_References = {
             en: 'Overview',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '概率论',
@@ -87,6 +130,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Probability Theory',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '数理统计',
@@ -94,6 +148,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Mathematical Statistics',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '随机过程',
@@ -101,6 +166,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Stochastic Processes',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
       ],
     },
@@ -116,6 +192,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Overview',
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '数理逻辑',
@@ -123,6 +210,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Mathematical Logic',
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/mathematical-logic',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '集合论',
@@ -130,6 +228,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Set Theory',
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/set-theory',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '图论',
@@ -137,6 +246,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Graph Theory',
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/graph-theory',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '抽象代数',
@@ -144,6 +264,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Abstract Algebra',
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/abstract-algebra',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '组合数学',
@@ -151,6 +282,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Combinatorics',
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/combinatorics',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
         {
           label: '数论',
@@ -158,6 +300,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Number Theory',
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/number-theory',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '数学',
+                  en: 'Math',
+                }
+              },
+            ])
+          },
         },
       ],
     },
