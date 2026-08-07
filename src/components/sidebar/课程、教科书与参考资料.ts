@@ -80,7 +80,10 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/linear-algebra',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -144,7 +147,10 @@ export const Courses_Textbooks_and_References = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -156,7 +162,10 @@ export const Courses_Textbooks_and_References = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -168,7 +177,10 @@ export const Courses_Textbooks_and_References = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -180,7 +192,10 @@ export const Courses_Textbooks_and_References = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -200,7 +215,10 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -346,7 +364,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -358,7 +379,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -370,7 +394,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -382,7 +409,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -400,7 +430,10 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/cpp-programming',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -436,7 +469,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -448,7 +484,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -460,7 +499,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -472,7 +514,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -484,7 +529,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -496,7 +544,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -508,7 +559,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -520,7 +574,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -532,7 +589,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -544,7 +604,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -556,7 +619,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -568,7 +634,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -580,7 +649,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -592,7 +664,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -604,7 +679,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -616,7 +694,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -628,7 +709,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -640,7 +724,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -652,7 +739,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -664,7 +754,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -676,7 +769,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -688,7 +784,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -700,7 +799,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -712,7 +814,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -724,7 +829,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -736,7 +844,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -748,7 +859,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -760,7 +874,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -772,7 +889,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -784,7 +904,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -796,7 +919,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -808,7 +934,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -820,7 +949,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -832,7 +964,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -844,7 +979,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -922,7 +1060,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -956,7 +1097,10 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
