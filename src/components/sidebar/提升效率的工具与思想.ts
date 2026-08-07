@@ -15,7 +15,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -27,7 +30,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -39,7 +45,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -51,7 +60,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -63,7 +75,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -75,7 +90,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -87,7 +105,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -99,7 +120,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -111,7 +135,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -123,7 +150,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -135,7 +165,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -147,7 +180,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -159,7 +195,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -171,7 +210,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -183,7 +225,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -195,7 +240,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -207,7 +255,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
