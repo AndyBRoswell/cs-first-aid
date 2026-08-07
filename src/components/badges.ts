@@ -1,4 +1,14 @@
-export type Meta = (string | { text: string | { [key: Intl.UnicodeBCP47LocaleIdentifier]: string }, class?: string[] })[]
+type Meta_Item = Meta_Item_primitive | Meta_Item_object
+type Meta_Item_primitive = string
+type Mandatory_Multilingual_Text = {
+  'zh-CN': string // root language
+  'en': string    // for HTML classes
+}
+type Meta_Item_object = {
+  text: string | { [key: Intl.UnicodeBCP47LocaleIdentifier]: string } & Mandatory_Multilingual_Text
+  class?: string[]
+}
+export type Meta = Meta_Item[]
 
 export function to_HTML_attr(badges: Meta) { return JSON.stringify(badges) }
 
@@ -13,6 +23,7 @@ export function attach(root: ParentNode = document) {
     for (const meta_item of meta_items) {
       const badge = document.createElement('span')
       let badge_text: string | undefined
+      let badge_class: string[] | undefined
       switch (typeof meta_item) {
         case 'string':
           badge_text = meta_item
@@ -26,11 +37,17 @@ export function attach(root: ParentNode = document) {
               badge_text = meta_item.text[lang]
               break
           }
+          if ('class' in meta_item) { badge_class = meta_item.class }
           break
       }
-      if (badge_text === undefined) { throw new Error(`Invalid badge meta info: ${JSON.stringify(meta_item, null, 2)}`) }
+      if (badge_text === undefined) { throw new Error(`\`text\` is undefined: ${JSON.stringify(meta_item, null, 2)}`) }
       badge.textContent = badge_text
       badge.classList.add('badge')
+      if (badge_class !== undefined) {
+        badge.classList.add(...badge_class)
+        if (badge_class.includes('release')) { badge.classList.add(badge_text) }
+        if (badge_class.includes('subject')) { badge.classList.add(((meta_item as Meta_Item_object)['text'] as Mandatory_Multilingual_Text)['en']) }
+      }
       badges.append(badge)
     }
     element.append(badges)
