@@ -15,7 +15,10 @@ export const Future_Trends = {
       slug: 'future-trends',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -33,7 +36,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -45,7 +51,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -57,7 +66,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -69,7 +81,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -81,7 +96,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -93,7 +111,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -105,7 +126,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -117,7 +141,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -129,7 +156,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -149,7 +179,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -161,7 +194,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -173,7 +209,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -185,7 +224,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -197,7 +239,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -209,7 +254,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
@@ -221,7 +269,10 @@ export const Future_Trends = {
           slug: '',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'blank',
+              {
+                text: 'blank',
+                class: [ 'release', ],
+              },
             ])
           },
         },
