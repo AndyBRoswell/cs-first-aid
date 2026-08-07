@@ -1,4 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
+import * as badges from '../badges.ts'
 
 export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
   label: '需要尽早开始或完成的事项',
@@ -12,6 +13,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Overview',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '我应该参加……吗？',
@@ -19,6 +25,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Should I Participate in ...?',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '决定毕业去向',
@@ -26,6 +37,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Determine Your Career Path',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '开源项目',
@@ -33,6 +49,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Open-Source Projects',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '实习',
@@ -40,6 +61,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Internships',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '志愿工作',
@@ -47,6 +73,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Voluntary Work',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '外语',
@@ -54,6 +85,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Foreign Languages',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '选课',
@@ -61,6 +97,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Course Selection',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '课外积累',
@@ -68,6 +109,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Extracurricular Accumulations',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '驾照',
@@ -75,6 +121,11 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
         en: 'Driving Licenses',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
   ],
 } satisfies SidebarItem

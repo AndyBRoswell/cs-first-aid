@@ -1,4 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
+import * as badges from '../badges.ts'
 
 export const Future_Trends = {
   label: '未来趋势',
@@ -12,6 +13,11 @@ export const Future_Trends = {
         en: 'Overview',
       },
       slug: 'future-trends',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '我们面对什么？',
@@ -25,6 +31,11 @@ export const Future_Trends = {
             en: 'Computer Literacy Becoming Common Sense: Data Analysis, Web / Client Development...',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: 'Token 费率不断下降不是理所当然',
@@ -32,6 +43,11 @@ export const Future_Trends = {
             en: 'The Decline of Cost-per-Token Is Not Inevitable',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '免费与廉价套餐/权益未必长久持续',
@@ -39,6 +55,11 @@ export const Future_Trends = {
             en: 'Free and Budget Plans/Benefits Are Not Guaranteed to Last Long',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '本行业的众多产品与服务的质量正不断下滑却不降价',
@@ -46,6 +67,11 @@ export const Future_Trends = {
             en: 'The Quality of Various Products and Services in This Industry Is Declining but without Price Reduction',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '无处不在的成本压力：从订阅制暴增与内存/硬盘价格暴涨说开去',
@@ -53,6 +79,11 @@ export const Future_Trends = {
             en: 'Cost Pressure Everywhere: Talking from the Surges of Subscriptions and Memory/Disk Prices',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '长期免费访问的幻觉：由多所高校禁止未登录访问培养方案/公开课想到的',
@@ -60,6 +91,11 @@ export const Future_Trends = {
             en: 'The Illusion of Long-Term Free Access: Thoughts on the Prohibition of Access to Curricula/Open Courses of Multiple Universities Without Logins',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '搜索结果的劣化',
@@ -67,6 +103,11 @@ export const Future_Trends = {
             en: 'The Degradation of Search Results',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '闭源潮',
@@ -74,6 +115,11 @@ export const Future_Trends = {
             en: 'The Tide of Closed-Source',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: 'AI 的红蓝不对称',
@@ -81,6 +127,11 @@ export const Future_Trends = {
             en: 'The Red-Blue Asymmetry of AI',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
       ],
     },
@@ -96,6 +147,11 @@ export const Future_Trends = {
             en: 'The Ceiling of Low-Code/No-Code',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '离云',
@@ -103,6 +159,11 @@ export const Future_Trends = {
             en: 'Off-Cloud',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '资源受限下的设计决策',
@@ -110,6 +171,11 @@ export const Future_Trends = {
             en: 'Design Decisions under Resource Limits',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '坚持开源免费',
@@ -117,6 +183,11 @@ export const Future_Trends = {
             en: 'Persist in Open-Source and Free of Charge',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '做好多方面的安全措施',
@@ -124,6 +195,11 @@ export const Future_Trends = {
             en: 'Implement Multiple Aspects of Security Measures Well',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '搜索框的边界之外：可编程信息检索',
@@ -131,6 +207,11 @@ export const Future_Trends = {
             en: 'Beyond the Boundaries of Search Boxes: Programmable Information Retrieval',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '通解：计算机+',
@@ -138,6 +219,11 @@ export const Future_Trends = {
             en: 'General Solution: Computer Science+',
           },
           slug: '',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
       ],
     },

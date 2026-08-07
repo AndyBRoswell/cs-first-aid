@@ -1,4 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
+import * as badges from '../badges.ts'
 
 export const Recommended_Reading_Materials = {
   label: '推荐读物',
@@ -6,4 +7,9 @@ export const Recommended_Reading_Materials = {
     en: 'Recommended Reading Materials',
   },
   slug: '',
+  attrs: {
+    'data-badges': badges.to_HTML_attr([
+      'blank',
+    ])
+  },
 } satisfies SidebarItem
