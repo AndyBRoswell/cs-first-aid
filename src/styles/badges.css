@@ -1,0 +1,20 @@
+/* Created by GPT-5.6 Sol High. Revised by AndyBRoswell */
+
+.badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  margin-inline-start: auto;
+  padding-inline-start: 0.375rem;
+}
+
+.badge {
+  flex: none;
+  padding: 0.08rem 0.35rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.4;
+}

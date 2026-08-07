@@ -1,3 +1,5 @@
+@import './badges.css';
+
 :root {
   --sl-content-width: 80rem;
 }
