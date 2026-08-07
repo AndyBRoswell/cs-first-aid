@@ -1,4 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
+import * as badges from '../badges.ts'
 
 export const Courses_Textbooks_and_References = {
   label: '课程、教科书与参考资料',
@@ -19,6 +20,17 @@ export const Courses_Textbooks_and_References = {
         en: 'Calculus',
       },
       slug: 'courses-textbooks-and-references/calculus',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'dev',
+          {
+            text: {
+              'zh-CN': '数学',
+              en: 'Math',
+            }
+          },
+        ])
+      },
     },
     {
       label: '数学分析',
