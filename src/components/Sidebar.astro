@@ -1,0 +1,11 @@
+---
+import Original_Sidebar from '@astrojs/starlight/components/Sidebar.astro'
+---
+
+<Original_Sidebar><slot/></Original_Sidebar>
+
+<script>
+  import * as badges from './badges.ts'
+  badges.attach()
+  document.addEventListener('astro:page-load', () => badges.attach())
+</script>
