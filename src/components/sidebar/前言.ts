@@ -15,7 +15,10 @@ export const Preface = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -27,7 +30,10 @@ export const Preface = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -39,7 +45,10 @@ export const Preface = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -51,7 +60,10 @@ export const Preface = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -63,7 +75,10 @@ export const Preface = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -75,7 +90,10 @@ export const Preface = {
       slug: '',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'blank',
+          {
+            text: 'blank',
+            class: [ 'release', ],
+          },
         ])
       },
     }
