@@ -9,7 +9,10 @@ export const Recommended_Reading_Materials = {
   slug: '',
   attrs: {
     'data-badges': badges.to_HTML_attr([
-      'blank',
+      {
+        text: 'blank',
+        class: [ 'release', ],
+      },
     ])
   },
 } satisfies SidebarItem
