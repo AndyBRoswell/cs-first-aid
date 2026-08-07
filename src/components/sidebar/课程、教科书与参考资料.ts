@@ -15,7 +15,10 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'dev',
+          {
+            text: 'dev',
+            class: [ 'release', ],
+          },
         ])
       },
     },
@@ -49,12 +52,16 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/mathematical-analysis',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'dev',
+          {
+            text: 'dev',
+            class: [ 'release', ],
+          },
           {
             text: {
               'zh-CN': '数学',
               en: 'Math',
-            }
+            },
+            class: [ 'subject', ],
           },
         ])
       },
@@ -85,12 +92,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/linear-algebra/i',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '数学',
                   en: 'Math',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -103,12 +114,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/linear-algebra/ii',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '数学',
                   en: 'Math',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -197,12 +212,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/mathematical-logic',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '数学',
                   en: 'Math',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -215,12 +234,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/set-theory',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '数学',
                   en: 'Math',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -233,12 +256,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/graph-theory',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '数学',
                   en: 'Math',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -251,12 +278,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/abstract-algebra',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '数学',
                   en: 'Math',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -269,12 +300,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/combinatorics',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '数学',
                   en: 'Math',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -287,12 +322,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/number-theory',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '数学',
                   en: 'Math',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -373,12 +412,16 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/cpp-programming/i',
           attrs: {
             'data-badges': badges.to_HTML_attr([
-              'dev',
+              {
+                text: 'dev',
+                class: [ 'release', ],
+              },
               {
                 text: {
                   'zh-CN': '计算机',
                   en: 'CS',
-                }
+                },
+                class: [ 'subject', ],
               },
             ])
           },
@@ -813,12 +856,16 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/c-programming',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'dev',
+          {
+            text: 'dev',
+            class: [ 'release', ],
+          },
           {
             text: {
               'zh-CN': '计算机',
               en: 'CS',
-            }
+            },
+            class: [ 'subject', ],
           },
         ])
       },
@@ -831,12 +878,16 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/csharp-programming',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'dev',
+          {
+            text: 'dev',
+            class: [ 'release', ],
+          },
           {
             text: {
               'zh-CN': '计算机',
               en: 'CS',
-            }
+            },
+            class: [ 'subject', ],
           },
         ])
       },
@@ -849,12 +900,16 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/java-programming',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'dev',
+          {
+            text: 'dev',
+            class: [ 'release', ],
+          },
           {
             text: {
               'zh-CN': '计算机',
               en: 'CS',
-            }
+            },
+            class: [ 'subject', ],
           },
         ])
       },
@@ -879,12 +934,16 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/python-programming',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'dev',
+          {
+            text: 'dev',
+            class: [ 'release', ],
+          },
           {
             text: {
               'zh-CN': '计算机',
               en: 'CS',
-            }
+            },
+            class: [ 'subject', ],
           },
         ])
       },
