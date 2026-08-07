@@ -13,6 +13,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Overview',
       },
       slug: 'courses-textbooks-and-references',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'dev',
+        ])
+      },
     },
     {
       label: '微积分',
@@ -133,12 +138,6 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               'blank',
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                }
-              },
             ])
           },
         },
@@ -151,12 +150,6 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               'blank',
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                }
-              },
             ])
           },
         },
@@ -169,12 +162,6 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               'blank',
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                }
-              },
             ])
           },
         },
@@ -195,12 +182,6 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               'blank',
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                }
-              },
             ])
           },
         },
@@ -320,6 +301,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Complex Analysis',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '常微分方程',
@@ -327,6 +313,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Ordinary Differential Equations',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '偏微分方程',
@@ -334,6 +325,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Partial Differential Equations',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '数值方法',
@@ -341,6 +337,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Numerical Methods',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: 'C++ 程序设计',
@@ -354,6 +355,11 @@ export const Courses_Textbooks_and_References = {
             en: 'Overview',
           },
           slug: 'courses-textbooks-and-references/cpp-programming',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'blank',
+            ])
+          },
         },
         {
           label: '程序设计入门（C++ 程序设计 I）',
@@ -361,6 +367,17 @@ export const Courses_Textbooks_and_References = {
             en: 'Introduction to Programming (C++ Programming I)',
           },
           slug: 'courses-textbooks-and-references/cpp-programming/i',
+          attrs: {
+            'data-badges': badges.to_HTML_attr([
+              'dev',
+              {
+                text: {
+                  'zh-CN': '计算机',
+                  en: 'CS',
+                }
+              },
+            ])
+          },
         },
       ],
     },
@@ -370,6 +387,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Software Testing',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: 'Web 开发',
@@ -377,6 +399,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Web Development',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '数据结构',
@@ -384,6 +411,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Data Structures',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '操作系统',
@@ -391,6 +423,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Operating Systems',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '计算机组成原理',
@@ -398,6 +435,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Computer Organization',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '数据库',
@@ -405,6 +447,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Databases',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '安全编程',
@@ -412,6 +459,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Secure Programming',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '计算机网络',
@@ -419,6 +471,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Computer Networks',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '软件容器化',
@@ -426,6 +483,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Software Containerization'
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '形式语言与自动机',
@@ -433,6 +495,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Formal Languages and Automata',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '编译原理',
@@ -440,6 +507,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Compiler Design',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '电路分析',
@@ -447,6 +519,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Circuit Analysis',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '模拟电路',
@@ -454,6 +531,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Analog Circuits',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '数字电路',
@@ -461,6 +543,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Digital Circuits',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '信号与系统',
@@ -468,6 +555,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Signals and Systems',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '电磁场与电磁波',
@@ -475,6 +567,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Electromagnetics',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '自动控制原理',
@@ -482,6 +579,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Control Systems',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '数字信号处理',
@@ -489,6 +591,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Digital Signal Processing',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '电力系统分析',
@@ -496,6 +603,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Power System Analysis',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '电力电子技术',
@@ -503,6 +615,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Power Electronics',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '电机学',
@@ -510,6 +627,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Electromechanics',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '设计模式',
@@ -517,6 +639,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Design Patterns',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '计算机体系结构',
@@ -524,6 +651,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Computer Architecture',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '算法分析与设计',
@@ -531,6 +663,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Algorithm Analysis and Design',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '分布式系统',
@@ -538,6 +675,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Distributed Systems',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '并行与分布式计算',
@@ -545,6 +687,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Parallel and Distributed Computing',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '现代通信',
@@ -552,6 +699,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Communications',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '数字图像处理',
@@ -559,6 +711,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Digital Image Processing',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '计算机视觉',
@@ -566,6 +723,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Computer Vision',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '自然语言处理',
@@ -573,6 +735,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Natural Language Processing',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '计算机图形学',
@@ -580,6 +747,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Computer Graphics',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '机器学习',
@@ -587,6 +759,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Machine Learning',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '编码理论',
@@ -594,6 +771,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Coding Theory',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '密码学',
@@ -601,6 +783,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Cryptography',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '软件安全',
@@ -608,6 +795,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Software Security',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: 'C 语言程序设计',
@@ -615,6 +807,17 @@ export const Courses_Textbooks_and_References = {
         en: 'C Programming Language',
       },
       slug: 'courses-textbooks-and-references/c-programming',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'dev',
+          {
+            text: {
+              'zh-CN': '计算机',
+              en: 'CS',
+            }
+          },
+        ])
+      },
     },
     {
       label: 'C# 程序设计',
@@ -622,6 +825,17 @@ export const Courses_Textbooks_and_References = {
         en: 'C# Programming Language',
       },
       slug: 'courses-textbooks-and-references/csharp-programming',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'dev',
+          {
+            text: {
+              'zh-CN': '计算机',
+              en: 'CS',
+            }
+          },
+        ])
+      },
     },
     {
       label: 'Java 程序设计',
@@ -629,6 +843,17 @@ export const Courses_Textbooks_and_References = {
         en: 'Java Programming Language',
       },
       slug: 'courses-textbooks-and-references/java-programming',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'dev',
+          {
+            text: {
+              'zh-CN': '计算机',
+              en: 'CS',
+            }
+          },
+        ])
+      },
     },
     {
       label: 'Kotlin 程序设计',
@@ -636,6 +861,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Kotlin Programming Language',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: 'Python 程序设计',
@@ -643,6 +873,17 @@ export const Courses_Textbooks_and_References = {
         en: 'Python Programming Language',
       },
       slug: 'courses-textbooks-and-references/python-programming',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'dev',
+          {
+            text: {
+              'zh-CN': '计算机',
+              en: 'CS',
+            }
+          },
+        ])
+      },
     },
     {
       label: 'Android 开发',
@@ -650,6 +891,11 @@ export const Courses_Textbooks_and_References = {
         en: 'Android Development',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
   ],
 } satisfies SidebarItem

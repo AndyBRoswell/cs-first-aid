@@ -1,4 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
+import * as badges from '../badges.ts'
 
 export const Tools_and_Ideas_to_Improve_Efficiency = {
   label: '提升效率的工具与思想',
@@ -12,6 +13,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Overview',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '养成自学的习惯',
@@ -19,6 +25,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Forming the Habit of Self-Learning',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '计算机',
@@ -26,6 +37,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Computers'
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '电子书',
@@ -33,6 +49,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Ebooks',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '备份',
@@ -40,6 +61,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Backups',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '免费/低价云服务',
@@ -47,6 +73,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Free/Cost-Efficient Cloud Services',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '绝不为培训班付费',
@@ -54,6 +85,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Never Pay for Bootcamps',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '用钱换时间',
@@ -61,6 +97,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Time over Money',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: 'EDU 邮箱',
@@ -68,6 +109,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Edu Mailboxes',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '你的记忆是不可靠的',
@@ -75,6 +121,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Your Memory Is Unreliable',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '笔记',
@@ -82,6 +133,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Taking Notes',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '优先文字材料而非视频',
@@ -89,6 +145,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Text Materials over Videos',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '练习',
@@ -96,6 +157,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Do Practices',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '了解行业，获得积累',
@@ -103,6 +169,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Know about the Entire Industry',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '熟练使用生产力工具',
@@ -110,6 +181,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Get Familiar with Using Productive Tools',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '自动化',
@@ -117,6 +193,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Automation',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
     {
       label: '善用人工智能',
@@ -124,6 +205,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
         en: 'Using AI',
       },
       slug: '',
+      attrs: {
+        'data-badges': badges.to_HTML_attr([
+          'blank',
+        ])
+      },
     },
   ],
 } satisfies SidebarItem
