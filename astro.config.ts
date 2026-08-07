@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config"
 import starlight from "@astrojs/starlight"
+import tailwindcss from '@tailwindcss/vite';
 import fast_glob from 'fast-glob'
 import { Preface } from "./src/components/sidebar/前言.ts"
 import { Tools_and_Ideas_to_Improve_Efficiency } from "./src/components/sidebar/提升效率的工具与思想.ts"
@@ -47,7 +48,9 @@ export default defineConfig({
         }
       })
     },
-    plugins: []
+    plugins: [
+      tailwindcss(),
+    ]
   },
   integrations: [
     starlight({
