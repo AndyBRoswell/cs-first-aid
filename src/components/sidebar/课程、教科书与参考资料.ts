@@ -27,12 +27,16 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/calculus',
       attrs: {
         'data-badges': badges.to_HTML_attr([
-          'dev',
+          {
+            text: 'dev',
+            class: [ 'release', ],
+          },
           {
             text: {
               'zh-CN': '数学',
               en: 'Math',
-            }
+            },
+            class: [ 'subject', ],
           },
         ])
       },
