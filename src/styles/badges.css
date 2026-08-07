@@ -18,3 +18,57 @@
   font-weight: 600;
   line-height: 1.25;
 }
+
+.badge.release {
+  color: var(--release-color);
+  border-color: color-mix(in oklab, var(--release-color) 55%, transparent);
+  background-color: color-mix(in oklab, var(--release-color) 12%, transparent);
+}
+
+.badge.release.blank {
+  --release-color: var(--color-gray-700);
+}
+
+.badge.release.dev {
+  --release-color: var(--color-red-700);
+}
+
+.badge.release.alpha {
+  --release-color: var(--color-orange-700);
+}
+
+.badge.release.beta {
+  --release-color: var(--color-amber-700);
+}
+
+.badge.release.rc {
+  --release-color: var(--color-blue-700);
+}
+
+.badge.release.stable {
+  --release-color: var(--color-green-700);
+}
+
+:root[data-theme='dark'] .badge.release.blank {
+  --release-color: var(--color-gray-300);
+}
+
+:root[data-theme='dark'] .badge.release.dev {
+  --release-color: var(--color-red-300);
+}
+
+:root[data-theme='dark'] .badge.release.alpha {
+  --release-color: var(--color-orange-300);
+}
+
+:root[data-theme='dark'] .badge.release.beta {
+  --release-color: var(--color-amber-300);
+}
+
+:root[data-theme='dark'] .badge.release.rc {
+  --release-color: var(--color-blue-300);
+}
+
+:root[data-theme='dark'] .badge.release.stable {
+  --release-color: var(--color-green-300);
+}
