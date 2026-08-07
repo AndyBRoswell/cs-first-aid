@@ -1,6 +1,6 @@
 {
   "name": "cs-first-aid",
-  "version": "0.0.0",
+  "version": "0.0.0.0",
   "description": "A Vital Guide for CSE Students",
   "type": "module",
   "main": "index.js",
