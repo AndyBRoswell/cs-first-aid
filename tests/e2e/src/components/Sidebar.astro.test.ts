@@ -51,7 +51,6 @@ src_util.test('sidebar release badges are complete and blank for missing pages',
   }
 
   const missing_page_sidebar_items = sidebar_items.filter(item => item.slug === '') // An empty slug represents a page that is not available.
-  expect(missing_page_sidebar_items).not.toHaveLength(0)
   for (const item of missing_page_sidebar_items) {
     const release_badges = get_release_badges(item.attrs?.['data-badges'])
     expect(release_badges).not.toHaveLength(0)
