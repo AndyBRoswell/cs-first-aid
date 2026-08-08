@@ -1,4 +1,5 @@
 // Created by GPT-5.6 Terra Max. Revised by AndyBRoswell.
+
 import { expect } from '@playwright/test'
 import type { Meta } from '@/components/badges.ts'
 import { locales, sidebar } from '@/config/starlight.ts'
