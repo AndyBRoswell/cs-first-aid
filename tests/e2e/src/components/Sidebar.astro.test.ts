@@ -76,5 +76,5 @@ src_util.test('sidebar release badges are complete and blank for missing pages',
     ).not.toHaveCount(0)
   }
 
-  expect(badgeable_sidebar_item_count).toBeGreaterThan(0) // Guards against a sidebar markup change causing a false pass.
+  expect(badgeable_sidebar_item_count).toBeGreaterThan(0) // Guards against a sidebar markup change [by Starlight] causing a false pass.
 })
