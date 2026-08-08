@@ -42,38 +42,44 @@ function expect_release_badge_supports_all_languages(release_badge: Release_Badg
 }
 
 src_util.test('sidebar release badges are complete and blank for missing pages', { tag: '@Sidebar' }, async ({ page }) => {
-  expect(site_languages).not.toHaveLength(0) // Prevents a vacuous language-support assertion.
+  await src_util.test.step('validate release badge configuration', async () => {
+    expect(site_languages).not.toHaveLength(0) // Prevents a vacuous language-support assertion.
 
-  const configured_release_badges = sidebar_items.flatMap(item => get_release_badges(item.attrs?.['data-badges'])) // Covers every configured badge, including nested entries.
-  expect(configured_release_badges).not.toHaveLength(0)
-  for (const release_badge of configured_release_badges) {
-    expect_release_badge_supports_all_languages(release_badge)
-  }
+    const configured_release_badges = sidebar_items.flatMap(item => get_release_badges(item.attrs?.['data-badges'])) // Covers every configured badge, including nested entries.
+    expect(configured_release_badges).not.toHaveLength(0)
+    for (const release_badge of configured_release_badges) {
+      expect_release_badge_supports_all_languages(release_badge)
+    }
+  })
 
-  const missing_page_sidebar_items = sidebar_items.filter(item => item.slug === '') // An empty slug represents a page that is not available.
-  for (const item of missing_page_sidebar_items) {
-    const release_badges = get_release_badges(item.attrs?.['data-badges'])
-    expect(release_badges).not.toHaveLength(0)
-    for (const release_badge of release_badges) {
-      const text = get_localized_release_text(release_badge)
-      for (const language of site_languages) {
-        expect(text[language]).toBe('blank')
+  await src_util.test.step('validate missing page release badges', async () => {
+    const missing_page_sidebar_items = sidebar_items.filter(item => item.slug === '') // An empty slug represents a page that is not available.
+    for (const item of missing_page_sidebar_items) {
+      const release_badges = get_release_badges(item.attrs?.['data-badges'])
+      expect(release_badges).not.toHaveLength(0)
+      for (const release_badge of release_badges) {
+        const text = get_localized_release_text(release_badge)
+        for (const language of site_languages) {
+          expect(text[language]).toBe('blank')
+        }
       }
     }
-  }
+  })
 
-  await page.goto(`${util.test_server}/`) // Confirms the configured badges are rendered in the sidebar.
-  const badgeable_sidebar_items = page.locator('nav.sidebar li:has(> a)') // Direct-link entries are eligible for badges.
-  const badgeable_sidebar_item_count = await badgeable_sidebar_items.count()
+  await src_util.test.step('verify release badges render in the sidebar', async () => {
+    await page.goto(`${util.test_server}/`) // Confirms the configured badges are rendered in the sidebar.
+    const badgeable_sidebar_items = page.locator('nav.sidebar li:has(> a)') // Direct-link entries are eligible for badges.
+    const badgeable_sidebar_item_count = await badgeable_sidebar_items.count()
 
-  for (let index = 0; index < badgeable_sidebar_item_count; index++) {
-    const badge_link = badgeable_sidebar_items.nth(index).locator(':scope > a')
-    await expect(badge_link).toHaveAttribute('data-badges', /\S/) // Ensures badge metadata exists before rendering.
-    await expect(
-      badge_link.locator('.badge.release'),
-      `Sidebar item #${index} needs a release badge.`,
-    ).not.toHaveCount(0)
-  }
+    for (let index = 0; index < badgeable_sidebar_item_count; index++) {
+      const badge_link = badgeable_sidebar_items.nth(index).locator(':scope > a')
+      await expect(badge_link).toHaveAttribute('data-badges', /\S/) // Ensures badge metadata exists before rendering.
+      await expect(
+        badge_link.locator('.badge.release'),
+        `Sidebar item #${index} needs a release badge.`,
+      ).not.toHaveCount(0)
+    }
 
-  expect(badgeable_sidebar_item_count).toBeGreaterThan(0) // Guards against a sidebar markup change [by Starlight] causing a false pass.
+    expect(badgeable_sidebar_item_count).toBeGreaterThan(0) // Guards against a sidebar markup change [by Starlight] causing a false pass.
+  })
 })
