@@ -2,7 +2,7 @@ import { test, expect } from 'vitest';
 
 import * as CSL_data from '@/types/CSL_data.ts'
 
-test('src/types/CSL_data.ts:is_ISBN', { tags: [ 'ISBN' ] }, () => { // // Created by Gemini 3.1 Pro in Web App. Revised by AndyBRoswell.
+test('src/types/CSL_data.ts:is_ISBN', { tags: [ 'ISBN' ] }, () => { // // Created by Gemini 3.1 Pro [web]. Revised by AndyBRoswell.
   expect(CSL_data.is_ISBN('0-13-110362-8')).toBe(true) // C Programming Language, 带连字符
   expect(CSL_data.is_ISBN('0131103628')).toBe(true)    // 纯数字
   expect(CSL_data.is_ISBN('0 13 110362 8')).toBe(true) // 带空格
@@ -26,7 +26,7 @@ test('src/types/CSL_data.ts:is_ISBN', { tags: [ 'ISBN' ] }, () => { // // Create
   expect(CSL_data.is_ISBN('978-0-13-110362-X')).toBe(false)// ISBN-13 不能以 X 结尾
 })
 
-test('src/types/CSL_data.ts:is_ISSN', { tags: [ 'ISSN' ] }, () => { // Created by Gemini 3.1 Pro in Web App. Revised by AndyBRoswell.
+test('src/types/CSL_data.ts:is_ISSN', { tags: [ 'ISSN' ] }, () => { // Created by Gemini 3.1 Pro [web]. Revised by AndyBRoswell.
   expect(CSL_data.is_ISSN('2049-3630'))
   expect(CSL_data.is_ISSN('ISSN 2049-3630'))
   expect(CSL_data.is_ISSN('0378-5955'))
