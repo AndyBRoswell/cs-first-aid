@@ -16,7 +16,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -31,7 +34,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -46,7 +52,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -61,7 +70,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -76,7 +88,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -91,7 +106,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -106,7 +124,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -121,7 +142,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -136,7 +160,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -151,7 +178,10 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
