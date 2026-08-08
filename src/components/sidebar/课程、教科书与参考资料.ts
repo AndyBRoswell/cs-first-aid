@@ -16,7 +16,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'dev',
+            text: {
+              'zh-CN': 'dev',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -31,7 +34,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'dev',
+            text: {
+              'zh-CN': 'dev',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
           {
@@ -53,7 +59,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'dev',
+            text: {
+              'zh-CN': 'dev',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
           {
@@ -81,7 +90,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'blank',
+                text: {
+                  'zh-CN': 'blank',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
             ])
@@ -96,7 +108,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -118,7 +133,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -148,7 +166,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'blank',
+                text: {
+                  'zh-CN': 'blank',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
             ])
@@ -163,7 +184,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'blank',
+                text: {
+                  'zh-CN': 'blank',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
             ])
@@ -178,7 +202,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'blank',
+                text: {
+                  'zh-CN': 'blank',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
             ])
@@ -193,7 +220,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'blank',
+                text: {
+                  'zh-CN': 'blank',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
             ])
@@ -216,7 +246,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'blank',
+                text: {
+                  'zh-CN': 'blank',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
             ])
@@ -231,7 +264,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -253,7 +289,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -275,7 +314,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -297,7 +339,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -319,7 +364,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -341,7 +389,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -365,7 +416,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -380,7 +434,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -395,7 +452,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -410,7 +470,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -431,7 +494,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'blank',
+                text: {
+                  'zh-CN': 'blank',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
             ])
@@ -446,7 +512,10 @@ export const Courses_Textbooks_and_References = {
           attrs: {
             'data-badges': badges.to_HTML_attr([
               {
-                text: 'dev',
+                text: {
+                  'zh-CN': 'dev',
+                  en: 'blank',
+                },
                 class: [ 'release', ],
               },
               {
@@ -470,7 +539,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -485,7 +557,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -500,7 +575,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -515,7 +593,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -530,7 +611,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -545,7 +629,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -560,7 +647,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -575,7 +665,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -590,7 +683,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -605,7 +701,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -620,7 +719,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -635,7 +737,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -650,7 +755,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -665,7 +773,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -680,7 +791,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -695,7 +809,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -710,7 +827,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -725,7 +845,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -740,7 +863,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -755,7 +881,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -770,7 +899,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -785,7 +917,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -800,7 +935,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -815,7 +953,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -830,7 +971,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -845,7 +989,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -860,7 +1007,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -875,7 +1025,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -890,7 +1043,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -905,7 +1061,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -920,7 +1079,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -935,7 +1097,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -950,7 +1115,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -965,7 +1133,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -980,7 +1151,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -995,7 +1169,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'dev',
+            text: {
+              'zh-CN': 'dev',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
           {
@@ -1017,7 +1194,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'dev',
+            text: {
+              'zh-CN': 'dev',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
           {
@@ -1039,7 +1219,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'dev',
+            text: {
+              'zh-CN': 'dev',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
           {
@@ -1061,7 +1244,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -1076,7 +1262,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'dev',
+            text: {
+              'zh-CN': 'dev',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
           {
@@ -1098,7 +1287,10 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
