@@ -1,0 +1,31 @@
+import type { StarlightUserConfig } from '@astrojs/starlight/types'
+import { Preface } from '@/components/sidebar/前言.ts'
+import { Tools_and_Ideas_to_Improve_Efficiency } from '@/components/sidebar/提升效率的工具与思想.ts'
+import { Courses_Textbooks_and_References } from '@/components/sidebar/课程、教科书与参考资料.ts'
+import { Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible } from '@/components/sidebar/需要尽早开始或完成的事项.ts'
+import { Future_Trends } from '@/components/sidebar/未来趋势.ts'
+import { FAQ } from '@/components/sidebar/常见问题.ts'
+import { Recommended_Reading_Materials } from '@/components/sidebar/推荐读物.ts'
+import { Epilog } from '@/components/sidebar/后记.ts'
+
+export const locales = {
+  root: {
+    label: '简体中文',
+    lang: 'zh-CN',
+  },
+  en: {
+    label: 'English',
+    lang: 'en',
+  },
+} satisfies NonNullable<StarlightUserConfig['locales']>
+
+export const sidebar = [
+  Preface,
+  Tools_and_Ideas_to_Improve_Efficiency,
+  Courses_Textbooks_and_References,
+  Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible,
+  Future_Trends,
+  FAQ,
+  Recommended_Reading_Materials,
+  Epilog,
+] satisfies NonNullable<StarlightUserConfig['sidebar']>
