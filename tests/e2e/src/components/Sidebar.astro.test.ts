@@ -29,7 +29,7 @@ function get_release_badges(serialized_badges: string | undefined): Release_Badg
 
 function get_localized_release_text(release_badge: Release_Badge) { // Narrows release text to its per-language status map.
   if (typeof release_badge.text !== 'object' || release_badge.text === null) {
-    throw new Error('A release badge must provide multilingual text.')
+    throw new Error('A release badge must provide multilingual text to show the current release stage of the corresponding page in every suppoerted language.')
   }
   return release_badge.text
 }
