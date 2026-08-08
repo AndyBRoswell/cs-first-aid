@@ -1,4 +1,4 @@
-// Created by GPT-5.6 Terra Max. Revised by AndyBRoswell.
+// Created by GPT-5.6 Terra Max [codex]. Revised by AndyBRoswell.
 
 import type { StarlightUserConfig } from '@astrojs/starlight/types'
 import { Preface } from '@/components/sidebar/前言.ts'

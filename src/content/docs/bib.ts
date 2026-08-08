@@ -32,7 +32,7 @@ export type Mangled_References = { flattened: typeof citation_js.Cite, range: Re
 export type Printed_Bibliography = { [key: Serialized_Scope_Name]: string }
 
 // TODO: Test case for loop detection
-// Created by Gemini 3.1 Pro Extended. Revised by AndyBRoswell.
+// Created by Gemini 3.1 Pro Extended [web]. Revised by AndyBRoswell.
 export function mangle_references(references: Scoped_References): Mangled_References { // flat and partition
   const ret: Mangled_References = {
     flattened: new citation_js.Cite(),
