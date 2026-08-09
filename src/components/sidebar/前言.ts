@@ -16,7 +16,10 @@ export const Preface = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -31,7 +34,10 @@ export const Preface = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -46,7 +52,10 @@ export const Preface = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -61,7 +70,10 @@ export const Preface = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -76,7 +88,10 @@ export const Preface = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -91,7 +106,10 @@ export const Preface = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])

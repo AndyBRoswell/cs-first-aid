@@ -16,7 +16,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -31,7 +34,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -46,7 +52,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -61,7 +70,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -76,7 +88,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -91,7 +106,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -106,7 +124,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -121,7 +142,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -136,7 +160,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -151,7 +178,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -166,7 +196,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -181,7 +214,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -196,7 +232,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -211,7 +250,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -226,7 +268,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -241,7 +286,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
@@ -256,7 +304,10 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       attrs: {
         'data-badges': badges.to_HTML_attr([
           {
-            text: 'blank',
+            text: {
+              'zh-CN': 'blank',
+              en: 'blank',
+            },
             class: [ 'release', ],
           },
         ])
