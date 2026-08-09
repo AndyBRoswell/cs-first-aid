@@ -34,6 +34,8 @@ export type Entry = { id: ID_t[], material: Material, }
 
 export type Material_Filter = (current_material: Material) => unknown
 
+export type Tag = string | { text: string, class: Tag[] } // It seems this is a little complex. Not used yet.
+
 export type Link = string | {
   link: string
   license?: string

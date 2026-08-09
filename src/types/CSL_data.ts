@@ -1,4 +1,4 @@
-// Created by Claude Sonnet 4.6 (Extended Thinking). Revised by AndyBRoswell.
+// Created by Claude Sonnet 4.6 Extended Thinking [web]. Revised by AndyBRoswell.
 // Schema: https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json
 
 import * as Data_Type from "@/types/data.ts";
@@ -208,7 +208,7 @@ export function ensure_ISBN(str: string): ISBN {
   return str
 }
 
-export function is_ISBN(str: string): str is ISBN { // Created by Gemini 3.1 Pro in Web App. Revised by AndyBRoswell.
+export function is_ISBN(str: string): str is ISBN { // Created by Gemini 3.1 Pro [Web]. Revised by AndyBRoswell.
   const sanitized_str = str.replace(/[-\s]/g, '').toUpperCase()
   if (/^(?:97[89])?\d{9}[\dX]$/.test(sanitized_str) === false) { return false }
   let s: number = 0
@@ -233,7 +233,7 @@ export function ensure_ISSN(str: string): ISSN {
   return str
 }
 
-export function is_ISSN(issn: string): issn is ISSN { // Created by Gemini 3.1 Pro in Web App. Revised by AndyBRoswell.
+export function is_ISSN(issn: string): issn is ISSN { // Created by Gemini 3.1 Pro [Web]. Revised by AndyBRoswell.
   const regex = /^(?:ISSN\s)?(\d{4})-(\d{3}[\dX])$/i
   const match = issn.match(regex)
   if (!match) { return false }
