@@ -2,7 +2,7 @@ export type Meta_Item = Meta_Item_primitive | Meta_Item_object
 export type Meta_Item_primitive = string
 export type Mandatory_Multilingual_Text = {
   'zh-CN': string // root language
-  'en': string    // for HTML classes
+  'en': string
 }
 export type Meta_Item_object = {
   text: string | { [key: Intl.UnicodeBCP47LocaleIdentifier]: string } & Mandatory_Multilingual_Text
