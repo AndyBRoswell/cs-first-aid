@@ -46,7 +46,6 @@ export function attach(root: ParentNode = document) {
       if (badge_class !== undefined) {
         badge.classList.add(...badge_class)
         if (badge_class.includes('release')) { badge.classList.add(badge_text) }
-        if (badge_class.includes('subject')) { badge.classList.add(((meta_item as Meta_Item_object)['text'] as Mandatory_Multilingual_Text)['en']) }
       }
       badges.append(badge)
     }
