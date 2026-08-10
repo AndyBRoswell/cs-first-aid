@@ -116,6 +116,15 @@ src_util.test('sidebar release badges are complete, and blank release badges for
     }
   })
 
+  await src_util.test.step('verify subject badges render with generated classes', async () => {
+    for (const class_name of [ 'Math', 'CS', ]) {
+      await expect(
+        page.locator('nav.sidebar .badge.subject.' + class_name),
+        'The sidebar needs a rendered subject badge with the generated class "' + class_name + '".',
+      ).not.toHaveCount(0)
+    }
+  })
+
   await src_util.test.step('verify root-only pages render blank release badges in every foreign locale', async () => {
     expect(foreign_locales).not.toHaveLength(0) // Prevents a vacuous assertion when the site has no foreign locale.
     expect(root_locale_only_release_badges).not.toHaveLength(0) // Guards against losing the root-only-page coverage in this test.
