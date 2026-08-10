@@ -4,6 +4,8 @@ import { beforeEach, describe, expect, test, vi } from 'vitest'
 
 type Subject_Module = typeof import('@/data/subjects.ts')
 type Input = Parameters<Subject_Module['add']>[0]
+type Item = ReturnType<Subject_Module['add']>
+type Expanded_Name = Input['names']['en']['full']
 type Name_List = readonly [canonical: string, ...aliases: string[]]
 type Localized_Name_Lists = { full: Name_List, short: Name_List }
 type Fixture = {
@@ -15,12 +17,12 @@ type Fixture = {
 }
 
 // The first entry is canonical; later entries are aliases.
-function expand([ canonical, ...aliases ]: Name_List) {
+function expand([ canonical, ...aliases ]: Name_List): Expanded_Name {
   return { canonical, all: [ canonical, ...aliases, ] }
 }
 
 function to_input({ names, emoji }: Fixture): Input {
-  const localized_names = Object.fromEntries(Object.entries(names).map(([ language, value ]) => [
+  const localized_names: Input['names'] = Object.fromEntries(Object.entries(names).map(([ language, value ]) => [
     language,
     { full: expand(value.full), short: expand(value.short), },
   ])) as Input['names']
@@ -65,8 +67,8 @@ describe('src/data/subjects.ts', () => {
   test('add assigns consecutive IDs and get retrieves the same subjects', () => {
     expect(subjects.get(0).id).toBe(0)
 
-    const first = subjects.add(to_input(linguistics))
-    const second = subjects.add(to_input(philosophy))
+    const first: Item = subjects.add(to_input(linguistics))
+    const second: Item = subjects.add(to_input(philosophy))
 
     expect(second.id).toBe(first.id + 1)
     expect(subjects.get(first.id)).toBe(first)
@@ -79,7 +81,7 @@ describe('src/data/subjects.ts', () => {
   })
 
   test('add_many assigns consecutive IDs in input order', () => {
-    const added = subjects.add_many([ to_input(linguistics), to_input(philosophy), to_input(astronomy), ])
+    const added: Item[] = subjects.add_many([ to_input(linguistics), to_input(philosophy), to_input(astronomy), ])
 
     expect(added.map(subject => subject.id)).toEqual([
       added[0]!.id,
@@ -90,8 +92,8 @@ describe('src/data/subjects.ts', () => {
   })
 
   test('add_many does not add a partial batch when one input is invalid', () => {
-    const previous = subjects.add(to_input(astronomy))
-    const invalid = to_input(philosophy)
+    const previous: Item = subjects.add(to_input(astronomy))
+    const invalid: Input = to_input(philosophy)
     invalid.names.en.full.canonical = ' '
 
     expect(() => subjects.add_many([ to_input(linguistics), invalid, ])).toThrow(
@@ -102,10 +104,12 @@ describe('src/data/subjects.ts', () => {
   })
 
   test('find searches canonical and alias forms of full and short names in every locale', () => {
-    const added = subjects.add(to_input(linguistics))
+    const added: Item = subjects.add(to_input(linguistics))
+    const locale_entries: [string, Localized_Name_Lists][] = Object.entries(linguistics.names)
 
-    for (const [ language, names ] of Object.entries(linguistics.names)) {
-      for (const name of [ ...names.full, ...names.short, ]) {
+    for (const [ language, names ] of locale_entries) {
+      const names_to_find: readonly string[] = [ ...names.full, ...names.short, ]
+      for (const name of names_to_find) {
         expect(subjects.find(name, language)).toBe(added)
       }
     }
@@ -113,7 +117,7 @@ describe('src/data/subjects.ts', () => {
   })
 
   test('find ignores case but distinguishes accents', () => {
-    const added = subjects.add(to_input(linguistics))
+    const added: Item = subjects.add(to_input(linguistics))
 
     expect(subjects.find('lInGuIsTiCs', 'en')).toBe(added)
     expect(subjects.find('éTUDES LINGUISTIQUES', 'fr')).toBe(added)
@@ -121,7 +125,7 @@ describe('src/data/subjects.ts', () => {
   })
 
   test('find uses the optional language to disambiguate matches', () => {
-    const [ chinese_match, english_match, ] = subjects.add_many([
+    const [ chinese_match, english_match, ]: Item[] = subjects.add_many([
       to_input({
         names: {
           'zh-CN': { full: [ '符号学甲', ], short: [ 'Shared label', ], },
@@ -144,13 +148,14 @@ describe('src/data/subjects.ts', () => {
   })
 
   test('add rejects empty canonical names and canonical names omitted from all', () => {
-    const empty = to_input(linguistics)
+    const empty: Input = to_input(linguistics)
     empty.names.en.full.canonical = ''
 
-    const omitted = to_input(linguistics)
+    const omitted: Input = to_input(linguistics)
     omitted.names.en.short.all = omitted.names.en.short.all.slice(1)
 
-    for (const invalid of [ empty, omitted, ]) {
+    const invalid_inputs: Input[] = [ empty, omitted, ]
+    for (const invalid of invalid_inputs) {
       expect(() => subjects.add(invalid)).toThrow(
         'Canonical subject names must be non-empty and included in all names.',
       )
@@ -158,7 +163,7 @@ describe('src/data/subjects.ts', () => {
   })
 
   test('get_classes returns the canonical English short name', () => {
-    const subject = subjects.add(to_input(linguistics))
+    const subject: Item = subjects.add(to_input(linguistics))
 
     expect(subjects.get_classes(subject)).toEqual([ 'Ling', ])
   })
