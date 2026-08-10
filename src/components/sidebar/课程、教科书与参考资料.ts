@@ -1,5 +1,11 @@
 import type { SidebarItem } from "@/types/starlight.ts";
 import * as badges from '../badges.ts'
+import * as subject_badges from '../subject_badges.ts'
+
+const subject_badge_meta = {
+  Math: subject_badges.find('Math', 'en'),
+  CS: subject_badges.find('CS', 'en'),
+}
 
 export const Courses_Textbooks_and_References = {
   label: '课程、教科书与参考资料',
@@ -40,13 +46,7 @@ export const Courses_Textbooks_and_References = {
             },
             class: [ 'release', ],
           },
-          {
-            text: {
-              'zh-CN': '数学',
-              en: 'Math',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.Math,
         ])
       },
     },
@@ -65,13 +65,7 @@ export const Courses_Textbooks_and_References = {
             },
             class: [ 'release', ],
           },
-          {
-            text: {
-              'zh-CN': '数学',
-              en: 'Math',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.Math,
         ])
       },
     },
@@ -114,13 +108,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -139,13 +127,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -270,13 +252,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -295,13 +271,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -320,13 +290,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -345,13 +309,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -370,13 +328,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -395,13 +347,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -518,13 +464,7 @@ export const Courses_Textbooks_and_References = {
                 },
                 class: [ 'release', ],
               },
-              {
-                text: {
-                  'zh-CN': '计算机',
-                  en: 'CS',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.CS,
             ])
           },
         },
@@ -1175,13 +1115,7 @@ export const Courses_Textbooks_and_References = {
             },
             class: [ 'release', ],
           },
-          {
-            text: {
-              'zh-CN': '计算机',
-              en: 'CS',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.CS,
         ])
       },
     },
@@ -1200,13 +1134,7 @@ export const Courses_Textbooks_and_References = {
             },
             class: [ 'release', ],
           },
-          {
-            text: {
-              'zh-CN': '计算机',
-              en: 'CS',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.CS,
         ])
       },
     },
@@ -1225,13 +1153,7 @@ export const Courses_Textbooks_and_References = {
             },
             class: [ 'release', ],
           },
-          {
-            text: {
-              'zh-CN': '计算机',
-              en: 'CS',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.CS,
         ])
       },
     },
@@ -1268,13 +1190,7 @@ export const Courses_Textbooks_and_References = {
             },
             class: [ 'release', ],
           },
-          {
-            text: {
-              'zh-CN': '计算机',
-              en: 'CS',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.CS,
         ])
       },
     },
