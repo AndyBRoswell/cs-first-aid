@@ -10,17 +10,17 @@ type Localized_Names = {
   'zh-CN': Names
   en: Names
 }
-type Item = {
+export type Subject = {
   id: number
   names: Localized_Names
   emoji?: Partial<Name>
 }
-type Input = Omit<Item, 'id'>
+type Input = Omit<Subject, 'id'>
 
 // IDs are zero-based. Keep additions append-only so existing IDs remain stable.
-const items: Item[] = []
+const items: Subject[] = []
 
-function create(input: Input, id: number): Item {
+function create(input: Input, id: number): Subject {
   const names: Names[] = Object.values(input.names)
   const has_invalid_name: boolean = names.length === 0 || names.some(({ full, short }) =>
     [ full, short, ].some(({ canonical, all }) => canonical.trim().length === 0 || !all.includes(canonical))
@@ -30,29 +30,29 @@ function create(input: Input, id: number): Item {
   return { id, ...input }
 }
 
-export function add(input: Input): Item {
-  const item: Item = create(input, items.length)
+export function add(input: Input): Subject {
+  const item: Subject = create(input, items.length)
   items.push(item)
   return item
 }
 
-export function add_many(inputs: readonly Input[]): Item[] {
-  const additions: Item[] = inputs.map((input, index) => create(input, items.length + index))
+export function add_many(inputs: readonly Input[]): Subject[] {
+  const additions: Subject[] = inputs.map((input, index) => create(input, items.length + index))
   items.push(...additions)
   return additions
 }
 
-export function get(id: number): Item {
-  const item: Item | undefined = items[id]
+export function get(id: number): Subject {
+  const item: Subject | undefined = items[id]
   if (item === undefined) { throw new Error('Failed to find a subject with ID ' + id + '.') }
   return item
 }
 
-export function get_classes(subject: Item): string[] { return [ subject.names.en.short.canonical, ] }
+export function get_classes(subject: Subject): string[] { return [ subject.names.en.short.canonical, ] }
 
 /** Finds one exact match among canonical and other full and short names in every or the designated locale. */
-export function find(name: string, language?: Intl.UnicodeBCP47LocaleIdentifier): Item {
-  const matches: Item[] = items.filter(item => Object.entries(item.names).some(([ current_language, { full, short } ]) => {
+export function find(name: string, language?: Intl.UnicodeBCP47LocaleIdentifier): Subject {
+  const matches: Subject[] = items.filter(item => Object.entries(item.names).some(([ current_language, { full, short } ]) => {
     if (language !== undefined && current_language !== language) { return false }
     return full.all.some(value => util.ieq(value, name, current_language))
       || short.all.some(value => util.ieq(value, name, current_language))
