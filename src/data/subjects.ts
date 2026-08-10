@@ -21,8 +21,8 @@ type Input = Omit<Item, 'id'>
 const items: Item[] = []
 
 function create(input: Input, id: number): Item {
-  const names = Object.values(input.names)
-  const has_invalid_name = names.length === 0 || names.some(({ full, short }) =>
+  const names: Names[] = Object.values(input.names)
+  const has_invalid_name: boolean = names.length === 0 || names.some(({ full, short }) =>
     [ full, short, ].some(({ canonical, all }) => canonical.trim().length === 0 || !all.includes(canonical))
   )
   if (has_invalid_name) { throw new Error('Canonical subject names must be non-empty and included in all names.') }
@@ -31,19 +31,19 @@ function create(input: Input, id: number): Item {
 }
 
 export function add(input: Input): Item {
-  const item = create(input, items.length)
+  const item: Item = create(input, items.length)
   items.push(item)
   return item
 }
 
 export function add_many(inputs: readonly Input[]): Item[] {
-  const additions = inputs.map((input, index) => create(input, items.length + index))
+  const additions: Item[] = inputs.map((input, index) => create(input, items.length + index))
   items.push(...additions)
   return additions
 }
 
 export function get(id: number): Item {
-  const item = items[id]
+  const item: Item | undefined = items[id]
   if (item === undefined) { throw new Error('Failed to find a subject with ID ' + id + '.') }
   return item
 }
@@ -52,7 +52,7 @@ export function get_classes(subject: Item): string[] { return [ subject.names.en
 
 /** Finds one exact match among canonical and other full and short names in every or the designated locale. */
 export function find(name: string, language?: Intl.UnicodeBCP47LocaleIdentifier): Item {
-  const matches = items.filter(item => Object.entries(item.names).some(([ current_language, { full, short } ]) => {
+  const matches: Item[] = items.filter(item => Object.entries(item.names).some(([ current_language, { full, short } ]) => {
     if (language !== undefined && current_language !== language) { return false }
     return full.all.some(value => util.ieq(value, name, current_language))
       || short.all.some(value => util.ieq(value, name, current_language))
