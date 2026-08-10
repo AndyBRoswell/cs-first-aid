@@ -1,3 +1,5 @@
+// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+
 import * as badges from './badges.ts'
 import * as subject_catalog from '@/data/subjects.ts'
 
