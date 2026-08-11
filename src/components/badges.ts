@@ -1,10 +1,12 @@
-type Meta_Item = Meta_Item_primitive | Meta_Item_object
-type Meta_Item_primitive = string
-type Mandatory_Multilingual_Text = {
+import type { Localized as Localized_Release_Stages } from './release_stages.ts'
+
+export type Meta_Item = Meta_Item_primitive | Meta_Item_object
+export type Meta_Item_primitive = string
+export type Mandatory_Multilingual_Text = {
   'zh-CN': string // root language
-  'en': string    // for HTML classes
+  'en': string
 }
-type Meta_Item_object = {
+export type Meta_Item_object = {
   text: string | { [key: Intl.UnicodeBCP47LocaleIdentifier]: string } & Mandatory_Multilingual_Text
   class?: string[]
 }
@@ -15,11 +17,33 @@ export function to_HTML_attr(badges: Meta) { return JSON.stringify(badges) }
 export function attach(root: ParentNode = document) {
   let lang = document.documentElement.lang
   console.log(`lang: ${lang}`)
-  root.querySelectorAll<HTMLElement>('[data-badges]').forEach(element => {
+  root.querySelectorAll<HTMLElement>('[data-release-stage], [data-badges]').forEach(element => {
     if (element.hasAttribute('data-badges_rendered')) { return }
-    const meta_items = JSON.parse(element.getAttribute('data-badges')!) as Meta
     const badges = document.createElement('span')
     badges.classList.add('badges')
+
+    const serialized_release_stages = element.getAttribute('data-release-stage')
+    if (serialized_release_stages !== null) {
+      const release_stages = JSON.parse(serialized_release_stages) as Localized_Release_Stages
+      const release_stage = release_stages[lang]
+      if (release_stage === undefined) {
+        const sidebar_item: { label: string, href: string | null } = {
+          label: element.getAttribute('aria-label') ?? element.textContent?.replace(/\s+/g, ' ').trim() ?? '',
+          href: element.getAttribute('href'),
+        }
+        throw new Error(
+          `Release stage is undefined for language ${JSON.stringify(lang)} on sidebar item ${JSON.stringify(sidebar_item)}. `
+          + `data-release-stage=${serialized_release_stages}`,
+        )
+      }
+      const release_badge = document.createElement('span')
+      release_badge.textContent = release_stage
+      release_badge.classList.add('badge', 'release', release_stage)
+      badges.append(release_badge)
+    }
+
+    const serialized_badges = element.getAttribute('data-badges')
+    const meta_items = serialized_badges === null ? [] : JSON.parse(serialized_badges) as Meta
     for (const meta_item of meta_items) {
       const badge = document.createElement('span')
       let badge_text: string | undefined
@@ -45,8 +69,6 @@ export function attach(root: ParentNode = document) {
       badge.classList.add('badge')
       if (badge_class !== undefined) {
         badge.classList.add(...badge_class)
-        if (badge_class.includes('release')) { badge.classList.add(badge_text) }
-        if (badge_class.includes('subject')) { badge.classList.add(((meta_item as Meta_Item_object)['text'] as Mandatory_Multilingual_Text)['en']) }
       }
       badges.append(badge)
     }

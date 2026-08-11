@@ -1,5 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
-import * as badges from '../badges.ts'
+import * as release_stages from '../release_stages.ts'
 
 export const Tools_and_Ideas_to_Improve_Efficiency = {
   label: '提升效率的工具与思想',
@@ -14,15 +14,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -32,15 +24,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -50,15 +34,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -68,15 +44,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -86,15 +54,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -104,15 +64,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -122,15 +74,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -140,15 +84,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -158,15 +94,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -176,15 +104,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -194,15 +114,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -212,15 +124,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -230,15 +134,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -248,15 +144,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -266,15 +154,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -284,15 +164,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -302,15 +174,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
   ],
