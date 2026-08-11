@@ -1,5 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
-import * as badges from '../badges.ts'
+import * as release_stages from '../release_stages.ts'
 
 export const Recommended_Reading_Materials = {
   label: '推荐读物',
@@ -8,14 +8,6 @@ export const Recommended_Reading_Materials = {
   },
   slug: '',
   attrs: {
-    'data-badges': badges.to_HTML_attr([
-      {
-        text: {
-          'zh-CN': 'blank',
-          en: 'blank',
-        },
-        class: [ 'release', ],
-      },
-    ])
+    'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
   },
 } satisfies SidebarItem

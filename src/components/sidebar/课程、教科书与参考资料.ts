@@ -1,5 +1,12 @@
 import type { SidebarItem } from "@/types/starlight.ts";
 import * as badges from '../badges.ts'
+import * as release_stages from '../release_stages.ts'
+import * as subject_badges from '../subject_badges.ts'
+
+const subject_badge_meta = {
+  Math: subject_badges.find('Math', 'en'),
+  CS: subject_badges.find('CS', 'en'),
+}
 
 export const Courses_Textbooks_and_References = {
   label: '课程、教科书与参考资料',
@@ -14,15 +21,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'dev',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', })
       },
     },
     {
@@ -32,21 +31,9 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/calculus',
       attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'dev',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-          {
-            text: {
-              'zh-CN': '数学',
-              en: 'Math',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.Math,
         ])
       },
     },
@@ -57,21 +44,9 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/mathematical-analysis',
       attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'dev',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-          {
-            text: {
-              'zh-CN': '数学',
-              en: 'Math',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.Math,
         ])
       },
     },
@@ -88,15 +63,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/linear-algebra',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -106,21 +73,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/linear-algebra/i',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -131,21 +86,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/linear-algebra/ii',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -164,15 +107,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -182,15 +117,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -200,15 +127,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -218,15 +137,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
       ],
@@ -244,15 +155,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -262,21 +165,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/mathematical-logic',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -287,21 +178,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/set-theory',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -312,21 +191,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/graph-theory',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -337,21 +204,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/abstract-algebra',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -362,21 +217,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/combinatorics',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -387,21 +230,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics/number-theory',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '数学',
-                  en: 'Math',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.Math,
             ])
           },
         },
@@ -414,15 +245,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -432,15 +255,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -450,15 +265,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -468,15 +275,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -492,15 +291,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/cpp-programming',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -510,21 +301,9 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/cpp-programming/i',
           attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'dev',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-              {
-                text: {
-                  'zh-CN': '计算机',
-                  en: 'CS',
-                },
-                class: [ 'subject', ],
-              },
+              subject_badge_meta.CS,
             ])
           },
         },
@@ -537,15 +316,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -555,15 +326,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -573,15 +336,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -591,15 +346,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -609,15 +356,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -627,15 +366,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -645,15 +376,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -663,15 +386,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -681,15 +396,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -699,15 +406,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -717,15 +416,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -735,15 +426,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -753,15 +436,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -771,15 +446,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -789,15 +456,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -807,15 +466,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -825,15 +476,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -843,15 +486,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -861,15 +496,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -879,15 +506,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -897,15 +516,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -915,15 +526,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -933,15 +536,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -951,15 +546,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -969,15 +556,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -987,15 +566,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1005,15 +576,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1023,15 +586,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1041,15 +596,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1059,15 +606,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1077,15 +616,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1095,15 +626,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1113,15 +636,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1131,15 +646,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1149,15 +656,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1167,21 +666,9 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/c-programming',
       attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'dev',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-          {
-            text: {
-              'zh-CN': '计算机',
-              en: 'CS',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.CS,
         ])
       },
     },
@@ -1192,21 +679,9 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/csharp-programming',
       attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'dev',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-          {
-            text: {
-              'zh-CN': '计算机',
-              en: 'CS',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.CS,
         ])
       },
     },
@@ -1217,21 +692,9 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/java-programming',
       attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'dev',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-          {
-            text: {
-              'zh-CN': '计算机',
-              en: 'CS',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.CS,
         ])
       },
     },
@@ -1242,15 +705,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -1260,21 +715,9 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/python-programming',
       attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'dev',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-          {
-            text: {
-              'zh-CN': '计算机',
-              en: 'CS',
-            },
-            class: [ 'subject', ],
-          },
+          subject_badge_meta.CS,
         ])
       },
     },
@@ -1285,15 +728,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
   ],

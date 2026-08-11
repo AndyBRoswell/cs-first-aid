@@ -34,8 +34,16 @@ export const linesep_stripper = /[\r\n]+/
 
 export const supported_locales: Intl.UnicodeBCP47LocaleIdentifier[] = [ 'en-US' ]
 export const collator = new Map<string, Intl.Collator>()
-for (const locale of supported_locales) { collator.set(locale, new Intl.Collator(locale, { sensitivity: 'base' })) }
+function get_collator(locale: string): Intl.Collator {
+  let current = collator.get(locale)
+  if (current === undefined) {
+    current = new Intl.Collator(locale, { usage: 'search', sensitivity: 'accent' })
+    collator.set(locale, current)
+  }
+  return current
+}
+for (const locale of supported_locales) { get_collator(locale) }
 export const default_locale: Intl.UnicodeBCP47LocaleIdentifier = 'en-US'
 export const default_collator = collator.get(default_locale)!
 
-export function ieq(a: string, b: string, locale: Intl.UnicodeBCP47LocaleIdentifier = default_locale): boolean { return collator.get(locale)!.compare(a, b) === 0 }
+export function ieq(a: string, b: string, locale: string = default_locale): boolean { return get_collator(locale).compare(a, b) === 0 }
