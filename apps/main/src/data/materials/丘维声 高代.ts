@@ -1,8 +1,8 @@
-import * as catalog from '@/data/materials/catalog.ts'
-import * as Data_Type from '@/types/data.ts'
-import * as CSL_Data from '@/types/CSL_data.ts'
+import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
+import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
+import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
 import * as _ from '@/libraries/lodash-es.ts'
-import * as util from '@/util.ts'
+import * as util from '../../../../../packages/common/util.ts'
 
 const books = [
   {

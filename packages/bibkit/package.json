@@ -1,0 +1,76 @@
+{
+  "name": "@cs-first-aid/bibkit",
+  "type": "module",
+  "version": "0.0.0",
+  "private": false,
+  "description": "",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    "./bib": {
+      "import": {
+        "types": "./dist/bib.d.mts",
+        "default": "./dist/bib.mjs"
+      },
+      "require": {
+        "types": "./dist/bib.d.cts",
+        "default": "./dist/bib.cjs"
+      }
+    },
+    "./catalog": {
+      "import": {
+        "types": "./dist/catalog.d.mts",
+        "default": "./dist/catalog.mjs"
+      },
+      "require": {
+        "types": "./dist/catalog.d.cts",
+        "default": "./dist/catalog.cjs"
+      }
+    },
+    "./CSL": {
+      "import": {
+        "types": "./dist/CSL.d.mts",
+        "default": "./dist/CSL.mjs"
+      },
+      "require": {
+        "types": "./dist/CSL.d.cts",
+        "default": "./dist/CSL.cjs"
+      }
+    },
+    "./types/data": {
+      "import": {
+        "types": "./dist/types/data.d.mts",
+        "default": "./dist/types/data.mjs"
+      },
+      "require": {
+        "types": "./dist/types/data.d.cts",
+        "default": "./dist/types/data.cjs"
+      }
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [],
+  "author": "AndyBRoswell",
+  "license": "MIT",
+  "dependencies": {
+    "@citation-js/core": "^0.8.2",
+    "@citation-js/plugin-csl": "^0.8.2",
+    "@citation-js/plugin-doi": "^0.8.2",
+    "@cs-first-aid/util": "workspace:*",
+    "fast-cartesian": "^9.0.1",
+    "node-html-parser": "^9.0.1",
+    "ohash": "^2.0.11",
+    "pino": "^10.3.1"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.8",
+    "tsdown": "^0.22.14",
+    "vitest": "^4.1.10"
+  }
+}

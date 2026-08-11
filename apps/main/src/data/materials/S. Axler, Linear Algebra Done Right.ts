@@ -1,5 +1,5 @@
-import * as catalog from './catalog.ts'
-import * as Data_Type from '@/types/data.ts'
+import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
+import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
 
 const items = [
   {

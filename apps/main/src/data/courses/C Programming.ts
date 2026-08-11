@@ -1,5 +1,5 @@
-import * as data_type from '@/types/data.ts'
-import * as catalog from '@/data/materials/catalog.ts'
+import * as data_type from '../../../../../packages/bibkit/src/types/data.ts'
+import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
 import '@/data/courses/import course materials.ts'
 
 export const info = {

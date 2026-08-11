@@ -1,6 +1,6 @@
 // Created by GPT-5.6 Sol Max [Codex]. Revised by AndyBRoswell.
 
-import * as util from '@/util.ts'
+import * as util from '../../../../packages/common/util.ts'
 
 type Name = { canonical: string, all: string[] }
 type Names = { full: Name, short: Name }

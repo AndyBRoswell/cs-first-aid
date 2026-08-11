@@ -1,5 +1,5 @@
-import * as CSL_Data from './CSL_data.ts'
-import type { Filter_Options } from "@/data/materials/catalog.ts";
+import * as CSL from '../CSL.ts'
+import type { Filter_Options } from "../catalog.ts";
 
 export type ID_primitive = string | number | bigint
 export type ID_object =
@@ -8,14 +8,14 @@ export type ID_object =
     | { unordered_author?: never, ordered_author?: string | string[], }
     )
   & {
-  title?: CSL_Data.Item['title']
-  subtitle?: CSL_Data.Custom['subtitle']
-  edition?: CSL_Data.Item['edition']
+  title?: CSL.Item['title']
+  subtitle?: CSL.Custom['subtitle']
+  edition?: CSL.Item['edition']
   date?: string | number
-  volume?: CSL_Data.Item['volume']
-  part?: CSL_Data.Item['part']
-  type?: CSL_Data.Item['type']
-  note?: CSL_Data.Item['note']
+  volume?: CSL.Item['volume']
+  part?: CSL.Item['part']
+  type?: CSL.Item['type']
+  note?: CSL.Item['note']
 }
 export const legal_keys_of_ID_object = [
   'unordered_author',
@@ -65,11 +65,11 @@ export type Course = {
 
 export type Non_Empty_Array<T> = [ T, ...T[] ]
 
-export type Material = CSL_Data.Item & { custom?: CSL_Data.Custom }
+export type Material = CSL.Item & { custom?: CSL.Custom }
 export type Book = Material & {
   type: 'book'
-  author: Non_Empty_Array<CSL_Data.Name_Variable>
+  author: Non_Empty_Array<CSL.Name_Variable>
   title: string
-  issued: CSL_Data.Date_Variable
+  issued: CSL.Date_Variable
 }
 export type Video = Material & { type: 'motion_picture' | 'broadcast' }
