@@ -1,9 +1,8 @@
 ---
-import type { ID_t, Scoped_ID_t, Material_Filter, Qualified_Material_Filter } from "../../../../packages/bibkit/src/types/data.ts"
-import type { Mangled_References } from "../../../../packages/bibkit/src/bib.ts";
-import * as bib from "../../../../packages/bibkit/src/bib.ts"
+import type { ID_t, Scoped_ID_t, Material_Filter, Qualified_Material_Filter } from "@cs-first-aid/bibkit/types/data"
+import * as bib from "@cs-first-aid/bibkit/bib"
 export interface Props {
-  mangled_references: Mangled_References
+  mangled_references: bib.Mangled_References
   cite_items: (ID_t | Scoped_ID_t | Material_Filter | Qualified_Material_Filter)[]
 }
 const { mangled_references, cite_items, } = Astro.props

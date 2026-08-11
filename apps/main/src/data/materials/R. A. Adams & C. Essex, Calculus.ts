@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,7 +16,7 @@ const items = [
       "publisher-place": 'Toronto, ON',
       issued: { "date-parts": [ [ 2021, 1, 4 ] ] },
       "number-of-pages": 1200,
-      ISBN: '9780135766781' as CSL_Data.ISBN,
+      ISBN: '9780135766781' as CSL.ISBN,
       language: 'en-CA',
       URL: 'https://www.pearson.com/en-ca/subject-catalog/p/calculus-a-complete-course/P200000002479/9780135766781',
       accessed: { "date-parts": [ [ 2026, 4, 2 ], ], },
@@ -25,11 +25,11 @@ const items = [
         Print: {
           type: 'book',
           issued: { "date-parts": [ [ 2021, 1, 26 ], ], },
-          ISBN: '9780135732588' as CSL_Data.ISBN,
-        } satisfies Data_Type.Material,
+          ISBN: '9780135732588' as CSL.ISBN,
+        } satisfies types_data.Material,
       } satisfies CSL_Data.Custom,
     }
   }
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

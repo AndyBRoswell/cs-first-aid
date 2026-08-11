@@ -11,5 +11,9 @@
       "@/*": ["src/*"],
       "@tests/*": ["tests/*"]
     }
-  }
+  },
+  "references": [
+    { "path": "../../packages/bibkit" },
+    { "path": "../../packages/util" },
+  ]
 }

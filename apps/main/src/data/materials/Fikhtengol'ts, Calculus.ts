@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -21,7 +21,7 @@ const items = [
       issued: { 'date-parts': [ [ 2005, 12, 15 ] ] },
       'number-of-pages': 527,
       "collection-title": '高等教育百门精品课程精品项目',
-      ISBN: '978-7-04-018303-0' as CSL_Data.ISBN,
+      ISBN: '978-7-04-018303-0' as CSL.ISBN,
       URL: 'https://www.hep.com.cn/book/show/8a3d345d-3b34-4204-accb-a355dfa35c3c',
       accessed: { 'date-parts': [ [ 2026, 4, 27 ] ] },
     },
@@ -44,7 +44,7 @@ const items = [
       issued: { 'date-parts': [ [ 2007, 4, 14 ] ] },
       'number-of-pages': 672,
       "collection-title": '高等教育百门精品课程精品项目',
-      ISBN: '978-7-04-018304-7' as CSL_Data.ISBN,
+      ISBN: '978-7-04-018304-7' as CSL.ISBN,
       URL: 'https://www.hep.com.cn/book/show/d9d868e0-86d5-4ef1-896e-13f307d63a19',
       accessed: { 'date-parts': [ [ 2026, 4, 27 ] ] },
     },
@@ -67,11 +67,11 @@ const items = [
       issued: { 'date-parts': [ [ 2007, 4, 14 ] ] },
       'number-of-pages': 548,
       "collection-title": '高等教育百门精品课程精品项目',
-      ISBN: '978-7-04-018305-4' as CSL_Data.ISBN,
+      ISBN: '978-7-04-018305-4' as CSL.ISBN,
       URL: 'https://www.hep.com.cn/book/show/ef7be008-1d00-4f56-9e89-f247ec81c0aa',
       accessed: { 'date-parts': [ [ 2026, 4, 27 ] ] },
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

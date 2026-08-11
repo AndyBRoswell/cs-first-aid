@@ -1,7 +1,7 @@
-import * as data_type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
 import '@/data/courses/import course materials.ts'
-import * as util from '../../../../../packages/common/util.ts'
+import * as util from '@cs-first-aid/util'
 
 export const Mathematical_Logic = {
   canonical_name: '数理逻辑',
@@ -43,7 +43,7 @@ export const Mathematical_Logic = {
       },
     },
   }
-} satisfies data_type.Course
+} satisfies types_data.Course
 
 export const Set_Theory = {
   canonical_name: '集合论',
@@ -83,7 +83,7 @@ export const Set_Theory = {
       },
     },
   }
-} satisfies data_type.Course
+} satisfies types_data.Course
 
 export const Graph_Theory = {
   canonical_name: '图论',
@@ -128,7 +128,7 @@ export const Graph_Theory = {
       },
     },
   }
-} satisfies data_type.Course
+} satisfies types_data.Course
 
 export const Abstract_Algebra = {
   canonical_name: '抽象代数',
@@ -177,7 +177,7 @@ export const Abstract_Algebra = {
       },
     },
   }
-} satisfies data_type.Course
+} satisfies types_data.Course
 
 export const Combinatorics = {
   canonical_name: '组合学',
@@ -217,7 +217,7 @@ export const Combinatorics = {
       },
     },
   }
-} satisfies data_type.Course
+} satisfies types_data.Course
 
 export const Number_Theory = {
   canonical_name: '数论',
@@ -251,4 +251,4 @@ export const Number_Theory = {
       },
     },
   }
-} satisfies data_type.Course
+} satisfies types_data.Course

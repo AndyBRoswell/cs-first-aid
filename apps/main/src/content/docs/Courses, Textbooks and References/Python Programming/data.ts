@@ -1,4 +1,4 @@
-import * as bib from '../../../../../../../packages/bibkit/src/bib.ts'
+import * as bib from '@cs-first-aid/bibkit/bib'
 import * as Course from '@/data/courses/Python Programming.ts'
 
 export const course_material = Course.info.material!

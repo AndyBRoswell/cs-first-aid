@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -15,12 +15,12 @@ const items = [
       issued: { 'date-parts': [ [ 2015, 3 ] ] },
       'number-of-pages': 308,
       language: 'zh-CN',
-      ISBN: '9787301255803' as CSL_Data.ISBN,
+      ISBN: '9787301255803' as CSL.ISBN,
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       "collection-title": '大学生基础课教材',
       URL: 'https://book.douban.com/subject/26368286',
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

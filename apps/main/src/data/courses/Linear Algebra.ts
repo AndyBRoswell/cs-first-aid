@@ -1,7 +1,7 @@
-import * as data_type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
 import '@/data/courses/import course materials.ts'
-import * as util from '../../../../../packages/common/util.ts'
+import * as util from '@cs-first-aid/util'
 
 export const I_info = {
   canonical_name: '线性代数I',
@@ -71,7 +71,7 @@ export const I_info = {
       ],
     }
   }
-} satisfies data_type.Course
+} satisfies types_data.Course
 
 export const II_info = {
   canonical_name: '线性代数II',
@@ -144,4 +144,4 @@ export const II_info = {
       }
     },
   }
-} satisfies data_type.Course
+} satisfies types_data.Course

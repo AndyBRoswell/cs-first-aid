@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -17,11 +17,11 @@ const items = [
       "publisher-place": 'Princeton, NJ',
       issued: { "date-parts": [ [ 2009, 11, 28 ], ], },
       "number-of-pages": 752,
-      ISBN: '9781400835782' as CSL_Data.ISBN,
+      ISBN: '9781400835782' as CSL.ISBN,
       URL: 'https://press.princeton.edu/books/ebook/9781400835782/the-calculus-lifesaver-pdf?srsltid=AfmBOops83rJhcGuw-fa0Bu44xMu49g0lGUuYIANhrxpdDl-qjG2pwW-',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     }
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,23 +16,23 @@ const items = [
       issued: { "date-parts": [ [ 2014, 1, 14 ] ] },
       "original-date": { "date-parts": [ [ 2010, 8, 13 ] ] },
       "original-publisher": "Pearson",
-      ISBN: '978-0321998026' as CSL_Data.ISBN,
+      ISBN: '978-0321998026' as CSL.ISBN,
       URL: 'https://www.amazon.com/Algebra-Michael-Artin-ebook/dp/B00HR7MSZO',
       accessed: { "date-parts": [ [ 2026, 5, 6 ] ] },
       note: 'Kindle Edition',
       custom: {
         Print: {
           type: 'book',
-          ISBN: '9780134689609' as CSL_Data.ISBN,
+          ISBN: '9780134689609' as CSL.ISBN,
           issued: { "date-parts": [ [ 2017, 2, 13 ] ] },
           "original-date": { "date-parts": [ [ 2010, 8, 13 ] ] },
           "original-publisher": "Pearson",
           URL: 'https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version/P200000006078/9780134689609',
           accessed: { "date-parts": [ [ 2026, 5, 6 ] ] },
-        } satisfies Data_Type.Material,
+        } satisfies types_data.Material,
       }
     },
   }
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

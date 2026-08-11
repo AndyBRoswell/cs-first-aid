@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,10 +16,10 @@ const items = [
       publisher: 'Addison-Wesley Professional',
       issued: { 'date-parts': [ [ 2022, 9, 24, ], ], },
       accessed: { 'date-parts': [ [ 2026, 5, 12, ], ], },
-      ISBN: '978-0-13-681648-5' as CSL_Data.ISBN,
+      ISBN: '978-0-13-681648-5' as CSL.ISBN,
       URL: 'https://www.stroustrup.com/tour3.html',
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

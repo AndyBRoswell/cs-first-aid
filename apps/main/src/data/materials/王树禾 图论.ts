@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,11 +16,11 @@ const items = [
       issued: { 'date-parts': [ [ 2009, 8, 1 ] ], },
       'number-of-pages': 238,
       language: 'zh-CN',
-      ISBN: '9787030245953' as CSL_Data.ISBN,
+      ISBN: '9787030245953' as CSL.ISBN,
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ], },
       URL: 'https://www.ecsponline.com/goods.php?id=45315',
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

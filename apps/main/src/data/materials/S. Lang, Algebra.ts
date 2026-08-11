@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -19,7 +19,7 @@ const items = [
       language: 'en-US',
       "number-of-pages": 'XV, 914',
       DOI: '10.1007/978-1-4613-0041-0',
-      ISBN: '9781461300410' as CSL_Data.ISBN,
+      ISBN: '9781461300410' as CSL.ISBN,
       URL: 'https://link.springer.com/book/10.1007/978-1-4613-0041-0',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       'collection-title': 'Graduate Texts in Mathematics',
@@ -27,18 +27,18 @@ const items = [
       custom: {
         Hardcover: {
           type: 'book',
-          ISBN: '9780387953854' as CSL_Data.ISBN,
+          ISBN: '9780387953854' as CSL.ISBN,
           issued: { 'date-parts': [ [ 2002, 1, 8 ] ] },
-        } satisfies Data_Type.Material,
+        } satisfies types_data.Material,
         Softcover: {
           type: 'book',
-          ISBN: '978-1-4612-6551-1' as CSL_Data.ISBN,
+          ISBN: '978-1-4612-6551-1' as CSL.ISBN,
           issued: { 'date-parts': [ [ 2012, 11, 10 ] ] },
-        } satisfies Data_Type.Material,
+        } satisfies types_data.Material,
         "collection-title-short": 'GTM',
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

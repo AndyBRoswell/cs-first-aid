@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,19 +16,19 @@ const items = [
       "original-date": { "date-parts": [ [ 2007, 9 ] ] },
       publisher: 'Wiley-Interscience',
       'collection-title': 'Pure and Applied Mathematics: A Wiley Series of Texts, Monographs and Tracts',
-      ISBN: '978-1-118-62692-4' as CSL_Data.ISBN,
+      ISBN: '978-1-118-62692-4' as CSL.ISBN,
       language: 'en-US',
       URL: 'https://www.wiley.com/en-us/Linear+Algebra+and+Its+Applications%2C+2nd+Edition-p-9781118626924',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       custom: {
         'Print': {
           type: 'book',
-          ISBN: '978-0-471-75156-4' as CSL_Data.ISBN,
+          ISBN: '978-0-471-75156-4' as CSL.ISBN,
           issued: { 'date-parts': [ [ 2007, 9 ] ] },
-        } satisfies Data_Type.Material,
+        } satisfies types_data.Material,
       },
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

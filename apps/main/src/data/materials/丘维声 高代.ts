@@ -1,8 +1,8 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 import * as _ from '@/libraries/lodash-es.ts'
-import * as util from '../../../../../packages/common/util.ts'
+import * as util from '@cs-first-aid/util'
 
 const books = [
   {
@@ -18,7 +18,7 @@ const books = [
       "number-of-volumes": 2,
       publisher: '清华大学出版社',
       'publisher-place': '北京',
-      ISBN: '9787302225188' as CSL_Data.ISBN,
+      ISBN: '9787302225188' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.tup.com.cn/booksCenter/book_03258601.html',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
@@ -44,7 +44,7 @@ const books = [
       "number-of-volumes": 2,
       publisher: '清华大学出版社',
       'publisher-place': '北京',
-      ISBN: '9787302237594' as CSL_Data.ISBN,
+      ISBN: '9787302237594' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.tup.com.cn/booksCenter/book_03258702.html',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
@@ -70,7 +70,7 @@ const books = [
       "number-of-volumes": 2,
       publisher: '清华大学出版社',
       'publisher-place': '北京',
-      ISBN: '9787302487630' as CSL_Data.ISBN,
+      ISBN: '9787302487630' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.tup.com.cn/booksCenter/book_07292403.html',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
@@ -93,7 +93,7 @@ const books = [
       "number-of-volumes": 2,
       publisher: '清华大学出版社',
       'publisher-place': '北京',
-      ISBN: '9787302495130' as CSL_Data.ISBN,
+      ISBN: '9787302495130' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.tup.com.cn/booksCenter/book_07292503.html',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
@@ -116,7 +116,7 @@ const books = [
       "number-of-volumes": 2,
       publisher: '清华大学出版社',
       'publisher-place': '北京',
-      ISBN: '9787302483670' as CSL_Data.ISBN,
+      ISBN: '9787302483670' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.tup.com.cn/booksCenter/book_05702703.html',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
@@ -138,7 +138,7 @@ const books = [
       "number-of-volumes": 2,
       publisher: '清华大学出版社',
       'publisher-place': '北京',
-      ISBN: '9787302446040' as CSL_Data.ISBN,
+      ISBN: '9787302446040' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.tup.com.cn/booksCenter/book_05702804.html',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
@@ -148,7 +148,7 @@ const books = [
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(books)
 
@@ -178,7 +178,7 @@ const open_courses = [
           , { count: 2 }
         )
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Video,
+    } satisfies types_data.Video,
   },
 ]
 

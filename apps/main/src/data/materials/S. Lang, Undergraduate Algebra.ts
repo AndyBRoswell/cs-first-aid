@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -18,23 +18,23 @@ const items = [
       'collection-title': 'Undergraduate Texts in Mathematics',
       issued: { 'date-parts': [ [ 2006, 10, 31 ] ] },
       DOI: '10.1007/0-387-27475-8',
-      ISBN: '9780387274751' as CSL_Data.ISBN,
+      ISBN: '9780387274751' as CSL.ISBN,
       URL: 'https://link.springer.com/book/10.1007/0-387-27475-8',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       custom: {
         Hardcover: {
           type: 'book',
-          ISBN: '9780387220253' as CSL_Data.ISBN,
+          ISBN: '9780387220253' as CSL.ISBN,
           issued: { 'date-parts': [ [ 2005, 3, 21 ] ] },
-        } satisfies Data_Type.Material,
+        } satisfies types_data.Material,
         Softcover: {
           type: 'book',
-          ISBN: '978-1-4419-1959-5' as CSL_Data.ISBN,
+          ISBN: '978-1-4419-1959-5' as CSL.ISBN,
           issued: { 'date-parts': [ [ 2010, 11, 29 ] ] },
-        } satisfies Data_Type.Material,
+        } satisfies types_data.Material,
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

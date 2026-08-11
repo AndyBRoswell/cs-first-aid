@@ -1,10 +1,10 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
-    id: [] satisfies Data_Type.ID_t[],
+    id: [] satisfies types_data.ID_t[],
     material: {
       type: 'book',
       title: '线性代数',
@@ -16,11 +16,11 @@ const items = [
       'collection-title': '中国科学技术大学精品教材',
       'number-of-pages': 447,
       language: 'zh-CN',
-      ISBN: '978-7-312-02298-2' as CSL_Data.ISBN,
+      ISBN: '978-7-312-02298-2' as CSL.ISBN,
       URL: 'https://book.douban.com/subject/4200433/',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

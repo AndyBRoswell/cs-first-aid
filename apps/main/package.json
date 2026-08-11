@@ -7,13 +7,18 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "test:e2e": "playwright test"
   },
   "bugs": {
     "url": "https://github.com/AndyBRoswell/cs-first-aid/issues"
   },
   "homepage": "https://github.com/AndyBRoswell/cs-first-aid#readme",
   "dependencies": {
+    "@cs-first-aid/bibkit": "workspace:*",
+    "@cs-first-aid/util": "workspace:*",
     "@astrojs/check": "^0.9.10",
     "@astrojs/compiler-rs": "^0.3.2",
     "@astrojs/starlight": "^0.41.7",

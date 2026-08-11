@@ -1,7 +1,7 @@
-import * as data_type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
 import '@/data/courses/import course materials.ts'
-import * as util from '../../../../../packages/common/util.ts'
+import * as util from '@cs-first-aid/util'
 
 export const info = {
   canonical_name: 'Python 程序设计',
@@ -16,4 +16,4 @@ export const info = {
       ...catalog.filter(item => item.author?.some(author => author.family === '嵩' && author.given === '天') && util.ieq(item.title!, 'Python语言程序设计基础'), { max_count: 1 }),
     ],
   }
-} satisfies data_type.Course
+} satisfies types_data.Course

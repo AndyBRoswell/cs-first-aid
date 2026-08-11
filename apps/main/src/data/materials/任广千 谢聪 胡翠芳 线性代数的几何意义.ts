@@ -1,12 +1,12 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
     id: [
       '线性代数的几何意义',
-    ] satisfies Data_Type.ID_t[],
+    ] satisfies types_data.ID_t[],
     material: {
       type: 'book',
       title: '线性代数的几何意义',
@@ -14,12 +14,12 @@ const items = [
       issued: { 'date-parts': [ [ 2015, 8 ] ] },
       publisher: '西安电子科技大学出版社',
       'publisher-place': '西安',
-      ISBN: '978-7-5606-3454-8' as CSL_Data.ISBN,
+      ISBN: '978-7-5606-3454-8' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.xduph.com/Pages/BookDetail.aspx?doi=13bc748f-fbb6-426a-9a59-1cab34fa991e',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

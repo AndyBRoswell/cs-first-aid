@@ -1,8 +1,8 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
 import * as _ from '@/libraries/lodash-es.ts'
-import * as util from '../../../../../packages/common/util.ts'
+import * as util from '@cs-first-aid/util'
 
 const books = [
   {
@@ -18,7 +18,7 @@ const books = [
       "publisher-place": '北京市',
       issued: { "date-parts": [ [ 2003, 5, 15 ] ], },
       "number-of-pages": 493,
-      ISBN: '978-7-04-011920-6' as CSL_Data.ISBN,
+      ISBN: '978-7-04-011920-6' as CSL.ISBN,
       "collection-title": '普通高等教育“十五”国家级规划教材',
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/2b102125-85ba-4748-9e7f-5942069d19ef',
@@ -38,7 +38,7 @@ const books = [
       "publisher-place": '北京市',
       issued: { "date-parts": [ [ 2003, 5, 15 ] ], },
       "number-of-pages": 402,
-      ISBN: '978-7-04-011921-3' as CSL_Data.ISBN,
+      ISBN: '978-7-04-011921-3' as CSL.ISBN,
       "collection-title": '普通高等教育“十五”国家级规划教材',
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/957740b1-218e-45b7-847d-b0c3d0c711eb',
@@ -57,7 +57,7 @@ const books = [
       publisher: '中国科学技术大学出版社',
       "publisher-place": "安徽省 合肥市",
       issued: { "date-parts": [ [ 2026, 1, ] ], },
-      ISBN: '978-7-312-06521-7' as CSL_Data.ISBN,
+      ISBN: '978-7-312-06521-7' as CSL.ISBN,
       URL: 'https://press.ustc.edu.cn/2026/0407/c29280a725832/page.htm',
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ], },
     },
@@ -74,12 +74,12 @@ const books = [
       publisher: '中国科学技术大学出版社',
       "publisher-place": "安徽省 合肥市",
       issued: { "date-parts": [ [ 2026, 1, ] ], },
-      ISBN: '978-7-312-06514-9' as CSL_Data.ISBN,
+      ISBN: '978-7-312-06514-9' as CSL.ISBN,
       URL: 'https://press.ustc.edu.cn/2026/0407/c29280a725832/page.htm',
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ], },
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(books)
 
@@ -112,7 +112,7 @@ const open_courses = [
         ),
         suggested_playback_speed: [ 1.5, 2, ],
       } satisfies CSL_Data.Custom
-    } satisfies Data_Type.Video
+    } satisfies types_data.Video
   },
 ]
 

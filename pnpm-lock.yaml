@@ -35,6 +35,12 @@ importers:
       '@citation-js/plugin-doi':
         specifier: ^0.8.2
         version: 0.8.2(@citation-js/core@0.8.2)
+      '@cs-first-aid/bibkit':
+        specifier: workspace:*
+        version: link:../../packages/bibkit
+      '@cs-first-aid/util':
+        specifier: workspace:*
+        version: link:../../packages/util
       '@tailwindcss/vite':
         specifier: ^4.3.3
         version: 4.3.3(vite@8.2.1(@types/node@26.2.0)(esbuild@0.28.2)(jiti@2.7.0)(yaml@2.9.0))

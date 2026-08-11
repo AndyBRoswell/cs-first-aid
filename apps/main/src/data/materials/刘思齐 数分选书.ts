@@ -1,5 +1,5 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
 
 const items = [
   {
@@ -17,6 +17,6 @@ const items = [
       note: 'https://zhuanlan.zhihu.com/p/563317174',
     }
   }
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

@@ -1,8 +1,8 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 import * as _ from '@/libraries/lodash-es.ts'
-import * as util from '../../../../../packages/common/util.ts'
+import * as util from '@cs-first-aid/util'
 
 const books = [
   {
@@ -18,7 +18,7 @@ const books = [
       edition: 2,
       issued: { "date-parts": [ [ 2004, 6, 1 ] ] },
       "number-of-pages": 419,
-      ISBN: "9787040138528" as CSL_Data.ISBN,
+      ISBN: "9787040138528" as CSL.ISBN,
       "collection-title": "面向21世纪课程教材（数学类）",
       language: "zh-CN",
       URL: "https://book.douban.com/subject/1231379/"
@@ -36,7 +36,7 @@ const books = [
       "number-of-volumes": 2,
       edition: 2,
       issued: { "date-parts": [ [ 2004, 10, 1 ] ] },
-      ISBN: "9787040155495" as CSL_Data.ISBN,
+      ISBN: "9787040155495" as CSL.ISBN,
       "collection-title": "面向21世纪课程教材（数学类）",
       language: "zh-CN",
       URL: "https://book.douban.com/subject/1239801/"
@@ -51,7 +51,7 @@ const books = [
       volume: 1,
       "number-of-volumes": 2,
       edition: 3,
-      ISBN: '978-7-04-051571-8' as CSL_Data.ISBN,
+      ISBN: '978-7-04-051571-8' as CSL.ISBN,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2019, 4, 30 ] ] },
@@ -69,7 +69,7 @@ const books = [
       volume: 2,
       "number-of-volumes": 2,
       edition: 3,
-      ISBN: '978-7-04-051630-2' as CSL_Data.ISBN,
+      ISBN: '978-7-04-051630-2' as CSL.ISBN,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2019, 5, 30 ] ] },
@@ -78,7 +78,7 @@ const books = [
       URL: 'https://www.hep.com.cn/book/show/c02b721f-7269-462e-9af2-8e5d12af173e'
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(books)
 
@@ -107,7 +107,7 @@ const open_courses = [
         ),
         suggested_playback_speed: [ 1.5, 2, ],
       } satisfies CSL_Data.Custom
-    } satisfies Data_Type.Video,
+    } satisfies types_data.Video,
   },
 ]
 

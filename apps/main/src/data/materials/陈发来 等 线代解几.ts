@@ -1,8 +1,8 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 import * as _ from '@/libraries/lodash-es.ts'
-import * as util from '../../../../../packages/common/util.ts'
+import * as util from '@cs-first-aid/util'
 
 const books = [
   {
@@ -16,7 +16,7 @@ const books = [
       issued: { 'date-parts': [ [ 2015, 8, 7 ] ] },
       edition: 2,
       'number-of-pages': 247,
-      ISBN: '9787040433128' as CSL_Data.ISBN,
+      ISBN: '9787040433128' as CSL.ISBN,
       URL: 'https://team.ustc.edu.cn/Chen_Reaserch_Lab/en/zzcg/1025606/content/3661.htm',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
       custom: {
@@ -29,7 +29,7 @@ const books = [
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(books)
 
@@ -59,7 +59,7 @@ const open_course = [
           , { count: 1 }
         )
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Video,
+    } satisfies types_data.Video,
   },
 ]
 

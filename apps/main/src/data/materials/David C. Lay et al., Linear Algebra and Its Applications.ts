@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -13,11 +13,11 @@ const items = [
       issued: { 'date-parts': [ [ 2021, 7, 14 ] ], },
       edition: 6,
       language: 'en-US',
-      ISBN: '9781292351216' as CSL_Data.ISBN,
+      ISBN: '9781292351216' as CSL.ISBN,
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/linear-algebra-and-its-applications-global-edition/P200000004712/9781292351216',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ], },
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

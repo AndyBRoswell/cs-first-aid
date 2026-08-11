@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -18,7 +18,7 @@ const items = [
       publisher: 'Pearson',
       "publisher-place": 'US',
       issued: { "date-parts": [ [ 2022, 12, 29 ], ], },
-      ISBN: '9780137616077' as CSL_Data.ISBN,
+      ISBN: '9780137616077' as CSL.ISBN,
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/thomas-calculus/P200000007103/9780137616077?format=eTextbook_lifetime',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
@@ -38,11 +38,11 @@ const items = [
       publisher: 'Pearson',
       "publisher-place": 'US',
       issued: { "date-parts": [ [ 2022, 2, 28 ], ], },
-      ISBN: '9780137559824' as CSL_Data.ISBN,
+      ISBN: '9780137559824' as CSL.ISBN,
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/thomas-calculus-early-transcendentals/P200000007104/9780137559824?format=eTextbook_lifetime',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
   }
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

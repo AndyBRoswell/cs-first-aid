@@ -1,13 +1,13 @@
 import { expect } from '@playwright/test';
 import pino from 'pino'
-import * as common_util from '../../../../../../../../packages/common/util.ts'
-import * as util from '@tests/util.ts'
-import * as src_util from '@tests/e2e/src/util.ts'
+import * as util from '@cs-first-aid/util'
+import * as test_util from '@tests/util.ts'
+import * as test_src_util from '@tests/e2e/src/util.ts'
 
-const logger = pino(common_util.pino_arg)
+const logger = pino(util.pino_arg)
 
-src_util.test('course list', { tag: [ '@Courses, Textbooks and References', '@course list' ] }, async ({ page, context }) => {
-  const prefix: string = `${util.test_server}/courses-textbooks-and-references`
+test_src_util.test('course list', { tag: [ '@Courses, Textbooks and References', '@course list' ] }, async ({ page, context }) => {
+  const prefix: string = `${test_util.test_server}/courses-textbooks-and-references`
   await page.goto(`${prefix}/#%E8%AF%BE%E7%A8%8B%E5%88%97%E8%A1%A8`) // courses-textbooks-and-references/#课程列表
   const course_list = page.getByTestId('course list')
   const links = await course_list.locator('[href]').all()
