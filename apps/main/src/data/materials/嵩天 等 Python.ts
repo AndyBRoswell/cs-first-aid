@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,9 +16,9 @@ const items = [
       'number-of-pages': 424,
       accessed: { 'date-parts': [ [ 2026, 5, 17 ] ] },
       URL: 'https://www.hep.com.cn/book/show/c80f999b-8730-4c39-b454-a88e0fb6adbb',
-      ISBN: '9787040622942' as CSL_Data.ISBN,
+      ISBN: '9787040622942' as CSL.ISBN,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -17,10 +17,10 @@ const items = [
       publisher: '中国科学技术大学出版社',
       'publisher-place': '合肥',
       'collection-title': '中国科学技术大学精品教材',
-      ISBN: '9787312045141' as CSL_Data.ISBN,
+      ISBN: '9787312045141' as CSL.ISBN,
       URL: 'https://book.douban.com/subject/30743397/',
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

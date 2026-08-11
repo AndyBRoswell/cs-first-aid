@@ -1,8 +1,8 @@
 // import 'virtual:import-course-materials'
 
 import pino from 'pino'
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as util from "../../../../../packages/common/util.ts";
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as util from '@cs-first-aid/util';
 
 const logger = pino(util.pino_arg)
 

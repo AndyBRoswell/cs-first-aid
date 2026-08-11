@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -12,7 +12,7 @@ const items = [
       edition: 3,
       issued: { 'date-parts': [ [ 2024, 6, 18 ] ] },
       publisher: '高等教育出版社',
-      ISBN: '978-7-04-061620-0' as CSL_Data.ISBN,
+      ISBN: '978-7-04-061620-0' as CSL.ISBN,
       language: 'zh-CN',
       "number-of-pages": 508,
       "collection-title": '普通高等教育“十一五”国家级规划教材',
@@ -21,7 +21,7 @@ const items = [
       custom: {
         "collection-title-short": '“十一五”国家规划教材',
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
   {
     id: [],
@@ -32,14 +32,14 @@ const items = [
       edition: 3,
       issued: { 'date-parts': [ [ 2024, 12, 20 ] ] },
       publisher: '高等教育出版社',
-      ISBN: '978-7-04-062926-2' as CSL_Data.ISBN,
+      ISBN: '978-7-04-062926-2' as CSL.ISBN,
       "number-of-pages": 580,
       "collection-title": '普通高等教育“十一五”国家级规划教材配套参考书',
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/14b2a634-b12a-41f3-ba25-31ca845f4429',
       accessed: { 'date-parts': [ [ 2025, 5, 22 ] ] },
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

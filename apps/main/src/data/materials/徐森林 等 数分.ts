@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -14,7 +14,7 @@ const items = [
       publisher: '哈尔滨工业大学出版社',
       "publisher-place": '黑龙江省 哈尔滨市',
       issued: { "date-parts": [ [ 2021, 3, ] ], },
-      ISBN: '978-7-5603-8050-6' as CSL_Data.ISBN,
+      ISBN: '978-7-5603-8050-6' as CSL.ISBN,
       language: 'zh-CN',
     },
   },
@@ -29,7 +29,7 @@ const items = [
       publisher: '哈尔滨工业大学出版社',
       "publisher-place": '黑龙江省 哈尔滨市',
       issued: { "date-parts": [ [ 2021, 3, ] ], },
-      ISBN: '978-7-5603-8172-5' as CSL_Data.ISBN,
+      ISBN: '978-7-5603-8172-5' as CSL.ISBN,
       language: 'zh-CN',
     },
   },
@@ -44,10 +44,10 @@ const items = [
       publisher: '哈尔滨工业大学出版社',
       "publisher-place": '黑龙江省 哈尔滨市',
       issued: { "date-parts": [ [ 2021, 3, ] ], },
-      ISBN: '978-7-5603-8073-5' as CSL_Data.ISBN,
+      ISBN: '978-7-5603-8073-5' as CSL.ISBN,
       language: 'zh-CN',
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

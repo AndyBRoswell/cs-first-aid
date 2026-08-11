@@ -1,11 +1,11 @@
 import { expect, type Locator } from '@playwright/test'
-import * as data from "../../../../../../../../packages/bibkit/src/types/data.ts";
-import * as catalog from '../../../../../../../../packages/bibkit/src/catalog.ts'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
 // @ts-ignore [cssesc doesn't have ts support]
 import cssesc from "cssesc";
-import * as util from "../../../../../../../../packages/common/util.ts";
+import * as util from '@cs-first-aid/util'
 
-export function locate_references(main: Locator, scope_name: data.Scope_Name) {
+export function locate_references(main: Locator, scope_name: types_data.Scope_Name) {
   const CSS_escaped_scope_name = cssesc(JSON.stringify(scope_name), util.cssesc_options)
   return main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
 }
@@ -16,7 +16,7 @@ export async function check_references(main: Locator) {
     // basic
     const CSL_entries = await locator.locator('.CSL_Entry').all()
     await expect(locator).toHaveAttribute('data-scope_name')
-    const material_segment = JSON.parse((await locator.getAttribute('data-material_segment'))!) as Array<data.Material>
+    const material_segment = JSON.parse((await locator.getAttribute('data-material_segment'))!) as Array<types_data.Material>
     expect(material_segment.length).toEqual(CSL_entries.length)
     // custom data
     for (const [ index, material ] of material_segment.entries()) {

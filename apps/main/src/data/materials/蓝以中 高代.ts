@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -12,7 +12,7 @@ const items = [
       edition: 3,
       volume: 1,
       'number-of-volumes': 2,
-      ISBN: '9787301342237' as CSL_Data.ISBN,
+      ISBN: '9787301342237' as CSL.ISBN,
       issued: { 'date-parts': [ [ 2023, 8 ] ] },
       publisher: '北京大学出版社',
       'publisher-place': '北京',
@@ -38,7 +38,7 @@ const items = [
       edition: 3,
       volume: 2,
       'number-of-volumes': 2,
-      ISBN: '9787301343159' as CSL_Data.ISBN,
+      ISBN: '9787301343159' as CSL.ISBN,
       issued: { 'date-parts': [ [ 2023, 8 ] ] },
       publisher: '北京大学出版社',
       'publisher-place': '北京',
@@ -55,6 +55,6 @@ const items = [
       } satisfies CSL_Data.Custom,
     } satisfies CSL_Data.Item,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -14,16 +14,16 @@ const items = [
       issued: { 'date-parts': [ [ 2025 ] ] },
       publisher: 'McGraw-Hill Education',
       language: 'en-US',
-      ISBN: '9781260289701' as CSL_Data.ISBN,
+      ISBN: '9781260289701' as CSL.ISBN,
       URL: 'https://www.mheducation.co.uk/discrete-mathematics-and-its-applications-2025-release-ise-9781266191541-emea-group',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       custom: {
         Print: {
           type: 'book',
-          ISBN: '9781266191541' as CSL_Data.ISBN,
-        } satisfies Data_Type.Material,
+          ISBN: '9781266191541' as CSL.ISBN,
+        } satisfies types_data.Material,
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
   {
     id: [
@@ -36,11 +36,11 @@ const items = [
       issued: { 'date-parts': [ [ 2018, 7, 23 ] ] },
       publisher: 'McGraw-Hill Education',
       language: 'en-US',
-      ISBN: '9781260092387' as CSL_Data.ISBN,
+      ISBN: '9781260092387' as CSL.ISBN,
       URL: 'https://www.mheducation.co.uk/ise-student-s-solutions-guide-for-discrete-mathematics-and-its-applications-9781260092387-emea',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

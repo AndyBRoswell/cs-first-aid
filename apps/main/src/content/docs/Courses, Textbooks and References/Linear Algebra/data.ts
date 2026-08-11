@@ -1,4 +1,4 @@
-import * as bib from '../../../../../../../packages/bibkit/src/bib.ts'
+import * as bib from '@cs-first-aid/bibkit/bib'
 import * as Course from '@/data/courses/Linear Algebra.ts'
 
 export const I_course_material = Course.I_info.material!

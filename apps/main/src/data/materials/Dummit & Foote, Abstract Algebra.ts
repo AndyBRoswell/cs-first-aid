@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -14,11 +14,11 @@ const items = [
       edition: 3,
       issued: { 'date-parts': [ [ 2003, 7, ] ] },
       language: 'en-US',
-      ISBN: '9780471433347' as CSL_Data.ISBN,
+      ISBN: '9780471433347' as CSL.ISBN,
       URL: 'https://www.wiley.com/en-us/Abstract+Algebra%2C+3rd+Edition-p-9780471433347',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

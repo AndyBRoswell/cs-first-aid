@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -17,7 +17,7 @@ const items = [
       'collection-title': 'C++ In-Depth',
       'number-of-pages': 656,
       language: 'en-US',
-      ISBN: '9780138308681' as CSL_Data.ISBN,
+      ISBN: '9780138308681' as CSL.ISBN,
       accessed: { 'date-parts': [ [ 2026, 5, 12 ] ] },
       URL: 'https://www.stroustrup.com/programming.html',
       custom: {
@@ -28,6 +28,6 @@ const items = [
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

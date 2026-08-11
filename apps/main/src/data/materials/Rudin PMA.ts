@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,12 +16,12 @@ const items = [
       publisher: 'McGraw-Hill Education',
       issued: { 'date-parts': [ [ 1976, ] ] },
       edition: 3,
-      ISBN: '9780070542358' as CSL_Data.ISBN,
+      ISBN: '9780070542358' as CSL.ISBN,
       language: 'en-US',
       URL: 'https://www.goodreads.com/en/book/show/292079.Principles_of_Mathematical_Analysis',
       note: 'ISBN10: 007054234X/007054235X/0070856133',
     }
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

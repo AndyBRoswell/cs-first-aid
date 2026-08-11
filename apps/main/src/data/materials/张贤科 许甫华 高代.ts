@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,7 +16,7 @@ const items = [
       'publisher-place': '北京',
       "number-of-pages": 441,
       language: 'zh-CN',
-      ISBN: '9787302082279' as CSL_Data.ISBN,
+      ISBN: '9787302082279' as CSL.ISBN,
       URL: 'https://www.tup.com.cn/booksCenter/book_00937505.html',
       accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
       custom: {
@@ -24,8 +24,8 @@ const items = [
           { display_text: '豆瓣读书', link: 'https://book.douban.com/subject/1231135/', },
         ],
       }
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

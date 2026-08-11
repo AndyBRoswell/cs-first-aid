@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -17,7 +17,7 @@ const items = [
       publisher: 'John Wiley & Sons, Inc.',
       "publisher-place": 'US',
       issued: { "date-parts": [ [ 1967, ] ], },
-      ISBN: '0471000051' as CSL_Data.ISBN,
+      ISBN: '0471000051' as CSL.ISBN,
       language: 'en-US',
       URL: 'https://www.wiley.com/en-us/Calculus%2C+Volume+1%2C+2nd+Edition-p-9781119496731',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
@@ -37,12 +37,12 @@ const items = [
       publisher: 'John Wiley & Sons, Inc.',
       "publisher-place": 'US',
       issued: { "date-parts": [ [ 1969, ], ], },
-      ISBN: '0471000078' as CSL_Data.ISBN,
+      ISBN: '0471000078' as CSL.ISBN,
       language: 'en-US',
       URL: 'https://www.wiley.com/en-us/Calculus%2C+Volume+2%2C+2nd+Edition-p-9781119496762',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

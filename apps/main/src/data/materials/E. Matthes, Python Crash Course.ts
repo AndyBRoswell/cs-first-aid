@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -17,16 +17,16 @@ const items = [
       issued: { 'date-parts': [ [ 2022, 12 ], ], },
       accessed: { 'date-parts': [ [ 2026, 5, 13, ], ], },
       URL: 'https://nostarch.com/python-crash-course-3rd-edition',
-      ISBN: '9781718502710' as CSL_Data.ISBN,
+      ISBN: '9781718502710' as CSL.ISBN,
       custom: {
         subtitle: 'A Hands-On, Project-Based Introduction to Programming',
         Print: {
           type: 'book',
-          ISBN: '9781718502703' as CSL_Data.ISBN,
-        } satisfies Data_Type.Material,
+          ISBN: '9781718502703' as CSL.ISBN,
+        } satisfies types_data.Material,
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

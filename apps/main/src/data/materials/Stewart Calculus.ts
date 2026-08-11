@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,7 +16,7 @@ const items = [
       publisher: 'Cengage Learning',
       "publisher-place": 'Boston, MA',
       issued: { "date-parts": [ [ 2020, 4, 30 ], ], },
-      ISBN: '9780357711491' as CSL_Data.ISBN,
+      ISBN: '9780357711491' as CSL.ISBN,
       URL: 'https://www.cengage.com/c/calculus-9e-stewart-clegg-watson/9781337624183/',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
@@ -34,11 +34,11 @@ const items = [
       publisher: 'Cengage Learning',
       "publisher-place": 'Boston, MA',
       issued: { "date-parts": [ [ 2020, 1, 9 ], ], },
-      ISBN: '9780357687901' as CSL_Data.ISBN,
+      ISBN: '9780357687901' as CSL.ISBN,
       URL: 'https://www.cengage.com/c/calculus-early-transcendentals-9e-stewart-clegg-watson/9781337613927/',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
   }
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

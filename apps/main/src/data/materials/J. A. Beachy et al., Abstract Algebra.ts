@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,25 +16,25 @@ const items = [
       issued: { 'date-parts': [ [ 2019 ], ], },
       language: 'en-US',
       'number-of-pages': 541,
-      ISBN: '978-1-4786-3869-8' as CSL_Data.ISBN,
+      ISBN: '978-1-4786-3869-8' as CSL.ISBN,
       URL: 'https://www.waveland.com/browse.php?t=477',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
       custom: {
         VitalSource: {
           type: 'book',
-          ISBN: '9781478638919' as CSL_Data.ISBN,
+          ISBN: '9781478638919' as CSL.ISBN,
           URL: 'https://www.vitalsource.com/products/abstract-algebra-john-a-beachy-william-d-v9781478638919',
           accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
-        } satisfies Data_Type.Material,
+        } satisfies types_data.Material,
         Kindle: {
           type: 'book',
           issued: { 'date-parts': [ [ 2019, 2, 15 ], ], },
           URL: 'https://www.amazon.com/Abstract-Algebra-John-Beachy-ebook/dp/B07NWXPC5D/',
           accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
-        } satisfies Data_Type.Material,
+        } satisfies types_data.Material,
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

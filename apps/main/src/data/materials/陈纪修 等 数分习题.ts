@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -19,7 +19,7 @@ const items = [
       edition: 2,
       issued: { "date-parts": [ [ 2005, 7 ] ] },
       "number-of-pages": 262,
-      ISBN: "9787040166187" as CSL_Data.ISBN,
+      ISBN: "9787040166187" as CSL.ISBN,
       "collection-title": "数学类专业学习辅导丛书",
       language: "zh-CN",
       URL: "https://book.douban.com/subject/1704531/"
@@ -40,7 +40,7 @@ const items = [
       "number-of-volumes": 2,
       edition: 2,
       issued: { "date-parts": [ [ 2005 ] ] },
-      ISBN: "9787040173857" as CSL_Data.ISBN,
+      ISBN: "9787040173857" as CSL.ISBN,
       "collection-title": "数学类专业学习辅导丛书",
       language: "zh-CN",
       URL: "https://book.douban.com/subject/1721588/"
@@ -52,7 +52,7 @@ const items = [
       type: 'book',
       title: '数学分析习题全解指南',
       author: [ { family: '陈', given: '纪修' }, { literal: '徐惠平' }, { literal: '周渊' }, { family: '金', given: '路' }, { literal: '邱维元' } ],
-      ISBN: '978-7-04-053442-9' as CSL_Data.ISBN,
+      ISBN: '978-7-04-053442-9' as CSL.ISBN,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2020, 4, 27 ] ] },
@@ -70,7 +70,7 @@ const items = [
       type: 'book',
       title: '数学分析习题全解指南',
       author: [ { family: '陈', given: '纪修' }, { literal: '徐惠平' }, { literal: '周渊' }, { family: '金', given: '路' }, { literal: '邱维元' } ],
-      ISBN: '978-7-04-053911-0' as CSL_Data.ISBN,
+      ISBN: '978-7-04-053911-0' as CSL.ISBN,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2020, 6, 17 ] ] },
@@ -82,6 +82,6 @@ const items = [
       URL: 'https://www.hep.com.cn/book/show/1a6e300d-e88f-4fbc-9948-70086231c265'
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

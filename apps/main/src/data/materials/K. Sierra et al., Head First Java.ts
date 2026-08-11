@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -18,19 +18,19 @@ const items = [
       language: 'en-US',
       URL: 'https://www.oreilly.com/library/view/head-first-java/9781492091646/',
       accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
-      ISBN: '978-1-491-91075-7' as CSL_Data.ISBN,
+      ISBN: '978-1-491-91075-7' as CSL.ISBN,
       custom: {
         Paperback: {
           type: 'book',
-          ISBN: '978-1-491-91077-1' as CSL_Data.ISBN,
-        } satisfies Data_Type.Material,
+          ISBN: '978-1-491-91077-1' as CSL.ISBN,
+        } satisfies types_data.Material,
         Kindle: {
           type: 'book',
-          ISBN: '978-1491910757' as CSL_Data.ISBN,
-        } satisfies Data_Type.Material,
+          ISBN: '978-1491910757' as CSL.ISBN,
+        } satisfies types_data.Material,
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

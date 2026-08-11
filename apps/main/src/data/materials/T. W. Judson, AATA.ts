@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -30,8 +30,8 @@ const items = [
           edition: 2023,
           publisher: 'Orthogonal Publishing L3C',
           issued: { 'date-parts': [ [ 2026, 5, 13 ] ] },
-          ISBN: '9781944325183' as CSL_Data.ISBN,
-        } satisfies Data_Type.Material,
+          ISBN: '9781944325183' as CSL.ISBN,
+        } satisfies types_data.Material,
         Hardcover: {
           type: 'book',
           title: 'Abstract Algebra: Theory and Applications',
@@ -40,11 +40,11 @@ const items = [
           edition: 2023,
           publisher: 'Orthogonal Publishing L3C',
           issued: { 'date-parts': [ [ 2023 ] ] },
-          ISBN: '9781944325190' as CSL_Data.ISBN,
-        } satisfies Data_Type.Material,
+          ISBN: '9781944325190' as CSL.ISBN,
+        } satisfies types_data.Material,
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

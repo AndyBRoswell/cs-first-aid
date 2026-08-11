@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -19,18 +19,18 @@ const items = [
       'number-of-pages': 490,
       DOI: '10.1017/9781108938426',
       URL: 'https://www.cambridge.org/highereducation/books/matrix-mathematics/3BBCFAFD942BAF6A0813763297D69E65',
-      ISBN: '9781108938426' as CSL_Data.ISBN,
+      ISBN: '9781108938426' as CSL.ISBN,
       language: 'en-GB',
       custom: {
         subtitle: 'A Second Course in Linear Algebra',
         Hardback: {
           type: 'book',
           issued: { 'date-parts': [ [ 2023, 5, 23 ] ] },
-          ISBN: '9781108837101' as CSL_Data.ISBN,
-        } satisfies Data_Type.Material,
+          ISBN: '9781108837101' as CSL.ISBN,
+        } satisfies types_data.Material,
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

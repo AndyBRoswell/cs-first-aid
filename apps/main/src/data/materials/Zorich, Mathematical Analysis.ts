@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -17,7 +17,7 @@ const items = [
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [[ 2019, 2, 18 ] ] },
-      ISBN: '978-7-04-028755-4' as CSL_Data.ISBN,
+      ISBN: '978-7-04-028755-4' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/b84288b0-b931-47ea-b5d1-0d5a444476b9',
       accessed: { 'date-parts': [[ 2026, 4, 25 ] ] },
@@ -38,12 +38,12 @@ const items = [
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [[ 2019, 2, 18 ] ] },
-      ISBN: '978-7-04-028756-1' as CSL_Data.ISBN,
+      ISBN: '978-7-04-028756-1' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/9cd95af0-f479-469d-bc60-2b9f6e4fc9b7',
       accessed: { 'date-parts': [[ 2026, 4, 25 ] ] },
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

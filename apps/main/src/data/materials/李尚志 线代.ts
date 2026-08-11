@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,7 +16,7 @@ const items = [
       "collection-title": '"十五"国家规划教材',
       language: 'zh-CN',
       'number-of-pages': 555,
-      ISBN: '978-7-04-019870-6' as CSL_Data.ISBN,
+      ISBN: '978-7-04-019870-6' as CSL.ISBN,
       URL: 'https://www.hep.com.cn/book/show/9b998ecf-0298-4031-8d38-fa5e9187cbb3',
     },
   },
@@ -32,11 +32,11 @@ const items = [
       'publisher-place': '合肥',
       language: 'zh-CN',
       'number-of-pages': 519,
-      ISBN: '9787312034268' as CSL_Data.ISBN,
+      ISBN: '9787312034268' as CSL.ISBN,
       'collection-title': '高校核心课程学习指导丛书',
       URL: 'https://book.douban.com/subject/26390093',
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

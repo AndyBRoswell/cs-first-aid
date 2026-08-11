@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -21,10 +21,10 @@ const items = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       'collection-title': '俄罗斯数学教材选译',
-      ISBN: '978-7-04-020525-1' as CSL_Data.ISBN,
+      ISBN: '978-7-04-020525-1' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/90bd601a-aa3e-4d5a-b70c-c31269cb9fb4',
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
   {
     id: [
@@ -44,10 +44,10 @@ const items = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       'collection-title': '俄罗斯数学教材选译',
-      ISBN: '978-7-04-021491-8' as CSL_Data.ISBN,
+      ISBN: '978-7-04-021491-8' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/c8de259a-06c4-4b29-ac8c-1cbb7a677b11',
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
   {
     id: [
@@ -67,10 +67,10 @@ const items = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       'collection-title': '俄罗斯数学教材选译',
-      ISBN: '978-7-04-022506-8' as CSL_Data.ISBN,
+      ISBN: '978-7-04-022506-8' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/382e155b-780c-4a62-b7a6-8c5e08767613',
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
   {
     id: [
@@ -86,12 +86,12 @@ const items = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       'collection-title': '俄罗斯数学教材选译',
-      ISBN: '978-7-04-050234-3' as CSL_Data.ISBN,
+      ISBN: '978-7-04-050234-3' as CSL.ISBN,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/df4ba4fe-893d-4400-888e-311125e975a4',
       accessed: { "date-parts": [ [ 2026, 5, 6 ] ] },
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

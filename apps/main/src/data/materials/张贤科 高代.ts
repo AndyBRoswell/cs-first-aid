@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -13,7 +13,7 @@ const items = [
       'publisher-place': '北京',
       issued: { 'date-parts': [ [ 2012, 8, 10 ] ] },
       accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
-      ISBN: '978-7-04-035199-6' as CSL_Data.ISBN,
+      ISBN: '978-7-04-035199-6' as CSL.ISBN,
       language: 'zh-CN',
       'number-of-pages': 501,
       URL: 'https://www.hep.com.cn/book/show/327efefa-8d7a-44af-83a1-a08c18e1421d',
@@ -25,8 +25,8 @@ const items = [
           },
         ],
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

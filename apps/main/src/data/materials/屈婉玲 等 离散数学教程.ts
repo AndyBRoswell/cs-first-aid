@@ -1,7 +1,7 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
-import * as util from '../../../../../packages/common/util.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
+import * as util from '@cs-first-aid/util'
 
 const books = [
   {
@@ -14,13 +14,13 @@ const books = [
       issued: { 'date-parts': [ [ 2002, 6 ] ] },
       publisher: '北京大学出版社',
       "publisher-place": '北京',
-      ISBN: '9787301053669' as CSL_Data.ISBN,
+      ISBN: '9787301053669' as CSL.ISBN,
       "collection-title": '高等教育精品教材',
       language: 'zh-CN',
       custom: {
         "collection-title": [ '高等院校计算机专业及专业基础课系列教材', ],
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
   {
     id: [],
@@ -32,14 +32,14 @@ const books = [
       publisher: '北京大学出版社',
       "publisher-place": '北京',
       issued: { 'date-parts': [ [ 2008, 1 ] ] },
-      ISBN: '9787301098011' as CSL_Data.ISBN,
+      ISBN: '9787301098011' as CSL.ISBN,
       language: 'zh-CN',
       custom: {
         "collection-title": [ '高等院校计算机专业及专业基础课系列教材', ],
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Material,
+    } satisfies types_data.Material,
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(books)
 
@@ -70,7 +70,7 @@ const open_courses = [
           , { count: 1 }
         )
       } satisfies CSL_Data.Custom,
-    } satisfies Data_Type.Video,
+    } satisfies types_data.Video,
   },
 ]
 

@@ -1,5 +1,5 @@
-import * as data_type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
 import '@/data/courses/import course materials.ts'
 
 export const info = {
@@ -14,4 +14,4 @@ export const info = {
       catalog.get('cppreference.com/c'),
     ],
   }
-} satisfies data_type.Course
+} satisfies types_data.Course

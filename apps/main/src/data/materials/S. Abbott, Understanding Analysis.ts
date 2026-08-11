@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,7 +16,7 @@ const items = [
       "publisher-place": 'New York, NY',
       issued: { "date-parts": [ [ 2015, ], ], },
       "number-of-pages": 312,
-      ISBN: '978-1-4939-2712-8' as CSL_Data.ISBN,
+      ISBN: '978-1-4939-2712-8' as CSL.ISBN,
       "collection-title": 'Undergraduate Texts in Mathematics',
       "collection-editor": [ { given: 'Sheldon Jay', family: 'Axler' }, { given: 'Kenneth Alan', family: 'Ribet' }, ],
       language: 'en-US',
@@ -27,6 +27,6 @@ const items = [
       } satisfies CSL_Data.Custom,
     },
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)

@@ -1,6 +1,6 @@
-import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
-import * as Data_Type from '../../../../../packages/bibkit/src/types/data.ts'
-import * as CSL_Data from '../../../../../packages/bibkit/src/CSL_data.ts'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const items = [
   {
@@ -16,13 +16,13 @@ const items = [
       "publisher-place": '北京市',
       issued: { "date-parts": [ [ 2006, 4, 28 ], ], },
       "number-of-pages": 565,
-      ISBN: '978-7-04-018693-2' as CSL_Data.ISBN,
+      ISBN: '978-7-04-018693-2' as CSL.ISBN,
       "collection-title": "普通高等教育“十五”国家级规划教材",
       language: "zh-CN",
       URL: 'https://www.hep.com.cn/book/show/4fbfa3b9-aa86-41c2-be72-84ac7d0b87b2',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     }
   },
-] satisfies Data_Type.Entry[]
+] satisfies types_data.Entry[]
 
 catalog.add_items(items)
