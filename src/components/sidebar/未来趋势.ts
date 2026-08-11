@@ -1,5 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
-import * as badges from '../badges.ts'
+import * as release_stages from '../release_stages.ts'
 
 export const Future_Trends = {
   label: '未来趋势',
@@ -14,15 +14,7 @@ export const Future_Trends = {
       },
       slug: 'future-trends',
       attrs: {
-        'data-badges': badges.to_HTML_attr([
-          {
-            text: {
-              'zh-CN': 'blank',
-              en: 'blank',
-            },
-            class: [ 'release', ],
-          },
-        ])
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
     {
@@ -38,15 +30,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -56,15 +40,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -74,15 +50,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -92,15 +60,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -110,15 +70,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -128,15 +80,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -146,15 +90,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -164,15 +100,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -182,15 +110,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
       ],
@@ -208,15 +128,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -226,15 +138,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -244,15 +148,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -262,15 +158,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -280,15 +168,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -298,15 +178,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
@@ -316,15 +188,7 @@ export const Future_Trends = {
           },
           slug: '',
           attrs: {
-            'data-badges': badges.to_HTML_attr([
-              {
-                text: {
-                  'zh-CN': 'blank',
-                  en: 'blank',
-                },
-                class: [ 'release', ],
-              },
-            ])
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
       ],
