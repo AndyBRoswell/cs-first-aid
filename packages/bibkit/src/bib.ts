@@ -1,12 +1,12 @@
 // @ts-ignore [citation-js doesn't have ts support]
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
-import node_html_parser from 'node-html-parser'
-import default_bib_style from './IEEE.custom.csl?raw'
-import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, Material_Filter, Qualified_Material_Filter, } from "@/types/data.ts";
-import * as catalog from '@/data/materials/catalog.ts'
-import * as data_type from '@/types/data.ts'
-import { check_filter_results, type Filter_Options } from "@/data/materials/catalog.ts";
+import * as node_html_parser from 'node-html-parser'
+import default_bib_style from './IEEE.custom.csl'
+import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, Material_Filter, Qualified_Material_Filter, } from "./types/data.ts";
+import * as catalog from './catalog.ts'
+import * as data_type from './types/data.ts'
+import { check_filter_results, type Filter_Options } from "./catalog.ts";
 
 const CSL_config = citation_js.plugins.config.get('@csl')
 const default_bib_style_name = 'IEEE [Custom]'

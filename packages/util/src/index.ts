@@ -4,7 +4,7 @@ import node_path from 'node:path'
 import * as cssesc from 'cssesc'
 
 export const pino_arg: pino.LoggerOptions = {
-  level: process.env.log_level || 'info',
+  level: process.env["log_level"] || 'info',
   transport: {
     target: 'pino-pretty',
     options: {

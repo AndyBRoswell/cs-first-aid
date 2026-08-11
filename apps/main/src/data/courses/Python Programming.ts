@@ -1,7 +1,7 @@
-import * as data_type from '@/types/data.ts'
-import * as catalog from '@/data/materials/catalog.ts'
+import * as data_type from '../../../../../packages/bibkit/src/types/data.ts'
+import * as catalog from '../../../../../packages/bibkit/src/catalog.ts'
 import '@/data/courses/import course materials.ts'
-import * as util from '@/util.ts'
+import * as util from '../../../../../packages/common/util.ts'
 
 export const info = {
   canonical_name: 'Python 程序设计',

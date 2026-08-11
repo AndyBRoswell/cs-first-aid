@@ -1,17 +1,19 @@
-import type { ID_t, Entry, Material, ID_primitive, ID_object, Material_Filter } from "@/types/data.ts";
-import { legal_keys_of_ID_object } from "@/types/data.ts";
-import * as CSL_Data from '@/types/CSL_data.ts'
+import type { ID_t, Entry, Material, ID_primitive, ID_object, Material_Filter } from "./types/data.ts";
+import { legal_keys_of_ID_object } from "./types/data.ts";
+import * as CSL from './CSL.ts'
 import Cartesian_product from "fast-cartesian";
 import node_fs_promises from 'node:fs/promises';
 import node_path from 'node:path'
 import node_os from 'node:os'
 import pino from 'pino'
 import * as ohash from 'ohash'
-import * as util from '@/util.ts'
+import * as util from '@cs-first-aid/util'
 // @ts-ignore [citation-js doesn't have ts support]
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
-import node_fs from "node:fs";
+// import node_fs from "node:fs";
+import get_rendered_author from './get_rendered_author.csl'
+import get_full_author_names from './get_full_author_names.csl'
 
 const logger = pino(util.pino_arg)
 
@@ -108,8 +110,8 @@ export function add_item(p: Entry) {
 }
 
 export function add(IDs: ID_t[], material: Material) {
-  if ('ISBN' in material) { CSL_Data.ensure_ISBN(material.ISBN) }
-  if ('ISSN' in material) { CSL_Data.ensure_ISSN(material.ISSN) }
+  if ('ISBN' in material) { CSL.ensure_ISBN(material.ISBN) }
+  if ('ISSN' in material) { CSL.ensure_ISSN(material.ISSN) }
   for (const ID of IDs) {
     const CID = canonical_ID(ID)
     if (m.has(CID)) { throw new Error(`ID ${CID} already exists. Material: ${JSON.stringify(material, null, 2)}`) ; }
@@ -180,7 +182,7 @@ export function check_filter_results(predicate: Material_Filter, results: Materi
 export function all(): typeof v { return v }
 
 export async function dump_locally(output_path = node_path.join(util.project_root, 'local/materials.json')) {
-  if (!process.env.CI && process.env.export_materials) {
+  if (!process.env["CI"] && process.env["export_materials"]) {
     await node_fs_promises.mkdir(node_path.dirname(output_path), { recursive: true })
     await node_fs_promises.writeFile(output_path, JSON.stringify(v, null, 2), 'utf8')
     logger.info(`All imported materials saved at ${output_path}`)
@@ -196,12 +198,12 @@ export const default_name_rendering_options: name_rendering_options = {
 }
 
 const CSL_config = citation_js.plugins.config.get('@csl')
-const get_rendered_author = node_fs.readFileSync(node_path.resolve(util.source_root, 'data/materials/get_rendered_author.csl'), 'utf8')
+// const get_rendered_author = node_fs.readFileSync(node_path.resolve(util.source_root, 'data/materials/get_rendered_author.csl'), 'utf8')
 CSL_config.styles.add('get_rendered_author', get_rendered_author)
-const get_full_author_names = node_fs.readFileSync(node_path.resolve(util.source_root, 'data/materials/get_full_author_names.csl'), 'utf8')
+// const get_full_author_names = node_fs.readFileSync(node_path.resolve(util.source_root, 'data/materials/get_full_author_names.csl'), 'utf8')
 CSL_config.styles.add('get_full_author_names', get_full_author_names)
 
-export function get_rendered_names(names: CSL_Data.Name_Variable[], options: name_rendering_options = {}): string {
+export function get_rendered_names(names: CSL.Name_Variable[], options: name_rendering_options = {}): string {
   const dummy_item = [ { id: 0, author: names } ]
   const cite = new citation_js.Cite(dummy_item)
   let output

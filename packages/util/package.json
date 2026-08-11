@@ -1,0 +1,23 @@
+{
+  "name": "@cs-first-aid/util",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "AndyBRoswell",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/cssesc": "^3.0.2",
+    "@types/node": "^26.2.0"
+  },
+  "dependencies": {
+    "cssesc": "^3.0.0",
+    "pino": "^10.3.1"
+  }
+}

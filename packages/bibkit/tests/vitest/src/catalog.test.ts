@@ -3,29 +3,26 @@ import { test, expect } from 'vitest';
 // @ts-ignore [citation-js doesn't have ts support]
 import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
-import node_fs from 'node:fs'
-import node_path from 'node:path'
-import * as common_util from '@/util.ts'
-import * as test_util from '@tests/util.ts'
-import * as CSL_data from '@/types/CSL_data.ts'
+import * as util from '@cs-first-aid/util'
+import * as CSL from '@/CSL.ts'
+import get_rendered_author from '@/get_rendered_author.csl'
+import get_full_author_names from '@/get_full_author_names.csl'
 
 const CSL_config = citation_js.plugins.config.get('@csl')
-const get_rendered_author = node_fs.readFileSync(node_path.resolve(test_util.source_root, 'data/materials/get_rendered_author.csl'), 'utf8')
 CSL_config.styles.add('get_rendered_author', get_rendered_author)
-const get_full_author_names = node_fs.readFileSync(node_path.resolve(test_util.source_root, 'data/materials/get_full_author_names.csl'), 'utf8')
 CSL_config.styles.add('get_full_author_names', get_full_author_names)
 
-test('src/data/materials/get_rendered_author.csl and src/data/materials/get_full_author_names.csl', {
+test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
   tags: [
-    'src/data/materials/get_rendered_author.csl',
-    'src/data/materials/get_full_author_names.csl',
+    'src/get_rendered_author.csl',
+    'src/get_full_author_names.csl',
   ],
 }, () => {
   const styles = [
     { rendered: 'default', style: { template: 'get_rendered_author', } },
     { rendered: 'full', style: { template: 'get_full_author_names', } },
   ] as const
-  const names: { original: CSL_data.Item['author'], rendered: { default: string, full: string } }[] = [
+  const names: { original: CSL.Item['author'], rendered: { default: string, full: string } }[] = [
     { original: [ { family: '王', given: '虹' } ], rendered: { default: '王虹', full: '王虹' } },
     { original: [ { given: 'Hong', family: 'Wang' } ], rendered: { default: 'H. Wang', full: 'Hong Wang' } },
     { original: [ { family: '邓', given: '煜' } ], rendered: { default: '邓煜', full: '邓煜' } },
@@ -104,7 +101,7 @@ test('src/data/materials/get_rendered_author.csl and src/data/materials/get_full
   for (const [ index, name ] of names.entries()) { items.push({ id: index, author: name.original }) }
   const cite = new citation_js.Cite(items)
   for (const { rendered, style } of styles) {
-    const output = cite.format('bibliography', style).split(common_util.linesep_stripper)
+    const output = cite.format('bibliography', style).split(util.linesep_stripper)
     for (const [ index, name ] of names.entries()) { expect(output[index]).toBe(name.rendered[rendered]) }
   }
 })

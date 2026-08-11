@@ -1,4 +1,4 @@
-import * as bib from '@/content/docs/bib.ts'
+import * as bib from '../../../../../../../packages/bibkit/src/bib.ts'
 import * as Course from '@/data/courses/C♯ Programming.ts'
 
 export const course_material = Course.info.material!

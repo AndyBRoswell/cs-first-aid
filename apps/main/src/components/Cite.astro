@@ -1,7 +1,7 @@
 ---
-import type { ID_t, Scoped_ID_t, Material_Filter, Qualified_Material_Filter } from "@/types/data.ts"
-import type { Mangled_References } from "@/content/docs/bib.ts";
-import * as bib from "@/content/docs/bib.ts"
+import type { ID_t, Scoped_ID_t, Material_Filter, Qualified_Material_Filter } from "../../../../packages/bibkit/src/types/data.ts"
+import type { Mangled_References } from "../../../../packages/bibkit/src/bib.ts";
+import * as bib from "../../../../packages/bibkit/src/bib.ts"
 export interface Props {
   mangled_references: Mangled_References
   cite_items: (ID_t | Scoped_ID_t | Material_Filter | Qualified_Material_Filter)[]

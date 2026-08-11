@@ -1,9 +1,9 @@
 import { expect, type Locator } from '@playwright/test'
-import * as data from "@/types/data.ts";
-import * as catalog from '@/data/materials/catalog.ts'
+import * as data from "../../../../../../../../packages/bibkit/src/types/data.ts";
+import * as catalog from '../../../../../../../../packages/bibkit/src/catalog.ts'
 // @ts-ignore [cssesc doesn't have ts support]
 import cssesc from "cssesc";
-import * as util from "@/util.ts";
+import * as util from "../../../../../../../../packages/common/util.ts";
 
 export function locate_references(main: Locator, scope_name: data.Scope_Name) {
   const CSS_escaped_scope_name = cssesc(JSON.stringify(scope_name), util.cssesc_options)
