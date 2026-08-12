@@ -7,34 +7,7 @@
   "engines": {
     "node": ">=22"
   },
-  "exports": {
-    "./bib": {
-      "import": {
-        "types": "./dist/bib.d.mts",
-        "default": "./dist/bib.mjs"
-      }
-    },
-    "./catalog": {
-      "import": {
-        "types": "./dist/catalog.d.mts",
-        "default": "./dist/catalog.mjs"
-      }
-    },
-    "./CSL": {
-      "import": {
-        "types": "./dist/CSL.d.mts",
-        "default": "./dist/CSL.mjs"
-      }
-    },
-    "./types/data": {
-      "import": {
-        "types": "./dist/types/data.d.mts",
-        "default": "./dist/types/data.mjs"
-      }
-    }
-  },
   "scripts": {
-    "dev": "tsdown --watch --no-clean",
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -53,9 +26,51 @@
     "ohash": "^2.0.11",
     "pino": "^10.3.1"
   },
+  "peerDependencies": {
+    "vite": "^8.2.1"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    }
+  },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.8",
     "tsdown": "^0.22.14",
+    "vite": "^8.2.1",
     "vitest": "^4.1.10"
+  },
+  "exports": {
+    "./bib": {
+      "development": "./src/bib.ts",
+      "default": "./dist/bib.mjs"
+    },
+    "./catalog": {
+      "development": "./src/catalog.ts",
+      "default": "./dist/catalog.mjs"
+    },
+    "./CSL": {
+      "development": "./src/CSL.ts",
+      "default": "./dist/CSL.mjs"
+    },
+    "./tools/Vite plugin": {
+      "development": "./tools/Vite plugin.ts",
+      "default": "./dist/tools/Vite plugin.mjs"
+    },
+    "./types/data": {
+      "development": "./src/types/data.ts",
+      "default": "./dist/types/data.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "exports": {
+      "./bib": "./dist/bib.mjs",
+      "./catalog": "./dist/catalog.mjs",
+      "./CSL": "./dist/CSL.mjs",
+      "./tools/Vite plugin": "./dist/tools/Vite plugin.mjs",
+      "./types/data": "./dist/types/data.mjs",
+      "./package.json": "./package.json"
+    }
   }
 }

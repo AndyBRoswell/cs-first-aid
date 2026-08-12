@@ -6,6 +6,7 @@ export default defineConfig({
     catalog: "src/catalog.ts",
     CSL: "src/CSL.ts",
     "types/data": "src/types/data.ts",
+    "tools/Vite plugin": "tools/Vite plugin.ts",
   },
 
   // format: ["esm", "cjs"], // current: esm only
@@ -30,5 +31,13 @@ export default defineConfig({
     experimental: {
       incrementalBuild: true,
     }
-  }
+  },
+
+  deps: {
+    neverBundle: ['vite'],
+  },
+
+  exports: {
+    devExports: 'development', // automatically generate exports and publishConfig in package.json
+  },
 });

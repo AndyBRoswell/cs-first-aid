@@ -1,20 +1,10 @@
-import { defineConfig } from 'vitest/config';
-import { readFile } from 'node:fs/promises'
-import path from 'node:path';
+import { defineConfig } from 'vitest/config'
+import path from 'node:path'
+import * as Vite_plugin from './tools/Vite plugin.ts'
 
 export default defineConfig({
   plugins: [
-    {
-      name: 'csl-text',
-      async load(id) {
-        if (!id.endsWith('.csl')) { return }
-        const content = await readFile(id, 'utf8')
-        return {
-          code: `export default ${JSON.stringify(content)}`,
-          map: null,
-        }
-      },
-    },
+    Vite_plugin.csl_text(),
   ],
   test: {
     dir: 'tests/vitest',

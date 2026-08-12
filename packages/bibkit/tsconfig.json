@@ -30,6 +30,8 @@
   "include": [
     "src/**/*.ts",
     "tests/**/*.ts",
-    "tsdown.config.ts"
+    "tools/**/*.ts",
+    "tsdown.config.ts",
+    "vitest.config.ts"
   ],
 }
