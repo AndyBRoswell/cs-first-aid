@@ -25,4 +25,10 @@ export default defineConfig({
   clean: true,
   sourcemap: true,
   nodeProtocol: true,
+
+  inputOptions: {
+    experimental: {
+      incrementalBuild: true,
+    }
+  }
 });
