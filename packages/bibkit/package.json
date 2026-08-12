@@ -34,7 +34,7 @@
     }
   },
   "scripts": {
-    "dev": "tsdown --watch",
+    "dev": "tsdown --watch --no-clean",
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
