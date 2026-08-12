@@ -1,7 +1,7 @@
 // Created by Claude Sonnet 4.6 Extended Thinking [web]. Revised by AndyBRoswell.
 // Schema: https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json
 
-import * as Data_Type from "@/types/data.ts";
+import * as Data_Type from "./types/data.ts";
 
 // 📦 Item types
 export type Item_Type =
