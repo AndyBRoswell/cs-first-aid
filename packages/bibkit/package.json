@@ -5,7 +5,7 @@
   "private": false,
   "description": "",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "scripts": {
     "build": "tsdown",
