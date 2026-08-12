@@ -8,7 +8,7 @@ export default defineConfig({
     "types/data": "src/types/data.ts",
   },
 
-  format: ["esm", "cjs"],
+  // format: ["esm", "cjs"], // current: esm only
   platform: "node",
 
   loader: {
@@ -17,9 +17,10 @@ export default defineConfig({
 
   fixedExtension: true,
 
-  dts: {
-    cjsReexport: true,
-  },
+  // dts: {
+  //   cjsReexport: true,
+  // },
+  dts: true,
 
   clean: true,
   sourcemap: true,
