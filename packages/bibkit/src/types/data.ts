@@ -17,7 +17,7 @@ export type ID_object =
   type?: CSL.Item['type']
   note?: CSL.Item['note']
 }
-export const legal_keys_of_ID_object = [
+export const legal_keys_of_ID_object: string[] = [
   'unordered_author',
   'ordered_author',
   'title',

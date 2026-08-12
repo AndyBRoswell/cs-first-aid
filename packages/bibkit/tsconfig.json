@@ -12,6 +12,7 @@
     "composite": true,
     "declaration": true,
     "declarationMap": true,
+    "isolatedDeclarations": true,
     "sourceMap": true,
     "outDir": "./dist",
     "strict": true,
