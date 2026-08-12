@@ -101,15 +101,15 @@ export function enumerate_canonical_IDs(
   return ret
 }
 
-export function add_items(p: Entry[]) {
+export function add_items(p: Entry[]): void {
   for (const pair of p) { add(pair.id, pair.material) }
 }
 
-export function add_item(p: Entry) {
+export function add_item(p: Entry): void {
   add(p.id, p.material)
 }
 
-export function add(IDs: ID_t[], material: Material) {
+export function add(IDs: ID_t[], material: Material): void {
   if ('ISBN' in material) { CSL.ensure_ISBN(material.ISBN) }
   if ('ISSN' in material) { CSL.ensure_ISSN(material.ISSN) }
   for (const ID of IDs) {
@@ -158,7 +158,7 @@ export function scoped_filter(materials: Material[], predicate: Material_Filter,
   return results
 }
 
-export function check_filter_results(predicate: Material_Filter, results: Material[], options: Filter_Options = {}) {
+export function check_filter_results(predicate: Material_Filter, results: Material[], options: Filter_Options = {}): void {
   if ('count' in options && results.length !== options.count) {
     throw new Error(`Filter ${predicate} returned ${results.length} , which does not match the expected count ${options.count}`)
   }
@@ -181,7 +181,7 @@ export function check_filter_results(predicate: Material_Filter, results: Materi
 
 export function all(): typeof v { return v }
 
-export async function dump_locally(output_path = node_path.join(util.project_root, 'local/materials.json')) {
+export async function dump_locally(output_path: string = node_path.join(util.project_root, 'local/materials.json')): Promise<void> {
   if (!process.env["CI"] && process.env["export_materials"]) {
     await node_fs_promises.mkdir(node_path.dirname(output_path), { recursive: true })
     await node_fs_promises.writeFile(output_path, JSON.stringify(v, null, 2), 'utf8')
