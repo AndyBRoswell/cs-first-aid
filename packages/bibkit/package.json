@@ -12,44 +12,29 @@
       "import": {
         "types": "./dist/bib.d.mts",
         "default": "./dist/bib.mjs"
-      },
-      "require": {
-        "types": "./dist/bib.d.cts",
-        "default": "./dist/bib.cjs"
       }
     },
     "./catalog": {
       "import": {
         "types": "./dist/catalog.d.mts",
         "default": "./dist/catalog.mjs"
-      },
-      "require": {
-        "types": "./dist/catalog.d.cts",
-        "default": "./dist/catalog.cjs"
       }
     },
     "./CSL": {
       "import": {
         "types": "./dist/CSL.d.mts",
         "default": "./dist/CSL.mjs"
-      },
-      "require": {
-        "types": "./dist/CSL.d.cts",
-        "default": "./dist/CSL.cjs"
       }
     },
     "./types/data": {
       "import": {
         "types": "./dist/types/data.d.mts",
         "default": "./dist/types/data.mjs"
-      },
-      "require": {
-        "types": "./dist/types/data.d.cts",
-        "default": "./dist/types/data.cjs"
       }
     }
   },
   "scripts": {
+    "dev": "tsdown --watch",
     "build": "tsdown",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
