@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import fast_glob from 'fast-glob'
 import package_json from "./package.json" with { type: 'json' }
 import { locales, sidebar } from './src/config/starlight.ts'
+import * as Vite_plugin from '@cs-first-aid/bibkit/tools/Vite plugin'
 
 /**
  * @deprecated
@@ -42,6 +43,7 @@ export default defineConfig({
       })
     },
     plugins: [
+      Vite_plugin.csl_text(),
       tailwindcss(),
     ]
   },
