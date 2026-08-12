@@ -6,7 +6,9 @@
   "exports": {
     ".": "./src/index.ts"
   },
-  "scripts": {},
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
   "keywords": [],
   "author": "AndyBRoswell",
   "license": "ISC",
