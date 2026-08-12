@@ -11,7 +11,7 @@ export const info = {
     text: {
       zh: [
         ...catalog.filter(item => item.author?.some(author => author.family === '史' && author.given === '济怀') && util.ieq(item.title!, '数学分析教程'), { max_count: 4 }),
-        ...catalog.filter(item => item.author?.some(author => author.literal === '陈纪修' || (author.family === '陈' && author.given === '纪修')) && util.ieq(item.title!, '数学分析'), { max_count: 4 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '陈' && author.given === '纪修') && util.ieq(item.title!, '数学分析'), { max_count: 4 }),
         ...catalog.filter(item => item.author?.some(author => author.family === '徐' && author.given === '森林') && item.author?.some(author => author.family === '薛' && author.given === '春华') && util.ieq(item.title!, '数学分析'), { max_count: 3 }),
         ...catalog.filter(item => item.author?.some(author => author.family === '程' && author.given === '艺') && util.ieq(item.title!, '数学分析讲义'), { max_count: 3 }),
         ...catalog.filter(item => item.author?.some(author => author.family === '张' && author.given === '筑生') && util.ieq(item.title!, '数学分析新讲（重排本）'), { max_count: 3 }),
@@ -31,7 +31,7 @@ export const info = {
     },
     problem_set: {
       zh: [
-        ...catalog.filter(item => item.author?.some(author => author.literal === '陈纪修' || (author.family === '陈' && author.given === '纪修')) && util.ieq(item.title!, '数学分析习题全解指南'), { max_count: 4 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === '陈' && author.given === '纪修') && util.ieq(item.title!, '数学分析习题全解指南'), { max_count: 4 }),
         ...catalog.filter(item => item.author?.some(author => author.family === '徐' && author.given === '森林') && util.ieq(item.title!, '数学分析精选习题全解'), { max_count: 2 }),
       ],
     },

@@ -8,10 +8,7 @@ const items = [
     material: {
       type: "book",
       title: "数学分析习题全解指南",
-      author: [
-        { literal: "陈纪修" }, { literal: "徐惠平" }, { literal: '周渊' },
-        { literal: '金路', }, { literal: '邱维元' }
-      ],
+      author: [ { family: '陈', given: '纪修' }, { family: '徐', given: '惠平' }, { family: '周', given: '渊' }, { family: '金', given: '路' }, { family: '邱', given: '维元' } ],
       publisher: "高等教育出版社",
       "publisher-place": "北京",
       volume: 1,
@@ -30,10 +27,7 @@ const items = [
     material: {
       type: "book",
       title: "数学分析习题全解指南",
-      author: [
-        { literal: "陈纪修" }, { literal: "徐惠平" }, { literal: '周渊' },
-        { literal: '金路', }, { literal: '邱维元' }
-      ],
+      author: [ { family: '陈', given: '纪修' }, { family: '徐', given: '惠平' }, { family: '周', given: '渊' }, { family: '金', given: '路' }, { family: '邱', given: '维元' } ],
       publisher: "高等教育出版社",
       "publisher-place": "北京",
       volume: 2,
@@ -51,7 +45,7 @@ const items = [
     material: {
       type: 'book',
       title: '数学分析习题全解指南',
-      author: [ { family: '陈', given: '纪修' }, { literal: '徐惠平' }, { literal: '周渊' }, { family: '金', given: '路' }, { literal: '邱维元' } ],
+      author: [ { family: '陈', given: '纪修' }, { family: '徐', given: '惠平' }, { family: '周', given: '渊' }, { family: '金', given: '路' }, { family: '邱', given: '维元' } ],
       ISBN: '978-7-04-053442-9' as CSL.ISBN,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
@@ -69,7 +63,7 @@ const items = [
     material: {
       type: 'book',
       title: '数学分析习题全解指南',
-      author: [ { family: '陈', given: '纪修' }, { literal: '徐惠平' }, { literal: '周渊' }, { family: '金', given: '路' }, { literal: '邱维元' } ],
+      author: [ { family: '陈', given: '纪修' }, { family: '徐', given: '惠平' }, { family: '周', given: '渊' }, { family: '金', given: '路' }, { family: '邱', given: '维元' } ],
       ISBN: '978-7-04-053911-0' as CSL.ISBN,
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
