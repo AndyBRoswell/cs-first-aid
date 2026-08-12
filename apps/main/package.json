@@ -8,8 +8,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test:unit": "vitest run",
-    "test:unit:watch": "vitest",
+    "typecheck": "astro check",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:e2e": "playwright test"
   },
   "bugs": {
