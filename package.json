@@ -8,7 +8,8 @@
     "build": "pnpm -r run build",
     "test": "pnpm -r run test",
     "test:watch": "pnpm -r --parallel run test:watch",
-    "test:e2e": "pnpm --filter @cs-first-aid/main run test:e2e"
+    "test:e2e": "pnpm -F @cs-first-aid/main run test:e2e",
+    "preview": "pnpm -F @cs-first-aid/main run preview"
   },
   "author": "AndyBRoswell",
   "license": "MIT",
