@@ -32,9 +32,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/calculus',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([
-          subject_badge_meta.Math,
-        ])
+        'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
       },
     },
     {
@@ -45,9 +43,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/mathematical-analysis',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([
-          subject_badge_meta.Math,
-        ])
+        'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
       },
     },
     {
@@ -74,9 +70,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/linear-algebra/i',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.Math,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
         {
@@ -87,9 +81,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/linear-algebra/ii',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.Math,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
       ],
@@ -166,9 +158,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/mathematical-logic',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.Math,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
         {
@@ -179,9 +169,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/set-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.Math,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
         {
@@ -192,9 +180,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/graph-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.Math,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
         {
@@ -205,9 +191,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/abstract-algebra',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.Math,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
         {
@@ -218,9 +202,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/combinatorics',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.Math,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
         {
@@ -231,9 +213,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/number-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.Math,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
       ],
@@ -302,9 +282,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/cpp-programming/i',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([
-              subject_badge_meta.CS,
-            ])
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
           },
         },
       ],
@@ -667,9 +645,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/c-programming',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([
-          subject_badge_meta.CS,
-        ])
+        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
       },
     },
     {
@@ -680,9 +656,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/csharp-programming',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([
-          subject_badge_meta.CS,
-        ])
+        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
       },
     },
     {
@@ -693,9 +667,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/java-programming',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([
-          subject_badge_meta.CS,
-        ])
+        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
       },
     },
     {
@@ -716,9 +688,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/python-programming',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([
-          subject_badge_meta.CS,
-        ])
+        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
       },
     },
     {
