@@ -1,7 +1,7 @@
 // Created by GPT-5.6 Terra Max [codex] and GPT-5.6 Sol High [web]. Revised by AndyBRoswell.
 
 import { expect, type Locator, type Page } from '@playwright/test'
-import type { Localized as Localized_Release_Stages } from '@/components/release_stages.ts'
+import * as release_stages from '@/components/release_stages.ts'
 import { locales, sidebar } from '@/config/starlight.ts'
 import * as util from '@tests/util.ts'
 import * as src_util from '@tests/e2e/src/util.ts'
@@ -11,6 +11,7 @@ type Sidebar_Item = { // Minimal configuration shape required to traverse sideba
   items?: Sidebar_Item[]
   slug?: string
 }
+type Localized_Release_Stages = release_stages.Localized
 type Root_Locale_Only_Release_Stage = {
   label: string
   language: string
@@ -22,6 +23,8 @@ type Site_Locale = { lang: Intl.UnicodeBCP47LocaleIdentifier }
 const site_locales = Object.entries(locales as Record<string, Site_Locale>)
   .map(([ locale, { lang: language } ]) => ({ locale, language }))
 const site_languages = site_locales.map(({ language }) => language) // Uses the site's configured languages instead of hard-coding them.
+const root_language = site_locales.find(({ locale }) => locale === 'root')?.language
+if (root_language === undefined) { throw new Error('The root locale must declare a language.') }
 const foreign_locales = site_locales.filter(({ locale }) => locale !== 'root') // The root locale has no URL segment and is the source language for untranslated pages.
 const configured_sidebar_links = flatten_sidebar_items(sidebar as unknown as Sidebar_Item[])
   .filter(item => item.slug !== undefined) // Groups do not render as the direct sidebar links checked by this test.
@@ -94,7 +97,13 @@ src_util.test('sidebar release stages are complete, and blank for unavailable pa
     for (const [ index, item ] of configured_sidebar_links.entries()) {
       const badge_link = rendered_sidebar_links.nth(index)
       await expect(badge_link).toHaveAttribute('data-release-stage', /\S/)
-      await expect(badge_link.locator('.badge.release'), `Sidebar item "${item.label}" needs exactly one rendered release badge.`).toHaveCount(1)
+      const release_badge = badge_link.locator('.badge.release')
+      await expect(release_badge, `Sidebar item "${item.label}" needs exactly one rendered release badge.`).toHaveCount(1)
+
+      const localized_releases = await get_rendered_release_stages(badge_link)
+      const release = localized_releases![root_language]!
+      await expect(release_badge).toHaveText(release)
+      await expect(release_badge).toHaveClass(new RegExp(`(?:^|\\s)${release_stages.get_stage(release)}(?:\\s|$)`))
     }
   })
 
