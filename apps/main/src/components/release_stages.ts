@@ -1,5 +1,5 @@
 import * as semver from 'semver'
-import package_json from '../../package.json' with { type: 'json' }
+import package_json from '@package.json' with { type: 'json' }
 
 const prerelease_stages = [ 'dev', 'alpha', 'beta', 'rc', ] as const
 type Prerelease_Stage = typeof prerelease_stages[number]

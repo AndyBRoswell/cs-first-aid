@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest'
 import * as release_stages from '@/components/release_stages.ts'
+import package_json from '@package.json' with { type: 'json' }
 
 type Localized = Parameters<typeof release_stages.to_HTML_attr>[0]
 

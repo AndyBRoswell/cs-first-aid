@@ -9,6 +9,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
+      "@package.json": ["package.json"],
       "@tests/*": ["tests/*"]
     }
   },
