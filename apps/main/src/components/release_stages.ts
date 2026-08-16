@@ -5,14 +5,14 @@ const semver_parse_options = { loose: true } as const
 export type Release = string // "blank" is special; every other value is validated by semver at runtime.
 const project_version = parse_project_version()
 
-export type Localized = {
+export type Localized_Release = {
   [language: Intl.UnicodeBCP47LocaleIdentifier]: Release
 } & {
   'zh-CN': Release
   en: Release
 }
 
-export function to_HTML_attr(release_stages: Localized): string {
+export function to_HTML_attr(release_stages: Localized_Release): string {
   for (const [ language, release ] of Object.entries(release_stages)) {
     try {
       validate(release)

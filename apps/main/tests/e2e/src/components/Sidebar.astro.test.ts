@@ -11,7 +11,7 @@ type Sidebar_Item = { // Minimal configuration shape required to traverse sideba
   items?: Sidebar_Item[]
   slug?: string
 }
-type Localized_Release_Stages = release_stages.Localized
+type Localized_Release_Stages = release_stages.Localized_Release
 type Root_Locale_Only_Release_Stage = {
   label: string
   language: string

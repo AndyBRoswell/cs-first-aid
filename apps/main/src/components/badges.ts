@@ -1,4 +1,4 @@
-import { get_stage, type Localized as Localized_Release_Stages } from './release_stages.ts'
+import { get_stage, type Localized_Release as Localized_Release_Stages } from './release_stages.ts'
 
 export type Meta_Item = Meta_Item_primitive | Meta_Item_object
 export type Meta_Item_primitive = string
