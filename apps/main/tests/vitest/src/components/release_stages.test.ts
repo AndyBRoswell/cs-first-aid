@@ -121,7 +121,7 @@ function random_older_version(version: semver.SemVer): Core_Version {
 }
 
 function random_prerelease(stable_version: Core_Version): release_stages.Release {
-  const group = stage_groups[randomInt(stage_groups.length)]!
+  const group = prerelease_stage_groups[randomInt(prerelease_stage_groups.length)]!
   const prerelease_identifier = group[randomInt(group.length)]!
   return `${stable_version}-${prerelease_identifier}.${randomInt(random_component_limit)}`
 }
