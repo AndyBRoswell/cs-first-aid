@@ -52,25 +52,63 @@ test('get_stage derives the stage from a semantic version', () => {
   }
 })
 
-test('to_HTML_attr enforces the relationship with the project version', () => {
-  expect(() => release_stages.to_HTML_attr({
-    'zh-CN': random_prerelease(project_core_version), // Alpha/beta project releases may use the current core version.
-    en: 'blank',
-  })).not.toThrow()
+test('compare orders known stages and canonicalizes their aliases', () => {
+  const version = random_version()
+  const prerelease_number = randomInt(random_component_limit - 1)
+  const later_prerelease_number = randomInt(prerelease_number + 1, random_component_limit)
+  for (const alias of [ 'PLANNED', 'Backlog', ]) { expect.soft(release_stages.compare('blank', alias), `blank = ${alias}`).toBe(0) }
+  for (const [ canonical, ...aliases ] of stage_groups) {
+    for (const alias of [ canonical, ...aliases, ]) {
+      expect.soft(release_stages.compare(`${version}-${canonical}`, `${version}-${alias.toUpperCase()}`), `${canonical} = ${alias}`).toBe(0)
+    }
+  }
+  const ordered_releases = [ 'backlog', ...stage_groups.map(([ canonical, ]) => `${version}-${canonical}`), version, ] // Compare every adjacent stage.
+  for (let index = 1; index < ordered_releases.length; index++) {
+    const earlier = ordered_releases[index - 1]!
+    const later = ordered_releases[index]!
+    expect.soft(release_stages.compare(earlier, later), `${earlier} < ${later}`).toBeLessThan(0)
+    expect.soft(release_stages.compare(later, earlier), `${later} > ${earlier}`).toBeGreaterThan(0)
+  }
+  expect(release_stages.compare(version, version)).toBe(0)
+  expect(release_stages.compare(`${version}-beta.${prerelease_number}`, `${version}-B.${prerelease_number}`)).toBe(0)
+  expect(release_stages.compare(`${version}-beta.${prerelease_number}`, `${version}-beta.${later_prerelease_number}`)).toBeLessThan(0)
+  expect(release_stages.compare(`${version}-rc`, `${random_future_version(new semver.SemVer(version))}-dev`)).toBeLessThan(0) // Core version takes precedence.
+})
 
-  expect(() => release_stages.to_HTML_attr({
-    'zh-CN': random_prerelease(random_older_version(project_version)), // A prerelease cannot target an older core version.
-    en: 'blank',
-  })).toThrow(/Invalid release/)
-
-  expect(() => release_stages.to_HTML_attr({
-    'zh-CN': future_project_version, // A future version cannot already be marked stable.
-    en: 'blank',
-  })).toThrow(/Invalid release/)
+test('get_stage rejects every unsupported form', () => {
+  const version = random_version()
+  const [ major, minor, ] = version.split('.') as [string, string, string]
+  const prerelease_number = randomInt(random_component_limit)
+  const unsupported_prerelease_identifier = `unsupported-${randomInt(random_component_limit)}`
+  const unsupported_releases = [
+    `${version}-${unsupported_prerelease_identifier}.${prerelease_number}`,
+    `${version}-${prerelease_number}`,
+    `${version}-b${prerelease_number}`,
+    `${version}-b-${prerelease_number}`,
+  ]
+  for (const release of unsupported_releases) {
+    expect.soft(semver.parse(release, { loose: true, }), `node-semver accepts ${JSON.stringify(release)}`).not.toBeNull()
+    expect.soft(() => release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toThrow(/Unsupported prerelease identifier/)
+    expect.soft(() => release_stages.compare(release, version), `compare ${JSON.stringify(release)}`).toThrow(/Unsupported prerelease identifier/)
+  }
+  const invalid_releases = [
+    `unversioned-${randomInt(random_component_limit)}`, // Only the configured unversioned names bypass SemVer parsing.
+    `${major}.${minor}-beta`, // The full three-part core version is mandatory.
+    `${version}-beta!${randomInt(10)}`, // SemVer rejects this punctuation.
+    `${version}-beta..${randomInt(10)}`, // Identifiers cannot be empty.
+    `${version}+`, // Build identifiers cannot be empty.
+    `${version}-alpha.preview`, // The optional identifier after a stage must be numeric.
+    `${version}-alpha.${prerelease_number}.beta.preview`, // Only one optional numeric identifier is allowed.
+  ]
+  for (const release of invalid_releases) {
+    expect.soft(() => release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toThrow(/semantic version|Prerelease/)
+  }
 })
 
 function random_future_version(version: semver.SemVer): Core_Version {
-  return `${version.major + randomInt(1, random_component_limit)}.${version.minor + randomInt(1, random_component_limit)}.${version.patch + randomInt(1, random_component_limit)}` // Every increment is random; no component resets.
+  const increments: [number, number, number] = [ randomInt(random_component_limit), randomInt(random_component_limit), randomInt(random_component_limit), ]
+  increments[randomInt(increments.length)] = randomInt(1, random_component_limit) // Force at least one component to increase.
+  return `${version.major + increments[0]}.${version.minor + increments[1]}.${version.patch + increments[2]}` // Other components may remain unchanged; none resets.
 }
 
 function random_prerelease(stable_version: Core_Version): release_stages.Release {
