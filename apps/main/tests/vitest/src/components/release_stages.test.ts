@@ -12,15 +12,16 @@ const project_version = new semver.SemVer(package_json.version, { loose: true, }
 const project_core_version = `${project_version.major}.${project_version.minor}.${project_version.patch}` as Core_Version
 const { prerelease_stage_groups, unversioned_releases, } = release_stages
 
-test('to_HTML_attr serializes and validates releases', () => {
+test('to_HTML_attr serializes and validates releases', ({ g, }) => {
+  const future_project_version = random_future_version(project_version, g) // Always strictly newer than the package version.
   const localized: Localized = {
-    'zh-CN': random_prerelease(future_project_version),
+    'zh-CN': random_prerelease(future_project_version, g),
     en: 'planned',
     fr: project_core_version,
   }
   expect(JSON.parse(release_stages.to_HTML_attr(localized))).toEqual(localized)
   const serialize = (release: release_stages.Release) => release_stages.to_HTML_attr({ 'zh-CN': release, en: 'blank', })
-  expect(() => serialize(random_prerelease(random_older_version(project_version)))).toThrow(/Invalid release/) // Prerelease cannot target an older core.
+  expect(() => serialize(random_prerelease(random_older_version(project_version, g), g))).toThrow(/Invalid release/) // Prerelease cannot target an older core.
   expect(() => serialize(future_project_version)).toThrow(/Invalid release/) // A future version cannot already be stable.
 })
 
