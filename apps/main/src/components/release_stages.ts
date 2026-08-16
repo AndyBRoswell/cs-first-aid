@@ -46,11 +46,9 @@ export function get_stage(release: string): string {
 }
 
 export function compare(left_release: Release, right_release: Release): number {
-  const left_is_unversioned = unversioned_releases.includes(left_release.toLowerCase())
-  const right_is_unversioned = unversioned_releases.includes(right_release.toLowerCase())
-  if (left_is_unversioned || right_is_unversioned) { return left_is_unversioned === right_is_unversioned ? 0 : left_is_unversioned ? -1 : 1 }
-  const left = parse_version(left_release)
-  const right = parse_version(right_release)
+  const left = unversioned_releases.includes(left_release.toLowerCase()) ? undefined : parse_version(left_release)
+  const right = unversioned_releases.includes(right_release.toLowerCase()) ? undefined : parse_version(right_release)
+  if (left === undefined || right === undefined) { return left === right ? 0 : left === undefined ? -1 : 1 }
   const core_comparison = left.semver.compareMain(right.semver)
   if (core_comparison !== 0) { return core_comparison } // The core version always takes precedence over its stage.
   if (left.stage_index === undefined || right.stage_index === undefined) { return left.stage_index === right.stage_index ? 0 : left.stage_index === undefined ? 1 : -1 } // A stable release follows every prerelease of the same core.
