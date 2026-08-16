@@ -26,8 +26,7 @@ test('to_HTML_attr serializes and validates releases', () => {
   }
   expect(JSON.parse(release_stages.to_HTML_attr(localized))).toEqual(localized)
   const serialize = (release: release_stages.Release) => release_stages.to_HTML_attr({ 'zh-CN': release, en: 'blank', })
-  const older_version = `${project_version.major - 1}.${randomInt(random_component_limit)}.${randomInt(random_component_limit)}` as Core_Version
-  expect(() => serialize(random_prerelease(older_version))).toThrow(/Invalid release/) // Prerelease cannot target an older core.
+  expect(() => serialize(random_prerelease(random_older_version(project_version)))).toThrow(/Invalid release/) // Prerelease cannot target an older core.
   expect(() => serialize(future_project_version)).toThrow(/Invalid release/) // A future version cannot already be stable.
 })
 
@@ -109,6 +108,16 @@ function random_future_version(version: semver.SemVer): Core_Version {
   const increments: [number, number, number] = [ randomInt(random_component_limit), randomInt(random_component_limit), randomInt(random_component_limit), ]
   increments[randomInt(increments.length)] = randomInt(1, random_component_limit) // Force at least one component to increase.
   return `${version.major + increments[0]}.${version.minor + increments[1]}.${version.patch + increments[2]}` // Other components may remain unchanged; none resets.
+}
+
+function random_older_version(version: semver.SemVer): Core_Version {
+  const components: [number, number, number] = [ version.major, version.minor, version.patch, ]
+  const reducible_indices = components.flatMap((component, index) => component === 0 ? [] : [ index, ])
+  if (reducible_indices.length === 0) { throw new RangeError('No semantic version is older than 0.0.0.') }
+  const reduced_index = reducible_indices[randomInt(reducible_indices.length)]!
+  const decrements = components.map(component => randomInt(component + 1))
+  decrements[reduced_index] = randomInt(1, components[reduced_index]! + 1) // Force at least one component to decrease.
+  return components.map((component, index) => component - decrements[index]!).join('.') as Core_Version // Other components may remain unchanged or also decrease.
 }
 
 function random_prerelease(stable_version: Core_Version): release_stages.Release {
