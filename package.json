@@ -18,6 +18,8 @@
     "url": "git+https://github.com/AndyBRoswell/cs-first-aid.git"
   },
   "devDependencies": {
-    "typescript": "^6.0.3"
+    "@fast-check/vitest": "^0.4.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
   }
 }

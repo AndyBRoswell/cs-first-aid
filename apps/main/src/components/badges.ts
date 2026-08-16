@@ -1,4 +1,4 @@
-import type { Localized as Localized_Release_Stages } from './release_stages.ts'
+import { get_stage, type Localized_Release as Localized_Release_Stages } from './release_stages.ts'
 
 export type Meta_Item = Meta_Item_primitive | Meta_Item_object
 export type Meta_Item_primitive = string
@@ -38,7 +38,7 @@ export function attach(root: ParentNode = document) {
       }
       const release_badge = document.createElement('span')
       release_badge.textContent = release_stage
-      release_badge.classList.add('badge', 'release', release_stage)
+      release_badge.classList.add('badge', 'release', get_stage(release_stage))
       badges.append(release_badge)
     }
 
