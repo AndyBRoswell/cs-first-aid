@@ -2,8 +2,8 @@ import * as semver from 'semver'
 import package_json from '@package.json' with { type: 'json' }
 
 const semver_parse_options: semver.Options = { loose: true } // Accept node-semver's documented loose forms.
-const unversioned_releases: ReadonlySet<string> = new Set([ 'blank', 'planned', 'backlog', ]) // Equivalent statuses below every version.
-const prerelease_stage_groups = [ // The first item is canonical; the outer array defines stage order.
+export const unversioned_releases: readonly [string, ...string[]] = [ 'blank', 'planned', 'backlog', ] // Equivalent statuses below every version.
+export const prerelease_stage_groups = [ // The first item is canonical; the outer array defines stage order.
   [ 'dev', 'snapshot', 'nightly', 'pre-alpha', ],
   [ 'alpha', 'a', ],
   [ 'beta', 'b', ],
@@ -25,7 +25,7 @@ export type Localized_Release = {
 export function to_HTML_attr(release_stages: Localized_Release): string {
   for (const [ language, release ] of Object.entries(release_stages)) {
     try {
-      if (unversioned_releases.has(release.toLowerCase())) { continue }
+      if (unversioned_releases.includes(release.toLowerCase())) { continue }
       const parsed = parse_version(release)
       const comparison = compare(release, project_version)
       const is_stable = parsed.semver.prerelease.length === 0
@@ -39,15 +39,15 @@ export function to_HTML_attr(release_stages: Localized_Release): string {
 }
 
 export function get_stage(release: string): string {
-  if (unversioned_releases.has(release.toLowerCase())) { return 'blank' }
+  if (unversioned_releases.includes(release.toLowerCase())) { return 'blank' }
   const parsed = parse_version(release)
   if (parsed.semver.prerelease.length === 0) { return 'stable' }
   return prerelease_stage_groups[parsed.stage_index!]![0] // Every prerelease has a supported stage after parsing.
 }
 
 export function compare(left_release: Release, right_release: Release): number {
-  const left_is_unversioned = unversioned_releases.has(left_release.toLowerCase())
-  const right_is_unversioned = unversioned_releases.has(right_release.toLowerCase())
+  const left_is_unversioned = unversioned_releases.includes(left_release.toLowerCase())
+  const right_is_unversioned = unversioned_releases.includes(right_release.toLowerCase())
   if (left_is_unversioned || right_is_unversioned) { return left_is_unversioned === right_is_unversioned ? 0 : left_is_unversioned ? -1 : 1 }
   const left = parse_version(left_release)
   const right = parse_version(right_release)
