@@ -45,7 +45,6 @@
     "@types/semver": "^7.8.0",
     "cssesc": "^3.0.0",
     "fast-glob": "^3.3.3",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.10"
+    "typescript": "^6.0.3"
   }
 }
