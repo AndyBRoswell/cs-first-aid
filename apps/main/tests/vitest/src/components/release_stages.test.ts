@@ -44,17 +44,17 @@ test('get_stage derives the stage from a semantic version', ({ g, }) => {
   }
 })
 
-test('compare orders known stages and canonicalizes their aliases', () => {
-  const version = random_version()
-  const prerelease_number = randomInt(random_component_limit - 1)
-  const later_prerelease_number = randomInt(prerelease_number + 1, random_component_limit)
-  for (const alias of [ 'PLANNED', 'Backlog', ]) { expect.soft(release_stages.compare('blank', alias), `blank = ${alias}`).toBe(0) }
-  for (const [ canonical, ...aliases ] of stage_groups) {
+test('compare orders known stages and canonicalizes their aliases', ({ g, }) => {
+  const version = random_version(g)
+  const prerelease_number = random_integer(g, random_component_limit - 1)
+  const later_prerelease_number = random_integer(g, random_component_limit, prerelease_number + 1)
+  for (const release of unversioned_releases) { expect.soft(release_stages.compare(unversioned_releases[0], g(fc.mixedCase, fc.constant(release))), `${unversioned_releases[0]} = ${release}`).toBe(0) }
+  for (const [ canonical, ...aliases ] of prerelease_stage_groups) {
     for (const alias of [ canonical, ...aliases, ]) {
-      expect.soft(release_stages.compare(`${version}-${canonical}`, `${version}-${alias.toUpperCase()}`), `${canonical} = ${alias}`).toBe(0)
+      expect.soft(release_stages.compare(`${version}-${canonical}`, `${version}-${g(fc.mixedCase, fc.constant(alias))}`), `${canonical} = ${alias}`).toBe(0)
     }
   }
-  const ordered_releases = [ 'backlog', ...stage_groups.map(([ canonical, ]) => `${version}-${canonical}`), version, ] // Compare every adjacent stage.
+  const ordered_releases = [ unversioned_releases[0], ...prerelease_stage_groups.map(([ canonical, ]) => `${version}-${canonical}`), version, ] // Compare every adjacent stage.
   for (let index = 1; index < ordered_releases.length; index++) {
     const earlier = ordered_releases[index - 1]!
     const later = ordered_releases[index]!
@@ -62,9 +62,12 @@ test('compare orders known stages and canonicalizes their aliases', () => {
     expect.soft(release_stages.compare(later, earlier), `${later} > ${earlier}`).toBeGreaterThan(0)
   }
   expect(release_stages.compare(version, version)).toBe(0)
-  expect(release_stages.compare(`${version}-beta.${prerelease_number}`, `${version}-B.${prerelease_number}`)).toBe(0)
-  expect(release_stages.compare(`${version}-beta.${prerelease_number}`, `${version}-beta.${later_prerelease_number}`)).toBeLessThan(0)
-  expect(release_stages.compare(`${version}-rc`, `${random_future_version(new semver.SemVer(version))}-dev`)).toBeLessThan(0) // Core version takes precedence.
+  const numbered_group = prerelease_stage_groups[random_integer(g, prerelease_stage_groups.length)]!
+  const numbered_stage = numbered_group[0]
+  const numbered_alias = numbered_group[random_integer(g, numbered_group.length)]!
+  expect(release_stages.compare(`${version}-${numbered_stage}.${prerelease_number}`, `${version}-${g(fc.mixedCase, fc.constant(numbered_alias))}.${prerelease_number}`)).toBe(0)
+  expect(release_stages.compare(`${version}-${numbered_stage}.${prerelease_number}`, `${version}-${numbered_stage}.${later_prerelease_number}`)).toBeLessThan(0)
+  expect(release_stages.compare(`${version}-${prerelease_stage_groups.at(-1)![0]}`, `${random_future_version(new semver.SemVer(version), g)}-${prerelease_stage_groups[0][0]}`)).toBeLessThan(0) // Core version takes precedence.
 })
 
 test('get_stage rejects every unsupported form', () => {
