@@ -1,5 +1,5 @@
-import { randomInt } from 'node:crypto'
-import { expect, test } from 'vitest'
+import { fc, test } from '@fast-check/vitest'
+import { expect } from 'vitest'
 import * as semver from 'semver'
 import * as release_stages from '@/components/release_stages.ts'
 import package_json from '@package.json' with { type: 'json' }
@@ -104,26 +104,28 @@ test('get_stage rejects every unsupported form', () => {
   }
 })
 
-function random_future_version(version: semver.SemVer): Core_Version {
-  const increments: [number, number, number] = [ randomInt(random_component_limit), randomInt(random_component_limit), randomInt(random_component_limit), ]
-  increments[randomInt(increments.length)] = randomInt(1, random_component_limit) // Force at least one component to increase.
+function random_future_version(version: semver.SemVer, g: fc.GeneratorValue): Core_Version {
+  const increments: [number, number, number] = [ random_integer(g, random_component_limit), random_integer(g, random_component_limit), random_integer(g, random_component_limit), ]
+  increments[random_integer(g, increments.length)] = random_integer(g, random_component_limit, 1) // Force at least one component to increase.
   return `${version.major + increments[0]}.${version.minor + increments[1]}.${version.patch + increments[2]}` // Other components may remain unchanged; none resets.
 }
 
-function random_older_version(version: semver.SemVer): Core_Version {
+function random_older_version(version: semver.SemVer, g: fc.GeneratorValue): Core_Version {
   const components: [number, number, number] = [ version.major, version.minor, version.patch, ]
   const reducible_indices = components.flatMap((component, index) => component === 0 ? [] : [ index, ])
   if (reducible_indices.length === 0) { throw new RangeError('No semantic version is older than 0.0.0.') }
-  const reduced_index = reducible_indices[randomInt(reducible_indices.length)]!
-  const decrements = components.map(component => randomInt(component + 1))
-  decrements[reduced_index] = randomInt(1, components[reduced_index]! + 1) // Force at least one component to decrease.
+  const reduced_index = reducible_indices[random_integer(g, reducible_indices.length)]!
+  const decrements = components.map(component => random_integer(g, component + 1))
+  decrements[reduced_index] = random_integer(g, components[reduced_index]! + 1, 1) // Force at least one component to decrease.
   return components.map((component, index) => component - decrements[index]!).join('.') as Core_Version // Other components may remain unchanged or also decrease.
 }
 
-function random_prerelease(stable_version: Core_Version): release_stages.Release {
-  const group = prerelease_stage_groups[randomInt(prerelease_stage_groups.length)]!
-  const prerelease_identifier = group[randomInt(group.length)]!
-  return `${stable_version}-${prerelease_identifier}.${randomInt(random_component_limit)}`
+function random_prerelease(stable_version: Core_Version, g: fc.GeneratorValue): release_stages.Release {
+  const group = prerelease_stage_groups[random_integer(g, prerelease_stage_groups.length)]!
+  const prerelease_identifier = group[random_integer(g, group.length)]!
+  return `${stable_version}-${prerelease_identifier}.${random_integer(g, random_component_limit)}`
 }
 
-function random_version(): Core_Version { return `${randomInt(random_component_limit)}.${randomInt(random_component_limit)}.${randomInt(random_component_limit)}` }
+function random_version(g: fc.GeneratorValue): Core_Version { return `${random_integer(g, random_component_limit)}.${random_integer(g, random_component_limit)}.${random_integer(g, random_component_limit)}` }
+
+function random_integer(g: fc.GeneratorValue, maximum_exclusive: number, minimum = 0): number { return g(fc.integer, { min: minimum, max: maximum_exclusive - 1, }) }
