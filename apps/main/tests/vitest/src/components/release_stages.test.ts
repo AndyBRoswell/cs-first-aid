@@ -25,23 +25,21 @@ test('to_HTML_attr serializes and validates releases', ({ g, }) => {
   expect(() => serialize(future_project_version)).toThrow(/Invalid release/) // A future version cannot already be stable.
 })
 
-test('get_stage derives the stage from a semantic version', () => {
-  const version = random_version()
-  const prerelease_number = randomInt(random_component_limit)
-  const expected_stages = [
-    [ 'blank', 'blank', ],
-    [ 'PLANNED', 'blank', ],
-    [ 'Backlog', 'blank', ],
-    [ version, 'stable', ],
-    [ `=${version}-DEV`, 'dev', ], // Loose parsing remains enabled.
-  ] as const
-  for (const [ release, expected_stage ] of expected_stages) {
-    expect.soft(release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toBe(expected_stage)
+test('get_stage derives the stage from a semantic version', ({ g, }) => {
+  const version = random_version(g)
+  const prerelease_number = random_integer(g, random_component_limit)
+  expect(release_stages.get_stage(version)).toBe('stable')
+  for (const configured_release of unversioned_releases) {
+    for (const release of [ configured_release, g(fc.mixedCase, fc.constant(configured_release)), ]) {
+      expect.soft(release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toBe('blank')
+    }
   }
-  for (const [ canonical, ...aliases ] of stage_groups) {
-    for (const alias of [ canonical, ...aliases, ]) {
-      const release = `${version}-${alias.toUpperCase()}.${prerelease_number}`
-      expect.soft(release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toBe(canonical)
+  for (const semver_prefix of [ '', '=', ]) { // Enumerate strict and loose forms.
+    for (const [ canonical, ...aliases ] of prerelease_stage_groups) {
+      for (const alias of [ canonical, ...aliases, ]) {
+        const release = `${semver_prefix}${version}-${g(fc.mixedCase, fc.constant(alias))}.${prerelease_number}`
+        expect.soft(release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toBe(canonical)
+      }
     }
   }
 })
