@@ -56,7 +56,7 @@ export function compare(left_release: Release, right_release: Release): number {
   if (left.stage_index === undefined || right.stage_index === undefined) { return left.stage_index === right.stage_index ? 0 : left.stage_index === undefined ? 1 : -1 } // A stable release follows every prerelease of the same core.
   const stage_comparison = left.stage_index - right.stage_index
   if (stage_comparison !== 0) { return stage_comparison }
-  if (left.prerelease_number === undefined || right.prerelease_number === undefined) { return left.prerelease_number === right.prerelease_number ? 0 : left.prerelease_number === undefined ? -1 : 1 } // An absent sequence number is earlier.
+  if (left.prerelease_number === undefined || right.prerelease_number === undefined) { return left.prerelease_number === right.prerelease_number ? 0 : left.prerelease_number === undefined ? -1 : 1 } // An absent prerelease number is earlier.
   return semver.compareIdentifiers(String(left.prerelease_number), String(right.prerelease_number))
 }
 
@@ -64,10 +64,10 @@ function parse_version(value: string): Parsed_Version {
   const version = semver.parse(value, semver_parse_options)
   if (version === null) { throw new TypeError(`Invalid semantic version: ${JSON.stringify(value)}`) }
   if (version.prerelease.length === 0) { return { semver: version, } }
-  const [ identifier, ...sequences ] = version.prerelease
+  const [ identifier, prerelease_number, ...extra_identifiers ] = version.prerelease
   const normalized = typeof identifier === 'string' ? identifier.toLowerCase() : '' // Known stage names and aliases are case-insensitive.
   const stage_index = prerelease_stage_groups.findIndex(names => names.some(name => name === normalized))
   if (stage_index === -1) { throw new TypeError(`Unsupported prerelease identifier: ${JSON.stringify(identifier)}`) }
-  if (sequences.length > 1 || sequences.some(sequence => !/^\d+$/.test(String(sequence)))) { throw new TypeError(`Prerelease may contain only its stage identifier and one optional numeric identifier: ${JSON.stringify(value)}`) }
-  return sequences[0] === undefined ? { semver: version, stage_index, } : { semver: version, stage_index, prerelease_number: sequences[0], }
+  if (extra_identifiers.length > 0 || prerelease_number !== undefined && !/^\d+$/.test(String(prerelease_number))) { throw new TypeError(`Prerelease may contain only its stage identifier and one optional numeric identifier: ${JSON.stringify(value)}`) }
+  return prerelease_number === undefined ? { semver: version, stage_index, } : { semver: version, stage_index, prerelease_number, }
 }
