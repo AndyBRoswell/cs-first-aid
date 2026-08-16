@@ -10,7 +10,7 @@ const prerelease_stage_groups = [ // The first item is canonical; the outer arra
   [ 'rc', ],
 ] as const
 
-type Parsed_Version = { semver: semver.SemVer; stage_index?: number; stage_name?: string | number }
+type Parsed_Version = { semver: semver.SemVer; stage_index?: number; prerelease_number?: string | number }
 
 export type Release = string // Unversioned names are special; every other value is validated by semver at runtime.
 const project_version = parse_version(package_json.version).semver.version // Validate and normalize the site version once.
@@ -42,7 +42,7 @@ export function get_stage(release: string): string {
   if (unversioned_releases.has(release.toLowerCase())) { return 'blank' }
   const parsed = parse_version(release)
   if (parsed.semver.prerelease.length === 0) { return 'stable' }
-  return parsed.stage_index === undefined ? String(parsed.semver.prerelease[0]) : prerelease_stage_groups[parsed.stage_index]![0] // Unknown prefixes retain their original class.
+  return prerelease_stage_groups[parsed.stage_index!]![0] // Every prerelease has a supported stage after parsing.
 }
 
 export function compare(left_release: Release, right_release: Release): number {
@@ -53,11 +53,11 @@ export function compare(left_release: Release, right_release: Release): number {
   const right = parse_version(right_release)
   const core_comparison = left.semver.compareMain(right.semver)
   if (core_comparison !== 0) { return core_comparison } // The core version always takes precedence over its stage.
-  if (left.stage_index === undefined || right.stage_index === undefined) { return left.semver.compare(right.semver) } // Stable and unknown stages retain node-semver's native ordering.
+  if (left.stage_index === undefined || right.stage_index === undefined) { return left.stage_index === right.stage_index ? 0 : left.stage_index === undefined ? 1 : -1 } // A stable release follows every prerelease of the same core.
   const stage_comparison = left.stage_index - right.stage_index
   if (stage_comparison !== 0) { return stage_comparison }
-  if (left.stage_name === undefined || right.stage_name === undefined) { return left.stage_name === right.stage_name ? 0 : left.stage_name === undefined ? -1 : 1 } // An absent sequence number is earlier.
-  return semver.compareIdentifiers(String(left.stage_name), String(right.stage_name))
+  if (left.prerelease_number === undefined || right.prerelease_number === undefined) { return left.prerelease_number === right.prerelease_number ? 0 : left.prerelease_number === undefined ? -1 : 1 } // An absent sequence number is earlier.
+  return semver.compareIdentifiers(String(left.prerelease_number), String(right.prerelease_number))
 }
 
 function parse_version(value: string): Parsed_Version {
@@ -67,7 +67,7 @@ function parse_version(value: string): Parsed_Version {
   const [ identifier, ...sequences ] = version.prerelease
   const normalized = typeof identifier === 'string' ? identifier.toLowerCase() : '' // Known stage names and aliases are case-insensitive.
   const stage_index = prerelease_stage_groups.findIndex(names => names.some(name => name === normalized))
+  if (stage_index === -1) { throw new TypeError(`Unsupported prerelease identifier: ${JSON.stringify(identifier)}`) }
   if (sequences.length > 1 || sequences.some(sequence => !/^\d+$/.test(String(sequence)))) { throw new TypeError(`Prerelease may contain only its stage identifier and one optional numeric identifier: ${JSON.stringify(value)}`) }
-  if (stage_index === -1) { return { semver: version, } }
-  return sequences[0] === undefined ? { semver: version, stage_index, } : { semver: version, stage_index, stage_name: sequences[0], }
+  return sequences[0] === undefined ? { semver: version, stage_index, } : { semver: version, stage_index, prerelease_number: sequences[0], }
 }
