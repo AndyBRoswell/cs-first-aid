@@ -1,3 +1,5 @@
+// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+
 import * as semver from 'semver'
 import package_json from '@package.json' with { type: 'json' }
 
