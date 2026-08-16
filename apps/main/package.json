@@ -27,6 +27,7 @@
     "@citation-js/plugin-doi": "^0.8.2",
     "@cs-first-aid/bibkit": "workspace:*",
     "@cs-first-aid/util": "workspace:*",
+    "@eslint-community/regexpp": "^4.12.2",
     "@tailwindcss/vite": "^4.3.3",
     "astro": "^7.2.0",
     "fast-cartesian": "^9.0.1",
