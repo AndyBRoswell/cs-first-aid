@@ -1,9 +1,19 @@
 import * as semver from 'semver'
 import package_json from '@package.json' with { type: 'json' }
 
-const semver_parse_options = { loose: true } as const
-export type Release = string // "blank" is special; every other value is validated by semver at runtime.
-const project_version = parse_project_version()
+const semver_parse_options: semver.Options = { loose: true } // Accept node-semver's documented loose forms.
+const unversioned_releases: ReadonlySet<string> = new Set([ 'blank', 'planned', 'backlog', ]) // Equivalent statuses below every version.
+const prerelease_stage_groups = [ // The first item is canonical; the outer array defines stage order.
+  [ 'dev', 'snapshot', 'nightly', 'pre-alpha', ],
+  [ 'alpha', 'a', ],
+  [ 'beta', 'b', ],
+  [ 'rc', ],
+] as const
+
+type Parsed_Version = { semver: semver.SemVer; stage_index?: number; stage_name?: string | number }
+
+export type Release = string // Unversioned names are special; every other value is validated by semver at runtime.
+const project_version = parse_version(package_json.version).semver.version // Validate and normalize the site version once.
 
 export type Localized_Release = {
   [language: Intl.UnicodeBCP47LocaleIdentifier]: Release
@@ -15,7 +25,12 @@ export type Localized_Release = {
 export function to_HTML_attr(release_stages: Localized_Release): string {
   for (const [ language, release ] of Object.entries(release_stages)) {
     try {
-      validate(release)
+      if (unversioned_releases.has(release.toLowerCase())) { continue }
+      const parsed = parse_version(release)
+      const comparison = compare(release, project_version)
+      const is_stable = parsed.semver.prerelease.length === 0
+      if (is_stable && comparison > 0) { throw new RangeError(`Stable release cannot be newer than project version ${JSON.stringify(project_version)}.`) } // Stable records when the page became stable.
+      if (!is_stable && comparison < 0) { throw new RangeError(`Prerelease cannot be older than project version ${JSON.stringify(project_version)}.`) } // Prerelease targets the current or a future release.
     } catch (cause) {
       throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: ${JSON.stringify(release)}`, { cause })
     }
@@ -24,44 +39,35 @@ export function to_HTML_attr(release_stages: Localized_Release): string {
 }
 
 export function get_stage(release: string): string {
-  if (release === 'blank') { return 'blank' }
-  const [ stage, ] = parse_release(release).prerelease
-  return stage === undefined ? 'stable' : String(stage)
+  if (unversioned_releases.has(release.toLowerCase())) { return 'blank' }
+  const parsed = parse_version(release)
+  if (parsed.semver.prerelease.length === 0) { return 'stable' }
+  return parsed.stage_index === undefined ? String(parsed.semver.prerelease[0]) : prerelease_stage_groups[parsed.stage_index]![0] // Unknown prefixes retain their original class.
 }
 
-function validate(release: string) {
-  if (release === 'blank') { return }
-
-  const version = parse_release(release)
-  const target_version = `${version.major}.${version.minor}.${version.patch}` // A prerelease targets its suffix-free release.
-  if (version.prerelease.length === 0) { // A suffix-free version records when the page became stable.
-    if (semver.gt(target_version, project_version)) {
-      throw new RangeError(
-        `Stable release ${JSON.stringify(release)} cannot be newer than project version ${JSON.stringify(project_version.version)}.`,
-      )
-    }
-    return
-  }
-
-  if (semver.lt(target_version, project_version)) { // Prereleases may target the current or a future site version.
-    throw new RangeError(
-      `Prerelease ${JSON.stringify(release)} cannot target a version older than project version ${JSON.stringify(project_version.version)}.`,
-    )
-  }
+export function compare(left_release: Release, right_release: Release): number {
+  const left_is_unversioned = unversioned_releases.has(left_release.toLowerCase())
+  const right_is_unversioned = unversioned_releases.has(right_release.toLowerCase())
+  if (left_is_unversioned || right_is_unversioned) { return left_is_unversioned === right_is_unversioned ? 0 : left_is_unversioned ? -1 : 1 }
+  const left = parse_version(left_release)
+  const right = parse_version(right_release)
+  const core_comparison = left.semver.compareMain(right.semver)
+  if (core_comparison !== 0) { return core_comparison } // The core version always takes precedence over its stage.
+  if (left.stage_index === undefined || right.stage_index === undefined) { return left.semver.compare(right.semver) } // Stable and unknown stages retain node-semver's native ordering.
+  const stage_comparison = left.stage_index - right.stage_index
+  if (stage_comparison !== 0) { return stage_comparison }
+  if (left.stage_name === undefined || right.stage_name === undefined) { return left.stage_name === right.stage_name ? 0 : left.stage_name === undefined ? -1 : 1 } // An absent sequence number is earlier.
+  return semver.compareIdentifiers(String(left.stage_name), String(right.stage_name))
 }
 
-function parse_release(release: string): semver.SemVer {
-  const version = semver.parse(release, semver_parse_options)
-  if (version === null) {
-    throw new TypeError(`Release must be "blank" or a valid semantic version: ${JSON.stringify(release)}`)
-  }
-  return version
-}
-
-function parse_project_version(): semver.SemVer {
-  const version = semver.parse(package_json.version, semver_parse_options)
-  if (version === null) {
-    throw new TypeError(`Project version must be a valid three-part semantic version: ${JSON.stringify(package_json.version)}`)
-  }
-  return version
+function parse_version(value: string): Parsed_Version {
+  const version = semver.parse(value, semver_parse_options)
+  if (version === null) { throw new TypeError(`Invalid semantic version: ${JSON.stringify(value)}`) }
+  if (version.prerelease.length === 0) { return { semver: version, } }
+  const [ identifier, ...sequences ] = version.prerelease
+  const normalized = typeof identifier === 'string' ? identifier.toLowerCase() : '' // Known stage names and aliases are case-insensitive.
+  const stage_index = prerelease_stage_groups.findIndex(names => names.some(name => name === normalized))
+  if (sequences.length > 1 || sequences.some(sequence => !/^\d+$/.test(String(sequence)))) { throw new TypeError(`Prerelease may contain only its stage identifier and one optional numeric identifier: ${JSON.stringify(value)}`) }
+  if (stage_index === -1) { return { semver: version, } }
+  return sequences[0] === undefined ? { semver: version, stage_index, } : { semver: version, stage_index, stage_name: sequences[0], }
 }
