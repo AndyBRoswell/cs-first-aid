@@ -10,13 +10,7 @@ type Localized = Parameters<typeof release_stages.to_HTML_attr>[0]
 const random_component_limit: number = 10_000 // Exclusive upper bound for generated core and prerelease numbers.
 const project_version = new semver.SemVer(package_json.version, { loose: true, })
 const project_core_version = `${project_version.major}.${project_version.minor}.${project_version.patch}` as Core_Version
-const future_project_version = random_future_version(project_version) // Always strictly newer than the package version.
-const stage_groups = [ // The first name is canonical; group order is the expected release order.
-  [ 'dev', 'snapshot', 'nightly', 'pre-alpha', ],
-  [ 'alpha', 'a', ],
-  [ 'beta', 'b', ],
-  [ 'rc', ],
-] as const
+const { prerelease_stage_groups, unversioned_releases, } = release_stages
 
 test('to_HTML_attr serializes and validates releases', () => {
   const localized: Localized = {
