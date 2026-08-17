@@ -82,9 +82,9 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Never Pay for Bootcamps',
       },
-      slug: '',
+      slug: 'tools-and-ideas/never-pay-for-bootcamps',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
       },
     },
     {
