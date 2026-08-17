@@ -142,7 +142,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Know about the Entire Industry',
       },
-      slug: '',
+      slug: 'tools-and-ideas/know-about-the-entire-industry',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
       },
@@ -162,9 +162,9 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Get Familiar with Productive Tools',
       },
-      slug: '',
+      slug: 'tools-and-ideas/get-familiar-with-productive-tools',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
       },
     },
     {
