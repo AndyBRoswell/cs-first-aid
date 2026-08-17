@@ -28,23 +28,13 @@ export const Preface = {
       },
     },
     {
-      label: '什么样的人可以/应该报读计算机专业',
+      label: '什么样的人适合计算机行业？什么人不适合？',
       translations: {
-        en: 'Which People Can/Should Select Computer Science Majors',
+        en: 'Which People Are Suited for Computer Industry? Which People Are Not?',
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      },
-    },
-    {
-      label: '什么样的人不应该报读计算机专业',
-      translations: {
-        en: 'Which People Should NOT Select Computer Science Majors',
-      },
-      slug: '',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
       },
     },
     {
