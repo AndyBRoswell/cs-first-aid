@@ -180,7 +180,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
     {
       label: '善用人工智能',
       translations: {
-        en: 'Using AI',
+        en: 'Make Good Use of AI',
       },
       slug: '',
       attrs: {
