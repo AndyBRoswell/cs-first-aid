@@ -102,9 +102,9 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Edu Mailboxes',
       },
-      slug: '',
+      slug: 'tools-and-ideas/edu-mails',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
       },
     },
     {
