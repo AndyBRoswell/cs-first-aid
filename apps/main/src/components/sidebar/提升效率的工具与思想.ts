@@ -160,7 +160,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
     {
       label: '熟练使用生产力工具',
       translations: {
-        en: 'Get Familiar with Using Productive Tools',
+        en: 'Get Familiar with Productive Tools',
       },
       slug: '',
       attrs: {
