@@ -90,11 +90,11 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
     {
       label: '用钱换时间',
       translations: {
-        en: 'Time over Money',
+        en: 'Save Time with Money',
       },
-      slug: '',
+      slug: 'tools-and-ideas/save-time-with-money',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
       },
     },
     {
