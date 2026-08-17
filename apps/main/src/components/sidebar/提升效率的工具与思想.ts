@@ -2,9 +2,9 @@ import type { SidebarItem } from "@/types/starlight.ts";
 import * as release_stages from '../release_stages.ts'
 
 export const Tools_and_Ideas_to_Improve_Efficiency = {
-  label: '提升效率的工具与思想',
+  label: '工具与思想',
   translations: {
-    en: 'Tools and Ideas to Improve Efficiency',
+    en: 'Tools and Ideas',
   },
   items: [
     {
@@ -72,7 +72,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Free/Cost-Efficient Cloud Services',
       },
-      slug: 'tools-and-ideas-to-improve-efficiency/free-and-cost-efficient-cloud-services',
+      slug: 'tools-and-ideas/free-and-cost-efficient-cloud-services',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
       },
