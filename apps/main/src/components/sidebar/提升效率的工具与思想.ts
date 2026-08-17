@@ -28,6 +28,16 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       },
     },
     {
+      label: '优质信息源',
+      translations: {
+        en: 'Excellent Information Sources',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      }
+    },
+    {
       label: '计算机',
       translations: {
         en: 'Computers'
