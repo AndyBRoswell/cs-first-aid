@@ -32,7 +32,7 @@ export const Preface = {
       translations: {
         en: 'Which People Are Suited for Computer Industry? Which People Are Not?',
       },
-      slug: '',
+      slug: 'preface/which-people-are-not-suited-for-computer-industry',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
       },
