@@ -122,7 +122,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Taking Notes',
       },
-      slug: '',
+      slug: 'tools-and-ideas/taking-notes',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
       },
@@ -132,7 +132,7 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Text Materials over Videos',
       },
-      slug: '',
+      slug: 'tools-and-ideas/text-materials-over-videos',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
       },
@@ -142,9 +142,9 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Do Practices',
       },
-      slug: '',
+      slug: 'tools-and-ideas/do-practices',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
       },
     },
     {
