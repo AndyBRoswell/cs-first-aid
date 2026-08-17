@@ -72,9 +72,9 @@ export const Tools_and_Ideas_to_Improve_Efficiency = {
       translations: {
         en: 'Free/Cost-Efficient Cloud Services',
       },
-      slug: '',
+      slug: 'tools-and-ideas-to-improve-efficiency/free-and-cost-efficient-cloud-services',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
       },
     },
     {
