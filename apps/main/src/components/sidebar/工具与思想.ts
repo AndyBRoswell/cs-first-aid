@@ -32,10 +32,48 @@ export const Tools_and_Ideas = {
       translations: {
         en: 'Computers'
       },
-      slug: '',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      },
+      items: [
+        {
+          label: '概览',
+          translations: {
+            en: 'Overview',
+          },
+          slug: 'tools-and-ideas/computers',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: 'CPU 与 GPU',
+          translations: {
+            en: 'Overview',
+          },
+          slug: 'tools-and-ideas/computers/cpu--gpu',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: '内存与硬盘',
+          translations: {
+            en: 'Overview',
+          },
+          slug: 'tools-and-ideas/computers/memory--disks',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: '配件',
+          translations: {
+            en: 'Overview',
+          },
+          slug: 'tools-and-ideas/computers/accessories',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+      ],
     },
     {
       label: '电子书',
