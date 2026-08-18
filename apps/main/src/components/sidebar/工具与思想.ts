@@ -22,9 +22,9 @@ export const Tools_and_Ideas = {
       translations: {
         en: 'Forming the Habit of Self-Learning',
       },
-      slug: '',
+      slug: 'tools-and-ideas/forming-the-habit-of-self-learning',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
       },
     },
     {
