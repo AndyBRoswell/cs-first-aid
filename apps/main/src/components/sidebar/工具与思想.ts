@@ -46,9 +46,9 @@ export const Tools_and_Ideas = {
         {
           label: 'CPU 与 GPU',
           translations: {
-            en: 'Overview',
+            en: 'CPUs and GPUs',
           },
-          slug: 'tools-and-ideas/computers/cpu--gpu',
+          slug: 'tools-and-ideas/computers/cpus--gpus',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
           },
@@ -56,7 +56,17 @@ export const Tools_and_Ideas = {
         {
           label: '内存与硬盘',
           translations: {
-            en: 'Overview',
+            en: 'Memory and Disks',
+          },
+          slug: 'tools-and-ideas/computers/memory--disks',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: '显示',
+          translations: {
+            en: 'Displays',
           },
           slug: 'tools-and-ideas/computers/memory--disks',
           attrs: {
@@ -66,7 +76,7 @@ export const Tools_and_Ideas = {
         {
           label: '配件',
           translations: {
-            en: 'Overview',
+            en: 'Accessories',
           },
           slug: 'tools-and-ideas/computers/accessories',
           attrs: {
