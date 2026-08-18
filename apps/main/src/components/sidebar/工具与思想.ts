@@ -84,7 +84,7 @@ export const Tools_and_Ideas = {
           },
         },
         {
-          label: '配件',
+          label: '附件',
           translations: {
             en: 'Accessories',
           },
