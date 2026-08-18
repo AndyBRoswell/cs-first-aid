@@ -15,3 +15,13 @@ pre {
   word-wrap: break-word; /* Compatibility fallback: Prevents long continuous strings (e.g., URLs or hashes) from overflowing */
   overflow-wrap: anywhere; /* Modern browsers: Ensures text wraps at any character if necessary */
 }
+
+math {
+  font-family: "STIX Two Math", math, serif;
+}
+
+/* Fixed by GPT-5.6 Thinking Extended [Web] */
+.sl-markdown-content math,
+.sl-markdown-content math * {
+  margin: 0;
+}
