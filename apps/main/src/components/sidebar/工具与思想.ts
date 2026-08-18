@@ -1,7 +1,7 @@
 import type { SidebarItem } from "@/types/starlight.ts";
 import * as release_stages from '../release_stages.ts'
 
-export const Tools_and_Ideas_to_Improve_Efficiency = {
+export const Tools_and_Ideas = {
   label: '工具与思想',
   translations: {
     en: 'Tools and Ideas',

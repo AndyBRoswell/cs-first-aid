@@ -2,9 +2,9 @@ import type { SidebarItem } from "@/types/starlight.ts";
 import * as release_stages from '../release_stages.ts'
 
 export const Critical_Goals_and_Time_Windows = {
-  label: '需要尽早开始或完成的事项',
+  label: '关键目标与时间窗口',
   translations: {
-    en: 'Things Needed to Be Started or Done as Soon as Possible',
+    en: 'Critical Goals and Time Windows',
   },
   items: [
     {
