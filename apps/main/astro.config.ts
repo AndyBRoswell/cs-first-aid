@@ -5,6 +5,11 @@ import fast_glob from 'fast-glob'
 import package_json from "./package.json" with { type: 'json' }
 import { locales, sidebar } from './src/config/starlight.ts'
 import * as Vite_plugin from '@cs-first-aid/bibkit/tools/Vite plugin'
+import * as unist_util_visit from 'unist-util-visit'
+// @ts-ignore: unicodemathml doesn't have type hints
+import * as UnicodeMathML from 'unicodemathml'
+import * as markdown_remark from '@astrojs/markdown-remark'
+import remarkMath from 'remark-math'
 
 /**
  * @deprecated
@@ -30,6 +35,16 @@ function import_course_materials() {
   }
 }
 
+function convert_UnicodeMath() {
+  return (tree: any) => {
+    unist_util_visit.visit(tree, ['inlineMath', 'math'], node => {
+      node.value = UnicodeMathML.convertUnicodeMathToMathML(node.value, { displaystyle: node.type === 'math', })
+      node.type = 'html'
+      delete node.data
+    })
+  }
+}
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -46,6 +61,12 @@ export default defineConfig({
       Vite_plugin.csl_text(),
       tailwindcss(),
     ]
+  },
+  markdown: {
+    processor: markdown_remark.unified({
+      remarkPlugins: [ remarkMath, convert_UnicodeMath ],
+      rehypePlugins: [],
+    })
   },
   integrations: [
     starlight({
