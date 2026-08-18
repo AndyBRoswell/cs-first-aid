@@ -1,7 +1,7 @@
 import type { SidebarItem } from "@/types/starlight.ts";
 import * as release_stages from '../release_stages.ts'
 
-export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
+export const Critical_Goals_and_Time_Windows = {
   label: '需要尽早开始或完成的事项',
   translations: {
     en: 'Things Needed to Be Started or Done as Soon as Possible',
@@ -31,16 +31,6 @@ export const Things_Needed_to_Be_Started_or_Done_as_Soon_as_Possible = {
       label: '决定毕业去向',
       translations: {
         en: 'Determine Your Career Path',
-      },
-      slug: '',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      },
-    },
-    {
-      label: '开源项目',
-      translations: {
-        en: 'Open-Source Projects',
       },
       slug: '',
       attrs: {
