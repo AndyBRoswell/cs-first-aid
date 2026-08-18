@@ -68,7 +68,17 @@ export const Tools_and_Ideas = {
           translations: {
             en: 'Displays',
           },
-          slug: 'tools-and-ideas/computers/memory--disks',
+          slug: 'tools-and-ideas/computers/displays',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: 'I / O',
+          translations: {
+            en: 'I / O',
+          },
+          slug: 'tools-and-ideas/computers/io',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
           },
