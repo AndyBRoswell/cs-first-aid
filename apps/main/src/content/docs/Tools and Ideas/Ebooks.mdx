@@ -1,0 +1,40 @@
+---
+title: 电子书
+pubDate: 2026-08-18
+author: AndyBRoswell
+---
+
+做好**多重**备份（本地 + 网盘、乃至异地备份），特别是学习资料和其它重要数据。
+- 方便做笔记，增加、修改、删除、查找内容及笔记的速率极大提升。
+- 节省住处的空间。
+- 易于携带。
+- 易于备份。
+
+有条件的情况下，建议对电子书做 OCR（光学字符识别）。不过，各大软件的 OCR 功能一般都是收费的。
+- 众多[云服务商](../free-and-cost-efficient-cloud-services)支持文档智能 / OCR 服务，比如 Azure 按月提供一定的免费用量。这些 OCR 机制往往结合了人工智能，识别准确率得到了进一步提升。
+
+有的教材难以买到电子版，可以先买纸质版，然后在网上找店家扫描成电子版并识别文字（可将教材在下单后直接寄给店家进行扫描）。
+
+如需在 PDF 上做笔记：
+- Drawboard PDF（可从 Microsoft Store 获取）有免费和收费的版本。免费版本大概已经够用。
+  - 选用这个软件的一个重要原因是：其它很多软件有一个严重问题——如果增加了笔记又删除，保存的 PDF 文件的大小不会减小。Drawboard PDF 虽然默认情况下亦如此，但可以通过在保存 / 另存为时调节选项来压缩其大小。
+- ABBYY FineReader PDF 在保存时会自动压缩到尽量小，但该软件在未输入序列号时只能保存少量页面（貌似 100 页？）。笔者购买了这个软件的长期授权，当时花了一大笔 RMB（$210，折合￥1???.??）。但因为需要扫描的书非常多，相比之下，这笔一次性的购买很值得，即便无法升级大版本。不过，现在该软件只支持订阅制，不能再通过一次性付款买到永久授权了。
+
+以下是一些免费且开源的 PDF 阅读器 / 编辑器。它们中有不少也同时支持其它电子书格式，还暴露了 API，有一些还已经具有 [👿 BSD](https://en.wikipedia.org/wiki/List_of_BSD_operating_systems) 移植或可以由源码为 BSD 平台编译：
+
+| 📖 软件名称 (阅读器/编辑器)               | 💻 主要编程语言  | 🖥️ 支持的操作系统              | 🔗 源码仓库链接                                             |
+|:------------------------------------------|:-----------------|:-------------------------------|:------------------------------------------------------------|
+| **SumatraPDF** (轻量级阅读器)             | C, C++           | 🪟 Windows                     | [GitHub](https://github.com/sumatrapdfreader/sumatrapdf)    |
+| **Okular** (阅读与批注器)                 | C++              | 🪟 Windows, 🍎 macOS, 🐧 Linux | [KDE Invent](https://invent.kde.org/graphics/okular)        |
+| **Xournal++** (PDF & 手写笔记)            | C++              | 🪟 Windows, 🍎 macOS, 🐧 Linux | [GitHub](https://github.com/xournalpp/xournalpp)            |
+| **Evince** (GNOME 内置阅读器)             | C, C++           | 🪟 Windows, 🍎 macOS, 🐧 Linux | [GNOME GitLab](https://gitlab.gnome.org/GNOME/evince)       |
+| **Sioyek** (教科书与研究论文阅读)         | C, C++           | 🪟 Windows, 🍎 macOS, 🐧 Linux | [GitHub](https://github.com/ahrm/sioyek)                    |
+| **Stirling-PDF** (PDF 编辑工具集)         | Java, JavaScript | 跨平台 (🌐 Web, 🐳 Docker)     | [GitHub](https://github.com/Stirling-Tools/Stirling-PDF)    |
+| **PDFsam Basic** (PDF 拆分 / 合并 / 旋转) | Java             | 🪟 Windows, 🍎 macOS, 🐧 Linux | [GitHub](https://github.com/torakiki/pdfsam)                |
+| **PDF.js** (PDF 阅读与渲染引擎)           | JavaScript       | 跨平台 (🌐 Web)                | [GitHub](https://github.com/mozilla/pdf.js)                 |
+| **MuPDF** (轻量级高性能渲染引擎/阅读器)   | C                | 🪟 Win, 🍎 Mac, 🐧 Linux       | [GitHub (Mirror)](https://github.com/ArtifexSoftware/mupdf) |
+| **Zathura** (可定制 & 无鼠标导航)         | C                | 🍎 macOS, 🐧 Linux             | [GitHub](https://github.com/pwmt/zathura)                   |
+
+（Table by Gemini 3.1 Pro Preview in Google AI Studio. Revised by AndyBRoswell.）
+
+然而，PDF 并不是被设计为方便进行编辑的格式。因而对 PDF 的编辑并不如一些常见格式（如 DOCX、Markdown）来得方便。
