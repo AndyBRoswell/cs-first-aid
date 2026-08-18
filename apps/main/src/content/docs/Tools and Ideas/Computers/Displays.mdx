@@ -4,13 +4,13 @@ pubDate: 2026-08-18
 author: AndyBRoswell
 ---
 
-# 视力与 PPI
+# 根据视力估计所需的 PPI
 
-记最小角分辨率（MAR）为$\theta$，最佳矫正视力（BCVA）为$V$，则
+记最小角分辨率（MAR）为 $\theta$ $"arcmin"$，最佳矫正视力（BCVA）为 $V$（小数记法），则
 $$
-\theta=1/V
+\theta=1/V "arcmin"
 $$
-设观看距离为$d$，像素间距（pixel pitch）为$p$，我们有
+设观看距离为 $d$，像素间距（pixel pitch）为 $p$，我们有
 $$
 tan(1/2 \theta)=(1/2 p)/d
 $$
@@ -18,3 +18,16 @@ $$
 $$
 p=2d tan(1/2 \theta)
 $$
+设单位长度为 $l$，则像素密度
+$$
+\rho=l/p
+$$
+联立得
+$$
+\rho=l/(2d tan(\pi/21600V))
+$$
+代入
+$$
+l=1 "in"
+$$
+则 $\rho$为 PPI。
