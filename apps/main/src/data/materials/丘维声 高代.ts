@@ -28,7 +28,7 @@ const books = [
         free_material: {
           sample_chapter: 'https://www.tup.com.cn/upload/books/yz/032586-01.pdf'
         },
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
   {
@@ -54,7 +54,7 @@ const books = [
         free_material: {
           sample_chapter: 'https://www.tup.com.cn/upload/books/yz/032587-02.pdf'
         },
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
   {
@@ -77,7 +77,7 @@ const books = [
       custom: {
         subtitle: '大学高等代数课程创新教材',
         URL: [ 'https://www.wqbook.com/books/booksn/072924-03' ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
   {
@@ -100,7 +100,7 @@ const books = [
       custom: {
         subtitle: '大学高等代数课程创新教材',
         URL: [ 'https://www.wqbook.com/books/booksn/072925-03' ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
   {
@@ -122,7 +122,7 @@ const books = [
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       custom: {
         URL: [ 'https://www.wqbook.com/books/booksn/057027-03' ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
   {
@@ -145,7 +145,7 @@ const books = [
       custom: {
         URL: [ 'https://www.wqbook.com/books/booksn/057028-04' ],
         free_material: [ 'https://www.tup.com.cn/upload/books/yz/057028-04.pdf' ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]
@@ -177,7 +177,7 @@ const open_courses = [
             m.edition === 1
           , { count: 2 }
         )
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Video,
   },
 ]

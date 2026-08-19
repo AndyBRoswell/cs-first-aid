@@ -25,7 +25,7 @@ const items = [
           URL: 'https://www.wiley.com/en-us/Professional+C%2B%2B%2C+6th+Edition-p-9781394193189',
           accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   } satisfies types_data.Entry,
 ] satisfies types_data.Entry[]

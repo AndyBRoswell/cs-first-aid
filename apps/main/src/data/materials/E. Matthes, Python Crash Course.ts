@@ -24,7 +24,7 @@ const items = [
           type: 'book',
           ISBN: '9781718502703' as CSL.ISBN,
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

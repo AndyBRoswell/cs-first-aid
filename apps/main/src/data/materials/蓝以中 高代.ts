@@ -26,8 +26,8 @@ const items = [
           '北京大学数学教学系列丛书',
           '本科生数学基础课教材',
         ],
-      } satisfies CSL_Data.Custom,
-    } satisfies CSL_Data.Item,
+      } satisfies CSL.Custom,
+    } satisfies CSL.Item,
   },
   {
     id: [],
@@ -52,8 +52,8 @@ const items = [
           '北京大学数学教学系列丛书',
           '本科生数学基础课教材',
         ],
-      } satisfies CSL_Data.Custom,
-    } satisfies CSL_Data.Item,
+      } satisfies CSL.Custom,
+    } satisfies CSL.Item,
   },
 ] satisfies types_data.Entry[]
 

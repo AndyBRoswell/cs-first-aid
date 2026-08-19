@@ -18,7 +18,7 @@ const items = [
         URL: [
           { link: 'https://zh.cppreference.com/c', display_text: '中文（简体）', },
         ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

@@ -23,7 +23,7 @@ const items = [
           issued: { 'date-parts': [ [ 2020, 11, 25 ], ], },
           ISBN: '9781292354873' as CSL.ISBN,
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

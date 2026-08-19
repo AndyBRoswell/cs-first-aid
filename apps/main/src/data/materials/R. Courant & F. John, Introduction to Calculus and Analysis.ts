@@ -33,7 +33,7 @@ const items = [
           ISBN: '978-3-642-58604-0' as CSL.ISBN,
           issued: { "date-parts": [ [ 2012, 12, 6 ] ] },
         } satisfies types_data.Material
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
   {
@@ -67,7 +67,7 @@ const items = [
           ISBN: '978-3-642-57149-7' as CSL.ISBN,
           issued: { "date-parts": [ [ 2012, 12, 6 ] ] },
         } satisfies types_data.Material
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
   {
@@ -96,7 +96,7 @@ const items = [
       custom: {
         subtitle: 'Chapters 5 - 8',
         'eBook Packages': 'Springer Book Archive',
-      } satisfies CSL_Data.Custom
+      } satisfies CSL.Custom
     },
   },
 ] satisfies types_data.Entry[]

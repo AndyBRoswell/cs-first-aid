@@ -42,7 +42,7 @@ const items = [
           issued: { 'date-parts': [ [ 2023 ] ] },
           ISBN: '9781944325190' as CSL.ISBN,
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

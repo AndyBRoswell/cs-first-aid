@@ -19,7 +19,7 @@ const books = [
       language: 'zh-CN',
       custom: {
         "collection-title": [ '高等院校计算机专业及专业基础课系列教材', ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -36,7 +36,7 @@ const books = [
       language: 'zh-CN',
       custom: {
         "collection-title": [ '高等院校计算机专业及专业基础课系列教材', ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
@@ -69,7 +69,7 @@ const open_courses = [
             m.issued['date-parts'][0][0] === 2002
           , { count: 1 }
         )
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Video,
   },
 ]

@@ -106,7 +106,7 @@ const open_courses = [
           , { count: 2 }
         ),
         suggested_playback_speed: [ 1.5, 2, ],
-      } satisfies CSL_Data.Custom
+      } satisfies CSL.Custom
     } satisfies types_data.Video,
   },
 ]

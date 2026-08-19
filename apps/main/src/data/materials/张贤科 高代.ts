@@ -24,7 +24,7 @@ const items = [
             display_text: '豆瓣读书',
           },
         ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

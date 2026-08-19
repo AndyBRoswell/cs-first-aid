@@ -26,7 +26,7 @@ const items = [
           type: 'book',
           ISBN: '978-1-61197-743-1' as CSL.ISBN,
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
   {
@@ -52,7 +52,7 @@ const items = [
           type: 'book',
           ISBN: ':978-1-61197-745-5' as CSL.ISBN,
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

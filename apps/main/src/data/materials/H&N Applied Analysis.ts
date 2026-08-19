@@ -27,7 +27,7 @@ const items = [
             link: 'https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
           },
         ]
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     }
   },
 ] satisfies types_data.Entry[]

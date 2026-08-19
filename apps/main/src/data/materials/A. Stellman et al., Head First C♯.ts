@@ -24,7 +24,7 @@ const items = [
           ISBN: '9781098141783' as CSL.ISBN,
           issued: { 'date-parts': [ [ 2024, 8, 13 ] ] },
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

@@ -25,7 +25,7 @@ const items = [
             link: 'https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/resources/mitres_18_001_f17_full_book_pdf/'
           }
         ]
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     }
   },
 ] satisfies types_data.Entry[]
