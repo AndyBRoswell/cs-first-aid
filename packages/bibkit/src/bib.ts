@@ -69,6 +69,7 @@ export function mangle_references(references: Scoped_References): Mangled_Refere
     }
     else { ret.range[JSON.stringify(action.path)] = [ action.start, counter ] }
   }
+  ret.range['[]'] = [0, counter]
   return ret
 }
 
