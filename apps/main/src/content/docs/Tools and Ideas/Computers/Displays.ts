@@ -1,6 +1,10 @@
 // Created by GPT-5.6 Sol Thinking Extended [web] and GPT-5.6 Sol Medium [codex]. Revised by AndyBRoswell.
 
-import * as node_HTML_parser from 'node-html-parser';
+import * as node_HTML_parser from 'node-html-parser'
+import * as bib from '@cs-first-aid/bibkit/bib'
+import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as util from '@cs-first-aid/util'
+import '@/data/courses/import course materials.ts'
 
 export interface Table_Rendering_Options<Row, Column> {
   include_row?: (row: Readonly<Row>, index: number) => boolean;
@@ -195,3 +199,9 @@ export function diagonal_resolution_PPI_table_data_to_HTML_table(data: Diagonal_
 export function create_diagonal_resolution_PPI_table(resolutions: readonly (readonly [ number, number ])[], diagonal_sizes_in: readonly number[],): string {
   return diagonal_resolution_PPI_table_data_to_HTML_table(create_diagonal_resolution_PPI_table_data(resolutions, diagonal_sizes_in)).toString();
 }
+
+export const mangled_references = bib.mangle_references([
+  ...catalog.filter(m => m.type === 'paper-conference' && util.ieq(m.title!, 'Optimal Rendering for Colour Matrix Displays'), { count: 1 })
+])
+
+export const printed_bib = bib.print_bibliography(mangled_references)
