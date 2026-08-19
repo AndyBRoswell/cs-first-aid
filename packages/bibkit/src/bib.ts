@@ -169,8 +169,7 @@ function _cite(mangled: Mangled_References, citation_item: Citation_Item): Citat
       let context: Citation_Context | undefined = undefined
       if ('condition' in citation_item) {
         condition = citation_item.condition
-        // context = structuredClone(citation_item)
-        context = _.cloneDeep(citation_item)
+        context = _.cloneDeep(citation_item) // shallow copy for filter functions
         // @ts-ignore
         delete (context as Citation_Item).condition
       }
