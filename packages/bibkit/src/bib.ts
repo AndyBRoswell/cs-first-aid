@@ -111,7 +111,6 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
 }
 
 // It seems citation.js can't number the citations correctly when using IEEE style. Implemented it from scratch instead.
-// todo: add locator
 export function cite(mangled: Mangled_References, citation_items: Citation_Item[]): string { // mimic \cite[]{}
   const return_intermediates: string[] = []
   for (const item of citation_items) {
