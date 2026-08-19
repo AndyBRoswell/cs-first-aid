@@ -6,8 +6,8 @@ import * as util from '@cs-first-aid/util';
 
 const logger = pino(util.pino_arg)
 
-logger.info('Importing course materials...')
-const course_materials = import.meta.glob('../materials/*.ts', { eager: true });
-logger.info('Course materials loaded.')
+logger.info('Importing materials...')
+const materials = import.meta.glob('../materials/*.ts', { eager: true });
+logger.info('Materials loaded.')
 
 await catalog.dump_locally()
