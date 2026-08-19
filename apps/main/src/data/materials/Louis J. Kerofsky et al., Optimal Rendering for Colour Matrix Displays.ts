@@ -4,7 +4,7 @@ import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 const papers = [
   {
-    id: [ 'Optimal Rendering for Colour Matrix Displays' ],
+    id: [],
     material: {
       type: 'paper-conference',
       title: 'Optimal Rendering for Colour Matrix Displays',
