@@ -28,7 +28,7 @@ const items = [
           issued: { 'date-parts': [ [ 2023, 5, 23 ] ] },
           ISBN: '9781108837101' as CSL.ISBN,
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

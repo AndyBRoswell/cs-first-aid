@@ -32,7 +32,7 @@ const items = [
           ISBN: '978-1-4419-1959-5' as CSL.ISBN,
           issued: { 'date-parts': [ [ 2010, 11, 29 ] ] },
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

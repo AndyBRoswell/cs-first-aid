@@ -28,7 +28,7 @@ const items = [
           ISBN: '978-3-031-97221-8' as CSL.ISBN,
           issued: { 'date-parts': [ [ 2025, 8, 1 ] ] },
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

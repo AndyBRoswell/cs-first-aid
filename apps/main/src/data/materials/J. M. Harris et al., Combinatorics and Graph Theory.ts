@@ -33,7 +33,7 @@ const items = [
           ISBN: '978-1-4419-2723-1' as CSL.ISBN,
         } satisfies types_data.Material,
         "collection-title-short": 'UTM',
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

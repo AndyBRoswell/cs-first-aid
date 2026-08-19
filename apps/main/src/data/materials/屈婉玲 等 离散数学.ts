@@ -20,7 +20,7 @@ const items = [
       accessed: { 'date-parts': [ [ 2025, 5, 22 ] ] },
       custom: {
         "collection-title-short": '“十一五”国家规划教材',
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {

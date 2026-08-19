@@ -32,7 +32,7 @@ const items = [
           URL: 'https://www.amazon.com/Abstract-Algebra-John-Beachy-ebook/dp/B07NWXPC5D/',
           accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

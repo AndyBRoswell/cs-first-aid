@@ -26,7 +26,7 @@ const items = [
           ISBN: '9781846289699' as CSL.ISBN,
         } satisfies types_data.Material,
         "collection-title-short": 'GTM',
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

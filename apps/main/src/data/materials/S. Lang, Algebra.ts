@@ -36,7 +36,7 @@ const items = [
           issued: { 'date-parts': [ [ 2012, 11, 10 ] ] },
         } satisfies types_data.Material,
         "collection-title-short": 'GTM',
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

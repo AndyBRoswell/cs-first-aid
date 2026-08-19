@@ -32,7 +32,7 @@ const items = [
             display_text: 'Cambridge Aspire',
           },
         ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

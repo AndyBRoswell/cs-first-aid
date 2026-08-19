@@ -33,7 +33,7 @@ const items = [
           issued: { 'date-parts': [ [ 2019, 1, 12 ] ] },
         } satisfies types_data.Material,
         "collection-title-short": 'UTM',
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

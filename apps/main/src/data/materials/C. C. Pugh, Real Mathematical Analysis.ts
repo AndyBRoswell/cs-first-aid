@@ -23,7 +23,7 @@ const items = [
       accessed: { "date-parts": [ [ 2026, 4, 10 ], ], },
       custom: {
         "collection-title-short": 'UTM',
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     }
   },
 ] satisfies types_data.Entry[]

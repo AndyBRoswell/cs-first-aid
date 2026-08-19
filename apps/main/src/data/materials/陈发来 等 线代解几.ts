@@ -26,7 +26,7 @@ const books = [
             display_text: '豆瓣读书',
           },
         ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]
@@ -58,7 +58,7 @@ const open_course = [
             m.edition === 2
           , { count: 1 }
         )
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Video,
   },
 ]

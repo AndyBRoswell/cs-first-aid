@@ -27,7 +27,7 @@ const items = [
           issued: { "date-parts": [ [ 2021, 1, 26 ], ], },
           ISBN: '9780135732588' as CSL.ISBN,
         } satisfies types_data.Material,
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     }
   }
 ] satisfies types_data.Entry[]

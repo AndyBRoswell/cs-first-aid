@@ -21,7 +21,7 @@ const items = [
           { link: 'https://arxiv.org/abs/2201.00145', tag: [ 'arXiv', 'abstract' ] },
           { link: 'https://arxiv.org/pdf/2201.00145', tag: [ 'arXiv', 'PDF' ] },
         ],
-      } satisfies CSL_Data.Custom,
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
