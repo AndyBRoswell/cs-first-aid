@@ -5,150 +5,174 @@ author: AndyBRoswell
 ---
 
 import * as Displays from './Displays.ts'
+import Cite from '@/components/Cite.astro'
+import References from '@/components/References.astro'
+import * as util from '@cs-first-aid/util'
 
-# 根据视力估计所需的 PPI
+<section>
+  # 根据视力估计所需的 PPI
+  记最小角分辨率（MAR）为 $\theta$ $"arcmin"$，视力（UCVA / BCVA）为 $V$（小数记法），则
+  $$
+  \theta=1/V
+  $$
+  设观看距离为 $d$，像素间距（pixel pitch）为 $p$，我们有
+  $$
+  tan(1/2 \theta)=(1/2 p)/d
+  $$
+  即
+  $$
+  p=2d tan(1/2 \theta)
+  $$
+  设单位长度为 $l$，则像素密度
+  $$
+  \rho=l/p
+  $$
+  联立得
+  $$
+  \rho=l/(2d tan(\pi/21600V))
+  $$
+  代入
+  $$
+  l=1\thinsp"in"
+  $$
+  则 $\rho$为 PPI。
+  需要注意的是，这只是一个估计值。显示器的像素密度超过这个值，并不代表完全没有用：
+  - 一般地，人眼对点、线、周期纹理、锯齿、等的敏感度不同。
+  - 子像素布局<Cite mangled_references={Displays.mangled_references} cite_items={ [ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ] }/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
+  - 对比度、观看角度、软件层面的字体抗锯齿等因素会产生较明显的影响。
+  <section>
+    ## 视力等级查找表
+    <Fragment set:html={Displays.create_visual_acuity_table([
+      50,
+      40,
+      30,
+      25,
+      20,
+      15,
+      12.5,
+      10,
+      8,
+      6.25,
+      5,
+      4,
+      3,
+      2.5,
+      2,
+      1.5,
+      1.25,
+      1,
+      0.8,
+      0.625,
+      0.5,
+      0.4,
+      0.333,
+      0.25,
+      0.2,
+    ])}/>
+  </section>
+  <section>
+    ## 视力、观看距离与 PPI 查找表
+    <Fragment set:html={Displays.create_distance_acuity_PPI_table([
+      0.1,
+      0.125,
+      0.16,
+      0.2,
+      0.25,
+      0.333,
+      0.4,
+      0.5,
+      0.667,
+      0.8,
+      1.0,
+      1.25,
+      1.6,
+      2.0,
+      2.5,
+      3.0,
+      4.0,
+      5.0,
+    ], [
+      20,
+      25,
+      30,
+      35,
+      40,
+      50,
+      60,
+      70,
+      75,
+      80,
+      100,
+      125,
+      150,
+      200,
+      250,
+      300,
+      400,
+      500,
+      1000,
+    ])}/>
+  </section>
 
-记最小角分辨率（MAR）为 $\theta$ $"arcmin"$，视力（UCVA / BCVA）为 $V$（小数记法），则
-$$
-\theta=1/V
-$$
-设观看距离为 $d$，像素间距（pixel pitch）为 $p$，我们有
-$$
-tan(1/2 \theta)=(1/2 p)/d
-$$
-即
-$$
-p=2d tan(1/2 \theta)
-$$
-设单位长度为 $l$，则像素密度
-$$
-\rho=l/p
-$$
-联立得
-$$
-\rho=l/(2d tan(\pi/21600V))
-$$
-代入
-$$
-l=1 "in"
-$$
-则 $\rho$为 PPI。
+  <section>
+    ## 显示屏 PPI 查找表
+    通常，显示设备的规格会提供分辨率（记为 $w\timesh$）和对角线尺寸（记为 $d$）。则该显示器的 PPI 为
+    $$
+    \rho=\sqrt(w^2+h^2)/d
+    $$
+    <Fragment set:html={Displays.create_diagonal_resolution_PPI_table([
+      [ 1920, 1080 ],
+      [ 2048, 1080 ],
+      [ 2048, 1152 ],
+      [ 2560, 1440 ],
+      [ 3840, 2160 ],
+      [ 4096, 2160 ],
+      [ 4096, 2304 ],
+      [ 5120, 2880 ],
+      [ 6144, 3240 ],
+      [ 6144, 3456 ],
+      [ 7680, 4320 ],
+      [ 8192, 4320 ],
+      [ 8192, 4608 ],
+      [ 12288, 6480 ],
+      [ 12288, 6912 ],
+      [ 15360, 8640 ],
+      [ 16384, 8640 ],
+      [ 16384, 9216 ],
+    ], [
+      12,
+      13.3,
+      14,
+      15.6,
+      16,
+      17.3,
+      18.4,
+      21.5,
+      23.8,
+      24.5,
+      27,
+      31.1,
+      31.5,
+      32,
+      42,
+      42.5,
+      48,
+      55,
+      65,
+      75,
+      85,
+      100,
+    ])}/>
+    <section>
+      ### 示例
+      对于一台 17.3" 的笔记本，其显示比例一般为 16:9（具有该宽高比的屏幕更大的笔记本往往难以装入常见的背包）。设其分辨率为 1080p，则其 PPI 为
+      $$
+      \rho=(\sqrt(w^2+h^2)/d)|_(w=1920" ""px",h=1080\thinsp"px",d=17.3\thinsp"in")\approx 127.3\thinsp"PPI"
+      $$
+    </section>
+  </section>
 
-## 视力等级速查表
+</section>
+# 参考文献
 
-<Fragment set:html={Displays.create_visual_acuity_table([
-  50,
-  40,
-  30,
-  25,
-  20,
-  15,
-  12.5,
-  10,
-  8,
-  6.25,
-  5,
-  4,
-  3,
-  2.5,
-  2,
-  1.5,
-  1.25,
-  1,
-  0.8,
-  0.625,
-  0.5,
-  0.4,
-  0.333,
-  0.25,
-  0.2,
-])}/>
-
-## 视力、观看距离与 PPI 速查表
-
-<Fragment set:html={Displays.create_distance_acuity_PPI_table([
-  0.1,
-  0.125,
-  0.16,
-  0.2,
-  0.25,
-  0.333,
-  0.4,
-  0.5,
-  0.667,
-  0.8,
-  1.0,
-  1.25,
-  1.6,
-  2.0,
-  2.5,
-  3.0,
-  4.0,
-  5.0,
-], [
-  20,
-  25,
-  30,
-  35,
-  40,
-  50,
-  60,
-  70,
-  75,
-  80,
-  100,
-  125,
-  150,
-  200,
-  250,
-  300,
-  400,
-  500,
-  1000,
-])}/>
-
-## 显示屏 PPI 速查表
-
-<Fragment set:html={Displays.create_diagonal_resolution_PPI_table([
-  [ 1920, 1080 ],
-  [ 2048, 1080 ],
-  [ 2048, 1152 ],
-  [ 2560, 1440 ],
-  [ 3840, 2160 ],
-  [ 4096, 2160 ],
-  [ 4096, 2304 ],
-  [ 5120, 2880 ],
-  [ 6144, 3240 ],
-  [ 6144, 3456 ],
-  [ 7680, 4320 ],
-  [ 8192, 4320 ],
-  [ 8192, 4608 ],
-  [ 12288, 6480 ],
-  [ 12288, 6912 ],
-  [ 15360, 8640 ],
-  [ 16384, 8640 ],
-  [ 16384, 9216 ],
-], [
-  12,
-  13.3,
-  14,
-  15.6,
-  16,
-  17.3,
-  18.4,
-  21.5,
-  23.8,
-  24.5,
-  27,
-  31.1,
-  31.5,
-  32,
-  42,
-  42.5,
-  48,
-  55,
-  65,
-  75,
-  85,
-  100,
-])}/>
+<References materials={Displays.mangled_references} printed_bib={Displays.printed_bib}/>
