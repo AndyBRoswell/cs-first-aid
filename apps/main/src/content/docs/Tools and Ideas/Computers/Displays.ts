@@ -200,8 +200,8 @@ export function create_diagonal_resolution_PPI_table(resolutions: readonly (read
   return diagonal_resolution_PPI_table_data_to_HTML_table(create_diagonal_resolution_PPI_table_data(resolutions, diagonal_sizes_in)).toString();
 }
 
-export const mangled_references = bib.mangle_references([
+export const references = [
   ...catalog.filter(m => m.type === 'paper-conference' && util.ieq(m.title!, 'Optimal Rendering for Colour Matrix Displays'), { count: 1 })
-])
-
+]
+export const mangled_references = bib.mangle_references(references)
 export const printed_bib = bib.print_bibliography(mangled_references)
