@@ -1,4 +1,4 @@
-// Created by GPT-5.6 Sol Thinking Extended [web]. Revised by AndyBRoswell.
+// Created by GPT-5.6 Sol Thinking Extended [web] and GPT-5.6 Sol Medium [codex]. Revised by AndyBRoswell.
 
 import * as node_HTML_parser from 'node-html-parser';
 

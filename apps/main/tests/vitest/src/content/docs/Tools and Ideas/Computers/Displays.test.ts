@@ -1,4 +1,4 @@
-// Created by GPT-5.6 Sol Max [codex].
+// Created by GPT-5.6 Sol Medium [codex]. Revised by AndyBRoswell.
 
 import { expect, test } from 'vitest'
 import * as Displays from '@/content/docs/Tools and Ideas/Computers/Displays.ts'
