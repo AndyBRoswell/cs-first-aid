@@ -157,6 +157,9 @@ importers:
       cssesc:
         specifier: ^3.0.0
         version: 3.0.0
+      lodash-es:
+        specifier: ^4.18.1
+        version: 4.18.1
       pino:
         specifier: ^10.3.1
         version: 10.3.1
@@ -170,6 +173,9 @@ importers:
       '@types/cssesc':
         specifier: ^3.0.2
         version: 3.0.2
+      '@types/lodash-es':
+        specifier: ^4.17.12
+        version: 4.17.12
       '@types/node':
         specifier: ^26.2.0
         version: 26.2.0

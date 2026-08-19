@@ -1,7 +1,7 @@
 import * as catalog from '@cs-first-aid/bibkit/catalog'
 import * as CSL from '@cs-first-aid/bibkit/CSL'
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as _ from '@/libraries/lodash-es.ts'
+import * as _ from '@cs-first-aid/util/lib/lodash-es'
 import * as util from '@cs-first-aid/util'
 
 const books = [
