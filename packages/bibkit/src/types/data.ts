@@ -73,3 +73,17 @@ export type Book = Material & {
   issued: CSL.Date_Variable
 }
 export type Video = Material & { type: 'motion_picture' | 'broadcast' }
+
+export type Citation_Condition = ID_t | Scoped_ID_t | Material_Filter | Qualified_Material_Filter
+
+// https://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#cite-items
+export type Citation_Context = {
+  prefix?: string
+  label?: CSL.Locator_Type
+  locator?: string
+  suffix?: string
+}
+
+export type Citation_Item = Citation_Condition | ({ condition: Citation_Condition } & Citation_Context)
+
+export type Citation_Result = Citation_Context & { numbers: number[] }

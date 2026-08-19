@@ -200,6 +200,25 @@ export type Item = {
   custom?: Record<string, unknown>
 }
 
+// https://docs.citationstyles.org/en/stable/specification.html#locators
+export type Locator_Type =
+  | 'book'
+  | 'chapter'
+  | 'column'
+  | 'figure'
+  | 'folio'
+  | 'issue'
+  | 'line'
+  | 'note'
+  | 'opus'
+  | 'page'
+  | 'paragraph'
+  | 'part'
+  | 'section'
+  | 'sub verbo'
+  | 'verse'
+  | 'volume'
+
 declare const _ISBN: unique symbol
 export type ISBN = string & { readonly [_ISBN]: true }
 
