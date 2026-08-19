@@ -11,6 +11,7 @@ export interface Visual_Acuity_Row {
   readonly MAR: number;
   readonly decimal_acuity: number;
   readonly LogMAR: number;
+  readonly '5-mark': number;
 }
 
 export interface Visual_Acuity_Table_Data {
@@ -40,6 +41,7 @@ export interface Diagonal_Resolution_PPI_Table_Data {
 const visual_acuity_columns = { // Actual headings are also the stable column identifiers exposed to callers.
   'Decimal visual acuity': (row: Visual_Acuity_Row) => format_decimal_acuity(row.decimal_acuity),
   'LogMAR acuity': (row: Visual_Acuity_Row) => format_LogMAR(row.LogMAR),
+  '5-mark': (row: Visual_Acuity_Row) => row['5-mark'].toFixed(1),
   'Snellen fraction (6 m)': (row: Visual_Acuity_Row) => format_Snellen(6, row.MAR),
   'Snellen fraction (20 ft)': (row: Visual_Acuity_Row) => format_Snellen(20, row.MAR),
   'Landolt ring gap (arcmin)': (row: Visual_Acuity_Row) => row.MAR.toFixed(3),
@@ -73,11 +75,15 @@ function create_element(tag_name: string, attributes: Record<string, string> = {
 export function create_visual_acuity_table_data(MAR_values: readonly number[]): Visual_Acuity_Table_Data {
   if (MAR_values.some((MAR) => !Number.isFinite(MAR) || MAR <= 0)) { throw new RangeError('All MAR values must be finite positive numbers.'); }
   return {
-    rows: MAR_values.map(MAR => ({
-      MAR,
-      decimal_acuity: 1 / MAR,
-      LogMAR: Math.log10(MAR),
-    })),
+    rows: MAR_values.map(MAR => {
+      const LogMAR = Math.log10(MAR);
+      return {
+        MAR,
+        decimal_acuity: 1 / MAR,
+        LogMAR,
+        '5-mark': 5 - LogMAR, // GB/T 11533-2011 defines L = 5 - lg(MAR).
+      };
+    }),
   };
 }
 
