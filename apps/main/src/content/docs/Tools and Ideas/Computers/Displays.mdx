@@ -1,12 +1,14 @@
 ---
 title: 显示
-pubDate: 2026-08-18
+pubDate: 2026-08-19
 author: AndyBRoswell
 ---
 
+import * as Displays from './Displays.ts'
+
 # 根据视力估计所需的 PPI
 
-记最小角分辨率（MAR）为 $\theta$ $"arcmin"$，最佳矫正视力（BCVA）为 $V$（小数记法），则
+记最小角分辨率（MAR）为 $\theta$ $"arcmin"$，视力（UCVA / BCVA）为 $V$（小数记法），则
 $$
 \theta=1/V "arcmin"
 $$
@@ -31,3 +33,33 @@ $$
 l=1 "in"
 $$
 则 $\rho$为 PPI。
+
+## 视力等级速查表
+
+<Fragment set:html={Displays.render_visual_acuity_table([
+  50,
+  40,
+  30,
+  25,
+  20,
+  15,
+  12.5,
+  10,
+  8,
+  6.25,
+  5,
+  4,
+  3,
+  2.5,
+  2,
+  1.5,
+  1.25,
+  1,
+  0.8,
+  0.625,
+  0.5,
+  0.4,
+  0.333,
+  0.25,
+  0.2,
+])}/>
