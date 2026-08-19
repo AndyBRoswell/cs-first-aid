@@ -4,7 +4,7 @@ import * as node_HTML_parser from 'node-html-parser'
 import * as bib from '@cs-first-aid/bibkit/bib'
 import * as catalog from '@cs-first-aid/bibkit/catalog'
 import * as util from '@cs-first-aid/util'
-import '@/data/courses/import course materials.ts'
+import '@/data/materials/import materials.ts'
 
 export interface Table_Rendering_Options<Row, Column> {
   include_row?: (row: Readonly<Row>, index: number) => boolean;

@@ -1,6 +1,6 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 import * as catalog from '@cs-first-aid/bibkit/catalog'
-import '@/data/courses/import course materials.ts'
+import '@/data/materials/import materials.ts'
 import * as util from '@cs-first-aid/util'
 
 export const Mathematical_Logic = {
