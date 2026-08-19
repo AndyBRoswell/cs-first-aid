@@ -1,6 +1,10 @@
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vitest/config'
+import * as Vite_plugin from '@cs-first-aid/bibkit/tools/Vite plugin'
 
 export default defineConfig({
+  plugins: [
+    Vite_plugin.csl_text(),
+  ],
   test: {
     dir: 'tests/vitest',
     tags: [
