@@ -8,8 +8,9 @@ import * as catalog from './catalog.ts'
 import * as data_type from './types/data.ts'
 import { check_filter_results, type Filter_Options } from "./catalog.ts"
 import pino from 'pino'
-import * as util from "@cs-first-aid/util";
-import node_os from "node:os";
+import * as util from "@cs-first-aid/util"
+import node_os from "node:os"
+import * as _ from '@cs-first-aid/util/lib/lodash-es'
 
 const logger = pino(util.pino_arg)
 
@@ -167,7 +168,8 @@ function _cite(mangled: Mangled_References, citation_item: Citation_Item): Citat
       let context: Citation_Context | undefined = undefined
       if ('condition' in citation_item) {
         condition = citation_item.condition
-        context = structuredClone(citation_item)
+        // context = structuredClone(citation_item)
+        context = _.cloneDeep(citation_item)
         // @ts-ignore
         delete (context as Citation_Item).condition
       }
