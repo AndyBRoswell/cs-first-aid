@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitest/config'
 import path from 'node:path'
 import * as Vite_plugin from './tools/Vite plugin.ts'
+import { UserConfig } from "vite";
 
 export default defineConfig({
   plugins: [
@@ -41,4 +42,4 @@ export default defineConfig({
       '@tests': path.resolve(import.meta.dirname, './tests'),
     },
   },
-});
+}) satisfies UserConfig as UserConfig;
