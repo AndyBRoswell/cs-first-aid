@@ -4,9 +4,9 @@ import type { Printed_Bibliography } from "@cs-first-aid/bibkit/bib";
 export interface Props {
   materials: Scoped_References,
   printed_bib: Printed_Bibliography,
-  scope_name: Scope_Name,
+  scope_name?: Scope_Name,
 }
-const { materials, printed_bib, scope_name, } = Astro.props
+const { materials, printed_bib, scope_name = [], } = Astro.props
 let material_segment = materials
 for (const name_segment of scope_name) {
   // @ts-ignore: In this case, type of `materials` must be object
