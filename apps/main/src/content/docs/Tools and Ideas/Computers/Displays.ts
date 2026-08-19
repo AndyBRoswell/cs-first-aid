@@ -104,7 +104,7 @@ export function visual_acuity_table_data_to_HTML_table(data: Visual_Acuity_Table
   const body = create_element('tbody');
   for (const row of rows) {
     const table_row = create_element('tr');
-    for (const [, format, ] of columns) { table_row.appendChild(create_element('td', {}, format(row))); }
+    for (const [ , format, ] of columns) { table_row.appendChild(create_element('td', {}, format(row))); }
     body.appendChild(table_row);
   }
   table.appendChild(body);
