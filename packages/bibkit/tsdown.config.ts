@@ -1,4 +1,4 @@
-import { defineConfig } from "tsdown";
+import { defineConfig, type UserConfig } from "tsdown";
 
 export default defineConfig({
   entry: {
@@ -34,10 +34,10 @@ export default defineConfig({
   },
 
   deps: {
-    neverBundle: ['vite'],
+    neverBundle: [ 'vite' ],
   },
 
   exports: {
     devExports: 'development', // automatically generate exports and publishConfig in package.json
   },
-});
+}) satisfies UserConfig as UserConfig;
