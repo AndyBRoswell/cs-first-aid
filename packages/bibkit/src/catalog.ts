@@ -125,7 +125,7 @@ export function add(IDs: ID_t[], material: Material): void {
   else { o = material }
   const digest = ohash.serialize(o)
   if (d.has(digest) === false) {
-    material.id = v.length // automatically generate an id to let citation-js not mistakenly overwrite the existing items due to duplicate ids
+    material.id = v.length.toString() // automatically generate an id to let citation-js not mistakenly overwrite the existing items due to duplicate ids
     v.push(material)
     d.add(digest)
   }
