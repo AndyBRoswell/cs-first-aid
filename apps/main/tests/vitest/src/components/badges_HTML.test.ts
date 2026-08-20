@@ -37,27 +37,20 @@ test('inject reports incomplete localized metadata with its sidebar item', () =>
 })
 
 function create_HTML(serialized_releases: string, serialized_badges: string | null): string {
-  const document_element = create_element('html', { lang: 'zh-CN', }) // The document language drives localized badge resolution.
-  const body = create_element('body')
-  const sidebar = create_element('nav', { class: 'sidebar', }) // Match the Starlight sidebar boundary used by the transformer.
+  const document_element = badges_HTML.create_element('html', { lang: 'zh-CN', }) // The document language drives localized badge resolution.
+  const body = badges_HTML.create_element('body')
+  const sidebar = badges_HTML.create_element('nav', { class: 'sidebar', }) // Match the Starlight sidebar boundary used by the transformer.
   const link_attributes: Record<string, string> = {
     href: '/fixture',
     'data-release-stage': serialized_releases,
   }
   if (serialized_badges !== null) { link_attributes['data-badges'] = serialized_badges } // Leave the optional attribute absent in the negative fixture.
-  const link = create_element('a', link_attributes)
+  const link = badges_HTML.create_element('a', link_attributes)
 
-  link.appendChild(create_element('span', {}, 'Fixture')) // Build label content as a child node, just like Starlight does.
+  link.appendChild(badges_HTML.create_element('span', {}, 'Fixture')) // Build label content as a child node, just like Starlight does.
   sidebar.appendChild(link)
   body.appendChild(new node_HTML_parser.CommentNode('preserved')) // Verify that the transformer preserves existing HTML comments.
   body.appendChild(sidebar)
   document_element.appendChild(body)
   return document_element.toString() // Serialize only after the complete fixture tree has been assembled.
-}
-
-function create_element(tag_name: string, attributes: Record<string, string> = {}, text?: string): node_HTML_parser.HTMLElement {
-  const element = new node_HTML_parser.HTMLElement(tag_name, {}, '') // Construct fixture nodes without parsing HTML fragments.
-  element.setAttributes(attributes)
-  if (text !== undefined) { element.textContent = text } // Treat fixture labels as text rather than executable markup.
-  return element
 }
