@@ -53,11 +53,10 @@ function expect_release_stages_support_all_site_languages(release_stages: Locali
 }
 
 src_util.test('sidebar release stages are complete, and blank for unavailable pages or translations', { tag: '@Sidebar' }, async ({ page }) => {
-  const initial_response = await page.request.get(util.test_server + '/')
-  expect(initial_response.ok()).toBe(true)
-  expect(await initial_response.text()).toContain('<span class="badges"><span class="badge release')
-
-  await page.goto(`${util.test_server}/`)
+  const initial_response = await page.goto(`${util.test_server}/`)
+  expect(initial_response).not.toBeNull()
+  expect(initial_response!.ok()).toBe(true)
+  expect(await initial_response!.text()).toContain('<span class="badges"><span class="badge release')
 
   const rendered_sidebar_links = await get_rendered_sidebar_links(page)
   expect(configured_sidebar_links).not.toHaveLength(0)
