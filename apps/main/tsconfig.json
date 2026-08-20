@@ -6,11 +6,10 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@package.json": ["package.json"],
-      "@tests/*": ["tests/*"]
+      "@/*": ["./src/*"],
+      "@package.json": ["./package.json"],
+      "@tests/*": ["./tests/*"]
     }
   },
   "references": [
