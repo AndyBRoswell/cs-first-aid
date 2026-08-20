@@ -1,3 +1,5 @@
+// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+
 import { defineMiddleware } from 'astro:middleware'
 import * as badges_HTML from '@/components/badges_HTML.ts'
 
