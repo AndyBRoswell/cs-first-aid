@@ -6,6 +6,8 @@
     "module": "nodenext",
     "moduleResolution": "nodenext",
     "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "paths": {
       "@/*": ["./src/*"],
       "@package.json": ["./package.json"],

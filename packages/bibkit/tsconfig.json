@@ -16,6 +16,8 @@
     "sourceMap": true,
     "outDir": "./dist",
     "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "paths": {
       "@/*": ["./src/*"],
       "@tests/*": ["./tests/*"]
