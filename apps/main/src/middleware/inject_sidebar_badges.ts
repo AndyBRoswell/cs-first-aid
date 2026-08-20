@@ -1,7 +1,7 @@
 import { defineMiddleware } from 'astro:middleware'
 import * as badges_HTML from '@/components/badges_HTML.ts'
 
-export const onRequest = defineMiddleware(async function inject_sidebar_badges(_context, next) {
+export const inject_sidebar_badges = defineMiddleware(async function inject_sidebar_badges(_context, next) {
   const response = await next()
   const content_type = response.headers.get('content-type')
   if (response.body === null || content_type?.toLowerCase().includes('text/html') !== true) { return response }
