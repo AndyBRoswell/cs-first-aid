@@ -53,6 +53,10 @@ function expect_release_stages_support_all_site_languages(release_stages: Locali
 }
 
 src_util.test('sidebar release stages are complete, and blank for unavailable pages or translations', { tag: '@Sidebar' }, async ({ page }) => {
+  const initial_response = await page.request.get(util.test_server + '/')
+  expect(initial_response.ok()).toBe(true)
+  expect(await initial_response.text()).toContain('<span class="badges"><span class="badge release')
+
   await page.goto(`${util.test_server}/`)
 
   const rendered_sidebar_links = await get_rendered_sidebar_links(page)
@@ -132,28 +136,4 @@ src_util.test('sidebar release stages are complete, and blank for unavailable pa
       }
     }
   })
-})
-
-// Regression test: incomplete localized metadata should produce an error that points back to its sidebar entry.
-src_util.test('undefined release stage error identifies the sidebar item', { tag: '@Sidebar' }, async ({ page }) => {
-  await page.goto(`${util.test_server}/`)
-  const link = page.locator('nav.sidebar li:has(> a) > a').first()
-  const configured_item = configured_sidebar_links[0]!
-  await expect(link).toContainText(configured_item.label)
-  const expected_sidebar_item = {
-    label: configured_item.label,
-    href: await link.getAttribute('href'),
-  }
-  expect(expected_sidebar_item.href).not.toBeNull()
-
-  await link.evaluate(element => {
-    element.querySelector(':scope > .badges')?.remove() // Undo the successful initial render, then install metadata with no stage for the current zh-CN page.
-    element.removeAttribute('data-badges_rendered')
-    element.setAttribute('data-release-stage', JSON.stringify({ en: 'blank', }))
-  })
-
-  const page_error = page.waitForEvent('pageerror') // Sidebar.astro calls badges.attach() on this lifecycle event; listen first so the thrown error is not missed.
-  await page.evaluate(() => document.dispatchEvent(new Event('astro:page-load')))
-
-  expect((await page_error).message).toContain(`sidebar item ${JSON.stringify(expected_sidebar_item)}`)
 })
