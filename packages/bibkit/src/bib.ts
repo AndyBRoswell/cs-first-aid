@@ -113,47 +113,49 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
 // It seems citation.js can't number the citations correctly when using IEEE style. Implemented it from scratch instead.
 export function cite(mangled: Mangled_References, citation_items: Citation_Item[]): string { // mimic \cite[]{}
   const return_intermediates: string[] = []
-  for (const item of citation_items) {
-    const results = _cite(mangled, item)
-    for (const result of results) {
-      for (const number of result.numbers) {
-        const target_material = mangled.flattened.data[number - 1]!
-        let precursor: string
-        try {
-          precursor = new citation_js.Cite([ target_material ]).format('citation', {
-            format: 'text',
-            template: default_bib_style_name,
-            entry: [ {
-              id: target_material.id,
-              prefix: result.prefix,
-              label: result.label,
-              locator: result.locator,
-              suffix: result.suffix,
-            } ]
-          })
-        }
-        catch (error) {
-          logger.error(`Failed material:${node_os.EOL}${JSON.stringify(target_material, null, 2)}`)
-          throw error
-        }
-        const rendered_prefix = result.prefix ?? ''
-        const citation_number_placeholder = '[1'
-        if (!precursor.startsWith(rendered_prefix + citation_number_placeholder)) {
-          logger.error(`Failed material:${node_os.EOL}${JSON.stringify(target_material, null, 2)}`)
-          throw new Error(`Unexpected citation rendering: ${JSON.stringify(precursor)}`)
-        }
-        const rendered_context_tail = precursor.slice((rendered_prefix + citation_number_placeholder).length)
-        const a = node_html_parser.parse(`<a></a>`).firstChild as node_html_parser.HTMLElement
-        a.setAttribute('href', `#[${number}]`)
-        a.textContent = `${number}`
-        return_intermediates.push(`${rendered_prefix}[${a.toString()}${rendered_context_tail}`)
+  const results = resolve_citations(mangled, citation_items) // Resolve every item before rendering the citations.
+  for (const result of results) { // Render each result with its own citation context.
+    for (const number of result.numbers) { // A filter may resolve one citation item to multiple entries.
+      const target_material = mangled.flattened.data[number - 1]! // Citation numbers are one-based.
+      let precursor: string
+      try {
+        precursor = new citation_js.Cite([ target_material ]).format('citation', {
+          format: 'text',
+          template: default_bib_style_name,
+          entry: [ {
+            id: target_material.id,
+            prefix: result.prefix,
+            label: result.label,
+            locator: result.locator,
+            suffix: result.suffix,
+          } ]
+        })
       }
+      catch (error) {
+        logger.error(`Failed material:${node_os.EOL}${JSON.stringify(target_material, null, 2)}`)
+        throw error
+      }
+      const rendered_prefix = result.prefix ?? ''
+      const citation_number_placeholder = '[1'
+      if (!precursor.startsWith(rendered_prefix + citation_number_placeholder)) {
+        logger.error(`Failed material:${node_os.EOL}${JSON.stringify(target_material, null, 2)}`)
+        throw new Error(`Unexpected citation rendering: ${JSON.stringify(precursor)}`)
+      }
+      const rendered_context_tail = precursor.slice((rendered_prefix + citation_number_placeholder).length)
+      const a = node_html_parser.parse(`<a></a>`).firstChild as node_html_parser.HTMLElement
+      a.setAttribute('href', `#[${number}]`)
+      a.textContent = `${number}`
+      return_intermediates.push(`${rendered_prefix}[${a.toString()}${rendered_context_tail}`)
     }
   }
   return return_intermediates.join('')
 }
 
-function _cite(mangled: Mangled_References, citation_item: Citation_Item): Citation_Result[] {
+export function resolve_citations(mangled: Mangled_References, citation_items: Citation_Item[]): Citation_Result[] { // Resolve all citation items in input order.
+  return citation_items.flatMap(citation_item => resolve_citation(mangled, citation_item)) // Preserve each item's result grouping and context.
+}
+
+function resolve_citation(mangled: Mangled_References, citation_item: Citation_Item): Citation_Result[] { // Resolve one citation item without rendering HTML.
   let search_scope: [ number, number ] = [ 0, mangled.flattened.data.length ]
   let ID: ID_t
   let material_filter: Material_Filter
