@@ -1,3 +1,5 @@
+// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+
 import * as node_HTML_parser from 'node-html-parser'
 import * as badges from './badges.ts'
 

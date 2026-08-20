@@ -1,3 +1,5 @@
+// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+
 import { get_stage, type Localized_Release as Localized_Release_Stages } from './release_stages.ts'
 
 export type Meta_Item = Meta_Item_primitive | Meta_Item_object
