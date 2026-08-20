@@ -145,6 +145,9 @@ importers:
       '@tsconfig/strictest':
         specifier: ^2.0.8
         version: 2.0.8
+      '@types/node':
+        specifier: ^26.2.0
+        version: 26.2.0
       tsdown:
         specifier: ^0.22.14
         version: 0.22.14(@volar/typescript@2.4.28)(typescript@6.0.3)
