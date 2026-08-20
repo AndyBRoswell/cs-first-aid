@@ -4,6 +4,7 @@ pubDate: 2026-08-19
 author: AndyBRoswell
 ---
 
+import { references as R, mangled_references as M, printed_bib as P, } from './Displays.ts'
 import * as Displays from './Displays.ts'
 import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
@@ -38,10 +39,12 @@ import * as util from '@cs-first-aid/util'
   则 $\rho$为 PPI。
   需要注意的是，这只是一个估计值。显示器的像素密度超过这个值，并不代表完全没有用：
   - 一般地，人眼对点、线、周期纹理、锯齿、等的敏感度不同。
-  - 子像素布局<Cite mangled_references={Displays.mangled_references} cite_items={ [ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ] }/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
-  - 对比度、观看角度、软件层面的字体抗锯齿等因素会产生较明显的影响。
+  - 子像素布局<Cite mangled_references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ]}/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
+  - 对比度、观看角度、软件层面的字体抗锯齿等因素也会产生较明显的影响。
+  - 双眼视力常常优于单眼视力。
   <section>
     ## 视力等级查找表
+    本表是参照表<Cite mangled_references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'table', locator: 1, } ]}/><Cite mangled_references={M} cite_items={[ { condition: m => m.author?.some(a => a.given === 'Lea'), label: 'table', locator: '3b.1' } ]}/>制作的。其中，五分记录（5-mark record）源于GB/T 11533-2011<Cite mangled_references={M} cite_items={[ { condition: 'GB/T 11533-2011' } ]}/>。
     <Fragment set:html={Displays.create_visual_acuity_table([
       50,
       40,
@@ -165,12 +168,21 @@ import * as util from '@cs-first-aid/util'
     ])}/>
     <section>
       ### 示例
-      对于一台 17.3" 的笔记本，其显示比例一般为 16:9（具有该宽高比的屏幕更大的笔记本往往难以装入常见的背包）。设其分辨率为 1080p，则其 PPI 为
+      对于一台 17.3" 笔记本（较大尺寸的更容易带来散热与扩展性等方面的实质提升），其显示比例多为 16:9（具有该宽高比的屏幕更大的笔记本往往难以装入常见的背包）。设其分辨率为 1080p，则其 PPI 为
       $$
-      \rho=(\sqrt(w^2+h^2)/d)|_(w=1920" ""px",h=1080\thinsp"px",d=17.3\thinsp"in")\approx 127.3\thinsp"PPI"
+      \rho=(\sqrt(w^2+h^2)/d)|_(w=1920" ""px",h=1080\thinsp"px",d=17.3\thinsp"in")\approx 127.34\thinsp"PPI"
       $$
+      类似地，当分辨率分别为 1440p 及 2160p 时，相应的 PPI 分别为 169.78 与 254.67。
+
+      在观看距离为 $d=75\thinsp"cm"$时，设视力为 1.0，则估算出所需的 PPI 为
+      $$
+      \rho=(l/(2d tan(\pi/21600V)))|_(l=2.54\thinsp"cm", d=75\thinsp"cm", V=1.0)\approx 116.43\thinsp"PPI"
+      $$
+      然而，很多人的视力是优于 1.0 的。分别取视力为 1.25、1.6、2.0，可估算对应的 PPI 分别为 145.53、186.28、232.85。
+
+      可见，显示器 / 显示屏分辨率**大于** 1080p 乃至达到 2160p，很多情况下都是有用的，尤其是在观看静态画面（文档、代码等）的时候。
     </section>
   </section>
 </section>
 # 参考文献
-<References materials={Displays.references} printed_bib={Displays.printed_bib}/>
+<References materials={R} printed_bib={P}/>
