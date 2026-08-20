@@ -31,7 +31,7 @@ export function inject(source: string): string {
   return root.toString()
 }
 
-function create_element(tag_name: string, attributes: Record<string, string>, text?: string): node_HTML_parser.HTMLElement {
+export function create_element(tag_name: string, attributes: Record<string, string> = {}, text?: string): node_HTML_parser.HTMLElement {
   const element = new node_HTML_parser.HTMLElement(tag_name, {}, '')
   element.setAttributes(attributes)
   if (text !== undefined) { element.textContent = text } // Escape badge text instead of interpreting it as HTML.
