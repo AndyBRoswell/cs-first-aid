@@ -1,6 +1,6 @@
 ---
 title: 显示
-pubDate: 2026-08-19
+pubDate: 2026-08-20
 author: AndyBRoswell
 ---
 
@@ -12,7 +12,7 @@ import * as util from '@cs-first-aid/util'
 
 <section>
   # 根据视力估计所需的 PPI
-  记最小角分辨率（MAR）为 $\theta$ $"arcmin"$，视力（UCVA / BCVA）为 $V$（小数记法），则
+  记最小角分辨率（MAR）为 $\theta$ $"arcmin"$，此时对应的视力（UCVA / BCVA）为 $V$（小数记法），则
   $$
   \theta=1/V
   $$
@@ -38,7 +38,7 @@ import * as util from '@cs-first-aid/util'
   $$
   则 $\rho$为 PPI。
   需要注意的是，这只是一个估计值。显示器的像素密度超过这个值，并不代表完全没有用：
-  - 一般地，人眼对点、线、周期纹理、锯齿、等的敏感度不同。
+  - 一般地，人眼对点、线、周期纹理、锯齿等的敏感度不同。
   - 子像素布局<Cite mangled_references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ]}/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
   - 对比度、观看角度、软件层面的字体抗锯齿等因素也会产生较明显的影响。
   - 双眼视力常常优于单眼视力。
@@ -116,7 +116,6 @@ import * as util from '@cs-first-aid/util'
       1000,
     ])}/>
   </section>
-
   <section>
     ## 显示屏 PPI 查找表
     通常，显示设备的规格会提供分辨率（记为 $w\times h$）和对角线尺寸（记为 $d$）。则该显示器的 PPI 为
@@ -170,7 +169,7 @@ import * as util from '@cs-first-aid/util'
     ])}/>
     <section>
       ### 示例
-      对于一台 17.3" 笔记本（较大尺寸的更容易带来散热与扩展性等方面的实质提升），其显示比例多为 16:9（具有该宽高比的屏幕更大的笔记本往往难以装入常见的背包）。设其分辨率为 1080p，则其 PPI 为
+      对于一台 17.3" 笔记本（较大尺寸的更容易带来散热与扩展性等方面的实质提升），其显示比例多为 16:9（屏幕宽高比相同但更大的笔记本往往难以装入背包）。设其分辨率为 1080p，则其 PPI 为
       $$
       \rho=(\sqrt(w^2+h^2)/d)|_(w=1920" ""px",h=1080\thinsp"px",d=17.3\thinsp"in")\approx 127.34\thinsp"PPI"
       $$
