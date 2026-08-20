@@ -201,7 +201,10 @@ export function create_diagonal_resolution_PPI_table(resolutions: readonly (read
 }
 
 export const references = [
-  ...catalog.filter(m => m.type === 'paper-conference' && util.ieq(m.title!, 'Optimal Rendering for Colour Matrix Displays'), { count: 1 })
+  ...catalog.filter(m => m.type === 'paper-conference' && util.ieq(m.title!, 'Optimal Rendering for Colour Matrix Displays'), { count: 1 }),
+  catalog.get('ISO 8596:2017'),
+  catalog.get('GB/T 11533-2011'),
+  ...catalog.filter(m => m.author?.some(a => a.given === 'Lea') && m.type === 'book' && m.issued?.["date-parts"]?.[0]?.[0] === 2011, { count: 1 }),
 ]
 export const mangled_references = bib.mangle_references(references)
 export const printed_bib = bib.print_bibliography(mangled_references)
