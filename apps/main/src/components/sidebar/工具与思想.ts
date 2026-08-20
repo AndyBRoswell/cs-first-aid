@@ -70,7 +70,7 @@ export const Tools_and_Ideas = {
           },
           slug: 'tools-and-ideas/computers/displays',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
           },
         },
         {
