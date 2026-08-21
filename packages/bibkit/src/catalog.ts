@@ -181,7 +181,7 @@ export function check_filter_results(predicate: Material_Filter, results: Materi
 
 export function all(): typeof v { return v }
 
-export async function dump_locally(output_path: string = node_path.join(util.project_root, 'local/materials.json')): Promise<void> {
+export async function dump_locally(output_path: string): Promise<void> {
   if (!process.env["CI"] && process.env["export_materials"]) {
     await node_fs_promises.mkdir(node_path.dirname(output_path), { recursive: true })
     await node_fs_promises.writeFile(output_path, JSON.stringify(v, null, 2), 'utf8')
