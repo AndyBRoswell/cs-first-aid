@@ -10,6 +10,8 @@
     "composite": true,
     "declaration": true,
     "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
     "paths": {
       "@/*": ["./src/*"],
       "@tests/*": ["./tests/*"]
