@@ -74,6 +74,8 @@ test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
     { original: [ { given: 'Amalie Emmy', family: 'Noether' } ], rendered: { default: 'A. E. Noether', full: 'Amalie Emmy Noether' } },
     { original: [ { given: 'Constantinos', family: 'Daskalakis' } ], rendered: { default: 'C. Daskalakis', full: 'Constantinos Daskalakis' } },
     { original: [ { given: 'Κωνσταντίνος', family: 'Δασκαλάκης' } ], rendered: { default: 'Κ. Δασκαλάκης', full: 'Κωνσταντίνος Δασκαλάκης' } },
+    { original: [ { given: 'Igor', family: 'Pavlov' } ], rendered: { default: 'I. Pavlov', full: 'Igor Pavlov' } },
+    { original: [ { given: 'Игорь', family: 'Павлов' } ], rendered: { default: 'И. Павлов', full: 'Игорь Павлов' } },
     { original: [ { family: '一ノ瀬', given: 'ことみ' } ], rendered: { default: '一ノ瀬ことみ', full: '一ノ瀬ことみ' }, },
     { original: [ { family: 'Ichinose', given: 'Kotomi' } ], rendered: { default: 'K. Ichinose', full: 'Kotomi Ichinose' }, },
     { original: [ { family: '涼宮', given: 'ハルヒ' } ], rendered: { default: '涼宮ハルヒ', full: '涼宮ハルヒ' }, },
@@ -96,6 +98,12 @@ test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
     { original: [ { literal: '0x5f3759df' } ], rendered: { default: '0x5f3759df', full: '0x5f3759df' } },
     { original: [ { literal: 'rwxXst' } ], rendered: { default: 'rwxXst', full: 'rwxXst' } },
     { original: [ { literal: 'Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e. V.' } ], rendered: { default: 'Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e. V.', full: 'Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e. V.' } },
+    { original: [ { literal: 'I sang, and thought I sang very well; but he just looked up into my face with a very quizzical expression, and said, ' } ], rendered: { default: 'I sang, and thought I sang very well; but he just looked up into my face with a very quizzical expression, and said, ', full: 'I sang, and thought I sang very well; but he just looked up into my face with a very quizzical expression, and said, ' } },
+    { original: [ { literal: '𠮶个係乜嘢啊❓' } ], rendered: { default: '𠮶个係乜嘢啊❓', full: '𠮶个係乜嘢啊❓' } },
+    { original: [ { literal: '嗰個係乜嘢啊❓' } ], rendered: { default: '嗰個係乜嘢啊❓', full: '嗰個係乜嘢啊❓' } },
+    { original: [ { literal: '🍾' } ], rendered: { default: '🍾', full: '🍾' } },
+    { original: [ { literal: '👨‍👩‍👧‍👦' } ], rendered: { default: '👨‍👩‍👧‍👦', full: '👨‍👩‍👧‍👦' } },
+    { original: [ { literal: '🎉247 玩成晚我同啲兄弟唔会嗌攰🎉' } ], rendered: { default: '🎉247 玩成晚我同啲兄弟唔会嗌攰🎉', full: '🎉247 玩成晚我同啲兄弟唔会嗌攰🎉' } },
   ]
   const items = []
   for (const [ index, name ] of names.entries()) { items.push({ id: index, author: name.original }) }
