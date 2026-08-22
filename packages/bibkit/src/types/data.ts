@@ -38,6 +38,7 @@ export type Tag = string | { text: string, class: Tag[] } // It seems this is a 
 
 export type Link = string | {
   link: string
+  'Content-Type'?: string
   license?: string
   tag?: string[]
   display_text?: string
