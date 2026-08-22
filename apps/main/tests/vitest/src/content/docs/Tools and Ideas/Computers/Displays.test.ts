@@ -12,7 +12,7 @@ test('visual acuity data stays numeric until rendering', () => {
     ],
   })
   const full_table = Displays.visual_acuity_table_data_to_HTML_table(data)
-  expect(full_table.querySelector('thead th')!.text).toBe('MAR')
+  expect(full_table.querySelector('thead th')!.text).toBe('MAR (arcmin)')
   expect(full_table.querySelectorAll('tbody tr').map(row => row.querySelector('td')!.text)).toEqual([ '1', '2', ])
   const table = Displays.visual_acuity_table_data_to_HTML_table(data, {
     include_row: row => row.MAR === 1,
