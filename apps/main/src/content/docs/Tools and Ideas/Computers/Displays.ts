@@ -202,7 +202,12 @@ export function create_diagonal_resolution_PPI_table(resolutions: readonly (read
 
 export const references = [
   ...catalog.filter(m => m.type === 'paper-conference' && util.ieq(m.title!, 'Optimal Rendering for Colour Matrix Displays'), { count: 1 }),
+  catalog.get('SMPTE ST 419:2005'),
+  catalog.get('DCSS'),
+  catalog.get('ISO 216:2007'),
   catalog.get('ISO 8596:2017'),
+  catalog.get('ITU-R BT.709-6'),
+  catalog.get('ITU-R BT.2020-2'),
   catalog.get('GB/T 11533-2011'),
   ...catalog.filter(m => m.author?.some(a => a.given === 'Lea') && m.type === 'book' && m.issued?.["date-parts"]?.[0]?.[0] === 2011, { count: 1 }),
 ]
