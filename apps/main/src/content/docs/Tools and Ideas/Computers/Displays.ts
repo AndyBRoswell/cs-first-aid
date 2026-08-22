@@ -43,7 +43,7 @@ export interface Diagonal_Resolution_PPI_Table_Data {
 }
 
 const visual_acuity_columns = { // Actual headings are also the stable column identifiers exposed to callers.
-  'MAR': (row: Visual_Acuity_Row) => row.MAR.toString(),
+  'MAR (arcmin)': (row: Visual_Acuity_Row) => row.MAR.toString(),
   'Decimal visual acuity': (row: Visual_Acuity_Row) => format_decimal_acuity(row.decimal_acuity),
   'LogMAR acuity': (row: Visual_Acuity_Row) => format_LogMAR(row.LogMAR),
   '5-mark': (row: Visual_Acuity_Row) => row['5-mark'].toFixed(1),
