@@ -12,6 +12,7 @@ const CSL_config = citation_js.plugins.config.get('@csl')
 CSL_config.styles.add('get_rendered_author', get_rendered_author)
 CSL_config.styles.add('get_full_author_names', get_full_author_names)
 
+// Falsehoods Programmers Believe About Names: https://www.kalzumeus.com/2010/06/17/falsehoods-programmers-believe-about-names/
 test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
   tags: [
     'src/get_rendered_author.csl',
