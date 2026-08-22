@@ -33,7 +33,7 @@ import * as util from '@cs-first-aid/util'
       </tr>
     <tr>
       <td>1.41:1（$\sqrt(2):1$）</td>
-      <td>ISO 216<Cite mangled_references={M} cite_items={[{ condition: 'ISO 216:2007', label: 'page', locator: 2 }]}/>规定的纸张长宽比</td>
+      <td>ISO 216<Cite mangled_references={M} cite_items={[{ condition: 'ISO 216:2007', label: 'section', locator: '4.1' }]}/>规定的纸张长宽比</td>
     </tr>
     <tr>
       <td>1.43:1</td>
@@ -147,7 +147,11 @@ import * as util from '@cs-first-aid/util'
   $$
   \rho=l/p
   $$
-  联立得
+  又有
+  $$
+  1\thinsp"arcmin"=1/180 \pi\times 1/60
+  $$
+  消去 $\theta$，得
   $$
   \rho=l/(2d tan(\pi/21600V))
   $$
@@ -155,7 +159,8 @@ import * as util from '@cs-first-aid/util'
   $$
   l=1\thinsp"in"
   $$
-  则 $\rho$为 PPI。
+  则 $\rho$ 为 PPI。
+
   需要注意的是，这只是一个估计值。显示器的像素密度超过这个值，并不代表完全没有用：
   - 一般地，人眼对点、线、周期纹理、锯齿等的敏感度不同。
   - 子像素布局<Cite mangled_references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ]}/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
@@ -177,9 +182,9 @@ import * as util from '@cs-first-aid/util'
   然而，很多人的近视力（裸眼或矫正后）是优于 1.0 的。分别取视力为 1.25、1.6、2.0，可估算对应的 PPI 分别为 145.53、186.28、232.85。
 
   可见，显示器 / 显示屏分辨率**大于** 1080p 乃至达到 2160p，**在许多场景中都是有用的**。
-  - 尤其是在观看静态画面（网页、文档、代码、图片等）的时候，一块高分辨率的屏幕在细节上的提升更容易被注意到，比如即使字号很小也足够清晰的文字：
-    - 一屏同时显示 2 页双列排版的论文的 PDF。
-    - 一屏同时显示多个文件乃至多个项目的代码。
+  - 尤其是观看静态画面（网页、文档、代码、图片等）时，一块高分辨率的屏幕在细节上的提升更容易被注意到，比如即使字号很小也足够清晰的文字。这就使得我们能够：
+    - 在同一屏幕同时阅读 2 页双列排版的论文的 PDF。
+    - 在同一屏幕同时阅读多份源代码文件。
 </section>
 <section>
   # 附表
