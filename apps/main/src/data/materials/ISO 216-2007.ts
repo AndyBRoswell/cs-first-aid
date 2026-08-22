@@ -17,10 +17,12 @@ const standards = [
       language: 'en-US',
       URL: 'https://www.iso.org/standard/36631.html',
       custom: {
-        Preview: {
-          link: 'https://preview.sist.si/sist-preview/36631/c0883203ea25445c9992bb09343620c5/ISO-216-2007.pdf',
-          'Content-Type': 'application/pdf',
-        } as types_data.Link,
+        free_material: {
+          Preview: {
+            link: 'https://preview.sist.si/sist-preview/36631/c0883203ea25445c9992bb09343620c5/ISO-216-2007.pdf',
+            'Content-Type': 'application/pdf',
+          } as types_data.Link,
+        },
       } satisfies CSL.Custom,
     },
   },
