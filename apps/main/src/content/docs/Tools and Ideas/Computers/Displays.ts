@@ -179,7 +179,7 @@ export function diagonal_resolution_PPI_table_data_to_HTML_table(data: Diagonal_
   const table = create_element('table');
   const head = create_element('thead');
   const group_header_row = create_element('tr');
-  group_header_row.appendChild(create_element('th', { rowspan: '2', }, 'Resolution'));
+  group_header_row.appendChild(create_element('th', { rowspan: '2', style: 'min-width: 9rem; white-space: nowrap;', }, 'Resolution'));
   group_header_row.appendChild(create_element('th', { colspan: columns.length.toString(), }, 'Diagonal Size (in)'));
   head.appendChild(group_header_row);
   const column_header_row = create_element('tr');
@@ -189,7 +189,7 @@ export function diagonal_resolution_PPI_table_data_to_HTML_table(data: Diagonal_
   const body = create_element('tbody');
   for (const row of rows) {
     const table_row = create_element('tr');
-    table_row.appendChild(create_element('th', { scope: 'row', }, `${row.resolution[0]} × ${row.resolution[1]}`));
+    table_row.appendChild(create_element('th', { scope: 'row', style: 'min-width: 9rem; white-space: nowrap;', }, `${row.resolution[0]} × ${row.resolution[1]}`));
     for (const { index, } of columns) { table_row.appendChild(create_element('td', {}, row.PPI_values[index]!.toFixed(1))); }
     body.appendChild(table_row);
   }
