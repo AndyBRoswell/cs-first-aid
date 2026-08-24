@@ -273,7 +273,7 @@ export type Custom = {
   tag?: string[]
   subtitle?: string
   'collection-title-short'?: string | string[]
-  free_material?: Data_Type.Link[] | Record<string, Data_Type.Link | Data_Type.Link[]>
+  free_material?: Data_Type.Link[] | Record<string, Data_Type.Link[]>
   for?: unknown
   companion?: (Data_Type.ID_t | Data_Type.Material | Data_Type.Course)[]
   institution?: string[]
