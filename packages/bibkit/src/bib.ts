@@ -72,14 +72,14 @@ export function mangle_references(references: Scoped_References): Mangled_Refere
   return ret
 }
 
-function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, material: Material, number: number, language: string) {
+function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, material: Material, number: number, language: string) { // Apply the site-specific wrapper, anchor, and custom fields to one CSL entry.
   // wrap the original content
   entry.classList.remove('csl-entry')
   entry.classList.add('CSL_Entry')
   const wrapper = node_html_parser.parse(`<div class="csl-entry"></div>`).firstChild as node_html_parser.HTMLElement
   wrapper.set_content(entry.childNodes)
   entry.set_content(wrapper)
-  entry.id = `[${number}]`
+  entry.id = `[${number}]` // Keep bibliography anchors aligned with the numbers rendered by cite().
   // show custom data of this CSL item
   if ('custom' in material) {
     const additional = node_html_parser.parse(`<div class="custom"></div>`).firstChild as node_html_parser.HTMLElement
@@ -93,7 +93,7 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
   }
 }
 
-export function print_bibliography_segment(materials: Material[], { language, start_number }: { language: string, start_number: number }): string {
+export function print_bibliography_segment(materials: Material[], { language, start_number }: { language: string, start_number: number }): string { // Render one scope independently while preserving its global numbering.
   if (!Number.isSafeInteger(start_number) || start_number < 1) { throw new RangeError('start_number must be a positive safe integer') }
   const raw_bib = new citation_js.Cite(materials).format('bibliography', prettified_default_bib_style)
   const original_HTML_root = node_html_parser.parse(raw_bib)
@@ -101,10 +101,10 @@ export function print_bibliography_segment(materials: Material[], { language, st
   if (csl_entries.length !== materials.length) { throw new Error('Unexpected number of bibliography entries') }
   const csl_bib_body = node_html_parser.parse(`<div class="csl-bib-body"></div>`).firstChild as node_html_parser.HTMLElement
   for (const [ index, entry ] of csl_entries.entries()) {
-    const local_number = index + 1
-    const number = start_number + index
+    const local_number = index + 1 // Citation.js restarts each independently formatted segment at one.
+    const number = start_number + index // Translate the segment-local position to the global citation number.
     const original_content = entry.innerHTML
-    const local_number_pattern = new RegExp(`^(\\s*)\\[${local_number}\\]`)
+    const local_number_pattern = new RegExp(`^(\\s*)\\[${local_number}\\]`) // Anchoring avoids replacing bracketed text inside the entry.
     if (!local_number_pattern.test(original_content)) { throw new Error(`Unexpected bibliography entry number: ${local_number}`) }
     entry.set_content(original_content.replace(local_number_pattern, `$1[${number}]`))
     decorate_bibliography_entry(entry, materials[index]!, number, language)
