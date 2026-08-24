@@ -2,14 +2,19 @@
 import type { Material, Scope_Name } from "@cs-first-aid/bibkit/types/data";
 import * as bib from "@cs-first-aid/bibkit/bib";
 export interface Props {
-  mangled_references: bib.Mangled_References,
+  materials: Material[],
+  reference_ranges?: bib.Reference_Ranges,
   scope_name?: Scope_Name,
 }
-const { mangled_references, scope_name = [], } = Astro.props
+const { materials, reference_ranges, scope_name = [], } = Astro.props
 const serialized_scope_name = JSON.stringify(scope_name)
-const [ start, end ] = mangled_references.range[serialized_scope_name]!
-const material_segment = mangled_references.flattened.data.slice(start, end) as Material[]
-const printed_bib = bib.print_bibliography_segment(material_segment, { language: Astro.locals.starlightRoute.lang, start_number: start + 1 })
+const range = reference_ranges?.[serialized_scope_name]
+if (scope_name.length > 0 && reference_ranges === undefined) { throw new Error(`Missing ranges for reference scope: ${serialized_scope_name}`) }
+if (reference_ranges !== undefined && range === undefined) { throw new Error(`Unknown reference scope: ${serialized_scope_name}`) }
+if (range !== undefined && range[1] - range[0] !== materials.length) { throw new Error(`Reference scope length does not match its materials: ${serialized_scope_name}`) }
+const printed_bib = range === undefined
+  ? bib.print_bibliography(materials, { language: Astro.locals.starlightRoute.lang })
+  : bib.print_bibliography_segment(materials, { language: Astro.locals.starlightRoute.lang, start_number: range[0] + 1 })
 ---
 
-<div class="References" data-scope_name={serialized_scope_name} data-material_segment={JSON.stringify(material_segment)} set:html={printed_bib}></div>
+<div class="References" data-scope_name={serialized_scope_name} data-material_segment={JSON.stringify(materials)} set:html={printed_bib}></div>

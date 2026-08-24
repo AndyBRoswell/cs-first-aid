@@ -1,13 +1,14 @@
 ---
-import type { Citation_Item } from "@cs-first-aid/bibkit/types/data"
+import type { Citation_Item, Scoped_References } from "@cs-first-aid/bibkit/types/data"
 import * as bib from "@cs-first-aid/bibkit/bib"
 export interface Props {
-  mangled_references: bib.Mangled_References
+  references: Scoped_References
+  reference_ranges?: bib.Reference_Ranges
   cite_items: Citation_Item[]
 }
-const { mangled_references, cite_items, } = Astro.props
+const { references, reference_ranges, cite_items, } = Astro.props
 ---
-<span class="Cite" set:html={bib.cite(mangled_references, cite_items)}></span>
+<span class="Cite" set:html={bib.cite(references, cite_items, reference_ranges)}></span>
 
 <style>
   .Cite {

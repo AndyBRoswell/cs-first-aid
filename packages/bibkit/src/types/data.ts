@@ -87,4 +87,4 @@ export type Citation_Context = {
 
 export type Citation_Item = Citation_Condition | ({ condition: Citation_Condition } & Citation_Context)
 
-export type Citation_Result = Citation_Context & { numbers: number[] }
+export type Citation_Result = Citation_Context & { entries: { material: Material, number: number }[] }

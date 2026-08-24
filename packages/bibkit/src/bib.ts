@@ -3,7 +3,7 @@ import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import * as node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl'
-import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, Material_Filter, Qualified_Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, } from "./types/data.ts";
+import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name, Serialized_Scope_Name, Material, Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, } from "./types/data.ts";
 import * as catalog from './catalog.ts'
 import { check_filter_results, type Filter_Options } from "./catalog.ts"
 import pino from 'pino'
@@ -22,54 +22,71 @@ const prettified_default_bib_style: object = {
   hyperlinks: true,
 }
 
-const mangling_action_ID = {
+const indexing_action_ID = {
   visit: 0,
   start_key: 1,
   end_key: 2,
 } as const
 
-type mangling_action =
-  | { type: typeof mangling_action_ID.visit, path: string[], node: Scoped_References, }
-  | { type: typeof mangling_action_ID.start_key, path: string[], node: Scoped_References, }
-  | { type: typeof mangling_action_ID.end_key, path: string[], start: number, }
+type indexing_action =
+  | { type: typeof indexing_action_ID.visit, path: string[], node: Scoped_References, }
+  | { type: typeof indexing_action_ID.start_key, path: string[], node: Scoped_References, }
+  | { type: typeof indexing_action_ID.end_key, path: string[], start: number, }
 
-export type Mangled_References = { flattened: typeof citation_js.Cite, range: Record<Serialized_Scope_Name, [ number, number ]> }
-export type Printed_Bibliography = { [key: Serialized_Scope_Name]: string }
+export type Reference_Range = [ start: number, end: number ]
+export type Reference_Ranges = Record<Serialized_Scope_Name, Reference_Range>
 
 // TODO: Test case for loop detection
 // Created by Gemini 3.1 Pro Extended [web]. Revised by AndyBRoswell.
-export function mangle_references(references: Scoped_References): Mangled_References { // flat and partition
-  const ret: Mangled_References = {
-    flattened: new citation_js.Cite(),
-    range: {},
-  }
-  let counter = 0
-  const stack: mangling_action[] = [ { type: mangling_action_ID.visit, node: references, path: [] } ]
+export function get_reference_ranges(references: Scoped_References): Reference_Ranges { // Index every scope without transforming its materials.
+  const ret: Reference_Ranges = {} // Map each serialized scope name to a zero-based half-open range.
+  let counter = 0 // Count the materials that precede the current DFS position.
+  const stack: indexing_action[] = [ { type: indexing_action_ID.visit, node: references, path: [] } ] // Start at the root scope.
   while (stack.length > 0) {
-    const action = stack.pop()!
-    if (action.type === mangling_action_ID.visit) {
-      if (Array.isArray(action.node)) {
-        for (const element of action.node) {
-          ret.flattened.add(element)
-          counter++
-        }
-      }
+    const action = stack.pop()! // Process the most recently scheduled DFS action.
+    if (action.type === indexing_action_ID.visit) {
+      if (Array.isArray(action.node)) { counter += action.node.length } // A leaf advances once for every material it contains.
       else {
-        const keys = Object.keys(action.node)
+        const keys = Object.keys(action.node) // Object insertion order defines the order of sibling scopes.
         for (let i = keys.length - 1; i >= 0; i--) {
           const next_path = [ ...action.path, keys[i] ] as string[]
-          stack.push({ type: mangling_action_ID.start_key, path: next_path, node: action.node[keys[i]!]! })
+          stack.push({ type: indexing_action_ID.start_key, path: next_path, node: action.node[keys[i]!]! }) // Reverse pushing restores insertion order when popping.
         }
       }
     }
-    else if (action.type === mangling_action_ID.start_key) {
-      stack.push({ type: mangling_action_ID.end_key, path: action.path, start: counter })
-      stack.push({ type: mangling_action_ID.visit, node: action.node, path: action.path })
+    else if (action.type === indexing_action_ID.start_key) {
+      stack.push({ type: indexing_action_ID.end_key, path: action.path, start: counter }) // Save the boundary before visiting this scope.
+      stack.push({ type: indexing_action_ID.visit, node: action.node, path: action.path }) // Visit the scope before its end action is popped.
     }
-    else { ret.range[JSON.stringify(action.path)] = [ action.start, counter ] }
+    else { ret[JSON.stringify(action.path)] = [ action.start, counter ] } // The counter now marks the scope's exclusive end.
   }
-  ret.range['[]'] = [0, counter]
+  ret['[]'] = [0, counter] // The root range contains every material in the tree.
   return ret
+}
+
+function * iterate_materials(references: Scoped_References): Generator<Material> { // Visit leaf arrays in the same DFS order used by get_reference_ranges().
+  const stack: Scoped_References[] = [ references ]
+  while (stack.length > 0) {
+    const node = stack.pop()!
+    if (Array.isArray(node)) {
+      for (const material of node) { yield material }
+    }
+    else {
+      const children = Object.values(node)
+      for (let i = children.length - 1; i >= 0; i--) { stack.push(children[i]!) }
+    }
+  }
+}
+
+function get_scoped_references(references: Scoped_References, scope_name: Scope_Name): Scoped_References { // A scope may be a proper prefix, so this can return an internal subtree as well as a leaf array.
+  let scoped_references = references
+  for (const segment of scope_name) {
+    if (Array.isArray(scoped_references) || !Object.prototype.hasOwnProperty.call(scoped_references, segment)) {
+      throw new Error(`Unknown reference scope: ${JSON.stringify(scope_name)}`)
+    }
+    scoped_references = scoped_references[segment]!
+  }
+  return scoped_references
 }
 
 function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, material: Material, number: number, language: string) { // Apply the site-specific wrapper, anchor, and custom fields to one CSL entry.
@@ -113,32 +130,27 @@ export function print_bibliography_segment(materials: Material[], { language, st
   return csl_bib_body.toString()
 }
 
-export function print_bibliography(mangled: Mangled_References, { language }: { language: string }): Printed_Bibliography {
-  const raw_bib = mangled.flattened.format('bibliography', prettified_default_bib_style)
-  const original_HTML_root = node_html_parser.parse(raw_bib)
-  const csl_entry = original_HTML_root.querySelectorAll('.csl-entry')
-  const partitioned_bib: Printed_Bibliography = {}
-  for (const [ serialized_scope_name, range ] of Object.entries(mangled.range)) {
-    const [ start, end ] = range
-    const csl_bib_body = node_html_parser.parse(`<div class="csl-bib-body"></div>`).firstChild as node_html_parser.HTMLElement
-    const target_entries = csl_entry.slice(start, end)
-    for (const [ index, entry ] of target_entries.entries()) {
-      const off = start + index
-      decorate_bibliography_entry(entry, mangled.flattened.data[off] as Material, off + 1, language)
-      csl_bib_body.appendChild(entry)
-    }
-    partitioned_bib[serialized_scope_name] = csl_bib_body.toString()
-  }
-  return partitioned_bib
+export function print_bibliography(references: Scoped_References, { language }: { language: string }): string {
+  const materials = Array.isArray(references) ? references : [ ...iterate_materials(references) ] // Flatten only for this complete rendering.
+  return print_bibliography_segment(materials, { language, start_number: 1 })
+}
+
+type Reference_Search_Scope = { references: Scoped_References, start: number } // The selected leaf or subtree bounds the search; start maps local offsets to global numbers.
+
+function get_search_scope(references: Scoped_References, reference_ranges: Reference_Ranges | undefined, scope_name: Scope_Name): Reference_Search_Scope {
+  if (scope_name.length === 0) { return { references, start: 0 } }
+  const serialized_scope_name = JSON.stringify(scope_name)
+  const range = reference_ranges?.[serialized_scope_name]
+  if (range === undefined) { throw new Error(`Unknown reference scope: ${serialized_scope_name}`) }
+  return { references: get_scoped_references(references, scope_name), start: range[0] }
 }
 
 // It seems citation.js can't number the citations correctly when using IEEE style. Implemented it from scratch instead.
-export function cite(mangled: Mangled_References, citation_items: Citation_Item[]): string { // mimic \cite[]{}
+export function cite(references: Scoped_References, citation_items: Citation_Item[], reference_ranges?: Reference_Ranges): string { // mimic \cite[]{}
   const return_intermediates: string[] = []
-  const results = resolve_citations(mangled, citation_items) // Resolve every item before rendering the citations.
+  const results = resolve_citations(references, citation_items, reference_ranges) // Preserve each material found within its qualified scope.
   for (const result of results) { // Render each result with its own citation context.
-    for (const number of result.numbers) { // A filter may resolve one citation item to multiple entries.
-      const target_material = mangled.flattened.data[number - 1]! // Citation numbers are one-based.
+    for (const { material: target_material, number } of result.entries) { // A filter may resolve one citation item to multiple entries.
       let precursor: string
       try {
         precursor = new citation_js.Cite([ target_material ]).format('citation', {
@@ -173,19 +185,19 @@ export function cite(mangled: Mangled_References, citation_items: Citation_Item[
   return return_intermediates.join('')
 }
 
-export function resolve_citations(mangled: Mangled_References, citation_items: Citation_Item[]): Citation_Result[] { // Resolve all citation items in input order.
-  return citation_items.flatMap(citation_item => resolve_citation(mangled, citation_item)) // Preserve each item's result grouping and context.
+export function resolve_citations(references: Scoped_References, citation_items: Citation_Item[], reference_ranges?: Reference_Ranges): Citation_Result[] { // Resolve all citation items in input order.
+  return citation_items.flatMap(citation_item => resolve_citation(references, citation_item, reference_ranges)) // Preserve each item's result grouping and context.
 }
 
-function resolve_citation(mangled: Mangled_References, citation_item: Citation_Item): Citation_Result[] { // Resolve one citation item without rendering HTML.
-  let search_scope: [ number, number ] = [ 0, mangled.flattened.data.length ]
+function resolve_citation(references: Scoped_References, citation_item: Citation_Item, reference_ranges?: Reference_Ranges): Citation_Result[] { // Resolve one citation item without rendering HTML.
+  let search_scope: Reference_Search_Scope = { references, start: 0 }
   let ID: ID_t
   let material_filter: Material_Filter
   let filter_options: Filter_Options = {}
   let results: Citation_Result[] = []
   switch (typeof citation_item) {
     case 'function':
-      results.push({ numbers: cite_by_filter(mangled, search_scope, citation_item as Material_Filter, {}) })
+      results.push({ entries: cite_by_filter(search_scope, citation_item as Material_Filter, {}) })
       break
     case 'object':
       let condition: Citation_Condition
@@ -199,56 +211,58 @@ function resolve_citation(mangled: Mangled_References, citation_item: Citation_I
       else { condition = citation_item }
       switch (typeof condition) {
         case 'function':
-          results.push({ numbers: cite_by_filter(mangled, search_scope, condition, {}), ...context })
+          results.push({ entries: cite_by_filter(search_scope, condition, {}), ...context })
           break
         case 'object':
-          if ('filter' in condition) {
-            material_filter = (condition as Qualified_Material_Filter).filter
-            if ('scope' in condition) { search_scope = mangled.range[JSON.stringify(condition.scope)]! }
+          if (!Array.isArray(condition) && 'filter' in condition) {
+            material_filter = condition.filter
+            if (condition.scope !== undefined) { search_scope = get_search_scope(references, reference_ranges, condition.scope) }
             if ('options' in condition) { filter_options = condition.options }
-            results.push({ numbers: cite_by_filter(mangled, search_scope, material_filter, filter_options), ...context })
+            results.push({ entries: cite_by_filter(search_scope, material_filter, filter_options), ...context })
           }
           else if ('ID' in condition) {
-            search_scope = mangled.range[JSON.stringify((condition as Scoped_ID_t).scope)]!
+            search_scope = get_search_scope(references, reference_ranges, (condition as Scoped_ID_t).scope)
             ID = (condition as Scoped_ID_t).ID
-            results.push({ numbers: [ cite_by_ID(mangled, search_scope, ID) ], ...context })
+            results.push({ entries: [ cite_by_ID(search_scope, ID) ], ...context })
           }
-          else { results.push({ numbers: [ cite_by_ID(mangled, search_scope, condition as ID_t) ], ...context }) }
+          else { results.push({ entries: [ cite_by_ID(search_scope, condition as ID_t) ], ...context }) }
           break
         case 'string':
         case 'number':
         case 'bigint':
-          results.push({ numbers: [ cite_by_ID(mangled, search_scope, condition as ID_t) ], ...context })
+          results.push({ entries: [ cite_by_ID(search_scope, condition as ID_t) ], ...context })
       }
       break
     case 'string':
     case 'number':
     case 'bigint':
-      results.push({ numbers: [ cite_by_ID(mangled, search_scope, citation_item as ID_t) ] })
+      results.push({ entries: [ cite_by_ID(search_scope, citation_item as ID_t) ] })
       break
   }
   return results
 }
 
-function cite_by_ID(mangled: Mangled_References, search_scope: [ number, number ], ID: ID_t): number {
+function cite_by_ID(search_scope: Reference_Search_Scope, ID: ID_t): Citation_Result['entries'][number] {
   const target_material: Material = catalog.get(ID)
-  for (let i = search_scope[0]; i < search_scope[1]; i++) {
-    if (mangled.flattened.data[i].id === target_material.id) { return i + 1 }
+  let offset = 0
+  for (const material of iterate_materials(search_scope.references)) {
+    if (material.id === target_material.id) { return { material, number: search_scope.start + offset + 1 } }
+    offset++
   }
   throw new Error(`Failed to cite any entry with ID ${JSON.stringify(ID, null, 2)}`)
 }
 
-function cite_by_filter(mangled: Mangled_References, search_scope: [ number, number ], material_filter: Material_Filter, filter_options: Filter_Options): number[] {
-  const ret: number[] = []
-  let target_materials: Material[] = mangled.flattened.data.slice(...search_scope).filter(material_filter)
-  check_filter_results(material_filter, target_materials, filter_options)
-  let material_index = 0
-  for (let i = search_scope[0]; i < search_scope[1]; i++) {
-    if (mangled.flattened.data[i].id === target_materials[material_index]!.id) {
-      ret.push(i + 1)
-      material_index++
+function cite_by_filter(search_scope: Reference_Search_Scope, material_filter: Material_Filter, filter_options: Filter_Options): Citation_Result['entries'] {
+  const entries: Citation_Result['entries'] = []
+  const target_materials: Material[] = []
+  let offset = 0
+  for (const material of iterate_materials(search_scope.references)) {
+    if (material_filter(material)) {
+      target_materials.push(material)
+      entries.push({ material, number: search_scope.start + offset + 1 })
     }
-    if (material_index >= target_materials.length) { break }
+    offset++
   }
-  return ret
+  check_filter_results(material_filter, target_materials, filter_options)
+  return entries
 }
