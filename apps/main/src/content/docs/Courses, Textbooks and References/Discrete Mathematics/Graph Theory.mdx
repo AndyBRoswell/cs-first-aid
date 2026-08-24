@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础必修 ]
 ---
 
-import { printed_bib, course_material, } from './data.ts'
+import { mangled_references, } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
 import References from '@/components/References.astro'
 
@@ -16,25 +16,25 @@ import References from '@/components/References.astro'
     ## 教科书
     <section>
       ### 中文
-      <References materials={course_material.Graph_Theory} printed_bib={printed_bib.Graph_Theory} scope_name={[ 'text', 'zh' ]}/>
+      <References mangled_references={mangled_references.Graph_Theory} scope_name={[ 'text', 'zh' ]}/>
     </section>
     <section>
       ### 英文
-      <References materials={course_material.Graph_Theory} printed_bib={printed_bib.Graph_Theory} scope_name={[ 'text', 'en' ]}/>
+      <References mangled_references={mangled_references.Graph_Theory} scope_name={[ 'text', 'en' ]}/>
     </section>
   </section>
   <section>
     ## 公开课
     <section>
       ### 中文
-      <References materials={course_material.Graph_Theory} printed_bib={printed_bib.Graph_Theory} scope_name={[ 'open_course', 'zh' ]}/>
+      <References mangled_references={mangled_references.Graph_Theory} scope_name={[ 'open_course', 'zh' ]}/>
     </section>
   </section>
   <section>
     ## 学习指导
     <section>
       ### 中文
-      <References materials={course_material.Graph_Theory} printed_bib={printed_bib.Graph_Theory} scope_name={[ 'guide', 'zh' ]}/>
+      <References mangled_references={mangled_references.Graph_Theory} scope_name={[ 'guide', 'zh' ]}/>
     </section>
   </section>
   <section>
@@ -43,18 +43,18 @@ import References from '@/components/References.astro'
       ### 教科书
       <section>
         #### 中文
-        <References materials={course_material.Graph_Theory} printed_bib={printed_bib.Graph_Theory} scope_name={[ 'reference', 'text', 'zh' ]}/>
+        <References mangled_references={mangled_references.Graph_Theory} scope_name={[ 'reference', 'text', 'zh' ]}/>
       </section>
       <section>
         #### 英文
-        <References materials={course_material.Graph_Theory} printed_bib={printed_bib.Graph_Theory} scope_name={[ 'reference', 'text', 'en' ]}/>
+        <References mangled_references={mangled_references.Graph_Theory} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
     </section>
     <section>
       ### 学习指导
       <section>
         #### 英文
-        <References materials={course_material.Graph_Theory} printed_bib={printed_bib.Graph_Theory} scope_name={[ 'reference', 'guide', 'en' ]}/>
+        <References mangled_references={mangled_references.Graph_Theory} scope_name={[ 'reference', 'guide', 'en' ]}/>
       </section>
     </section>
   </section>

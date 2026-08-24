@@ -17,12 +17,3 @@ export const mangled_references = {
   Combinatorics: bib.mangle_references(course_material.Combinatorics),
   Number_Theory: bib.mangle_references(course_material.Number_Theory),
 }
-
-export const printed_bib = {
-  Mathematical_Logic: bib.print_bibliography(mangled_references.Mathematical_Logic),
-  Set_Theory: bib.print_bibliography(mangled_references.Set_Theory),
-  Graph_Theory: bib.print_bibliography(mangled_references.Graph_Theory),
-  Abstract_Algebra: bib.print_bibliography(mangled_references.Abstract_Algebra),
-  Combinatorics: bib.print_bibliography(mangled_references.Combinatorics),
-  Number_Theory: bib.print_bibliography(mangled_references.Number_Theory),
-}

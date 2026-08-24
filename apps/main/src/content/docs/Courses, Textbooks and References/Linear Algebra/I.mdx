@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础必修 ]
 ---
 
-import { I_printed_bib, I_course_material, I_mangled_references } from './data.ts'
+import { I_mangled_references } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
 import * as util from '@cs-first-aid/util'
 import * as _ from '@cs-first-aid/util/lib/lodash-es'
@@ -19,11 +19,11 @@ import Cite from '@/components/Cite.astro'
     ## 教科书
     <section>
       ### 中文
-      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'text', 'zh' ]}/>
+      <References mangled_references={I_mangled_references} scope_name={[ 'text', 'zh' ]}/>
     </section>
     <section>
       ### 英文
-      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'text', 'en' ]}/>
+      <References mangled_references={I_mangled_references} scope_name={[ 'text', 'en' ]}/>
     </section>
     <section>
       ### 说明
@@ -34,14 +34,14 @@ import Cite from '@/components/Cite.astro'
     ## 指导书
     <section>
       ### 中文
-      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'guide', 'zh' ]}/>
+      <References mangled_references={I_mangled_references} scope_name={[ 'guide', 'zh' ]}/>
     </section>
   </section>
   <section>
     ## 公开课
     <section>
       ### 中文
-      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'open_course', 'zh' ]}/>
+      <References mangled_references={I_mangled_references} scope_name={[ 'open_course', 'zh' ]}/>
     </section>
   </section>
   <section>
@@ -50,30 +50,30 @@ import Cite from '@/components/Cite.astro'
       ### 教科书
       <section>
         #### 中文
-        <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'text', 'zh' ]}/>
+        <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'text', 'zh' ]}/>
       </section>
       <section>
         #### 英文
-        <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'text', 'en' ]}/>
+        <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
     </section>
     <section>
       ### 指导书
       <section>
         #### 中文
-        <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'guide', 'zh' ]}/>
+        <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'guide', 'zh' ]}/>
       </section>
     </section>
     <section>
       ### 习题集
       <section>
         #### 中文
-        <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
+        <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
       </section>
     </section>
     <section>
       ### 视频
-      <References materials={I_course_material} printed_bib={I_printed_bib} scope_name={[ 'reference', 'video' ]}/>
+      <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'video' ]}/>
     </section>
   </section>
 </section>

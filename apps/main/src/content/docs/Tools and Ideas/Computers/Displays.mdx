@@ -4,7 +4,7 @@ pubDate: 2026-08-20
 author: AndyBRoswell
 ---
 
-import { references as R, mangled_references as M, printed_bib as P, } from './Displays.ts'
+import { mangled_references as M, } from './Displays.ts'
 import * as Displays from './Displays.ts'
 import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
@@ -339,4 +339,4 @@ import * as util from '@cs-first-aid/util'
   </section>
 </section>
 # 参考文献
-<References materials={R} printed_bib={P}/>
+<References mangled_references={M}/>

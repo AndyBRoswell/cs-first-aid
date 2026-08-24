@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础必修, ]
 ---
 
-import { printed_bib, course_material, mangled_references } from './data.ts'
+import { mangled_references } from './data.ts'
 import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
 
@@ -14,7 +14,7 @@ import References from '@/components/References.astro'
   # 学习材料
   <section>
     ## 教科书
-    <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'text', 'selected' ]}/>
+    <References mangled_references={mangled_references} scope_name={[ 'text', 'selected' ]}/>
     <section>
       ### 说明
       - 《Calculus: A Complete Course》<Cite mangled_references={mangled_references} cite_items={[ 'Calculus: A Complete Course' ]}/>为首选，此书为多所院校数学系或数学要求较高的理工类专业采用。
@@ -26,7 +26,7 @@ import References from '@/components/References.astro'
     </section>
     <section>
       ### 未被选择的书目
-      <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'text', 'excluded' ]}/>
+      <References mangled_references={mangled_references} scope_name={[ 'text', 'excluded' ]}/>
       <section>
         #### 说明
         - 本项目推荐的基础必修课《微积分》的难度基准是：不低于同济大学数学系主编《高等数学》<Cite mangled_references={mangled_references} cite_items={[ `同济高数上`, `同济高数下`, ]}/>。
@@ -37,7 +37,7 @@ import References from '@/components/References.astro'
   </section>
   <section>
     ## 其它参考
-    <References materials={course_material} printed_bib={printed_bib} scope_name={[ 'other', 'text' ]}/>
+    <References mangled_references={mangled_references} scope_name={[ 'other', 'text' ]}/>
     <section>
       ### 说明
       - 个人认为，同济高数<Cite mangled_references={mangled_references} cite_items={[ `同济高数上`, `同济高数下`, ]}/>大问题基本没有，但总体缺乏出彩的地方，只能说中规中矩，可以凑合用。

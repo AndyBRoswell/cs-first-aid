@@ -1,17 +1,15 @@
 ---
-import type { Scope_Name, Scoped_References } from "@cs-first-aid/bibkit/types/data";
-import type { Printed_Bibliography } from "@cs-first-aid/bibkit/bib";
+import type { Material, Scope_Name } from "@cs-first-aid/bibkit/types/data";
+import * as bib from "@cs-first-aid/bibkit/bib";
 export interface Props {
-  materials: Scoped_References,
-  printed_bib: Printed_Bibliography,
+  mangled_references: bib.Mangled_References,
   scope_name?: Scope_Name,
 }
-const { materials, printed_bib, scope_name = [], } = Astro.props
-let material_segment = materials
-for (const name_segment of scope_name) {
-  // @ts-ignore: In this case, type of `materials` must be object
-  material_segment = material_segment[name_segment]!
-}
+const { mangled_references, scope_name = [], } = Astro.props
+const serialized_scope_name = JSON.stringify(scope_name)
+const [ start, end ] = mangled_references.range[serialized_scope_name]!
+const material_segment = mangled_references.flattened.data.slice(start, end) as Material[]
+const printed_bib = bib.print_bibliography_segment(material_segment, { language: Astro.locals.starlightRoute.lang, start_number: start + 1 })
 ---
 
-<div class="References" data-scope_name={JSON.stringify(scope_name)} data-material_segment={JSON.stringify(material_segment)} set:html={printed_bib[JSON.stringify(scope_name)]}></div>
+<div class="References" data-scope_name={serialized_scope_name} data-material_segment={JSON.stringify(material_segment)} set:html={printed_bib}></div>

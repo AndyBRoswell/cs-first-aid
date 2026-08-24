@@ -213,4 +213,3 @@ export const references = [
   ...catalog.filter(m => m.author?.some(a => a.given === 'Lea') && m.type === 'book' && m.issued?.["date-parts"]?.[0]?.[0] === 2011, { count: 1 }),
 ]
 export const mangled_references = bib.mangle_references(references)
-export const printed_bib = bib.print_bibliography(mangled_references)

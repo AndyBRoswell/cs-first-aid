@@ -11,6 +11,7 @@ export function locate_references(main: Locator, scope_name: types_data.Scope_Na
 }
 
 export async function check_references(main: Locator) {
+  const language = await main.evaluate(element => element.ownerDocument.documentElement.lang)
   const References_locators = await main.locator('.References').all()
   for (const locator of References_locators) {
     // basic
@@ -25,7 +26,7 @@ export async function check_references(main: Locator) {
           const custom_div: Locator = CSL_entries[index]!.locator('.custom')
           const lecturer_p: Locator = custom_div.locator('.lecturer')
           const rendered_lecturer: string = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
-          const expected = `Lecturer: ` + rendered_lecturer
+          const expected = `${language === 'zh-CN' ? '主讲：' : 'Lecturer: '}${rendered_lecturer}`
           await expect(lecturer_p).toHaveText(expected)
         }
       }

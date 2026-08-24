@@ -5,7 +5,6 @@ import * as node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl'
 import type { ID_t, Scoped_ID_t, Scoped_References, Serialized_Scope_Name, Material, Material_Filter, Qualified_Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, } from "./types/data.ts";
 import * as catalog from './catalog.ts'
-import * as data_type from './types/data.ts'
 import { check_filter_results, type Filter_Options } from "./catalog.ts"
 import pino from 'pino'
 import * as util from "@cs-first-aid/util"
@@ -73,7 +72,48 @@ export function mangle_references(references: Scoped_References): Mangled_Refere
   return ret
 }
 
-export function print_bibliography(mangled: Mangled_References): Printed_Bibliography {
+function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, material: Material, number: number, language: string) {
+  // wrap the original content
+  entry.classList.remove('csl-entry')
+  entry.classList.add('CSL_Entry')
+  const wrapper = node_html_parser.parse(`<div class="csl-entry"></div>`).firstChild as node_html_parser.HTMLElement
+  wrapper.set_content(entry.childNodes)
+  entry.set_content(wrapper)
+  entry.id = `[${number}]`
+  // show custom data of this CSL item
+  if ('custom' in material) {
+    const additional = node_html_parser.parse(`<div class="custom"></div>`).firstChild as node_html_parser.HTMLElement
+    if ('lecturer' in material.custom) {
+      const p = node_html_parser.parse(`<p class="lecturer"></p>`).firstChild as node_html_parser.HTMLElement
+      const lecturer = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
+      p.set_content(`${language === 'zh-CN' ? '主讲：' : 'Lecturer: '}${lecturer}`)
+      additional.appendChild(p)
+    }
+    entry.appendChild(additional)
+  }
+}
+
+export function print_bibliography_segment(materials: Material[], { language, start_number }: { language: string, start_number: number }): string {
+  if (!Number.isSafeInteger(start_number) || start_number < 1) { throw new RangeError('start_number must be a positive safe integer') }
+  const raw_bib = new citation_js.Cite(materials).format('bibliography', prettified_default_bib_style)
+  const original_HTML_root = node_html_parser.parse(raw_bib)
+  const csl_entries = original_HTML_root.querySelectorAll('.csl-entry')
+  if (csl_entries.length !== materials.length) { throw new Error('Unexpected number of bibliography entries') }
+  const csl_bib_body = node_html_parser.parse(`<div class="csl-bib-body"></div>`).firstChild as node_html_parser.HTMLElement
+  for (const [ index, entry ] of csl_entries.entries()) {
+    const local_number = index + 1
+    const number = start_number + index
+    const original_content = entry.innerHTML
+    const local_number_pattern = new RegExp(`^(\\s*)\\[${local_number}\\]`)
+    if (!local_number_pattern.test(original_content)) { throw new Error(`Unexpected bibliography entry number: ${local_number}`) }
+    entry.set_content(original_content.replace(local_number_pattern, `$1[${number}]`))
+    decorate_bibliography_entry(entry, materials[index]!, number, language)
+    csl_bib_body.appendChild(entry)
+  }
+  return csl_bib_body.toString()
+}
+
+export function print_bibliography(mangled: Mangled_References, { language }: { language: string }): Printed_Bibliography {
   const raw_bib = mangled.flattened.format('bibliography', prettified_default_bib_style)
   const original_HTML_root = node_html_parser.parse(raw_bib)
   const csl_entry = original_HTML_root.querySelectorAll('.csl-entry')
@@ -83,26 +123,8 @@ export function print_bibliography(mangled: Mangled_References): Printed_Bibliog
     const csl_bib_body = node_html_parser.parse(`<div class="csl-bib-body"></div>`).firstChild as node_html_parser.HTMLElement
     const target_entries = csl_entry.slice(start, end)
     for (const [ index, entry ] of target_entries.entries()) {
-      // wrap the original content
       const off = start + index
-      entry.classList.remove('csl-entry')
-      entry.classList.add('CSL_Entry')
-      const wrapper = node_html_parser.parse(`<div class="csl-entry"></div>`).firstChild as node_html_parser.HTMLElement
-      wrapper.set_content(entry.childNodes)
-      entry.set_content(wrapper)
-      entry.id = `[${off + 1}]`
-      // show custom data of this CSL item
-      const current_CSL_item = mangled.flattened.data[off] as data_type.Material
-      if ('custom' in current_CSL_item) {
-        const additional = node_html_parser.parse(`<div class="custom"></div>`).firstChild as node_html_parser.HTMLElement
-        if ('lecturer' in current_CSL_item.custom) {
-          const p = node_html_parser.parse(`<p class="lecturer"></p>`).firstChild as node_html_parser.HTMLElement
-          const lecturer = catalog.get_rendered_names(current_CSL_item.custom.lecturer, { full_name: true })
-          p.set_content(`Lecturer: ${lecturer}`)
-          additional.appendChild(p)
-        }
-        entry.appendChild(additional)
-      }
+      decorate_bibliography_entry(entry, mangled.flattened.data[off] as Material, off + 1, language)
       csl_bib_body.appendChild(entry)
     }
     partitioned_bib[serialized_scope_name] = csl_bib_body.toString()
