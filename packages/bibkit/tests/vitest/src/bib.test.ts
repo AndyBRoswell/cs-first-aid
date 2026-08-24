@@ -71,6 +71,17 @@ test('resolve_citations limits a qualified filter to its scope', ({ g }) => {
   expect(bib.resolve_citations(fixture.references, citation_items, fixture.reference_ranges)).toEqual([ { entries: citation_entries(fixture.materials, numbers) } ])
 })
 
+test('resolve_citations accepts a proper scope prefix and searches its entire subtree', () => {
+  const before: Material = { id: 'before-prefix', type: 'book', title: 'Before prefix' }
+  const first: Material = { id: 'inside-prefix-first', type: 'book', title: 'Inside prefix first' }
+  const second: Material = { id: 'inside-prefix-second', type: 'book', title: 'Inside prefix second' }
+  const after: Material = { id: 'after-prefix', type: 'book', title: 'After prefix' }
+  const references: Scoped_References = { before: [ before ], selected: { first: [ first ], nested: { second: [ second ] } }, after: [ after ] }
+  const citation_items: Citation_Item[] = [ { scope: [ 'selected' ], filter: () => true, options: { count: 2 } } ]
+
+  expect(bib.resolve_citations(references, citation_items, bib.get_reference_ranges(references))).toEqual([ { entries: [ { material: first, number: 2 }, { material: second, number: 3 } ] } ])
+})
+
 test('resolve_citations keeps multi-entry results grouped by citation item', ({ g }) => {
   const fixture: Fixture = create_fixture(g)
   const numbers: number[] = Array.from({ length: fixture.materials.length - 1 }, (_, index) => index + 2)
