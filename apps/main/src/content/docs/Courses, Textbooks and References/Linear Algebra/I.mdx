@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础必修 ]
 ---
 
-import { I_mangled_references } from './data.ts'
+import { I_course_material, I_reference_ranges } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
 import * as util from '@cs-first-aid/util'
 import * as _ from '@cs-first-aid/util/lib/lodash-es'
@@ -19,29 +19,29 @@ import Cite from '@/components/Cite.astro'
     ## 教科书
     <section>
       ### 中文
-      <References mangled_references={I_mangled_references} scope_name={[ 'text', 'zh' ]}/>
+      <References materials={I_course_material.text.zh} reference_ranges={I_reference_ranges} scope_name={[ 'text', 'zh' ]}/>
     </section>
     <section>
       ### 英文
-      <References mangled_references={I_mangled_references} scope_name={[ 'text', 'en' ]}/>
+      <References materials={I_course_material.text.en} reference_ranges={I_reference_ranges} scope_name={[ 'text', 'en' ]}/>
     </section>
     <section>
       ### 说明
-      基础必修课《线性代数I》的基准难度是：不低于 D. C. Lay et al., Linear Algebra and Its Applications<Cite mangled_references={I_mangled_references} cite_items={[ { scope: [ 'text', 'en' ], filter: m => util.ieq(m.title, 'Linear Algebra and Its Applications') && m.author.some(a => a.given === 'David C.' && a.family === 'Lay'), options: { count: 1 }, }]}/>。
+      基础必修课《线性代数I》的基准难度是：不低于 D. C. Lay et al., Linear Algebra and Its Applications<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => util.ieq(m.title, 'Linear Algebra and Its Applications') && m.author.some(a => a.given === 'David C.' && a.family === 'Lay'), options: { count: 1 }, }]}/>。
     </section>
   </section>
   <section>
     ## 指导书
     <section>
       ### 中文
-      <References mangled_references={I_mangled_references} scope_name={[ 'guide', 'zh' ]}/>
+      <References materials={I_course_material.guide.zh} reference_ranges={I_reference_ranges} scope_name={[ 'guide', 'zh' ]}/>
     </section>
   </section>
   <section>
     ## 公开课
     <section>
       ### 中文
-      <References mangled_references={I_mangled_references} scope_name={[ 'open_course', 'zh' ]}/>
+      <References materials={I_course_material.open_course.zh} reference_ranges={I_reference_ranges} scope_name={[ 'open_course', 'zh' ]}/>
     </section>
   </section>
   <section>
@@ -50,30 +50,30 @@ import Cite from '@/components/Cite.astro'
       ### 教科书
       <section>
         #### 中文
-        <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'text', 'zh' ]}/>
+        <References materials={I_course_material.reference.text.zh} reference_ranges={I_reference_ranges} scope_name={[ 'reference', 'text', 'zh' ]}/>
       </section>
       <section>
         #### 英文
-        <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'text', 'en' ]}/>
+        <References materials={I_course_material.reference.text.en} reference_ranges={I_reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
     </section>
     <section>
       ### 指导书
       <section>
         #### 中文
-        <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'guide', 'zh' ]}/>
+        <References materials={I_course_material.reference.guide.zh} reference_ranges={I_reference_ranges} scope_name={[ 'reference', 'guide', 'zh' ]}/>
       </section>
     </section>
     <section>
       ### 习题集
       <section>
         #### 中文
-        <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
+        <References materials={I_course_material.reference.problem_set.zh} reference_ranges={I_reference_ranges} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
       </section>
     </section>
     <section>
       ### 视频
-      <References mangled_references={I_mangled_references} scope_name={[ 'reference', 'video' ]}/>
+      <References materials={I_course_material.reference.video} reference_ranges={I_reference_ranges} scope_name={[ 'reference', 'video' ]}/>
     </section>
   </section>
 </section>

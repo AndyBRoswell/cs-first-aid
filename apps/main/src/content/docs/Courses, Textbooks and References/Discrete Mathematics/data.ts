@@ -9,11 +9,11 @@ export const course_material = {
   Combinatorics: Course.Combinatorics.material!,
   Number_Theory: Course.Number_Theory.material!,
 }
-export const mangled_references = {
-  Mathematical_Logic: bib.mangle_references(course_material.Mathematical_Logic),
-  Set_Theory: bib.mangle_references(course_material.Set_Theory),
-  Graph_Theory: bib.mangle_references(course_material.Graph_Theory),
-  Abstract_Algebra: bib.mangle_references(course_material.Abstract_Algebra),
-  Combinatorics: bib.mangle_references(course_material.Combinatorics),
-  Number_Theory: bib.mangle_references(course_material.Number_Theory),
+export const reference_ranges = {
+  Mathematical_Logic: bib.get_reference_ranges(course_material.Mathematical_Logic),
+  Set_Theory: bib.get_reference_ranges(course_material.Set_Theory),
+  Graph_Theory: bib.get_reference_ranges(course_material.Graph_Theory),
+  Abstract_Algebra: bib.get_reference_ranges(course_material.Abstract_Algebra),
+  Combinatorics: bib.get_reference_ranges(course_material.Combinatorics),
+  Number_Theory: bib.get_reference_ranges(course_material.Number_Theory),
 }

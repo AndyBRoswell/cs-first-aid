@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import { mangled_references, } from './data.ts'
+import { course_material, reference_ranges } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
 import References from '@/components/References.astro'
 
@@ -16,25 +16,25 @@ import References from '@/components/References.astro'
     ## 教科书
     <section>
       ### 中文
-      <References mangled_references={mangled_references.Abstract_Algebra} scope_name={[ 'text', 'zh' ]}/>
+      <References materials={course_material.Abstract_Algebra.text.zh} reference_ranges={reference_ranges.Abstract_Algebra} scope_name={[ 'text', 'zh' ]}/>
     </section>
     <section>
       ### 英文
-      <References mangled_references={mangled_references.Abstract_Algebra} scope_name={[ 'text', 'en' ]}/>
+      <References materials={course_material.Abstract_Algebra.text.en} reference_ranges={reference_ranges.Abstract_Algebra} scope_name={[ 'text', 'en' ]}/>
     </section>
   </section>
   <section>
     ## 公开课
     <section>
       ### 中文
-      <References mangled_references={mangled_references.Abstract_Algebra} scope_name={[ 'open_course', 'zh' ]}/>
+      <References materials={course_material.Abstract_Algebra.open_course.zh} reference_ranges={reference_ranges.Abstract_Algebra} scope_name={[ 'open_course', 'zh' ]}/>
     </section>
   </section>
   <section>
     ## 学习指导
     <section>
       ### 中文
-      <References mangled_references={mangled_references.Abstract_Algebra} scope_name={[ 'guide', 'zh' ]}/>
+      <References materials={course_material.Abstract_Algebra.guide.zh} reference_ranges={reference_ranges.Abstract_Algebra} scope_name={[ 'guide', 'zh' ]}/>
     </section>
   </section>
   <section>
@@ -43,18 +43,18 @@ import References from '@/components/References.astro'
       ### 教科书
       <section>
         #### 中文
-        <References mangled_references={mangled_references.Abstract_Algebra} scope_name={[ 'reference', 'text', 'zh' ]}/>
+        <References materials={course_material.Abstract_Algebra.reference.text.zh} reference_ranges={reference_ranges.Abstract_Algebra} scope_name={[ 'reference', 'text', 'zh' ]}/>
       </section>
       <section>
         #### 英文
-        <References mangled_references={mangled_references.Abstract_Algebra} scope_name={[ 'reference', 'text', 'en' ]}/>
+        <References materials={course_material.Abstract_Algebra.reference.text.en} reference_ranges={reference_ranges.Abstract_Algebra} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
     </section>
     <section>
       ### 习题集
       <section>
         #### 中文
-        <References mangled_references={mangled_references.Abstract_Algebra} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
+        <References materials={course_material.Abstract_Algebra.reference.problem_set.zh} reference_ranges={reference_ranges.Abstract_Algebra} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
       </section>
     </section>
   </section>

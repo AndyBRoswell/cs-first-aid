@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础必修 ]
 ---
 
-import { I_mangled_references } from './data.ts'
+import { I_course_material, I_reference_ranges } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
 import References from '@/components/References.astro'
 
@@ -14,10 +14,10 @@ import References from '@/components/References.astro'
   # 学习材料
   <section>
     ## 教科书
-    <References mangled_references={I_mangled_references} scope_name={['text']} />
+    <References materials={I_course_material.text} reference_ranges={I_reference_ranges} scope_name={['text']} />
   </section>
   <section>
     ## 参考资料
-    <References mangled_references={I_mangled_references} scope_name={['reference']} />
+    <References materials={I_course_material.reference} reference_ranges={I_reference_ranges} scope_name={['reference']} />
   </section>
 </section>

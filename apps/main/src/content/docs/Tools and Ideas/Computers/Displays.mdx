@@ -4,7 +4,7 @@ pubDate: 2026-08-20
 author: AndyBRoswell
 ---
 
-import { mangled_references as M, } from './Displays.ts'
+import { references as M, } from './Displays.ts'
 import * as Displays from './Displays.ts'
 import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
@@ -78,7 +78,7 @@ import * as util from '@cs-first-aid/util'
 
   需要注意的是，这只是一个估计值。显示器的像素密度超过这个值，并不代表完全没有用：
   - 一般地，人眼对点、线、周期纹理、锯齿等的敏感度不同。
-  - 子像素布局<Cite mangled_references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ]}/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
+  - 子像素布局<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ]}/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
   - 对比度、观看角度、软件层面的字体抗锯齿等因素也会产生较明显的影响。
   - 双眼视力常常优于单眼视力。
 </section>
@@ -140,12 +140,12 @@ import * as util from '@cs-first-aid/util'
         </tr>
       <tr>
         <td>1.41:1（$\sqrt(2):1$）</td>
-        <td>ISO 216<Cite mangled_references={M} cite_items={[{ condition: 'ISO 216:2007', label: 'section', locator: '4.1' }]}/>规定的纸张长宽比</td>
+        <td>ISO 216<Cite references={M} cite_items={[{ condition: 'ISO 216:2007', label: 'section', locator: '4.1' }]}/>规定的纸张长宽比</td>
       </tr>
       <tr>
         <td>1.43:1</td>
         <td>
-          IMAX 70 mm 胶片（69.60 mm × 48.56 mm）<Cite mangled_references={M} cite_items={[{ condition: 'SMPTE ST 419:2005', label: 'table', locator: 1, }]}/><br/>
+          IMAX 70 mm 胶片（69.60 mm × 48.56 mm）<Cite references={M} cite_items={[{ condition: 'SMPTE ST 419:2005', label: 'table', locator: 1, }]}/><br/>
           绝大多数 IMAX GT（一代激光 IMAX）影厅放映的画面比例<br/>
         </td>
       </tr>
@@ -171,7 +171,7 @@ import * as util from '@cs-first-aid/util'
         <td>1.78:1（16:9）</td>
         <td>
           台式机或笔记本显示器常见的宽高比之一<br/>
-          HDTV 标准<Cite mangled_references={M} cite_items={[{ condition: 'ITU-R BT.709-6', label: 'page', locator: 5 }]}/>、UHDTV 标准<Cite mangled_references={M} cite_items={[{ condition: 'ITU-R BT.2020-2', label: 'page', locator: 4 }]}/>规定的长宽比<br/>
+          HDTV 标准<Cite references={M} cite_items={[{ condition: 'ITU-R BT.709-6', label: 'page', locator: 5 }]}/>、UHDTV 标准<Cite references={M} cite_items={[{ condition: 'ITU-R BT.2020-2', label: 'page', locator: 4 }]}/>规定的长宽比<br/>
           部分 IMAX 影片独占的宽高比<br/>
         </td>
       </tr>
@@ -182,7 +182,7 @@ import * as util from '@cs-first-aid/util'
       <tr>
         <td>1.90:1（1.896:1、256:135）</td>
         <td>
-          DCI 标准<Cite mangled_references={M} cite_items={[{ condition: 'DCSS', label: 'section', locator: '4.3.1' }]}/><br/>
+          DCI 标准<Cite references={M} cite_items={[{ condition: 'DCSS', label: 'section', locator: '4.3.1' }]}/><br/>
           绝大多数 IMAX 影片独占的宽高比<br/>
         </td>
       </tr>
@@ -216,7 +216,7 @@ import * as util from '@cs-first-aid/util'
   </section>
   <section>
     ## 视力等级查找表
-    本表是参照表<Cite mangled_references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'table', locator: 1, } ]}/><Cite mangled_references={M} cite_items={[ { condition: m => m.author?.some(a => a.given === 'Lea'), label: 'table', locator: '3b.1' } ]}/>制作的。其中，五分记录（5-mark record）源于GB/T 11533-2011<Cite mangled_references={M} cite_items={[ { condition: 'GB/T 11533-2011' } ]}/>。
+    本表是参照表<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'table', locator: 1, } ]}/><Cite references={M} cite_items={[ { condition: m => m.author?.some(a => a.given === 'Lea'), label: 'table', locator: '3b.1' } ]}/>制作的。其中，五分记录（5-mark record）源于GB/T 11533-2011<Cite references={M} cite_items={[ { condition: 'GB/T 11533-2011' } ]}/>。
     <Fragment set:html={Displays.create_visual_acuity_table([
       50,
       40,
@@ -339,4 +339,4 @@ import * as util from '@cs-first-aid/util'
   </section>
 </section>
 # 参考文献
-<References mangled_references={M}/>
+<References materials={M}/>

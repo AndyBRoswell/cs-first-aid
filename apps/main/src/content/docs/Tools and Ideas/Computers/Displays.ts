@@ -1,7 +1,6 @@
 // Created by GPT-5.6 Sol Thinking Extended [web] and GPT-5.6 Sol Medium [codex]. Revised by AndyBRoswell.
 
 import * as node_HTML_parser from 'node-html-parser'
-import * as bib from '@cs-first-aid/bibkit/bib'
 import * as catalog from '@cs-first-aid/bibkit/catalog'
 import * as util from '@cs-first-aid/util'
 import '@/data/materials/import materials.ts'
@@ -212,4 +211,3 @@ export const references = [
   catalog.get('GB/T 11533-2011'),
   ...catalog.filter(m => m.author?.some(a => a.given === 'Lea') && m.type === 'book' && m.issued?.["date-parts"]?.[0]?.[0] === 2011, { count: 1 }),
 ]
-export const mangled_references = bib.mangle_references(references)

@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础必修 ]
 ---
 
-import { mangled_references, } from './data.ts'
+import { course_material, reference_ranges } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
 import References from '@/components/References.astro'
 
@@ -16,25 +16,25 @@ import References from '@/components/References.astro'
     ## 教科书
     <section>
       ### 中文
-      <References mangled_references={mangled_references.Mathematical_Logic} scope_name={[ 'text', 'zh' ]}/>
+      <References materials={course_material.Mathematical_Logic.text.zh} reference_ranges={reference_ranges.Mathematical_Logic} scope_name={[ 'text', 'zh' ]}/>
     </section>
     <section>
       ### 英文
-      <References mangled_references={mangled_references.Mathematical_Logic} scope_name={[ 'text', 'en' ]}/>
+      <References materials={course_material.Mathematical_Logic.text.en} reference_ranges={reference_ranges.Mathematical_Logic} scope_name={[ 'text', 'en' ]}/>
     </section>
   </section>
   <section>
     ## 公开课
     <section>
       ### 中文
-      <References mangled_references={mangled_references.Mathematical_Logic} scope_name={[ 'open_course', 'zh' ]}/>
+      <References materials={course_material.Mathematical_Logic.open_course.zh} reference_ranges={reference_ranges.Mathematical_Logic} scope_name={[ 'open_course', 'zh' ]}/>
     </section>
   </section>
   <section>
     ## 学习指导
     <section>
       ### 中文
-      <References mangled_references={mangled_references.Mathematical_Logic} scope_name={[ 'guide', 'zh' ]}/>
+      <References materials={course_material.Mathematical_Logic.guide.zh} reference_ranges={reference_ranges.Mathematical_Logic} scope_name={[ 'guide', 'zh' ]}/>
     </section>
   </section>
   <section>
@@ -43,14 +43,14 @@ import References from '@/components/References.astro'
       ### 教科书
       <section>
         #### 英文
-        <References mangled_references={mangled_references.Mathematical_Logic} scope_name={[ 'reference', 'text', 'en' ]}/>
+        <References materials={course_material.Mathematical_Logic.reference.text.en} reference_ranges={reference_ranges.Mathematical_Logic} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
     </section>
     <section>
       ### 学习指导
       <section>
         #### 英文
-        <References mangled_references={mangled_references.Mathematical_Logic} scope_name={[ 'reference', 'guide', 'en' ]}/>
+        <References materials={course_material.Mathematical_Logic.reference.guide.en} reference_ranges={reference_ranges.Mathematical_Logic} scope_name={[ 'reference', 'guide', 'en' ]}/>
       </section>
     </section>
   </section>

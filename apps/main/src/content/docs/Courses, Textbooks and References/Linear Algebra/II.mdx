@@ -6,7 +6,7 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import { II_mangled_references } from './data.ts'
+import { II_course_material, II_reference_ranges } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
 import References from '@/components/References.astro'
 
@@ -16,29 +16,29 @@ import References from '@/components/References.astro'
     ## 教科书
     <section>
       ### 中文
-      <References mangled_references={II_mangled_references} scope_name={[ 'text', 'zh' ]}/>
+      <References materials={II_course_material.text.zh} reference_ranges={II_reference_ranges} scope_name={[ 'text', 'zh' ]}/>
     </section>
     <section>
       ### 英文
-      <References mangled_references={II_mangled_references} scope_name={[ 'text', 'en' ]}/>
+      <References materials={II_course_material.text.en} reference_ranges={II_reference_ranges} scope_name={[ 'text', 'en' ]}/>
     </section>
   </section>
   <section>
     ## 指导书
     <section>
       ### 中文
-      <References mangled_references={II_mangled_references} scope_name={[ 'guide', 'zh' ]}/>
+      <References materials={II_course_material.guide.zh} reference_ranges={II_reference_ranges} scope_name={[ 'guide', 'zh' ]}/>
     </section>
     <section>
       ### 英文
-      <References mangled_references={II_mangled_references} scope_name={[ 'guide', 'en' ]}/>
+      <References materials={II_course_material.guide.en} reference_ranges={II_reference_ranges} scope_name={[ 'guide', 'en' ]}/>
     </section>
   </section>
   <section>
     ## 公开课
     <section>
       ### 中文
-      <References mangled_references={II_mangled_references} scope_name={[ 'open_course', 'zh' ]}/>
+      <References materials={II_course_material.open_course.zh} reference_ranges={II_reference_ranges} scope_name={[ 'open_course', 'zh' ]}/>
     </section>
   </section>
   <section>
@@ -47,36 +47,36 @@ import References from '@/components/References.astro'
       ### 教科书
       <section>
         #### 中文
-        <References mangled_references={II_mangled_references} scope_name={[ 'reference', 'text', 'zh' ]}/>
+        <References materials={II_course_material.reference.text.zh} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'text', 'zh' ]}/>
       </section>
       <section>
         #### 英文
-        <References mangled_references={II_mangled_references} scope_name={[ 'reference', 'text', 'en' ]}/>
+        <References materials={II_course_material.reference.text.en} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
     </section>
     <section>
       ### 指导书
       <section>
         #### 中文
-        <References mangled_references={II_mangled_references} scope_name={[ 'reference', 'guide', 'zh' ]}/>
+        <References materials={II_course_material.reference.guide.zh} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'guide', 'zh' ]}/>
       </section>
     </section>
     <section>
       ### 视频
-      <References mangled_references={II_mangled_references} scope_name={[ 'reference', 'video' ]}/>
+      <References materials={II_course_material.reference.video} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'video' ]}/>
     </section>
     <section>
       ### 习题集
       <section>
         #### 中文
-        <References mangled_references={II_mangled_references} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
+        <References materials={II_course_material.reference.problem_set.zh} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'problem_set', 'zh' ]}/>
       </section>
     </section>
     <section>
       ### 其它
       <section>
         #### 英文
-        <References mangled_references={II_mangled_references} scope_name={[ 'reference', 'other', 'en' ]}/>
+        <References materials={II_course_material.reference.other.en} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'other', 'en' ]}/>
       </section>
     </section>
   </section>
