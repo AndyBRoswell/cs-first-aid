@@ -34,7 +34,11 @@ export type Entry = { id: ID_t[], material: Material, }
 
 export type Material_Filter = (current_material: Material) => unknown
 
-export type Tag = string | { text: string, class: Tag[] } // It seems this is a little complex. Not used yet.
+/**
+ * @experimental
+ * Draft for a possible hierarchical classification model. Currently unused; flat tags should remain string arrays. Revisit this model when a concrete taxonomy use case appears.
+ */
+export type Tag = string | { text: string, class: Tag[] }
 
 export type Link = string | {
   link: string
