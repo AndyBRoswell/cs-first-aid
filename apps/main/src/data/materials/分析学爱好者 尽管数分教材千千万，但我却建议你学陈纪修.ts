@@ -1,6 +1,6 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 
-const items = [
+export const entries = [
   {
     id: [
       '尽管数分教材千千万，但我却建议你学陈纪修',
@@ -16,5 +16,3 @@ const items = [
     },
   },
 ] satisfies types_data.Entry[]
-
-export { items as entries }

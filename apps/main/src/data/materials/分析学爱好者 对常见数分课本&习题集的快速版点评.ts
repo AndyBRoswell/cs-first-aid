@@ -1,6 +1,6 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 
-const items = [
+export const entries = [
   {
     id: [
       '对常见数分课本&习题集的快速版点评',
@@ -16,5 +16,3 @@ const items = [
     },
   },
 ] satisfies types_data.Entry[]
-
-export { items as entries }

@@ -1,7 +1,7 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 import * as CSL from '@cs-first-aid/bibkit/CSL'
 
-const standards = [
+export const entries = [
   {
     id: [ 'ITU-R BT.2020-2', 'ITU-R BT.2020', 'Rec. 2020', 'BT.2020' ],
     material: {
@@ -27,5 +27,3 @@ const standards = [
     } satisfies CSL.Item,
   },
 ] satisfies types_data.Entry[]
-
-export { standards as entries }

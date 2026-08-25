@@ -1,7 +1,7 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 import * as CSL from '@cs-first-aid/bibkit/CSL'
 
-const books = [
+export const entries = [
   {
     id: [
       'DIP/4e',
@@ -28,5 +28,3 @@ const books = [
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
-
-export { books as entries }

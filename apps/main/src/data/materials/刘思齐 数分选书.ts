@@ -1,6 +1,6 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 
-const items = [
+export const entries = [
   {
     id: [
       '如何选择一本适合你的《数学分析》教科书？',
@@ -17,5 +17,3 @@ const items = [
     }
   }
 ] satisfies types_data.Entry[]
-
-export { items as entries }
