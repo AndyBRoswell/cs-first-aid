@@ -12,18 +12,18 @@ export const entries = [
       publisher: 'Cambridge University Press',
       issued: { 'date-parts': [ [ 2013, 4, 5 ] ] },
       edition: 2,
-      ISBN: '9781139020411' as CSL.ISBN,
+      ISBN: '9781139020411',
       DOI: '10.1017/CBO9781139020411',
       language: 'en-US',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
       custom: {
         Hardback: {
           type: 'book',
-          ISBN: '9780521839402' as CSL.ISBN,
+          ISBN: '9780521839402',
         } satisfies types_data.Material,
         Paperback: {
           type: 'book',
-          ISBN: '9780521548236' as CSL.ISBN,
+          ISBN: '9780521548236',
         } satisfies types_data.Material,
         URL: [
           {

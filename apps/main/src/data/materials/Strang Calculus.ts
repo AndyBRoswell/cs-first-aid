@@ -13,7 +13,7 @@ export const entries = [
       publisher: 'WELLESLEY-CAMBRIDGE PRESS',
       "publisher-place": 'Wellesley, MA',
       issued: { "date-parts": [ [ 2017, 9, 14 ], ], },
-      ISBN: '978-09802327-5-2' as CSL.ISBN,
+      ISBN: '978-09802327-5-2',
       URL: 'https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/resources/mitres_18_001_f17_full_book_pdf/',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
       note: 'https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/pages/about/',

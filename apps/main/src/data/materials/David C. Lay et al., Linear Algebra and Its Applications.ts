@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -12,7 +11,7 @@ export const entries = [
       issued: { 'date-parts': [ [ 2021, 7, 14 ] ], },
       edition: 6,
       language: 'en-US',
-      ISBN: '9781292351216' as CSL.ISBN,
+      ISBN: '9781292351216',
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/linear-algebra-and-its-applications-global-edition/P200000004712/9781292351216',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ], },
     },

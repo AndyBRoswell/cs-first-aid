@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -14,7 +13,7 @@ export const entries = [
       issued: { 'date-parts': [ [ 2015, 3 ] ] },
       'number-of-pages': 308,
       language: 'zh-CN',
-      ISBN: '9787301255803' as CSL.ISBN,
+      ISBN: '9787301255803',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       "collection-title": '大学生基础课教材',
       URL: 'https://book.douban.com/subject/26368286',

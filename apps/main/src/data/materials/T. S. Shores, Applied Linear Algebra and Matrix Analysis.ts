@@ -17,18 +17,18 @@ export const entries = [
       "number-of-pages": 'XII, 479',
       language: 'en-US',
       DOI: '10.1007/978-3-319-74748-4',
-      ISBN: '978-3-319-74748-4' as CSL.ISBN,
+      ISBN: '978-3-319-74748-4',
       URL: 'https://link.springer.com/book/10.1007/978-3-319-74748-4',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
       custom: {
         Hardcover: {
           type: 'book',
-          ISBN: '978-3-319-74747-7' as CSL.ISBN,
+          ISBN: '978-3-319-74747-7',
           issued: { 'date-parts': [ [ 2018, 5, 18 ] ] },
         } satisfies types_data.Material,
         Softcover: {
           type: 'book',
-          ISBN: '978-3-030-09067-8' as CSL.ISBN,
+          ISBN: '978-3-030-09067-8',
           issued: { 'date-parts': [ [ 2019, 1, 12 ] ] },
         } satisfies types_data.Material,
         "collection-title-short": 'UTM',

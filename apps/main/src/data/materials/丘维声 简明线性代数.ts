@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -14,7 +13,7 @@ export const entries = [
       "publisher-place": '北京',
       issued: { 'date-parts': [ [ 2024, 10, ], ], },
       edition: 2,
-      ISBN: '9787301356784' as CSL.ISBN,
+      ISBN: '9787301356784',
       'number-of-pages': 332,
       language: 'zh-CN',
       URL: 'https://book.douban.com/subject/37101517/',

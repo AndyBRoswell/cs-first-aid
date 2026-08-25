@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       "collection-title": '"十五"国家规划教材',
       language: 'zh-CN',
       'number-of-pages': 555,
-      ISBN: '978-7-04-019870-6' as CSL.ISBN,
+      ISBN: '978-7-04-019870-6',
       URL: 'https://www.hep.com.cn/book/show/9b998ecf-0298-4031-8d38-fa5e9187cbb3',
     },
   },
@@ -31,7 +30,7 @@ export const entries = [
       'publisher-place': '合肥',
       language: 'zh-CN',
       'number-of-pages': 519,
-      ISBN: '9787312034268' as CSL.ISBN,
+      ISBN: '9787312034268',
       'collection-title': '高校核心课程学习指导丛书',
       URL: 'https://book.douban.com/subject/26390093',
     },

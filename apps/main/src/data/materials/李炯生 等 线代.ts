@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       'collection-title': '中国科学技术大学精品教材',
       'number-of-pages': 447,
       language: 'zh-CN',
-      ISBN: '978-7-312-02298-2' as CSL.ISBN,
+      ISBN: '978-7-312-02298-2',
       URL: 'https://book.douban.com/subject/4200433/',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
     } satisfies types_data.Material,

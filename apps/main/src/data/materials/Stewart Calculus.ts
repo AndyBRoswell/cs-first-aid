@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       publisher: 'Cengage Learning',
       "publisher-place": 'Boston, MA',
       issued: { "date-parts": [ [ 2020, 4, 30 ], ], },
-      ISBN: '9780357711491' as CSL.ISBN,
+      ISBN: '9780357711491',
       URL: 'https://www.cengage.com/c/calculus-9e-stewart-clegg-watson/9781337624183/',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },
@@ -33,7 +32,7 @@ export const entries = [
       publisher: 'Cengage Learning',
       "publisher-place": 'Boston, MA',
       issued: { "date-parts": [ [ 2020, 1, 9 ], ], },
-      ISBN: '9780357687901' as CSL.ISBN,
+      ISBN: '9780357687901',
       URL: 'https://www.cengage.com/c/calculus-early-transcendentals-9e-stewart-clegg-watson/9781337613927/',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     },

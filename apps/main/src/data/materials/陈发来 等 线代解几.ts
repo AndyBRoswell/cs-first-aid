@@ -16,7 +16,7 @@ const books = [
       issued: { 'date-parts': [ [ 2015, 8, 7 ] ] },
       edition: 2,
       'number-of-pages': 247,
-      ISBN: '9787040433128' as CSL.ISBN,
+      ISBN: '9787040433128',
       URL: 'https://team.ustc.edu.cn/Chen_Reaserch_Lab/en/zzcg/1025606/content/3661.htm',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
       custom: {

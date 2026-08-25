@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       publisher: 'Addison-Wesley Professional',
       issued: { 'date-parts': [ [ 2022, 9, 24, ], ], },
       accessed: { 'date-parts': [ [ 2026, 5, 12, ], ], },
-      ISBN: '978-0-13-681648-5' as CSL.ISBN,
+      ISBN: '978-0-13-681648-5',
       URL: 'https://www.stroustrup.com/tour3.html',
     },
   },

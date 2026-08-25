@@ -122,8 +122,8 @@ function get_material_digest(material: Material): string {
 }
 
 export function add(IDs: ID_t[], material: Material): void {
-  if ('ISBN' in material) { CSL.ensure_ISBN(material.ISBN) }
-  if ('ISSN' in material) { CSL.ensure_ISSN(material.ISSN) }
+  if ('ISBN' in material && CSL.is_ISBN(material.ISBN) === false) { throw new Error(`Invalid ISBN ${material.ISBN}`) }
+  if ('ISSN' in material && CSL.is_ISSN(material.ISSN) === false) { throw new Error(`Invalid ISSN ${material.ISSN}`) }
   for (const ID of IDs) {
     const CID = canonical_ID(ID)
     if (m.has(CID)) { throw new Error(`ID ${CID} already exists. Material: ${JSON.stringify(material, null, 2)}`) ; }

@@ -16,7 +16,7 @@ export const entries = [
       'collection-title': 'C++ In-Depth',
       'number-of-pages': 656,
       language: 'en-US',
-      ISBN: '9780138308681' as CSL.ISBN,
+      ISBN: '9780138308681',
       accessed: { 'date-parts': [ [ 2026, 5, 12 ] ] },
       URL: 'https://www.stroustrup.com/programming.html',
       custom: {

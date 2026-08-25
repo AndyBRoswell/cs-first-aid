@@ -16,13 +16,13 @@ export const entries = [
       'publisher-place': 'London',
       "collection-title": "Graduate Texts in Mathematics",
       "number-of-pages": 'XII, 663',
-      ISBN: '978-1-84996-690-0' as CSL.ISBN,
+      ISBN: '978-1-84996-690-0',
       language: 'en-US',
       custom: {
         Hardcover: {
           type: 'book',
           issued: { 'date-parts': [ [ 2008, 1, 10 ], ], },
-          ISBN: '9781846289699' as CSL.ISBN,
+          ISBN: '9781846289699',
         } satisfies types_data.Material,
         "collection-title-short": 'GTM',
       } satisfies CSL.Custom,

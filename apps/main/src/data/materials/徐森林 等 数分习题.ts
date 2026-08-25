@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -13,7 +12,7 @@ export const entries = [
       publisher: '哈尔滨工业大学出版社',
       "publisher-place": '黑龙江省 哈尔滨市',
       issued: { "date-parts": [ [ 2021, 7, ] ] },
-      ISBN: '9787560380094' as CSL.ISBN,
+      ISBN: '9787560380094',
       language: 'zh-CN',
     },
   },
@@ -28,7 +27,7 @@ export const entries = [
       publisher: '哈尔滨工业大学出版社',
       "publisher-place": '黑龙江省 哈尔滨市',
       issued: { "date-parts": [ [ 2021, 7, ] ] },
-      ISBN: '9787560383309' as CSL.ISBN,
+      ISBN: '9787560383309',
       language: 'zh-CN',
     },
   },

@@ -15,14 +15,14 @@ export const entries = [
       publisher: 'Elsevier',
       edition: 2,
       issued: { 'date-parts': [ [ 2003, 7, 11 ] ] },
-      ISBN: '9780080523224' as CSL.ISBN,
+      ISBN: '9780080523224',
       language: 'en-US',
       URL: 'https://sites.socsci.uci.edu/~kjameson/SmithPokorny2003.pdf',
       accessed: { 'date-parts': [ [ 2026, 8, 23 ] ] },
       custom: {
         Print: {
           type: 'book',
-          ISBN: '9780444512512' as CSL.ISBN,
+          ISBN: '9780444512512',
           issued: { 'date-parts': [ [ 2003 ] ] },
         } satisfies types_data.Material,
       } satisfies CSL.Custom,

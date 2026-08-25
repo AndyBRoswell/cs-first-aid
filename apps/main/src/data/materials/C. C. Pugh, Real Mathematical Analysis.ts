@@ -14,7 +14,7 @@ export const entries = [
       "publisher-place": 'New York, NY',
       issued: { "date-parts": [ [ 2015, ], ], },
       "number-of-pages": 478,
-      ISBN: '978-3-319-17771-7' as CSL.ISBN,
+      ISBN: '978-3-319-17771-7',
       "collection-title": 'Undergraduate Texts in Mathematics',
       "collection-editor": [ { given: 'Sheldon Jay', family: 'Axler' }, { given: 'Kenneth Alan', family: 'Ribet' }, ],
       language: 'en-US',

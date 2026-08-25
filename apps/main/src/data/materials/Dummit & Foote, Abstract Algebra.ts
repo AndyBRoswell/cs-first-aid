@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -13,7 +12,7 @@ export const entries = [
       edition: 3,
       issued: { 'date-parts': [ [ 2003, 7, ] ] },
       language: 'en-US',
-      ISBN: '9780471433347' as CSL.ISBN,
+      ISBN: '9780471433347',
       URL: 'https://www.wiley.com/en-us/Abstract+Algebra%2C+3rd+Edition-p-9780471433347',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
     },

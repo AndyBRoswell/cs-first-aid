@@ -15,7 +15,7 @@ export const entries = [
       'collection-title': 'Other Titles in Applied Mathematics',
       'collection-number': 'OT188',
       "number-of-pages": 'xiv + 991',
-      ISBN: '978-1-61197-744-8' as CSL.ISBN,
+      ISBN: '978-1-61197-744-8',
       DOI: '10.1137/1.9781611977448',
       language: 'en-US',
       URL: 'https://epubs.siam.org/doi/book/10.1137/1.9781611977448',
@@ -23,7 +23,7 @@ export const entries = [
       custom: {
         'Print': {
           type: 'book',
-          ISBN: '978-1-61197-743-1' as CSL.ISBN,
+          ISBN: '978-1-61197-743-1',
         } satisfies types_data.Material,
       } satisfies CSL.Custom,
     },
@@ -41,7 +41,7 @@ export const entries = [
       'collection-title': 'Other Titles in Applied Mathematics',
       'collection-number': 'OT189',
       "number-of-pages": 'vi + 250',
-      ISBN: '978-1-61197-746-2' as CSL.ISBN,
+      ISBN: '978-1-61197-746-2',
       DOI: '10.1137/1.9781611977462',
       language: 'en-US',
       URL: 'https://epubs.siam.org/doi/book/10.1137/1.9781611977462',
@@ -49,7 +49,7 @@ export const entries = [
       custom: {
         'Print': {
           type: 'book',
-          ISBN: ':978-1-61197-745-5' as CSL.ISBN,
+          ISBN: '978-1-61197-745-5',
         } satisfies types_data.Material,
       } satisfies CSL.Custom,
     },

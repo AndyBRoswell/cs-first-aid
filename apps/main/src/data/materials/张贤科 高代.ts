@@ -12,7 +12,7 @@ export const entries = [
       'publisher-place': '北京',
       issued: { 'date-parts': [ [ 2012, 8, 10 ] ] },
       accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
-      ISBN: '978-7-04-035199-6' as CSL.ISBN,
+      ISBN: '978-7-04-035199-6',
       language: 'zh-CN',
       'number-of-pages': 501,
       URL: 'https://www.hep.com.cn/book/show/327efefa-8d7a-44af-83a1-a08c18e1421d',

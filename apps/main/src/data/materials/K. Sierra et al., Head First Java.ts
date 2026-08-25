@@ -17,15 +17,15 @@ export const entries = [
       language: 'en-US',
       URL: 'https://www.oreilly.com/library/view/head-first-java/9781492091646/',
       accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
-      ISBN: '978-1-491-91075-7' as CSL.ISBN,
+      ISBN: '978-1-491-91075-7',
       custom: {
         Paperback: {
           type: 'book',
-          ISBN: '978-1-491-91077-1' as CSL.ISBN,
+          ISBN: '978-1-491-91077-1',
         } satisfies types_data.Material,
         Kindle: {
           type: 'book',
-          ISBN: '978-1491910757' as CSL.ISBN,
+          ISBN: '978-1491910757',
         } satisfies types_data.Material,
       } satisfies CSL.Custom,
     } satisfies types_data.Material,

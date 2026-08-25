@@ -14,7 +14,7 @@ const books = [
       issued: { 'date-parts': [ [ 2002, 6 ] ] },
       publisher: '北京大学出版社',
       "publisher-place": '北京',
-      ISBN: '9787301053669' as CSL.ISBN,
+      ISBN: '9787301053669',
       "collection-title": '高等教育精品教材',
       language: 'zh-CN',
       custom: {
@@ -32,7 +32,7 @@ const books = [
       publisher: '北京大学出版社',
       "publisher-place": '北京',
       issued: { 'date-parts': [ [ 2008, 1 ] ] },
-      ISBN: '9787301098011' as CSL.ISBN,
+      ISBN: '9787301098011',
       language: 'zh-CN',
       custom: {
         "collection-title": [ '高等院校计算机专业及专业基础课系列教材', ],

@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       "publisher-place": '北京市',
       issued: { "date-parts": [ [ 2006, 4, 28 ], ], },
       "number-of-pages": 565,
-      ISBN: '978-7-04-018693-2' as CSL.ISBN,
+      ISBN: '978-7-04-018693-2',
       "collection-title": "普通高等教育“十五”国家级规划教材",
       language: "zh-CN",
       URL: 'https://www.hep.com.cn/book/show/4fbfa3b9-aa86-41c2-be72-84ac7d0b87b2',

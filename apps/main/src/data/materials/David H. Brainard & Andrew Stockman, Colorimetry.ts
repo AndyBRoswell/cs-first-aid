@@ -13,14 +13,14 @@ export const entries = [
       issued: { 'date-parts': [ [ 2009, 9, 22 ] ] },
       edition: 3,
       volume: 3,
-      ISBN: '9780071629287' as CSL.ISBN,
+      ISBN: '9780071629287',
       language: 'en-US',
       URL: 'https://color2.psych.upenn.edu/brainard/papers/Brainard_Stockman_Colorimetry.pdf',
       accessed: { 'date-parts': [ [ 2026, 8, 23 ] ] },
       custom: {
         Print: {
           type: 'book',
-          ISBN: '9780071498913' as CSL.ISBN,
+          ISBN: '9780071498913',
           issued: { 'date-parts': [ [ 2009, 9, 22 ] ] },
         } satisfies types_data.Material,
       } satisfies CSL.Custom,

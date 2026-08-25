@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -16,7 +15,7 @@ export const entries = [
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { "date-parts": [ [ 2023, ], ], },
-      ISBN: '978-7-04-058981-8' as CSL.ISBN,
+      ISBN: '978-7-04-058981-8',
       "number-of-pages": 440,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/9bbb9470-3576-4736-8bf7-018b8b5fb298',
@@ -37,7 +36,7 @@ export const entries = [
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { "date-parts": [ [ 2023, ], ], },
-      ISBN: '978-7-04-058868-2' as CSL.ISBN,
+      ISBN: '978-7-04-058868-2',
       "number-of-pages": 480,
       language: 'zh-CN',
       URL: 'https://www.hep.com.cn/book/show/3c03343f-fa8a-4fbc-94aa-15ff4e23b964',

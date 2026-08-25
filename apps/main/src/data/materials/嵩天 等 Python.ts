@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       'number-of-pages': 424,
       accessed: { 'date-parts': [ [ 2026, 5, 17 ] ] },
       URL: 'https://www.hep.com.cn/book/show/c80f999b-8730-4c39-b454-a88e0fb6adbb',
-      ISBN: '9787040622942' as CSL.ISBN,
+      ISBN: '9787040622942',
     },
   },
 ] satisfies types_data.Entry[]

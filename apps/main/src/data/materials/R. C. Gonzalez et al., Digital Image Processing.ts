@@ -15,14 +15,14 @@ export const entries = [
       edition: 4,
       publisher: 'Pearson',
       issued: { 'date-parts': [ [ 2017, 10, 26 ] ] },
-      ISBN: '9781292223049' as CSL.ISBN,
+      ISBN: '9781292223049',
       language: 'en-GB',
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/digital-image-processing-global-edition/P200000004313/9781292223049',
       accessed: { 'date-parts': [ [ 2026, 8, 23 ] ] },
       custom: {
         eTextbook: {
           type: 'book',
-          ISBN: '9781292223070' as CSL.ISBN,
+          ISBN: '9781292223070',
         } satisfies types_data.Material,
       } satisfies CSL.Custom,
     } satisfies types_data.Material,

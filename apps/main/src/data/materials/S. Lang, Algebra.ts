@@ -18,7 +18,7 @@ export const entries = [
       language: 'en-US',
       "number-of-pages": 'XV, 914',
       DOI: '10.1007/978-1-4613-0041-0',
-      ISBN: '9781461300410' as CSL.ISBN,
+      ISBN: '9781461300410',
       URL: 'https://link.springer.com/book/10.1007/978-1-4613-0041-0',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       'collection-title': 'Graduate Texts in Mathematics',
@@ -26,12 +26,12 @@ export const entries = [
       custom: {
         Hardcover: {
           type: 'book',
-          ISBN: '9780387953854' as CSL.ISBN,
+          ISBN: '9780387953854',
           issued: { 'date-parts': [ [ 2002, 1, 8 ] ] },
         } satisfies types_data.Material,
         Softcover: {
           type: 'book',
-          ISBN: '978-1-4612-6551-1' as CSL.ISBN,
+          ISBN: '978-1-4612-6551-1',
           issued: { 'date-parts': [ [ 2012, 11, 10 ] ] },
         } satisfies types_data.Material,
         "collection-title-short": 'GTM',

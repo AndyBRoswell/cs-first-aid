@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -16,7 +15,7 @@ export const entries = [
       "publisher-place": 'Princeton, NJ',
       issued: { "date-parts": [ [ 2009, 11, 28 ], ], },
       "number-of-pages": 752,
-      ISBN: '9781400835782' as CSL.ISBN,
+      ISBN: '9781400835782',
       URL: 'https://press.princeton.edu/books/ebook/9781400835782/the-calculus-lifesaver-pdf?srsltid=AfmBOops83rJhcGuw-fa0Bu44xMu49g0lGUuYIANhrxpdDl-qjG2pwW-',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
     }

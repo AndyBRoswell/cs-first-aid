@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,14 +14,14 @@ export const entries = [
       issued: { "date-parts": [ [ 2014, 1, 14 ] ] },
       "original-date": { "date-parts": [ [ 2010, 8, 13 ] ] },
       "original-publisher": "Pearson",
-      ISBN: '978-0321998026' as CSL.ISBN,
+      ISBN: '978-0321998026',
       URL: 'https://www.amazon.com/Algebra-Michael-Artin-ebook/dp/B00HR7MSZO',
       accessed: { "date-parts": [ [ 2026, 5, 6 ] ] },
       note: 'Kindle Edition',
       custom: {
         Print: {
           type: 'book',
-          ISBN: '9780134689609' as CSL.ISBN,
+          ISBN: '9780134689609',
           issued: { "date-parts": [ [ 2017, 2, 13 ] ] },
           "original-date": { "date-parts": [ [ 2010, 8, 13 ] ] },
           "original-publisher": "Pearson",

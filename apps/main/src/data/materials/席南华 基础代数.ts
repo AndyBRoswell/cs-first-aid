@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -16,7 +15,7 @@ export const entries = [
       publisher: '科学出版社',
       'publisher-place': '北京',
       language: 'zh-CN',
-      ISBN: '978-7-03-049843-4' as CSL.ISBN,
+      ISBN: '978-7-03-049843-4',
       URL: 'https://www.ecsponline.com/goods.php?id=172616',
     },
   } satisfies types_data.Entry,
@@ -33,7 +32,7 @@ export const entries = [
       publisher: '科学出版社',
       'publisher-place': '北京',
       language: 'zh-CN',
-      ISBN: '978-7-03-056033-9' as CSL.ISBN,
+      ISBN: '978-7-03-056033-9',
       URL: 'https://www.ecsponline.com/goods.php?id=189397',
     },
   } satisfies types_data.Entry,
@@ -51,7 +50,7 @@ export const entries = [
       publisher: '科学出版社',
       'publisher-place': '北京',
       language: 'zh-CN',
-      ISBN: '978-7-03-068342-7' as CSL.ISBN,
+      ISBN: '978-7-03-068342-7',
       URL: 'https://www.ecsponline.com/goods.php?id=210418',
     },
   } satisfies types_data.Entry,

@@ -29,7 +29,7 @@ export const entries = [
           edition: 2023,
           publisher: 'Orthogonal Publishing L3C',
           issued: { 'date-parts': [ [ 2026, 5, 13 ] ] },
-          ISBN: '9781944325183' as CSL.ISBN,
+          ISBN: '9781944325183',
         } satisfies types_data.Material,
         Hardcover: {
           type: 'book',
@@ -39,7 +39,7 @@ export const entries = [
           edition: 2023,
           publisher: 'Orthogonal Publishing L3C',
           issued: { 'date-parts': [ [ 2023 ] ] },
-          ISBN: '9781944325190' as CSL.ISBN,
+          ISBN: '9781944325190',
         } satisfies types_data.Material,
       } satisfies CSL.Custom,
     },

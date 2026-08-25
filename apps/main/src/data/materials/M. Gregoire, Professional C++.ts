@@ -14,13 +14,13 @@ export const entries = [
       publisher: 'Wiley',
       "number-of-pages": 1376,
       language: 'en-US',
-      ISBN: '9781394193172' as CSL.ISBN,
+      ISBN: '9781394193172',
       URL: 'https://www.wiley.com/en-us/Professional+C%2B%2B%2C+6th+Edition-p-9781394193172',
       accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
       custom: {
         Ebook: {
           type: 'book',
-          ISBN: '9781394193189' as CSL.ISBN,
+          ISBN: '9781394193189',
           URL: 'https://www.wiley.com/en-us/Professional+C%2B%2B%2C+6th+Edition-p-9781394193189',
           accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
         } satisfies types_data.Material,

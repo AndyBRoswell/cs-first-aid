@@ -2,6 +2,8 @@
 // Schema: https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json
 
 import * as Data_Type from "./types/data.ts";
+import validator_isISBN from 'validator/lib/isISBN'
+import validator_isISSN from 'validator/lib/isISSN'
 
 // 📦 Item types
 export type Item_Type =
@@ -219,54 +221,12 @@ export type Locator_Type =
   | 'verse'
   | 'volume'
 
-declare const _ISBN: unique symbol
-export type ISBN = string & { readonly [_ISBN]: true }
-
-export function ensure_ISBN(str: string): ISBN {
-  if (is_ISBN(str) === false) { throw new Error(`Invalid ISBN ${str}`) }
-  return str
+export function is_ISBN(str: string): boolean {
+  const sanitized = str.replace(/[\s-]+/g, '').toUpperCase()
+  return (sanitized.length !== 13 || /^97[89]/.test(sanitized)) && validator_isISBN(sanitized)
 }
 
-export function is_ISBN(str: string): str is ISBN { // Created by Gemini 3.1 Pro [Web]. Revised by AndyBRoswell.
-  const sanitized_str = str.replace(/[-\s]/g, '').toUpperCase()
-  if (/^(?:97[89])?\d{9}[\dX]$/.test(sanitized_str) === false) { return false }
-  let s: number = 0
-  switch (sanitized_str.length) {
-    case 10:
-      for (let i = 0; i < 9; i++) { s += parseInt(sanitized_str[i]!) * (10 - i) }
-      const d = sanitized_str[9] === 'X' ? 10 : parseInt(sanitized_str[9]!)
-      return (s + d) % 11 === 0
-    case 13:
-      for (let i = 0; i < 13; i++) { s += parseInt(sanitized_str[i]!) * (i % 2 === 0 ? 1 : 3) }
-      return s % 10 === 0
-    default:
-      return false
-  }
-}
-
-declare const _ISSN: unique symbol
-export type ISSN = string & { readonly [_ISSN]: true }
-
-export function ensure_ISSN(str: string): ISSN {
-  if (is_ISSN(str) === false) { throw new Error(`Invalid ISSN ${str}`) }
-  return str
-}
-
-export function is_ISSN(issn: string): issn is ISSN { // Created by Gemini 3.1 Pro [Web]. Revised by AndyBRoswell.
-  const regex = /^(?:ISSN\s)?(\d{4})-(\d{3}[\dX])$/i
-  const match = issn.match(regex)
-  if (!match) { return false }
-  const cleanIssn = (match[1]! + match[2]!).toUpperCase()
-  let sum = 0
-  for (let i = 0; i < 7; i++) { sum += parseInt(cleanIssn[i]!, 10) * (8 - i)}
-  const remainder = sum % 11
-  const checkValue = 11 - remainder
-  let expectedCheckDigit: string
-  if (checkValue === 10) { expectedCheckDigit = 'X' }
-  else if (checkValue === 11) { expectedCheckDigit = '0' }
-  else { expectedCheckDigit = checkValue.toString() }
-  return cleanIssn[7] === expectedCheckDigit;
-}
+export function is_ISSN(str: string): boolean { return validator_isISSN(str) }
 
 export type Custom = {
   [key: string]: unknown

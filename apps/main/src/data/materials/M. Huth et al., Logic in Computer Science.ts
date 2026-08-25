@@ -14,7 +14,7 @@ export const entries = [
       edition: 2,
       publisher: 'Cambridge University Press',
       "number-of-pages": 440,
-      ISBN: '9780511810275' as CSL.ISBN,
+      ISBN: '9780511810275',
       URL: 'https://www.cambridge.org/highereducation/books/logic-in-computer-science/9022E2BE5E7C9F20D259F4A83986236C',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       language: 'en-GB',
@@ -22,7 +22,7 @@ export const entries = [
         Paperback: {
           type: 'book',
           issued: { 'date-parts': [ [ 2004, 8, 26 ] ] },
-          ISBN: '9780521543101' as CSL.ISBN,
+          ISBN: '9780521543101',
         } satisfies types_data.Material,
       } satisfies CSL.Custom,
     } satisfies types_data.Material,

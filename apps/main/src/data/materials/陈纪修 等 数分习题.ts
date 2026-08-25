@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       edition: 2,
       issued: { "date-parts": [ [ 2005, 7 ] ] },
       "number-of-pages": 262,
-      ISBN: "9787040166187" as CSL.ISBN,
+      ISBN: "9787040166187",
       "collection-title": "数学类专业学习辅导丛书",
       language: "zh-CN",
       URL: "https://book.douban.com/subject/1704531/"
@@ -33,7 +32,7 @@ export const entries = [
       "number-of-volumes": 2,
       edition: 2,
       issued: { "date-parts": [ [ 2005 ] ] },
-      ISBN: "9787040173857" as CSL.ISBN,
+      ISBN: "9787040173857",
       "collection-title": "数学类专业学习辅导丛书",
       language: "zh-CN",
       URL: "https://book.douban.com/subject/1721588/"
@@ -45,7 +44,7 @@ export const entries = [
       type: 'book',
       title: '数学分析习题全解指南',
       author: [ { family: '陈', given: '纪修' }, { family: '徐', given: '惠平' }, { family: '周', given: '渊' }, { family: '金', given: '路' }, { family: '邱', given: '维元' } ],
-      ISBN: '978-7-04-053442-9' as CSL.ISBN,
+      ISBN: '978-7-04-053442-9',
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2020, 4, 27 ] ] },
@@ -63,7 +62,7 @@ export const entries = [
       type: 'book',
       title: '数学分析习题全解指南',
       author: [ { family: '陈', given: '纪修' }, { family: '徐', given: '惠平' }, { family: '周', given: '渊' }, { family: '金', given: '路' }, { family: '邱', given: '维元' } ],
-      ISBN: '978-7-04-053911-0' as CSL.ISBN,
+      ISBN: '978-7-04-053911-0',
       publisher: '高等教育出版社',
       "publisher-place": '北京市',
       issued: { 'date-parts': [ [ 2020, 6, 17 ] ] },

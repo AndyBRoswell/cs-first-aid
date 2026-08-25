@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -13,7 +12,7 @@ export const entries = [
       publisher: 'Addison-Wesley',
       issued: { 'date-parts': [ [ 1974 ] ] },
       language: 'en-US',
-      ISBN: '9780201002881' as CSL.ISBN,
+      ISBN: '9780201002881',
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/mathematical-analysis-a-modern-approach-to-advanced-calculus/P200000006077/9780201002881',
     },
   },

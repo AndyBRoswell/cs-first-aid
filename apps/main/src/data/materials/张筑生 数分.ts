@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       "number-of-volumes": 3,
       'number-of-pages': 296,
       issued: { 'date-parts': [ [ 2021, 9 ] ] },
-      ISBN: '9787301322796' as CSL.ISBN,
+      ISBN: '9787301322796',
       URL: 'https://book.douban.com/subject/35597851/',
     },
   },
@@ -31,7 +30,7 @@ export const entries = [
       volume: 2,
       "number-of-volumes": 3,
       issued: { 'date-parts': [ [ 2021, 8 ] ] },
-      ISBN: '9787301323373' as CSL.ISBN,
+      ISBN: '9787301323373',
       URL: 'https://book.douban.com/subject/35601300/',
     },
   },
@@ -48,7 +47,7 @@ export const entries = [
       "number-of-volumes": 3,
       'number-of-pages': 372,
       issued: { 'date-parts': [ [ 2021, 10 ] ] },
-      ISBN: '9787301323724' as CSL.ISBN,
+      ISBN: '9787301323724',
       URL: 'https://book.douban.com/subject/35632006/',
     },
   },

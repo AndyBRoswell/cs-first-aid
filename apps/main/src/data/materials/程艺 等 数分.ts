@@ -1,6 +1,5 @@
 import * as catalog from '@cs-first-aid/bibkit/catalog'
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 import * as _ from '@cs-first-aid/util/lib/lodash-es'
 import * as util from '@cs-first-aid/util'
 
@@ -17,7 +16,7 @@ const books = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       issued: { 'date-parts': [ [ 2019, 3, 13 ] ] },
-      ISBN: '978-7-04-051033-1' as CSL.ISBN,
+      ISBN: '978-7-04-051033-1',
       volume: 1,
       "number-of-volumes": 3,
       language: 'zh-CN',
@@ -36,7 +35,7 @@ const books = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       issued: { 'date-parts': [ [ 2020, 1, 15 ] ] },
-      ISBN: '978-7-04-053309-5' as CSL.ISBN,
+      ISBN: '978-7-04-053309-5',
       volume: 2,
       "number-of-volumes": 3,
       language: 'zh-CN',
@@ -53,7 +52,7 @@ const books = [
       publisher: '高等教育出版社',
       'publisher-place': '北京',
       issued: { 'date-parts': [ [ 2020, 8, 20 ] ] },
-      ISBN: '978-7-04-054247-9' as CSL.ISBN,
+      ISBN: '978-7-04-054247-9',
       volume: 3,
       "number-of-volumes": 3,
       language: 'zh-CN',

@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -13,7 +12,7 @@ export const entries = [
       issued: { 'date-parts': [ [ 2015, 8 ] ] },
       publisher: '西安电子科技大学出版社',
       'publisher-place': '西安',
-      ISBN: '978-7-5606-3454-8' as CSL.ISBN,
+      ISBN: '978-7-5606-3454-8',
       language: 'zh-CN',
       URL: 'https://www.xduph.com/Pages/BookDetail.aspx?doi=13bc748f-fbb6-426a-9a59-1cab34fa991e',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },

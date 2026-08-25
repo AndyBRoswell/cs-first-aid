@@ -15,13 +15,13 @@ export const entries = [
       issued: { 'date-parts': [ [ 2019 ], ], },
       language: 'en-US',
       'number-of-pages': 541,
-      ISBN: '978-1-4786-3869-8' as CSL.ISBN,
+      ISBN: '978-1-4786-3869-8',
       URL: 'https://www.waveland.com/browse.php?t=477',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
       custom: {
         VitalSource: {
           type: 'book',
-          ISBN: '9781478638919' as CSL.ISBN,
+          ISBN: '9781478638919',
           URL: 'https://www.vitalsource.com/products/abstract-algebra-john-a-beachy-william-d-v9781478638919',
           accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
         } satisfies types_data.Material,

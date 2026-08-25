@@ -14,7 +14,7 @@ export const entries = [
       "available-date": { "date-parts": [ [ 2025, 9, 1 ] ] },
       "original-date": { 'date-parts': [ [ 2024, 10, 15 ] ] },
       publisher: 'Manning Publications',
-      ISBN: '9781633437777' as CSL.ISBN,
+      ISBN: '9781633437777',
       language: 'en-US',
       URL: 'https://gustedt.gitlabpages.inria.fr/modern-c/',
       accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },

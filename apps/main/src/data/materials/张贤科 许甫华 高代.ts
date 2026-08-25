@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,7 +14,7 @@ export const entries = [
       'publisher-place': '北京',
       "number-of-pages": 441,
       language: 'zh-CN',
-      ISBN: '9787302082279' as CSL.ISBN,
+      ISBN: '9787302082279',
       URL: 'https://www.tup.com.cn/booksCenter/book_00937505.html',
       accessed: { 'date-parts': [ [ 2026, 5, 11 ] ] },
       custom: {

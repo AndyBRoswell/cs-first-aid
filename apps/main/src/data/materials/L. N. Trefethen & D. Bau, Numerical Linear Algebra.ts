@@ -19,11 +19,11 @@ export const entries = [
       'number-of-pages': 'xvi + 370',
       DOI: '10.1137/1.9781611977165',
       URL: 'https://epubs.siam.org/doi/book/10.1137/1.9781611977165',
-      ISBN: '978-1-61197-716-5' as CSL.ISBN,
+      ISBN: '978-1-61197-716-5',
       custom: {
         Softcover: {
           type: 'book',
-          ISBN: '978-1-61197-715-8' as CSL.ISBN,
+          ISBN: '978-1-61197-715-8',
         } satisfies types_data.Material,
       } satisfies CSL.Custom,
     } satisfies types_data.Material,

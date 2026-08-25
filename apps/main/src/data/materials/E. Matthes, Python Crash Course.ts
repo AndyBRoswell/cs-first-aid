@@ -16,12 +16,12 @@ export const entries = [
       issued: { 'date-parts': [ [ 2022, 12 ], ], },
       accessed: { 'date-parts': [ [ 2026, 5, 13, ], ], },
       URL: 'https://nostarch.com/python-crash-course-3rd-edition',
-      ISBN: '9781718502710' as CSL.ISBN,
+      ISBN: '9781718502710',
       custom: {
         subtitle: 'A Hands-On, Project-Based Introduction to Programming',
         Print: {
           type: 'book',
-          ISBN: '9781718502703' as CSL.ISBN,
+          ISBN: '9781718502703',
         } satisfies types_data.Material,
       } satisfies CSL.Custom,
     },

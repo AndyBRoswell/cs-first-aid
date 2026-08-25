@@ -14,13 +14,13 @@ export const entries = [
       issued: { 'date-parts': [ [ 2024, 8, 13 ] ] },
       accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
       publisher: 'O\'Reilly Media',
-      ISBN: '9781098141776' as CSL.ISBN,
+      ISBN: '9781098141776',
       URL: 'https://www.oreilly.com/library/view/head-first-c/9781098141776/',
       custom: {
         subtitle: `A Learner's Guide to Real-World Programming with C# and .NET`,
         Print: {
           type: 'book',
-          ISBN: '9781098141783' as CSL.ISBN,
+          ISBN: '9781098141783',
           issued: { 'date-parts': [ [ 2024, 8, 13 ] ] },
         } satisfies types_data.Material,
       } satisfies CSL.Custom,

@@ -1,5 +1,4 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -11,7 +10,7 @@ export const entries = [
       issued: { 'date-parts': [ [ 2011 ] ] },
       accessed: { 'date-parts': [ [ 2026, 8, 20 ] ] },
       URL: 'http://www.lea-test.fi/en/vistests/instruct/contrast/lowsymbo/Snellen.pdf',
-      ISBN: '9789529283804' as CSL.ISBN,
+      ISBN: '9789529283804',
       language: 'en-US',
       "number-of-pages": 238,
     },
