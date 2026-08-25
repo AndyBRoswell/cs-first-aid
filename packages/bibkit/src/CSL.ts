@@ -222,7 +222,7 @@ export type Locator_Type =
   | 'volume'
 
 export function is_ISBN(str: string): boolean {
-  const sanitized = str.replace(/[\s-]+/g, '').toUpperCase()
+  const sanitized = str.replace(/[\s-]+/g, '')
   return (sanitized.length !== 13 || /^97[89]/.test(sanitized)) && validator_isISBN(sanitized)
 }
 
