@@ -80,8 +80,6 @@ const books = [
   },
 ] satisfies types_data.Entry[]
 
-catalog.add_items(books)
-
 const open_courses = [
   {
     id: [],
@@ -96,19 +94,23 @@ const open_courses = [
       accessed: { "date-parts": [ [ 2026, 5, 3 ] ] },
       custom: {
         lecturer: [ { family: '陈', given: '纪修' } ],
-        companion: catalog.filter(
-          m =>
-            util.ieq(m.title!, '数学分析')
-            &&
-            m.author?.some(a => _.isEqual(a, { family: '陈', given: '纪修' }))
-            &&
-            m.edition === 2
-          , { count: 2 }
-        ),
         suggested_playback_speed: [ 1.5, 2, ],
       } satisfies CSL.Custom
     } satisfies types_data.Video,
   },
 ]
 
-catalog.add_items(open_courses)
+export const entries = [ ...books, ...open_courses ] satisfies types_data.Entry[]
+
+export function resolveRelations(): void {
+  const material: types_data.Material = open_courses[0]!.material
+  material.custom!.companion = catalog.filter(
+    m =>
+      util.ieq(m.title!, '数学分析')
+      &&
+      m.author?.some(a => _.isEqual(a, { family: '陈', given: '纪修' }))
+      &&
+      m.edition === 2
+    , { count: 2 }
+  )
+}

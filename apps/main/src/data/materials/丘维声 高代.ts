@@ -150,8 +150,6 @@ const books = [
   },
 ] satisfies types_data.Entry[]
 
-catalog.add_items(books)
-
 const open_courses = [
   {
     id: [],
@@ -166,20 +164,24 @@ const open_courses = [
       custom: {
         institution: [ '清华大学' ],
         lecturer: [ { family: '丘', given: '维声' } ],
-        companion: catalog.filter(
-          m =>
-            util.ieq(m.title!, '高等代数')
-            &&
-            m.author?.length === 1
-            &&
-            _.isEqual(m.author[0], { family: '丘', given: '维声' })
-            &&
-            m.edition === 1
-          , { count: 2 }
-        )
       } satisfies CSL.Custom,
     } satisfies types_data.Video,
   },
 ]
 
-catalog.add_items(open_courses)
+export const entries = [ ...books, ...open_courses ] satisfies types_data.Entry[]
+
+export function resolveRelations(): void {
+  const material: types_data.Material = open_courses[0]!.material
+  material.custom!.companion = catalog.filter(
+    m =>
+      util.ieq(m.title!, '高等代数')
+      &&
+      m.author?.length === 1
+      &&
+      _.isEqual(m.author[0], { family: '丘', given: '维声' })
+      &&
+      m.edition === 1
+    , { count: 2 }
+  )
+}

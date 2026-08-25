@@ -1,3 +1,4 @@
+import { randomUUID } from 'node:crypto'
 import { test, expect } from 'vitest';
 
 // @ts-ignore [citation-js doesn't have ts support]
@@ -5,6 +6,8 @@ import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import * as util from '@cs-first-aid/util'
 import * as CSL from '@/CSL.ts'
+import * as catalog from '@/catalog.ts'
+import type { Material } from '@/types/data.ts'
 import get_rendered_author from '@/get_rendered_author.csl'
 import get_full_author_names from '@/get_full_author_names.csl'
 
@@ -113,4 +116,16 @@ test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
     const output = cite.format('bibliography', style).split(util.linesep_stripper)
     for (const [ index, name ] of names.entries()) { expect(output[index]).toBe(name.rendered[rendered]) }
   }
+})
+
+// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+test('companion relationships do not affect material deduplication', () => {
+  const title: string = `deduplication-${randomUUID()}`
+  const material: Material = { type: 'motion_picture', title }
+  const companion: Material = { type: 'book', title: 'Companion' }
+  const initial_count: number = catalog.all().length
+  catalog.add([], material)
+  material.custom = { companion: [ companion ] }
+  catalog.add([], { type: 'motion_picture', title, custom: { companion: [ companion ] } })
+  expect(catalog.all()).toHaveLength(initial_count + 1)
 })

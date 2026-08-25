@@ -1,4 +1,3 @@
-import * as catalog from '@cs-first-aid/bibkit/catalog'
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 import * as CSL from '@cs-first-aid/bibkit/CSL'
 
@@ -32,4 +31,4 @@ const open_courses = [
   },
 ] satisfies types_data.Entry[]
 
-catalog.add_items(open_courses)
+export { open_courses as entries }

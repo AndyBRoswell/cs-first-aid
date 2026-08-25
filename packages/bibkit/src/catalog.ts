@@ -109,6 +109,18 @@ export function add_item(p: Entry): void {
   add(p.id, p.material)
 }
 
+function get_material_digest(material: Material): string {
+  const digest_source: Material = { ...material }
+  delete digest_source.id
+  if (material.custom) {
+    digest_source.custom = { ...material.custom }
+    delete digest_source.custom.companion
+    if (Object.keys(digest_source.custom).length === 0) { delete digest_source.custom }
+  }
+  else { delete digest_source.custom }
+  return ohash.serialize(digest_source)
+}
+
 export function add(IDs: ID_t[], material: Material): void {
   if ('ISBN' in material) { CSL.ensure_ISBN(material.ISBN) }
   if ('ISSN' in material) { CSL.ensure_ISSN(material.ISSN) }
@@ -117,13 +129,7 @@ export function add(IDs: ID_t[], material: Material): void {
     if (m.has(CID)) { throw new Error(`ID ${CID} already exists. Material: ${JSON.stringify(material, null, 2)}`) ; }
     m.set(CID, material)
   }
-  let o: Material
-  if ('id' in material) {
-    o = structuredClone(material)
-    delete o.id
-  }
-  else { o = material }
-  const digest = ohash.serialize(o)
+  const digest = get_material_digest(material)
   if (d.has(digest) === false) {
     material.id = v.length.toString() // automatically generate an id to let citation-js not mistakenly overwrite the existing items due to duplicate ids
     v.push(material)
