@@ -1,6 +1,8 @@
 allowBuilds:
   citation-js: true
-  esbuild: true
+  esbuild: set this to true or false
+  sharp: true # Required by Wrangler
+  workerd: true # Required by Wrangler
 minimumReleaseAgeExclude:
   - astro@7.2.0
 packages:
