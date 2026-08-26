@@ -91,6 +91,7 @@ export default defineConfig({
       ],
       locales,
       sidebar,
+      lastUpdated: true,
     })
   ],
 });
