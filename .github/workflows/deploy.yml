@@ -33,14 +33,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile # Fail if pnpm-lock.yaml is inconsistent with package.json
 
+      - name: Build
+        run: pnpm build # Builds the monorepo; the website is emitted to apps/main/dist
+
       - name: Typecheck
         run: pnpm typecheck # Stop deployment if type checking fails
 
       - name: Test
         run: pnpm test # Stop deployment if tests fail
-
-      - name: Build
-        run: pnpm build # Builds the monorepo; the website is emitted to apps/main/dist
 
       - name: Install Chromium
         if: github.ref_name == 'dev'
