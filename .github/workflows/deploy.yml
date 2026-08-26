@@ -13,7 +13,12 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.ref_name == 'main' || github.ref_name == 'dev' # Never deploy the agent branch, including manual runs
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: pwsh # Use PowerShell Core for all shell commands
 
     steps:
       - name: Checkout repository
@@ -34,13 +39,13 @@ jobs:
         run: pnpm install --frozen-lockfile # Fail if pnpm-lock.yaml is inconsistent with package.json
 
       - name: Build
-        run: pnpm build # Builds the monorepo; the website is emitted to apps/main/dist
+        run: pnpm build # Build the monorepo; the website is emitted to apps/main/dist
 
       - name: Typecheck
-        run: pnpm typecheck # Stop deployment if type checking fails
+        run: pnpm typecheck # Stop before deployment if type checking fails
 
       - name: Test
-        run: pnpm test # Stop deployment if tests fail
+        run: pnpm test # Stop before deployment if unit tests fail
 
       - name: Install Chromium
         if: github.ref_name == 'dev'
@@ -59,7 +64,34 @@ jobs:
         run: pnpm --filter @cs-first-aid/main test:e2e --project=firefox # Test main with Firefox
 
       - name: Deploy to Cloudflare Pages
+        id: deploy-cloudflare
+        continue-on-error: true # Allow the Netlify deployment to run even if Cloudflare fails
         run: pnpm wrangler pages deploy apps/main/dist --project-name=cs-first-aid --branch=${{ github.ref_name }} --commit-hash=${{ github.sha }} # Upload the prebuilt site directly to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }} # Authenticate Wrangler in CI
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }} # Select the Cloudflare account
+
+      - name: Deploy to Netlify
+        id: deploy-netlify
+        if: github.ref_name == 'main' # Only mirror the production branch to Netlify
+        continue-on-error: true # Record a Netlify failure without blocking the final result check
+        run: pnpm netlify deploy --dir=apps/main/dist --prod # Upload the same prebuilt site as the production deployment
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }} # Authenticate Netlify CLI
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }} # Select the existing Netlify project
+
+      - name: Check deployment results
+        if: always() && steps.deploy-cloudflare.outcome != 'skipped' # Run only if deployment was actually reached
+        run: |
+          $failed = $false
+          if ("${{ steps.deploy-cloudflare.outcome }}" -ne "success") {
+              Write-Host "::error::Cloudflare Pages deployment failed."
+              $failed = $true
+          }
+          if ("${{ github.ref_name }}" -eq "main" -and "${{ steps.deploy-netlify.outcome }}" -ne "success") {
+              Write-Host "::error::Netlify deployment failed."
+              $failed = $true
+          }
+          if ($failed) {
+              exit 1
+          }
