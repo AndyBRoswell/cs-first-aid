@@ -1,0 +1,66 @@
+name: Deploy website
+
+on:
+  push:
+    branches:
+      - main # Production deployment
+      - dev # Preview deployment
+  workflow_dispatch: # Allow manual runs from the Actions page
+
+concurrency:
+  group: deploy-${{ github.ref_name }} # Keep deployments independent per branch
+  cancel-in-progress: true # Cancel an older run when a newer commit arrives
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # Fetch full Git history so Starlight can calculate accurate lastUpdated values
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6 # Reads the pnpm version from packageManager in package.json
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version # Use the Node.js version already defined by this repository
+          cache: pnpm # Cache pnpm's package store between workflow runs
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile # Fail if pnpm-lock.yaml is inconsistent with package.json
+
+      - name: Typecheck
+        run: pnpm typecheck # Stop deployment if type checking fails
+
+      - name: Test
+        run: pnpm test # Stop deployment if tests fail
+
+      - name: Build
+        run: pnpm build # Builds the monorepo; the website is emitted to apps/main/dist
+
+      - name: Install Chromium
+        if: github.ref_name == 'dev'
+        run: pnpm --filter @cs-first-aid/main exec playwright install --with-deps chromium # Install only Chromium for dev
+
+      - name: E2E tests (Chromium)
+        if: github.ref_name == 'dev'
+        run: pnpm --filter @cs-first-aid/main test:e2e -- --project=chromium # Test dev with Chromium
+
+      - name: Install Firefox
+        if: github.ref_name == 'main'
+        run: pnpm --filter @cs-first-aid/main exec playwright install --with-deps firefox # Install only Firefox for main
+
+      - name: E2E tests (Firefox)
+        if: github.ref_name == 'main'
+        run: pnpm --filter @cs-first-aid/main test:e2e -- --project=firefox # Test main with Firefox
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }} # Cloudflare API token with Pages edit permission
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }} # Your Cloudflare account ID
+          command: pages deploy apps/main/dist --project-name=cs-first-aid --branch=${{ github.ref_name }} --commit-hash=${{ github.sha }} # main -> production; dev -> dev.cs-first-aid.pages.dev
