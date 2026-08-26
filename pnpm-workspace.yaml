@@ -1,6 +1,6 @@
 allowBuilds:
   citation-js: true
-  esbuild: set this to true or false
+  esbuild: true
   sharp: true # Required by Wrangler
   workerd: true # Required by Wrangler
 minimumReleaseAgeExclude:
