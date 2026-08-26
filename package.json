@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@fast-check/vitest": "^0.4.1",
+    "netlify-cli": "^27.3.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.10",
     "wrangler": "^4.125.0"

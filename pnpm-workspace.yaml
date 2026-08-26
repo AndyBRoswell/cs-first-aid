@@ -1,7 +1,9 @@
 allowBuilds:
   citation-js: true
   esbuild: true
+  netlify-cli: false # Postinstall only sets up CLI completion and prints installation messages
   sharp: true # Required by Wrangler
+  unix-dgram: false # Optional dependency used only for Datadog Unix domain sockets
   workerd: true # Required by Wrangler
 minimumReleaseAgeExclude:
   - astro@7.2.0
