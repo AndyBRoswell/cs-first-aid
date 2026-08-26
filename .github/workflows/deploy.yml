@@ -59,8 +59,7 @@ jobs:
         run: pnpm --filter @cs-first-aid/main test:e2e --project=firefox # Test main with Firefox
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }} # Cloudflare API token with Pages edit permission
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }} # Your Cloudflare account ID
-          command: pages deploy apps/main/dist --project-name=cs-first-aid --branch=${{ github.ref_name }} --commit-hash=${{ github.sha }} # main -> production; dev -> dev.cs-first-aid.pages.dev
+        run: pnpm wrangler pages deploy apps/main/dist --project-name=cs-first-aid --branch=${{ github.ref_name }} --commit-hash=${{ github.sha }} # Upload the prebuilt site directly to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }} # Authenticate Wrangler in CI
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }} # Select the Cloudflare account
