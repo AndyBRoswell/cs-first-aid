@@ -62,4 +62,4 @@ jobs:
         run: pnpm wrangler pages deploy apps/main/dist --project-name=cs-first-aid --branch=${{ github.ref_name }} --commit-hash=${{ github.sha }} # Upload the prebuilt site directly to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }} # Authenticate Wrangler in CI
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }} # Select the Cloudflare account
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }} # Select the Cloudflare account
