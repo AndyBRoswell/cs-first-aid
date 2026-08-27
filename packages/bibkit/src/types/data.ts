@@ -1,5 +1,5 @@
 import * as CSL from '../CSL.ts'
-import type { Filter_Options } from "../catalog.ts";
+import type { Filter_Options } from "../catalog.ts"
 
 export type ID_primitive = string | number | bigint
 export type ID_object =
