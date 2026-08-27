@@ -21,13 +21,12 @@ export const entries = [
       custom: {
         free_material: [
           {
-            link: 'https://hal.inria.fr/hal-02383654',
-            license: 'CC BY-NC-ND 4.0',
+            link: 'https://inria.hal.science/hal-02383654',
+            license: 'CC-BY-NC-4.0',
             display_text: 'Free version (HAL/INRIA)',
-            note: 'Most recent version: Oct. 15, 2024',
           },
           {
-            link: 'https://hal.inria.fr/hal-03345464',
+            link: 'https://inria.hal.science/hal-03345464',
             license: 'MIT',
             display_text: 'Code examples (HAL/INRIA)',
           },

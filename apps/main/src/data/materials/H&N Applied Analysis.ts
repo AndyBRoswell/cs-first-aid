@@ -12,9 +12,8 @@ export const entries = [
       title: 'Applied Analysis',
       issued: { "date-parts": [ [ 2005, 7, 21 ] ] },
       language: 'en-US',
-      URL: 'https://www.math.ucdavis.edu/%7Ehunter/book/pdfbook.html',
-      accessed: { "date-parts": [ [ 2026, 4, 9 ] ] },
-      note: 'PostScript ver: https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
+      URL: 'https://www.math.ucdavis.edu/~hunter/',
+      accessed: { "date-parts": [ [ 2026, 8, 27 ] ] },
       custom: {
         free_material: [
           {

@@ -14,9 +14,8 @@ export const entries = [
       "publisher-place": 'Wellesley, MA',
       issued: { "date-parts": [ [ 2017, 9, 14 ], ], },
       ISBN: '978-09802327-5-2',
-      URL: 'https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/resources/mitres_18_001_f17_full_book_pdf/',
+      URL: 'https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/pages/about/',
       accessed: { "date-parts": [ [ 2026, 4, 3 ], ], },
-      note: 'https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/pages/about/',
       custom: {
         free_material: [
           {

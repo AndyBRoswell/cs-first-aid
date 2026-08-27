@@ -174,7 +174,7 @@ export type Item = {
   status?: string
   title?: string
   'title-short'?: string
-  URL?: string
+  URL?: string // Preferred descriptive page; use the preferred resource URL only when no descriptive page is available.
   version?: string
   'volume-title'?: string
   'volume-title-short'?: string
@@ -233,12 +233,12 @@ export type Custom = {
   tag?: string[]
   subtitle?: string
   'collection-title-short'?: string | string[]
-  free_material?: Data_Type.Link[] | Record<string, Data_Type.Link[]>
+  free_material?: Data_Type.Link[] | Record<string, Data_Type.Link[]> // Freely accessible and normally downloadable resources, or pages through which they can be obtained.
   for?: unknown
   companion?: (Data_Type.ID_t | Data_Type.Material | Data_Type.Course)[]
   institution?: string[]
   lecturer?: Name_Variable[]
-  URL?: Data_Type.Link[]
+  URL?: Data_Type.Link[] // Additional descriptive pages for the same item; `Item.URL` remains preferred.
   suggested_playback_speed?: (number | string)[]
   'collection-title'?: string | string[]
 }
