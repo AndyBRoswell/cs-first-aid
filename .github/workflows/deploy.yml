@@ -75,7 +75,7 @@ jobs:
         id: deploy-netlify
         if: github.ref_name == 'main' # Only mirror the production branch to Netlify
         continue-on-error: true # Record a Netlify failure without blocking the final result check
-        run: pnpm netlify deploy --dir=apps/main/dist --prod # Upload the same prebuilt site as the production deployment
+        run: pnpm netlify deploy --filter '@cs-first-aid/main' --dir=apps/main/dist --prod # Deploy the main site package from this monorepo
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }} # Authenticate Netlify CLI
           NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }} # Select the existing Netlify project
