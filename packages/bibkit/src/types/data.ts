@@ -40,14 +40,34 @@ export type Material_Filter = (current_material: Material) => unknown
  */
 export type Tag = string | { text: string, class: Tag[] }
 
-export type Link = string | {
-  link: string
-  'Content-Type'?: string
-  license?: string
-  tag?: string[]
-  display_text?: string
-  note?: string
-}
+/**
+ * A URL with optional presentation and resource metadata.
+ *
+ * A resource that needs a full bibliographic description should be modeled as a `Material` instead.
+ *
+ * Link presentation is informed by RFC 8288 Web Linking and the JSON:API Link Object.
+ * Generic resource terminology is informed by DCMI Metadata Terms, while the access-page/direct-download distinction is informed by DCAT 3.
+ *
+ * @see https://www.rfc-editor.org/rfc/rfc8288
+ * @see https://jsonapi.org/format/#document-links
+ * @see https://www.dublincore.org/specifications/dublin-core/dcmi-terms/
+ * @see https://www.w3.org/TR/vocab-dcat-3/
+ * @see https://www.rfc-editor.org/rfc/rfc9110#name-content-type
+ * @see https://www.iana.org/assignments/media-types/media-types.xhtml
+ * @see https://spdx.github.io/spdx-spec/v2.2.2/SPDX-license-expressions/
+ * @see https://spdx.org/licenses/
+ * @see https://standards.iteh.ai/catalog/standards/iso/bfa199cf-c38f-46c3-abe9-e4f3f9efd64d/iso-iec-5962-2021
+ */
+export type Link =
+  | string // Bare URL, equivalent to an object containing only `link`.
+  | {
+    link: string // Target URL; its relationship comes from the containing field.
+    display_text?: string // Human-readable link text; use the URL when absent.
+    note?: string // Free-text note about the link or resource.
+    'Content-Type'?: string // Direct resource media type following RFC 9110 and IANA.
+    license?: string // Resource license following DCMI; prefer an SPDX expression when applicable.
+    tag?: string[] // Internal tags; never use them as fallback link text.
+  }
 
 export type Stringified_JSON = string
 export type Scope_Name = string[]
