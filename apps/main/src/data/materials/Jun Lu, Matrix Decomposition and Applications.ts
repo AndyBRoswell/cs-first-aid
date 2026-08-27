@@ -16,9 +16,12 @@ export const entries = [
       language: 'en-US',
       custom: {
         tag: [ 'preprint', 'math.NA' ],
-        URL: [
-          { link: 'https://arxiv.org/abs/2201.00145', tag: [ 'arXiv', 'abstract' ] },
-          { link: 'https://arxiv.org/pdf/2201.00145', tag: [ 'arXiv', 'PDF' ] },
+        free_material: [
+          {
+            link: 'https://arxiv.org/pdf/2201.00145',
+            display_text: 'PDF (arXiv)',
+            'Content-Type': 'application/pdf',
+          },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,

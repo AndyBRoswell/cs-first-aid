@@ -20,6 +20,7 @@ export const entries = [
           {
             link: 'https://avigad.github.io/logic_and_proof/logic_and_proof.pdf',
             display_text: 'PDF',
+            'Content-Type': 'application/pdf',
           },
         ],
       } satisfies CSL.Custom,

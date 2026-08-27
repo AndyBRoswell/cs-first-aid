@@ -21,7 +21,7 @@ export const entries = [
       URL: 'https://www.stroustrup.com/programming.html',
       custom: {
         URL: [
-          { link: 'https://www.amazon.com/dp/B0DFMWL9P6', tag: [ 'Kindle' ], display_text: 'Amazon Kindle' },
+          { link: 'https://www.amazon.com/dp/B0DFMWL9P6', display_text: 'Amazon Kindle' },
           { link: 'https://www.informit.com/store/programming-principles-and-practice-using-c-plus-plus-9780138308681', display_text: 'InformIT (Publisher)' },
         ],
       } satisfies CSL.Custom,

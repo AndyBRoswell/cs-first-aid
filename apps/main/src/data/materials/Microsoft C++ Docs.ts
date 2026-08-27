@@ -17,11 +17,10 @@ export const entries = [
       publisher: 'Microsoft',
       version: 'msvc-170',
       custom: {
-        URL: [
+        free_material: [
           {
             link: 'https://github.com/MicrosoftDocs/cpp-docs/blob/main/docs/cpp/cpp-language-reference.md',
             display_text: 'cpp-language-reference.md · MicrosoftDocs/cpp-docs',
-            tag: [ 'GitHub', 'source' ],
           },
         ],
       } satisfies CSL.Custom,

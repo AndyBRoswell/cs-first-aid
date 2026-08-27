@@ -14,7 +14,6 @@ export const entries = [
       language: 'en-US',
       URL: 'https://www.math.ucdavis.edu/%7Ehunter/book/pdfbook.html',
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ] },
-      note: 'PostScript ver: https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
       custom: {
         free_material: [
           {

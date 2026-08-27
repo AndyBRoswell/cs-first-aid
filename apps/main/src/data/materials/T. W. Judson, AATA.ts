@@ -18,7 +18,7 @@ export const entries = [
       custom: {
         free_material: [
           { link: 'https://judsonbooks.org/aata-files/aata-html/aata.html', display_text: 'HTML Edition', },
-          { link: 'https://judsonbooks.org/abstract-algebra-theory-and-applications/', display_text: 'Downloads (PDF)', },
+          { link: 'https://judsonbooks.org/aata-files/aata-20250801.pdf', display_text: 'PDF (2025 edition)', 'Content-Type': 'application/pdf', },
           { link: 'https://github.com/twjudson/aata', display_text: 'GitHub Repository', },
         ],
         Paperback: {
