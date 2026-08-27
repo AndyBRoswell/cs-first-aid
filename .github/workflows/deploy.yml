@@ -19,6 +19,7 @@ jobs:
     env:
       VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }} # Select the Vercel account/team
       VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }} # Select the Vercel project
+      VERCEL_DEV_ALIAS: ${{ vars.VERCEL_DEV_ALIAS || 'cs-first-aid-dev.vercel.app' }} # Stable URL for the latest dev preview
 
     defaults:
       run:
@@ -116,7 +117,19 @@ jobs:
         id: deploy-vercel-preview
         if: github.ref_name == 'dev'
         continue-on-error: true # Record a Vercel failure without blocking the other deployment providers
-        run: pnpm dlx vercel@59.5.0 deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+        run: |
+          $deployment_url = (pnpm dlx vercel@59.5.0 deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}).Trim()
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          "deployment_url=$deployment_url" | Add-Content $env:GITHUB_OUTPUT
+
+      - name: Alias Vercel Preview
+        id: alias-vercel-preview
+        if: github.ref_name == 'dev' && steps.deploy-vercel-preview.outcome == 'success'
+        continue-on-error: true # Keep Cloudflare deployment independent if assigning the Vercel alias fails
+        run: |
+          pnpm dlx vercel@59.5.0 alias set "${{ steps.deploy-vercel-preview.outputs.deployment_url }}" "$env:VERCEL_DEV_ALIAS" --token=${{ secrets.VERCEL_TOKEN }}
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          "### Vercel Preview`nhttps://$env:VERCEL_DEV_ALIAS" | Add-Content $env:GITHUB_STEP_SUMMARY
 
       - name: Deploy to Vercel Production
         id: deploy-vercel-production
@@ -151,6 +164,10 @@ jobs:
           }
           if ("${{ github.ref_name }}" -eq "dev" -and "${{ steps.deploy-vercel-preview.outcome }}" -ne "success") {
               Write-Host "::error::Vercel preview deployment failed."
+              $failed = $true
+          }
+          if ("${{ github.ref_name }}" -eq "dev" -and "${{ steps.deploy-vercel-preview.outcome }}" -eq "success" -and "${{ steps.alias-vercel-preview.outcome }}" -ne "success") {
+              Write-Host "::error::Vercel preview alias assignment failed."
               $failed = $true
           }
           if ("${{ github.ref_name }}" -eq "main" -and "${{ steps.deploy-vercel-production.outcome }}" -ne "success") {
