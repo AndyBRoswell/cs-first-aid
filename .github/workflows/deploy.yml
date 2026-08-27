@@ -129,8 +129,8 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           $headers = @{ Authorization = "Bearer $env:VERCEL_TOKEN" }
-          $host = ([uri]"${{ steps.deploy-vercel-preview.outputs.url }}").Host
-          $deployment = Invoke-RestMethod -Uri "https://api.vercel.com/v13/deployments/${host}?teamId=$env:VERCEL_ORG_ID" -Headers $headers
+          $deployment_host = ([uri]"${{ steps.deploy-vercel-preview.outputs.url }}").Host
+          $deployment = Invoke-RestMethod -Uri "https://api.vercel.com/v13/deployments/${deployment_host}?teamId=$env:VERCEL_ORG_ID" -Headers $headers
           $body = @{ alias = 'cs-first-aid-dev.vercel.app' } | ConvertTo-Json -Compress
           Invoke-RestMethod -Method Post -Uri "https://api.vercel.com/v2/deployments/$($deployment.id)/aliases?teamId=$env:VERCEL_ORG_ID" -Headers $headers -ContentType 'application/json' -Body $body
 
