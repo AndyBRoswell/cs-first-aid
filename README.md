@@ -17,7 +17,7 @@
 
 # 公告
 
-2026/04/03
+2026/08/21
 
 本《急救指南》并未停更。由于作者身体原因，2025 年以来未及时依照就业市场变化继续修订。**随着作者的恢复，修订现已继续，不久将有重大更新发布。**
 
@@ -35,10 +35,14 @@
 
 新版预览：
 - main:
-  - ⭐https://cs-first-aid.pages.dev/
+  - https://cs-first-aid.pages.dev/
   - https://cs-first-aid.netlify.app/
+  - https://cs-first-aid.vercel.app/
+  - https://andybroswell.github.io/cs-first-aid/main/
 - dev:
-  - ⭐https://cs-first-aid-dev.pages.dev/
+  - https://dev.cs-first-aid.pages.dev/
+  - https://cs-first-aid-dev.vercel.app/ （需要登录 Vercel）
+  - https://andybroswell.github.io/cs-first-aid/dev/
 
 # 前言&emsp;在那内卷时代，没有置身于事外
 
