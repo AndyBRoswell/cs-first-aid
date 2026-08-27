@@ -19,7 +19,6 @@ jobs:
     env:
       VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }} # Select the Vercel account/team
       VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }} # Select the Vercel project
-      VERCEL_DEV_ALIAS: ${{ vars.VERCEL_DEV_ALIAS || 'cs-first-aid-dev.vercel.app' }} # Stable URL for the latest dev preview
 
     defaults:
       run:
@@ -118,18 +117,22 @@ jobs:
         if: github.ref_name == 'dev'
         continue-on-error: true # Record a Vercel failure without blocking the other deployment providers
         run: |
-          $deployment_url = (pnpm dlx vercel@59.5.0 deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}).Trim()
+          $url = (pnpm dlx vercel@59.5.0 deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}).Trim()
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          "deployment_url=$deployment_url" | Add-Content $env:GITHUB_OUTPUT
+          "url=$url" | Add-Content $env:GITHUB_OUTPUT
 
       - name: Alias Vercel Preview
         id: alias-vercel-preview
         if: github.ref_name == 'dev' && steps.deploy-vercel-preview.outcome == 'success'
-        continue-on-error: true # Keep Cloudflare deployment independent if assigning the Vercel alias fails
+        continue-on-error: true
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
-          pnpm dlx vercel@59.5.0 alias set "${{ steps.deploy-vercel-preview.outputs.deployment_url }}" "$env:VERCEL_DEV_ALIAS" --token=${{ secrets.VERCEL_TOKEN }}
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          "### Vercel Preview`nhttps://$env:VERCEL_DEV_ALIAS" | Add-Content $env:GITHUB_STEP_SUMMARY
+          $headers = @{ Authorization = "Bearer $env:VERCEL_TOKEN" }
+          $host = ([uri]"${{ steps.deploy-vercel-preview.outputs.url }}").Host
+          $deployment = Invoke-RestMethod -Uri "https://api.vercel.com/v13/deployments/${host}?teamId=$env:VERCEL_ORG_ID" -Headers $headers
+          $body = @{ alias = 'cs-first-aid-dev.vercel.app' } | ConvertTo-Json -Compress
+          Invoke-RestMethod -Method Post -Uri "https://api.vercel.com/v2/deployments/$($deployment.id)/aliases?teamId=$env:VERCEL_ORG_ID" -Headers $headers -ContentType 'application/json' -Body $body
 
       - name: Deploy to Vercel Production
         id: deploy-vercel-production
