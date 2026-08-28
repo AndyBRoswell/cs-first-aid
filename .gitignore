@@ -6,11 +6,12 @@ dist/
 local/
 
 # Playwright
-/test-results/
+**/test-results/
 /playwright-report/
 /apps/main/playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
 .vercel
 .env*
