@@ -89,25 +89,24 @@ function get_scoped_references(references: Scoped_References, scope_name: Scope_
   return scoped_references
 }
 
-function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, material: Material, number: number, language: string) { // Apply the site-specific wrapper, anchor, and custom fields to one CSL entry.
-  // wrap the original content
-  entry.classList.remove('csl-entry')
-  entry.classList.add('CSL_Entry')
-  const wrapper = node_html_parser.parse(`<div class="csl-entry"></div>`).firstChild as node_html_parser.HTMLElement
-  wrapper.set_content(entry.childNodes)
-  entry.set_content(wrapper)
-  entry.id = `[${number}]` // Keep bibliography anchors aligned with the numbers rendered by cite().
+function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, material: Material, number: number, language: string): node_html_parser.HTMLElement { // Apply the site-specific wrapper, anchor, number, and custom fields to one CSL entry.
+  const decorated_entry = util.create_HTML_element('li', { class: 'Bibliography entry CSL', })
+  decorated_entry.id = `reference-${number}`
+  const citation_number = util.create_HTML_element('span', { class: 'Bibliography number', }, `[${number}]`)
+  decorated_entry.appendChild(citation_number)
+  decorated_entry.appendChild(entry)
   // show custom data of this CSL item
-  if ('custom' in material) {
-    const additional = node_html_parser.parse(`<div class="custom"></div>`).firstChild as node_html_parser.HTMLElement
+  if (material.custom) {
+    const additional = util.create_HTML_element('div', { class: 'custom', })
     if ('lecturer' in material.custom) {
-      const p = node_html_parser.parse(`<p class="lecturer"></p>`).firstChild as node_html_parser.HTMLElement
+      const p = util.create_HTML_element('p', { class: 'lecturer', })
       const lecturer = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
       p.set_content(`${language === 'zh-CN' ? '主讲：' : 'Lecturer: '}${lecturer}`)
       additional.appendChild(p)
     }
-    entry.appendChild(additional)
+    decorated_entry.appendChild(additional)
   }
+  return decorated_entry
 }
 
 export function print_bibliography_segment(materials: Material[], { language, start_number }: { language: string, start_number: number }): string { // Render one scope independently while preserving its global numbering.
@@ -116,16 +115,11 @@ export function print_bibliography_segment(materials: Material[], { language, st
   const original_HTML_root = node_html_parser.parse(raw_bib)
   const csl_entries = original_HTML_root.querySelectorAll('.csl-entry')
   if (csl_entries.length !== materials.length) { throw new Error('Unexpected number of bibliography entries') }
-  const csl_bib_body = node_html_parser.parse(`<div class="csl-bib-body"></div>`).firstChild as node_html_parser.HTMLElement
+  const csl_bib_body = util.create_HTML_element('ol', { class: 'Bibliography csl-bib-body', role: 'list', })
+  csl_bib_body.setAttribute('start', `${start_number}`)
   for (const [ index, entry ] of csl_entries.entries()) {
-    const local_number = index + 1 // Citation.js restarts each independently formatted segment at one.
     const number = start_number + index // Translate the segment-local position to the global citation number.
-    const original_content = entry.innerHTML
-    const local_number_pattern = new RegExp(`^(\\s*)\\[${local_number}\\]`) // Anchoring avoids replacing bracketed text inside the entry.
-    if (!local_number_pattern.test(original_content)) { throw new Error(`Unexpected bibliography entry number: ${local_number}`) }
-    entry.set_content(original_content.replace(local_number_pattern, `$1[${number}]`))
-    decorate_bibliography_entry(entry, materials[index]!, number, language)
-    csl_bib_body.appendChild(entry)
+    csl_bib_body.appendChild(decorate_bibliography_entry(entry, materials[index]!, number, language))
   }
   return csl_bib_body.toString()
 }
