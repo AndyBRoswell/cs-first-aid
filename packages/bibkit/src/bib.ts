@@ -90,9 +90,9 @@ function get_scoped_references(references: Scoped_References, scope_name: Scope_
 }
 
 function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, material: Material, number: number, language: string): node_html_parser.HTMLElement { // Apply the site-specific wrapper, anchor, number, and custom fields to one CSL entry.
-  const decorated_entry = util.create_HTML_element('li', { class: 'Bibliography entry CSL', })
+  const decorated_entry = util.create_HTML_element('li', { class: 'entry CSL', })
   decorated_entry.id = `reference-${number}`
-  const citation_number = util.create_HTML_element('span', { class: 'Bibliography number', }, `[${number}]`)
+  const citation_number = util.create_HTML_element('span', { class: 'number', }, `[${number}]`)
   decorated_entry.appendChild(citation_number)
   decorated_entry.appendChild(entry)
   // show custom data of this CSL item
@@ -145,35 +145,42 @@ export function cite(references: Scoped_References, citation_items: Citation_Ite
   const results = resolve_citations(references, citation_items, reference_ranges) // Preserve each material found within its qualified scope.
   for (const result of results) { // Render each result with its own citation context.
     for (const { material: target_material, number } of result.entries) { // A filter may resolve one citation item to multiple entries.
-      let precursor: string
-      try {
-        precursor = new citation_js.Cite([ target_material ]).format('citation', {
-          format: 'text',
-          template: default_bib_style_name,
-          entry: [ {
-            id: target_material.id,
-            prefix: result.prefix,
-            label: result.label,
-            locator: result.locator,
-            suffix: result.suffix,
-          } ]
-        })
+      let rendered_locator: string | undefined
+      if (result.locator !== undefined) {
+        try {
+          rendered_locator = new citation_js.Cite([ target_material ]).format('citation', {
+            format: 'text',
+            template: default_bib_style_name,
+            entry: [ { id: target_material.id, label: result.label, locator: result.locator, } ]
+          })
+        }
+        catch (error) {
+          logger.error(`Failed material:${node_os.EOL}${JSON.stringify(target_material, null, 2)}`)
+          throw error
+        }
       }
-      catch (error) {
-        logger.error(`Failed material:${node_os.EOL}${JSON.stringify(target_material, null, 2)}`)
-        throw error
+      const citation = util.create_HTML_element('span', { class: 'Citation', })
+      if (result.prefix !== undefined) {
+        const prefix = util.create_HTML_element('span', { class: 'prefix', }, result.prefix)
+        citation.appendChild(prefix)
       }
-      const rendered_prefix = result.prefix ?? ''
-      const citation_number_placeholder = '[1'
-      if (!precursor.startsWith(rendered_prefix + citation_number_placeholder)) {
-        logger.error(`Failed material:${node_os.EOL}${JSON.stringify(target_material, null, 2)}`)
-        throw new Error(`Unexpected citation rendering: ${JSON.stringify(precursor)}`)
+      const reference = util.create_HTML_element('span', { class: 'reference', })
+      reference.appendChild(util.create_HTML_text_node('['))
+      const a = util.create_HTML_element('a', { class: 'number', })
+      a.setAttribute('href', `#reference-${number}`)
+      a.appendChild(util.create_HTML_text_node(`${number}`))
+      reference.appendChild(a)
+      if (rendered_locator !== undefined) {
+        const locator = util.create_HTML_element('span', { class: 'locator', }, `, ${rendered_locator}`)
+        reference.appendChild(locator)
       }
-      const rendered_context_tail = precursor.slice((rendered_prefix + citation_number_placeholder).length)
-      const a = node_html_parser.parse(`<a></a>`).firstChild as node_html_parser.HTMLElement
-      a.setAttribute('href', `#[${number}]`)
-      a.textContent = `${number}`
-      return_intermediates.push(`${rendered_prefix}[${a.toString()}${rendered_context_tail}`)
+      reference.appendChild(util.create_HTML_text_node(']'))
+      citation.appendChild(reference)
+      if (result.suffix !== undefined) {
+        const suffix = util.create_HTML_element('span', { class: 'suffix', }, result.suffix)
+        citation.appendChild(suffix)
+      }
+      return_intermediates.push(citation.toString())
     }
   }
   return return_intermediates.join('')
