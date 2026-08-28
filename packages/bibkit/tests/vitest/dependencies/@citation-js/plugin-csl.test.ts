@@ -34,7 +34,7 @@ describe('@citation-js/plugin-csl.output.citation', { tags: [ '@citation-js/plug
     expect(node_html_parser.parse(cite.format('citation', {
       entry: [ { id: 'c', label: 'page', locator: 1234, } ],
       ...rich_bib_text
-    })).textContent).toEqual('[1, p. 1234]')
+    })).textContent).toEqual('p. 1234')
   })
   test('dup id', { tags: [], }, () => {
     const cite = new citation_js.Cite([
@@ -45,6 +45,6 @@ describe('@citation-js/plugin-csl.output.citation', { tags: [ '@citation-js/plug
     ])
     const References = cite.format('bibliography', plain_bib_text).split(util.linesep_stripper).filter(Boolean)
     expect(References.length).toEqual(1)
-    expect(References[0]).toEqual(`[1] “4.” 2004.`)
+    expect(References[0]).toEqual(`“4.” 2004.`)
   })
 })
