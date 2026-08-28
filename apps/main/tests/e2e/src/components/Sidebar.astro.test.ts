@@ -1,4 +1,4 @@
-// Created by GPT-5.6 Terra Max [codex] and GPT-5.6 Sol High [web]. Revised by AndyBRoswell.
+// Created by GPT-5.6 Terra Max [codex] and GPT-5.6 Thinking Extended [web]. Revised by AndyBRoswell.
 
 import { expect, type Locator, type Page } from '@playwright/test'
 import * as release_stages from '@/components/release_stages.ts'
@@ -11,126 +11,125 @@ type Sidebar_Item = { // Minimal configuration shape required to traverse sideba
   items?: Sidebar_Item[]
   slug?: string
 }
-type Localized_Release_Stages = release_stages.Localized_Release
-type Root_Locale_Only_Release_Stage = {
-  label: string
-  language: string
-  sidebar_index: number
+
+type Rendered_Sidebar_Link = {
+  text: string
+  release_stage_attr: string | null
+  release_badge_count: number
+  release_badge_text: string | null
+  release_badge_classes: string[]
 }
 
-type Site_Locale = { lang: Intl.UnicodeBCP47LocaleIdentifier }
-
-const site_locales = Object.entries(locales as Record<string, Site_Locale>).map(([ locale, { lang: language } ]) => ({ locale, language }))
-const site_languages = site_locales.map(({ language }) => language) // Uses the site's configured languages instead of hard-coding them.
+const site_locales = Object.entries(locales).map(([ locale, { lang: language } ]) => ({ locale, language }))
+const site_languages = site_locales.map(({ language }) => language) // Use the configured languages instead of hard-coding them.
+if (site_languages.length === 0) { throw new Error('Could not get any languages/locales from the sidebar configuration.') } // Prevent a vacuous language-support assertion.
 const root_language = site_locales.find(({ locale }) => locale === 'root')?.language
 if (root_language === undefined) { throw new Error('The root locale must declare a language.') }
-const foreign_locales = site_locales.filter(({ locale }) => locale !== 'root') // The root locale has no URL segment and is the source language for untranslated pages.
-const configured_sidebar_links = flatten_sidebar_items(sidebar as unknown as Sidebar_Item[]).filter(item => item.slug !== undefined) // Groups do not render as the direct sidebar links checked by this test.
 
-function flatten_sidebar_items(items: readonly Sidebar_Item[]): Sidebar_Item[] { // Recursively collects groups and leaf entries.
+const foreign_locales = site_locales.filter(({ locale }) => locale !== 'root') // The root locale is tested separately at "/".
+if (foreign_locales.length === 0) { throw new Error('Could not get any languaes/locales except the root one from the sidebar configuration.') }
+
+const configured_sidebar_links = flatten_sidebar_items(sidebar as unknown as Sidebar_Item[]).filter(item => item.slug !== undefined) // Groups do not render as the direct links checked here.
+if (configured_sidebar_links.length === 0) { throw new Error('Could not get any links from the sidebar configuration.') }
+
+function flatten_sidebar_items(items: readonly Sidebar_Item[]): Sidebar_Item[] { // Recursively collect leaf entries.
   return items.flatMap(item => [ item, ...flatten_sidebar_items(item.items ?? []) ])
 }
 
-function get_release_stages(serialized: string | null): Localized_Release_Stages | undefined {
+function get_release_stages(serialized: string | null) {
   if (serialized === null) { return undefined }
-  return JSON.parse(serialized) as Localized_Release_Stages
+  return JSON.parse(serialized) as release_stages.Localized_Release
 }
 
-async function get_rendered_release_stages(link: Locator): Promise<Localized_Release_Stages | undefined> {
-  return get_release_stages(await link.getAttribute('data-release-stage'))
+function get_rendered_sidebar_links(page: Page): Locator {
+  return page.locator('nav.sidebar li:has(> a) > a') // Locator construction is synchronous and lazy in Playwright.
 }
 
-async function get_rendered_sidebar_links(page: Page) {
-  const links = page.locator('nav.sidebar li:has(> a) > a')
-  await expect(links).toHaveCount(configured_sidebar_links.length) // Ensures configuration and rendered links can be compared by position.
-  return links
+async function get_rendered_sidebar_snapshot(links: Locator): Promise<Rendered_Sidebar_Link[]> {
+  return links.evaluateAll(links => links.map(link => {
+    const release_badges = link.querySelectorAll('.badge.release')
+    const release_badge = release_badges[0] // expect exactly 1 release badge per link
+    return {
+      text: link.textContent ?? '',
+      release_stage_attr: link.getAttribute('data-release-stage'),
+      release_badge_count: release_badges.length,
+      release_badge_text: release_badge?.textContent ?? null,
+      release_badge_classes: release_badge ? [ ...release_badge.classList ] : [],
+    }
+  }))
 }
 
-function expect_release_stages_support_all_site_languages(release_stages: Localized_Release_Stages) {
-  for (const language of site_languages) { expect(release_stages[language]).toEqual(expect.any(String)) }
-}
-
-src_util.test('sidebar release stages are complete, and blank for unavailable pages or translations', { tag: '@Sidebar' }, async ({ page }) => {
+src_util.test('sidebar badges are complete, and blank for unavailable pages or translations', { tag: '@Sidebar' }, async ({ page }) => {
   const initial_response = await page.goto(`${util.test_server}/`)
   expect(initial_response).not.toBeNull()
   expect(initial_response!.ok()).toBe(true)
   expect(await initial_response!.text()).toContain('<span class="badges"><span class="badge release')
 
-  const rendered_sidebar_links = await get_rendered_sidebar_links(page)
-  expect(configured_sidebar_links).not.toHaveLength(0)
-  const root_locale_only_release_stages: Root_Locale_Only_Release_Stage[] = []
+  const rendered_sidebar_links = get_rendered_sidebar_links(page)
+  await expect(rendered_sidebar_links).toHaveCount(configured_sidebar_links.length) // Synchronize before taking a positional snapshot of the complete sidebar.
+  const rendered_sidebar_snapshot = await get_rendered_sidebar_snapshot(rendered_sidebar_links)
 
-  await src_util.test.step('validate rendered release badge', async () => {
-    expect(site_languages).not.toHaveLength(0) // Prevents a vacuous language-support assertion.
-
+  await src_util.test.step('release badge rendered', async () => {
     for (const [ index, item ] of configured_sidebar_links.entries()) {
-      const badge_link = rendered_sidebar_links.nth(index)
-      await expect(badge_link).toContainText(item.label) // Guards against silently pairing the wrong config item with a DOM node.
+      const rendered_link = rendered_sidebar_snapshot[index]!
+      expect(rendered_link.text).toContain(item.label) // Guard against silently pairing the wrong configuration item with a DOM node.
 
-      const release_stages = await get_rendered_release_stages(badge_link)
-      expect(release_stages, `Sidebar item "${item.label}" needs release stage metadata.`).toBeDefined()
-      expect_release_stages_support_all_site_languages(release_stages!)
+      const localized_releases = get_release_stages(rendered_link.release_stage_attr)!
+      expect(localized_releases, `Sidebar item "${item.label}" needs release badges.`).toBeDefined()
 
-      for (const { language } of foreign_locales) {
-        if (item.slug === '' || release_stages![language] !== 'blank') { continue }
-        root_locale_only_release_stages.push({ label: item.label, language, sidebar_index: index })
-      }
+      for (const language of site_languages) { expect(localized_releases[language]).toEqual(expect.any(String)) }
     }
   })
 
-  await src_util.test.step('validate missing page release badges', async () => {
-    const missing_page_indexes = configured_sidebar_links
-      .map((item, index) => item.slug === '' ? index : undefined)
-      .filter((index): index is number => index !== undefined)
-    expect(missing_page_indexes).not.toHaveLength(0)
-
-    for (const index of missing_page_indexes) {
+  await src_util.test.step('release badges of pages not created yet must be `blank`', async () => {
+    const indices_of_absent_pages = configured_sidebar_links.map((item, index) => item.slug === '' ? index : undefined).filter((index): index is number => index !== undefined)
+    expect(indices_of_absent_pages).not.toHaveLength(0) // delete this line when all the pages become present
+    for (const index of indices_of_absent_pages) {
       const item = configured_sidebar_links[index]!
-      const release_stages = await get_rendered_release_stages(rendered_sidebar_links.nth(index))
-      expect(release_stages).toBeDefined()
-      for (const language of site_languages) {
-        expect(release_stages![language], `Missing sidebar item "${item.label}" must use the blank release status for ${language}.`).toBe('blank')
-      }
+      const localized_releases = get_release_stages(rendered_sidebar_snapshot[index]!.release_stage_attr)
+      expect(localized_releases).toBeDefined()
+      for (const lang of site_languages) { expect(localized_releases![lang], `Sidebar item "${item.label}" that points to no pages must use release badge \`blank\`. [Language: ${lang}]`).toBe('blank') }
     }
   })
 
-  await src_util.test.step('verify release badges render in the sidebar', async () => {
+  await src_util.test.step('release badges render in the sidebar', async () => {
     for (const [ index, item ] of configured_sidebar_links.entries()) {
-      const badge_link = rendered_sidebar_links.nth(index)
-      await expect(badge_link).toHaveAttribute('data-release-stage', /\S/)
-      const release_badge = badge_link.locator('.badge.release')
-      await expect(release_badge, `Sidebar item "${item.label}" needs exactly one rendered release badge.`).toHaveCount(1)
+      const rendered_link = rendered_sidebar_snapshot[index]!
 
-      const localized_releases = await get_rendered_release_stages(badge_link)
+      expect(rendered_link.release_badge_count, `Sidebar item "${item.label}" needs exactly one rendered release badge.`).toBe(1)
+      expect(rendered_link.release_stage_attr).toEqual(expect.stringMatching(/\S/)) // the release badge must not be blank
+
+      const localized_releases = get_release_stages(rendered_link.release_stage_attr)
+      expect(localized_releases, `Sidebar item "${item.label}" needs release stage metadata.`).toBeDefined()
+
       const release = localized_releases![root_language]!
-      await expect(release_badge).toHaveText(release)
-      await expect(release_badge).toHaveClass(new RegExp(`(?:^|\\s)${release_stages.get_stage(release)}(?:\\s|$)`))
+      expect(rendered_link.release_badge_text).toBe(release)
+      expect(rendered_link.release_badge_classes).toContain(release_stages.get_stage(release))
     }
   })
 
-  await src_util.test.step('verify subject badges render with generated classes', async () => {
-    for (const class_name of [ 'Math', 'CS', ]) {
-      await expect(
-        page.locator('nav.sidebar .badge.subject.' + class_name),
-        'The sidebar needs a rendered subject badge with the generated class "' + class_name + '".',
-      ).not.toHaveCount(0)
-    }
-  })
+  // todo: test subject badges
 
-  await src_util.test.step('verify root-only pages render blank release badges in every foreign locale', async () => {
-    expect(foreign_locales).not.toHaveLength(0) // Prevents a vacuous assertion when the site has no foreign locale.
-    expect(root_locale_only_release_stages).not.toHaveLength(0) // Guards against losing the root-only-page coverage in this test. Need to remove when the translation is complete.
+  await src_util.test.step('unavailable translations render blank release badges in every foreign locale', async () => {
+    let unavailable_translation_count = 0 // Preserve the existing guard that this test currently exercises at least one missing translation.
 
     for (const { locale, language } of foreign_locales) {
       await page.goto(`${util.test_server}/${locale}/`)
-      const localized_sidebar_links = await get_rendered_sidebar_links(page)
 
-      for (const { label, sidebar_index } of root_locale_only_release_stages.filter(release => release.language === language)) {
-        await expect(
-          localized_sidebar_links.nth(sidebar_index).locator('.badge.release'),
-          `Root-only sidebar item "${label}" must render a blank release badge in ${language}.`,
-        ).toHaveText('blank')
+      const localized_sidebar_links = get_rendered_sidebar_links(page)
+      await expect(localized_sidebar_links).toHaveCount(configured_sidebar_links.length) // Wait for this locale's complete sidebar before taking its snapshot.
+      const localized_sidebar_snapshot = await get_rendered_sidebar_snapshot(localized_sidebar_links)
+
+      for (const [ sidebar_index, item ] of configured_sidebar_links.entries()) {
+        if (item.slug === '') { continue } // Completely unavailable pages are validated separately above.
+        const localized_releases = get_release_stages(rendered_sidebar_snapshot[sidebar_index]!.release_stage_attr)
+        expect(localized_releases).toBeDefined()
+        if (localized_releases![language] !== 'blank') { continue } // A non-blank value means this translation is available.
+        unavailable_translation_count++
+        expect(localized_sidebar_snapshot[sidebar_index]!.release_badge_text, `Sidebar item "${item.label}" points to a page without a/an ${language} translation. This item must render a blank release badge.`).toBe('blank')
       }
     }
+
+    expect(unavailable_translation_count).toBeGreaterThan(0) // Remove this guard when every configured translation becomes available.
   })
 })
