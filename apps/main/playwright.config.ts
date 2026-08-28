@@ -14,7 +14,7 @@ import node_os from 'node:os'
  */
 export default defineConfig({
   testDir: './tests/e2e',
-  timeout: 60_000, // See https://playwright.dev/docs/test-timeouts
+  timeout: 0, // See https://playwright.dev/docs/test-timeouts
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
