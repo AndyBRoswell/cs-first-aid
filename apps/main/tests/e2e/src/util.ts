@@ -20,7 +20,8 @@ export const test = base.extend({
 })
 
 export async function everyone_occurs(locator: Locator, patterns: Iterable<string | RegExp>) { // expect these pattern occur in any sequence
-  for (const pattern of patterns) { await expect(locator).toHaveText(pattern) }
+  const text = await locator.innerText()
+  for (const pattern of patterns) { expect(text).toMatch(pattern) }
 }
 
 export function locate_parent(from: Locator, tag_name: string, level: number = 1) {
