@@ -1,5 +1,6 @@
 import { expect, test } from 'vitest'
 import * as node_HTML_parser from 'node-html-parser'
+import * as util from '@cs-first-aid/util'
 import * as badges_HTML from '@/components/badges_HTML.ts'
 
 const localized_releases = JSON.stringify({ 'zh-CN': '2026.1.0-dev', en: 'blank', }) // Locale-specific release selection.
@@ -37,17 +38,17 @@ test('inject reports incomplete localized metadata with its sidebar item', () =>
 })
 
 function create_HTML(serialized_releases: string, serialized_badges: string | null): string {
-  const document_element = badges_HTML.create_element('html', { lang: 'zh-CN', }) // The document language drives localized badge resolution.
-  const body = badges_HTML.create_element('body')
-  const sidebar = badges_HTML.create_element('nav', { class: 'sidebar', }) // Match the Starlight sidebar boundary used by the transformer.
+  const document_element = util.create_HTML_element('html', { lang: 'zh-CN', }) // The document language drives localized badge resolution.
+  const body = util.create_HTML_element('body')
+  const sidebar = util.create_HTML_element('nav', { class: 'sidebar', }) // Match the Starlight sidebar boundary used by the transformer.
   const link_attributes: Record<string, string> = {
     href: '/fixture',
     'data-release-stage': serialized_releases,
   }
   if (serialized_badges !== null) { link_attributes['data-badges'] = serialized_badges } // Leave the optional attribute absent in the negative fixture.
-  const link = badges_HTML.create_element('a', link_attributes)
+  const link = util.create_HTML_element('a', link_attributes)
 
-  link.appendChild(badges_HTML.create_element('span', {}, 'Fixture')) // Build label content as a child node, just like Starlight does.
+  link.appendChild(util.create_HTML_element('span', {}, 'Fixture')) // Build label content as a child node, just like Starlight does.
   sidebar.appendChild(link)
   body.appendChild(new node_HTML_parser.CommentNode('preserved')) // Verify that the transformer preserves existing HTML comments.
   body.appendChild(sidebar)
