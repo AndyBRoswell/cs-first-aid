@@ -1,6 +1,6 @@
 // Created by GPT-5.6 Sol Thinking Extended [web] and GPT-5.6 Sol Medium [codex]. Revised by AndyBRoswell.
 
-import * as node_HTML_parser from 'node-html-parser'
+import type * as node_HTML_parser from 'node-html-parser'
 import * as catalog from '@cs-first-aid/bibkit/catalog'
 import * as util from '@cs-first-aid/util'
 import '@/data/materials/import materials.ts'
@@ -69,13 +69,6 @@ function format_Snellen(test_distance: number, MAR: number): string {
   return `${test_distance}/${denominator.toFixed(1)}`;
 }
 
-function create_element(tag_name: string, attributes: Record<string, string> = {}, text?: string): node_HTML_parser.HTMLElement {
-  const element = new node_HTML_parser.HTMLElement(tag_name, {}, ''); // Construct nodes without parsing an HTML fragment.
-  element.setAttributes(attributes);
-  if (text !== undefined) { element.textContent = text; }
-  return element;
-}
-
 export function create_visual_acuity_table_data(MAR_values: readonly number[]): Visual_Acuity_Table_Data {
   if (MAR_values.some((MAR) => !Number.isFinite(MAR) || MAR <= 0)) { throw new RangeError('All MAR values must be finite positive numbers.'); }
   return {
@@ -94,17 +87,17 @@ export function create_visual_acuity_table_data(MAR_values: readonly number[]): 
 export function visual_acuity_table_data_to_HTML_table(data: Visual_Acuity_Table_Data, options: Table_Rendering_Options<Visual_Acuity_Row, keyof typeof visual_acuity_columns> = {}): node_HTML_parser.HTMLElement {
   const columns = Object.entries(visual_acuity_columns).filter(([ column, ], index) => options.include_column?.(column as keyof typeof visual_acuity_columns, index) ?? true); // Filter before construction so the DOM never contains hidden columns.
   const rows = data.rows.filter((row, index) => options.include_row?.(row, index) ?? true); // Preserve the source order of included rows.
-  const table = create_element('table');
-  table.appendChild(create_element('caption', {}, 'Visual acuity grades'));
-  const header_row = create_element('tr');
-  for (const [ column, ] of columns) { header_row.appendChild(create_element('th', { scope: 'col', }, column)); }
-  const head = create_element('thead');
+  const table = util.create_HTML_element('table');
+  table.appendChild(util.create_HTML_element('caption', {}, 'Visual acuity grades'));
+  const header_row = util.create_HTML_element('tr');
+  for (const [ column, ] of columns) { header_row.appendChild(util.create_HTML_element('th', { scope: 'col', }, column)); }
+  const head = util.create_HTML_element('thead');
   head.appendChild(header_row);
   table.appendChild(head);
-  const body = create_element('tbody');
+  const body = util.create_HTML_element('tbody');
   for (const row of rows) {
-    const table_row = create_element('tr');
-    for (const [ , format, ] of columns) { table_row.appendChild(create_element('td', {}, format(row))); }
+    const table_row = util.create_HTML_element('tr');
+    for (const [ , format, ] of columns) { table_row.appendChild(util.create_HTML_element('td', {}, format(row))); }
     body.appendChild(table_row);
   }
   table.appendChild(body);
@@ -135,21 +128,21 @@ export function create_distance_acuity_PPI_table_data(visual_acuities: readonly 
 export function distance_acuity_PPI_table_data_to_HTML_table(data: Distance_Acuity_PPI_Table_Data, options: Table_Rendering_Options<Distance_Acuity_PPI_Row, number> = {}): node_HTML_parser.HTMLElement {
   const columns = data.viewing_distances_cm.map((viewing_distance_cm, index) => ({ viewing_distance_cm, index, })).filter(({ viewing_distance_cm, index, }) => options.include_column?.(viewing_distance_cm, index) ?? true); // Retain indices for aligned PPI lookup after filtering.
   const rows = data.rows.filter((row, index) => options.include_row?.(row, index) ?? true);
-  const table = create_element('table');
-  const head = create_element('thead');
-  const group_header_row = create_element('tr');
-  group_header_row.appendChild(create_element('th', { rowspan: '2', }, 'Visual Acuity'));
-  group_header_row.appendChild(create_element('th', { colspan: columns.length.toString(), }, 'Viewing Distance (cm)'));
+  const table = util.create_HTML_element('table');
+  const head = util.create_HTML_element('thead');
+  const group_header_row = util.create_HTML_element('tr');
+  group_header_row.appendChild(util.create_HTML_element('th', { rowspan: '2', }, 'Visual Acuity'));
+  group_header_row.appendChild(util.create_HTML_element('th', { colspan: columns.length.toString(), }, 'Viewing Distance (cm)'));
   head.appendChild(group_header_row);
-  const column_header_row = create_element('tr');
-  for (const { viewing_distance_cm, } of columns) { column_header_row.appendChild(create_element('th', { scope: 'col', }, viewing_distance_cm.toString())); }
+  const column_header_row = util.create_HTML_element('tr');
+  for (const { viewing_distance_cm, } of columns) { column_header_row.appendChild(util.create_HTML_element('th', { scope: 'col', }, viewing_distance_cm.toString())); }
   head.appendChild(column_header_row);
   table.appendChild(head);
-  const body = create_element('tbody');
+  const body = util.create_HTML_element('tbody');
   for (const row of rows) {
-    const table_row = create_element('tr');
-    table_row.appendChild(create_element('th', { scope: 'row', }, row.visual_acuity.toFixed(2)));
-    for (const { index, } of columns) { table_row.appendChild(create_element('td', {}, row.PPI_values[index]!.toFixed(1))); }
+    const table_row = util.create_HTML_element('tr');
+    table_row.appendChild(util.create_HTML_element('th', { scope: 'row', }, row.visual_acuity.toFixed(2)));
+    for (const { index, } of columns) { table_row.appendChild(util.create_HTML_element('td', {}, row.PPI_values[index]!.toFixed(1))); }
     body.appendChild(table_row);
   }
   table.appendChild(body);
@@ -175,21 +168,21 @@ export function create_diagonal_resolution_PPI_table_data(resolutions: readonly 
 export function diagonal_resolution_PPI_table_data_to_HTML_table(data: Diagonal_Resolution_PPI_Table_Data, options: Table_Rendering_Options<Diagonal_Resolution_PPI_Row, number> = {}): node_HTML_parser.HTMLElement {
   const columns = data.diagonal_sizes_in.map((diagonal_size_in, index) => ({ diagonal_size_in, index, })).filter(({ diagonal_size_in, index, }) => options.include_column?.(diagonal_size_in, index) ?? true); // Retain indices for aligned PPI lookup after filtering.
   const rows = data.rows.filter((row, index) => options.include_row?.(row, index) ?? true);
-  const table = create_element('table');
-  const head = create_element('thead');
-  const group_header_row = create_element('tr');
-  group_header_row.appendChild(create_element('th', { rowspan: '2', style: 'min-width: 9rem; white-space: nowrap;', }, 'Resolution'));
-  group_header_row.appendChild(create_element('th', { colspan: columns.length.toString(), }, 'Diagonal Size (in)'));
+  const table = util.create_HTML_element('table');
+  const head = util.create_HTML_element('thead');
+  const group_header_row = util.create_HTML_element('tr');
+  group_header_row.appendChild(util.create_HTML_element('th', { rowspan: '2', style: 'min-width: 9rem; white-space: nowrap;', }, 'Resolution'));
+  group_header_row.appendChild(util.create_HTML_element('th', { colspan: columns.length.toString(), }, 'Diagonal Size (in)'));
   head.appendChild(group_header_row);
-  const column_header_row = create_element('tr');
-  for (const { diagonal_size_in, } of columns) { column_header_row.appendChild(create_element('th', { scope: 'col', }, diagonal_size_in.toString())); }
+  const column_header_row = util.create_HTML_element('tr');
+  for (const { diagonal_size_in, } of columns) { column_header_row.appendChild(util.create_HTML_element('th', { scope: 'col', }, diagonal_size_in.toString())); }
   head.appendChild(column_header_row);
   table.appendChild(head);
-  const body = create_element('tbody');
+  const body = util.create_HTML_element('tbody');
   for (const row of rows) {
-    const table_row = create_element('tr');
-    table_row.appendChild(create_element('th', { scope: 'row', style: 'min-width: 9rem; white-space: nowrap;', }, `${row.resolution[0]} × ${row.resolution[1]}`));
-    for (const { index, } of columns) { table_row.appendChild(create_element('td', {}, row.PPI_values[index]!.toFixed(1))); }
+    const table_row = util.create_HTML_element('tr');
+    table_row.appendChild(util.create_HTML_element('th', { scope: 'row', style: 'min-width: 9rem; white-space: nowrap;', }, `${row.resolution[0]} × ${row.resolution[1]}`));
+    for (const { index, } of columns) { table_row.appendChild(util.create_HTML_element('td', {}, row.PPI_values[index]!.toFixed(1))); }
     body.appendChild(table_row);
   }
   table.appendChild(body);

@@ -20,6 +20,26 @@ math {
   font-family: "STIX Two Math", math, serif;
 }
 
+ol.Bibliography.csl-bib-body {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.Bibliography > .entry.CSL {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 0.5rem;
+}
+
+.Bibliography > .entry.CSL > .number {
+  grid-column: 1;
+}
+
+.Bibliography > .entry.CSL > .csl-entry,
+.Bibliography > .entry.CSL > .custom {
+  grid-column: 2;
+}
+
 /* Fixed by GPT-5.6 Thinking Extended [Web] */
 .sl-markdown-content math,
 .sl-markdown-content math * {

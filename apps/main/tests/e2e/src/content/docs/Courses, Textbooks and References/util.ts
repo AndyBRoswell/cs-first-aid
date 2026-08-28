@@ -15,7 +15,7 @@ export async function check_references(main: Locator) {
   const References_locators = await main.locator('.References').all()
   for (const locator of References_locators) {
     // basic
-    const CSL_entries = await locator.locator('.CSL_Entry').all()
+    const CSL_entries = await locator.locator('.Bibliography > .entry.CSL').all()
     await expect(locator).toHaveAttribute('data-scope_name')
     const material_segment = JSON.parse((await locator.getAttribute('data-material_segment'))!) as Array<types_data.Material>
     expect(material_segment.length).toEqual(CSL_entries.length)
@@ -37,14 +37,14 @@ export async function check_references(main: Locator) {
 export async function check_cites(main: Locator) { // Created by GPT-5.6 Terra Max [codex]. Revised by AndyBRoswell.
   const Cite_locators = await main.locator('.Cite').all()
   for (const locator of Cite_locators) {
-    const cite_links = await locator.locator('a').all()
+    const cite_links = await locator.locator('.Citation > .reference > a.number').all()
     expect(cite_links.length).toBeGreaterThan(0)
     for (const link of cite_links) {
       const index = await link.innerText()
       expect(index).toMatch(/^\d+$/)
-      const target_ID = `[${index}]`
+      const target_ID = `reference-${index}`
       await expect(link).toHaveAttribute('href', `#${target_ID}`)
-      await expect(main.locator(`.CSL_Entry[id="${target_ID}"]`)).toHaveCount(1)
+      await expect(main.locator(`.Bibliography > .entry.CSL[id="${target_ID}"]`)).toHaveCount(1)
     }
   }
 }

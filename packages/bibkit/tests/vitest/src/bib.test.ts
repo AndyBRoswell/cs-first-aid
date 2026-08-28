@@ -39,13 +39,48 @@ test('print_bibliography localizes the lecturer label by interface language', ()
 })
 
 test('print_bibliography_segment starts at the requested global number', () => {
-  const materials: Material[] = [ { type: 'book', title: 'Alpha [1]' }, { type: 'book', title: 'Beta' }, ]
+  const materials: Material[] = [ { type: 'book', title: 'Alpha [1]', note: 'Keep this note.' }, { type: 'book', title: 'Beta' }, ]
   const root = node_html_parser.parse(bib.print_bibliography_segment(materials, { language: 'en', start_number: 4 }))
-  const entries = root.querySelectorAll('.CSL_Entry')
-  expect(entries.map(entry => entry.id)).toEqual([ '[4]', '[5]' ])
-  expect(entries[0]!.querySelector('.csl-entry')!.textContent.trimStart()).toMatch(/^\[4\]/)
-  expect(entries[1]!.querySelector('.csl-entry')!.textContent.trimStart()).toMatch(/^\[5\]/)
-  expect(entries[0]!.textContent).toContain('Alpha [1]')
+  const bibliography = root.querySelector('ol.Bibliography.csl-bib-body')!
+  const entries = root.querySelectorAll('.Bibliography > .entry.CSL')
+  expect(bibliography.getAttribute('start')).toBe('4')
+  expect(bibliography.getAttribute('role')).toBe('list')
+  expect(entries.map(entry => entry.rawTagName)).toEqual([ 'li', 'li' ])
+  expect(entries.map(entry => entry.classList.value)).toEqual([ [ 'entry', 'CSL', ], [ 'entry', 'CSL', ], ])
+  expect(entries.map(entry => entry.id)).toEqual([ 'reference-4', 'reference-5' ])
+  const numbers = entries.map(entry => entry.querySelector(':scope > .number')!)
+  expect(numbers.map(number => number.classList.value)).toEqual([ [ 'number', ], [ 'number', ], ])
+  expect(numbers.map(number => number.textContent)).toEqual([ '[4]', '[5]' ])
+  expect(entries[0]!.querySelector('.csl-entry')!.textContent.trimStart()).not.toMatch(/^\[\d+\]/)
+  expect(entries[0]!.querySelector('.csl-entry')!.textContent).toContain('Alpha [1]')
+  expect(entries[0]!.querySelector('.csl-entry')!.textContent).toContain('Note: Keep this note.')
+})
+
+test('cite owns semantic numbering and preserves plain-text context verbatim', () => {
+  const material: Material = { id: 'alpha', type: 'book', title: 'Alpha' }
+  const rendered = bib.cite([ material ], [ { condition: () => true, prefix: '<see>& ', label: 'page', locator: '42', suffix: ' <after>&' } ])
+  const root = node_html_parser.parse(rendered)
+  const citation = root.querySelector('.Citation')!
+  expect([ citation, ...citation.querySelectorAll('[class]'), ].map(element => element.classList.value)).toEqual([ [ 'Citation', ], [ 'prefix', ], [ 'reference', ], [ 'number', ], [ 'locator', ], [ 'suffix', ], ])
+  expect(citation.querySelector(':scope > .prefix')!.textContent).toBe('<see>& ')
+  expect(citation.querySelector(':scope > .reference')!.textContent).toBe('[1, p. 42]')
+  expect(citation.querySelector(':scope > .reference > .number')!.getAttribute('href')).toBe('#reference-1')
+  expect(citation.querySelector(':scope > .reference > .locator')!.textContent).toBe(', p. 42')
+  expect(citation.querySelector(':scope > .suffix')!.textContent).toBe(' <after>&')
+  expect(citation.textContent).toBe('<see>& [1, p. 42] <after>&')
+  expect(citation.querySelector('see')).toBeNull()
+  expect(citation.querySelector('after')).toBeNull()
+  expect(rendered).toContain('&lt;see&gt;&amp; ')
+  expect(rendered).toContain(' &lt;after&gt;&amp;')
+})
+
+test('cite omits absent context elements and renders a number without a locator', () => {
+  const material: Material = { id: 'alpha', type: 'book', title: 'Alpha' }
+  const citation = node_html_parser.parse(bib.cite([ material ], [ () => true ])).querySelector('.Citation')!
+  expect(citation.textContent).toBe('[1]')
+  expect(citation.querySelector(':scope > .prefix')).toBeNull()
+  expect(citation.querySelector(':scope > .reference > .locator')).toBeNull()
+  expect(citation.querySelector(':scope > .suffix')).toBeNull()
 })
 
 test('resolve_citations preserves the input order of ID citations', ({ g }) => {

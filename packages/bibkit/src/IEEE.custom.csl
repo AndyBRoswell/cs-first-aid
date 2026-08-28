@@ -329,22 +329,14 @@
   </macro>
   <!-- Citation -->
   <citation>
-    <sort>
-      <key variable="citation-number"/>
-    </sort>
-    <layout delimiter=", ">
-      <group prefix="[" suffix="]" delimiter=", ">
-        <text variable="citation-number"/>
-        <text macro="citation-locator"/>
-      </group>
+    <layout>
+      <text macro="citation-locator"/>
     </layout>
   </citation>
   <!-- Bibliography -->
 <!--   <bibliography entry-spacing="0" second-field-align="flush"> -->
   <bibliography entry-spacing="0">
     <layout>
-      <!-- Citation Number -->
-      <text variable="citation-number" prefix="[" suffix="] "/>
       <!-- Author(s) -->
       <text macro="author" suffix=", "/>
       <!-- Rest of Citation -->

@@ -2,6 +2,7 @@ import pino from 'pino'
 import node_fs from 'node:fs'
 import node_path from 'node:path'
 import * as cssesc from 'cssesc'
+import * as node_HTML_parser from 'node-html-parser'
 
 export const pino_arg: pino.LoggerOptions = {
   level: process.env["log_level"] || 'info',
@@ -31,6 +32,21 @@ export const cssesc_options: Readonly<Partial<cssesc.Options>> = { quotes: 'doub
 
 export const linesep = /\r\n?|\n/
 export const linesep_stripper = /[\r\n]+/
+
+/** Creates a text node whose input is serialized as plain text rather than interpreted as HTML. */
+export function create_HTML_text_node(text: string): node_HTML_parser.TextNode {
+  const node = new node_HTML_parser.TextNode('')
+  node.textContent = text
+  return node
+}
+
+/** Creates an HTML element without parsing an HTML fragment. When provided, `text` is serialized as plain text. */
+export function create_HTML_element(tag_name: string, attributes: Record<string, string> = {}, text?: string): node_HTML_parser.HTMLElement {
+  const element = new node_HTML_parser.HTMLElement(tag_name, {}, '')
+  element.setAttributes(attributes)
+  if (text !== undefined) { element.appendChild(create_HTML_text_node(text)) }
+  return element
+}
 
 export const supported_locales: Intl.UnicodeBCP47LocaleIdentifier[] = [ 'en-US' ]
 export const collator = new Map<string, Intl.Collator>()

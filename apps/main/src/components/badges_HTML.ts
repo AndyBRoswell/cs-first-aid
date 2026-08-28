@@ -1,6 +1,7 @@
 // Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
 
 import * as node_HTML_parser from 'node-html-parser'
+import * as util from '@cs-first-aid/util'
 import * as badges from './badges.ts'
 
 export function inject(source: string): string {
@@ -24,18 +25,11 @@ export function inject(source: string): string {
       host.getAttribute('data-badges') ?? null,
       sidebar_item,
     )
-    const container = create_element('span', { class: 'badges', })
+    const container = util.create_HTML_element('span', { class: 'badges', })
     for (const rendered_badge of rendered_badges) {
-      container.appendChild(create_element('span', { class: rendered_badge.class.join(' '), }, rendered_badge.text))
+      container.appendChild(util.create_HTML_element('span', { class: rendered_badge.class.join(' '), }, rendered_badge.text))
     }
     host.appendChild(container)
   }
   return root.toString()
-}
-
-export function create_element(tag_name: string, attributes: Record<string, string> = {}, text?: string): node_HTML_parser.HTMLElement {
-  const element = new node_HTML_parser.HTMLElement(tag_name, {}, '')
-  element.setAttributes(attributes)
-  if (text !== undefined) { element.textContent = text } // Escape badge text instead of interpreting it as HTML.
-  return element
 }
