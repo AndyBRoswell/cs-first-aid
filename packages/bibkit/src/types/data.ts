@@ -103,10 +103,10 @@ export type Citation_Condition = ID_t | Scoped_ID_t | Material_Filter | Qualifie
 
 // https://citeproc-js.readthedocs.io/en/latest/csl-json/markup.html#cite-items
 export type Citation_Context = {
-  prefix?: string
+  prefix?: string // Plain text emitted verbatim before the citation marker; whitespace and punctuation are preserved.
   label?: CSL.Locator_Type
   locator?: string
-  suffix?: string
+  suffix?: string // Plain text emitted verbatim after the citation marker; whitespace and punctuation are preserved.
 }
 
 export type Citation_Item = Citation_Condition | ({ condition: Citation_Condition } & Citation_Context)
