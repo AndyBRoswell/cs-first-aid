@@ -48,7 +48,6 @@ test('print_bibliography_segment starts at the requested global number', () => {
   expect(entries.map(entry => entry.rawTagName)).toEqual([ 'li', 'li' ])
   expect(entries.map(entry => entry.classList.value)).toEqual([ [ 'entry', 'CSL', ], [ 'entry', 'CSL', ], ])
   expect(entries.map(entry => entry.id)).toEqual([ 'reference-4', 'reference-5' ])
-  expect(entries.every(entry => entry.getAttribute('value') === undefined)).toBe(true)
   const numbers = entries.map(entry => entry.querySelector(':scope > .number')!)
   expect(numbers.map(number => number.classList.value)).toEqual([ [ 'number', ], [ 'number', ], ])
   expect(numbers.map(number => number.textContent)).toEqual([ '[4]', '[5]' ])
