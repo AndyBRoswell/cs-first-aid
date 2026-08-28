@@ -20,14 +20,12 @@ type Root_Locale_Only_Release_Stage = {
 
 type Site_Locale = { lang: Intl.UnicodeBCP47LocaleIdentifier }
 
-const site_locales = Object.entries(locales as Record<string, Site_Locale>)
-  .map(([ locale, { lang: language } ]) => ({ locale, language }))
+const site_locales = Object.entries(locales as Record<string, Site_Locale>).map(([ locale, { lang: language } ]) => ({ locale, language }))
 const site_languages = site_locales.map(({ language }) => language) // Uses the site's configured languages instead of hard-coding them.
 const root_language = site_locales.find(({ locale }) => locale === 'root')?.language
 if (root_language === undefined) { throw new Error('The root locale must declare a language.') }
 const foreign_locales = site_locales.filter(({ locale }) => locale !== 'root') // The root locale has no URL segment and is the source language for untranslated pages.
-const configured_sidebar_links = flatten_sidebar_items(sidebar as unknown as Sidebar_Item[])
-  .filter(item => item.slug !== undefined) // Groups do not render as the direct sidebar links checked by this test.
+const configured_sidebar_links = flatten_sidebar_items(sidebar as unknown as Sidebar_Item[]).filter(item => item.slug !== undefined) // Groups do not render as the direct sidebar links checked by this test.
 
 function flatten_sidebar_items(items: readonly Sidebar_Item[]): Sidebar_Item[] { // Recursively collects groups and leaf entries.
   return items.flatMap(item => [ item, ...flatten_sidebar_items(item.items ?? []) ])
