@@ -117,8 +117,9 @@ jobs:
         if: github.ref_name == 'dev'
         continue-on-error: true # Record a Vercel failure without blocking the other deployment providers
         run: |
-          $url = (pnpm dlx vercel@59.5.0 deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}).Trim()
+          $url = pnpm dlx --allow-build=esbuild vercel@59.5.0 deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $url = $url.Trim()
           "url=$url" | Add-Content $env:GITHUB_OUTPUT
 
       - name: Alias Vercel Preview
@@ -138,7 +139,7 @@ jobs:
         id: deploy-vercel-production
         if: github.ref_name == 'main'
         continue-on-error: true # Record a Vercel failure without blocking the other deployment providers
-        run: pnpm dlx vercel@59.5.0 deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: pnpm dlx --allow-build=esbuild vercel@59.5.0 deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy to Cloudflare Pages
         id: deploy-cloudflare
