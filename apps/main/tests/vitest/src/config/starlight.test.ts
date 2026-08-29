@@ -12,33 +12,30 @@ test('locales declare a root language and at least one foreign language', () => 
   expect(foreign_locales, 'At least one locale besides the root locale must be configured.').not.toHaveLength(0)
 })
 
-test('sidebar links declare release metadata for every configured language', () => {
+test('sidebar release metadata covers every configured language and reflects unavailable pages', () => {
+  let absent_page_count: number = 0
+  let unavailable_translation_count: number = 0
+
   expect(sidebar_links).not.toHaveLength(0)
   for (const item of sidebar_links) {
     const item_label = item.label ?? item.slug
     const localized_releases = get_release_stages(item)
+    const page_is_absent = item.slug === ''
+
+    if (page_is_absent) { absent_page_count++ }
+
     for (const language of site_languages) {
       expect(localized_releases[language], `Sidebar item "${item_label}" needs a release badge for language ${language}.`).toEqual(expect.any(String))
+      if (page_is_absent) {
+        expect(localized_releases[language], `Sidebar item "${item_label}" that points to no page must use release badge \`blank\`. [Language: ${language}]`).toBe('blank')
+      }
+    }
+
+    if (page_is_absent === false) {
+      unavailable_translation_count += foreign_locales.filter(({ language }) => localized_releases[language] === 'blank').length
     }
   }
-})
 
-test('sidebar links for pages not created yet use blank release badges', () => {
-  const absent_pages: typeof sidebar_links = sidebar_links.filter(item => item.slug === '')
-  expect(absent_pages).not.toHaveLength(0) // Delete this guard when all the pages become present.
-  for (const item of absent_pages) {
-    const item_label = item.label ?? item.slug
-    const localized_releases = get_release_stages(item)
-    for (const language of site_languages) {
-      expect(localized_releases[language], `Sidebar item "${item_label}" that points to no page must use release badge \`blank\`. [Language: ${language}]`).toBe('blank')
-    }
-  }
-})
-
-test('sidebar currently includes an unavailable foreign translation', () => {
-  const unavailable_translation_count: number = sidebar_links.filter(item => item.slug !== '').reduce((count, item) => {
-    const localized_releases = get_release_stages(item)
-    return count + foreign_locales.filter(({ language }) => localized_releases[language] === 'blank').length
-  }, 0)
+  expect(absent_page_count).toBeGreaterThan(0) // Delete this guard when all the pages become present.
   expect(unavailable_translation_count).toBeGreaterThan(0) // Remove this guard when every configured translation becomes available.
 })
