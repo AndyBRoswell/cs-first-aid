@@ -21,16 +21,20 @@ export const entries = [
       URL: 'https://link.springer.com/book/10.1007/0-387-27475-8',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       custom: {
-        Hardcover: {
-          type: 'book',
-          ISBN: '9780387220253',
-          issued: { 'date-parts': [ [ 2005, 3, 21 ] ] },
-        } satisfies types_data.Material,
-        Softcover: {
-          type: 'book',
-          ISBN: '978-1-4419-1959-5',
-          issued: { 'date-parts': [ [ 2010, 11, 29 ] ] },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Hardcover',
+            ISBN: '9780387220253',
+            issued: { 'date-parts': [ [ 2005, 3, 21 ] ] },
+          },
+          {
+            type: 'book',
+            medium: 'Softcover',
+            ISBN: '978-1-4419-1959-5',
+            issued: { 'date-parts': [ [ 2010, 11, 29 ] ] },
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },

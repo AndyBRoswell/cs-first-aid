@@ -19,18 +19,22 @@ export const entries = [
       URL: 'https://www.waveland.com/browse.php?t=477',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
       custom: {
-        VitalSource: {
-          type: 'book',
-          ISBN: '9781478638919',
-          URL: 'https://www.vitalsource.com/products/abstract-algebra-john-a-beachy-william-d-v9781478638919',
-          accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
-        } satisfies types_data.Material,
-        Kindle: {
-          type: 'book',
-          issued: { 'date-parts': [ [ 2019, 2, 15 ], ], },
-          URL: 'https://www.amazon.com/Abstract-Algebra-John-Beachy-ebook/dp/B07NWXPC5D/',
-          accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'eBook',
+            ISBN: '9781478638919',
+            URL: 'https://www.vitalsource.com/products/abstract-algebra-john-a-beachy-william-d-v9781478638919',
+            accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
+          },
+          {
+            type: 'book',
+            medium: 'eBook',
+            issued: { 'date-parts': [ [ 2019, 2, 15 ], ], },
+            URL: 'https://www.amazon.com/Abstract-Algebra-John-Beachy-ebook/dp/B07NWXPC5D/',
+            accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },

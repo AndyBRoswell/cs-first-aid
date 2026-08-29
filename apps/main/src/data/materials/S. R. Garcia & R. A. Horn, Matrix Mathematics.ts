@@ -22,11 +22,14 @@ export const entries = [
       language: 'en-GB',
       custom: {
         subtitle: 'A Second Course in Linear Algebra',
-        Hardback: {
-          type: 'book',
-          issued: { 'date-parts': [ [ 2023, 5, 23 ] ] },
-          ISBN: '9781108837101',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Hardback',
+            issued: { 'date-parts': [ [ 2023, 5, 23 ] ] },
+            ISBN: '9781108837101',
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

@@ -19,14 +19,13 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
       ISBN: '978-1-491-91075-7',
       custom: {
-        Paperback: {
-          type: 'book',
-          ISBN: '978-1-491-91077-1',
-        } satisfies types_data.Material,
-        Kindle: {
-          type: 'book',
-          ISBN: '978-1491910757',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Paperback',
+            ISBN: '978-1-491-91077-1',
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

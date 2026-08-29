@@ -17,14 +17,18 @@ export const entries = [
       language: 'en-US',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
       custom: {
-        Hardback: {
-          type: 'book',
-          ISBN: '9780521839402',
-        } satisfies types_data.Material,
-        Paperback: {
-          type: 'book',
-          ISBN: '9780521548236',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Hardback',
+            ISBN: '9780521839402',
+          },
+          {
+            type: 'book',
+            medium: 'Paperback',
+            ISBN: '9780521548236',
+          },
+        ],
         URL: [
           {
             link: 'https://www.cambridge.org/highereducation/books/matrix-analysis/FDA3627DC2B9F5C3DF2FD8C3CC136B48',

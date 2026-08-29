@@ -24,16 +24,20 @@ export const entries = [
       'collection-title': 'Graduate Texts in Mathematics',
       'collection-number': 211,
       custom: {
-        Hardcover: {
-          type: 'book',
-          ISBN: '9780387953854',
-          issued: { 'date-parts': [ [ 2002, 1, 8 ] ] },
-        } satisfies types_data.Material,
-        Softcover: {
-          type: 'book',
-          ISBN: '978-1-4612-6551-1',
-          issued: { 'date-parts': [ [ 2012, 11, 10 ] ] },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Hardcover',
+            ISBN: '9780387953854',
+            issued: { 'date-parts': [ [ 2002, 1, 8 ] ] },
+          },
+          {
+            type: 'book',
+            medium: 'Softcover',
+            ISBN: '978-1-4612-6551-1',
+            issued: { 'date-parts': [ [ 2012, 11, 10 ] ] },
+          },
+        ],
         "collection-title-short": 'GTM',
       } satisfies CSL.Custom,
     },

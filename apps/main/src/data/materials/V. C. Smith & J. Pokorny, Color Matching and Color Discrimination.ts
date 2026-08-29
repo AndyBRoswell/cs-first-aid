@@ -20,11 +20,14 @@ export const entries = [
       URL: 'https://sites.socsci.uci.edu/~kjameson/SmithPokorny2003.pdf',
       accessed: { 'date-parts': [ [ 2026, 8, 23 ] ] },
       custom: {
-        Print: {
-          type: 'book',
-          ISBN: '9780444512512',
-          issued: { 'date-parts': [ [ 2003 ] ] },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            ISBN: '9780444512512',
+            issued: { 'date-parts': [ [ 2003 ] ] },
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

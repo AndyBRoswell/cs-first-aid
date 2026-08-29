@@ -17,11 +17,14 @@ export const entries = [
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/linear-algebra-with-applications-global-edition/P200000004727/9781292354873',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
       custom: {
-        eTextbook: {
-          type: 'book',
-          issued: { 'date-parts': [ [ 2020, 11, 25 ], ], },
-          ISBN: '9781292354873',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'eTextbook',
+            issued: { 'date-parts': [ [ 2020, 11, 25 ], ], },
+            ISBN: '9781292354873',
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },

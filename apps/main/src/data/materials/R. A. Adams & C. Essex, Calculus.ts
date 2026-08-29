@@ -19,13 +19,15 @@ export const entries = [
       language: 'en-CA',
       URL: 'https://www.pearson.com/en-ca/subject-catalog/p/calculus-a-complete-course/P200000002479/9780135766781',
       accessed: { "date-parts": [ [ 2026, 4, 2 ], ], },
-      note: 'Printed ver 9780135732588',
       custom: {
-        Print: {
-          type: 'book',
-          issued: { "date-parts": [ [ 2021, 1, 26 ], ], },
-          ISBN: '9780135732588',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            issued: { "date-parts": [ [ 2021, 1, 26 ], ], },
+            ISBN: '9780135732588',
+          },
+        ],
       } satisfies CSL.Custom,
     }
   }

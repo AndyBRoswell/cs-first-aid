@@ -19,11 +19,14 @@ export const entries = [
       ISBN: '978-1-84996-690-0',
       language: 'en-US',
       custom: {
-        Hardcover: {
-          type: 'book',
-          issued: { 'date-parts': [ [ 2008, 1, 10 ], ], },
-          ISBN: '9781846289699',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Hardcover',
+            issued: { 'date-parts': [ [ 2008, 1, 10 ], ], },
+            ISBN: '9781846289699',
+          },
+        ],
         "collection-title-short": 'GTM',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
