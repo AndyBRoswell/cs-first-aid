@@ -6,9 +6,14 @@ import * as bib from '@cs-first-aid/bibkit/bib'
 import cssesc from "cssesc";
 import * as util from '@cs-first-aid/util'
 
-function get_rendered_link_text(link: types_data.Link): string {
-  const metadata = typeof link === 'string' ? { link } : link
-  return `${metadata.display_text ?? metadata.link}${metadata.note === undefined ? '' : ` (${metadata.note})`}${metadata.license === undefined ? '' : ` (${metadata.license})`}`
+async function check_links(container: Locator, links: types_data.Link[]) {
+  const metadata = links.map(link => typeof link === 'string' ? { link } : link)
+  const rendered_links = container.locator('.Link')
+  const anchors = rendered_links.getByRole('link')
+  await expect(anchors).toHaveText(metadata.map(link => link.display_text ?? link.link))
+  expect(await anchors.evaluateAll(elements => elements.map(element => [ element.getAttribute('href'), element.getAttribute('type') ]))).toEqual(metadata.map(link => [ link.link, link['Content-Type'] ?? null ]))
+  await expect(rendered_links.locator('.note')).toHaveText(metadata.flatMap(link => link.note === undefined ? [] : [ link.note ]))
+  await expect(rendered_links.locator('.license')).toHaveText(metadata.flatMap(link => link.license === undefined ? [] : [ link.license ]))
 }
 
 export function locate_references(main: Locator, scope_name: types_data.Scope_Name) {
@@ -38,14 +43,21 @@ export async function check_references(main: Locator) {
           await expect(lecturer_element).toHaveText(expected)
         }
         if (material.custom.URL !== undefined) {
-          const links = material.custom.URL
-          await expect(custom_div.locator('.URL')).toHaveText(labels.additional_links + links.map(get_rendered_link_text).join(''))
+          const URL = custom_div.locator('.URL')
+          await expect(URL.locator('.label')).toHaveText(labels.additional_links)
+          await check_links(URL, material.custom.URL)
         }
         if (material.custom.free_material !== undefined) {
           const free_material = material.custom.free_material
-          const groups = Array.isArray(free_material) ? [ [ '', free_material ] ] as const : Object.entries(free_material)
-          const expected_text = labels.free_materials + groups.map(([ name, group_links ]) => `${labels.free_material_groups[name] ?? name}${group_links.map(get_rendered_link_text).join('')}`).join('')
-          await expect(custom_div.locator('.free_material')).toHaveText(expected_text)
+          const rendered_free_material = custom_div.locator('.free_material')
+          await expect(rendered_free_material.locator('.label')).toHaveText(labels.free_materials)
+          if (Array.isArray(free_material)) { await check_links(rendered_free_material, free_material) }
+          else {
+            const groups = Object.entries(free_material)
+            await expect(rendered_free_material.getByRole('term')).toHaveText(groups.map(([ name ]) => labels.free_material_groups[name] ?? name))
+            await expect(rendered_free_material.getByRole('definition')).toHaveCount(groups.length)
+            await check_links(rendered_free_material, groups.flatMap(([ , links ]) => links))
+          }
         }
       }
     }
