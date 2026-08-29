@@ -1,6 +1,7 @@
 import { expect, type Locator } from '@playwright/test'
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 import * as catalog from '@cs-first-aid/bibkit/catalog'
+import * as bib from '@cs-first-aid/bibkit/bib'
 // @ts-ignore [cssesc doesn't have ts support]
 import cssesc from "cssesc";
 import * as util from '@cs-first-aid/util'
@@ -26,7 +27,7 @@ export async function check_references(main: Locator) {
           const custom_div: Locator = CSL_entries[index]!.locator('.custom')
           const lecturer_p: Locator = custom_div.locator('.lecturer')
           const rendered_lecturer: string = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
-          const expected = `${language === 'zh-CN' ? '主讲：' : 'Lecturer: '}${rendered_lecturer}`
+          const expected = `${bib.get_extra_bib_label(language).lecturer}${rendered_lecturer}`
           await expect(lecturer_p).toHaveText(expected)
         }
       }
