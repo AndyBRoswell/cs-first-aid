@@ -12,8 +12,8 @@ async function check_links(container: Locator, links: types_data.Link[]) {
   const anchors = rendered_links.getByRole('link')
   await expect(anchors).toHaveText(metadata.map(link => link.display_text ?? link.link))
   expect(await anchors.evaluateAll(elements => elements.map(element => [ element.getAttribute('href'), element.getAttribute('type') ]))).toEqual(metadata.map(link => [ link.link, link['Content-Type'] ?? null ]))
-  await expect(rendered_links.locator('.note')).toHaveText(metadata.flatMap(link => link.note === undefined ? [] : [ link.note ]))
-  await expect(rendered_links.locator('.license')).toHaveText(metadata.flatMap(link => link.license === undefined ? [] : [ link.license ]))
+  await expect(rendered_links.locator('.note')).toHaveText(metadata.map(link => link.note).filter(note => note !== undefined)) // An empty expected array still asserts that the locator matches no elements.
+  await expect(rendered_links.locator('.license')).toHaveText(metadata.map(link => link.license).filter(license => license !== undefined))
 }
 
 export function locate_references(main: Locator, scope_name: types_data.Scope_Name) {
