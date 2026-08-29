@@ -142,6 +142,16 @@ export const Future_Trends = {
           },
         },
         {
+          label: '全面落实自动化测试',
+          translations: {
+            en: 'Fully Implement Automated Testing',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
           label: '资源受限下的设计决策',
           translations: {
             en: 'Design Decisions under Resource Limits',
