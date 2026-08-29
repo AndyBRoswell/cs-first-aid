@@ -21,19 +21,12 @@ test('sidebar release metadata covers every configured language and reflects una
     const item_label = item.label ?? item.slug
     const localized_releases = get_release_stages(item)
     const page_is_absent = item.slug === ''
-
     if (page_is_absent) { absent_page_count++ }
-
     for (const language of site_languages) {
       expect(localized_releases[language], `Sidebar item "${item_label}" needs a release badge for language ${language}.`).toEqual(expect.any(String))
-      if (page_is_absent) {
-        expect(localized_releases[language], `Sidebar item "${item_label}" that points to no page must use release badge \`blank\`. [Language: ${language}]`).toBe('blank')
-      }
+      if (page_is_absent) { expect(localized_releases[language], `Sidebar item "${item_label}" that points to no page must use release badge \`blank\`. [Language: ${language}]`).toBe('blank') }
     }
-
-    if (page_is_absent === false) {
-      unavailable_translation_count += foreign_locales.filter(({ language }) => localized_releases[language] === 'blank').length
-    }
+    if (page_is_absent === false) { unavailable_translation_count += foreign_locales.filter(({ language }) => localized_releases[language] === 'blank').length }
   }
 
   expect(absent_page_count).toBeGreaterThan(0) // Delete this guard when all the pages become present.
