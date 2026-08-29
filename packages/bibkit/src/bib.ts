@@ -131,7 +131,7 @@ function render_link(link: Link): node_html_parser.HTMLElement {
   const item = util.create_HTML_element('li', { class: 'Link', })
   const attributes: Record<string, string> = { href: metadata.link }
   if (metadata['Content-Type'] !== undefined) { attributes['type'] = metadata['Content-Type'] }
-  item.appendChild(util.create_HTML_element('a', attributes, metadata.display_text ?? metadata.link))
+  item.appendChild(util.create_HTML_element('a', { class: 'link', ...attributes, }, metadata.display_text ?? metadata.link))
   for (const [ field, value ] of [ [ 'note', metadata.note ], [ 'license', metadata.license ], ] as const) {
     if (value === undefined) { continue }
     item.appendChild(util.create_HTML_text_node(' ('))
@@ -160,8 +160,8 @@ function render_free_material(free_material: NonNullable<NonNullable<Material['c
   field.appendChild(util.create_HTML_element('span', { class: 'label', }, label.free_materials))
   const groups = util.create_HTML_element('dl', { class: 'groups', })
   for (const [ name, links ] of Object.entries(free_material)) {
-    groups.appendChild(util.create_HTML_element('dt', {}, label.free_material_groups[name] ?? name))
-    const group = util.create_HTML_element('dd')
+    groups.appendChild(util.create_HTML_element('dt', { class: 'label', }, label.free_material_groups[name] ?? name))
+    const group = util.create_HTML_element('dd', { class: 'material', })
     group.appendChild(render_links(links))
     groups.appendChild(group)
   }

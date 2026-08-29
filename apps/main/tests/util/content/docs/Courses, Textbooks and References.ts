@@ -44,13 +44,13 @@ export async function check_references(main: Locator) {
         }
         if (material.custom.URL !== undefined) {
           const URL = custom_div.locator('.URL')
-          await expect(URL.locator('.label')).toHaveText(labels.additional_links)
+          await expect(URL.locator(':scope > .label')).toHaveText(labels.additional_links)
           await check_links(URL, material.custom.URL)
         }
         if (material.custom.free_material !== undefined) {
           const free_material = material.custom.free_material
           const rendered_free_material = custom_div.locator('.free_material')
-          await expect(rendered_free_material.locator('.label')).toHaveText(labels.free_materials)
+          await expect(rendered_free_material.locator(':scope > .label')).toHaveText(labels.free_materials)
           if (Array.isArray(free_material)) { await check_links(rendered_free_material, free_material) }
           else {
             const groups = Object.entries(free_material)

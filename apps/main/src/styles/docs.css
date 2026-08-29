@@ -47,8 +47,7 @@ ol.Bibliography.csl-bib-body {
   column-gap: 0.5em;
 }
 
-.Bibliography > .entry.CSL > .custom .label,
-.Bibliography > .entry.CSL > .custom .groups > dt {
+.Bibliography > .entry.CSL > .custom .label {
   font-weight: 600;
 }
 
@@ -61,7 +60,7 @@ ol.Bibliography.csl-bib-body {
   padding: 0;
 }
 
-.Bibliography > .entry.CSL > .custom .Link > a {
+.Bibliography > .entry.CSL > .custom .Link > .link {
   overflow-wrap: anywhere;
 }
 
@@ -73,7 +72,7 @@ ol.Bibliography.csl-bib-body {
   margin: 0;
 }
 
-.Bibliography > .entry.CSL > .custom .groups > dd {
+.Bibliography > .entry.CSL > .custom .groups > .material {
   margin: 0;
 }
 
