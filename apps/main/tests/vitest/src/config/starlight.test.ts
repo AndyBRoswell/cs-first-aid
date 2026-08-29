@@ -1,14 +1,7 @@
 // Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
 
 import { expect, test } from 'vitest'
-import type { Localized_Release } from '@/components/release_stages.ts'
-import { locales, sidebar } from '@/config/starlight.ts'
-import * as util from '@tests/util.ts'
-
-const site_locales: { locale: string, language: Intl.UnicodeBCP47LocaleIdentifier }[] = Object.entries(locales).map(([ locale, { lang: language } ]) => ({ locale, language }))
-const foreign_locales: typeof site_locales = site_locales.filter(({ locale }) => locale !== 'root')
-const site_languages: Intl.UnicodeBCP47LocaleIdentifier[] = site_locales.map(({ language }) => language)
-const configured_sidebar_links: ReturnType<typeof util.get_sidebar_slug_items> = util.get_sidebar_slug_items(sidebar)
+import { foreign_locales, get_release_stages, sidebar_links, site_languages, site_locales } from '@tests/util/config/starlight.ts'
 
 test('locales declare a root language and at least one foreign language', () => {
   expect(site_locales).not.toHaveLength(0)
@@ -20,8 +13,8 @@ test('locales declare a root language and at least one foreign language', () => 
 })
 
 test('sidebar links declare release metadata for every configured language', () => {
-  expect(configured_sidebar_links).not.toHaveLength(0)
-  for (const item of configured_sidebar_links) {
+  expect(sidebar_links).not.toHaveLength(0)
+  for (const item of sidebar_links) {
     const item_label = item.label ?? item.slug
     const localized_releases = get_release_stages(item)
     for (const language of site_languages) {
@@ -31,7 +24,7 @@ test('sidebar links declare release metadata for every configured language', () 
 })
 
 test('sidebar links for pages not created yet use blank release badges', () => {
-  const absent_pages: typeof configured_sidebar_links = configured_sidebar_links.filter(item => item.slug === '')
+  const absent_pages: typeof sidebar_links = sidebar_links.filter(item => item.slug === '')
   expect(absent_pages).not.toHaveLength(0) // Delete this guard when all the pages become present.
   for (const item of absent_pages) {
     const item_label = item.label ?? item.slug
@@ -43,15 +36,9 @@ test('sidebar links for pages not created yet use blank release badges', () => {
 })
 
 test('sidebar currently includes an unavailable foreign translation', () => {
-  const unavailable_translation_count: number = configured_sidebar_links.filter(item => item.slug !== '').reduce((count, item) => {
+  const unavailable_translation_count: number = sidebar_links.filter(item => item.slug !== '').reduce((count, item) => {
     const localized_releases = get_release_stages(item)
     return count + foreign_locales.filter(({ language }) => localized_releases[language] === 'blank').length
   }, 0)
   expect(unavailable_translation_count).toBeGreaterThan(0) // Remove this guard when every configured translation becomes available.
 })
-
-function get_release_stages(item: (typeof configured_sidebar_links)[number]): Localized_Release {
-  const serialized = item.attrs?.['data-release-stage']
-  expect(serialized, `Sidebar item "${item.label ?? item.slug}" needs release metadata.`).toEqual(expect.stringMatching(/\S/))
-  return JSON.parse(serialized as string) as Localized_Release
-}
