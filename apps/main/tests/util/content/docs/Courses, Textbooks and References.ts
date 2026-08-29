@@ -6,6 +6,11 @@ import * as bib from '@cs-first-aid/bibkit/bib'
 import cssesc from "cssesc";
 import * as util from '@cs-first-aid/util'
 
+function get_rendered_link_text(link: types_data.Link): string {
+  const metadata = typeof link === 'string' ? { link } : link
+  return `${metadata.display_text ?? metadata.link}${metadata.note === undefined ? '' : ` (${metadata.note})`}${metadata.license === undefined ? '' : ` (${metadata.license})`}`
+}
+
 export function locate_references(main: Locator, scope_name: types_data.Scope_Name) {
   const CSS_escaped_scope_name = cssesc(JSON.stringify(scope_name), util.cssesc_options)
   return main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
@@ -13,6 +18,7 @@ export function locate_references(main: Locator, scope_name: types_data.Scope_Na
 
 export async function check_references(main: Locator) {
   const language = await main.evaluate(element => element.ownerDocument.documentElement.lang)
+  const labels = bib.get_extra_bib_label(language)
   const References_locators = await main.locator('.References').all()
   for (const locator of References_locators) {
     // basic
@@ -22,13 +28,24 @@ export async function check_references(main: Locator) {
     expect(material_segment.length).toEqual(CSL_entries.length)
     // custom data
     for (const [ index, material ] of material_segment.entries()) {
-      if ('custom' in material) {
-        if ('lecturer' in material.custom) {
-          const custom_div: Locator = CSL_entries[index]!.locator('.custom')
-          const lecturer_p: Locator = custom_div.locator('.lecturer')
+      if (material.custom !== undefined) {
+        const custom_div: Locator = CSL_entries[index]!.locator(':scope > .custom')
+        await expect(custom_div).toHaveCount(1)
+        if (material.custom.lecturer !== undefined) {
+          const lecturer_element: Locator = custom_div.locator(':scope > .lecturer')
           const rendered_lecturer: string = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
-          const expected = `${bib.get_extra_bib_label(language).lecturer}${rendered_lecturer}`
-          await expect(lecturer_p).toHaveText(expected)
+          const expected = `${labels.lecturer}${rendered_lecturer}`
+          await expect(lecturer_element).toHaveText(expected)
+        }
+        if (material.custom.URL !== undefined) {
+          const links = material.custom.URL
+          await expect(custom_div.locator('.URL')).toHaveText(labels.additional_links + links.map(get_rendered_link_text).join(''))
+        }
+        if (material.custom.free_material !== undefined) {
+          const free_material = material.custom.free_material
+          const groups = Array.isArray(free_material) ? [ [ '', free_material ] ] as const : Object.entries(free_material)
+          const expected_text = labels.free_materials + groups.map(([ name, group_links ]) => `${labels.free_material_groups[name] ?? name}${group_links.map(get_rendered_link_text).join('')}`).join('')
+          await expect(custom_div.locator('.free_material')).toHaveText(expected_text)
         }
       }
     }
