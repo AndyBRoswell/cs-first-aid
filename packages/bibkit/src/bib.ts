@@ -3,7 +3,7 @@ import citation_js from "@citation-js/core";
 import '@citation-js/plugin-csl'
 import * as node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl'
-import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name, Serialized_Scope_Name, Material, Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, } from "./types/data.ts";
+import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name, Serialized_Scope_Name, Material, Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, Link, } from "./types/data.ts";
 import * as catalog from './catalog.ts'
 import { check_filter_results, type Filter_Options } from "./catalog.ts"
 import pino from 'pino'
@@ -35,6 +35,43 @@ type indexing_action =
 
 export type Reference_Range = [ start: number, end: number ]
 export type Reference_Ranges = Record<Serialized_Scope_Name, Reference_Range>
+
+export type Extra_Bib_Label = Readonly<{
+  lecturer: string
+  additional_links: string
+  free_materials: string
+  free_material_groups: Readonly<Record<string, string>>
+}>
+
+const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
+  'zh-CN': {
+    lecturer: '主讲：',
+    additional_links: '其它链接：',
+    free_materials: '免费资源：',
+    free_material_groups: {
+      Preview: '预览',
+      sample_chapter: '样章',
+    },
+  },
+  en: {
+    lecturer: 'Lecturer: ',
+    additional_links: 'Additional links:',
+    free_materials: 'Free materials:',
+    free_material_groups: {
+      Preview: 'Preview',
+      sample_chapter: 'Sample chapter',
+    },
+  },
+}
+
+export function get_extra_bib_label(language: string): Extra_Bib_Label {
+  let locale: Intl.Locale
+  try { locale = new Intl.Locale(language) }
+  catch (cause) { throw new RangeError(`Invalid bibliography language: ${JSON.stringify(language)}`, { cause }) }
+  const labels = extra_bib_label[locale.baseName] ?? extra_bib_label[locale.language]
+  if (labels === undefined) { throw new RangeError(`Unsupported bibliography language: ${JSON.stringify(language)}`) }
+  return labels
+}
 
 // TODO: Test case for loop detection
 // Created by Gemini 3.1 Pro Extended [web]. Revised by AndyBRoswell.
@@ -89,6 +126,49 @@ function get_scoped_references(references: Scoped_References, scope_name: Scope_
   return scoped_references
 }
 
+function render_link(link: Link): node_html_parser.HTMLElement {
+  const metadata = typeof link === 'string' ? { link } : link
+  const item = util.create_HTML_element('li', { class: 'Link', })
+  const attributes: Record<string, string> = { href: metadata.link }
+  if (metadata['Content-Type'] !== undefined) { attributes['type'] = metadata['Content-Type'] }
+  item.appendChild(util.create_HTML_element('a', attributes, metadata.display_text ?? metadata.link))
+  for (const [ field, value ] of [ [ 'note', metadata.note ], [ 'license', metadata.license ], ] as const) {
+    if (value === undefined) { continue }
+    item.appendChild(util.create_HTML_text_node(' ('))
+    item.appendChild(util.create_HTML_element('small', { class: field, }, value))
+    item.appendChild(util.create_HTML_text_node(')'))
+  }
+  return item
+}
+
+function render_links(links: Link[]): node_html_parser.HTMLElement {
+  const list = util.create_HTML_element('ul', { class: 'links', })
+  for (const link of links) { list.appendChild(render_link(link)) }
+  return list
+}
+
+function render_link_field(class_name: 'URL' | 'free_material', label: string, links: Link[]): node_html_parser.HTMLElement {
+  const field = util.create_HTML_element('div', { class: class_name, })
+  field.appendChild(util.create_HTML_element('span', { class: 'label', }, label))
+  field.appendChild(render_links(links))
+  return field
+}
+
+function render_free_material(free_material: NonNullable<NonNullable<Material['custom']>['free_material']>, label: Extra_Bib_Label): node_html_parser.HTMLElement {
+  if (Array.isArray(free_material)) { return render_link_field('free_material', label.free_materials, free_material) }
+  const field = util.create_HTML_element('div', { class: 'free_material', })
+  field.appendChild(util.create_HTML_element('span', { class: 'label', }, label.free_materials))
+  const groups = util.create_HTML_element('dl', { class: 'groups', })
+  for (const [ name, links ] of Object.entries(free_material)) {
+    groups.appendChild(util.create_HTML_element('dt', {}, label.free_material_groups[name] ?? name))
+    const group = util.create_HTML_element('dd')
+    group.appendChild(render_links(links))
+    groups.appendChild(group)
+  }
+  field.appendChild(groups)
+  return field
+}
+
 function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, material: Material, number: number, language: string): node_html_parser.HTMLElement { // Apply the site-specific wrapper, anchor, number, and custom fields to one CSL entry.
   const decorated_entry = util.create_HTML_element('li', { class: 'entry CSL', })
   decorated_entry.id = `reference-${number}`
@@ -98,12 +178,15 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
   // show custom data of this CSL item
   if (material.custom) {
     const additional = util.create_HTML_element('div', { class: 'custom', })
-    if ('lecturer' in material.custom) {
+    const labels = material.custom.lecturer !== undefined || material.custom.URL !== undefined || material.custom.free_material !== undefined ? get_extra_bib_label(language) : undefined
+    if (material.custom.lecturer !== undefined) {
       const p = util.create_HTML_element('p', { class: 'lecturer', })
       const lecturer = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
-      p.set_content(`${language === 'zh-CN' ? '主讲：' : 'Lecturer: '}${lecturer}`)
+      p.set_content(`${labels!.lecturer}${lecturer}`)
       additional.appendChild(p)
     }
+    if (material.custom.URL !== undefined) { additional.appendChild(render_link_field('URL', labels!.additional_links, material.custom.URL)) }
+    if (material.custom.free_material !== undefined) { additional.appendChild(render_free_material(material.custom.free_material, labels!)) }
     decorated_entry.appendChild(additional)
   }
   return decorated_entry
