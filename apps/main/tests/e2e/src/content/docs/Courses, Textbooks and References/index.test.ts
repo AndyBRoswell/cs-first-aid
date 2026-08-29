@@ -2,7 +2,7 @@ import { expect } from '@playwright/test';
 import pino from 'pino'
 import * as util from '@cs-first-aid/util'
 import * as test_util from '@tests/util.ts'
-import * as test_src_util from '@tests/e2e/src/util.ts'
+import * as test_src_util from '@tests/util/e2e.ts'
 
 const logger = pino(util.pino_arg)
 
