@@ -194,7 +194,7 @@ export type Item = {
   page?: string | number
   'page-first'?: string | number
   part?: string | number
-  printing?: string | number
+  'printing-number'?: string | number
   supplement?: string | number
   volume?: string | number
 
