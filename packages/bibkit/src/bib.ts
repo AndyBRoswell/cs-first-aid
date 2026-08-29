@@ -178,15 +178,15 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
   // show custom data of this CSL item
   if (material.custom) {
     const additional = util.create_HTML_element('div', { class: 'custom', })
-    const labels = material.custom.lecturer !== undefined || material.custom.URL !== undefined || material.custom.free_material !== undefined ? get_extra_bib_label(language) : undefined
+    const labels = get_extra_bib_label(language)
     if (material.custom.lecturer !== undefined) {
       const p = util.create_HTML_element('p', { class: 'lecturer', })
       const lecturer = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
-      p.set_content(`${labels!.lecturer}${lecturer}`)
+      p.set_content(`${labels.lecturer}${lecturer}`)
       additional.appendChild(p)
     }
-    if (material.custom.URL !== undefined) { additional.appendChild(render_link_field('URL', labels!.additional_links, material.custom.URL)) }
-    if (material.custom.free_material !== undefined) { additional.appendChild(render_free_material(material.custom.free_material, labels!)) }
+    if (material.custom.URL !== undefined) { additional.appendChild(render_link_field('URL', labels.additional_links, material.custom.URL)) }
+    if (material.custom.free_material !== undefined) { additional.appendChild(render_free_material(material.custom.free_material, labels)) }
     decorated_entry.appendChild(additional)
   }
   return decorated_entry
