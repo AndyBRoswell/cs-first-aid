@@ -38,7 +38,7 @@ export async function check_references(main: Locator) {
 export async function check_cites(main: Locator) { // Created by GPT-5.6 Terra Max [codex]. Revised by AndyBRoswell.
   const Cite_locators = await main.locator('.Cite').all()
   for (const locator of Cite_locators) {
-    const cite_links = await locator.locator('.Citation > .reference > a.number').all()
+    const cite_links = await locator.locator('.Citation > .reference > .number').all()
     expect(cite_links.length).toBeGreaterThan(0)
     for (const link of cite_links) {
       const index = await link.innerText()
