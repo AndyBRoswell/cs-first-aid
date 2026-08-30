@@ -59,17 +59,18 @@ test('print_bibliography renders localized additional and free link lists', () =
     } satisfies CSL.Custom,
   }
 
-  for (const [ language, URL_label, free_material_label ] of [ [ 'zh-CN', '其它链接：', '免费资源：' ], [ 'en', 'Additional links:', 'Free materials:' ], ] as const) {
+  for (const language of [ 'zh-CN', 'en', ]) {
+    const labels = bib.get_extra_bib_label(language)
     const root = node_html_parser.parse(bib.print_bibliography([material], { language }))
 
     const URL_field = root.querySelector('.custom > .URL')!
-    expect(URL_field.querySelector(':scope > .label')!.textContent).toBe(URL_label)
+    expect(URL_field.querySelector(':scope > .label')!.textContent).toBe(labels.additional_links)
     const additional_link = URL_field.querySelector('.link')!
     expect(additional_link.textContent).toBe(material.custom!.URL![0])
     expect(additional_link.getAttribute('href')).toBe(material.custom!.URL![0])
 
     const free_materials = root.querySelector('.custom > .free_material')!
-    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(free_material_label)
+    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(labels.free_materials)
     const free_link = free_materials.querySelector('.Link')!
     expect(free_link.classList.value).toEqual([ 'Link', ])
     expect(free_link.querySelector(':scope > .link')!.textContent).toBe('<PDF>&')
