@@ -84,7 +84,7 @@ test('print_bibliography renders localized additional and free link lists', () =
 })
 
 test('print_bibliography renders named free-material groups as a description list', () => {
-  const material: Material = {
+  const material = {
     type: 'book',
     title: 'Grouped links',
     custom: {
@@ -94,15 +94,16 @@ test('print_bibliography renders named free-material groups as a description lis
         Source: [ { link: 'https://example.com/source', display_text: 'Repository', }, ],
       },
     },
+  } satisfies Material
+  const expected_groups = Object.entries(material.custom.free_material)
+  for (const language of [ 'zh-CN', 'en', ]) {
+    const labels = bib.get_extra_bib_label(language)
+    const free_materials = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .free_material')!
+    const rendered_groups = free_materials.querySelector(':scope > .groups')!
+    expect(rendered_groups.rawTagName).toBe('dl')
+    expect(rendered_groups.querySelectorAll(':scope > .label').map(group => group.textContent)).toEqual(expected_groups.map(([ name ]) => labels.free_material_groups[name] ?? name))
+    expect(rendered_groups.querySelectorAll(':scope > .material').map(group => group.querySelectorAll('.link').map(link => link.textContent))).toEqual(expected_groups.map(([ , links ]) => links.map(link => typeof link === 'string' ? link : link.display_text ?? link.link)))
   }
-  const free_materials = node_html_parser.parse(bib.print_bibliography([ material ], { language: 'en' })).querySelector('.custom > .free_material')!
-  const groups = free_materials.querySelector(':scope > .groups')!
-  expect(groups.rawTagName).toBe('dl')
-  expect(groups.querySelectorAll(':scope > .label').map(group => group.textContent)).toEqual([ 'Preview', 'Sample chapter', 'Source', ])
-  expect(groups.querySelectorAll(':scope > .material').map(group => group.querySelector('.Link')!.textContent)).toEqual([ 'https://example.com/preview.pdf', 'https://example.com/sample.pdf', 'Repository', ])
-
-  const Chinese_groups = node_html_parser.parse(bib.print_bibliography([ material ], { language: 'zh-CN' })).querySelectorAll('.custom > .free_material > .groups > .label')
-  expect(Chinese_groups.map(group => group.textContent)).toEqual([ '预览', '样章', 'Source', ])
 })
 
 test('bibliography labels do not silently fall back for an unsupported language', () => {
