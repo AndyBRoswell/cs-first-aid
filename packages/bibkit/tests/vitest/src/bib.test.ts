@@ -59,7 +59,7 @@ test('print_bibliography renders localized additional and free link lists', () =
     } satisfies CSL.Custom,
   }
 
-  for (const language of [ 'zh-CN', 'en', ]) {
+  for (const language of bib.supported_languages) {
     const labels = bib.get_extra_bib_label(language)
     const root = node_html_parser.parse(bib.print_bibliography([material], { language }))
 
@@ -96,7 +96,7 @@ test('print_bibliography renders named free-material groups as a description lis
     },
   } satisfies Material
   const expected_groups = Object.entries(material.custom.free_material)
-  for (const language of [ 'zh-CN', 'en', ]) {
+  for (const language of bib.supported_languages) {
     const labels = bib.get_extra_bib_label(language)
     const free_materials = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .free_material')!
     const rendered_groups = free_materials.querySelector(':scope > .groups')!

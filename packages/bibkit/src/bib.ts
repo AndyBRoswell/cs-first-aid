@@ -63,6 +63,7 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
     },
   },
 }
+export const supported_languages: readonly string[] = Object.freeze(Object.keys(extra_bib_label))
 
 export function get_extra_bib_label(language: string): Extra_Bib_Label {
   let locale: Intl.Locale
