@@ -58,10 +58,10 @@ ol.Bibliography.csl-bib-body {
 
 .Bibliography > .entry.CSL > .custom .list {
   display: inline-flex; /* Keep link groups inline with their label. */
-  flex-wrap: wrap; /* Wrap individual links instead of overflowing. */
-  gap: 0 0.75em; /* Separate links horizontally without adding row spacing. */
+  flex-wrap: wrap; /* Wrap when insufficient space */
+  gap: 0 0.75em; /* Row spacing: 0. Column spacing: 0.75em. */
   list-style: none;
-  margin: 0; /* Neutralize Starlight's prose-list spacing. */
+  margin: 0; /* Remove Starlight's prose-list spacing. */
   padding: 0;
 }
 
