@@ -32,7 +32,7 @@ ol.Bibliography.csl-bib-body {
 
 .Bibliography > .entry.CSL {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr); /* Keep numbers compact while entries remain wrappable. */
+  grid-template-columns: max-content minmax(0, 1fr); /* Col 1: Width determined by content length. Col 2: min = 0, max = 1fr */
   column-gap: 0.5rem;
 }
 
