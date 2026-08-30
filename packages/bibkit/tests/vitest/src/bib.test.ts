@@ -5,6 +5,8 @@ import { fc, test } from '@fast-check/vitest'
 import { expect } from 'vitest'
 import * as node_html_parser from 'node-html-parser'
 import * as bib from '@/bib.ts'
+import * as CSL from '@/CSL'
+import * as types_data from '@/types/data'
 import * as catalog from '@/catalog.ts'
 import type { Citation_Context, Citation_Item, Material, Scoped_References } from '@/types/data.ts'
 
@@ -38,6 +40,76 @@ test('print_bibliography localizes the lecturer label by interface language', ()
   expect(bib.print_bibliography([ material ], { language: 'en' })).toContain('Lecturer: ')
 })
 
+test('print_bibliography renders localized additional and free link lists', () => {
+  const material: Material = {
+    type: 'book',
+    title: 'Links',
+    custom: {
+      URL: [ 'https://example.com/descriptive?page=1&language=en' ],
+      free_material: [
+        {
+          link: 'https://example.com/file.pdf?download=1&mirror=primary',
+          display_text: '<PDF>&',
+          note: 'Accessible <copy>',
+          'Content-Type': 'application/pdf',
+          license: 'CC-BY-4.0',
+          tag: [ 'internal', ],
+        },
+      ] satisfies types_data.Link[],
+    } satisfies CSL.Custom,
+  }
+
+  for (const language of bib.supported_languages) {
+    const labels = bib.get_extra_bib_label(language)
+    const root = node_html_parser.parse(bib.print_bibliography([material], { language }))
+
+    const URL_field = root.querySelector('.custom > .URL')!
+    expect(URL_field.querySelector(':scope > .label')!.textContent).toBe(labels.additional_links)
+    const additional_link = URL_field.querySelector('.link')!
+    expect(additional_link.textContent).toBe(material.custom!.URL![0])
+    expect(additional_link.getAttribute('href')).toBe(material.custom!.URL![0])
+
+    const free_materials = root.querySelector('.custom > .free_material')!
+    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(labels.free_materials)
+    const free_link = free_materials.querySelector('.Link')!
+    expect(free_link.classList.value).toEqual([ 'Link', ])
+    expect(free_link.querySelector(':scope > .link')!.textContent).toBe('<PDF>&')
+    expect(free_link.querySelector(':scope > .link')!.getAttribute('type')).toBe('application/pdf')
+    expect(free_link.querySelector(':scope > .note')!.textContent).toBe('Accessible <copy>')
+    expect(free_link.querySelector(':scope > .license')!.textContent).toBe('CC-BY-4.0')
+    expect(free_link.textContent).not.toContain('internal')
+    expect(free_link.querySelector('pdf')).toBeNull()
+    expect(free_link.querySelector('copy')).toBeNull()
+  }
+})
+
+test('print_bibliography renders named free-material groups', () => {
+  const material = {
+    type: 'book',
+    title: 'Grouped links',
+    custom: {
+      free_material: {
+        Preview: [ 'https://example.com/preview.pdf', ],
+        sample_chapter: [ 'https://example.com/sample.pdf', ],
+        Source: [ { link: 'https://example.com/source', display_text: 'Repository', }, ],
+      },
+    },
+  } satisfies Material
+  const expected_groups = Object.entries(material.custom.free_material)
+  for (const language of bib.supported_languages) {
+    const labels = bib.get_extra_bib_label(language)
+    const free_materials = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .free_material')!
+    const rendered_groups = free_materials.querySelector(':scope > .groups')!
+    expect(rendered_groups.querySelectorAll(':scope > .label').map(group => group.textContent)).toEqual(expected_groups.map(([ name ]) => labels.free_material_groups[name] ?? name))
+    expect(rendered_groups.querySelectorAll(':scope > .material').map(group => group.querySelectorAll('.link').map(link => link.textContent))).toEqual(expected_groups.map(([ , links ]) => links.map(link => typeof link === 'string' ? link : link.display_text ?? link.link)))
+  }
+})
+
+test('bibliography labels do not silently fall back for an unsupported language', () => {
+  const material: Material = { type: 'book', title: 'Links', custom: { URL: [ 'https://example.com' ], }, }
+  expect(() => bib.print_bibliography([ material ], { language: 'fr' })).toThrow('Unsupported bibliography language: "fr"') // Modify this if French is supported in the future.
+})
+
 test('print_bibliography_segment starts at the requested global number', () => {
   const materials: Material[] = [ { type: 'book', title: 'Alpha [1]', note: 'Keep this note.' }, { type: 'book', title: 'Beta' }, ]
   const root = node_html_parser.parse(bib.print_bibliography_segment(materials, { language: 'en', start_number: 4 }))
@@ -61,11 +133,12 @@ test('cite owns semantic numbering and preserves plain-text context verbatim', (
   const rendered = bib.cite([ material ], [ { condition: () => true, prefix: '<see>& ', label: 'page', locator: '42', suffix: ' <after>&' } ])
   const root = node_html_parser.parse(rendered)
   const citation = root.querySelector('.Citation')!
+  const reference = citation.querySelector(':scope > .reference')!
   expect([ citation, ...citation.querySelectorAll('[class]'), ].map(element => element.classList.value)).toEqual([ [ 'Citation', ], [ 'prefix', ], [ 'reference', ], [ 'number', ], [ 'locator', ], [ 'suffix', ], ])
   expect(citation.querySelector(':scope > .prefix')!.textContent).toBe('<see>& ')
-  expect(citation.querySelector(':scope > .reference')!.textContent).toBe('[1, p. 42]')
-  expect(citation.querySelector(':scope > .reference > .number')!.getAttribute('href')).toBe('#reference-1')
-  expect(citation.querySelector(':scope > .reference > .locator')!.textContent).toBe(', p. 42')
+  expect(reference.textContent).toBe('[1, p. 42]')
+  expect(reference.querySelector(':scope > .number')!.getAttribute('href')).toBe('#reference-1')
+  expect(reference.querySelector(':scope > .locator')!.textContent).toBe(', p. 42')
   expect(citation.querySelector(':scope > .suffix')!.textContent).toBe(' <after>&')
   expect(citation.textContent).toBe('<see>& [1, p. 42] <after>&')
   expect(citation.querySelector('see')).toBeNull()

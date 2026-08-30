@@ -21,16 +21,20 @@ export const entries = [
       URL: 'https://link.springer.com/book/10.1007/978-0-387-79711-3',
       ISBN: '9780387797113',
       custom: {
-        Hardcover: {
-          type: 'book',
-          issued: { "date-parts": [ [ 2008, 9, 19 ] ] },
-          ISBN: '9780387797106',
-        } satisfies types_data.Material,
-        Softcover: {
-          type: 'book',
-          issued: { "date-parts": [ [ 2010, 12, 1 ] ] },
-          ISBN: '978-1-4419-2723-1',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Hardcover',
+            issued: { "date-parts": [ [ 2008, 9, 19 ] ] },
+            ISBN: '9780387797106',
+          },
+          {
+            type: 'book',
+            medium: 'Softcover',
+            issued: { "date-parts": [ [ 2010, 12, 1 ] ] },
+            ISBN: '978-1-4419-2723-1',
+          },
+        ],
         "collection-title-short": 'UTM',
       } satisfies CSL.Custom,
     },

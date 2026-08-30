@@ -21,10 +21,13 @@ export const entries = [
       URL: 'https://epubs.siam.org/doi/book/10.1137/1.9781611977165',
       ISBN: '978-1-61197-716-5',
       custom: {
-        Softcover: {
-          type: 'book',
-          ISBN: '978-1-61197-715-8',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Softcover',
+            ISBN: '978-1-61197-715-8',
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

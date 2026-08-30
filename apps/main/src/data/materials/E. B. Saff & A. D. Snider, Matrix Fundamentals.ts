@@ -22,11 +22,14 @@ export const entries = [
       URL: 'https://link.springer.com/book/10.1007/978-3-031-97222-5',
       custom: {
         subtitle: 'From Equation Solving to Signal Processing',
-        Softcover: {
-          type: 'book',
-          ISBN: '978-3-031-97221-8',
-          issued: { 'date-parts': [ [ 2025, 8, 1 ] ] },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Softcover',
+            ISBN: '978-3-031-97221-8',
+            issued: { 'date-parts': [ [ 2025, 8, 1 ] ] },
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

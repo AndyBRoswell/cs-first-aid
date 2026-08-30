@@ -194,7 +194,7 @@ export type Item = {
   page?: string | number
   'page-first'?: string | number
   part?: string | number
-  printing?: string | number
+  'printing-number'?: string | number
   supplement?: string | number
   volume?: string | number
 
@@ -232,10 +232,12 @@ export type Custom = {
   [key: string]: unknown
   tag?: string[]
   subtitle?: string
+  'printing-date'?: Date_Variable // Date of the printing identified by `Item['printing-number']`; use `Item.issued` for the edition's publication date.
   'collection-title-short'?: string | string[]
   free_material?: Data_Type.Link[] | Record<string, Data_Type.Link[]> // Freely accessible and normally downloadable resources, or pages through which they can be obtained.
   for?: unknown
   companion?: (Data_Type.ID_t | Data_Type.Material | Data_Type.Course)[]
+  variant?: Data_Type.Material[] // Other editions, media, bindings, or publication variants of the same work.
   institution?: string[]
   lecturer?: Name_Variable[]
   URL?: Data_Type.Link[] // Additional descriptive pages for the same item; `Item.URL` remains preferred.

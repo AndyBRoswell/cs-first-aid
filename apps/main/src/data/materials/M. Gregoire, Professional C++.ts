@@ -18,12 +18,15 @@ export const entries = [
       URL: 'https://www.wiley.com/en-us/Professional+C%2B%2B%2C+6th+Edition-p-9781394193172',
       accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
       custom: {
-        Ebook: {
-          type: 'book',
-          ISBN: '9781394193189',
-          URL: 'https://www.wiley.com/en-us/Professional+C%2B%2B%2C+6th+Edition-p-9781394193189',
-          accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Ebook',
+            ISBN: '9781394193189',
+            URL: 'https://www.wiley.com/en-us/Professional+C%2B%2B%2C+6th+Edition-p-9781394193189',
+            accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   } satisfies types_data.Entry,

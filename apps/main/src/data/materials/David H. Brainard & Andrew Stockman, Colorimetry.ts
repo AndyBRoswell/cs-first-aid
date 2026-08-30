@@ -18,11 +18,14 @@ export const entries = [
       URL: 'https://color2.psych.upenn.edu/brainard/papers/Brainard_Stockman_Colorimetry.pdf',
       accessed: { 'date-parts': [ [ 2026, 8, 23 ] ] },
       custom: {
-        Print: {
-          type: 'book',
-          ISBN: '9780071498913',
-          issued: { 'date-parts': [ [ 2009, 9, 22 ] ] },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            ISBN: '9780071498913',
+            issued: { 'date-parts': [ [ 2009, 9, 22 ] ] },
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

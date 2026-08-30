@@ -26,16 +26,20 @@ export const entries = [
       custom: {
         'collection-title-short': 'UTM',
         'E-ISSN': '2197-5604',
-        Hardcover: {
-          type: 'book',
-          ISBN: '978-0-387-96412-6',
-          issued: { 'date-parts': [ [ 1987, 1, 26 ] ] },
-        } satisfies types_data.Material,
-        Softcover: {
-          type: 'book',
-          issued: { 'date-parts': [ [ 2010, 12, 1 ] ] },
-          ISBN: '978-1-4419-3081-1',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Hardcover',
+            ISBN: '978-0-387-96412-6',
+            issued: { 'date-parts': [ [ 1987, 1, 26 ] ] },
+          },
+          {
+            type: 'book',
+            medium: 'Softcover',
+            issued: { 'date-parts': [ [ 2010, 12, 1 ] ] },
+            ISBN: '978-1-4419-3081-1',
+          },
+        ],
         URL: [
           {
             link: 'https://link.springer.com/book/10.1007/978-1-4757-1949-9',

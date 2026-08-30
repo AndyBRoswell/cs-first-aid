@@ -20,10 +20,13 @@ export const entries = [
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/digital-image-processing-global-edition/P200000004313/9781292223049',
       accessed: { 'date-parts': [ [ 2026, 8, 23 ] ] },
       custom: {
-        eTextbook: {
-          type: 'book',
-          ISBN: '9781292223070',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'eTextbook',
+            ISBN: '9781292223070',
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

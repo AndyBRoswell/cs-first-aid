@@ -17,10 +17,13 @@ export const entries = [
       URL: 'https://www.mheducation.co.uk/discrete-mathematics-and-its-applications-2025-release-ise-9781266191541-emea-group',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       custom: {
-        Print: {
-          type: 'book',
-          ISBN: '9781266191541',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            ISBN: '9781266191541',
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

@@ -19,10 +19,13 @@ export const entries = [
       ISBN: '9781718502710',
       custom: {
         subtitle: 'A Hands-On, Project-Based Introduction to Programming',
-        Print: {
-          type: 'book',
-          ISBN: '9781718502703',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            ISBN: '9781718502703',
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },

@@ -19,11 +19,14 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       language: 'en-GB',
       custom: {
-        Paperback: {
-          type: 'book',
-          issued: { 'date-parts': [ [ 2004, 8, 26 ] ] },
-          ISBN: '9780521543101',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Paperback',
+            issued: { 'date-parts': [ [ 2004, 8, 26 ] ] },
+            ISBN: '9780521543101',
+          },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

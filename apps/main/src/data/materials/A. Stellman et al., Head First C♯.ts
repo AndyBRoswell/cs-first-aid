@@ -18,11 +18,14 @@ export const entries = [
       URL: 'https://www.oreilly.com/library/view/head-first-c/9781098141776/',
       custom: {
         subtitle: `A Learner's Guide to Real-World Programming with C# and .NET`,
-        Print: {
-          type: 'book',
-          ISBN: '9781098141783',
-          issued: { 'date-parts': [ [ 2024, 8, 13 ] ] },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            ISBN: '9781098141783',
+            issued: { 'date-parts': [ [ 2024, 8, 13 ] ] },
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },
