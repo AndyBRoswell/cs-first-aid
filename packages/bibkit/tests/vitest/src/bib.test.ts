@@ -61,15 +61,15 @@ test('print_bibliography renders localized additional and free link lists', () =
 
   const root = node_html_parser.parse(bib.print_bibliography([material], { language: 'zh-CN' }))
 
-  const additional_links = root.querySelector('.custom > .URL')!
-  expect(additional_links.querySelector(':scope > .label')!.textContent).toBe('其它链接：')
-  const additional_link = additional_links.querySelector(':scope > .links > .Link > .link')!
+  const URL_field = root.querySelector('.custom > .URL')!
+  expect(URL_field.querySelector(':scope > .label')!.textContent).toBe('其它链接：')
+  const additional_link = URL_field.querySelector('.link')!
   expect(additional_link.textContent).toBe(material.custom!.URL![0])
   expect(additional_link.getAttribute('href')).toBe(material.custom!.URL![0])
 
   const free_materials = root.querySelector('.custom > .free_material')!
   expect(free_materials.querySelector(':scope > .label')!.textContent).toBe('免费资源：')
-  const free_link = free_materials.querySelector(':scope > .links > .Link')!
+  const free_link = free_materials.querySelector('.Link')!
   expect(free_link.classList.value).toEqual([ 'Link', ])
   expect(free_link.querySelector(':scope > .link')!.textContent).toBe('<PDF>&')
   expect(free_link.querySelector(':scope > .link')!.getAttribute('type')).toBe('application/pdf')
