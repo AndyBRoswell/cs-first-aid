@@ -3,13 +3,14 @@ import * as util from '@tests/util.ts'
 import * as src_util from '@tests/util/e2e.ts'
 import * as docs_util from '@tests/util/content/docs.ts'
 import * as course_util from '@tests/util/content/docs/Courses, Textbooks and References.ts'
+import { I_course_material } from '@/content/docs/Courses, Textbooks and References/Linear Algebra/data.ts'
 
 src_util.test('Linear Algebra I', { tag: [ '@Courses, Textbooks and References', '@Linear Algebra I', '@Linear Algebra', '@LinAlg', ] }, async ({ page }) => {
   await page.goto(`${util.test_server}/courses-textbooks-and-references/linear-algebra/i`)
 
   const main = page.getByRole('main')
 
-  await course_util.check_references(main)
+  await course_util.check_references(main, I_course_material)
 
   await course_util.check_cites(main)
 

@@ -17,4 +17,4 @@ const printed_bib = range === undefined
   : bib.print_bibliography_segment(materials, { language: Astro.locals.starlightRoute.lang, start_number: range[0] + 1 })
 ---
 
-<div class="References" data-scope_name={serialized_scope_name} data-material_segment={JSON.stringify(materials)} set:html={printed_bib}></div>
+<div class="References" data-scope_name={serialized_scope_name} set:html={printed_bib}></div>

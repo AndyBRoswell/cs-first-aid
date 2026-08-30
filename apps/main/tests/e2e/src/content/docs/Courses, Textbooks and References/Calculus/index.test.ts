@@ -3,13 +3,14 @@ import * as util from '@tests/util.ts'
 import * as src_util from '@tests/util/e2e.ts'
 import * as docs_util from '@tests/util/content/docs.ts'
 import * as course_util from '@tests/util/content/docs/Courses, Textbooks and References.ts'
+import { course_material } from '@/content/docs/Courses, Textbooks and References/Calculus/data.ts'
 
 src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calculus', '@Calc' ] }, async ({ page }) => {
   await page.goto(`${util.test_server}/courses-textbooks-and-references/calculus`)
 
   const main = page.getByRole('main')
 
-  await course_util.check_references(main)
+  await course_util.check_references(main, course_material)
 
   await course_util.check_cites(main)
 

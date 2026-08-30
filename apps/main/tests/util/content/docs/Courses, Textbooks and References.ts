@@ -21,7 +21,7 @@ export function locate_references(main: Locator, scope_name: types_data.Scope_Na
   return main.locator(`.References[data-scope_name="${CSS_escaped_scope_name}"]`)
 }
 
-export async function check_references(main: Locator) {
+export async function check_references(main: Locator, references: types_data.Scoped_References) {
   const language = await main.evaluate(element => element.ownerDocument.documentElement.lang)
   const labels = bib.get_extra_bib_label(language)
   const References_locators = await main.locator('.References').all()
@@ -29,7 +29,9 @@ export async function check_references(main: Locator) {
     // basic
     const CSL_entries = await locator.locator('.Bibliography > .entry.CSL').all()
     await expect(locator).toHaveAttribute('data-scope_name')
-    const material_segment = JSON.parse((await locator.getAttribute('data-material_segment'))!) as Array<types_data.Material>
+    const scope_name = JSON.parse((await locator.getAttribute('data-scope_name'))!) as types_data.Scope_Name
+    const material_segment = bib.get_scoped_references(references, scope_name)
+    if (!Array.isArray(material_segment)) { throw new TypeError(`The incoming materials do not form an array. Scope name: ${JSON.stringify(scope_name)}`) }
     expect(material_segment.length).toEqual(CSL_entries.length)
     // custom data
     for (const [ index, material ] of material_segment.entries()) {
