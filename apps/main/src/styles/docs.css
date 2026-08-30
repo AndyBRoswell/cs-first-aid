@@ -1,4 +1,4 @@
-@layer base, starlight, theme, components, utilities;
+@layer base, starlight, theme, components, utilities; /* Cascade layers: Priority from low to high. Unlayered styles have higher priority than layered styles. */
 
 @import '@astrojs/starlight-tailwind';
 @import 'tailwindcss/theme.css' layer(theme);
