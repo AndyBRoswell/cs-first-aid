@@ -11,9 +11,9 @@
 }
 
 pre {
-  white-space: pre-wrap; /* Preserve whitespace while allowing long code lines to wrap. */
+  white-space: pre-wrap; /* Preserve whitespace if truncated by wrapping. */
   word-wrap: break-word; /* Provide a legacy fallback for overflow wrapping: Allow truncation of words by wraps. */
-  overflow-wrap: anywhere; /* Break unspaced URLs and hashes before they overflow. */
+  overflow-wrap: anywhere; /* Break unspaced URLs and hashes before they overflow. Overrides the last line in modern browsers. */
 }
 
 math {
