@@ -12,7 +12,7 @@
 
 pre {
   white-space: pre-wrap; /* Preserve whitespace while allowing long code lines to wrap. */
-  word-wrap: break-word; /* Provide a legacy fallback for overflow wrapping. */
+  word-wrap: break-word; /* Provide a legacy fallback for overflow wrapping: Allow truncation of words by wraps. */
   overflow-wrap: anywhere; /* Break unspaced URLs and hashes before they overflow. */
 }
 
