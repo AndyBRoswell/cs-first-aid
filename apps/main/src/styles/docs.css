@@ -51,7 +51,7 @@ ol.Bibliography.csl-bib-body {
   font-weight: 600;
 }
 
-.Bibliography > .entry.CSL > .custom .links {
+.Bibliography > .entry.CSL > .custom .list {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0 0.75em;

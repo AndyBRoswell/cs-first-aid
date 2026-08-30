@@ -142,7 +142,7 @@ function render_link(link: Link): node_html_parser.HTMLElement {
 }
 
 function render_links(links: Link[]): node_html_parser.HTMLElement {
-  const list = util.create_HTML_element('ul', { class: 'links', })
+  const list = util.create_HTML_element('ul', { class: 'list', })
   for (const link of links) { list.appendChild(render_link(link)) }
   return list
 }
