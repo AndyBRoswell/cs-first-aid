@@ -59,29 +59,27 @@ test('print_bibliography renders localized additional and free link lists', () =
     } satisfies CSL.Custom,
   }
 
-  const root = node_html_parser.parse(bib.print_bibliography([material], { language: 'zh-CN' }))
+  for (const [ language, URL_label, free_material_label ] of [ [ 'zh-CN', '其它链接：', '免费资源：' ], [ 'en', 'Additional links:', 'Free materials:' ], ] as const) {
+    const root = node_html_parser.parse(bib.print_bibliography([material], { language }))
 
-  const URL_field = root.querySelector('.custom > .URL')!
-  expect(URL_field.querySelector(':scope > .label')!.textContent).toBe('其它链接：')
-  const additional_link = URL_field.querySelector('.link')!
-  expect(additional_link.textContent).toBe(material.custom!.URL![0])
-  expect(additional_link.getAttribute('href')).toBe(material.custom!.URL![0])
+    const URL_field = root.querySelector('.custom > .URL')!
+    expect(URL_field.querySelector(':scope > .label')!.textContent).toBe(URL_label)
+    const additional_link = URL_field.querySelector('.link')!
+    expect(additional_link.textContent).toBe(material.custom!.URL![0])
+    expect(additional_link.getAttribute('href')).toBe(material.custom!.URL![0])
 
-  const free_materials = root.querySelector('.custom > .free_material')!
-  expect(free_materials.querySelector(':scope > .label')!.textContent).toBe('免费资源：')
-  const free_link = free_materials.querySelector('.Link')!
-  expect(free_link.classList.value).toEqual([ 'Link', ])
-  expect(free_link.querySelector(':scope > .link')!.textContent).toBe('<PDF>&')
-  expect(free_link.querySelector(':scope > .link')!.getAttribute('type')).toBe('application/pdf')
-  expect(free_link.querySelector(':scope > .note')!.textContent).toBe('Accessible <copy>')
-  expect(free_link.querySelector(':scope > .license')!.textContent).toBe('CC-BY-4.0')
-  expect(free_link.textContent).not.toContain('internal')
-  expect(free_link.querySelector('pdf')).toBeNull()
-  expect(free_link.querySelector('copy')).toBeNull()
-
-  const english = node_html_parser.parse(bib.print_bibliography([ material ], { language: 'en-US' }))
-  expect(english.querySelector('.custom > .URL > .label')!.textContent).toBe('Additional links:')
-  expect(english.querySelector('.custom > .free_material > .label')!.textContent).toBe('Free materials:')
+    const free_materials = root.querySelector('.custom > .free_material')!
+    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(free_material_label)
+    const free_link = free_materials.querySelector('.Link')!
+    expect(free_link.classList.value).toEqual([ 'Link', ])
+    expect(free_link.querySelector(':scope > .link')!.textContent).toBe('<PDF>&')
+    expect(free_link.querySelector(':scope > .link')!.getAttribute('type')).toBe('application/pdf')
+    expect(free_link.querySelector(':scope > .note')!.textContent).toBe('Accessible <copy>')
+    expect(free_link.querySelector(':scope > .license')!.textContent).toBe('CC-BY-4.0')
+    expect(free_link.textContent).not.toContain('internal')
+    expect(free_link.querySelector('pdf')).toBeNull()
+    expect(free_link.querySelector('copy')).toBeNull()
+  }
 })
 
 test('print_bibliography renders named free-material groups as a description list', () => {
