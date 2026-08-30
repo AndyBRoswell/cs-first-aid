@@ -119,7 +119,7 @@ function * iterate_materials(references: Scoped_References): Generator<Material>
   }
 }
 
-function get_scoped_references(references: Scoped_References, scope_name: Scope_Name): Scoped_References { // A scope may be a proper prefix, so this can return an internal subtree as well as a leaf array.
+export function get_scoped_references(references: Scoped_References, scope_name: Scope_Name): Scoped_References { // A scope may be a proper prefix, so this can return an internal subtree as well as a leaf array.
   let scoped_references = references
   for (const segment of scope_name) {
     if (Array.isArray(scoped_references) || !Object.prototype.hasOwnProperty.call(scoped_references, segment)) {
