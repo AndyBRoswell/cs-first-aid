@@ -7,32 +7,32 @@
 @import './badges.css';
 
 :root {
-  --sl-content-width: 80rem;
+  --sl-content-width: 80rem; /* Raise Starlight's default maximum content width. */
 }
 
 pre {
-  white-space: pre-wrap; /* Core: Preserves whitespaces while allowing automatic line breaks */
-  word-wrap: break-word; /* Compatibility fallback: Prevents long continuous strings (e.g., URLs or hashes) from overflowing */
-  overflow-wrap: anywhere; /* Modern browsers: Ensures text wraps at any character if necessary */
+  white-space: pre-wrap; /* Preserve whitespace while allowing long code lines to wrap. */
+  word-wrap: break-word; /* Provide a legacy fallback for overflow wrapping. */
+  overflow-wrap: anywhere; /* Break unspaced URLs and hashes before they overflow. */
 }
 
 math {
-  font-family: "STIX Two Math", math, serif;
+  font-family: "STIX Two Math", math, serif; /* Prefer a dedicated math font, then math-capable fallbacks. */
 }
 
 /* Fixed by GPT-5.6 Sol Max [codex] */
 mspace[width="thinmathspace"] {
-  width: calc(1em / 6);
+  width: calc(1em / 6); /* Chromium ignores this legacy MathML name; its defined width is 3/18 em. */
 }
 
 ol.Bibliography.csl-bib-body {
-  list-style: none;
+  list-style: none; /* Citation numbers are rendered explicitly by each .number element. Default list style not used here. */
   padding-inline-start: 0;
 }
 
 .Bibliography > .entry.CSL {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
+  grid-template-columns: max-content minmax(0, 1fr); /* Keep numbers compact while entries remain wrappable. */
   column-gap: 0.5rem;
 }
 
@@ -47,46 +47,46 @@ ol.Bibliography.csl-bib-body {
 
 .Bibliography > .entry.CSL > .custom > :is(.URL, .free_material) {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
+  grid-template-columns: max-content minmax(0, 1fr); /* Align labels with independently wrapping values. */
   align-items: baseline;
   column-gap: 0.5em;
 }
 
 .Bibliography > .entry.CSL > .custom .label {
-  font-weight: normal;
+  font-weight: normal; /* Match custom labels to the surrounding bibliography text. */
 }
 
 .Bibliography > .entry.CSL > .custom .list {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0 0.75em;
+  display: inline-flex; /* Keep link groups inline with their label. */
+  flex-wrap: wrap; /* Wrap individual links instead of overflowing. */
+  gap: 0 0.75em; /* Separate links horizontally without adding row spacing. */
   list-style: none;
-  margin: 0;
+  margin: 0; /* Neutralize Starlight's prose-list spacing. */
   padding: 0;
 }
 
 .Bibliography > .entry.CSL > .custom .list > .Link {
-  margin: 0;
+  margin: 0; /* Prevent prose styles from spacing individual link items. */
 }
 
 .Bibliography > .entry.CSL > .custom .Link > .link {
-  overflow-wrap: anywhere;
+  overflow-wrap: anywhere; /* Allow long URLs to wrap within the bibliography column. */
 }
 
 .Bibliography > .entry.CSL > .custom .groups {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
+  grid-template-columns: max-content minmax(0, 1fr); /* Align group labels with flexible material descriptions. */
   align-items: baseline;
   column-gap: 0.5em;
-  margin: 0;
+  margin: 0; /* Reset the definition list's default outer spacing. */
 }
 
 .Bibliography > .entry.CSL > .custom .groups > .material {
-  margin: 0;
+  margin: 0; /* Reset the definition description's default indentation. */
 }
 
 /* Fixed by GPT-5.6 Thinking Extended [Web] */
 .sl-markdown-content math,
 .sl-markdown-content math * {
-  margin: 0;
+  margin: 0; /* Keep Starlight's prose margins out of native MathML internals. */
 }
