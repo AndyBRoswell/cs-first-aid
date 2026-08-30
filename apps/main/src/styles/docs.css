@@ -20,6 +20,11 @@ math {
   font-family: "STIX Two Math", math, serif;
 }
 
+/* Fixed by GPT-5.6 Sol Max [codex] */
+mspace[width="thinmathspace"] {
+  width: calc(1em / 6);
+}
+
 ol.Bibliography.csl-bib-body {
   list-style: none;
   padding-inline-start: 0;
