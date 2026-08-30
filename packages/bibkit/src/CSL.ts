@@ -241,6 +241,6 @@ export type Custom = {
   institution?: string[]
   lecturer?: Name_Variable[]
   URL?: Data_Type.Link[] // Additional descriptive pages for the same item; `Item.URL` remains preferred.
-  suggested_playback_speed?: (number | string)[]
+  suggested_playback_speed?: [ minimum: number, maximum: number ]
   'collection-title'?: string | string[]
 }

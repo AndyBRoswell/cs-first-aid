@@ -164,6 +164,7 @@ const open_courses = [
       custom: {
         institution: [ '清华大学' ],
         lecturer: [ { family: '丘', given: '维声' } ],
+        suggested_playback_speed: [ 1.25, 1.5 ],
       } satisfies CSL.Custom,
     } satisfies types_data.Video,
   },
