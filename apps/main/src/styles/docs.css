@@ -48,7 +48,7 @@ ol.Bibliography.csl-bib-body {
 }
 
 .Bibliography > .entry.CSL > .custom .label {
-  font-weight: 600;
+  font-weight: normal;
 }
 
 .Bibliography > .entry.CSL > .custom .list {
@@ -58,6 +58,10 @@ ol.Bibliography.csl-bib-body {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.Bibliography > .entry.CSL > .custom .list > .Link {
+  margin: 0;
 }
 
 .Bibliography > .entry.CSL > .custom .Link > .link {
