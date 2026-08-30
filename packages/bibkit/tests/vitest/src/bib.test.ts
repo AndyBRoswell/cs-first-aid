@@ -133,11 +133,12 @@ test('cite owns semantic numbering and preserves plain-text context verbatim', (
   const rendered = bib.cite([ material ], [ { condition: () => true, prefix: '<see>& ', label: 'page', locator: '42', suffix: ' <after>&' } ])
   const root = node_html_parser.parse(rendered)
   const citation = root.querySelector('.Citation')!
+  const reference = citation.querySelector(':scope > .reference')!
   expect([ citation, ...citation.querySelectorAll('[class]'), ].map(element => element.classList.value)).toEqual([ [ 'Citation', ], [ 'prefix', ], [ 'reference', ], [ 'number', ], [ 'locator', ], [ 'suffix', ], ])
   expect(citation.querySelector(':scope > .prefix')!.textContent).toBe('<see>& ')
-  expect(citation.querySelector(':scope > .reference')!.textContent).toBe('[1, p. 42]')
-  expect(citation.querySelector(':scope > .reference > .number')!.getAttribute('href')).toBe('#reference-1')
-  expect(citation.querySelector(':scope > .reference > .locator')!.textContent).toBe(', p. 42')
+  expect(reference.textContent).toBe('[1, p. 42]')
+  expect(reference.querySelector(':scope > .number')!.getAttribute('href')).toBe('#reference-1')
+  expect(reference.querySelector(':scope > .locator')!.textContent).toBe(', p. 42')
   expect(citation.querySelector(':scope > .suffix')!.textContent).toBe(' <after>&')
   expect(citation.textContent).toBe('<see>& [1, p. 42] <after>&')
   expect(citation.querySelector('see')).toBeNull()
