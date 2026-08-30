@@ -25,13 +25,13 @@ const material_modules = Object.entries(
     : import.meta.glob<Material_Module>([ './*.ts', '!./import materials.ts' ], { eager: true })
 ).sort(([ left_path ], [ right_path ]) => left_path < right_path ? -1 : left_path > right_path ? 1 : 0)
 
-logger.info('Registering materials...')
+logger.debug('Registering materials...')
 for (const [ module_path, material_module ] of material_modules) {
   if (Array.isArray(material_module.entries) === false) { throw new Error(`Material module ${module_path} does not export an \`entries\` array.`) }
   catalog.add_items(material_module.entries)
 }
 for (const [ , material_module ] of material_modules) { material_module.resolveRelations?.() }
-logger.info('Materials loaded.')
+logger.debug('Materials loaded.')
 
 const materials_output_path: string = node_path.join(process.cwd(), 'local/materials.json') // Keep the app-owned dump output under apps/main.
 await catalog.dump_locally(materials_output_path)
