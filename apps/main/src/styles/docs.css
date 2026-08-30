@@ -78,11 +78,11 @@ ol.Bibliography.csl-bib-body {
   grid-template-columns: max-content minmax(0, 1fr); /* Align group labels with flexible material descriptions. */
   align-items: baseline;
   column-gap: 0.5em;
-  margin: 0; /* Reset the definition list's default outer spacing. */
+  margin: 0; /* Reset the description list's default outer spacing. */
 }
 
 .Bibliography > .entry.CSL > .custom .groups > .material {
-  margin: 0; /* Reset the definition description's default indentation. */
+  margin: 0; /* Reset the description details' default indentation. */
 }
 
 /* Fixed by GPT-5.6 Thinking Extended [Web] */
