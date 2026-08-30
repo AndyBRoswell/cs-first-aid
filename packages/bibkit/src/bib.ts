@@ -38,6 +38,7 @@ export type Reference_Ranges = Record<Serialized_Scope_Name, Reference_Range>
 
 export type Extra_Bib_Label = Readonly<{
   lecturer: string
+  suggested_playback_speed: string
   additional_links: string
   free_materials: string
   free_material_groups: Readonly<Record<string, string>>
@@ -46,6 +47,7 @@ export type Extra_Bib_Label = Readonly<{
 const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
   'zh-CN': {
     lecturer: '主讲：',
+    suggested_playback_speed: '建议倍速：',
     additional_links: '其它链接：',
     free_materials: '免费资源：',
     free_material_groups: {
@@ -55,6 +57,7 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
   },
   en: {
     lecturer: 'Lecturer: ',
+    suggested_playback_speed: 'Suggested playback speed: ',
     additional_links: 'Additional links:',
     free_materials: 'Free materials:',
     free_material_groups: {
@@ -185,6 +188,15 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
       const lecturer = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
       p.set_content(`${labels.lecturer}${lecturer}`)
       additional.appendChild(p)
+    }
+    if (material.custom.suggested_playback_speed !== undefined) {
+      const field = util.create_HTML_element('p', { class: 'suggested_playback_speed', })
+      field.appendChild(util.create_HTML_element('span', { class: 'label', }, labels.suggested_playback_speed))
+      for (const [ index, speed ] of material.custom.suggested_playback_speed.entries()) {
+        if (index > 0) { field.appendChild(util.create_HTML_text_node('–')) }
+        field.appendChild(util.create_HTML_element('data', { class: 'speed', value: `${speed}`, }, `${speed}×`))
+      }
+      additional.appendChild(field)
     }
     if (material.custom.URL !== undefined) { additional.appendChild(render_link_field('URL', labels.additional_links, material.custom.URL)) }
     if (material.custom.free_material !== undefined) { additional.appendChild(render_free_material(material.custom.free_material, labels)) }

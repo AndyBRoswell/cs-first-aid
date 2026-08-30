@@ -42,6 +42,13 @@ export async function check_references(main: Locator) {
           const expected = `${labels.lecturer}${rendered_lecturer}`
           await expect(lecturer_element).toHaveText(expected)
         }
+        if (material.custom.suggested_playback_speed !== undefined) {
+          const suggested_playback_speed = custom_div.locator(':scope > .suggested_playback_speed')
+          await expect(suggested_playback_speed.locator(':scope > .label')).toHaveText(labels.suggested_playback_speed)
+          const speeds = suggested_playback_speed.locator(':scope > .speed')
+          await expect(speeds).toHaveText(material.custom.suggested_playback_speed.map(speed => `${speed}×`))
+          expect(await speeds.evaluateAll(elements => elements.map(element => element.getAttribute('value')))).toEqual(material.custom.suggested_playback_speed.map(speed => `${speed}`))
+        }
         if (material.custom.URL !== undefined) {
           const URL = custom_div.locator('.URL')
           await expect(URL.locator(':scope > .label')).toHaveText(labels.additional_links)

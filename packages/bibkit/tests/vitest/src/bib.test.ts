@@ -40,6 +40,19 @@ test('print_bibliography localizes the lecturer label by interface language', ()
   expect(bib.print_bibliography([ material ], { language: 'en' })).toContain('Lecturer: ')
 })
 
+test('print_bibliography renders a localized suggested playback-speed range', () => {
+  const material = { type: 'motion_picture', title: 'Lecture', custom: { suggested_playback_speed: [ 1.5, 2, ], }, } satisfies Material
+  const expected_speeds = material.custom.suggested_playback_speed.map(speed => ({ value: `${speed}`, text: `${speed}×`, }))
+  for (const language of bib.supported_languages) {
+    const labels = bib.get_extra_bib_label(language)
+    const field = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .suggested_playback_speed')!
+    expect(field.querySelector(':scope > .label')!.textContent).toBe(labels.suggested_playback_speed)
+    const speeds = field.querySelectorAll(':scope > .speed')
+    expect(speeds.map(speed => ({ tag: speed.rawTagName, value: speed.getAttribute('value'), text: speed.textContent, }))).toEqual(expected_speeds.map(speed => ({ tag: 'data', ...speed, })))
+    expect(field.textContent).toBe(`${labels.suggested_playback_speed}${expected_speeds.map(speed => speed.text).join('–')}`)
+  }
+})
+
 test('print_bibliography renders localized additional and free link lists', () => {
   const material: Material = {
     type: 'book',
