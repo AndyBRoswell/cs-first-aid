@@ -628,6 +628,16 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '数据压缩',
+      translations: {
+        en: 'Data Compression',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      },
+    },
+    {
       label: '软件安全',
       translations: {
         en: 'Software Security',
