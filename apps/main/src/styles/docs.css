@@ -53,7 +53,7 @@ ol.Bibliography.csl-bib-body {
 }
 
 .Bibliography > .entry.CSL > .custom .label {
-  font-weight: normal; /* Match custom labels to the surrounding bibliography text. */
+  font-weight: normal; /* <dt> is bold by default. Make it regular here. */
 }
 
 .Bibliography > .entry.CSL > .custom .list {
