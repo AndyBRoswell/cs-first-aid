@@ -3,9 +3,13 @@
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-foreach ($name in 'GH_PAGES_TOKEN', 'GITHUB_REPOSITORY', 'GITHUB_REF_NAME', 'GITHUB_SHA', 'RUNNER_TEMP') {
-  if ([string]::IsNullOrWhiteSpace([Environment]::GetEnvironmentVariable($name))) { throw "$name is required." }
-}
+& (Join-Path $PSScriptRoot 'Require environment variables.ps1') -Name @(
+  'GH_PAGES_TOKEN'
+  'GITHUB_REPOSITORY'
+  'GITHUB_REF_NAME'
+  'GITHUB_SHA'
+  'RUNNER_TEMP'
+)
 
 $pages = Join-Path $env:RUNNER_TEMP 'gh-pages'
 $remote = "https://x-access-token:${env:GH_PAGES_TOKEN}@github.com/${env:GITHUB_REPOSITORY}.git"

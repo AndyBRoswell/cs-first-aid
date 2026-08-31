@@ -3,8 +3,10 @@
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-if ([string]::IsNullOrWhiteSpace($env:VERCEL_TOKEN)) { throw 'VERCEL_TOKEN is required.' }
-if ([string]::IsNullOrWhiteSpace($env:GITHUB_OUTPUT)) { throw 'GITHUB_OUTPUT is required.' }
+& (Join-Path $PSScriptRoot 'Require environment variables.ps1') -Name @(
+  'VERCEL_TOKEN'
+  'GITHUB_OUTPUT'
+)
 
 $deployment_output = & pnpm dlx --allow-build=esbuild vercel@59.5.0 deploy --prebuilt --token=$env:VERCEL_TOKEN
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

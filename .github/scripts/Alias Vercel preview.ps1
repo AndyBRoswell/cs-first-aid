@@ -3,9 +3,11 @@
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-if ([string]::IsNullOrWhiteSpace($env:VERCEL_TOKEN)) { throw 'VERCEL_TOKEN is required.' }
-if ([string]::IsNullOrWhiteSpace($env:VERCEL_ORG_ID)) { throw 'VERCEL_ORG_ID is required.' }
-if ([string]::IsNullOrWhiteSpace($env:VERCEL_DEPLOYMENT_URL)) { throw 'VERCEL_DEPLOYMENT_URL is required.' }
+& (Join-Path $PSScriptRoot 'Require environment variables.ps1') -Name @(
+  'VERCEL_TOKEN'
+  'VERCEL_ORG_ID'
+  'VERCEL_DEPLOYMENT_URL'
+)
 
 $headers = @{ Authorization = "Bearer $env:VERCEL_TOKEN" }
 $deployment_host = ([uri]$env:VERCEL_DEPLOYMENT_URL).Host

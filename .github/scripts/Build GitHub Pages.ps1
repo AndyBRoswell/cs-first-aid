@@ -3,7 +3,7 @@
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-if ([string]::IsNullOrWhiteSpace($env:GITHUB_REF_NAME)) { throw 'GITHUB_REF_NAME is required.' }
+& (Join-Path $PSScriptRoot 'Require environment variables.ps1') -Name 'GITHUB_REF_NAME'
 
 & pnpm --filter '@cs-first-aid/main' exec astro build `
   --site 'https://andybroswell.github.io' `
