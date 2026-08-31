@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 & (Join-Path $PSScriptRoot 'Require environment variables.ps1') -Name @(
-  'GH_PAGES_TOKEN'
+  'GitHub_Pages_token'
   'GITHUB_REPOSITORY'
   'GITHUB_REF_NAME'
   'GITHUB_SHA'
@@ -12,7 +12,7 @@ Set-StrictMode -Version Latest
 )
 
 $pages = Join-Path $env:RUNNER_TEMP 'gh-pages'
-$remote = "https://x-access-token:${env:GH_PAGES_TOKEN}@github.com/${env:GITHUB_REPOSITORY}.git"
+$remote = "https://x-access-token:${env:GitHub_Pages_token}@github.com/${env:GITHUB_REPOSITORY}.git"
 & git clone --branch gh-pages --single-branch $remote $pages
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 

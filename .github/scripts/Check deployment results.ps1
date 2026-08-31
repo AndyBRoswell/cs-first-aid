@@ -10,28 +10,28 @@ function add-failure([string]$message) {
   $script:failed = $true
 }
 
-if ($env:PREPARE_VERCEL_OUTCOME -ne 'success') {
+if ($env:prepare_Vercel_outcome -ne 'success') {
   add-failure 'Vercel build output preparation failed.'
 }
-if ($env:GITHUB_REF_NAME -eq 'dev' -and $env:DEPLOY_VERCEL_PREVIEW_OUTCOME -ne 'success') {
+if ($env:GITHUB_REF_NAME -eq 'dev' -and $env:deploy_Vercel_preview_outcome -ne 'success') {
   add-failure 'Vercel preview deployment failed.'
 }
-if ($env:GITHUB_REF_NAME -eq 'dev' -and $env:DEPLOY_VERCEL_PREVIEW_OUTCOME -eq 'success' -and $env:ALIAS_VERCEL_PREVIEW_OUTCOME -ne 'success') {
+if ($env:GITHUB_REF_NAME -eq 'dev' -and $env:deploy_Vercel_preview_outcome -eq 'success' -and $env:alias_Vercel_preview_outcome -ne 'success') {
   add-failure 'Vercel preview alias assignment failed.'
 }
-if ($env:GITHUB_REF_NAME -eq 'main' -and $env:DEPLOY_VERCEL_PRODUCTION_OUTCOME -ne 'success') {
+if ($env:GITHUB_REF_NAME -eq 'main' -and $env:deploy_Vercel_production_outcome -ne 'success') {
   add-failure 'Vercel production deployment failed.'
 }
-if ($env:DEPLOY_CLOUDFLARE_OUTCOME -ne 'success') {
+if ($env:deploy_Cloudflare_outcome -ne 'success') {
   add-failure 'Cloudflare Pages deployment failed.'
 }
-if ($env:GITHUB_REF_NAME -eq 'main' -and $env:DEPLOY_NETLIFY_OUTCOME -ne 'success') {
+if ($env:GITHUB_REF_NAME -eq 'main' -and $env:deploy_Netlify_outcome -ne 'success') {
   add-failure 'Netlify deployment failed.'
 }
-if ($env:BUILD_GITHUB_PAGES_OUTCOME -ne 'success') {
+if ($env:build_GitHub_Pages_outcome -ne 'success') {
   add-failure 'GitHub Pages build failed.'
 }
-elseif ($env:DEPLOY_GITHUB_PAGES_OUTCOME -ne 'success') {
+elseif ($env:deploy_GitHub_Pages_outcome -ne 'success') {
   add-failure 'GitHub Pages deployment failed.'
 }
 

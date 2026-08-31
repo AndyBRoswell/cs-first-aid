@@ -79,7 +79,7 @@ jobs:
         if: github.ref_name == 'dev'
         continue-on-error: true # Record a Vercel failure without blocking the other deployment providers
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          Vercel_token: ${{ secrets.VERCEL_TOKEN }}
         run: "& './.github/scripts/Deploy Vercel preview.ps1'"
 
       - name: Alias Vercel Preview
@@ -87,8 +87,9 @@ jobs:
         if: github.ref_name == 'dev' && steps.deploy-vercel-preview.outcome == 'success'
         continue-on-error: true
         env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_DEPLOYMENT_URL: ${{ steps.deploy-vercel-preview.outputs.url }}
+          Vercel_token: ${{ secrets.VERCEL_TOKEN }}
+          Vercel_org_ID: ${{ vars.VERCEL_ORG_ID }}
+          Vercel_deployment_URL: ${{ steps.deploy-vercel-preview.outputs.url }}
         run: "& './.github/scripts/Alias Vercel preview.ps1'"
 
       - name: Deploy to Vercel Production
@@ -124,18 +125,18 @@ jobs:
         if: steps.build-github-pages.outcome == 'success'
         continue-on-error: true # Record a Pages failure without blocking the final result check
         env:
-          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+          GitHub_Pages_token: ${{ secrets.GH_PAGES_TOKEN }}
         run: "& './.github/scripts/Deploy GitHub Pages.ps1'"
 
       - name: Check deployment results
         if: always() && steps.deploy-cloudflare.outcome != 'skipped' # Run only if deployment was actually reached
         env:
-          PREPARE_VERCEL_OUTCOME: ${{ steps.prepare-vercel.outcome }}
-          DEPLOY_VERCEL_PREVIEW_OUTCOME: ${{ steps.deploy-vercel-preview.outcome }}
-          ALIAS_VERCEL_PREVIEW_OUTCOME: ${{ steps.alias-vercel-preview.outcome }}
-          DEPLOY_VERCEL_PRODUCTION_OUTCOME: ${{ steps.deploy-vercel-production.outcome }}
-          DEPLOY_CLOUDFLARE_OUTCOME: ${{ steps.deploy-cloudflare.outcome }}
-          DEPLOY_NETLIFY_OUTCOME: ${{ steps.deploy-netlify.outcome }}
-          BUILD_GITHUB_PAGES_OUTCOME: ${{ steps.build-github-pages.outcome }}
-          DEPLOY_GITHUB_PAGES_OUTCOME: ${{ steps.deploy-github-pages.outcome }}
+          prepare_Vercel_outcome: ${{ steps.prepare-vercel.outcome }}
+          deploy_Vercel_preview_outcome: ${{ steps.deploy-vercel-preview.outcome }}
+          alias_Vercel_preview_outcome: ${{ steps.alias-vercel-preview.outcome }}
+          deploy_Vercel_production_outcome: ${{ steps.deploy-vercel-production.outcome }}
+          deploy_Cloudflare_outcome: ${{ steps.deploy-cloudflare.outcome }}
+          deploy_Netlify_outcome: ${{ steps.deploy-netlify.outcome }}
+          build_GitHub_Pages_outcome: ${{ steps.build-github-pages.outcome }}
+          deploy_GitHub_Pages_outcome: ${{ steps.deploy-github-pages.outcome }}
         run: "& './.github/scripts/Check deployment results.ps1'"

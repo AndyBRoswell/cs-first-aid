@@ -4,11 +4,11 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 & (Join-Path $PSScriptRoot 'Require environment variables.ps1') -Name @(
-  'VERCEL_TOKEN'
+  'Vercel_token'
   'GITHUB_OUTPUT'
 )
 
-$deployment_output = & pnpm dlx --allow-build=esbuild vercel@59.5.0 deploy --prebuilt --token=$env:VERCEL_TOKEN
+$deployment_output = & pnpm dlx --allow-build=esbuild vercel@59.5.0 deploy --prebuilt --token=$env:Vercel_token
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 $url = [string]($deployment_output | Select-Object -Last 1)
