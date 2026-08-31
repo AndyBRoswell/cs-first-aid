@@ -40,7 +40,7 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
 & git diff --cached --quiet
 if ($LASTEXITCODE -eq 0) { exit 0 }
-if ($LASTEXITCODE -ne 1) { exit $LASTEXITCODE }
+if ($LASTEXITCODE -ne 1) { exit $LASTEXITCODE } # Exit on errors; 1 means staged changes were found, so continue to commit.
 
 & git commit -m "Deploy $env:GITHUB_REF_NAME at $env:GITHUB_SHA"
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
