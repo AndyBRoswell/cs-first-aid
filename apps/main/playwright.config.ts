@@ -1,5 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
 import node_os from 'node:os'
+import { resolve_E2E_target } from './tests/util/config/e2e-targets.ts'
+
+const E2E_target = resolve_E2E_target()
+process.env.E2E_resolved_server = E2E_target.URL // Keep absolute-URL helpers stable across Playwright worker processes.
+console.log(`[E2E] Testing ${E2E_target.name} at ${E2E_target.URL}`)
 
 /**
  * Read environment variables from file.
@@ -28,7 +33,7 @@ export default defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    baseURL: E2E_target.URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
@@ -76,9 +81,11 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  webServer: {
-    command: 'pnpm preview',
-    url: 'http://localhost:4321',
-    reuseExistingServer: !process.env.CI,
-  },
+  ...(E2E_target.start_web_server ? {
+    webServer: {
+      command: 'pnpm preview',
+      url: E2E_target.URL,
+      reuseExistingServer: !process.env.CI,
+    },
+  } : {}),
 });
