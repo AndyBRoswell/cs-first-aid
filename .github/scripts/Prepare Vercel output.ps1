@@ -3,12 +3,10 @@
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
-$workspace = if ([string]::IsNullOrWhiteSpace($env:GITHUB_WORKSPACE)) { (Get-Location).Path } else { $env:GITHUB_WORKSPACE }
-$workspace_full_path = [IO.Path]::GetFullPath($workspace)
-$output_directory = [IO.Path]::GetFullPath((Join-Path $workspace_full_path '.vercel/output'))
-$directory_separator = [IO.Path]::DirectorySeparatorChar
-if ($output_directory.StartsWith("$workspace_full_path$directory_separator", [StringComparison]::Ordinal) -eq $false) {
-  throw "Refused to replace a Vercel output directory outside $workspace_full_path."
+$workspace = [IO.Path]::GetFullPath($(if ([string]::IsNullOrWhiteSpace($env:GITHUB_WORKSPACE)) { (Get-Location).Path } else { $env:GITHUB_WORKSPACE }))
+$output_directory = [IO.Path]::GetFullPath('.vercel/output', $workspace)
+if (-not $output_directory.StartsWith($workspace + [IO.Path]::DirectorySeparatorChar, [StringComparison]::Ordinal)) {
+  throw "Refused to replace a Vercel output directory outside $workspace."
 }
 
 Remove-Item -LiteralPath $output_directory -Recurse -Force -ErrorAction SilentlyContinue
