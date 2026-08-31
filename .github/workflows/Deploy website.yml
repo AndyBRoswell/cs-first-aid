@@ -72,7 +72,7 @@ jobs:
       - name: Prepare Vercel build output
         id: prepare-vercel
         continue-on-error: true # Allow the other deployment providers to run if Vercel artifact preparation fails
-        run: ./.github/scripts/prepare-vercel-output.ps1
+        run: "& './.github/scripts/Prepare Vercel output.ps1'"
 
       - name: Deploy to Vercel Preview
         id: deploy-vercel-preview
@@ -80,7 +80,7 @@ jobs:
         continue-on-error: true # Record a Vercel failure without blocking the other deployment providers
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-        run: ./.github/scripts/deploy-vercel-preview.ps1
+        run: "& './.github/scripts/Deploy Vercel preview.ps1'"
 
       - name: Alias Vercel Preview
         id: alias-vercel-preview
@@ -89,7 +89,7 @@ jobs:
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_DEPLOYMENT_URL: ${{ steps.deploy-vercel-preview.outputs.url }}
-        run: ./.github/scripts/alias-vercel-preview.ps1
+        run: "& './.github/scripts/Alias Vercel preview.ps1'"
 
       - name: Deploy to Vercel Production
         id: deploy-vercel-production
@@ -117,7 +117,7 @@ jobs:
       - name: Build for GitHub Pages
         id: build-github-pages
         continue-on-error: true # Keep the other deployment providers independent from a Pages-specific build failure
-        run: ./.github/scripts/build-github-pages.ps1
+        run: "& './.github/scripts/Build GitHub Pages.ps1'"
 
       - name: Deploy to GitHub Pages
         id: deploy-github-pages
@@ -125,7 +125,7 @@ jobs:
         continue-on-error: true # Record a Pages failure without blocking the final result check
         env:
           GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
-        run: ./.github/scripts/deploy-github-pages.ps1
+        run: "& './.github/scripts/Deploy GitHub Pages.ps1'"
 
       - name: Check deployment results
         if: always() && steps.deploy-cloudflare.outcome != 'skipped' # Run only if deployment was actually reached
@@ -138,4 +138,4 @@ jobs:
           DEPLOY_NETLIFY_OUTCOME: ${{ steps.deploy-netlify.outcome }}
           BUILD_GITHUB_PAGES_OUTCOME: ${{ steps.build-github-pages.outcome }}
           DEPLOY_GITHUB_PAGES_OUTCOME: ${{ steps.deploy-github-pages.outcome }}
-        run: ./.github/scripts/check-deployment-results.ps1
+        run: "& './.github/scripts/Check deployment results.ps1'"
