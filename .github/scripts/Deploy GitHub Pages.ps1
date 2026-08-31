@@ -11,26 +11,23 @@ Set-StrictMode -Version Latest
   'RUNNER_TEMP'
 )
 
-$pages = Join-Path $env:RUNNER_TEMP 'gh-pages'
+$pages = [IO.Path]::GetFullPath((Join-Path $env:RUNNER_TEMP 'gh-pages'))
 $remote = "https://x-access-token:${env:GitHub_Pages_token}@github.com/${env:GITHUB_REPOSITORY}.git"
 & git clone --branch gh-pages --single-branch $remote $pages
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
-$target = Join-Path $pages $env:GITHUB_REF_NAME
-$pages_full_path = [IO.Path]::GetFullPath($pages)
-$target_full_path = [IO.Path]::GetFullPath($target)
-$directory_separator = [IO.Path]::DirectorySeparatorChar
-if ($target_full_path.StartsWith("$pages_full_path$directory_separator", [StringComparison]::Ordinal) -eq $false) {
-  throw "Refusing to replace a GitHub Pages target outside $pages_full_path."
+$target = [IO.Path]::GetFullPath($env:GITHUB_REF_NAME, $pages)
+if (-not $target.StartsWith($pages + [IO.Path]::DirectorySeparatorChar, [StringComparison]::Ordinal)) {
+  throw "Refused to replace a GitHub Pages target outside $pages."
 }
 
-Remove-Item -LiteralPath $target_full_path -Recurse -Force -ErrorAction SilentlyContinue
-New-Item -ItemType Directory -Force $target_full_path | Out-Null
-& /usr/bin/cp -a apps/main/dist-github-pages/. "$target_full_path/"
+Remove-Item -LiteralPath $target -Recurse -Force -ErrorAction SilentlyContinue
+New-Item -ItemType Directory -Force $target | Out-Null
+& /usr/bin/cp -a apps/main/dist-github-pages/. "$target/"
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-New-Item -ItemType File -Force (Join-Path $pages_full_path '.nojekyll') | Out-Null
+New-Item -ItemType File -Force (Join-Path $pages '.nojekyll') | Out-Null
 
-Set-Location -LiteralPath $pages_full_path
+Set-Location -LiteralPath $pages
 & git config user.name 'github-actions[bot]'
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 & git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
