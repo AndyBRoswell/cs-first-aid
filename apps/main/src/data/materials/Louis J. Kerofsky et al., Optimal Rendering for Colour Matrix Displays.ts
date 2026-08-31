@@ -14,9 +14,9 @@ export const entries = [
       URL: 'https://www.researchgate.net/publication/295905125',
       accessed: { 'date-parts': [ [ 2026, 8, 19 ] ] },
       custom: {
-        Figure: {
-          link: 'https://www.researchgate.net/figure/a-Seven-subpixel-configurations-traditional-1D-RGB-stripe-three-different-proposed_fig1_295905125',
-        } satisfies types_data.Link,
+        free_material: {
+          Figure: [ 'https://www.researchgate.net/figure/a-Seven-subpixel-configurations-traditional-1D-RGB-stripe-three-different-proposed_fig1_295905125' ],
+        },
       } satisfies CSL.Custom,
     },
   },

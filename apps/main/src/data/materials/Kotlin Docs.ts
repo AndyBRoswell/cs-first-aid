@@ -13,12 +13,9 @@ export const entries = [
       issued: { 'date-parts': [ [ 2026, 8, 13 ] ] },
       accessed: { 'date-parts': [ [ 2026, 8, 14 ] ] },
       custom: {
-        GitHub: {
-          type: 'webpage',
-          URL: 'https://github.com/JetBrains/kotlin/tree/master/docs',
-          issued: { 'date-parts': [ [ 2026, 8, 13 ] ] },
-          accessed: { 'date-parts': [ [ 2026, 8, 14 ] ] },
-        } satisfies types_data.Material,
+        free_material: {
+          GitHub: [ 'https://github.com/JetBrains/kotlin/tree/master/docs' ],
+        },
       } satisfies CSL.Custom,
     },
   },
