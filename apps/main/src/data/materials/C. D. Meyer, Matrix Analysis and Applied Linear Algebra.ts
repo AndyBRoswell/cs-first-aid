@@ -21,10 +21,13 @@ export const entries = [
       URL: 'https://epubs.siam.org/doi/book/10.1137/1.9781611977448',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       custom: {
-        'Print': {
-          type: 'book',
-          ISBN: '978-1-61197-743-1',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            ISBN: '978-1-61197-743-1',
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },
@@ -47,10 +50,13 @@ export const entries = [
       URL: 'https://epubs.siam.org/doi/book/10.1137/1.9781611977462',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       custom: {
-        'Print': {
-          type: 'book',
-          ISBN: '978-1-61197-745-5',
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            ISBN: '978-1-61197-745-5',
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },

@@ -19,11 +19,14 @@ export const entries = [
       URL: 'https://www.wiley.com/en-us/Linear+Algebra+and+Its+Applications%2C+2nd+Edition-p-9781118626924',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       custom: {
-        'Print': {
-          type: 'book',
-          ISBN: '978-0-471-75156-4',
-          issued: { 'date-parts': [ [ 2007, 9 ] ] },
-        } satisfies types_data.Material,
+        variant: [
+          {
+            type: 'book',
+            medium: 'Print',
+            ISBN: '978-0-471-75156-4',
+            issued: { 'date-parts': [ [ 2007, 9 ] ] },
+          },
+        ],
       },
     },
   },

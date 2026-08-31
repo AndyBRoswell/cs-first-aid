@@ -27,11 +27,14 @@ export const entries = [
       language: 'en-US',
       custom: {
         'eBook Packages': 'Springer Book Archive',
-        'eBook': {
-          type: 'book',
-          ISBN: '978-3-642-58604-0',
-          issued: { "date-parts": [ [ 2012, 12, 6 ] ] },
-        } satisfies types_data.Material
+        variant: [
+          {
+            type: 'book',
+            medium: 'eBook',
+            ISBN: '978-3-642-58604-0',
+            issued: { "date-parts": [ [ 2012, 12, 6 ] ] },
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },
@@ -61,11 +64,14 @@ export const entries = [
       language: 'en-US',
       custom: {
         'eBook Packages': 'Springer Book Archive',
-        'eBook': {
-          type: 'book',
-          ISBN: '978-3-642-57149-7',
-          issued: { "date-parts": [ [ 2012, 12, 6 ] ] },
-        } satisfies types_data.Material
+        variant: [
+          {
+            type: 'book',
+            medium: 'eBook',
+            ISBN: '978-3-642-57149-7',
+            issued: { "date-parts": [ [ 2012, 12, 6 ] ] },
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },
