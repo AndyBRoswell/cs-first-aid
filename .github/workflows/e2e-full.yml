@@ -4,18 +4,75 @@ name: Full E2E tests
 
 on:
   schedule:
-    - cron: '17 3 * * 1' # Every Monday at 03:17 UTC [to avoid peak loads]
-  workflow_dispatch: # Allow manual runs from the GitHub Actions page
+    - cron: '17 3 * * *' # Every day at 03:17 UTC [to avoid peak loads]
+  workflow_dispatch: # Allow manual runs against a selected deployed site
+    inputs:
+      target:
+        description: Site for the full browser suite
+        required: true # Keep the target explicit in the manual-run form
+        default: round-robin # Match the scheduled-run behavior
+        type: choice
+        options:
+          - round-robin
+          - 'Cloudflare Pages'
+          - Vercel
+          - Netlify
+          - 'GitHub Pages'
+
+permissions:
+  contents: read # Tests only need to read the checked-out repository
+
+concurrency:
+  group: deployed-e2e-${{ github.ref }} # Serialize runs for the same ref
+  cancel-in-progress: false # Do not discard a partially completed browser suite
 
 jobs:
+  # Keep provider availability checks cheap and independent from the browser suite.
+  smoke:
+    name: Smoke test (${{ matrix.name }})
+    runs-on: ubuntu-slim # curl does not need a full runner image
+    timeout-minutes: 3 # Bound outages and retry delays
+    env:
+      curl_args: >- # Expanded unquoted below into separate curl arguments.
+        --fail
+        --silent
+        --show-error
+        --location
+        --retry 2
+        --retry-all-errors
+        --max-time 30
+        --output /dev/null
+
+    strategy:
+      fail-fast: false # Report every provider even if one is unavailable
+      matrix:
+        include:
+          - name: Cloudflare Pages
+            url: https://cs-first-aid.pages.dev
+          - name: Vercel
+            url: https://cs-first-aid.vercel.app
+          - name: Netlify
+            url: https://cs-first-aid.netlify.app
+          - name: GitHub Pages
+            url: https://andybroswell.github.io/cs-first-aid/main
+
+    steps:
+      - name: Check home page
+        run: curl $curl_args '${{ matrix.url }}/'
+
+      - name: Check a routed page
+        run: curl $curl_args '${{ matrix.url }}/courses-textbooks-and-references'
+
+  # Test only 1 deployed site by default using 3 supported browsers instead of all the deployed sites.
   e2e:
-    runs-on: ubuntu-latest
+    name: Full browser suite
+    runs-on: ubuntu-latest # Playwright needs the full browser-capable image
+    env:
+      E2E_target: ${{ inputs.target || 'round-robin' }} # Scheduled runs rotate sites by UTC day
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v7
-        with:
-          fetch-depth: 0 # Keep complete Git history for Starlight lastUpdated
+        uses: actions/checkout@v7 # Required for tests and Playwright configuration
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v6
@@ -27,13 +84,10 @@ jobs:
           cache: pnpm # Cache the pnpm package store
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile # Reproduce the committed dependency graph
 
       - name: Install Playwright browsers
         run: pnpm --filter @cs-first-aid/main exec playwright install --with-deps # Install Chromium, Firefox, and WebKit
 
-      - name: Build
-        run: pnpm build # Build the site before starting Playwright preview
-
       - name: Run full E2E test suite
-        run: pnpm --filter @cs-first-aid/main test:e2e # Run all browser projects defined in playwright.config.ts
+        run: pnpm --filter @cs-first-aid/main test:e2e # Test the deployed target in Chromium, Firefox, and WebKit
