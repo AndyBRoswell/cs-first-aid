@@ -16,7 +16,7 @@ export const entries = [
       "original-date": { "date-parts": [ [ 1971 ] ] },
       "original-publisher": "Addison-Wesley",
       'collection-title': 'Undergraduate Texts in Mathematics',
-      ISSN: '0172-6056',
+      ISSN: '2197-5604',
       DOI: '10.1007/978-1-4757-1949-9',
       ISBN: '978-1-4757-1949-9',
       'number-of-pages': 'IX, 285',
@@ -25,25 +25,20 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
       custom: {
         'collection-title-short': 'UTM',
-        'E-ISSN': '2197-5604',
         variant: [
           {
             type: 'book',
             medium: 'Hardcover',
+            ISSN: '0172-6056',
             ISBN: '978-0-387-96412-6',
             issued: { 'date-parts': [ [ 1987, 1, 26 ] ] },
           },
           {
             type: 'book',
             medium: 'Softcover',
+            ISSN: '0172-6056',
             issued: { 'date-parts': [ [ 2010, 12, 1 ] ] },
             ISBN: '978-1-4419-3081-1',
-          },
-        ],
-        URL: [
-          {
-            link: 'https://link.springer.com/book/10.1007/978-1-4757-1949-9',
-            display_text: 'SpringerLink',
           },
         ],
       } satisfies CSL.Custom,
