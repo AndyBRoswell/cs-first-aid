@@ -86,6 +86,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile # Reproduce the committed dependency graph
 
+      - name: Build E2E test dependencies
+        run: pnpm --filter @cs-first-aid/bibkit build
+
       - name: Install Playwright browsers
         run: pnpm --filter @cs-first-aid/main exec playwright install --with-deps # Install Chromium, Firefox, and WebKit
 
