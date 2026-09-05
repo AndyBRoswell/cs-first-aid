@@ -194,7 +194,7 @@ export type Item = {
   page?: string | number
   'page-first'?: string | number
   part?: string | number
-  'printing-number'?: string | number
+  'printing-number'?: string | number // Claude Sonnet 4.6 Max Extended wrote it as `printing` before. Fixed by GPT-5.6 Sol Max [codex].
   supplement?: string | number
   volume?: string | number
 
