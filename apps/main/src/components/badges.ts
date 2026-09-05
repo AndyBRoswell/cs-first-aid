@@ -1,4 +1,5 @@
 // Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+// Starlight doesn't support multiple badges in the sidebar and it seems there are no features recently planned for this. See https://github.com/withastro/starlight/discussions/3295
 
 import { get_stage, type Localized_Release as Localized_Release_Stages } from './release_stages.ts'
 
