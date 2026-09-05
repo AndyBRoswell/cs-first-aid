@@ -220,7 +220,8 @@ export const Tools_and_Ideas = {
       translations: {
         en: 'Do Not Underestimate the Rate of Information Diffusion',
       },
-      slug: 'tools-and-ideas/do-not-underestimate-the-rate-of-information-diffusion',
+      // slug: 'tools-and-ideas/do-not-underestimate-the-rate-of-information-diffusion',
+      slug: '',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
