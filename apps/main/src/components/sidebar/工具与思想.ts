@@ -213,7 +213,17 @@ export const Tools_and_Ideas = {
       slug: '',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      }
+      },
+    },
+    {
+      label: '不要低估信息扩散的速率',
+      translations: {
+        en: 'Do Not Underestimate the Rate of Information Diffusion',
+      },
+      slug: 'tools-and-ideas/do-not-underestimate-the-rate-of-information-diffusion',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      },
     },
     {
       label: '熟练使用生产力工具',
