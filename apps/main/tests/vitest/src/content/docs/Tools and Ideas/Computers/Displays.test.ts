@@ -20,11 +20,11 @@ test('visual acuity data stays numeric until rendering', () => {
   })
   expect(table.querySelector('caption')!.text).toBe('Visual acuity grades')
   expect(table.querySelectorAll('thead th').map(cell => cell.text)).toEqual([ 'LogMAR acuity', '5-mark', ]) // 5-mark immediately follows LogMAR.
-  expect(table.querySelectorAll('tbody td').map(cell => cell.text)).toEqual([ '0.00', '5.0', ])
+  expect(table.querySelectorAll('tbody td').map(cell => cell.text)).toEqual([ '0.00', '5.00', ])
   table.querySelector('tbody tr')!.remove() // Returned tables remain mutable after rendering.
   expect(table.querySelectorAll('tbody tr')).toHaveLength(0)
   const five_mark_table = Displays.visual_acuity_table_data_to_HTML_table(data, { include_column: column => column === '5-mark', })
-  expect(five_mark_table.querySelectorAll('tbody td').map(cell => cell.text)).toEqual([ '5.0', '4.7', ]) // Rendering retains one decimal place.
+  expect(five_mark_table.querySelectorAll('tbody td').map(cell => cell.text)).toEqual([ '5.00', '4.70', ]) // Rendering retains 2 decimal places.
 })
 
 test('distance and acuity data exposes rows and columns independently', () => {
