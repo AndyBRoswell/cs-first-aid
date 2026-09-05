@@ -146,7 +146,7 @@ export const Tools_and_Ideas = {
       },
     },
     {
-      label: 'EDU 邮箱',
+      label: '教育邮箱',
       translations: {
         en: 'Edu Mailboxes',
       },
