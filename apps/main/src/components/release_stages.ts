@@ -31,8 +31,8 @@ export function to_HTML_attr(release_stages: Localized_Release): string {
       const parsed = parse_version(release)
       const comparison = compare(release, project_version)
       const is_stable = parsed.semver.prerelease.length === 0
-      if (is_stable && comparison > 0) { throw new RangeError(`Stable release cannot be newer than project version ${JSON.stringify(project_version)}.`) } // Stable records when the page became stable.
-      if (!is_stable && comparison < 0) { throw new RangeError(`Prerelease cannot be older than project version ${JSON.stringify(project_version)}.`) } // Prerelease targets the current or a future release.
+      if (is_stable && comparison > 0) { throw new RangeError(`Stable release cannot be newer than project version ${JSON.stringify(project_version)}.`) }
+      if (!is_stable && comparison < 0) { throw new RangeError(`Prerelease cannot be older than project version ${JSON.stringify(project_version)}.`) } // The core version of a prerelease version indicates the estimated core version when the corresponding page becomes stable.
     } catch (cause) {
       throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: ${JSON.stringify(release)}`, { cause })
     }
