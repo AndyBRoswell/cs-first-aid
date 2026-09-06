@@ -163,7 +163,18 @@ import * as util from '@cs-first-aid/util'
     除了亮度以外，还有一个量叫明度。两者的区别是：前者是客观的，后者是主观的。明度会受到背景、对比度、视觉适应及其余观察条件的影响。
   </section>
   <section>
-    ## 例子
+    ## 例
+    设某投影机的光通量为 $F$，银幕面积为 $A$，且银幕为理想漫反射面。
+
+    银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律，设观看位置与法线的夹角为 $\theta$，则光出射度与银幕亮度的关系是
+    $$
+    M=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi]
+    $$
+    又
+    $$
+    "d"\Omega=sin\theta "d"\theta "d"\phi
+    $$
+    联立得
 
   </section>
 </section>
