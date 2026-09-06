@@ -26,16 +26,12 @@ export type Localized_Release = {
 
 export function to_HTML_attr(release_stages: Localized_Release): string {
   for (const [ language, release ] of Object.entries(release_stages)) {
-    try {
-      if (unversioned_releases.includes(release.toLowerCase())) { continue }
-      const parsed = parse_version(release)
-      const comparison = compare(release, project_version)
-      const is_stable = parsed.semver.prerelease.length === 0
-      if (is_stable && comparison > 0) { throw new RangeError(`Stable release cannot be newer than project version ${JSON.stringify(project_version)}.`) }
-      if (!is_stable && comparison < 0) { throw new RangeError(`Prerelease cannot be older than project version ${JSON.stringify(project_version)}.`) } // The core version of a prerelease version indicates the estimated core version when the corresponding page becomes stable.
-    } catch (cause) {
-      throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: ${JSON.stringify(release)}`, { cause })
-    }
+    if (unversioned_releases.includes(release.toLowerCase())) { continue }
+    const parsed = parse_version(release)
+    const comparison = compare(release, project_version)
+    const is_stable = parsed.semver.prerelease.length === 0
+    if (is_stable && comparison > 0) { throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: Stable release ${JSON.stringify(release)} cannot be newer than project version ${JSON.stringify(project_version)}.`) }
+    if (!is_stable && comparison < 0) { throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: Prerelease ${JSON.stringify(release)} cannot be older than project version ${JSON.stringify(project_version)}.`) } // The core version of a prerelease version indicates the estimated core version when the corresponding page becomes stable.
   }
   return JSON.stringify(release_stages)
 }
