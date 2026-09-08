@@ -203,11 +203,11 @@ import * as util from '@cs-first-aid/util'
   </section>
   <section>
     ## 例
-    设某投影机的光通量为 $F$，银幕面积为 $A$，且银幕为理想漫反射面。
+    设某投影机标称的光通量为 $F$ 全部落在面积为 $A$ 的银幕上，其反射率为 $R$，且为理想漫反射面。
 
-    银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律，亮度与观看角度无关。设观看位置与法线的夹角为 $\theta$，则光出射度与银幕亮度的关系是
+    银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律，其亮度与观看角度无关。设观看位置与法线的夹角为 $\theta$，则光出射度与银幕亮度的关系是
     $$
-    M=F/A=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
+    M=RF/A=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
     $$
     又
     $$
@@ -215,11 +215,11 @@ import * as util from '@cs-first-aid/util'
     $$
     联立得
     $$
-    F/A = \int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta "d"\theta"d"\phi = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) cos \theta sin \theta "d"\theta = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) sin \theta "d"sin \theta = L\int_0^2\pi  (1/2 "d"\phi) = \pi L
+    RF/A = \int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta "d"\theta"d"\phi = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) cos \theta sin \theta "d"\theta = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) sin \theta "d"sin \theta = L\int_0^2\pi  (1/2 "d"\phi) = \pi L
     $$
     即
     $$
-    L=F/\pi A
+    L=RF/\pi A
     $$
 
   </section>
