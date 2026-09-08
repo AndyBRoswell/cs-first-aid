@@ -162,11 +162,11 @@ import * as util from '@cs-first-aid/util'
   </section>
   <section>
     ## 光通量、光出射度与照度
-    光源可以同时发出多种波长的光。设一个光源的辐射通量的光谱分布为 $\Phi(\lambda)="d"\Phi/"d"\lambda$。则其光通量可由下式得出：
+    光源可以同时发出多种波长的光。设一个光源的辐射通量的光谱分布为 $\Phi_"e" (\lambda)="d"\Phi_"e" /"d"\lambda$。则其光通量可由下式得出：
     $$
-    F=K_"m"\int_0^+\infty  \Phi(\lambda)V(\lambda)"d"\lambda
+    \Phi_"v"=K_"m"\int_0^+\infty  \Phi_"e" (\lambda)V(\lambda)"d"\lambda
     $$
-    明视觉最大光视效能
+    下标 $"v"$ 代表[光度学](https://zh.wikipedia.org/zh-cn/%E5%85%89%E5%BA%A6%E5%AD%A6)的物理量。明视觉最大光视效能
     $$
     K_"m"=K_"cd"  V(555\thinsp"nm")/V(f_"cd")
     $$
@@ -180,23 +180,23 @@ import * as util from '@cs-first-aid/util'
 
     单位面积发出或反射的光通量称为光出射度
     $$
-    M="d"F/"d"A
+    M_"v"="d"\Phi_"v"/"d"A
     $$
     单位面积接收的光通量称为照度
     $$
-    E="d"F/"d"A
+    E_"v"="d"\Phi_"v"/"d"A
     $$
     光出射度与照度的常用单位为 lx，$1\thinsp "lx"=1\thinsp "lm/m"^2$。
   </section>
   <section>
     ## 亮度与明度
-    设一个光源的辐亮度的光谱分布为 $L(\lambda)="d"L/"d"\lambda$，则亮度（辉度）
+    设一个光源的辐亮度的光谱分布为 $L_"e"(\lambda)="d"L_"e"/"d"\lambda$，则亮度（辉度）
     $$
-    L=\int_0^+\infty  L(\lambda)K_"cd" V(\lambda)"d"\lambda=K_"cd"\int_0^+\infty  L(\lambda)V(\lambda)"d"\lambda
+    L_"v"=\int_0^+\infty  L_"e" (\lambda)K_"cd" V(\lambda)"d"\lambda=K_"cd"\int_0^+\infty  L_"e" (\lambda)V(\lambda)"d"\lambda
     $$
     亮度的常用单位为 nit，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
 
-    在各向同性，且没有吸收、散射或界面的各向同性均匀介质或真空中，辐亮度 $L(\lambda)$ 沿同一稳恒光源发出的光线保持不变，这时亮度也保持不变。这符合我们的日常经验：在晴天的户外，光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙的亮度并没有明显变化。
+    在各向同性，且没有吸收、散射或界面的各向同性均匀介质或真空中，辐亮度 $L_"e" (\lambda)$ 沿同一稳恒光源发出的光线保持不变，这时亮度也保持不变。这符合我们的日常经验：在晴天的户外，光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙的亮度并没有明显变化。
 
     除了亮度以外，还有一个量叫明度。两者的区别是：前者是客观的，后者是主观的。明度会受到背景、对比度、视觉适应及其余观察条件的影响。
 
