@@ -122,11 +122,10 @@ import * as util from '@cs-first-aid/util'
 
     实验表明，在不受强引力场影响的条件下、在均匀、各向同性，且没有明显障碍或界面的介质中，电磁波可以近似看作沿直线传播。其传播方向可以由射线表示。当电磁波为可见光时，这样的射线称为光线。
 
-    电磁波不一定以垂直方向穿过曲面。设经过面积元 $"d"A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
+    电磁波不一定以垂直方向穿过曲面。设经过面积元 $"d"A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。实验证明，计算特定方向的辐照度时，辐照面积需要取垂直于该方向的投影面积。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
     $$
     E(P;\omega)=E(P)/cos\theta
     $$
-    可见，$E(P;\omega)$ 垂直于入射面的分量 $E(P;\omega)cos\theta$ 贡献了 $E(P)$，而平行于入射面的分量 $E(P;\omega)sin\theta$ 对 $E(P)$ 没有贡献。也可以理解为：面积元 $"d"A$ 在方向 $\omega$ 的投影面积 $"d"A cos\theta$ 垂直接收的辐照度贡献了 $E(P)$。
 
     在曲面上选一点 $P$ 和观测方向 $\omega$，将辐射功率分别对投影面积和立体角求导，就得到点 $P$ 在方向 $\omega$ 上的辐亮度
     $$
