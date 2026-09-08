@@ -123,15 +123,15 @@ import * as util from '@cs-first-aid/util'
 
     实验表明，在不受强引力场影响的条件下、在没有吸收、散射或界面的各向同性均匀介质或真空中（下称“理想条件”），电磁波可以近似看作沿直线传播。其传播方向可以由射线表示。当电磁波为可见光时，这样的射线称为光线。
 
-    电磁波不一定以垂直方向穿过曲面。设经过面积元 $"d"A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。大量事实证明，计算特定方向的辐照度时，辐照面积需要取垂直于该方向的投影面积。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
+    电磁波不一定以垂直方向穿过曲面。设经过面积元 $"d"A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
     $$
-    "d"E_"e" (P,\omega)="d"E_"e" (P)/cos\theta
+    "d"E_("e"\perp) (P,\omega)="d"E_"e" (P,\omega)/cos\theta
     $$
-    换言之，面积元 $"d"A$ 在方向 $\omega$ 本应获得辐照度 $"d"E_"e" (P,\omega)$，这需要令该面积元 $"d"A$ 垂直于方向 $\omega$ 即 $\theta=0$ 时才能获得；如果它与辐射的入射方向 $\omega$ 不垂直，即 $\theta>0$，它在这个方向 $\omega$ 就只获得了更少的辐照度 $"d"E_"e" (P)$。典例：在日常生活中，太阳光可视为平行光；只有阳光垂直入射到太阳能板，这块太阳能板才能获得最大的辐照度，才可以达到最多的发电量。
+    换言之，面积元 $"d"A$ 在方向 $\omega$ 本应获得辐照度 $"d"E_("e"\perp) (P,\omega)$，这需要令该面积元 $"d"A$ 垂直于方向 $\omega$ 即 $\theta=0$ 时才能获得；如果它与辐射的入射方向 $\omega$ 不垂直，即 $\theta>0$，它在这个方向 $\omega$ 就只获得了更少的辐照度 $"d"E_"e" (P,\omega) = "d"E_("e"\perp) (P,\omega)cos\theta$。典例：在日常生活中，太阳光可视为平行光；只有阳光垂直入射到太阳能板，这块太阳能板才能获得最大的辐照度，才可以达到最多的发电量。
 
-    在曲面上选一点 $P$ 和观测方向 $\omega$，将辐射功率分别对投影面积和立体角求导，就得到点 $P$ 在方向 $\omega$ 上的辐亮度
+    在曲面上选一点 $P$ 和观测方向 $\omega$，点 $P$ 在方向 $\omega$ 上的辐亮度
     $$
-    L_"e" (P,\omega) = "d"E_"e" (P,\omega)/"d"\omega = "d"^2 \Phi_"e" (P,\omega)/("d"A cos\theta"d"\omega)
+    L_"e" (P,\omega) = "d"E_("e"\perp) (P,\omega)/"d"\omega = "d"^2 \Phi_"e" (P,\omega)/("d"A cos\theta"d"\omega)
     $$
     $"d"^2 \Phi_"e" (P,\omega)$ 代表包含点 $P$ 的面积元 $"d"A$ 沿方向 $\omega$ 附近的一小块立体角 $"d"\omega$ 传输的辐射功率。
 
