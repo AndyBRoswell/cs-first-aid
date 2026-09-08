@@ -158,15 +158,25 @@ import * as util from '@cs-first-aid/util'
   <section>
     ## 光度函数
     大量实验证明，人眼对不同波长的光的敏感度不同。而在光照充足与光照不足的环境下，人眼对同一波长的光的敏感度也不同。在明视觉条件下，记（相对）光度函数（又名视见函数）为 $V(\lambda)\in [0, 1]$，其中 $\lambda$ 为光的波长。
-    实验测得：在光照充足时，当波长 $\lambda$ 约为 555 nm，$V(\lambda)$ 取得峰值。在可见光的波长范围以外，取 $V(\lambda)=0$。
+    实验测得：在光照充足时，当波长 $\lambda$ 约为 $555\thinsp"nm"$，$V(\lambda)$ 取得峰值。在可见光的波长范围以外，取 $V(\lambda)=0$。
   </section>
   <section>
     ## 光通量、光出射度与照度
     光源可以同时发出多种波长的光。设一个光源的辐射通量的光谱分布为 $\Phi(\lambda)="d"\Phi/"d"\lambda$。则其光通量可由下式得出：
     $$
-    F=K_"cd"\int_0^+\infty  \Phi(\lambda)V(\lambda)"d"\lambda
+    F=K_"m"\int_0^+\infty  \Phi(\lambda)V(\lambda)"d"\lambda
     $$
-    最大发光效能 $K_"cd"$ 起初由实验测定，而后于 2019 年被精确定义为 683 lm/W。这意味着：将 1 W 的功率全部转化为光能，则产生的光通量最大为 683 lm。
+    明视觉最大光视效能
+    $$
+    K_"m"=K_"cd"  V(555\thinsp"nm")/V(c_"air"/\lambda_"cd")
+    $$
+    $$
+    c_"air"=\lambda_"cd" f_"cd"
+    $$
+    2019 年 $K_"cd"$ 被精确定义为 $683\thinsp"lm/W"$。这意味着：将 1 W 的功率全部转化为 $540\thinsp"THz"$ 的可见光，产生的光通量最大为 683 lm。$c_"air"$ 为空气中的光速，非常接近于真空光速 $c=299792458\thinsp"m/s"$。又规定$f_"cd"=540\thinsp"THz"$。解得
+    $$
+    \lambda_"cd"\approx 555.017069\thinsp"nm"\thinsp,\emsp K_"m"\approx 683.002\thinsp"lm/W"
+    $$
 
     单位面积发出或反射的光通量称为光出射度
     $$
