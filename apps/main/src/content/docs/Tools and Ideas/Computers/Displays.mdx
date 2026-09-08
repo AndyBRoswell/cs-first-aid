@@ -169,7 +169,7 @@ import * as util from '@cs-first-aid/util'
     $$
     下标 $"v"$ 代表[光度学](https://zh.wikipedia.org/zh-cn/%E5%85%89%E5%BA%A6%E5%AD%A6)的物理量。明视觉最大光视效能
     $$
-    K_"m"=K_"cd"  V(555\thinsp"nm")/V(f_"cd")
+    K_"m"=K_"cd"  V(555\thinsp"nm")/V(\lambda_"cd")
     $$
     $$
     c_"air"=\lambda_"cd" f_"cd"
@@ -193,7 +193,7 @@ import * as util from '@cs-first-aid/util'
     ## 亮度与明度
     设一个光源的辐亮度的光谱分布为 $L_"e"(\lambda)="d"L_"e"/"d"\lambda$，则亮度（辉度）
     $$
-    L_"v"=\int_0^+\infty  L_"e" (\lambda)K_"m" V(\lambda)"d"\lambda=K_"cd"\int_0^+\infty  L_"e" (\lambda)V(\lambda)"d"\lambda
+    L_"v"=\int_0^+\infty  L_"e" (\lambda)K_"m" V(\lambda)"d"\lambda=K_"m"\int_0^+\infty  L_"e" (\lambda)V(\lambda)"d"\lambda
     $$
     亮度的常用单位为 $"nit"$，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
 
