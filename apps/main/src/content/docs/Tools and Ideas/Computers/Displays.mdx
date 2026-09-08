@@ -112,7 +112,7 @@ import * as util from '@cs-first-aid/util'
     E_"e" (P)="d"\Phi_"e" (P)/"d"A
     $$
     $$
-    M_"e" (P)="d"\Phi_"e" (p)/"d"A
+    M_"e" (P)="d"\Phi_"e" (P)/"d"A
     $$
 
     当波源为**点源**时，在某个方向 $\omega$（由单位向量表示）的辐强度（辐射功率的角密度）
@@ -144,10 +144,10 @@ import * as util from '@cs-first-aid/util'
     $$
     联立得
     $$
-    "d"\Phi_"e"=L_"e" (P_1,\omega)"d"A_1 cos \theta_1 "d"\omega_1=L_"e" (P_1,\omega) "d"A_1 cos \theta_1 "d"A_2 cos \theta_2/r^2
+    "d"^2 \Phi_"e"=L_"e" (P_1,\omega)"d"A_1 cos \theta_1 "d"\omega_1=L_"e" (P_1,\omega) "d"A_1 cos \theta_1 "d"A_2 cos \theta_2/r^2
     $$
     $$
-    "d"\Phi_"e"=L_"e" (P_2,\omega)"d"A_2 cos \theta_2 "d"\omega_2=L_"e" (P_2,\omega) "d"A_2 cos \theta_2 "d"A_1 cos \theta_1/r^2
+    "d"^2 \Phi_"e"=L_"e" (P_2,\omega)"d"A_2 cos \theta_2 "d"\omega_2=L_"e" (P_2,\omega) "d"A_2 cos \theta_2 "d"A_1 cos \theta_1/r^2
     $$
     于是
     $$
@@ -192,7 +192,7 @@ import * as util from '@cs-first-aid/util'
     ## 亮度与明度
     设一个光源的辐亮度的光谱分布为 $L_"e"(\lambda)="d"L_"e"/"d"\lambda$，则亮度（辉度）
     $$
-    L_"v"=\int_0^+\infty  L_"e" (\lambda)K_"cd" V(\lambda)"d"\lambda=K_"cd"\int_0^+\infty  L_"e" (\lambda)V(\lambda)"d"\lambda
+    L_"v"=\int_0^+\infty  L_"e" (\lambda)K_"m" V(\lambda)"d"\lambda=K_"cd"\int_0^+\infty  L_"e" (\lambda)V(\lambda)"d"\lambda
     $$
     亮度的常用单位为 $"nit"$，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
 
