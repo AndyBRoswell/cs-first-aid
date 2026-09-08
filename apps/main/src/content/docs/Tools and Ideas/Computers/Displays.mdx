@@ -103,20 +103,21 @@ import * as util from '@cs-first-aid/util'
     ## 辐射度量学的预备知识
     设一个电磁波波源累计发出的能量为 $Q$，$t$ 代表时间点。该波源自时间点 $t$ 起很小的一段时间 $"\Delta"t$ 内共计发出了能量 $"\Delta"Q$，则该源在此特定时刻 $t$ 的（瞬时）辐射通量（辐射功率）
     $$
-    \Phi=\Phi(t)=lim_("\Delta" t\rightarrow 0) ("\Delta"Q/"\Delta"t)="d"Q/"d"t
+    \Phi_"e"=\Phi_"e" (t)=lim_("\Delta" t\rightarrow 0) ("\Delta"Q/"\Delta"t)="d"Q/"d"t
     $$
+    下标 $"e"$ 代表[辐射度量学](https://zh.wikipedia.org/wiki/%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E5%AD%A6)的物理量。
 
-    在 $t$ 时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$\Phi(P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E(P)$、辐射出射度 $M(P)$），则
+    在 $t$ 时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$\Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$），则
     $$
-    E(P)="d"\Phi(P)/"d"A
+    E_"e" (P)="d"\Phi_"e" (P)/"d"A
     $$
     $$
-    M(P)="d"\Phi(p)/"d"A
+    M_"e" (P)="d"\Phi_"e" (p)/"d"A
     $$
 
     当波源为**点源**时，在某个方向 $\omega$（由单位向量表示）的辐强度（辐射功率的角密度）
     $$
-    I(\omega)="d"\Phi(\omega)/"d"\omega
+    I_"e" (\omega)="d"\Phi_"e" (\omega)/"d"\omega
     $$
     其中 $"d"\omega$ 为围绕该方向的微分立体角。
 
@@ -124,18 +125,18 @@ import * as util from '@cs-first-aid/util'
 
     电磁波不一定以垂直方向穿过曲面。设经过面积元 $"d"A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。实验证明，计算特定方向的辐照度时，辐照面积需要取垂直于该方向的投影面积。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
     $$
-    E(P;\omega)=E(P)/cos\theta
+    E_"e" (P;\omega)=E_"e" (P)/cos\theta
     $$
 
     在曲面上选一点 $P$ 和观测方向 $\omega$，将辐射功率分别对投影面积和立体角求导，就得到点 $P$ 在方向 $\omega$ 上的辐亮度
     $$
-    L(P,\omega)="d"^2 \Phi(P,\omega)/("d"A cos\theta"d"\omega)
+    L_"e" (P,\omega)="d"^2 \Phi_"e" (P,\omega)/("d"A cos\theta"d"\omega)
     $$
-    $\Phi(P,\omega)$ 代表包含点 $P$ 的面积元 $"d"A$ 沿方向 $\omega$ 附近的一小块立体角 $"d"\omega$ 传输的辐射功率。
+    $\Phi_"e" (P,\omega)$ 代表包含点 $P$ 的面积元 $"d"A$ 沿方向 $\omega$ 附近的一小块立体角 $"d"\omega$ 传输的辐射功率。
 
-    在真空中，设一束光沿着一条方向为 $\omega$ 的光线（可以推广到其它电磁波）穿过了点 $P_1$、$P_2$，它们分别位于面积元 $"d"A_1$、$"d"A_2$ 上，且距离为 $r$。由能量守恒定律，这束光传输给 $"d"A_1$ 和 $"d"A_2$ 的功率相同，记为 $"d"^2 \Phi$。设 $\theta_1$、$\theta_2$ 分别为面积元 $"d"A_1$、$"d"A_2$ 在点 $P_1$、$P_2$ 处的法线与光线的夹角。于是
+    在真空中，设一束光沿着一条方向为 $\omega$ 的光线（可以推广到其它电磁波）穿过了点 $P_1$、$P_2$，它们分别位于面积元 $"d"A_1$、$"d"A_2$ 上，且这两个面积元的距离为 $r$。由能量守恒定律，这束光传输给 $"d"A_1$ 和 $"d"A_2$ 的功率相同，记为 $"d"^2 \Phi_"e"$。设 $\theta_1$、$\theta_2$ 分别为面积元 $"d"A_1$、$"d"A_2$ 在点 $P_1$、$P_2$ 处的法线与光线的夹角。于是
     $$
-    L(P_1,\omega)="d"^2 \Phi/("d"A_1 cos \theta_1 "d"\omega_1) \thinsp,\emsp L(P_2,-\omega)="d"^2 \Phi/("d"A_2 cos \theta_2 "d"\omega_2)
+    L_"e"(P_1,\omega)="d"^2 \Phi_"e"/("d"A_1 cos \theta_1 "d"\omega_1) \thinsp,\emsp L(P_2,-\omega)="d"^2 \Phi_"e"/("d"A_2 cos \theta_2 "d"\omega_2)
     $$
     其中 $"d"\omega_1 $ 可借由 $A_2$、$\theta_2$ 确定，$"d"\omega_2$ 可借由 $A_1$、$\theta_1$ 确定，即
     $$
@@ -143,14 +144,14 @@ import * as util from '@cs-first-aid/util'
     $$
     联立得
     $$
-    "d"\Phi=L(P_1,\omega)"d"A_1 cos \theta_1 "d"\omega_1=L(P_1,\omega) "d"A_1 cos \theta_1 "d"A_2 cos \theta_2/r^2
+    "d"\Phi_"e"=L_"e" (P_1,\omega)"d"A_1 cos \theta_1 "d"\omega_1=L_"e" (P_1,\omega) "d"A_1 cos \theta_1 "d"A_2 cos \theta_2/r^2
     $$
     $$
-    "d"\Phi=L(P_2,\omega)"d"A_2 cos \theta_2 "d"\omega_2=L(P_2,\omega) "d"A_2 cos \theta_2 "d"A_1 cos \theta_1/r^2
+    "d"\Phi_"e"=L_"e" (P_2,\omega)"d"A_2 cos \theta_2 "d"\omega_2=L_"e" (P_2,\omega) "d"A_2 cos \theta_2 "d"A_1 cos \theta_1/r^2
     $$
     于是
     $$
-    L(P_1,\omega)=L(P_2,\omega)
+    L_"e" (P_1,\omega)=L_"e" (P_2,\omega)
     $$
     这告诉我们：于真空观测同一稳恒光源时，辐亮度沿光线不变。
   </section>
@@ -191,7 +192,7 @@ import * as util from '@cs-first-aid/util'
     ## 亮度与明度
     设一个光源的辐亮度的光谱分布为 $L(\lambda)="d"L/"d"\lambda$，则亮度（辉度）
     $$
-    Y=\int_0^+\infty  L(\lambda)K_"cd" V(\lambda)"d"\lambda=K_"cd"\int_0^+\infty  L(\lambda)V(\lambda)"d"\lambda
+    L=\int_0^+\infty  L(\lambda)K_"cd" V(\lambda)"d"\lambda=K_"cd"\int_0^+\infty  L(\lambda)V(\lambda)"d"\lambda
     $$
     亮度的常用单位为 nit，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
 
