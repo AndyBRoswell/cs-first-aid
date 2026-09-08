@@ -4,6 +4,7 @@ import type { StarlightUserConfig } from '@astrojs/starlight/types'
 import { Preface } from '@/components/sidebar/前言.ts'
 import { Tools_and_Ideas } from '@/components/sidebar/工具与思想.ts'
 import { Courses_Textbooks_and_References } from '@/components/sidebar/课程、教科书与参考资料.ts'
+import { Derivations } from '@/components/sidebar/推导.ts'
 import { Critical_Goals_and_Time_Windows } from '@/components/sidebar/关键目标与时间窗口.ts'
 import { Future_Trends } from '@/components/sidebar/未来趋势.ts'
 import { FAQ } from '@/components/sidebar/常见问题.ts'
@@ -28,6 +29,7 @@ export const sidebar = [
   Preface,
   Tools_and_Ideas,
   Courses_Textbooks_and_References,
+  Derivations,
   Critical_Goals_and_Time_Windows,
   Future_Trends,
   FAQ,
