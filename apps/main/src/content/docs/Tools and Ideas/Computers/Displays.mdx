@@ -120,7 +120,40 @@ import * as util from '@cs-first-aid/util'
     $$
     其中 $"d"\omega$ 为围绕该方向的微分立体角。
 
+    实验表明，在不受强引力场影响的条件下、在均匀、各向同性，且没有明显障碍或界面的介质中，电磁波可以近似看作沿直线传播。其传播方向可以由射线表示。当电磁波为可见光时，这样的射线称为光线。
 
+    电磁波不一定以垂直方向穿过曲面。设经过面积元 $"d"A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
+    $$
+    E(P;\omega)=E(P)/cos\theta
+    $$
+    可见，$E(P;\omega)$ 垂直于入射面的分量 $E(P;\omega)cos\theta$ 贡献了 $E(P)$，而平行于入射面的分量 $E(P;\omega)sin\theta$ 对 $E(P)$ 没有贡献。也可以理解为：面积元 $"d"A$ 在方向 $\omega$ 的投影面积 $"d"A cos\theta$ 垂直接收的辐照度贡献了 $E(P)$。
+
+    在曲面上选一点 $P$ 和观测方向 $\omega$，将辐射功率分别对投影面积和立体角求导，就得到点 $P$ 在方向 $\omega$ 上的辐亮度
+    $$
+    L(P,\omega)="d"^2 \Phi(P,\omega)/("d"A cos\theta"d"\omega)
+    $$
+    $\Phi(P,\omega)$ 代表包含点 $P$ 的面积元 $"d"A$ 沿方向 $\omega$ 附近的一小块立体角 $"d"\omega$ 传输的辐射功率。
+
+    在真空中，设一束光沿着一条方向为 $\omega$ 的光线（可以推广到其它电磁波）穿过了点 $P_1$、$P_2$，它们分别位于面积元 $"d"A_1$、$"d"A_2$ 上，且距离为 $r$。由能量守恒定律，这束光传输给 $"d"A_1$ 和 $"d"A_2$ 的功率相同，记为 $"d"^2 \Phi$。设 $\theta_1$、$\theta_2$ 分别为面积元 $"d"A_1$、$"d"A_2$ 在点 $P_1$、$P_2$ 处的法线与光线的夹角。于是
+    $$
+    L(P_1,\omega)="d"^2 \Phi/("d"A_1 cos \theta_1 "d"\omega_1) \thinsp,\emsp L(P_2,-\omega)="d"^2 \Phi/("d"A_2 cos \theta_2 "d"\omega_2)
+    $$
+    其中 $"d"\omega_1 $ 可借由 $A_2$、$\theta_2$ 确定，$"d"\omega_2$ 可借由 $A_1$、$\theta_1$ 确定，即
+    $$
+    "d"\omega_1="d"A_2 cos \theta_2/r^2 \thinsp,\emsp "d"\omega_2="d"A_1 cos \theta_1/r^2
+    $$
+    联立得
+    $$
+    "d"\Phi=L(P_1,\omega)"d"A_1 cos \theta_1 "d"\omega_1=L(P_1,\omega) "d"A_1 cos \theta_1 "d"A_2 cos \theta_2/r^2
+    $$
+    $$
+    "d"\Phi=L(P_2,-\omega)"d"A_2 cos \theta_2 "d"\omega_2=L(P_2,-\omega) "d"A_2 cos \theta_2 "d"A_1 cos \theta_1/r^2
+    $$
+    于是
+    $$
+    L(P_1,\omega)=L(P_2,-\omega)
+    $$
+    这告诉我们：于真空观测同一稳恒光源时，辐亮度沿光线不变。
   </section>
   <section>
     ## 光度函数
@@ -135,8 +168,6 @@ import * as util from '@cs-first-aid/util'
     $$
     最大发光效能 $K_"cd"$ 起初由实验测定，而后于 2019 年被精确定义为 683 lm/W。这意味着：将 1 W 的功率全部转化为光能，则产生的光通量最大为 683 lm。
 
-    用于测量光通量的仪器主要有积分球和光度计。
-
     单位面积发出或反射的光通量称为光出射度
     $$
     M="d"F/"d"A
@@ -149,23 +180,25 @@ import * as util from '@cs-first-aid/util'
   </section>
   <section>
     ## 亮度与明度
-    设辐照度为与波长有关的函数 $L(\lambda)$，则亮度（辉度）
+    设辐亮度为与波长有关的函数 $L(\lambda)$，则亮度（辉度）
     $$
     Y=\int_0^+\infty  L(\lambda)K_"cd" V(\lambda)"d"\lambda=K_"cd"\int_0^+\infty  L(\lambda)V(\lambda)"d"\lambda
     $$
     亮度的常用单位为 nit，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
 
-    辐亮度 $L(\lambda)$ 在与同一光源的距离变化时保持不变，因而亮度也随距离保持不变。这符合我们的日常经验：光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙看起来都是一样亮的。
+    辐亮度 $L(\lambda)$ 在与同一稳恒光源的距离变化时保持不变，这时亮度也随距离保持不变。这符合我们的日常经验：在晴天的户外，光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙的亮度并没有明显变化。
 
     除了亮度以外，还有一个量叫明度。两者的区别是：前者是客观的，后者是主观的。明度会受到背景、对比度、视觉适应及其余观察条件的影响。
+
+    测量照度的仪器称为照度计；测量亮度的仪器称为亮度计；用于测量光通量的仪器主要有积分球和分布光度计。在实践中，测量照度远比测量亮度方便；而测量亮度远比测量光通量方便，后者通常在专业的实验室完成测定。鉴于照度的测量成本相对低得多，主流智能手机基本上都配备了照度传感器。
   </section>
   <section>
     ## 例
     设某投影机的光通量为 $F$，银幕面积为 $A$，且银幕为理想漫反射面。
 
-    银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律，设观看位置与法线的夹角为 $\theta$，则光出射度与银幕亮度的关系是
+    银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律，亮度与观看角度无关。设观看位置与法线的夹角为 $\theta$，则光出射度与银幕亮度的关系是
     $$
-    M=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi]
+    M=F/A=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
     $$
     又
     $$
@@ -173,8 +206,13 @@ import * as util from '@cs-first-aid/util'
     $$
     联立得
     $$
-    M=\int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta "d"\theta"d"\phi
+    F/A = \int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta "d"\theta"d"\phi = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) cos \theta sin \theta "d"\theta = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) sin \theta "d"sin \theta = L\int_0^2\pi  (1/2 "d"\phi) = \pi L
     $$
+    即
+    $$
+    L=F/\pi A
+    $$
+
   </section>
 </section>
 <section>
