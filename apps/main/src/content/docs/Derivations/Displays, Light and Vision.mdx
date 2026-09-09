@@ -81,7 +81,7 @@ import References from '@/components/References.astro'
     $$
     下标 $"e"$ 代表[辐射度量学](https://zh.wikipedia.org/wiki/%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E5%AD%A6)（Radiometry）的物理量<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'section', locator: '2' } ] }/>。
 
-    在特定时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$"d"\Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$，即：辐射功率的面密度），则<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.1' } ] }/>
+    在特定时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$"d"\Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$，即：辐射功率的面密度），则<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.1' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'radiant exitance') }, } ] }/>
     $$
     E_"e" (P)="d"\Phi_"e" (P)/"d"A
     $$
@@ -157,11 +157,11 @@ import References from '@/components/References.astro'
 
     实验测得：在明视觉和暗视觉的条件下，当波长 $\lambda$ 为 $\lambda_"m"=555\thinsp"nm"$、$\lambda_m^\prime  = 507\thinsp"nm"$ 时，$V(\lambda)$、$V^\prime  (\lambda)$ 分别取得峰值。解得 $K_"m"\approx 683.002\thinsp"lm/W"$<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'equation', locator: '4' } ] }/>，$K_"m"^\prime  \approx 1700.13\thinsp"lm/W"$<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'equation', locator: '6' } ] }/>。
 
-    单位面积发出或反射的光通量称为光出射度
+    单位面积发出或反射的光通量称为光出射度<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'luminous exitance') }, } ] }/>
     $$
     M_"v"="d"\Phi_"v"/"d"A
     $$
-    单位面积接收的光通量称为照度
+    单位面积接收的光通量称为照度<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'illuminance') }, } ] }/>
     $$
     E_"v"="d"\Phi_"v"/"d"A
     $$
@@ -183,9 +183,9 @@ import References from '@/components/References.astro'
   </section>
   <section>
     ## 例：银幕亮度
-    设某影厅采用一块面积为 $A$ 的银幕，且为理想漫反射面（Lambert 辐射体）；投影和银幕的工程处理都尽量让银幕上各个位置的亮度均匀。
+    设某影厅采用一块面积为 $A$ 的银幕，且为理想漫反射面（Lambert 表面）<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'Lambertian surface') }, } ] }/>；投影和银幕的工程处理都尽量让银幕上各个位置的亮度均匀。
 
-    银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律，其亮度 $L$ 与观看角度无关。设观看位置与法线的夹角为 $\theta$，则该银幕总的光出射度与银幕亮度的关系是
+    银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, `Lambert's cosine law`) }, } ] }/>，其亮度 $L$ 与观看角度无关。设观看位置与法线的夹角为 $\theta$，则该银幕总的光出射度与银幕亮度的关系是
     $$
     M=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
     $$
