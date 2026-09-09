@@ -43,173 +43,37 @@ import * as util from '@cs-first-aid/util'
   $$
   \rho=\sqrt(w^2+h^2)/d
   $$
-</section>
-<section>
-  # 高分屏是有用的
-  对于一台 17.3" 笔记本，其显示比例多为 16:9。设其分辨率为 1080p，则其 PPI 为
-  $$
-  \rho=(\sqrt(w^2+h^2)/d)|_(w=1920" ""px",h=1080\thinsp"px",d=17.3\thinsp"in")\approx 127.34\thinsp"PPI"
-  $$
-  类似地，当分辨率分别为 1440p 及 2160p 时，相应的 PPI 分别为 169.78 与 254.67。
+  <section>
+    ## 高分屏是有用的
+    对于一台 17.3" 笔记本，其显示比例多为 16:9。设其分辨率为 1080p，则其 PPI 为
+    $$
+    \rho=(\sqrt(w^2+h^2)/d)|_(w=1920" ""px",h=1080\thinsp"px",d=17.3\thinsp"in")\approx 127.34\thinsp"PPI"
+    $$
+    类似地，当分辨率分别为 1440p 及 2160p 时，相应的 PPI 分别为 169.78 与 254.67。
 
-  在观看距离为 $d=75\thinsp"cm"$ 时，设视力为 1.0，则估算出所需的 PPI 为
-  $$
-  \rho=(l/(2d tan(\pi/21600V)))|_(l=2.54\thinsp"cm", d=75\thinsp"cm", V=1.0)\approx 116.43\thinsp"PPI"
-  $$
-  然而，很多人的近视力（裸眼或矫正后）是优于 1.0 的。分别取视力为 1.25、1.6、2.0，可估算对应的 PPI 分别为 145.53、186.28、232.85。
+    在观看距离为 $d=75\thinsp"cm"$ 时，设视力为 1.0，则按[此公式](/derivations/displays-light-and-vision#根据视力估计所需的像素密度)估算出所需的 PPI 为
+    $$
+    \rho=(l/(2d tan(\pi/21600V)))|_(l=2.54\thinsp"cm", d=75\thinsp"cm", V=1.0)\approx 116.43\thinsp"PPI"
+    $$
+    然而，很多人的近视力（裸眼或矫正后）是优于 1.0 的。分别取视力为 1.25、1.6、2.0，可估算对应的 PPI 分别为 145.53、186.28、232.85。
 
-  可见，显示器 / 显示屏分辨率**大于** 1080p 乃至达到 2160p，**在许多场景中都是有用的**。
-  - 尤其是观看静态画面（网页、文档、代码、图片等）时，一块高分辨率的屏幕在细节上的提升更容易被注意到，比如即使字号很小也足够清晰的文字。这就使得我们能够：
-    - 在同一屏幕同时阅读 2 页双列排版的论文的 PDF。
-    - 在同一屏幕同时阅读多份源代码文件。
+    可见，显示器 / 显示屏分辨率**大于** 1080p 乃至达到 2160p，**在许多场景中都是有用的**。
+    - 尤其是观看静态画面（网页、文档、代码、图片等）时，一块高分辨率的屏幕在细节上的提升更容易被注意到，比如即使字号很小也足够清晰的文字。这就使得我们能够：
+      - 在同一屏幕同时阅读 2 页双列排版的论文的 PDF。
+      - 在同一屏幕同时阅读多份源代码文件。
+  </section>
 </section>
 <section>
   # 亮度
-  <section>
-    ## 辐射度量学的预备知识
-    设一个电磁波波源累计发出的能量为 $Q$，$t$ 代表时间点。该波源在时间 $"\Delta"t$ 内共计发出了能量 $"\Delta"Q$，则该源在特定时刻的（瞬时）辐射通量（辐射功率）
-    $$
-    \Phi_"e"=\Phi_"e" (t)=lim_("\Delta" t\rightarrow 0) ("\Delta"Q/"\Delta"t)="d"Q/"d"t
-    $$
-    下标 $"e"$ 代表[辐射度量学](https://zh.wikipedia.org/wiki/%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E5%AD%A6)的物理量。
-
-    在特定时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$"d"\Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$，即：辐射功率的面密度），则
-    $$
-    E_"e" (P)="d"\Phi_"e" (P)/"d"A
-    $$
-    $$
-    M_"e" (P)="d"\Phi_"e" (P)/"d"A
-    $$
-
-    当波源为**点源**时，在某个方向 $\omega$（由单位向量表示）的辐强度（辐射功率的角密度）
-    $$
-    I_"e" (\omega)="d"\Phi_"e" (\omega)/"d"\omega
-    $$
-    其中 $"d"\omega$ 为围绕该方向的微分立体角。
-
-    实验表明，在不受强引力场影响的条件下、在没有吸收、散射或界面的各向同性均匀介质或真空中（下称“理想条件”），电磁波可以近似看作沿直线传播。其传播方向可以由射线表示。当电磁波为可见光时，这样的射线称为光线。
-
-    电磁波不一定以垂直方向穿过曲面。设经过面积元 $"d"A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
-    $$
-    "d"E_("e"\perp) (P,\omega)="d"E_"e" (P,\omega)/cos\theta
-    $$
-    换言之，面积元 $"d"A$ 在方向 $\omega$ 本应获得辐照度 $"d"E_("e"\perp) (P,\omega)$，这需要令该面积元 $"d"A$ 垂直于方向 $\omega$ 即 $\theta=0$ 时才能获得；如果它与辐射的入射方向 $\omega$ 不垂直，即 $\theta>0$，它在这个方向 $\omega$ 就只获得了更少的辐照度 $"d"E_"e" (P,\omega) = "d"E_("e"\perp) (P,\omega)cos\theta$。典例：在日常生活中，太阳光可视为平行光；只有阳光垂直入射到太阳能板，这块太阳能板才能获得最大的辐照度，才可以达到最多的发电量。
-
-    在曲面上选一点 $P$ 和观测方向 $\omega$，点 $P$ 在方向 $\omega$ 上的辐亮度
-    $$
-    L_"e" (P,\omega) = "d"E_("e"\perp) (P,\omega)/"d"\omega = "d"^2 \Phi_"e" (P,\omega)/("d"A cos\theta"d"\omega)
-    $$
-    $"d"^2 \Phi_"e" (P,\omega)$ 代表包含点 $P$ 的面积元 $"d"A$ 沿方向 $\omega$ 附近的一小块立体角 $"d"\omega$ 传输的辐射功率。
-
-    理想条件下，设点 $P_1$、$P_2$ 分别位于面积元 $"d"A_1$、$"d"A_2$ 上，且这两个面积元的距离为 $r$。考虑一束沿 $P_1$ 指向 $P_2$ 的方向（记为方向 $\omega$）传播的稳恒电磁辐射。由能量守恒定律，这束辐射传输给 $"d"A_1$ 和 $"d"A_2$ 的功率相同，记为 $"d"^2 \Phi_"e"$。设锐角 $\theta_1$、$\theta_2$ 分别为面积元 $"d"A_1$、$"d"A_2$ 在点 $P_1$、$P_2$ 处的法向量与传播方向 $\omega$ 的夹角。于是
-    $$
-    L_"e" (P_1,\omega)="d"^2 \Phi_"e"/("d"A_1 cos \theta_1 "d"\omega_1) \thinsp,\emsp L_"e" (P_2,\omega)="d"^2 \Phi_"e"/("d"A_2 cos \theta_2 "d"\omega_2)
-    $$
-    其中 $"d"\omega_1 $ 可借由 $"d"A_2$、$\theta_2$ 确定；$"d"\omega_2$ 可借由 $"d"A_1$、$\theta_1$ 确定，即
-    $$
-    "d"\omega_1="d"A_2 cos \theta_2/r^2 \thinsp,\emsp "d"\omega_2="d"A_1 cos \theta_1/r^2
-    $$
-    联立得
-    $$
-    "d"^2 \Phi_"e"=L_"e" (P_1,\omega)"d"A_1 cos \theta_1 "d"\omega_1=L_"e" (P_1,\omega) "d"A_1 cos \theta_1 "d"A_2 cos \theta_2/r^2
-    $$
-    $$
-    "d"^2 \Phi_"e"=L_"e" (P_2,\omega)"d"A_2 cos \theta_2 "d"\omega_2=L_"e" (P_2,\omega) "d"A_2 cos \theta_2 "d"A_1 cos \theta_1/r^2
-    $$
-    于是
-    $$
-    L_"e" (P_1,\omega)=L_"e" (P_2,\omega)
-    $$
-    这告诉我们：在理想条件下观测同一稳恒电磁波源，辐亮度沿电磁辐射的传输方向不变。
-  </section>
-  <section>
-    ## 光度函数
-    大量实验证明，人眼对不同波长的光的敏感度不同。而在光照充足与光照不足的环境下，人眼对同一波长的光的敏感度也不同。在明视觉条件下，记（相对）光度函数（又名视见函数）为 $V(\lambda)\in [0, 1]$，其中 $\lambda$ 为光的波长。
-    实验测得：在光照充足时，当波长 $\lambda$ 约为 $555\thinsp"nm"$，$V(\lambda)$ 取得峰值。在可见光的波长范围以外，取 $V(\lambda)=0$。
-  </section>
-  <section>
-    ## 光通量、光出射度与照度
-    光源可以同时发出多种波长的光。设一个光源的辐射通量的光谱分布为 $\Phi_("e",\lambda) (\lambda)="d"\Phi_"e" /"d"\lambda$。则其光通量可由下式得出：
-    $$
-    \Phi_"v" = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m" V(\lambda)"d"\lambda = K_"m"\int_0^+\infty  \Phi_("e",\lambda) (\lambda)V(\lambda)"d"\lambda
-    $$
-    下标 $"v"$ 代表[光度学](https://zh.wikipedia.org/zh-cn/%E5%85%89%E5%BA%A6%E5%AD%A6)的物理量。明视觉最大光视效能
-    $$
-    K_"m"=K_"cd"  V(555\thinsp"nm")/V(\lambda_"a")
-    $$
-    2019 年 $K_"cd"$ 被精确定义为 $683\thinsp"lm/W"$。这意味着：将 1 W 的功率全部转化为 $f_"cd"=540\thinsp"THz"$ 的可见光，产生的光通量为 683 lm。又规定 $f_"cd"=540\thinsp"THz"$、频率为 $f_"cd"$ 的单色辐射在标准空气中的波长 $\lambda_"a"=555.017\thinsp"nm"$。解得 $K_"m"\approx 683.002\thinsp"lm/W"$。
-
-    单位面积发出或反射的光通量称为光出射度
-    $$
-    M_"v"="d"\Phi_"v"/"d"A
-    $$
-    单位面积接收的光通量称为照度
-    $$
-    E_"v"="d"\Phi_"v"/"d"A
-    $$
-    照度的常用单位为 $"lx"$，$1\thinsp "lx"=1\thinsp "lm/m"^2$。对于光出射度，对应的单位则直接使用 $"lm/m"^2$。
-  </section>
-  <section>
-    ## 亮度与视亮度
-    设一个光源的辐亮度的光谱分布为 $L_("e",\lambda) (\lambda)="d"L_"e"/"d"\lambda$，则亮度（辉度）
-    $$
-    L_"v" = \int_0^+\infty  L_("e",\lambda) (\lambda)K_"m" V(\lambda)"d"\lambda = K_"m"\int_0^+\infty  L_("e",\lambda) (\lambda)V(\lambda)"d"\lambda
-    $$
-    亮度的常用单位为 $"nit"$，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
-
-    理想条件下，光谱辐亮度 $L_("e",\lambda) (\lambda)$ 沿同一稳恒光源发出的光线保持不变，这时亮度也保持不变。这符合我们的日常经验：在晴天的户外，光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙的亮度并没有明显变化。
-
-    除了亮度以外，还有一个量叫视亮度。两者的区别是：亮度是可以物理测量的光度量；视亮度则会受到背景、对比度、视觉适应及其余观察条件的影响。
-
-    测量照度的仪器称为照度计；测量亮度的仪器称为亮度计；用于测量光通量的仪器主要有积分球和分布光度计。在实践中，测量照度远比测量亮度方便；而测量亮度远比测量光通量方便，后者通常在专业的实验室完成测定。鉴于照度的测量成本相对低得多，主流智能手机基本上都配备了照度传感器。
-  </section>
-  <section>
-    ## 例：银幕亮度
-    设某影厅采用一块面积为 $A$ 的银幕，且为理想漫反射面（Lambert 辐射体）；投影和银幕的工程处理都尽量让银幕上各个位置的亮度均匀。
-
-    银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律，其亮度 $L$ 与观看角度无关。设观看位置与法线的夹角为 $\theta$，则该银幕总的光出射度与银幕亮度的关系是
-    $$
-    M=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
-    $$
-    又
-    $$
-    "d"\Omega=sin\theta "d"\theta "d"\phi
-    $$
-    联立得
-    $$
-    M = \int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta "d"\theta"d"\phi = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) cos \theta sin \theta "d"\theta = L\int_0^2\pi  "d"\phi  \int_0^1 sin \theta "d"sin \theta = L\int_0^2\pi  (1/2 "d"\phi) = \pi L
-    $$
-    即
-    $$
-    L=M/\pi
-    $$
-    投影机的标称光通量 $F$ 需要满足
-    $$
-    F>=MA
-    $$
-    当然，在现实中，银幕无法将所有入射光全部反射，即不能保证银幕上的每一点都总是满足光反射率 $\rho=1$、光吸收率 $\alpha=0$、光透射率 $\tau=0$；投影机实际输出的光通量也不一定总能达到标称光通量，所以一般都有 $F>MA$。
-
-    另外，现代影厅常使用高增益银幕，使接近正对银幕的观众看到比银幕为 Lambert 体更高的亮度，但代价是较大观察角下的亮度降低。一般地，银幕的增益系数不仅依赖观察方向，还依赖光的入射方向。这些涉及到较复杂的数学方法，本文不予讨论。
-  </section>
+  （TBC）
 </section>
 <section>
-  # 色彩模型与色域
-  <section>
-    ## 预备知识
-    （TBC）
-  </section>
-  <section>
-    ## 颜色匹配实验
-    （TBC）
-  </section>
-  <section>
-    ## 色彩模型
-    （TBC）
-  </section>
-  <section>
-    ## 色域
-    （TBC）
-  </section>
+  # 色域
+  （TBC）
+</section>
+<section>
+  # 预算有限，我要优先关注哪些参数？
+  （TBC）
 </section>
 <section>
   # 附表

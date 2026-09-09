@@ -194,7 +194,6 @@ export function create_diagonal_resolution_PPI_table(resolutions: readonly (read
 }
 
 export const references = [
-  ...catalog.filter(m => m.type === 'paper-conference' && util.ieq(m.title!, 'Optimal Rendering for Colour Matrix Displays'), { count: 1 }),
   catalog.get('SMPTE ST 419:2005'),
   catalog.get('DCSS'),
   catalog.get('ISO 216:2007'),
