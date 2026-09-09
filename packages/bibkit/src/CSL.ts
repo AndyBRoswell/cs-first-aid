@@ -204,9 +204,14 @@ export type Item = {
 
 // https://docs.citationstyles.org/en/stable/specification.html#locators
 export type Locator_Type =
+  | 'appendix'
+  | 'article-locator'
   | 'book'
+  | 'canon'
   | 'chapter'
   | 'column'
+  | 'elocation'
+  | 'equation'
   | 'figure'
   | 'folio'
   | 'issue'
@@ -216,8 +221,13 @@ export type Locator_Type =
   | 'page'
   | 'paragraph'
   | 'part'
+  | 'rule'
   | 'section'
-  | 'sub verbo'
+  | 'sub-verbo'
+  | 'supplement'
+  | 'table'
+  | 'timestamp'
+  | 'title'
   | 'verse'
   | 'volume'
 

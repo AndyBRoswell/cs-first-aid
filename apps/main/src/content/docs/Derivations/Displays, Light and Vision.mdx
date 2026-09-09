@@ -75,13 +75,13 @@ import References from '@/components/References.astro'
   # 亮度
   <section>
     ## 辐射度量学的预备知识
-    设一个电磁波波源累计发出的能量为 $Q$，$t$ 代表时间点。该波源在时间 $"\Delta"t$ 内共计发出了能量 $"\Delta"Q$，则该源在特定时刻的（瞬时）辐射通量（辐射功率）
+    设一个电磁波波源累计发出的能量为 $Q$，$t$ 代表时间点。该波源在时间 $"\Delta"t$ 内共计发出了能量 $"\Delta"Q$，则该源在特定时刻的（瞬时）辐射通量（辐射功率）<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'section', locator: '4.1.1' } ] }/>
     $$
     \Phi_"e"=\Phi_"e" (t)=lim_("\Delta" t\rightarrow 0) ("\Delta"Q/"\Delta"t)="d"Q/"d"t
     $$
     下标 $"e"$ 代表[辐射度量学](https://zh.wikipedia.org/wiki/%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E5%AD%A6)的物理量。
 
-    在特定时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$"d"\Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$，即：辐射功率的面密度），则
+    在特定时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$"d"\Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$，即：辐射功率的面密度），则<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.1' } ] }/>
     $$
     E_"e" (P)="d"\Phi_"e" (P)/"d"A
     $$
