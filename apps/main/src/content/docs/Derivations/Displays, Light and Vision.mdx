@@ -9,38 +9,67 @@ import * as util from '@cs-first-aid/util'
 import References from '@/components/References.astro'
 
 <section>
-  # 根据视力估计所需的像素密度
-  记最小角分辨率（MAR）为 $\theta$ $"arcmin"$，此时对应的视力（UCVA / BCVA）为 $V$（小数记法），则
+  # 视力
+  记眼的最小角分辨率（MAR）为 $\theta$ $"arcmin"$，此时对应的视力（UCVA / BCVA）为 $V$（小数记法），则<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'section', locator: '3.3.1' } ] }/>
   $$
   \theta=1/V
   $$
-  设观看距离为 $d$，像素间距（pixel pitch）为 $p$，我们有
+  可见，当 $V=1.0$ 时，最小角分辨率为 1 角分（弧分）；若 $V=2.0$，则最小角分辨率为 0.5 角分。
+
+  最小角分辨率由视标（optotype）测定。对于 E 视标，每一笔画的宽度代表角分辨率<Cite references={M} cite_items={[ { condition: 'GB/T 11533-2011', label: 'section', locator: '2.2' } ] }/>；对于 C 视标（Landolt 环），开口宽度或圆环宽度代表角分辨率。<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'figure', locator: 1 } ] }/>
+
+  除了小数记法，还有别的记法来表示视力。例如，中国内地还采用五分记录（5-mark record）<Cite references={M} cite_items={[ { condition: 'GB/T 11533-2011', label: 'section', locator: '2.14' } ] }/>。其计算公式为
   $$
-  tan(1/2 \theta)=(1/2 p)/d
+  L=5-lg \theta
   $$
-  即
+  例如，4.0 代表 MAR 为 10 角分，5.0 代表 MAR 为 1 角分，5.3 代表 MAR 为 0.5 角分。
+  英语区还采用 Snellen 分数<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'section', locator: '3.3.2' } ] }/>。其计算公式为
   $$
-  p=2d tan(1/2 \theta)
+  V_"Sn"=D_"t"/D_"n"
   $$
+  $V_"Sn"$、$D_"t"$ 和 $D_"n"$ 分别代表（不约分的）Snellen 分数、测试距离和标准距离。$V_"Sn"$ 的值和小数记法的值相等。比如，20/40 或 6/12 代表 2 角分，意即：受试者能在 20 英尺或 6 米远辨认的视标，正常人在 40 英尺或 12 米远就能辨认；20/8 或 6/2.4 代表 0.4 角分，意思是：受试者能在 20 英尺或 6 米远辨认的视标，正常人需要走近至 8 英尺或 2.4 米才能辨认。
+
+  科研文献中，最常用的记法之一是 LogMAR。计算公式为<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'section', locator: '3.3.3' } ] }/>
+  $$
+  V=10^"-LogMAR"
+  $$
+  小数记法的 0.2、1.0、1.5 分别对应 LogMAR 记法的 +0.70、0、-0.20。
+</section>
+<section>
+  # 像素密度
   设单位长度为 $l$，则像素密度
   $$
   \rho=l/p
   $$
-  又有
-  $$
-  1\thinsp"arcmin"=1/180 \pi\times 1/60
-  $$
-  消去 $\theta$，得
-  $$
-  \rho=l/(2d tan(\pi/21600V))
-  $$
-  可见，所需的像素密度 $\rho$ 与视力 $V$ 及观看距离 $d$ 均有关。代入 $l=1\thinsp"in"$，则 $\rho$ 为每英寸像素（PPI）。代入 $l=1\thinsp"cm"$，则 $\rho$ 为每厘米像素（PPCM）。
+  代入 $l=1\thinsp"in"$，则 $\rho$ 为每英寸像素（PPI）。代入 $l=1\thinsp"cm"$，则 $\rho$ 为每厘米像素（PPCM）。
+  <section>
+    ## 根据视力估计所需的像素密度
+    设观看距离为 $d$，像素间距（pixel pitch）为 $p$，我们有
+    $$
+    tan(1/2 \theta)=(1/2 p)/d
+    $$
+    即
+    $$
+    p=2d tan(1/2 \theta)
+    $$
+    又有
+    $$
+    1\thinsp"arcmin"=1/180 \pi\times 1/60
+    $$
+    消去 $\theta$，得
+    $$
+    \rho=l/(2d tan(\pi/21600V))
+    $$
+    可见，所需的像素密度 $\rho$ 与视力 $V$ 及观看距离 $d$ 均有关。
 
-  需要注意的是，这只是一个估计值。显示器的像素密度超过这个值，并不代表完全没有用：
-  - 一般地，人眼对点、线、周期纹理、锯齿等的敏感度不同。
-  - 子像素布局<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ]}/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
-  - 对比度、观看角度、软件层面的字体抗锯齿等因素也会产生较明显的影响。
-  - 双眼视力常常优于单眼视力。
+    需要注意的是，这只是一个估计值。显示器的像素密度超过这个值，并不代表完全没有用：
+    - 一般地，人眼对点、线、周期纹理、锯齿等的敏感度不同。
+    - 子像素布局<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ]}/>（如 RGB stripe、Pentile）会对实际感知产生可见影响。
+    - 对比度、观看角度、软件层面的字体抗锯齿等因素也会产生较明显的影响。
+    - 双眼视力常常优于单眼视力。
+
+    [此查找表](/tools-and-ideas/computers/displays#视力观看距离与-ppi-查找表)可用于按照视力与观看距离找到所需的显示设备 PPI。
+  </section>
 </section>
 <section>
   # 亮度
