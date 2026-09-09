@@ -17,5 +17,15 @@ export const Derivations = {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
       },
     },
+    {
+      label: '显示、光与视觉',
+      translations: {
+        en: 'Displays, Light and Vision',
+      },
+      slug: 'derivations/displays-light-and-vision',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
+      }
+    },
   ],
 } satisfies SidebarItem
