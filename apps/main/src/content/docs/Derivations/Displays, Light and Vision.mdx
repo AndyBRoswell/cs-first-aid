@@ -79,7 +79,7 @@ import References from '@/components/References.astro'
     $$
     \Phi_"e"=\Phi_"e" (t)=lim_("\Delta" t\rightarrow 0) ("\Delta"Q/"\Delta"t)="d"Q/"d"t
     $$
-    下标 $"e"$ 代表[辐射度量学](https://zh.wikipedia.org/wiki/%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E5%AD%A6)的物理量。
+    下标 $"e"$ 代表[辐射度量学](https://zh.wikipedia.org/wiki/%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E5%AD%A6)（Radiometry）的物理量。
 
     在特定时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$"d"\Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$，即：辐射功率的面密度），则<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.1' } ] }/>
     $$
@@ -89,7 +89,7 @@ import References from '@/components/References.astro'
     M_"e" (P)="d"\Phi_"e" (P)/"d"A
     $$
 
-    当波源为**点源**时，在某个方向 $\omega$（由单位向量表示）的辐强度（辐射功率的角密度）
+    当波源为**点源**时，在某个方向 $\omega$（由单位向量表示）的辐强度（辐射功率的角密度）<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.2' } ] }/>
     $$
     I_"e" (\omega)="d"\Phi_"e" (\omega)/"d"\omega
     $$
@@ -103,7 +103,7 @@ import References from '@/components/References.astro'
     $$
     换言之，面积元 $"d"A$ 在方向 $\omega$ 本应获得辐照度 $"d"E_("e"\perp) (P,\omega)$，这需要令该面积元 $"d"A$ 垂直于方向 $\omega$ 即 $\theta=0$ 时才能获得；如果它与辐射的入射方向 $\omega$ 不垂直，即 $\theta>0$，它在这个方向 $\omega$ 就只获得了更少的辐照度 $"d"E_"e" (P,\omega) = "d"E_("e"\perp) (P,\omega)cos\theta$。典例：在日常生活中，太阳光可视为平行光；只有阳光垂直入射到太阳能板，这块太阳能板才能获得最大的辐照度，才可以达到最多的发电量。
 
-    在曲面上选一点 $P$ 和观测方向 $\omega$，点 $P$ 在方向 $\omega$ 上的辐亮度
+    在曲面上选一点 $P$ 和观测方向 $\omega$，点 $P$ 在方向 $\omega$ 上的辐亮度（radiance）<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.3' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '33' } ] }/>
     $$
     L_"e" (P,\omega) = "d"E_("e"\perp) (P,\omega)/"d"\omega = "d"^2 \Phi_"e" (P,\omega)/("d"A cos\theta"d"\omega)
     $$
@@ -128,20 +128,20 @@ import References from '@/components/References.astro'
     $$
     L_"e" (P_1,\omega)=L_"e" (P_2,\omega)
     $$
-    这告诉我们：在理想条件下观测同一稳恒电磁波源，辐亮度沿电磁辐射的传输方向不变。
+    这告诉我们：在理想条件下观测同一稳恒电磁波源，辐亮度沿电磁辐射的传输方向不变。<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '32' } ] }/>
   </section>
   <section>
     ## 光度函数
-    大量实验证明，人眼对不同波长的光的敏感度不同。而在光照充足与光照不足的环境下，人眼对同一波长的光的敏感度也不同。在明视觉条件下，记（相对）光度函数（又名视见函数）为 $V(\lambda)\in [0, 1]$，其中 $\lambda$ 为光的波长。
+    大量实验证明，人眼对不同波长的光的敏感度不同。而在光照充足与光照不足的环境下，人眼对同一波长的光的敏感度也不同。在明视觉条件下，记（相对）光度函数（又名视见函数）<Cite references={M} cite_items={[ { condition: { filter: m => /光学/.test(m.title) && /新概念物理教程/.test(m.title) }, label: 'page', locator: '17' } ] }/>为 $V(\lambda)\in [0, 1]$，其中 $\lambda$ 为光的波长。
     实验测得：在光照充足时，当波长 $\lambda$ 约为 $555\thinsp"nm"$，$V(\lambda)$ 取得峰值。在可见光的波长范围以外，取 $V(\lambda)=0$。
   </section>
   <section>
     ## 光通量、光出射度与照度
-    光源可以同时发出多种波长的光。设一个光源的辐射通量的光谱分布为 $\Phi_("e",\lambda) (\lambda)="d"\Phi_"e" /"d"\lambda$。则其光通量可由下式得出：
+    光源可以同时发出多种波长的光。设一个光源的辐射通量的光谱分布为 $\Phi_("e",\lambda) (\lambda)="d"\Phi_"e" /"d"\lambda$。则其光通量（Luminous flux）可由下式得出：
     $$
     \Phi_"v" = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m" V(\lambda)"d"\lambda = K_"m"\int_0^+\infty  \Phi_("e",\lambda) (\lambda)V(\lambda)"d"\lambda
     $$
-    下标 $"v"$ 代表[光度学](https://zh.wikipedia.org/zh-cn/%E5%85%89%E5%BA%A6%E5%AD%A6)的物理量。明视觉最大光视效能
+    下标 $"v"$ 代表[光度学](https://zh.wikipedia.org/zh-cn/%E5%85%89%E5%BA%A6%E5%AD%A6)（Photometry）的物理量。明视觉最大光视效能
     $$
     K_"m"=K_"cd"  V(555\thinsp"nm")/V(\lambda_"a")
     $$
@@ -159,7 +159,7 @@ import References from '@/components/References.astro'
   </section>
   <section>
     ## 亮度与视亮度
-    设一个光源的辐亮度的光谱分布为 $L_("e",\lambda) (\lambda)="d"L_"e"/"d"\lambda$，则亮度（辉度）
+    设一个光源的辐亮度的光谱分布为 $L_("e",\lambda) (\lambda)="d"L_"e"/"d"\lambda$，则亮度（luminance，又名辉度）
     $$
     L_"v" = \int_0^+\infty  L_("e",\lambda) (\lambda)K_"m" V(\lambda)"d"\lambda = K_"m"\int_0^+\infty  L_("e",\lambda) (\lambda)V(\lambda)"d"\lambda
     $$
@@ -167,7 +167,7 @@ import References from '@/components/References.astro'
 
     理想条件下，光谱辐亮度 $L_("e",\lambda) (\lambda)$ 沿同一稳恒光源发出的光线保持不变，这时亮度也保持不变。这符合我们的日常经验：在晴天的户外，光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙的亮度并没有明显变化。
 
-    除了亮度以外，还有一个量叫视亮度。两者的区别是：亮度是可以物理测量的光度量；视亮度则会受到背景、对比度、视觉适应及其余观察条件的影响。
+    除了亮度以外，还有一个量叫视亮度（brightness）。两者的区别是：亮度是可以物理测量的光度量；视亮度则会受到背景、对比度、视觉适应及其余观察条件的影响。
 
     测量照度的仪器称为照度计；测量亮度的仪器称为亮度计；用于测量光通量的仪器主要有积分球和分布光度计。在实践中，测量照度远比测量亮度方便；而测量亮度远比测量光通量方便，后者通常在专业的实验室完成测定。鉴于照度的测量成本相对低得多，主流智能手机基本上都配备了照度传感器。
   </section>
