@@ -93,7 +93,7 @@ import References from '@/components/References.astro'
     $$
     I_"e" (\omega)="d"\Phi_"e" (\omega)/"d"\omega
     $$
-    其中 $"d"\omega$ 为围绕该方向的微分立体角。
+    其中 $"d"\omega$ 为围绕该方向的微分立体角<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '13' } ] }/>。
 
     实验表明，在不受强引力场影响的条件下、在没有吸收、散射或界面的各向同性均匀介质或真空中（下称“理想条件”），电磁波可以近似看作沿直线传播。其传播方向可以由射线表示。当电磁波为可见光时，这样的射线称为光线。
 
@@ -183,13 +183,13 @@ import References from '@/components/References.astro'
   </section>
   <section>
     ## 例：银幕亮度
-    设某影厅采用一块面积为 $A$ 的银幕，且为理想漫反射面（Lambert 表面）<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'Lambertian surface') }, } ] }/>；投影和银幕的工程处理都尽量让银幕上各个位置的亮度均匀。
+    设某影厅采用一块面积为 $A$ 的银幕，其上每一点都总是满足光反射率<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'reflectance') }, } ] }/> $\rho=1$、光吸收率<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'absorptance') }, } ] }/> $\alpha=0$、光透射率<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'transmittance') }, } ] }/> $\tau=0$，且为理想漫反射面（Lambert 表面）<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'Lambertian surface') }, } ] }/>；投影和银幕的工程处理都尽量让银幕上各个位置的亮度均匀。
 
     银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, `Lambert's cosine law`) }, } ] }/>，其亮度 $L$ 与观看角度无关。设观看位置与法线的夹角为 $\theta$，则该银幕总的光出射度与银幕亮度的关系是
     $$
     M=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
     $$
-    又
+    又<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '16' } ] }/>
     $$
     "d"\Omega=sin\theta "d"\theta "d"\phi
     $$
@@ -197,7 +197,7 @@ import References from '@/components/References.astro'
     $$
     M = \int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta "d"\theta"d"\phi = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) cos \theta sin \theta "d"\theta = L\int_0^2\pi  "d"\phi  \int_0^1 sin \theta "d"sin \theta = L\int_0^2\pi  (1/2 "d"\phi) = \pi L
     $$
-    即
+    即<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'Lambertian surface') }, } ] }/>
     $$
     L=M/\pi
     $$
@@ -205,7 +205,7 @@ import References from '@/components/References.astro'
     $$
     F>=MA
     $$
-    当然，在现实中，银幕无法将所有入射光全部反射，即不能保证银幕上的每一点都总是满足光反射率 $\rho=1$、光吸收率 $\alpha=0$、光透射率 $\tau=0$；投影机实际输出的光通量也不一定总能达到标称光通量，所以一般都有 $F>MA$。
+    当然，在现实中，银幕无法将所有入射光全部反射；投影机实际输出的光通量也不一定总能达到标称光通量，所以一般都有 $F>MA$。
 
     另外，现代影厅常使用高增益银幕，使接近正对银幕的观众看到比银幕为 Lambert 体更高的亮度，但代价是较大观察角下的亮度降低。一般地，银幕的增益系数不仅依赖观察方向，还依赖光的入射方向。这些涉及到较复杂的数学方法，本文不予讨论。
   </section>
