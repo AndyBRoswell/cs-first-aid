@@ -175,14 +175,18 @@ import References from '@/components/References.astro'
     $$
     亮度的常用单位为 $"nit"$，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
 
-    理想条件下，光谱辐亮度 $L_("e",\lambda) (\lambda)$ 沿同一稳恒光源发出的光线保持不变，这时亮度也保持不变。这符合我们的日常经验：在晴天的户外，光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙的亮度并没有明显变化。
+    理想条件下，光谱辐亮度 $L_("e",\lambda) (\lambda)$ 沿同一稳恒光源发出的光线保持不变，这时亮度也保持不变。这符合我们的日常经验：在晴天的户外，光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙看起来并没有变得明显更亮或明显更暗。
 
     除了亮度以外，还有一个量叫视亮度（brightness）。两者的区别是：亮度是可以物理测量的光度量；视亮度则会受到背景、对比度、视觉适应及其余观察条件的影响。
-
-    测量照度的仪器称为照度计；测量亮度的仪器称为亮度计；用于测量光通量的仪器主要有积分球和分布光度计。在实践中，测量照度远比测量亮度方便；而测量亮度远比测量光通量方便，后者通常在专业的实验室完成测定。鉴于照度的测量成本相对低得多，主流智能手机基本上都配备了照度传感器。
   </section>
   <section>
-    ## 例：银幕亮度
+    ## 测量
+    测量照度的仪器称为照度计；测量亮度的仪器称为亮度计；用于测量光通量的仪器主要有积分球和分布光度计。
+
+    在实践中，测量照度远比测量亮度方便；而测量亮度远比测量光通量方便，后者通常在专业的实验室完成测定。鉴于照度的测量成本相对低得多，主流智能手机基本上都配备了照度传感器。
+  </section>
+  <section>
+    ## 应用：银幕亮度
     设某影厅采用一块面积为 $A$ 的银幕，其上每一点都总是满足光反射率<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'reflectance') }, } ] }/> $\rho=1$、光吸收率<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'absorptance') }, } ] }/> $\alpha=0$、光透射率<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'transmittance') }, } ] }/> $\tau=0$，且为理想漫反射面（Lambert 表面）<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'Lambertian surface') }, } ] }/>；投影和银幕的工程处理都尽量让银幕上各个位置的亮度均匀。
 
     银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, `Lambert's cosine law`) }, } ] }/>，其亮度 $L$ 与观看角度无关。设观看位置与法线的夹角为 $\theta$，则该银幕总的光出射度与银幕亮度的关系是
@@ -210,45 +214,48 @@ import References from '@/components/References.astro'
     $$
     F>=MA/N
     $$
-    放映亮度常用 $"fL"$ 表示。$"fL"$ 与 $"nit"$ 的换算关系为
-    $$
-    1\thinsp"fL"=(1/\pi)\thinsp"cd/ft"^2 \approx 3.42626\thinsp"cd/m"^2 = 3.42626\thinsp"nit"\thinsp,\emsp 1\thinsp"nit" \approx 0.291864\thinsp"fL"
-    $$
-    因此，$31\thinsp"fL" \approx 106.214\thinsp"nit"$，$22\thinsp"fL" \approx 75.3777\thinsp"nit"$。对于本节假设的理想 Lambert 银幕，$1\thinsp"fL"$ 的目标亮度对应 $1\thinsp"lm/ft"^2$ 的光出射度。因此，可以直接将以 $"fL"$ 表示的亮度数值作为以 $"lm/ft"^2$ 表示的光出射度数值计算。
 
-    **例 1：** 某影厅的银幕尺寸为 $22\thinsp"m"\times 12\thinsp"m"$，要求 2D 影片的放映亮度为 $31\thinsp"fL"$，使用 2 台投影机。银幕面积和对应的光出射度分别为
-    $$
-    A=(22\thinsp"m")\times (12\thinsp"m")=264\thinsp"m"^2 \approx 2\thinsp 841.672\thinsp 350\thinsp"ft"^2,\emsp M=31\thinsp"lm/ft"^2
-    $$
-    因此，每台投影机所需的光通量为
-    $$
-    F>=MA/2=((31\thinsp"lm/ft"^2)(2\thinsp 841.672\thinsp 350\thinsp"ft"^2))/2 \approx 44\thinsp 046\thinsp"lm"
-    $$
-    即在理想条件下，每台投影机至少需要约 $44\thinsp 000\thinsp"lm"$ 的光通量。
-
-    **例 2：** 某影厅的银幕尺寸为 $28\thinsp"m"\times 21\thinsp"m"$，要求 2D 影片的放映亮度为 $22\thinsp"fL"$，使用 2 台投影机。银幕面积和对应的光出射度分别为
-    $$
-    A=(28\thinsp"m")\times (21\thinsp"m")=588\thinsp"m"^2 \approx 6\thinsp 329.179\thinsp 325\thinsp"ft"^2,\emsp M=22\thinsp"lm/ft"^2
-    $$
-    因此，每台投影机所需的光通量为
-    $$
-    F>=MA/2=((22\thinsp"lm/ft"^2)(6\thinsp 329.179\thinsp 325\thinsp"ft"^2))/2 \approx 69\thinsp 621\thinsp"lm"
-    $$
-    即在理想条件下，每台投影机至少需要约 $70\thinsp 000\thinsp"lm"$ 的光通量。
-
-    **例 3：** 某影厅的银幕尺寸为 $19\thinsp"m"\times 10\thinsp"m"$，要求 2D 影片的放映亮度为 $22\thinsp"fL"$，使用 1 台投影机。银幕面积和对应的光出射度分别为
-    $$
-    A=(19\thinsp"m")\times (10\thinsp"m")=190\thinsp"m"^2 \approx 2\thinsp 045.142\thinsp 979\thinsp"ft"^2,\emsp M=22\thinsp"lm/ft"^2
-    $$
-    因此，这台投影机所需的光通量为
-    $$
-    F>=MA=(22\thinsp"lm/ft"^2)(2\thinsp 045.142\thinsp 979\thinsp"ft"^2) \approx 44\thinsp 993\thinsp"lm"
-    $$
-    即在理想条件下，这台投影机至少需要约 $45\thinsp 000\thinsp"lm"$ 的光通量。
-
-    当然，在现实中，银幕无法将所有入射光全部反射；投影机实际输出的光通量也不一定总能达到标称光通量。因此，实际所需的总标称光通量通常大于 $MA$；上述三个结果只能作为理想下限，选型时还应留有余量。
+    当然，在现实中，银幕无法将所有入射光全部反射；投影机实际输出的光通量也不一定总能达到标称光通量。因此，每台投影机实际所需的标称光通量通常大于 $F$；该结果只能作为理想下限，选型时应留有余量。
 
     另外，现代影厅常使用高增益银幕，使接近正对银幕的观众看到比银幕为 Lambert 体时更高的亮度，但代价是较大观察角下的亮度降低。一般地，银幕的增益系数不仅依赖观察方向，还依赖光的入射方向。这些涉及到较复杂的数学方法，本文不予讨论。
+    <section>
+      ### 例
+      放映亮度常用 $"fL"$ 表示。$"fL"$ 与 $"nit"$ 的换算关系为
+      $$
+      1\thinsp"fL"=(1/\pi)\thinsp"cd/ft"^2 \approx 3.42626\thinsp"cd/m"^2 = 3.42626\thinsp"nit"\thinsp,\emsp 1\thinsp"nit" \approx 0.291864\thinsp"fL"
+      $$
+      因此，$31\thinsp"fL" \approx 106.214\thinsp"nit"$，$22\thinsp"fL" \approx 75.3777\thinsp"nit"$。对于本节假设的理想 Lambert 银幕，$1\thinsp"fL"$ 的目标亮度对应 $1\thinsp"lm/ft"^2$ 的光出射度。因此，可以直接将以 $"fL"$ 表示的亮度数值作为以 $"lm/ft"^2$ 表示的光出射度数值计算。
+
+      **例 1：** 某影厅的银幕尺寸为 $22\thinsp"m"\times 12\thinsp"m"$，要求 2D 影片的放映亮度为 $31\thinsp"fL"$，使用 2 台投影机。银幕面积和对应的光出射度分别为
+      $$
+      A=(22\thinsp"m")\times (12\thinsp"m")=264\thinsp"m"^2 \approx 2\thinsp 841.672\thinsp 350\thinsp"ft"^2,\emsp M=31\thinsp"lm/ft"^2
+      $$
+      因此，每台投影机所需的光通量为
+      $$
+      F>=MA/2=((31\thinsp"lm/ft"^2)(2\thinsp 841.672\thinsp 350\thinsp"ft"^2))/2 \approx 44\thinsp 046\thinsp"lm"
+      $$
+      理论书，每台投影机至少需要约 $44\thinsp 000\thinsp"lm"$ 的光通量。
+
+      **例 2：** 某影厅的银幕尺寸为 $28\thinsp"m"\times 21\thinsp"m"$，要求 2D 影片的放映亮度为 $22\thinsp"fL"$，使用 2 台投影机。银幕面积和对应的光出射度分别为
+      $$
+      A=(28\thinsp"m")\times (21\thinsp"m")=588\thinsp"m"^2 \approx 6\thinsp 329.179\thinsp 325\thinsp"ft"^2,\emsp M=22\thinsp"lm/ft"^2
+      $$
+      因此，每台投影机所需的光通量为
+      $$
+      F>=MA/2=((22\thinsp"lm/ft"^2)(6\thinsp 329.179\thinsp 325\thinsp"ft"^2))/2 \approx 69\thinsp 621\thinsp"lm"
+      $$
+      理论上，每台投影机至少需要约 $70\thinsp 000\thinsp"lm"$ 的光通量。
+
+      **例 3：** 某影厅的银幕尺寸为 $19\thinsp"m"\times 10\thinsp"m"$，要求 2D 影片的放映亮度为 $22\thinsp"fL"$，使用 1 台投影机。银幕面积和对应的光出射度分别为
+      $$
+      A=(19\thinsp"m")\times (10\thinsp"m")=190\thinsp"m"^2 \approx 2\thinsp 045.142\thinsp 979\thinsp"ft"^2,\emsp M=22\thinsp"lm/ft"^2
+      $$
+      因此，这台投影机所需的光通量为
+      $$
+      F>=MA=(22\thinsp"lm/ft"^2)(2\thinsp 045.142\thinsp 979\thinsp"ft"^2) \approx 44\thinsp 993\thinsp"lm"
+      $$
+      理论上，这台投影机至少需要约 $45\thinsp 000\thinsp"lm"$ 的光通量。
+    </section>
   </section>
 </section>
 <section>
