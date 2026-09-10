@@ -11,7 +11,7 @@ export const entries = [
       author: [ { literal: 'International Telecommunication Union' }, ],
       publisher: 'International Telecommunication Union',
       'publisher-place': 'Geneva',
-      issued: { 'date-parts': [ [ 2015, 6 ], ], },
+      issued: { 'date-parts': [ [ 2015, 6, 17 ], ], },
       accessed: { 'date-parts': [ [ 2026, 9, 10 ], ], },
       language: 'en-US',
       URL: 'https://www.itu.int/rec/R-REC-BT.709-6-201506-I/en',
