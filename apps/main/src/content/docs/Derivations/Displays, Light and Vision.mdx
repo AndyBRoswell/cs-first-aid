@@ -201,13 +201,54 @@ import References from '@/components/References.astro'
     $$
     L=M/\pi
     $$
-    投影机的标称光通量 $F$ 需要满足
+    记单台投影机的标称光通量为 $F$。若仅使用一台投影机，则需要满足
     $$
     F>=MA
     $$
-    当然，在现实中，银幕无法将所有入射光全部反射；投影机实际输出的光通量也不一定总能达到标称光通量，所以一般都有 $F>MA$。
 
-    另外，现代影厅常使用高增益银幕，使接近正对银幕的观众看到比银幕为 Lambert 体更高的亮度，但代价是较大观察角下的亮度降低。一般地，银幕的增益系数不仅依赖观察方向，还依赖光的入射方向。这些涉及到较复杂的数学方法，本文不予讨论。
+    若使用 $N$ 台相同的投影机，并假设各台投影机均匀照亮整个银幕、输出的光通量可以线性相加，则每台投影机所需的光通量至少为
+    $$
+    F>=MA/N
+    $$
+    放映亮度常用 $"fL"$ 表示。$"fL"$ 与 $"nit"$ 的换算关系为
+    $$
+    1\thinsp"fL"=(1/\pi)\thinsp"cd/ft"^2 \approx 3.42626\thinsp"cd/m"^2 = 3.42626\thinsp"nit"\thinsp,\emsp 1\thinsp"nit" \approx 0.291864\thinsp"fL"
+    $$
+    因此，$31\thinsp"fL" \approx 106.214\thinsp"nit"$，$22\thinsp"fL" \approx 75.3777\thinsp"nit"$。对于本节假设的理想 Lambert 银幕，$1\thinsp"fL"$ 的目标亮度对应 $1\thinsp"lm/ft"^2$ 的光出射度。因此，可以直接将以 $"fL"$ 表示的亮度数值作为以 $"lm/ft"^2$ 表示的光出射度数值计算。
+
+    **例 1：** 某影厅的银幕尺寸为 $22\thinsp"m"\times 12\thinsp"m"$，要求 2D 影片的放映亮度为 $31\thinsp"fL"$，使用 2 台投影机。银幕面积和对应的光出射度分别为
+    $$
+    A=(22\thinsp"m")\times (12\thinsp"m")=264\thinsp"m"^2 \approx 2\thinsp 841.67\thinsp"ft"^2,\emsp M=31\thinsp"lm/ft"^2
+    $$
+    因此，每台投影机所需的光通量为
+    $$
+    F>=MA/2=((31\thinsp"lm/ft"^2)(2\thinsp 841.67\thinsp"ft"^2))/2 \approx 44\thinsp 000\thinsp"lm"
+    $$
+    即在理想条件下，每台投影机至少需要约 $44\thinsp 000\thinsp"lm"$ 的光通量。
+
+    **例 2：** 某影厅的银幕尺寸为 $28\thinsp"m"\times 21\thinsp"m"$，要求 2D 影片的放映亮度为 $22\thinsp"fL"$，使用 2 台投影机。银幕面积和对应的光出射度分别为
+    $$
+    A=(28\thinsp"m")\times (21\thinsp"m")=588\thinsp"m"^2 \approx 6\thinsp 329.18\thinsp"ft"^2,\emsp M=22\thinsp"lm/ft"^2
+    $$
+    因此，每台投影机所需的光通量为
+    $$
+    F>=MA/2=((22\thinsp"lm/ft"^2)(6\thinsp 329.18\thinsp"ft"^2))/2 \approx 69\thinsp 600\thinsp"lm"
+    $$
+    即在理想条件下，每台投影机至少需要约 $69\thinsp 600\thinsp"lm"$ 的光通量。
+
+    **例 3：** 某影厅的银幕尺寸为 $19\thinsp"m"\times 10\thinsp"m"$，要求 2D 影片的放映亮度为 $22\thinsp"fL"$，使用 1 台投影机。银幕面积和对应的光出射度分别为
+    $$
+    A=(19\thinsp"m")\times (10\thinsp"m")=190\thinsp"m"^2 \approx 2\thinsp 045.14\thinsp"ft"^2,\emsp M=22\thinsp"lm/ft"^2
+    $$
+    因此，这台投影机所需的光通量为
+    $$
+    F>=MA=(22\thinsp"lm/ft"^2)(2\thinsp 045.14\thinsp"ft"^2) \approx 45\thinsp 000\thinsp"lm"
+    $$
+    即在理想条件下，这台投影机至少需要约 $45\thinsp 000\thinsp"lm"$ 的光通量。
+
+    当然，在现实中，银幕无法将所有入射光全部反射；投影机实际输出的光通量也不一定总能达到标称光通量。因此，实际所需的总标称光通量通常大于 $MA$；上述三个结果只能作为理想下限，选型时还应留有余量。
+
+    另外，现代影厅常使用高增益银幕，使接近正对银幕的观众看到比银幕为 Lambert 体时更高的亮度，但代价是较大观察角下的亮度降低。一般地，银幕的增益系数不仅依赖观察方向，还依赖光的入射方向。这些涉及到较复杂的数学方法，本文不予讨论。
   </section>
 </section>
 <section>
