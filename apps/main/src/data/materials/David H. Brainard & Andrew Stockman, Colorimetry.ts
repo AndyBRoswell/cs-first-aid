@@ -15,9 +15,16 @@ export const entries = [
       volume: 3,
       ISBN: '9780071629287',
       language: 'en-US',
-      URL: 'https://color2.psych.upenn.edu/brainard/papers/Brainard_Stockman_Colorimetry.pdf',
-      accessed: { 'date-parts': [ [ 2026, 8, 23 ] ] },
+      URL: 'https://www.mheducation.com/highered/mhp/product/handbook-optics-third-edition-volume-iii-vision-vision-optics-set.html',
+      accessed: { 'date-parts': [ [ 2026, 9, 10 ] ] },
       custom: {
+        free_material: [
+          {
+            link: 'https://color2.psych.upenn.edu/brainard/papers/Brainard_Stockman_Colorimetry.pdf',
+            display_text: '10 COLORIMETRY',
+            'Content-Type': 'application/pdf',
+          },
+        ],
         variant: [
           {
             type: 'book',
