@@ -4,10 +4,10 @@ import type { StarlightUserConfig } from '@astrojs/starlight/types'
 import { Preface } from '@/config/sidebar/前言.ts'
 import { Tools_and_Ideas } from '@/config/sidebar/工具与思想.ts'
 import { Courses_Textbooks_and_References } from '@/config/sidebar/课程、教科书与参考资料.ts'
-import { Derivations } from '@/config/sidebar/推导.ts'
 import { Critical_Goals_and_Time_Windows } from '@/config/sidebar/关键目标与时间窗口.ts'
 import { Future_Trends } from '@/config/sidebar/未来趋势.ts'
 import { FAQ } from '@/config/sidebar/常见问题.ts'
+import { Derivations } from '@/config/sidebar/推导.ts'
 import { Recommended_Reading_Materials } from '@/config/sidebar/推荐读物.ts'
 import { Epilog } from '@/config/sidebar/后记.ts'
 
@@ -29,10 +29,10 @@ export const sidebar = [
   Preface,
   Tools_and_Ideas,
   Courses_Textbooks_and_References,
-  Derivations,
   Critical_Goals_and_Time_Windows,
   Future_Trends,
   FAQ,
+  Derivations,
   Recommended_Reading_Materials,
   Epilog,
 ] satisfies NonNullable<StarlightUserConfig['sidebar']>
