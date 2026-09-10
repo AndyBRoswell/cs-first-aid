@@ -8,9 +8,10 @@ export const references = [
   catalog.get('GB/T 11533-2011'),
   catalog.get('PBRT'),
   ...catalog.filter(m => m["collection-title"]?.includes('CS 184') && m.issued?.["date-parts"]?.[0]?.[0] === 2026 && m.issued?.season === 2),
-  ...catalog.filter(m => /光学/.test(m.title!) && /新概念物理教程/.test(m.title!)),
+  ...catalog.filter(m => /光学/.test(m.title!) && /新概念物理教程/.test(m.title!), { count: 1 }),
   catalog.get('Rapport BIPM-2019/05'),
-  ...catalog.filter(m => /Mise en pratique for the definition of the candela/.test(m.title!)),
-  ...catalog.filter(m => util.ieq(m['container-title']!, 'E-ILV'))
+  ...catalog.filter(m => /Mise en pratique for the definition of the candela/.test(m.title!), { count: 1 }),
+  ...catalog.filter(m => util.ieq(m['container-title']!, 'E-ILV')),
+  ...catalog.filter(m => m['collection-title']?.includes('OSE 6334') && /Introduction to nonlinear optics/.test(m.title!), { count: 1 }),
+  ...catalog.filter(m => util.ieq(m.title!, 'Roadmap on nonlinear optics–focus on Chinese research'), { count: 1 }),
 ]
-

@@ -72,6 +72,16 @@ import References from '@/components/References.astro'
   </section>
 </section>
 <section>
+  # 叠加原理
+  设一个系统 $y=F(x)$ 的定义域为 $D$，$x$ 和 $y$ 分别代表该系统的输入（刺激）和输出（反应），且 $x$、$y$ 既可以是标量也可以是向量（矢量）。$\forall x_1,x_2\in D$，若总有：
+  - 可加性（additivity）：$F(x_1+x_2)=F(x_1)+F(x_2)$
+  - 齐次性（homogeneity）：$F(ax)=aF(x)$，其中 $a$ 是任意标量
+
+  则该系统符合叠加原理（superposition principle）。可加性与齐次性合称线性性（linearity）。
+
+  在一些特殊情况下，叠加原理会失效<Cite references={M} cite_items={[ { condition: { filter: m => m['collection-title']?.includes('OSE 6334') && /Introduction to nonlinear optics/.test(m.title) }, label: 'page', locator: 5 } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Roadmap on nonlinear optics–focus on Chinese research') }, label: 'page', locator: 1 } ] }/>。但在传统显示技术中，叠加原理通常是有效的。
+</section>
+<section>
   # 亮度
   <section>
     ## 辐射度量学的预备知识
@@ -140,7 +150,7 @@ import References from '@/components/References.astro'
   </section>
   <section>
     ## 光通量、光出射度与照度
-    光源可以同时发出多种波长的光。设一个光源的辐射通量的光谱分布为 $\Phi_("e",\lambda) (\lambda)="d"\Phi_"e" /"d"\lambda$。则其明视觉与暗视觉下的光通量（luminous flux）分别为
+    光源可以同时发出多种波长的光。根据叠加原理，设一个光源的辐射通量的光谱分布为 $\Phi_("e",\lambda) (\lambda)="d"\Phi_"e" /"d"\lambda$。则其明视觉与暗视觉下的光通量（luminous flux）分别为
     $$
     \Phi_"v" = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m" V(\lambda)"d"\lambda = K_"m"\int_0^+\infty  \Phi_("e",\lambda) (\lambda)V(\lambda)"d"\lambda
     $$
@@ -169,7 +179,7 @@ import References from '@/components/References.astro'
   </section>
   <section>
     ## 亮度与视亮度
-    设一个光源的辐亮度的光谱分布为 $L_("e",\lambda) (\lambda)="d"L_"e"/"d"\lambda$，则亮度（luminance，又名辉度）
+    由叠加原理，设一个光源的辐亮度的光谱分布为 $L_("e",\lambda) (\lambda)="d"L_"e"/"d"\lambda$，则亮度（luminance，又名辉度）
     $$
     L_"v" = \int_0^+\infty  L_("e",\lambda) (\lambda)K_"m" V(\lambda)"d"\lambda = K_"m"\int_0^+\infty  L_("e",\lambda) (\lambda)V(\lambda)"d"\lambda
     $$
