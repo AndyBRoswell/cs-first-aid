@@ -12,9 +12,18 @@ export const entries = [
       publisher: 'International Telecommunication Union',
       'publisher-place': 'Geneva',
       issued: { 'date-parts': [ [ 2015, 6 ], ], },
-      accessed: { 'date-parts': [ [ 2026, 8, 22 ], ], },
+      accessed: { 'date-parts': [ [ 2026, 9, 10 ], ], },
       language: 'en-US',
-      URL: 'https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.709-6-201506-I!!PDF-E.pdf',
+      URL: 'https://www.itu.int/rec/R-REC-BT.709-6-201506-I/en',
+      custom: {
+        free_material: [
+          {
+            link: 'https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.709-6-201506-I!!PDF-E.pdf',
+            display_text: 'PDF (English)',
+            'Content-Type': 'application/pdf',
+          } satisfies types_data.Link,
+        ],
+      } satisfies CSL.Custom,
     } satisfies CSL.Item,
   } satisfies types_data.Entry,
 ] satisfies types_data.Entry[]
