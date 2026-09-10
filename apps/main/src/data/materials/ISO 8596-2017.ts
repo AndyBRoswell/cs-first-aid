@@ -12,8 +12,18 @@ export const entries = [
       issued: { 'date-parts': [ [ 2017, 11 ] ] },
       publisher: 'International Organization for Standardization',
       language: 'en-US',
-      URL: 'https://cdn.standards.iteh.ai/samples/69042/42ad78d4a3a34245a4d5b91f3a14a3e9/ISO-8596-2017.pdf',
-      accessed: { 'date-parts': [ [ 2026, 8, 20 ] ] },
+      URL: 'https://www.iso.org/standard/69042.html',
+      accessed: { 'date-parts': [ [ 2026, 9, 10 ] ] },
+      custom: {
+        free_material: {
+          Preview: [
+            {
+              link: 'https://cdn.standards.iteh.ai/samples/69042/42ad78d4a3a34245a4d5b91f3a14a3e9/ISO-8596-2017.pdf',
+              'Content-Type': 'application/pdf',
+            },
+          ],
+        },
+      } satisfies CSL.Custom,
     } satisfies CSL.Item,
   } satisfies types_data.Entry,
 ] satisfies types_data.Entry[]
