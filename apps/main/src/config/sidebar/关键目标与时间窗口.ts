@@ -1,5 +1,5 @@
 import type { SidebarItem } from "@/types/starlight.ts";
-import * as release_stages from '../release_stages.ts'
+import * as release_stages from '@/components/release_stages.ts'
 
 export const Critical_Goals_and_Time_Windows = {
   label: '关键目标与时间窗口',
