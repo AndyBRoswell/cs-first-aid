@@ -38,7 +38,7 @@ function import_course_materials() {
 function convert_UnicodeMath() {
   return (tree: any) => {
     unist_util_visit.visit(tree, ['inlineMath', 'math'], node => {
-      node.value = UnicodeMathML.convertUnicodeMathToMathML(node.value, { displaystyle: node.type === 'math', })
+      node.value = UnicodeMathML.convertUnicodeMathToMathML(node.value, { displaystyle: node.type === 'math', doubleStruckMode: 'euro-tech', })
       node.type = 'html'
       delete node.data
     })

@@ -89,52 +89,52 @@ import References from '@/components/References.astro'
     ## 辐射度量学的预备知识
     设一个电磁波波源累计发出的能量为 $Q$，$t$ 代表时间点。该波源在时间 $"\Delta"t$ 内共计发出了能量 $"\Delta"Q$，则该源在特定时刻的（瞬时）辐射通量（辐射功率）<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'section', locator: '4.1.1' } ] }/>
     $$
-    \Phi_"e"=\Phi_"e" (t)=lim_("\Delta" t\rightarrow 0) ("\Delta"Q/"\Delta"t)="d"Q/"d"t
+    \Phi_"e"=\Phi_"e" (t)=lim_("\Delta" t\rightarrow 0) ("\Delta"Q/"\Delta"t)=\dd Q/\dd t
     $$
     下标 $"e"$ 代表[辐射度量学](https://zh.wikipedia.org/wiki/%E8%BE%90%E5%B0%84%E5%BA%A6%E9%87%8F%E5%AD%A6)（Radiometry）的物理量<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'section', locator: '2' } ] }/>。
 
-    在特定时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$"d"A$ 为 包含 $P$ 的面积元，$"d"\Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$，即：辐射功率的面密度），则<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.1' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'radiant exitance') }, } ] }/>
+    在特定时刻，设 $A$ 代表曲面面积，$P$ 为曲面上的一点，$\dd A$ 为 包含 $P$ 的面积元，$\dd \Phi_"e" (P)$ 为该面积元接收或发出的来自各个方向的（瞬时）辐射功率（分别称为辐照度 $E_"e" (P)$、辐射出射度 $M_"e" (P)$，即：辐射功率的面密度），则<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.1' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'radiant exitance') }, } ] }/>
     $$
-    E_"e" (P)="d"\Phi_"e" (P)/"d"A
+    E_"e" (P)=\dd \Phi_"e" (P)/\dd A
     $$
     $$
-    M_"e" (P)="d"\Phi_"e" (P)/"d"A
+    M_"e" (P)=\dd \Phi_"e" (P)/\dd A
     $$
 
     当波源为**点源**时，在某个方向 $\omega$（由单位向量表示）的辐强度（辐射功率的角密度）<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.2' } ] }/>
     $$
-    I_"e" (\omega)="d"\Phi_"e" (\omega)/"d"\omega
+    I_"e" (\omega)=\dd \Phi_"e" (\omega)/\dd \omega
     $$
-    其中 $"d"\omega$ 为围绕该方向的微分立体角<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '13' } ] }/>。
+    其中 $\dd \omega$ 为围绕该方向的微分立体角<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '13' } ] }/>。
 
     实验表明，在不受强引力场影响的条件下、在没有吸收、散射或界面的各向同性均匀介质或真空中（下称“理想条件”），电磁波可以近似看作沿直线传播。其传播方向可以由射线表示。当电磁波为可见光时，这样的射线称为光线。
 
-    电磁波不一定以垂直方向穿过曲面。设经过面积元 $"d"A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
+    电磁波不一定以垂直方向穿过曲面。设经过面积元 $\dd A$ 上的一点 $P$ 的法向量为 $n\vec$，波由方向 $\omega$ 射入。记 $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$。则沿 $\omega$ 方向的辐照度为
     $$
-    "d"E_("e"\perp) (P,\omega)="d"E_"e" (P,\omega)/cos\theta
+    \dd E_("e"\perp) (P,\omega)=\dd E_"e" (P,\omega)/cos\theta
     $$
-    换言之，面积元 $"d"A$ 在方向 $\omega$ 本应获得辐照度 $"d"E_("e"\perp) (P,\omega)$，这需要令该面积元 $"d"A$ 垂直于方向 $\omega$ 即 $\theta=0$ 时才能获得；如果它与辐射的入射方向 $\omega$ 不垂直，即 $\theta>0$，它在这个方向 $\omega$ 就只获得了更少的辐照度 $"d"E_"e" (P,\omega) = "d"E_("e"\perp) (P,\omega)cos\theta$。典例：在日常生活中，太阳光可视为平行光；只有阳光垂直入射到太阳能板，这块太阳能板才能获得最大的辐照度，才可以达到最多的发电量。
+    换言之，面积元 $\dd A$ 在方向 $\omega$ 本应获得辐照度 $\dd E_("e"\perp) (P,\omega)$，这需要令该面积元 $\dd A$ 垂直于方向 $\omega$ 即 $\theta=0$ 时才能获得；如果它与辐射的入射方向 $\omega$ 不垂直，即 $\theta>0$，它在这个方向 $\omega$ 就只获得了更少的辐照度 $\dd E_"e" (P,\omega) = \dd E_("e"\perp) (P,\omega)cos\theta$。典例：在日常生活中，太阳光可视为平行光；只有阳光垂直入射到太阳能板，这块太阳能板才能获得最大的辐照度，才可以达到最多的发电量。
 
     在曲面上选一点 $P$ 和观测方向 $\omega$，点 $P$ 在方向 $\omega$ 上的辐亮度（radiance）<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.3' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '33' } ] }/>
     $$
-    L_"e" (P,\omega) = "d"E_("e"\perp) (P,\omega)/"d"\omega = "d"^2 \Phi_"e" (P,\omega)/("d"A cos\theta"d"\omega)
+    L_"e" (P,\omega) = \dd E_("e"\perp) (P,\omega)/\dd \omega = \dd^2 \Phi_"e" (P,\omega)/(\dd A cos\theta \dd \omega)
     $$
-    $"d"^2 \Phi_"e" (P,\omega)$ 代表包含点 $P$ 的面积元 $"d"A$ 沿方向 $\omega$ 附近的一小块立体角 $"d"\omega$ 传输的辐射功率。
+    $\dd^2 \Phi_"e" (P,\omega)$ 代表包含点 $P$ 的面积元 $\dd A$ 沿方向 $\omega$ 附近的一小块立体角 $\dd \omega$ 传输的辐射功率。
 
-    理想条件下，设点 $P_1$、$P_2$ 分别位于面积元 $"d"A_1$、$"d"A_2$ 上，且这两个面积元的距离为 $r$。考虑一束沿 $P_1$ 指向 $P_2$ 的方向（记为方向 $\omega$）传播的稳恒电磁辐射。由能量守恒定律，这束辐射传输给 $"d"A_1$ 和 $"d"A_2$ 的功率相同，记为 $"d"^2 \Phi_"e"$。设锐角 $\theta_1$、$\theta_2$ 分别为面积元 $"d"A_1$、$"d"A_2$ 在点 $P_1$、$P_2$ 处的法向量与传播方向 $\omega$ 的夹角。于是
+    理想条件下，设点 $P_1$、$P_2$ 分别位于面积元 $\dd A_1$、$\dd A_2$ 上，且这两个面积元的距离为 $r$。考虑一束沿 $P_1$ 指向 $P_2$ 的方向（记为方向 $\omega$）传播的稳恒电磁辐射。由能量守恒定律，这束辐射传输给 $\dd A_1$ 和 $\dd A_2$ 的功率相同，记为 $\dd^2 \Phi_"e"$。设锐角 $\theta_1$、$\theta_2$ 分别为面积元 $\dd A_1$、$\dd A_2$ 在点 $P_1$、$P_2$ 处的法向量与传播方向 $\omega$ 的夹角。于是
     $$
-    L_"e" (P_1,\omega)="d"^2 \Phi_"e"/("d"A_1 cos \theta_1 "d"\omega_1) \thinsp,\emsp L_"e" (P_2,\omega)="d"^2 \Phi_"e"/("d"A_2 cos \theta_2 "d"\omega_2)
+    L_"e" (P_1,\omega)=\dd^2 \Phi_"e"/(\dd A_1 cos \theta_1 \dd \omega_1) \thinsp,\emsp L_"e" (P_2,\omega)=\dd^2 \Phi_"e"/(\dd A_2 cos \theta_2 \dd \omega_2)
     $$
-    其中 $"d"\omega_1 $ 可借由 $"d"A_2$、$\theta_2$ 确定；$"d"\omega_2$ 可借由 $"d"A_1$、$\theta_1$ 确定，即
+    其中 $\dd \omega_1 $ 可借由 $\dd A_2$、$\theta_2$ 确定；$\dd \omega_2$ 可借由 $\dd A_1$、$\theta_1$ 确定，即
     $$
-    "d"\omega_1="d"A_2 cos \theta_2/r^2 \thinsp,\emsp "d"\omega_2="d"A_1 cos \theta_1/r^2
+    \dd \omega_1=\dd A_2 cos \theta_2/r^2 \thinsp,\emsp \dd \omega_2=\dd A_1 cos \theta_1/r^2
     $$
     联立得
     $$
-    "d"^2 \Phi_"e"=L_"e" (P_1,\omega)"d"A_1 cos \theta_1 "d"\omega_1=L_"e" (P_1,\omega) "d"A_1 cos \theta_1 "d"A_2 cos \theta_2/r^2
+    \dd^2 \Phi_"e"=L_"e" (P_1,\omega)\dd A_1 cos \theta_1 \dd \omega_1=L_"e" (P_1,\omega) \dd A_1 cos \theta_1 \dd A_2 cos \theta_2/r^2
     $$
     $$
-    "d"^2 \Phi_"e"=L_"e" (P_2,\omega)"d"A_2 cos \theta_2 "d"\omega_2=L_"e" (P_2,\omega) "d"A_2 cos \theta_2 "d"A_1 cos \theta_1/r^2
+    \dd^2 \Phi_"e"=L_"e" (P_2,\omega)\dd A_2 cos \theta_2 \dd \omega_2=L_"e" (P_2,\omega) \dd A_2 cos \theta_2 \dd A_1 cos \theta_1/r^2
     $$
     于是
     $$
@@ -152,12 +152,12 @@ import References from '@/components/References.astro'
   </section>
   <section>
     ## 光通量、光出射度与照度
-    光源可以同时发出多种波长的光。根据叠加原理，设一个光源的辐射通量的光谱分布为 $\Phi_("e",\lambda) (\lambda)="d"\Phi_"e" /"d"\lambda$。则其明视觉与暗视觉下的光通量（luminous flux）分别为
+    光源可以同时发出多种波长的光。根据叠加原理，设一个光源的辐射通量的光谱分布为 $\Phi_("e",\lambda) (\lambda)=\dd \Phi_"e" /\dd \lambda$。则其明视觉与暗视觉下的光通量（luminous flux）分别为
     $$
-    \Phi_"v" = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m" V(\lambda)"d"\lambda = K_"m"\int_0^+\infty  \Phi_("e",\lambda) (\lambda)V(\lambda)"d"\lambda
+    \Phi_"v" = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m" V(\lambda)\dd \lambda = K_"m"\int_0^+\infty  \Phi_("e",\lambda) (\lambda)V(\lambda)\dd \lambda
     $$
     $$
-    \Phi_"v"^\prime = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m"^\prime  V\prime(\lambda)"d"\lambda = K_"m"^\prime \int_0^+\infty  \Phi_("e",\lambda) (\lambda)V\prime(\lambda)"d"\lambda
+    \Phi_"v"^\prime = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m"^\prime  V\prime(\lambda)\dd \lambda = K_"m"^\prime \int_0^+\infty  \Phi_("e",\lambda) (\lambda)V\prime(\lambda)\dd \lambda
     $$
     下标 $"v"$ 代表[光度学](https://zh.wikipedia.org/zh-cn/%E5%85%89%E5%BA%A6%E5%AD%A6)（Photometry）的物理量<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'section', locator: '2' } ] }/>。
 
@@ -171,19 +171,19 @@ import References from '@/components/References.astro'
 
     单位面积发出或反射的光通量称为光出射度<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'luminous exitance') }, } ] }/>
     $$
-    M_"v"="d"\Phi_"v"/"d"A
+    M_"v"=\dd \Phi_"v"/\dd A
     $$
     单位面积接收的光通量称为照度<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'illuminance') }, } ] }/>
     $$
-    E_"v"="d"\Phi_"v"/"d"A
+    E_"v"=\dd \Phi_"v"/\dd A
     $$
     照度的常用单位为 $"lx"$，$1\thinsp "lx"=1\thinsp "lm/m"^2$。对于光出射度，对应的单位则直接使用 $"lm/m"^2$。
   </section>
   <section>
     ## 亮度与视亮度
-    由叠加原理，设一个光源的辐亮度的光谱分布为 $L_("e",\lambda) (\lambda)="d"L_"e"/"d"\lambda$，则亮度（luminance，又名辉度）
+    由叠加原理，设一个光源的辐亮度的光谱分布为 $L_("e",\lambda) (\lambda)=\dd L_"e"/\dd \lambda$，则亮度（luminance，又名辉度）
     $$
-    L_"v" = \int_0^+\infty  L_("e",\lambda) (\lambda)K_"m" V(\lambda)"d"\lambda = K_"m"\int_0^+\infty  L_("e",\lambda) (\lambda)V(\lambda)"d"\lambda
+    L_"v" = \int_0^+\infty  L_("e",\lambda) (\lambda)K_"m" V(\lambda)\dd \lambda = K_"m"\int_0^+\infty  L_("e",\lambda) (\lambda)V(\lambda)\dd \lambda
     $$
     亮度的常用单位为 $"nit"$，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
 
@@ -203,15 +203,15 @@ import References from '@/components/References.astro'
 
     银幕向前方（半球面 $\Omega$）反射光线。由 Lambert 余弦定律<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, `Lambert's cosine law`) }, } ] }/>，其亮度 $L$ 与观看角度无关。设观看位置与法线的夹角为 $\theta$，则该银幕总的光出射度与银幕亮度的关系是
     $$
-    M=\int_\Omega  L cos \theta "d"\Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
+    M=\int_\Omega  L cos \theta \dd \Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
     $$
     又<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '16' } ] }/>
     $$
-    "d"\Omega=sin\theta "d"\theta "d"\phi
+    \dd \Omega=sin\theta \dd \theta \dd \phi
     $$
     联立得
     $$
-    M = \int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta "d"\theta"d"\phi = L\int_0^2\pi  "d"\phi  \int_0^(1/2 \pi) cos \theta sin \theta "d"\theta = L\int_0^2\pi  "d"\phi  \int_0^1 sin \theta "d"sin \theta = L\int_0^2\pi  (1/2 "d"\phi) = \pi L
+    M = \int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta \dd \theta \dd \phi = L\int_0^2\pi  \dd \phi  \int_0^(1/2 \pi) cos \theta sin \theta \dd \theta = L\int_0^2\pi  \dd \phi  \int_0^1 sin \theta \dd sin \theta = L\int_0^2\pi  (1/2 \dd \phi) = \pi L
     $$
     即<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'Lambertian surface') }, } ] }/>
     $$
