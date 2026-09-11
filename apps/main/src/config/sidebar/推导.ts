@@ -8,6 +8,16 @@ export const Derivations = {
   },
   items: [
     {
+      label: '概览',
+      translations: {
+        en: 'Overview',
+      },
+      slug: 'derivations',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-rc', en: 'blank', })
+      },
+    },
+    {
       label: '坐标系',
       translations: {
         en: 'Coordinate Systems',
@@ -24,7 +34,7 @@ export const Derivations = {
       },
       slug: 'derivations/displays-light-and-vision',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-rc', en: 'blank', })
       }
     },
   ],
