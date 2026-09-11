@@ -3,12 +3,12 @@ import * as catalog from '@cs-first-aid/bibkit/catalog'
 import type { Entry } from '@cs-first-aid/bibkit/types/data'
 import '@/data/materials/import materials.ts'
 
-type Material_Module = { entries: Entry[], resolveRelations?: () => void }
+type Material_Module = { entries: Entry[], resolve_relations?: () => void }
 const material_modules = Object.entries(import.meta.glob<Material_Module>([ '/src/data/materials/*.ts', '!/src/data/materials/import materials.ts' ], { eager: true }))
 
 test('material relations resolve after every material module is registered', () => {
   const materials = catalog.all()
-  const modules_with_relations = material_modules.filter(([ , material_module ]) => material_module.resolveRelations)
+  const modules_with_relations = material_modules.filter(([ , material_module ]) => material_module.resolve_relations)
   expect(modules_with_relations.length).toBeGreaterThan(0)
   for (const [ module_path, material_module ] of modules_with_relations) {
     const relation_owners = material_module.entries.filter(({ material }) => material.custom?.companion?.length)

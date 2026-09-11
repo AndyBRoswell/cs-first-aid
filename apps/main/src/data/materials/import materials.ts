@@ -8,7 +8,7 @@ import * as util from '@cs-first-aid/util'
 
 type Material_Module = {
   entries: Entry[]
-  resolveRelations?: () => void
+  resolve_relations?: () => void
 }
 
 const logger = pino(util.pino_arg)
@@ -30,7 +30,7 @@ for (const [ module_path, material_module ] of material_modules) {
   if (Array.isArray(material_module.entries) === false) { throw new Error(`Material module ${module_path} does not export an \`entries\` array.`) }
   catalog.add_items(material_module.entries)
 }
-for (const [ , material_module ] of material_modules) { material_module.resolveRelations?.() }
+for (const [ , material_module ] of material_modules) { material_module.resolve_relations?.() }
 logger.debug('Materials loaded.')
 
 const materials_output_path: string = node_path.join(process.cwd(), 'local/materials.json') // Keep the app-owned dump output under apps/main.

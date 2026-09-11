@@ -54,7 +54,7 @@ const open_course = [
 
 export const entries = [ ...books, ...open_course ] satisfies types_data.Entry[]
 
-export function resolveRelations(): void {
+export function resolve_relations(): void {
   const material: types_data.Material = open_course[0]!.material
   material.custom!.companion = catalog.filter(
     m =>
