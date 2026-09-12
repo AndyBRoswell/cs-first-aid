@@ -1,0 +1,301 @@
+---
+title: Displays, Light and Vision
+author: AndyBRoswell, GPT-5.6 Sol Max [codex]
+translator: GPT-5.6 Sol Max [codex]
+proofreader: AndyBRoswell
+---
+
+import { references as M, } from '../../Derivations/Displays, Light and Vision.ts'
+import Cite from '@/components/Cite.astro'
+import * as util from '@cs-first-aid/util'
+import References from '@/components/References.astro'
+
+<section>
+  # Visual Acuity
+  Let the eye's minimum angle of resolution (MAR) be $\theta$ $"arcmin"$. If the corresponding visual acuity (UCVA / BCVA) is $V$ in decimal notation, then<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'section', locator: '3.3.1' } ] }/>
+  $$
+  \theta=1/V
+  $$
+  Thus, when $V=1.0$, the minimum angle of resolution is 1 arcminute; when $V=2.0$, it is 0.5 arcminutes.
+
+  The minimum angle of resolution is measured using optotypes. For an E optotype, the width of each stroke represents the angular resolution<Cite references={M} cite_items={[ { condition: 'GB/T 11533-2011', label: 'section', locator: '2.2' } ] }/>; for a C optotype (Landolt ring), the width of the gap or the ring represents the angular resolution.<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'figure', locator: 1 } ] }/>
+
+  Visual acuity can be expressed using notations other than decimal notation. For example, the mainland of China also uses the 5-mark record<Cite references={M} cite_items={[ { condition: 'GB/T 11533-2011', label: 'section', locator: '2.14' } ] }/>. It is calculated as
+  $$
+  L=5-lg \theta
+  $$
+  For example, 4.0 represents an MAR of 10 arcminutes, 5.0 represents a MAR of 1 arcminute, and 5.3 represents a MAR of 0.5 arcminutes.
+  Snellen fractions are also used in English-speaking regions<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'section', locator: '3.3.2' } ] }/>. They are calculated as
+  $$
+  V_"Sn"=D_"t"/D_"n"
+  $$
+  $V_"Sn"$, $D_"t"$, and $D_"n"$ represent the (unreduced) Snellen fraction, the test distance, and the normal distance, respectively. The value of $V_"Sn"$ equals the value in decimal notation. For instance, 20/40 or 6/12 represents 2 arcminutes: The optotype that the subject can identify from 20 feet or 6 meters can be identified by a person with normal vision from 40 feet or 12 meters. Similarly, 20/8 or 6/2.4 represents 0.4 arcminutes: The optotype that the subject can identify from 20 feet or 6 meters requires a person with normal vision to approach to within 8 feet or 2.4 meters to identify it.
+
+  LogMAR is one of the most commonly used notations in research literature. It is calculated as<Cite references={M} cite_items={[ { condition: 'ISO 8596:2017', label: 'section', locator: '3.3.3' } ] }/>
+  $$
+  V=10^"-LogMAR"
+  $$
+  Decimal visual acuities of 0.2, 1.0, and 1.6 correspond to LogMAR values of +0.70, 0, and -0.20, respectively.
+
+  [This lookup table](/en/tools-and-ideas/computers/displays#视力等级查找表) lists visual-acuity values in different notations.
+</section>
+<section>
+  # Pixel Density
+  Let $l$ be a unit length. The pixel density is
+  $$
+  \rho=l/p
+  $$
+  Substituting $l=1\thinsp"in"$ gives pixels per inch (PPI), while substituting $l=1\thinsp"cm"$ gives pixels per centimeter (PPCM).
+  <section>
+    ## Estimating the Required Pixel Density from Visual Acuity
+    Let $d$ be the viewing distance and $p$ the pixel pitch. Then
+    $$
+    tan(1/2 \theta)=(1/2 p)/d
+    $$
+    Therefore,
+    $$
+    p=2d tan(1/2 \theta)
+    $$
+    We also have
+    $$
+    1\thinsp"arcmin"=1/180 \pi\times 1/60
+    $$
+    Eliminating $\theta$ gives
+    $$
+    \rho=l/(2d tan(\pi/21600V))
+    $$
+    Thus, the required pixel density $\rho$ depends on both the visual acuity $V$ and the viewing distance $d$.
+
+    Note that this is only an estimate. Pixel densities above this value can still be useful:
+    - In general, the human eye has different sensitivities to points, lines, periodic textures, aliasing, etc.
+    - Subpixel layouts<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Optimal Rendering for Colour Matrix Displays'), options: { count: 1 } }, label: 'figure', locator: 1, } ]}/> such as RGB stripe and PenTile can have perceptible effects.
+    - Contrast, viewing angle, software-level font anti-aliasing, and other factors can also have significant effects.
+    - Binocular visual acuity is often better than monocular visual acuity.
+
+    [This lookup table](/en/tools-and-ideas/computers/displays#视力观看距离与-ppi-查找表) gives the required display PPI for a given visual acuity and viewing distance.
+  </section>
+</section>
+<section>
+  # Superposition Principle
+  Consider a system $y=F(x)$ with domain $D$, where $x$ and $y$ represent its input (stimulus) and output (response), respectively, and may be either scalars or vectors. $\forall x_1,x_2\in D$ if the following always hold:
+  - **Additivity:** $F(x_1+x_2)=F(x_1)+F(x_2)$
+  - **Homogeneity:** $F(ax)=aF(x)$, where $a$ is any scalar
+
+  then the system obeys the superposition principle. Additivity and homogeneity are collectively called linearity.
+
+  The superposition principle becomes invalid under certain special circumstances<Cite references={M} cite_items={[ { condition: { filter: m => m['collection-title']?.includes('OSE 6334') && /Introduction to nonlinear optics/.test(m.title) }, label: 'page', locator: '4-6' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Roadmap on nonlinear optics–focus on Chinese research') }, label: 'page', locator: 1 } ] }/>. However, it is generally valid for conventional display technologies.
+</section>
+<section>
+  # Luminance
+  <section>
+    ## Preliminaries of Radiometry
+    Let $Q$ be the cumulative energy emitted by a source of electromagnetic waves, and let $t$ denote a time point. If the source emits a total energy of $"\Delta"Q$ during the time interval $"\Delta"t$, then its (instantaneous) radiant flux (radiant power) at a particular moment is<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'section', locator: '4.1.1' } ] }/>
+    $$
+    \Phi_"e"=\Phi_"e" (t)=lim_("\Delta" t\rightarrow 0) ("\Delta"Q/"\Delta"t)=\dd Q/\dd t
+    $$
+    The subscript $"e"$ denotes a quantity in [radiometry](https://en.wikipedia.org/wiki/Radiometry)<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'section', locator: '2' } ] }/>.
+
+    At a particular moment, let $A$ denote the area of a surface, $P$ a point on that surface, $\dd A$ an area element containing $P$, and $\dd \Phi_"e" (P)$ the (instantaneous) radiant power that the area element receives or emits from all directions. The received and emitted quantities are called irradiance $E_"e" (P)$ and radiant exitance $M_"e" (P)$, respectively; each is the area density of radiant power. Thus<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.1' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'radiant exitance') }, } ] }/>
+    $$
+    E_"e" (P)=\dd \Phi_"e" (P)/\dd A
+    $$
+    $$
+    M_"e" (P)=\dd \Phi_"e" (P)/\dd A
+    $$
+
+    When the source is a **point source**, its radiant intensity in a direction $\omega$ (represented by a unit vector), i.e., the radiant power per unit solid angle, is<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.2' } ] }/>
+    $$
+    I_"e" (\omega)=\dd \Phi_"e" (\omega)/\dd \omega
+    $$
+    where $\dd \omega$ is the differential solid angle around that direction<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '13, 16-17' } ] }/>.
+
+    Experiments show that, outside strong gravitational fields, meanwhile in a vacuum or a uniform isotropic medium without absorption, diffraction, scattering, or interfaces (hereafter called "ideal conditions"), electromagnetic waves can be approximated as traveling in straight lines. Their directions of propagation can be represented by rays. When the electromagnetic waves are visible light, these rays are called light rays.
+
+    An electromagnetic wave does not necessarily pass through a surface perpendicularly. Let $n\vec$ be the normal vector at a point $P$ in the area element $\dd A$, and let the wave arrive from direction $\omega$. Write $\theta=\angle(n\vec,\omega)=\langle n\vec,\omega\rangle$ s.t. $\theta\in[0, 1/2 \pi)$. The irradiance from direction $\omega$ is then
+    $$
+    \dd E_("e"\perp) (P,\omega)=\dd E_"e" (P,\omega)/cos\theta
+    $$
+    In other words, the area element $\dd A$ would receive irradiance $\dd E_("e"\perp) (P,\omega)$ from direction $\omega$ only if it were perpendicular to $\omega$, i.e., $\theta=0$. If it is not perpendicular to the incident radiation—that is, if $\theta>0$—it receives only the lower irradiance $\dd E_"e" (P,\omega) = \dd E_("e"\perp) (P,\omega)cos\theta$ from that direction. For example, sunlight can be treated as parallel light in everyday situations. A solar panel receives its maximum irradiance, and therefore can generate the most electricity, only when sunlight strikes it perpendicularly.
+
+    Choose a point $P$ on a surface and an observation direction $\omega$. The radiance at $P$ in direction $\omega$ is<Cite references={M} cite_items={[ { condition: 'PBRT', label: 'equation', locator: '4.3' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '33' } ] }/>
+    $$
+    L_"e" (P,\omega) = \dd E_("e"\perp) (P,\omega)/\dd \omega = \dd^2 \Phi_"e" (P,\omega)/(\dd A cos\theta \dd \omega)
+    $$
+    $\dd^2 \Phi_"e" (P,\omega)$ represents the radiant power transmitted by the area element $\dd A$ containing $P$ through a small solid angle $\dd \omega$ around direction $\omega$.
+
+    Under ideal conditions, let points $P_1$ and $P_2$ lie on area elements $\dd A_1$ and $\dd A_2$, respectively, separated by a distance $r$. Consider a steady beam of electromagnetic radiation traveling from $P_1$ toward $P_2$ in direction $\omega$. By conservation of energy, the power that this beam transmits through $\dd A_1$ and $\dd A_2$ is the same, denote it by $\dd^2 \Phi_"e"$. Let the acute angles $\theta_1$ and $\theta_2$ be the angles between the propagation direction $\omega$ and the normal vectors of $\dd A_1$ at $P_1$ and $\dd A_2$ at $P_2$, respectively. Then
+    $$
+    L_"e" (P_1,\omega)=\dd^2 \Phi_"e"/(\dd A_1 cos \theta_1 \dd \omega_1) \thinsp,\emsp L_"e" (P_2,\omega)=\dd^2 \Phi_"e"/(\dd A_2 cos \theta_2 \dd \omega_2)
+    $$
+    Here, $\dd \omega_1 $ can be determined from $\dd A_2$ and $\theta_2$, while $\dd \omega_2$ can be determined from $\dd A_1$ and $\theta_1$:
+    $$
+    \dd \omega_1=\dd A_2 cos \theta_2/r^2 \thinsp,\emsp \dd \omega_2=\dd A_1 cos \theta_1/r^2
+    $$
+    Combining these equations gives
+    $$
+    \dd^2 \Phi_"e"=L_"e" (P_1,\omega)\dd A_1 cos \theta_1 \dd \omega_1=L_"e" (P_1,\omega) \dd A_1 cos \theta_1 \dd A_2 cos \theta_2/r^2
+    $$
+    $$
+    \dd^2 \Phi_"e"=L_"e" (P_2,\omega)\dd A_2 cos \theta_2 \dd \omega_2=L_"e" (P_2,\omega) \dd A_2 cos \theta_2 \dd A_1 cos \theta_1/r^2
+    $$
+    Therefore,
+    $$
+    L_"e" (P_1,\omega)=L_"e" (P_2,\omega)
+    $$
+    This shows that, under ideal conditions, the radiance observed from the same steady source of electromagnetic waves remains constant along the direction in which the radiation propagates.<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '32' } ] }/>
+  </section>
+  <section>
+    ## Luminous Efficiency Functions
+    Numerous experiments have shown that the human eye has different sensitivities to light at different wavelengths. Its sensitivity to a given wavelength also differs between well-lit and low-light environments<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'figure', locator: '1' } ] }/>.
+
+    Under photopic conditions, denote the (relative) spectral luminous efficiency function<Cite references={M} cite_items={[ { condition: { filter: m => /光学/.test(m.title) && /新概念物理教程/.test(m.title) }, label: 'page', locator: '17' } ] }/> by $V(\lambda)\in [0, 1]$, where $\lambda$ is the wavelength of the light. Outside the visible-light wavelength range, define $V(\lambda)=0$.
+
+    The scotopic spectral luminous efficiency function $V\prime(\lambda)$ is defined similarly.
+  </section>
+  <section>
+    ## Luminous Flux, Luminous Exitance, and Illuminance
+    A light source can emit light at multiple wavelengths simultaneously. By the superposition principle, let the spectral distribution of the source's radiant flux be $\Phi_("e",\lambda) (\lambda)=\dd \Phi_"e" /\dd \lambda$. Its luminous flux under photopic and scotopic conditions is, respectively,
+    $$
+    \Phi_"v" = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m" V(\lambda)\dd \lambda = K_"m"\int_0^+\infty  \Phi_("e",\lambda) (\lambda)V(\lambda)\dd \lambda
+    $$
+    $$
+    \Phi_"v"^\prime = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m"^\prime  V\prime(\lambda)\dd \lambda = K_"m"^\prime \int_0^+\infty  \Phi_("e",\lambda) (\lambda)V\prime(\lambda)\dd \lambda
+    $$
+    The subscript $"v"$ denotes a quantity in [photometry](https://en.wikipedia.org/wiki/Photometry_(optics))<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'section', locator: '2' } ] }/>.
+
+    The maximum luminous efficacies under photopic and scotopic conditions are
+    $$
+    K_"m" = K_"cd"  V(\lambda_"m")/V(\lambda_"a")\thinsp,\emsp K_"m"^\prime = K_"cd"  V^\prime  (\lambda_"m"^\prime)/V^\prime  (\lambda_"a")
+    $$
+    In 2019, $K_"cd"$ was defined to be exactly $683\thinsp"lm/W"$<Cite references={M} cite_items={[ { condition: { filter: m => /Mise en pratique for the definition of the candela/.test(m.title) }, label: 'section', locator: '2' } ] }/>. This means that converting 1 W of power entirely into visible light at $f_"cd"=540\thinsp"THz"$ produces a luminous flux of 683 lm. Monochromatic radiation at frequency $f_"cd"$ is also specified to have wavelength $\lambda_"a"=555.017\thinsp"nm"$ in standard air<Cite references={M} cite_items={[ { condition: { filter: m => /Mise en pratique for the definition of the candela/.test(m.title) }, label: 'page', locator: '3' } ] }/>.
+
+    Experiments show that under photopic and scotopic conditions, $V(\lambda)$ and $V^\prime  (\lambda)$ reach their respective peaks at wavelengths $\lambda_"m"=555\thinsp"nm"$ and $\lambda_m^\prime  = 507\thinsp"nm"$. It follows that $K_"m"\approx 683.002\thinsp"lm/W"$<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'equation', locator: '4' } ] }/> and $K_"m"^\prime  \approx 1700.13\thinsp"lm/W"$<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'equation', locator: '6' } ] }/>.
+
+    Luminous flux emitted or reflected per unit area is called luminous exitance<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'luminous exitance') }, } ] }/>
+    $$
+    M_"v"=\dd \Phi_"v"/\dd A
+    $$
+    Luminous flux received per unit area is called illuminance<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'illuminance') }, } ] }/>
+    $$
+    E_"v"=\dd \Phi_"v"/\dd A
+    $$
+    A common unit of illuminance is the lux, $"lx"$, where $1\thinsp "lx"=1\thinsp "lm/m"^2$. The corresponding unit used for luminous exitance is simply $"lm/m"^2$.
+  </section>
+  <section>
+    ## Luminance and Brightness
+    By the superposition principle, let the spectral distribution of a source's radiance be $L_("e",\lambda) (\lambda)=\dd L_"e"/\dd \lambda$. Its luminance is
+    $$
+    L_"v" = \int_0^+\infty  L_("e",\lambda) (\lambda)K_"m" V(\lambda)\dd \lambda = K_"m"\int_0^+\infty  L_("e",\lambda) (\lambda)V(\lambda)\dd \lambda
+    $$
+    A common unit of luminance is $"nit"$, which is equal to $"cd/m"^2$, where $1\thinsp"cd"=1\thinsp"lm/sr"$.
+
+    Under ideal conditions, the spectral radiance $L_("e",\lambda) (\lambda)$ remains constant along a ray emitted by the same steady light source, so its luminance also remains constant. This agrees with everyday experience: Outdoors on a clear day with unchanged lighting conditions, approaching a white wall makes the wall cover more of the visual field, while moving away makes it cover less; nevertheless, the wall does not appear to become noticeably brighter or darker.
+
+    Besides luminance, there is also a quantity called brightness. The difference is that luminance is a physically measurable photometric quantity, whereas brightness is affected by the background, contrast, visual adaptation, and other viewing conditions.
+  </section>
+  <section>
+    ## Measurement
+    An instrument that measures illuminance is called an illuminance meter; one that measures luminance is called a luminance meter. The main instruments used to measure luminous flux are integrating spheres and goniophotometers.
+
+    In practice, measuring illuminance is far more convenient than measuring luminance, while measuring luminance is far more convenient than measuring luminous flux, which is usually measured in a specialized laboratory. Because measuring illuminance is comparatively inexpensive, nearly all mainstream smartphones include an illuminance sensor.
+  </section>
+  <section>
+    ## Application: Screen Luminance and Projector Luminous Flux
+    Suppose a cinema auditorium uses a screen of area $A$. Assume that every point on the screen always has a reflectance<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'reflectance') }, } ] }/> of $\rho=1$, an absorptance<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'absorptance') }, } ] }/> of $\alpha=0$, and a transmittance<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'transmittance') }, } ] }/> of $\tau=0$, and that it is an ideal diffuse reflector (a Lambertian surface)<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'Lambertian surface') }, } ] }/>. The projector(s) and screen are engineered to make the luminance as uniform as possible across the screen.
+
+    The screen reflects light into the forward hemisphere $\Omega$. By Lambert's cosine law<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, `Lambert's cosine law`) }, } ] }/>, its luminance $L$ is independent of the viewing angle. Let $\theta$ be the angle between the viewing direction and the surface normal. The relationship between the screen's total luminous exitance and its luminance is
+    $$
+    M=\int_\Omega  L cos \theta \dd \Omega  \emsp"s.t.  "\theta\in[0, 1/2 \pi)
+    $$
+    Also<Cite references={M} cite_items={[ { condition: { filter: m => m["collection-title"]?.includes('CS 184') && /Lecture/.test(m.title) && /Radiometry/.test(m.title) }, label: 'page', locator: '16' } ] }/>,
+    $$
+    \dd \Omega=sin\theta \dd \theta \dd \phi
+    $$
+    Combining the equations gives
+    $$
+    M = \int_0^2\pi  \int_0^(1/2 \pi)  L cos\theta sin\theta \dd \theta \dd \phi = L\int_0^2\pi  \dd \phi  \int_0^(1/2 \pi) cos \theta sin \theta \dd \theta = L\int_0^2\pi  \dd \phi  \int_0^1 sin \theta \dd sin \theta = L\int_0^2\pi  (1/2 \dd \phi) = \pi L
+    $$
+    Therefore<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m["container-title"], 'E-ILV') && util.ieq(m.title, 'Lambertian surface') }, } ] }/>,
+    $$
+    L=M/\pi
+    $$
+    Let the rated luminous flux of the projector be $F$. If only one projector is used, it must satisfy
+    $$
+    F>=MA
+    $$
+
+    If $N$ identical projectors are used, and each uniformly illuminates the entire screen while their luminous-flux outputs add linearly, the required luminous flux of each projector is at least
+    $$
+    F>=MA/N
+    $$
+
+    In reality, of course, a screen cannot reflect all incident light, and a projector's actual luminous-flux output may not always reach its rated value. The rated luminous flux actually required from each projector is therefore usually greater than $F$. This result is only an ideal lower bound, and appropriate headroom should be allowed when selecting equipment.
+
+    Modern cinemas also commonly use high-gain screens. These provide greater luminance than a Lambertian screen to viewers looking from near the screen's normal direction, at the cost of reduced luminance at larger viewing angles. In general, a screen's gain depends not only on the viewing direction but also on the incident direction of the light. These involve more complex mathematical methods and are not discussed here.
+    <section>
+      ### Examples
+      Projection luminance is commonly expressed in foot-lamberts, $"fL"$. The conversion between $"fL"$ and $"nit"$ is
+      $$
+      1\thinsp"fL"=(1/\pi)\thinsp"cd/ft"^2 \approx 3.42626\thinsp"cd/m"^2 = 3.42626\thinsp"nit"\thinsp,\emsp 1\thinsp"nit" \approx 0.291864\thinsp"fL"
+      $$
+      Thus, $31\thinsp"fL" \approx 106.214\thinsp"nit"$ and $22\thinsp"fL" \approx 75.3777\thinsp"nit"$. For the ideal Lambertian screen assumed in this section, a target luminance of $1\thinsp"fL"$ corresponds to a luminous exitance of $1\thinsp"lm/ft"^2$. The numerical luminance value in $"fL"$ can therefore be used directly as the luminous-exitance value in $"lm/ft"^2$ for these calculations.
+
+      **Example 1:** A cinema auditorium has a screen measuring $22\thinsp"m"\times 12\thinsp"m"$. The required projection luminance for 2D films is $31\thinsp"fL"$, and 2 projectors are used. The screen area and corresponding luminous exitance are
+      $$
+      A=(22\thinsp"m")\times (12\thinsp"m")=264\thinsp"m"^2 \approx 2\thinsp 841.672\thinsp 350\thinsp"ft"^2,\emsp M=31\thinsp"lm/ft"^2
+      $$
+      Therefore, each projector must provide a luminous flux of
+      $$
+      F>=MA/2=((31\thinsp"lm/ft"^2)(2\thinsp 841.672\thinsp 350\thinsp"ft"^2))/2 \approx 44\thinsp 046\thinsp"lm"
+      $$
+      In theory, each projector must provide at least approximately $44\thinsp 000\thinsp"lm"$ of luminous flux.
+
+      **Example 2:** A cinema auditorium has a screen measuring $28\thinsp"m"\times 21\thinsp"m"$. The required projection luminance for 2D films is $22\thinsp"fL"$, and 2 projectors are used. The screen area and corresponding luminous exitance are
+      $$
+      A=(28\thinsp"m")\times (21\thinsp"m")=588\thinsp"m"^2 \approx 6\thinsp 329.179\thinsp 325\thinsp"ft"^2,\emsp M=22\thinsp"lm/ft"^2
+      $$
+      Therefore, each projector must provide a luminous flux of
+      $$
+      F>=MA/2=((22\thinsp"lm/ft"^2)(6\thinsp 329.179\thinsp 325\thinsp"ft"^2))/2 \approx 69\thinsp 621\thinsp"lm"
+      $$
+      In theory, each projector must provide at least approximately $70\thinsp 000\thinsp"lm"$ of luminous flux. This already exceeds the maximum luminous flux of almost all cinema projectors, such as [DP4K-60L](https://assets.barco.com/m/26204f8aece25c04/original/DP4K-60L-en-Spec-sheet.pdf), so a custom projector or a high-gain screen is almost certainly required.
+
+      **Example 3:** A cinema auditorium has a screen measuring $19\thinsp"m"\times 10\thinsp"m"$. The required projection luminance for 2D films is $22\thinsp"fL"$, and 1 projector is used. The screen area and corresponding luminous exitance are
+      $$
+      A=(19\thinsp"m")\times (10\thinsp"m")=190\thinsp"m"^2 \approx 2\thinsp 045.142\thinsp 979\thinsp"ft"^2,\emsp M=22\thinsp"lm/ft"^2
+      $$
+      Therefore, the projector must provide a luminous flux of
+      $$
+      F>=MA=(22\thinsp"lm/ft"^2)(2\thinsp 045.142\thinsp 979\thinsp"ft"^2) \approx 44\thinsp 993\thinsp"lm"
+      $$
+      In theory, the projector must provide at least approximately $45\thinsp 000\thinsp"lm"$ of luminous flux.
+    </section>
+  </section>
+</section>
+<section>
+  # Color Models and Gamuts
+  <section>
+    ## Preliminaries
+    (TBC)
+  </section>
+  <section>
+    ## Color-Matching Experiments
+    (TBC)
+  </section>
+  <section>
+    ## Color Models
+    (TBC)
+  </section>
+  <section>
+    ## Gamuts
+    (TBC)
+  </section>
+</section>
+<section>
+  # Gamma
+  (TBC)
+</section>
+<section>
+  # References
+  <References materials={M}/>
+</section>
