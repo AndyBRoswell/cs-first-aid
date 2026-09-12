@@ -34,7 +34,7 @@ export const Derivations = {
       },
       slug: 'derivations/displays-light-and-vision',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-rc', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-rc', en: '2026.1.0-rc', })
       }
     },
   ],
