@@ -21,7 +21,7 @@
     "@fast-check/vitest": "^0.5.0",
     "netlify-cli": "^27.5.2",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.11",
+    "vitest": "^5.0.0",
     "wrangler": "^4.131.1"
   }
 }
