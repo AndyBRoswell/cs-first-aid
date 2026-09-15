@@ -115,6 +115,14 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }} # Authenticate Netlify CLI
           NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }} # Select the existing Netlify project
 
+      - name: Deploy to statichost.eu
+        id: deploy-statichost
+        if: github.ref_name == 'main' # The Hobby plan provides one production site and no staging site
+        continue-on-error: true # Record a statichost.eu failure without blocking the other providers
+        env:
+          STATICHOST_API_KEY: ${{ secrets.STATICHOST_API_KEY }}
+        run: "& './.github/scripts/Deploy statichost.eu.ps1'"
+
       - name: Build for GitHub Pages
         id: build-github-pages
         continue-on-error: true # Keep the other deployment providers independent from a Pages-specific build failure
@@ -137,6 +145,7 @@ jobs:
           deploy_Vercel_production_outcome: ${{ steps.deploy-vercel-production.outcome }}
           deploy_Cloudflare_outcome: ${{ steps.deploy-cloudflare.outcome }}
           deploy_Netlify_outcome: ${{ steps.deploy-netlify.outcome }}
+          deploy_statichost_outcome: ${{ steps.deploy-statichost.outcome }}
           build_GitHub_Pages_outcome: ${{ steps.build-github-pages.outcome }}
           deploy_GitHub_Pages_outcome: ${{ steps.deploy-github-pages.outcome }}
         run: "& './.github/scripts/Check deployment results.ps1'"

@@ -17,6 +17,7 @@ on:
           - 'Cloudflare Pages'
           - Vercel
           - Netlify
+          - statichost.eu
           - 'GitHub Pages'
 
 permissions:
@@ -53,6 +54,8 @@ jobs:
             url: https://cs-first-aid.vercel.app
           - name: Netlify
             url: https://cs-first-aid.netlify.app
+          - name: statichost.eu
+            url: https://cs-first-aid.statichost.eu
           - name: GitHub Pages
             url: https://andybroswell.github.io/cs-first-aid/main
 

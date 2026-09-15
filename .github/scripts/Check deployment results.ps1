@@ -28,6 +28,9 @@ if ($env:deploy_Cloudflare_outcome -ne 'success') {
 if ($env:GITHUB_REF_NAME -eq 'main' -and $env:deploy_Netlify_outcome -ne 'success') {
   add-failure 'Netlify deployment failed.'
 }
+if ($env:GITHUB_REF_NAME -eq 'main' -and $env:deploy_statichost_outcome -ne 'success') {
+  add-failure 'statichost.eu deployment failed.'
+}
 if ($env:build_GitHub_Pages_outcome -ne 'success') {
   add-failure 'GitHub Pages build failed.'
 }

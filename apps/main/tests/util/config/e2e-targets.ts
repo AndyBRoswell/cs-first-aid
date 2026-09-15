@@ -6,6 +6,7 @@ export const deployed_URL = {
   'Cloudflare Pages': 'https://cs-first-aid.pages.dev',
   Vercel: 'https://cs-first-aid.vercel.app',
   Netlify: 'https://cs-first-aid.netlify.app',
+  'statichost.eu': 'https://cs-first-aid.statichost.eu',
   'GitHub Pages': 'https://andybroswell.github.io/cs-first-aid/main',
 } as const
 
