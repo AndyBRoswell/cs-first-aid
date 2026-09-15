@@ -39,6 +39,7 @@
   - https://cs-first-aid.netlify.app/
   - https://cs-first-aid.vercel.app/
   - https://andybroswell.github.io/cs-first-aid/main/
+  - https://cs-first-aid.statichost.page/
 - dev:
   - https://dev.cs-first-aid.pages.dev/
   - https://cs-first-aid-dev.vercel.app/ （需要登录 Vercel）
