@@ -55,7 +55,7 @@ jobs:
           - name: Netlify
             url: https://cs-first-aid.netlify.app
           - name: statichost.eu
-            url: https://cs-first-aid.statichost.eu
+            url: https://cs-first-aid.statichost.page
           - name: GitHub Pages
             url: https://andybroswell.github.io/cs-first-aid/main
 
