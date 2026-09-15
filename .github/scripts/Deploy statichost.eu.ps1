@@ -1,4 +1,4 @@
-# Created by GPT-5.6 Sol Max [codex].
+# Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
 
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
