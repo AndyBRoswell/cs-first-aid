@@ -22,7 +22,7 @@ export type E2E_Target = {
 const milliseconds_per_day = 24 * 60 * 60 * 1_000
 
 export function get_round_robin_site(now: Date = new Date()): { name: Deployed_Site_Name, URL: string } {
-  const day = Math.floor(now.getTime() / milliseconds_per_day) // Epoch days make the choice deterministic across runners and independent of missed workflow runs. Always non-positive since epoch.
+  const day = Math.floor(now.getTime() / milliseconds_per_day) // Epoch days make the choice deterministic across runners and independent of missed workflow runs. Always non-negative since epoch.
   const index = day % deployed_site_names.length
   const name = deployed_site_names[index]!
   return { name, URL: deployed_URL[name] }
