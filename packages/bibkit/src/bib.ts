@@ -119,9 +119,9 @@ function render_link_field(class_name: 'URL' | 'free_material', label: string, l
 }
 
 function render_free_material(free_material: NonNullable<NonNullable<Material['custom']>['free_material']>, label: Extra_Bib_Label): node_html_parser.HTMLElement {
-  if (Array.isArray(free_material)) { return render_link_field('free_material', label.free_materials, free_material) }
+  if (Array.isArray(free_material)) { return render_link_field('free_material', label.free_material, free_material) }
   const field = util.create_HTML_element('div', { class: 'free_material', })
-  field.appendChild(util.create_HTML_element('span', { class: 'label', }, label.free_materials))
+  field.appendChild(util.create_HTML_element('span', { class: 'label', }, label.free_material))
   const groups = util.create_HTML_element('dl', { class: 'groups', })
   for (const [ name, links ] of Object.entries(free_material)) {
     groups.appendChild(util.create_HTML_element('dt', { class: 'label', }, label.free_material_groups[name] ?? name))
@@ -158,7 +158,7 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
       }
       additional.appendChild(field)
     }
-    if (material.custom.URL !== undefined) { additional.appendChild(render_link_field('URL', labels.additional_links, material.custom.URL)) }
+    if (material.custom.URL !== undefined) { additional.appendChild(render_link_field('URL', labels.URL, material.custom.URL)) }
     if (material.custom.free_material !== undefined) { additional.appendChild(render_free_material(material.custom.free_material, labels)) }
     decorated_entry.appendChild(additional)
   }
