@@ -17,7 +17,7 @@ export const entries = [
       URL: 'https://www.iso.org/standard/36631.html',
       custom: {
         free_material: {
-          Preview: [
+          preview: [
             {
               link: 'https://preview.sist.si/sist-preview/36631/c0883203ea25445c9992bb09343620c5/ISO-216-2007.pdf',
               'Content-Type': 'application/pdf',

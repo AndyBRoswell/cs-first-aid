@@ -103,9 +103,9 @@ test('print_bibliography renders named free-material groups', () => {
     title: 'Grouped links',
     custom: {
       free_material: {
-        Preview: [ 'https://example.com/preview.pdf', ],
-        'Sample Chapter': [ 'https://example.com/sample.pdf', ],
-        Source: [ { link: 'https://example.com/source', display_text: 'Repository', }, ],
+        preview: [ 'https://example.com/preview.pdf', ],
+        sample_chapter: [ 'https://example.com/sample.pdf', ],
+        source: [ { link: 'https://example.com/source', display_text: 'Repository', }, ],
       },
     },
   } satisfies Material

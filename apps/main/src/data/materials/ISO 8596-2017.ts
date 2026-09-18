@@ -16,7 +16,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 9, 10 ] ] },
       custom: {
         free_material: {
-          Preview: [
+          preview: [
             {
               link: 'https://cdn.standards.iteh.ai/samples/69042/42ad78d4a3a34245a4d5b91f3a14a3e9/ISO-8596-2017.pdf',
               'Content-Type': 'application/pdf',

@@ -13,8 +13,8 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
     additional_links: '其它链接：',
     free_materials: '免费资源：',
     free_material_groups: {
-      Preview: '预览',
-      'Sample Chapter': '样章',
+      preview: '预览',
+      sample_chapter: '样章',
     },
   },
   en: {
@@ -23,8 +23,8 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
     additional_links: 'Additional links:',
     free_materials: 'Free materials:',
     free_material_groups: {
-      Preview: 'Preview',
-      'Sample Chapter': 'Sample chapter',
+      preview: 'Preview',
+      sample_chapter: 'Sample chapter',
     },
   },
 }
