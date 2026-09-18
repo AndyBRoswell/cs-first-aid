@@ -1,9 +1,13 @@
+export const self_label: unique symbol = Symbol('self_label') // A node's own label; string keys name its children.
+
 export type Extra_Bib_Label = Readonly<{
   lecturer: string
   suggested_playback_speed: string
   URL: string
-  free_material: string
-  free_material_groups: Readonly<Record<string, string>>
+  free_material: Readonly<{
+    [self_label]: string
+    [name: string]: string
+  }>
 }>
 
 const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
@@ -11,8 +15,8 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
     lecturer: '主讲：',
     suggested_playback_speed: '建议倍速：',
     URL: '其它链接：',
-    free_material: '免费资源：',
-    free_material_groups: {
+    free_material: {
+      [self_label]: '免费资源：',
       preview: '预览',
       sample_chapter: '样章',
     },
@@ -21,8 +25,8 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
     lecturer: 'Lecturer: ',
     suggested_playback_speed: 'Suggested playback speed: ',
     URL: 'Additional links:',
-    free_material: 'Free materials:',
-    free_material_groups: {
+    free_material: {
+      [self_label]: 'Free materials:',
       preview: 'Preview',
       sample_chapter: 'Sample chapter',
     },

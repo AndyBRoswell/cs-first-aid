@@ -84,7 +84,7 @@ test('print_bibliography renders localized additional and free link lists', () =
     expect(additional_link.getAttribute('href')).toBe(material.custom!.URL![0])
 
     const free_materials = root.querySelector('.custom > .free_material')!
-    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(labels.free_material)
+    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(labels.free_material[i18n.self_label])
     const free_link = free_materials.querySelector('.Link')!
     expect(free_link.classList.value).toEqual([ 'Link', ])
     expect(free_link.querySelector(':scope > .link')!.textContent).toBe('<PDF>&')
@@ -106,6 +106,7 @@ test('print_bibliography renders named free-material groups', () => {
         preview: [ 'https://example.com/preview.pdf', ],
         sample_chapter: [ 'https://example.com/sample.pdf', ],
         source: [ { link: 'https://example.com/source', display_text: 'Repository', }, ],
+        self_label: [ 'https://example.com/custom-group', ], // A string group name remains independent of the symbol for the field's own label.
       },
     },
   } satisfies Material
@@ -113,8 +114,10 @@ test('print_bibliography renders named free-material groups', () => {
   for (const language of i18n.supported_languages) {
     const labels = i18n.get_extra_bib_label(language)
     const free_materials = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .free_material')!
+    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(labels.free_material[i18n.self_label])
     const rendered_groups = free_materials.querySelector(':scope > .groups')!
-    expect(rendered_groups.querySelectorAll(':scope > .label').map(group => group.textContent)).toEqual(expected_groups.map(([ name ]) => labels.free_material_groups[name] ?? name))
+    expect(rendered_groups.querySelectorAll(':scope > .label').map(group => group.textContent)).toEqual(expected_groups.map(([ name ]) => labels.free_material[name] ?? name))
+    expect(rendered_groups.querySelectorAll(':scope > .label').at(-1)!.textContent).toBe('self_label')
     expect(rendered_groups.querySelectorAll(':scope > .material').map(group => group.querySelectorAll('.link').map(link => link.textContent))).toEqual(expected_groups.map(([ , links ]) => links.map(link => typeof link === 'string' ? link : link.display_text ?? link.link)))
   }
 })

@@ -60,11 +60,11 @@ export async function check_references(main: Locator, references: types_data.Sco
         if (material.custom.free_material !== undefined) {
           const free_material = material.custom.free_material
           const rendered_free_material = custom_div.locator('.free_material')
-          await expect(rendered_free_material.locator(':scope > .label')).toHaveText(labels.free_material)
+          await expect(rendered_free_material.locator(':scope > .label')).toHaveText(labels.free_material[i18n.self_label])
           if (Array.isArray(free_material)) { await check_links(rendered_free_material, free_material) }
           else {
             const groups = Object.entries(free_material)
-            await expect(rendered_free_material.getByRole('term')).toHaveText(groups.map(([ name ]) => labels.free_material_groups[name] ?? name))
+            await expect(rendered_free_material.getByRole('term')).toHaveText(groups.map(([ name ]) => labels.free_material[name] ?? name))
             await expect(rendered_free_material.getByRole('definition')).toHaveCount(groups.length)
             await check_links(rendered_free_material, groups.flatMap(([ , links ]) => links))
           }
