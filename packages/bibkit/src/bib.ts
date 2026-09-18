@@ -52,7 +52,7 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
     free_materials: '免费资源：',
     free_material_groups: {
       Preview: '预览',
-      sample_chapter: '样章',
+      'Sample Chapter': '样章',
     },
   },
   en: {
@@ -62,7 +62,7 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
     free_materials: 'Free materials:',
     free_material_groups: {
       Preview: 'Preview',
-      sample_chapter: 'Sample chapter',
+      'Sample Chapter': 'Sample chapter',
     },
   },
 }

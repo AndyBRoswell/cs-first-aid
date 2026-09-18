@@ -103,7 +103,7 @@ test('print_bibliography renders named free-material groups', () => {
     custom: {
       free_material: {
         Preview: [ 'https://example.com/preview.pdf', ],
-        sample_chapter: [ 'https://example.com/sample.pdf', ],
+        'Sample Chapter': [ 'https://example.com/sample.pdf', ],
         Source: [ { link: 'https://example.com/source', display_text: 'Repository', }, ],
       },
     },
