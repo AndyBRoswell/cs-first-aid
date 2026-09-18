@@ -6,6 +6,7 @@ import default_bib_style from './IEEE.custom.csl'
 import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name, Serialized_Scope_Name, Material, Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, Link, } from "./types/data.ts";
 import * as catalog from './catalog.ts'
 import { check_filter_results, type Filter_Options } from "./catalog.ts"
+import { get_extra_bib_label, type Extra_Bib_Label } from './i18n.ts'
 import pino from 'pino'
 import * as util from "@cs-first-aid/util"
 import node_os from "node:os"
@@ -35,47 +36,6 @@ type indexing_action =
 
 export type Reference_Range = [ start: number, end: number ]
 export type Reference_Ranges = Record<Serialized_Scope_Name, Reference_Range>
-
-export type Extra_Bib_Label = Readonly<{
-  lecturer: string
-  suggested_playback_speed: string
-  additional_links: string
-  free_materials: string
-  free_material_groups: Readonly<Record<string, string>>
-}>
-
-const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
-  'zh-CN': {
-    lecturer: '主讲：',
-    suggested_playback_speed: '建议倍速：',
-    additional_links: '其它链接：',
-    free_materials: '免费资源：',
-    free_material_groups: {
-      Preview: '预览',
-      'Sample Chapter': '样章',
-    },
-  },
-  en: {
-    lecturer: 'Lecturer: ',
-    suggested_playback_speed: 'Suggested playback speed: ',
-    additional_links: 'Additional links:',
-    free_materials: 'Free materials:',
-    free_material_groups: {
-      Preview: 'Preview',
-      'Sample Chapter': 'Sample chapter',
-    },
-  },
-}
-export const supported_languages: readonly string[] = Object.freeze(Object.keys(extra_bib_label))
-
-export function get_extra_bib_label(language: string): Extra_Bib_Label {
-  let locale: Intl.Locale
-  try { locale = new Intl.Locale(language) }
-  catch (cause) { throw new RangeError(`Invalid bibliography language: ${JSON.stringify(language)}`, { cause }) }
-  const labels = extra_bib_label[locale.baseName] ?? extra_bib_label[locale.language]
-  if (labels === undefined) { throw new RangeError(`Unsupported bibliography language: ${JSON.stringify(language)}`) }
-  return labels
-}
 
 // TODO: Test case for loop detection
 // Created by Gemini 3.1 Pro Extended [web]. Revised by AndyBRoswell.

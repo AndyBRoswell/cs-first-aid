@@ -2,6 +2,7 @@ import { expect, type Locator } from '@playwright/test'
 import * as types_data from '@cs-first-aid/bibkit/types/data'
 import * as catalog from '@cs-first-aid/bibkit/catalog'
 import * as bib from '@cs-first-aid/bibkit/bib'
+import * as i18n from '@cs-first-aid/bibkit/i18n'
 // @ts-ignore [cssesc doesn't have ts support]
 import cssesc from "cssesc";
 import * as util from '@cs-first-aid/util'
@@ -23,7 +24,7 @@ export function locate_references(main: Locator, scope_name: types_data.Scope_Na
 
 export async function check_references(main: Locator, references: types_data.Scoped_References) {
   const language = await main.evaluate(element => element.ownerDocument.documentElement.lang)
-  const labels = bib.get_extra_bib_label(language)
+  const labels = i18n.get_extra_bib_label(language)
   const References_locators = await main.locator('.References').all()
   for (const locator of References_locators) {
     // basic

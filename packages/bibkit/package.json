@@ -55,6 +55,10 @@
       "development": "./src/CSL.ts",
       "default": "./dist/CSL.mjs"
     },
+    "./i18n": {
+      "development": "./src/i18n.ts",
+      "default": "./dist/i18n.mjs"
+    },
     "./tools/Vite plugin": {
       "development": "./tools/Vite plugin.ts",
       "default": "./dist/tools/Vite plugin.mjs"
@@ -70,6 +74,7 @@
       "./bib": "./dist/bib.mjs",
       "./catalog": "./dist/catalog.mjs",
       "./CSL": "./dist/CSL.mjs",
+      "./i18n": "./dist/i18n.mjs",
       "./tools/Vite plugin": "./dist/tools/Vite plugin.mjs",
       "./types/data": "./dist/types/data.mjs",
       "./package.json": "./package.json"

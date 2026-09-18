@@ -5,6 +5,7 @@ import { fc, test } from '@fast-check/vitest'
 import { expect } from 'vitest'
 import * as node_html_parser from 'node-html-parser'
 import * as bib from '@/bib.ts'
+import * as i18n from '@/i18n.ts'
 import * as CSL from '@/CSL'
 import * as types_data from '@/types/data'
 import * as catalog from '@/catalog.ts'
@@ -43,8 +44,8 @@ test('print_bibliography localizes the lecturer label by interface language', ()
 test('print_bibliography renders a localized suggested playback-speed range', () => {
   const material = { type: 'motion_picture', title: 'Lecture', custom: { suggested_playback_speed: [ 1.5, 2, ], }, } satisfies Material
   const expected_speeds = material.custom.suggested_playback_speed.map(speed => ({ value: `${speed}`, text: `${speed}×`, }))
-  for (const language of bib.supported_languages) {
-    const labels = bib.get_extra_bib_label(language)
+  for (const language of i18n.supported_languages) {
+    const labels = i18n.get_extra_bib_label(language)
     const field = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .suggested_playback_speed')!
     expect(field.querySelector(':scope > .label')!.textContent).toBe(labels.suggested_playback_speed)
     const speeds = field.querySelectorAll(':scope > .speed')
@@ -72,8 +73,8 @@ test('print_bibliography renders localized additional and free link lists', () =
     } satisfies CSL.Custom,
   }
 
-  for (const language of bib.supported_languages) {
-    const labels = bib.get_extra_bib_label(language)
+  for (const language of i18n.supported_languages) {
+    const labels = i18n.get_extra_bib_label(language)
     const root = node_html_parser.parse(bib.print_bibliography([material], { language }))
 
     const URL_field = root.querySelector('.custom > .URL')!
@@ -109,8 +110,8 @@ test('print_bibliography renders named free-material groups', () => {
     },
   } satisfies Material
   const expected_groups = Object.entries(material.custom.free_material)
-  for (const language of bib.supported_languages) {
-    const labels = bib.get_extra_bib_label(language)
+  for (const language of i18n.supported_languages) {
+    const labels = i18n.get_extra_bib_label(language)
     const free_materials = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .free_material')!
     const rendered_groups = free_materials.querySelector(':scope > .groups')!
     expect(rendered_groups.querySelectorAll(':scope > .label').map(group => group.textContent)).toEqual(expected_groups.map(([ name ]) => labels.free_material_groups[name] ?? name))

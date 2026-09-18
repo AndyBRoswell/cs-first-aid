@@ -5,6 +5,7 @@ export default defineConfig({
     bib: "src/bib.ts",
     catalog: "src/catalog.ts",
     CSL: "src/CSL.ts",
+    i18n: "src/i18n.ts",
     "types/data": "src/types/data.ts",
     "tools/Vite plugin": "tools/Vite plugin.ts",
   },
