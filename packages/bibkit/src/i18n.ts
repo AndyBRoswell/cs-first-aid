@@ -1,6 +1,6 @@
 export const self_label: unique symbol = Symbol('self_label') // A node's own label; string keys name its children.
 
-export type Extra_Bib_Label = Readonly<{
+export type Custom_Label = Readonly<{
   lecturer: string
   suggested_playback_speed: string
   URL: string
@@ -10,7 +10,7 @@ export type Extra_Bib_Label = Readonly<{
   }>
 }>
 
-const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
+const custom_label: Readonly<Record<string, Custom_Label>> = {
   'zh-CN': {
     lecturer: '主讲：',
     suggested_playback_speed: '建议倍速：',
@@ -32,13 +32,13 @@ const extra_bib_label: Readonly<Record<string, Extra_Bib_Label>> = {
     },
   },
 }
-export const supported_languages: readonly string[] = Object.freeze(Object.keys(extra_bib_label))
+export const supported_languages: readonly string[] = Object.freeze(Object.keys(custom_label))
 
-export function get_extra_bib_label(language: string): Extra_Bib_Label {
+export function get_custom_label(language: string): Custom_Label {
   let locale: Intl.Locale
   try { locale = new Intl.Locale(language) }
   catch (cause) { throw new RangeError(`Invalid bibliography language: ${JSON.stringify(language)}`, { cause }) }
-  const labels = extra_bib_label[locale.baseName] ?? extra_bib_label[locale.language]
+  const labels = custom_label[locale.baseName] ?? custom_label[locale.language]
   if (labels === undefined) { throw new RangeError(`Unsupported bibliography language: ${JSON.stringify(language)}`) }
   return labels
 }

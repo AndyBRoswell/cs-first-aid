@@ -24,7 +24,7 @@ export function locate_references(main: Locator, scope_name: types_data.Scope_Na
 
 export async function check_references(main: Locator, references: types_data.Scoped_References) {
   const language = await main.evaluate(element => element.ownerDocument.documentElement.lang)
-  const labels = i18n.get_extra_bib_label(language)
+  const labels = i18n.get_custom_label(language)
   const References_locators = await main.locator('.References').all()
   for (const locator of References_locators) {
     // basic

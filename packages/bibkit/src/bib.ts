@@ -6,7 +6,7 @@ import default_bib_style from './IEEE.custom.csl'
 import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name, Serialized_Scope_Name, Material, Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, Link, } from "./types/data.ts";
 import * as catalog from './catalog.ts'
 import { check_filter_results, type Filter_Options } from "./catalog.ts"
-import { get_extra_bib_label, self_label, type Extra_Bib_Label } from './i18n.ts'
+import { get_custom_label, self_label, type Custom_Label } from './i18n.ts'
 import pino from 'pino'
 import * as util from "@cs-first-aid/util"
 import node_os from "node:os"
@@ -118,7 +118,7 @@ function render_link_field(class_name: 'URL' | 'free_material', label: string, l
   return field
 }
 
-function render_free_material(free_material: NonNullable<NonNullable<Material['custom']>['free_material']>, labels: Extra_Bib_Label['free_material']): node_html_parser.HTMLElement {
+function render_free_material(free_material: NonNullable<NonNullable<Material['custom']>['free_material']>, labels: Custom_Label['free_material']): node_html_parser.HTMLElement {
   if (Array.isArray(free_material)) { return render_link_field('free_material', labels[self_label], free_material) }
   const field = util.create_HTML_element('div', { class: 'free_material', })
   field.appendChild(util.create_HTML_element('span', { class: 'label', }, labels[self_label]))
@@ -142,7 +142,7 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
   // show custom data of this CSL item
   if (material.custom) {
     const additional = util.create_HTML_element('div', { class: 'custom', })
-    const labels = get_extra_bib_label(language)
+    const labels = get_custom_label(language)
     if (material.custom.lecturer !== undefined) {
       const p = util.create_HTML_element('p', { class: 'lecturer', })
       const lecturer = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
