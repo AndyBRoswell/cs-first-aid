@@ -34,9 +34,9 @@ const custom_label: Readonly<Record<string, Custom_Label>> = {
 }
 export const supported_languages: readonly string[] = Object.freeze(Object.keys(custom_label))
 
-const field_label_separator: Readonly<Record<string, Readonly<{ inline: string, block: string }>>> = {
+const field_label_separator: Readonly<Record<string, Readonly<{ inline: string, block: string }>>> = { // Inline values follow the label (lecturer, suggested_playback_speed); block values are lists (URL, free_material).
   'zh-CN': { inline: '：', block: '：' },
-  en: { inline: ': ', block: ':' },
+  en: { inline: ': ', block: ':' }, // English needs a trailing space before a colon. Omitted when a newline is followed.
 }
 
 function resolve_language(language: string): string {
