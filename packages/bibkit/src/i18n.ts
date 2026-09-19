@@ -1,3 +1,5 @@
+// Created by GPT-6 Astra xhigh [codex]. Revised by AndyBRoswell.
+
 export const self_label: unique symbol = Symbol('self_label') // A node's own label; string keys name its children.
 
 const languages = [ 'zh-CN', 'en' ] as const
