@@ -47,10 +47,11 @@ test('print_bibliography renders a localized suggested playback-speed range', ()
   for (const language of i18n.supported_languages) {
     const labels = i18n.get_custom_label(language)
     const field = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .suggested_playback_speed')!
-    expect(field.querySelector(':scope > .label')!.textContent).toBe(labels.suggested_playback_speed)
+    const formatted_label = i18n.format_field_label(labels.suggested_playback_speed, language, { inline: true })
+    expect(field.querySelector(':scope > .label')!.textContent).toBe(formatted_label)
     const speeds = field.querySelectorAll(':scope > .speed')
     expect(speeds.map(speed => ({ tag: speed.rawTagName, value: speed.getAttribute('value'), text: speed.textContent, }))).toEqual(expected_speeds.map(speed => ({ tag: 'data', ...speed, })))
-    expect(field.textContent).toBe(`${labels.suggested_playback_speed}${expected_speeds.map(speed => speed.text).join('–')}`)
+    expect(field.textContent).toBe(`${formatted_label}${expected_speeds.map(speed => speed.text).join('–')}`)
   }
 })
 
@@ -78,13 +79,13 @@ test('print_bibliography renders localized additional and free link lists', () =
     const root = node_html_parser.parse(bib.print_bibliography([material], { language }))
 
     const URL_field = root.querySelector('.custom > .URL')!
-    expect(URL_field.querySelector(':scope > .label')!.textContent).toBe(labels.URL)
+    expect(URL_field.querySelector(':scope > .label')!.textContent).toBe(i18n.format_field_label(labels.URL, language))
     const additional_link = URL_field.querySelector('.link')!
     expect(additional_link.textContent).toBe(material.custom!.URL![0])
     expect(additional_link.getAttribute('href')).toBe(material.custom!.URL![0])
 
     const free_materials = root.querySelector('.custom > .free_material')!
-    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(labels.free_material[i18n.self_label])
+    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(i18n.format_field_label(labels.free_material[i18n.self_label], language))
     const free_link = free_materials.querySelector('.Link')!
     expect(free_link.classList.value).toEqual([ 'Link', ])
     expect(free_link.querySelector(':scope > .link')!.textContent).toBe('<PDF>&')
@@ -114,7 +115,7 @@ test('print_bibliography renders named free-material groups', () => {
   for (const language of i18n.supported_languages) {
     const labels = i18n.get_custom_label(language)
     const free_materials = node_html_parser.parse(bib.print_bibliography([ material ], { language })).querySelector('.custom > .free_material')!
-    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(labels.free_material[i18n.self_label])
+    expect(free_materials.querySelector(':scope > .label')!.textContent).toBe(i18n.format_field_label(labels.free_material[i18n.self_label], language))
     const rendered_groups = free_materials.querySelector(':scope > .groups')!
     expect(rendered_groups.querySelectorAll(':scope > .label').map(group => group.textContent)).toEqual(expected_groups.map(([ name ]) => labels.free_material[name] ?? name))
     expect(rendered_groups.querySelectorAll(':scope > .label').at(-1)!.textContent).toBe('self_label')

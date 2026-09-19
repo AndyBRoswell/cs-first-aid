@@ -6,7 +6,7 @@ import default_bib_style from './IEEE.custom.csl'
 import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name, Serialized_Scope_Name, Material, Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, Link, } from "./types/data.ts";
 import * as catalog from './catalog.ts'
 import { check_filter_results, type Filter_Options } from "./catalog.ts"
-import { get_custom_label, self_label, type Custom_Label } from './i18n.ts'
+import { format_field_label, get_custom_label, self_label, type Custom_Label } from './i18n.ts'
 import pino from 'pino'
 import * as util from "@cs-first-aid/util"
 import node_os from "node:os"
@@ -111,17 +111,17 @@ function render_links(links: Link[]): node_html_parser.HTMLElement {
   return list
 }
 
-function render_link_field(class_name: 'URL' | 'free_material', label: string, links: Link[]): node_html_parser.HTMLElement {
+function render_link_field(class_name: 'URL' | 'free_material', label: string, links: Link[], language: string): node_html_parser.HTMLElement {
   const field = util.create_HTML_element('div', { class: class_name, })
-  field.appendChild(util.create_HTML_element('span', { class: 'label', }, label))
+  field.appendChild(util.create_HTML_element('span', { class: 'label', }, format_field_label(label, language)))
   field.appendChild(render_links(links))
   return field
 }
 
-function render_free_material(free_material: NonNullable<NonNullable<Material['custom']>['free_material']>, labels: Custom_Label['free_material']): node_html_parser.HTMLElement {
-  if (Array.isArray(free_material)) { return render_link_field('free_material', labels[self_label], free_material) }
+function render_free_material(free_material: NonNullable<NonNullable<Material['custom']>['free_material']>, labels: Custom_Label['free_material'], language: string): node_html_parser.HTMLElement {
+  if (Array.isArray(free_material)) { return render_link_field('free_material', labels[self_label], free_material, language) }
   const field = util.create_HTML_element('div', { class: 'free_material', })
-  field.appendChild(util.create_HTML_element('span', { class: 'label', }, labels[self_label]))
+  field.appendChild(util.create_HTML_element('span', { class: 'label', }, format_field_label(labels[self_label], language)))
   const groups = util.create_HTML_element('dl', { class: 'groups', })
   for (const [ name, links ] of Object.entries(free_material)) {
     groups.appendChild(util.create_HTML_element('dt', { class: 'label', }, labels[name] ?? name))
@@ -146,20 +146,20 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
     if (material.custom.lecturer !== undefined) {
       const p = util.create_HTML_element('p', { class: 'lecturer', })
       const lecturer = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
-      p.set_content(`${labels.lecturer}${lecturer}`)
+      p.set_content(`${format_field_label(labels.lecturer, language, { inline: true })}${lecturer}`)
       additional.appendChild(p)
     }
     if (material.custom.suggested_playback_speed !== undefined) {
       const field = util.create_HTML_element('p', { class: 'suggested_playback_speed', })
-      field.appendChild(util.create_HTML_element('span', { class: 'label', }, labels.suggested_playback_speed))
+      field.appendChild(util.create_HTML_element('span', { class: 'label', }, format_field_label(labels.suggested_playback_speed, language, { inline: true })))
       for (const [ index, speed ] of material.custom.suggested_playback_speed.entries()) {
         if (index > 0) { field.appendChild(util.create_HTML_text_node('–')) }
         field.appendChild(util.create_HTML_element('data', { class: 'speed', value: `${speed}`, }, `${speed}×`))
       }
       additional.appendChild(field)
     }
-    if (material.custom.URL !== undefined) { additional.appendChild(render_link_field('URL', labels.URL, material.custom.URL)) }
-    if (material.custom.free_material !== undefined) { additional.appendChild(render_free_material(material.custom.free_material, labels.free_material)) }
+    if (material.custom.URL !== undefined) { additional.appendChild(render_link_field('URL', labels.URL, material.custom.URL, language)) }
+    if (material.custom.free_material !== undefined) { additional.appendChild(render_free_material(material.custom.free_material, labels.free_material, language)) }
     decorated_entry.appendChild(additional)
   }
   return decorated_entry

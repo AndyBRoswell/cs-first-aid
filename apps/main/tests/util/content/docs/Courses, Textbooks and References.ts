@@ -42,25 +42,25 @@ export async function check_references(main: Locator, references: types_data.Sco
         if (material.custom.lecturer !== undefined) {
           const lecturer_element: Locator = custom_div.locator(':scope > .lecturer')
           const rendered_lecturer: string = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
-          const expected = `${labels.lecturer}${rendered_lecturer}`
+          const expected = `${i18n.format_field_label(labels.lecturer, language, { inline: true })}${rendered_lecturer}`
           await expect(lecturer_element).toHaveText(expected)
         }
         if (material.custom.suggested_playback_speed !== undefined) {
           const suggested_playback_speed = custom_div.locator(':scope > .suggested_playback_speed')
-          await expect(suggested_playback_speed.locator(':scope > .label')).toHaveText(labels.suggested_playback_speed)
+          await expect(suggested_playback_speed.locator(':scope > .label')).toHaveText(i18n.format_field_label(labels.suggested_playback_speed, language, { inline: true }))
           const speeds = suggested_playback_speed.locator(':scope > .speed')
           await expect(speeds).toHaveText(material.custom.suggested_playback_speed.map(speed => `${speed}×`))
           expect(await speeds.evaluateAll(elements => elements.map(element => element.getAttribute('value')))).toEqual(material.custom.suggested_playback_speed.map(speed => `${speed}`))
         }
         if (material.custom.URL !== undefined) {
           const URL = custom_div.locator('.URL')
-          await expect(URL.locator(':scope > .label')).toHaveText(labels.URL)
+          await expect(URL.locator(':scope > .label')).toHaveText(i18n.format_field_label(labels.URL, language))
           await check_links(URL, material.custom.URL)
         }
         if (material.custom.free_material !== undefined) {
           const free_material = material.custom.free_material
           const rendered_free_material = custom_div.locator('.free_material')
-          await expect(rendered_free_material.locator(':scope > .label')).toHaveText(labels.free_material[i18n.self_label])
+          await expect(rendered_free_material.locator(':scope > .label')).toHaveText(i18n.format_field_label(labels.free_material[i18n.self_label], language))
           if (Array.isArray(free_material)) { await check_links(rendered_free_material, free_material) }
           else {
             const groups = Object.entries(free_material)
