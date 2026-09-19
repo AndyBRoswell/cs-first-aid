@@ -46,6 +46,7 @@ export const info = {
           ...catalog.filter(item => item.author?.some(author => author.family === 'Apostol') && item.title?.startsWith('Mathematical Analysis'), { max_count: 1 }),
           catalog.get('Rudin PMA'),
           ...catalog.filter(item => item.author?.some(author => author.family === 'Courant') && item.author?.some(author => author.family === 'John') && util.ieq(item.title!, 'Introduction to Calculus and Analysis'), { max_count: 3 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Tao') && util.ieq(item.title!, 'Analysis') && item.edition === 4, { count: 2 }),
         ],
       },
       video: {
