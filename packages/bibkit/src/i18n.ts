@@ -1,5 +1,16 @@
 export const self_label: unique symbol = Symbol('self_label') // A node's own label; string keys name its children.
 
+const languages = [ 'zh-CN', 'en' ] as const
+type Language = typeof languages[number]
+export const supported_languages: readonly Language[] = Object.freeze(languages)
+
+type Label_Node = string | { readonly [key: string | symbol]: Label_Node }
+type Localized_Text = Readonly<Record<Language, string>>
+type Localized<T extends Label_Node> = // Homomorphic mapped types preserve primitive types; this constraint rejects non-string primitive leaves.
+  T extends string ? Localized_Text :
+  T extends object ? { readonly [K in keyof T]: Localized<T[K]> } :
+  never
+
 export type Custom_Label = Readonly<{
   lecturer: string
   suggested_playback_speed: string
@@ -10,49 +21,58 @@ export type Custom_Label = Readonly<{
   }>
 }>
 
-const custom_label: Readonly<Record<string, Custom_Label>> = {
-  'zh-CN': {
-    lecturer: '主讲',
-    suggested_playback_speed: '建议倍速',
-    URL: '其它链接',
-    free_material: {
-      [self_label]: '免费资源',
-      preview: '预览',
-      sample_chapter: '样章',
-    },
+const custom_label: Localized<Custom_Label> = {
+  lecturer: {
+    'zh-CN': '主讲',
+    en: 'Lecturer',
   },
-  en: {
-    lecturer: 'Lecturer',
-    suggested_playback_speed: 'Suggested playback speed',
-    URL: 'Additional links',
-    free_material: {
-      [self_label]: 'Free materials',
-      preview: 'Preview',
-      sample_chapter: 'Sample chapter',
+  suggested_playback_speed: {
+    'zh-CN': '建议倍速',
+    en: 'Suggested playback speed',
+  },
+  URL: {
+    'zh-CN': '其它链接',
+    en: 'Additional links',
+  },
+  free_material: {
+    [self_label]: {
+      'zh-CN': '免费资源',
+      en: 'Free materials',
+    },
+    preview: {
+      'zh-CN': '预览',
+      en: 'Preview',
+    },
+    sample_chapter: {
+      'zh-CN': '样章',
+      en: 'Sample chapter',
     },
   },
 }
-export const supported_languages: readonly string[] = Object.freeze(Object.keys(custom_label))
 
-const field_label_separator: Readonly<Record<string, Readonly<{ inline: string, block: string }>>> = { // Inline values follow the label (lecturer, suggested_playback_speed); block values are lists (URL, free_material).
+const field_label_separator: Readonly<Record<Language, Readonly<{ inline: string, block: string }>>> = { // Inline values follow the label (e.g. lecturer, suggested_playback_speed); block values are lists (URL, free_material).
   'zh-CN': { inline: '：', block: '：' },
   en: { inline: ': ', block: ':' }, // English needs a trailing space before a colon. Omitted when a newline is followed.
 }
 
-function resolve_language(language: string): string {
-  let locale: Intl.Locale
-  try { locale = new Intl.Locale(language) }
-  catch (cause) { throw new RangeError(`Invalid bibliography language: ${JSON.stringify(language)}`, { cause }) }
-  if (custom_label[locale.baseName] !== undefined) { return locale.baseName }
-  if (custom_label[locale.language] !== undefined) { return locale.language }
-  throw new RangeError(`Unsupported bibliography language: ${JSON.stringify(language)}`)
+function assert_language(language: string): asserts language is Language {
+  if (!supported_languages.some(supported => supported === language)) { throw new RangeError(`Unsupported bibliography language: ${JSON.stringify(language)}`) }
+}
+
+function select_language(node: Label_Node, language: Language): Label_Node {
+  if (typeof node === 'string') { return node }
+  const text = node[language]
+  if (typeof text === 'string') { return text }
+  return Object.fromEntries(Reflect.ownKeys(node).map(key => [ key, select_language(node[key]!, language) ])) // Include symbol keys so each node keeps its own label.
 }
 
 export function get_custom_label(language: string): Custom_Label {
-  return custom_label[resolve_language(language)]!
+  assert_language(language)
+  return select_language(custom_label, language) as Custom_Label
 }
 
 export function format_field_label(label: string, language: string, { inline = false }: { inline?: boolean } = {}): string {
-  const separator = field_label_separator[resolve_language(language)]!
+  assert_language(language)
+  const separator = field_label_separator[language]
   return label + (inline ? separator.inline : separator.block)
 }
