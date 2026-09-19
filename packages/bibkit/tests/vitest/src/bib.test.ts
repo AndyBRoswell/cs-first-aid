@@ -123,9 +123,13 @@ test('print_bibliography renders named free-material groups', () => {
   }
 })
 
-test('bibliography labels do not silently fall back for an unsupported language', () => {
+test('bibliography labels require an explicitly supported language', () => {
   const material: Material = { type: 'book', title: 'Links', custom: { URL: [ 'https://example.com' ], }, }
-  expect(() => bib.print_bibliography([ material ], { language: 'fr' })).toThrow('Unsupported bibliography language: "fr"') // Modify this if French is supported in the future.
+  for (const language of [ 'x-test', 'en-US', 'zh-cn' ]) {
+    const error = `Unsupported bibliography language: ${JSON.stringify(language)}`
+    expect(() => bib.print_bibliography([ material ], { language })).toThrow(error)
+    expect(() => i18n.format_field_label('Label', language)).toThrow(error)
+  }
 })
 
 test('print_bibliography_segment starts at the requested global number', () => {
