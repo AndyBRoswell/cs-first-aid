@@ -17,9 +17,9 @@
   "author": "AndyBRoswell",
   "license": "MIT",
   "dependencies": {
-    "@citation-js/core": "^0.8.2",
-    "@citation-js/plugin-csl": "^0.8.2",
-    "@citation-js/plugin-doi": "^0.8.2",
+    "@citation-js/core": "^0.9.0",
+    "@citation-js/plugin-csl": "^0.9.0",
+    "@citation-js/plugin-doi": "^0.9.0",
     "@cs-first-aid/util": "workspace:*",
     "fast-cartesian": "^9.0.1",
     "node-html-parser": "^9.0.1",
@@ -59,10 +59,7 @@
       "development": "./src/i18n.ts",
       "default": "./dist/i18n.mjs"
     },
-    "./tools/Vite plugin": {
-      "development": "./tools/Vite plugin.ts",
-      "default": "./dist/tools/Vite plugin.mjs"
-    },
+    "./tools/Vite plugin": "./tools/Vite plugin.ts",
     "./types/data": {
       "development": "./src/types/data.ts",
       "default": "./dist/types/data.mjs"

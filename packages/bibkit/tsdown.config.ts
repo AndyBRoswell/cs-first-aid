@@ -40,5 +40,9 @@ export default defineConfig({
 
   exports: {
     devExports: 'development', // automatically generate exports and publishConfig in package.json
+    customExports(exports, { isPublish }) {
+      exports['./tools/Vite plugin'] = isPublish ? './dist/tools/Vite plugin.mjs' : './tools/Vite plugin.ts'
+      return exports
+    },
   },
 }) satisfies UserConfig as UserConfig;

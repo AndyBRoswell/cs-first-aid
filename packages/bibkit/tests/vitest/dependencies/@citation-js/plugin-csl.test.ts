@@ -27,10 +27,15 @@ describe('@citation-js/plugin-csl.output.citation', { tags: [ '@citation-js/plug
       { id: 'b', title: 'Item B', issued: { 'date-parts': [ [ 2017 ] ] } },
       { id: 'c', title: 'Item C', issued: { 'date-parts': [ [ 2018 ] ] } }
     ])
+    // @ts-ignore entry citationsPre citationsPost
     expect(node_html_parser.parse(cite.format('citation')).textContent).toEqual('(Item A, 2016; Item B, 2017; Item C, 2018)')
+    // @ts-ignore citationsPre citationsPost
     expect(node_html_parser.parse(cite.format('citation', { entry: [ 'a', 'b' ] })).textContent).toEqual('(Item A, 2016; Item B, 2017)')
+    // @ts-ignore citationsPre citationsPost
     expect(node_html_parser.parse(cite.format('citation', { entry: 'a' })).textContent).toEqual('(Item A, 2016)')
+    // @ts-ignore citationsPre citationsPost
     expect(node_html_parser.parse(cite.format('citation', { entry: [ { id: 'a', label: 'page', locator: 123 } ] })).textContent).toEqual('(Item A, 2016, p. 123)')
+    // @ts-ignore citationsPre citationsPost
     expect(node_html_parser.parse(cite.format('citation', {
       entry: [ { id: 'c', label: 'page', locator: 1234, } ],
       ...rich_bib_text

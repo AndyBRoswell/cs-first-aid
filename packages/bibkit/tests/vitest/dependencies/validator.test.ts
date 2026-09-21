@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
-import isISBN from 'validator/lib/isISBN'
-import isISSN from 'validator/lib/isISSN'
+import isISBN from 'validator/lib/isISBN.js'
+import isISSN from 'validator/lib/isISSN.js'
 
 test('validator:isISBN', { tags: [ 'ISBN' ] }, () => {
   expect(isISBN('0-13-110362-8')).toBe(true) // C Programming Language, 带连字符

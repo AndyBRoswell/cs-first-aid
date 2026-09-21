@@ -215,11 +215,11 @@ export function get_rendered_names(names: CSL.Name_Variable[], options: name_ren
   let output
   switch (options.full_name ?? default_name_rendering_options.full_name) {
     case true:
-      output = cite.format('bibliography', { template: 'get_full_author_names' })
+      output = cite.format('bibliography', { style: 'get_full_author_names' })
       break
     case false:
-      output = cite.format('bibliography', { template: 'get_rendered_author' })
+      output = cite.format('bibliography', { style: 'get_rendered_author' })
       break
   }
-  return output.trim()
+  return output!.trim()
 }

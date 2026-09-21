@@ -2,8 +2,8 @@
 // Schema: https://github.com/citation-style-language/schema/blob/master/schemas/input/csl-data.json
 
 import * as Data_Type from "./types/data.ts";
-import validator_isISBN from 'validator/lib/isISBN'
-import validator_isISSN from 'validator/lib/isISSN'
+import validator_isISBN from 'validator/lib/isISBN.js'
+import validator_isISSN from 'validator/lib/isISSN.js'
 
 // 📦 Item types
 export type Item_Type =
@@ -79,7 +79,7 @@ export interface Date_Variable {
   raw?: string
 }
 
-export type ID = string | number
+export type ID = string // citation-js 0.9 doesn't support type `number` here
 
 // 📄 A single bibliographic item
 export type Item = {

@@ -1,4 +1,3 @@
-// @ts-ignore [citation-js doesn't have ts support]
 import * as citation_js from "@citation-js/core"
 import '@citation-js/plugin-csl'
 import * as node_html_parser from 'node-html-parser'
@@ -204,10 +203,11 @@ export function cite(references: Scoped_References, citation_items: Citation_Ite
       let rendered_locator: string | undefined
       if (result.locator !== undefined) {
         try {
+          // @ts-ignore citationsPre citationsPost
           rendered_locator = new citation_js.Cite([ target_material ]).format('citation', {
             format: 'text',
-            template: default_bib_style_name,
-            entry: [ { id: target_material.id, label: result.label, locator: result.locator, } ]
+            style: default_bib_style_name,
+            entry: [ { id: target_material.id!, label: result.label!, locator: result.locator, } ]
           })
         }
         catch (error) {

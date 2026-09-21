@@ -23,8 +23,8 @@ test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
   ],
 }, () => {
   const styles = [
-    { rendered: 'default', style: { template: 'get_rendered_author', } },
-    { rendered: 'full', style: { template: 'get_full_author_names', } },
+    { rendered: 'default', option: { style: 'get_rendered_author', } },
+    { rendered: 'full', option: { style: 'get_full_author_names', } },
   ] as const
   const names: { original: CSL.Item['author'], rendered: { default: string, full: string } }[] = [
     { original: [ { family: '王', given: '虹' } ], rendered: { default: '王虹', full: '王虹' } },
@@ -112,8 +112,8 @@ test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
   const items = []
   for (const [ index, name ] of names.entries()) { items.push({ id: index, author: name.original }) }
   const cite = new citation_js.Cite(items)
-  for (const { rendered, style } of styles) {
-    const output = cite.format('bibliography', style).split(util.linesep_stripper)
+  for (const { rendered, option } of styles) {
+    const output = cite.format('bibliography', option).split(util.linesep_stripper)
     for (const [ index, name ] of names.entries()) { expect(output[index]).toBe(name.rendered[rendered]) }
   }
 })
