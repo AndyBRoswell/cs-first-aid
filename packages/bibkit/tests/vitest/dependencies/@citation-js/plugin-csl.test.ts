@@ -1,7 +1,7 @@
 import { test, describe, expect } from 'vitest';
 
 // @ts-ignore [citation-js doesn't have ts support]
-import citation_js from "@citation-js/core";
+import * as citation_js from "@citation-js/core"
 import '@citation-js/plugin-csl'
 import node_html_parser from 'node-html-parser'
 import * as util from '@cs-first-aid/util'

@@ -142,15 +142,6 @@ importers:
       '@astrojs/starlight-tailwind':
         specifier: ^5.0.0
         version: 5.0.0(@astrojs/starlight@0.41.11(@astrojs/markdown-remark@7.3.1(supports-color@11.0.0))(astro@7.3.2(@astrojs/markdown-remark@7.3.1(supports-color@11.0.0))(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@netlify/blobs@11.0.3)(@types/node@26.5.1)(jiti@2.7.0))(supports-color@11.0.0)(typescript@6.0.3))(tailwindcss@4.3.3)
-      '@citation-js/core':
-        specifier: ^0.8.2
-        version: 0.8.2
-      '@citation-js/plugin-csl':
-        specifier: ^0.8.2
-        version: 0.8.2(@citation-js/core@0.8.2)
-      '@citation-js/plugin-doi':
-        specifier: ^0.8.2
-        version: 0.8.2(@citation-js/core@0.8.2)
       '@cs-first-aid/bibkit':
         specifier: workspace:*
         version: link:../../packages/bibkit

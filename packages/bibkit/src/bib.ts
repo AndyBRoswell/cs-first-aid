@@ -1,5 +1,5 @@
 // @ts-ignore [citation-js doesn't have ts support]
-import citation_js from "@citation-js/core";
+import * as citation_js from "@citation-js/core"
 import '@citation-js/plugin-csl'
 import * as node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl'

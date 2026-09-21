@@ -9,7 +9,7 @@ import pino from 'pino'
 import * as ohash from 'ohash'
 import * as util from '@cs-first-aid/util'
 // @ts-ignore [citation-js doesn't have ts support]
-import citation_js from "@citation-js/core";
+import * as citation_js from "@citation-js/core"
 import '@citation-js/plugin-csl'
 // import node_fs from "node:fs";
 import get_rendered_author from './get_rendered_author.csl'
