@@ -8,7 +8,6 @@ import node_os from 'node:os'
 import pino from 'pino'
 import * as ohash from 'ohash'
 import * as util from '@cs-first-aid/util'
-// @ts-ignore [citation-js doesn't have ts support]
 import * as citation_js from "@citation-js/core"
 import '@citation-js/plugin-csl'
 // import node_fs from "node:fs";
