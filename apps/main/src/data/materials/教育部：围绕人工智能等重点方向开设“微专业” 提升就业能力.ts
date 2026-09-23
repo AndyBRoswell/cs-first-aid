@@ -2,7 +2,7 @@ import * as types_data from '@cs-first-aid/bibkit/types/data'
 
 export const entries = [
   {
-    id: [ '教育部：围绕人工智能等重点方向开设“微专业” 提升就业能力' ],
+    id: [],
     material: {
       type: 'webpage',
       author: [ { family: '高', given: '晨源' } ],

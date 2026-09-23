@@ -2,7 +2,7 @@ import * as types_data from '@cs-first-aid/bibkit/types/data'
 
 export const entries = [
   {
-    id: [ '教育部加快推进就业能力提升“双千”计划' ],
+    id: [],
     material: {
       type: 'article-newspaper',
       author: [ { family: '郝', given: '孟佳' } ],

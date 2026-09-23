@@ -2,7 +2,7 @@ import * as types_data from '@cs-first-aid/bibkit/types/data'
 
 export const entries = [
   {
-    id: [ '促进高校毕业生就业，教育部这样发力→' ],
+    id: [],
     material: {
       type: 'webpage',
       title: '促进高校毕业生就业，教育部这样发力→',

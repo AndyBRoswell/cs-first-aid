@@ -3,7 +3,7 @@ import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
-    id: [ '教育部学位管理与研究生教育司负责人就《“博士+硕士”双学位项目试点设置管理办法》答记者问' ],
+    id: [],
     material: {
       type: 'webpage',
       title: '教育部学位管理与研究生教育司负责人就《“博士+硕士”双学位项目试点设置管理办法》答记者问',
