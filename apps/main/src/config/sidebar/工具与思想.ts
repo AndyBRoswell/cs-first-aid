@@ -188,11 +188,11 @@ export const Tools_and_Ideas = {
     {
       label: '练习',
       translations: {
-        en: 'Do Practices',
+        en: 'Practices',
       },
-      slug: 'tools-and-ideas/do-practices',
+      slug: 'tools-and-ideas/practices',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
       },
     },
     {
