@@ -152,7 +152,7 @@ export const Tools_and_Ideas = {
       },
       slug: 'tools-and-ideas/edu-mails',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-beta', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-rc', en: 'blank', })
       },
     },
     {
