@@ -34,7 +34,7 @@ export const Preface = {
       },
       slug: 'preface/which-people-are-not-suited-for-computer-industry',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', })
       },
     },
     {
