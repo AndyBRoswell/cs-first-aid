@@ -159,6 +159,8 @@ import References from '@/components/References.astro'
     $$
     \Phi_"v"^\prime = \int_0^+\infty  \Phi_("e",\lambda) (\lambda)K_"m"^\prime  V\prime(\lambda)\dd \lambda = K_"m"^\prime \int_0^+\infty  \Phi_("e",\lambda) (\lambda)V\prime(\lambda)\dd \lambda
     $$
+    光度学对光源的光谱逐波段加权评价，并采用各波段的光度量贡献可加的规则<Cite references={M} cite_items={[ { condition: 'CIE TN 004:2016', label: 'section', locator: '1' } ] }/>。以明视觉为例，微小波长区间 $\dd \lambda$ 内的辐射通量为 $\Phi_("e",\lambda)(\lambda)\dd \lambda$，乘以该波长的光视效能 $K_"m" V(\lambda)$，就得到这个波段对光通量的贡献；上述积分就是将整个光谱内各波段的贡献相加<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'section', locator: '2.1' } ] }/>。
+
     下标 $"v"$ 代表[光度学](https://zh.wikipedia.org/zh-cn/%E5%85%89%E5%BA%A6%E5%AD%A6)（Photometry）的物理量<Cite references={M} cite_items={[ { condition: 'Rapport BIPM-2019/05', label: 'section', locator: '2' } ] }/>。
 
     明视觉下和暗视觉下的最大光视效能
@@ -185,6 +187,8 @@ import References from '@/components/References.astro'
     $$
     L_"v" = \int_0^+\infty  L_("e",\lambda) (\lambda)K_"m" V(\lambda)\dd \lambda = K_"m"\int_0^+\infty  L_("e",\lambda) (\lambda)V(\lambda)\dd \lambda
     $$
+    这里采用与光通量相同的光谱加权方式，只是将光谱辐射通量换成给定位置、方向上的光谱辐亮度<Cite references={M} cite_items={[ { condition: 'CIE TN 004:2016', label: 'equation', locator: 1 } ] }/>。
+
     亮度的常用单位为 $"nit"$，即 $"cd/m"^2$，其中 $1\thinsp"cd"=1\thinsp"lm/sr"$。
 
     理想条件下，光谱辐亮度 $L_("e",\lambda) (\lambda)$ 沿同一稳恒光源发出的光线保持不变，这时亮度也保持不变。这符合我们的日常经验：在晴天的户外，光照条件不变，当走近一面白墙时，白墙覆盖的可视范围变多了；远离这面白墙时，白墙覆盖的可视范围变少了；但这面白墙看起来并没有变得明显更亮或明显更暗。
