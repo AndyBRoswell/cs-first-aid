@@ -14,4 +14,5 @@ export const references = [
   ...catalog.filter(m => util.ieq(m['container-title']!, 'E-ILV')),
   ...catalog.filter(m => m['collection-title']?.includes('OSE 6334') && /Introduction to nonlinear optics/.test(m.title!), { count: 1 }),
   ...catalog.filter(m => util.ieq(m.title!, 'Roadmap on nonlinear optics–focus on Chinese research'), { count: 1 }),
+  ...catalog.filter(m => util.ieq(m.title!, 'Lecture Slides for Signals and Systems') && m.edition === '6.0', { count: 1 }),
 ]

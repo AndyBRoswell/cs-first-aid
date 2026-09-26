@@ -79,7 +79,7 @@ import References from '@/components/References.astro'
   - 可加性（additivity）：$F(x_1+x_2)=F(x_1)+F(x_2)$
   - 齐次性（homogeneity）：$F(ax)=aF(x)$，其中 $a$ 是任意标量
 
-  则该系统符合叠加原理（superposition principle）。可加性与齐次性合称线性性（linearity）。
+  则该系统符合叠加原理（superposition principle）。可加性与齐次性合称线性性（linearity）<Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Lecture Slides for Signals and Systems') && m.edition === '6.0', options: { count: 1 } }, label: 'page', locator: 98 } ] }/>。
 
   在一些特殊情况下，叠加原理会失效<Cite references={M} cite_items={[ { condition: { filter: m => m['collection-title']?.includes('OSE 6334') && /Introduction to nonlinear optics/.test(m.title) }, label: 'page', locator: '4-6' } ] }/><Cite references={M} cite_items={[ { condition: { filter: m => util.ieq(m.title, 'Roadmap on nonlinear optics–focus on Chinese research') }, label: 'page', locator: 1 } ] }/>。但在传统显示技术中，叠加原理通常是有效的。
 </section>
