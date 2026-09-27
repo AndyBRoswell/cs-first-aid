@@ -17,6 +17,7 @@ export const entries = [
       URL: 'https://www.mheducation.co.uk/discrete-mathematics-and-its-applications-2025-release-ise-9781266191541-emea-group',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
       custom: {
+        edition: 'International Student Edition',
         variant: [
           {
             type: 'book',
@@ -41,6 +42,9 @@ export const entries = [
       ISBN: '9781260092387',
       URL: 'https://www.mheducation.co.uk/ise-student-s-solutions-guide-for-discrete-mathematics-and-its-applications-9781260092387-emea',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
+      custom: {
+        edition: 'International Student Edition',
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

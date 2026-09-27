@@ -9,7 +9,7 @@ export const info = {
   material: {
     reference: [
       ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Signals and Systems') && item.author?.some(author => author.family === 'Adams') && item.edition === '6.0', { count: 1 }),
-      ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Signals and Systems, Pearson New International Edition') && item.author?.some(author => author.family === 'Oppenheim') && item.edition === 2, { count: 1 }),
+      ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Signals and Systems') && item.author?.some(author => author.family === 'Oppenheim') && item.edition === 2, { count: 1 }),
     ],
   },
 } satisfies types_data.Course

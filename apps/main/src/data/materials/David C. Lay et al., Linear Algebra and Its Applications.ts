@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -14,6 +15,9 @@ export const entries = [
       ISBN: '9781292351216',
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/linear-algebra-and-its-applications-global-edition/P200000004712/9781292351216',
       accessed: { 'date-parts': [ [ 2026, 5, 6 ] ], },
+      custom: {
+        edition: 'Global Edition',
+      } satisfies CSL.Custom,
     },
   },
 ] satisfies types_data.Entry[]

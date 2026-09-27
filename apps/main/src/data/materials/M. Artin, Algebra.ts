@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -29,6 +30,9 @@ export const entries = [
             "original-publisher": "Pearson",
             URL: 'https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version/P200000006078/9780134689609',
             accessed: { "date-parts": [ [ 2026, 5, 6 ] ] },
+            custom: {
+              edition: 'Classic Version',
+            } satisfies CSL.Custom,
           },
         ],
       }

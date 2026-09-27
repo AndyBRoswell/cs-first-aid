@@ -7,7 +7,7 @@ export const entries = [
     ],
     material: {
       type: 'book',
-      title: 'Linear Algebra with Applications, Global Edition',
+      title: 'Linear Algebra with Applications',
       author: [ { given: 'Steven J.', family: 'Leon' }, { given: 'Lisette G.', "non-dropping-particle": 'de', family: 'Pillis' } ],
       language: 'en-GB',
       edition: 10,
@@ -17,6 +17,7 @@ export const entries = [
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/linear-algebra-with-applications-global-edition/P200000004727/9781292354873',
       accessed: { 'date-parts': [ [ 2026, 5, 7 ], ], },
       custom: {
+        edition: 'Global Edition',
         variant: [
           {
             type: 'book',
