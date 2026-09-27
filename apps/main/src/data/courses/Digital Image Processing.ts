@@ -8,7 +8,7 @@ export const info = {
   name: [ '数字图像处理', ],
   material: {
     reference: [
-      ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Digital Image Processing, Global Edition') && item.author?.some(author => author.family === 'Gonzalez') && item.edition === 4, { count: 1 }),
+      ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Digital Image Processing') && item.author?.some(author => author.family === 'Gonzalez') && item.edition === 4, { count: 1 }),
     ],
   },
 } satisfies types_data.Course

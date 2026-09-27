@@ -10,7 +10,7 @@ export const entries = [
     ],
     material: {
       type: 'book',
-      title: 'Digital Image Processing, Global Edition',
+      title: 'Digital Image Processing',
       author: [ { given: 'Rafael C.', family: 'Gonzalez' }, { given: 'Richard E.', family: 'Woods' } ],
       edition: 4,
       publisher: 'Pearson',
