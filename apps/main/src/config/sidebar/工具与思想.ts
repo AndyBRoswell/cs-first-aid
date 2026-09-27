@@ -44,21 +44,41 @@ export const Tools_and_Ideas = {
           },
         },
         {
-          label: 'CPU 与 GPU',
+          label: 'CPU',
           translations: {
-            en: 'CPUs and GPUs',
+            en: 'CPUs',
           },
-          slug: 'tools-and-ideas/computers/cpus--gpus',
+          slug: 'tools-and-ideas/computers/cpus',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
           },
         },
         {
-          label: '内存与硬盘',
+          label: 'GPU',
           translations: {
-            en: 'Memory and Disks',
+            en: 'GPUs',
           },
-          slug: 'tools-and-ideas/computers/memory--disks',
+          slug: 'tools-and-ideas/computers/gpus',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: '内存',
+          translations: {
+            en: 'Memory',
+          },
+          slug: 'tools-and-ideas/computers/memory',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: '硬盘',
+          translations: {
+            en: 'Disks',
+          },
+          slug: 'tools-and-ideas/computers/disks',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
           },
@@ -74,11 +94,31 @@ export const Tools_and_Ideas = {
           },
         },
         {
-          label: 'I / O',
+          label: 'I / O 接口',
           translations: {
-            en: 'I / O',
+            en: 'I / O Interfaces',
           },
           slug: 'tools-and-ideas/computers/io',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: '电源',
+          translations: {
+            en: 'Power Supplies',
+          },
+          slug: 'tools-and-ideas/computers/power-supplies',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+          },
+        },
+        {
+          label: '操作系统',
+          translations: {
+            en: 'Operating Systems',
+          },
+          slug: 'tools-and-ideas/computers/operating-systems',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
           },
