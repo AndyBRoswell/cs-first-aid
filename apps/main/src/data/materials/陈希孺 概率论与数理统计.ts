@@ -12,6 +12,8 @@ export const entries = [
       issued: { 'date-parts': [ [ 2009, 2 ] ] },
       ISBN: '9787312018381',
       language: 'zh-CN',
+      URL: 'https://book.douban.com/subject/2201479/',
+      accessed: { 'date-parts': [ [ 2026, 9, 28 ] ] },
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
