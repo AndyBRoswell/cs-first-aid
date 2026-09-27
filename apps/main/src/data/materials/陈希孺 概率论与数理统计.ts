@@ -1,0 +1,17 @@
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+
+export const entries = [
+  {
+    id: [],
+    material: {
+      type: 'book',
+      title: '概率论与数理统计',
+      author: [ { family: '陈', given: '希孺' } ],
+      edition: 1,
+      publisher: '中国科学技术大学出版社',
+      issued: { 'date-parts': [ [ 2009, 2 ] ] },
+      ISBN: '9787312018381',
+      language: 'zh-CN',
+    } satisfies types_data.Material,
+  },
+] satisfies types_data.Entry[]

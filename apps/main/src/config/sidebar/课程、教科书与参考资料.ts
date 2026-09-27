@@ -107,9 +107,10 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Probability Theory',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/probability-theory',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
         {
@@ -117,9 +118,10 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Mathematical Statistics',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/mathematical-statistics',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
           },
         },
         {

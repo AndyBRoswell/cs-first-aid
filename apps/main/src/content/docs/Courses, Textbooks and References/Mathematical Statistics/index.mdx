@@ -1,0 +1,24 @@
+---
+title: 数理统计
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <References materials={course_material.text} reference_ranges={reference_ranges} scope_name={[ 'text' ]}/>
+  </section>
+  <section>
+    ## 参考书
+    <References materials={course_material.reference} reference_ranges={reference_ranges} scope_name={[ 'reference' ]}/>
+  </section>
+  <section>
+    ## 未被选择的书目
+    <References materials={course_material.excluded} reference_ranges={reference_ranges} scope_name={[ 'excluded' ]}/>
+  </section>
+</section>
