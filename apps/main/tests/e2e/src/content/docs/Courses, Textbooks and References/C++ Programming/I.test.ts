@@ -14,29 +14,38 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
 
   await docs_util.check_title(main, /程序设计入门（C\+\+\s*程序设计\s*I）/)
 
-  let section: Locator, heading: Locator, References: Locator
+  let heading: Locator, References: Locator
 
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
+  await expect(main.getByRole('heading', { level: 2 })).toHaveText([
+    '教科书', '其它参考', '未被选择的书目',
+  ])
 
   await src_util.test.step('教科书', async () => {
-    References = course_util.locate_references(main, [ 'text' ])
+    References = course_util.locate_references(main, [ 'text', 'selected' ])
+    await expect(References.locator('.entry.CSL')).toHaveCount(1)
     await src_util.everyone_occurs(References, [
       /B. Stroustrup/,
-      /M. Gregoire/,
       /Programming: Principles and Practice Using C\+\+/,
-      /A Tour of C\+\+/,
-      /Professional C\+\+/,
     ])
   })
 
-  await src_util.test.step('参考资料', async () => {
+  await src_util.test.step('其它参考', async () => {
     References = course_util.locate_references(main, [ 'reference' ])
     await src_util.everyone_occurs(References, [
       /Microsoft/,
       /C\+\+ Language Reference/,
       /cppreference/,
       /The Definitive C\+\+ Book Guide and List/,
+    ])
+  })
+
+  await src_util.test.step('未被选择的书目', async () => {
+    References = course_util.locate_references(main, [ 'excluded' ])
+    await expect(References.locator('.entry.CSL')).toHaveCount(2)
+    await src_util.everyone_occurs(References, [
+      /C\+\+ Primer,/, /C\+\+ Primer Plus,/,
     ])
   })
 })

@@ -13,5 +13,9 @@ export const info = {
     reference: [
       catalog.get('cppreference.com/c'),
     ],
+    excluded: [
+      catalog.get('K&R C'),
+      catalog.get('C Primer Plus'),
+    ],
   }
 } satisfies types_data.Course

@@ -1,0 +1,20 @@
+---
+title: C++ 程序设计 II
+description: /
+author: AndyBRoswell
+---
+
+import { II_course_material, II_reference_ranges } from './data.ts'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <References materials={II_course_material.text} reference_ranges={II_reference_ranges} scope_name={['text']} />
+  </section>
+  <section>
+    ## 参考资料
+    <References materials={II_course_material.reference} reference_ranges={II_reference_ranges} scope_name={['reference']} />
+  </section>
+</section>

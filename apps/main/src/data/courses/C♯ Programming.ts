@@ -13,6 +13,10 @@ export const info = {
     ],
     reference: [
       ...catalog.filter(item => util.ieq(item.title!, 'Head First C#'))
-    ]
+    ],
+    excluded: [
+      catalog.get('Illustrated C# 7'),
+      catalog.get('唐大仕 C#程序设计教程'),
+    ],
   }
 } satisfies types_data.Course

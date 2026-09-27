@@ -14,5 +14,8 @@ export const info = {
     reference: [
       ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Head First Java'), { max_count: 1 }),
     ],
+    excluded: [
+      catalog.get('Thinking in Java'),
+    ],
   }
 } satisfies types_data.Course

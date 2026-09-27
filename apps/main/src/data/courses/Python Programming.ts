@@ -15,5 +15,8 @@ export const info = {
       ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.family === 'Matthes' && util.ieq(item.title!, 'Python Crash Course'), { max_count: 1 }),
       ...catalog.filter(item => item.author?.some(author => author.family === '嵩' && author.given === '天') && util.ieq(item.title!, 'Python语言程序设计基础'), { max_count: 1 }),
     ],
+    excluded: [
+      catalog.get('Python Cookbook'),
+    ],
   }
 } satisfies types_data.Course
