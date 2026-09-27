@@ -123,6 +123,8 @@ import References from '@/components/References.astro'
     $$
     $\dd^2 \Phi_"e" (P,\omega)$ represents the radiant power transmitted by the area element $\dd A$ containing $P$ through a small solid angle $\dd \omega$ around direction $\omega$.
 
+    The following derivation uses conservation of flux between two area elements and the relation between solid angle and projected area to show that radiance remains constant along a ray.<Cite references={M} cite_items={[ { condition: m => util.ieq(m.title, 'Rendering') && m.author?.some(a => util.ieq(a.family, 'Yoon')), label: 'page', locator: '113-114' } ] }/>
+
     Under ideal conditions, let points $P_1$ and $P_2$ lie on area elements $\dd A_1$ and $\dd A_2$, respectively, separated by a distance $r$. Consider a steady beam of electromagnetic radiation traveling from $P_1$ toward $P_2$ in direction $\omega$. By conservation of energy, the power that this beam transmits through $\dd A_1$ and $\dd A_2$ is the same, denote it by $\dd^2 \Phi_"e"$. Let the acute angles $\theta_1$ and $\theta_2$ be the angles between the propagation direction $\omega$ and the normal vectors of $\dd A_1$ at $P_1$ and $\dd A_2$ at $P_2$, respectively. Then
     $$
     L_"e" (P_1,\omega)=\dd^2 \Phi_"e"/(\dd A_1 cos \theta_1 \dd \omega_1) \thinsp,\emsp L_"e" (P_2,\omega)=\dd^2 \Phi_"e"/(\dd A_2 cos \theta_2 \dd \omega_2)

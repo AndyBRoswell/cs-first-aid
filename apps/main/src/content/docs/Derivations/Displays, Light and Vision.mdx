@@ -121,6 +121,8 @@ import References from '@/components/References.astro'
     $$
     $\dd^2 \Phi_"e" (P,\omega)$ 代表包含点 $P$ 的面积元 $\dd A$ 沿方向 $\omega$ 附近的一小块立体角 $\dd \omega$ 传输的辐射功率。
 
+    下面利用两个面积元之间的通量守恒，以及立体角与投影面积的关系，推导辐亮度沿光线不变的性质<Cite references={M} cite_items={[ { condition: m => util.ieq(m.title, 'Rendering') && m.author?.some(a => util.ieq(a.family, 'Yoon')), label: 'page', locator: '113-114' } ] }/>。
+
     理想条件下，设点 $P_1$、$P_2$ 分别位于面积元 $\dd A_1$、$\dd A_2$ 上，且这两个面积元的距离为 $r$。考虑一束沿 $P_1$ 指向 $P_2$ 的方向（记为方向 $\omega$）传播的稳恒电磁辐射。由能量守恒定律，这束辐射传输给 $\dd A_1$ 和 $\dd A_2$ 的功率相同，记为 $\dd^2 \Phi_"e"$。设锐角 $\theta_1$、$\theta_2$ 分别为面积元 $\dd A_1$、$\dd A_2$ 在点 $P_1$、$P_2$ 处的法向量与传播方向 $\omega$ 的夹角。于是
     $$
     L_"e" (P_1,\omega)=\dd^2 \Phi_"e"/(\dd A_1 cos \theta_1 \dd \omega_1) \thinsp,\emsp L_"e" (P_2,\omega)=\dd^2 \Phi_"e"/(\dd A_2 cos \theta_2 \dd \omega_2)
