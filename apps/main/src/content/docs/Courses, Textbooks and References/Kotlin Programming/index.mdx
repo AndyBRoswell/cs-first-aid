@@ -1,0 +1,25 @@
+---
+title: Kotlin 程序设计
+author: AndyBRoswell
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import Cite from '@/components/Cite.astro'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <References materials={course_material.text} reference_ranges={reference_ranges} scope_name={[ 'text' ]}/>
+  </section>
+  <section>
+    ## 说明
+    **建议首先通过官方文档<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'Kotlin Docs' ]}/>进行学习**。注意：**Kotlin 官方文档默认你具备一定的 Java 基础**。
+
+  </section>
+  <section>
+    ## 其它参考
+    <References materials={course_material.reference} reference_ranges={reference_ranges} scope_name={[ 'reference' ]}/>
+  </section>
+</section>
