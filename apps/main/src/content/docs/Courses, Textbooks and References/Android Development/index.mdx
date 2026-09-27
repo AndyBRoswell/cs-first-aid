@@ -1,0 +1,24 @@
+---
+title: Android 开发
+author: AndyBRoswell
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import Cite from '@/components/Cite.astro'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <References materials={course_material.text} reference_ranges={reference_ranges} scope_name={[ 'text' ]}/>
+  </section>
+  <section>
+    ## 参考书
+    <References materials={course_material.reference} reference_ranges={reference_ranges} scope_name={[ 'reference' ]}/>
+  </section>
+  <section>
+    ## 说明
+    **建议首先通过官方文档<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text' ], filter: m => m.type === 'webpage' && m.title === 'Develop for Android' && m.author?.some(author => author.literal === 'Google'), options: { count: 1 } } ]}/>进行学习**。
+  </section>
+</section>
