@@ -5,11 +5,11 @@ export const entries = [
     id: [],
     material: {
       type: 'webpage',
-      title: 'Develop for Android',
+      title: 'Developer Guides',
       author: [ { literal: 'Google' } ],
       'container-title': 'Android Developers',
       language: 'en-US',
-      URL: 'https://developer.android.com/develop',
+      URL: 'https://developer.android.com/guide',
       accessed: { 'date-parts': [ [ 2026, 9, 27 ] ] },
     } satisfies types_data.Material,
   },
