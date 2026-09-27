@@ -12,6 +12,8 @@ export const entries = [
       issued: { 'date-parts': [ [ 2018, 7 ] ] },
       ISBN: '9787301295472',
       language: 'zh-CN',
+      URL: 'https://www.aijiaocai.com/textbook/details?textbook_id=662507',
+      accessed: { 'date-parts': [ [ 2026, 9, 28 ] ] },
     } satisfies types_data.Material,
   },
   {
