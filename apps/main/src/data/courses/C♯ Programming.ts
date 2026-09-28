@@ -8,15 +8,23 @@ export const info = {
   name: [ 'C# 程序设计', 'C#', ],
   tag: [ '基础选修' ],
   material: {
-    text: [
-      ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && util.ieq(item.title!, 'A tour of the C# language'))
-    ],
-    reference: [
-      ...catalog.filter(item => util.ieq(item.title!, 'Head First C#'))
-    ],
-    excluded: [
-      catalog.get('Illustrated C# 7'),
-      catalog.get('唐大仕 C#程序设计教程'),
-    ],
+    text: {
+      en: [
+        ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && util.ieq(item.title!, 'A tour of the C# language'))
+      ],
+    },
+    reference: {
+      en: [
+        ...catalog.filter(item => util.ieq(item.title!, 'Head First C#'))
+      ],
+    },
+    excluded: {
+      en: [
+        catalog.get('Illustrated C# 7'),
+      ],
+      zh: [
+        catalog.get('唐大仕 C#程序设计教程'),
+      ],
+    },
   }
 } satisfies types_data.Course
