@@ -261,9 +261,9 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
-      label: 'C++ 程序设计',
+      label: '程序设计',
       translations: {
-        en: 'C++ Programming',
+        en: 'Programming',
       },
       items: [
         {
@@ -271,45 +271,118 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Overview',
           },
-          slug: 'courses-textbooks-and-references/cpp-programming',
+          slug: 'courses-textbooks-and-references/programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
         {
-          label: '程序设计入门（C++ 程序设计 I）',
+          label: 'C++ 程序设计',
           translations: {
-            en: 'Introduction to Programming (C++ Programming I)',
+            en: 'C++ Programming',
           },
-          slug: 'courses-textbooks-and-references/cpp-programming/i',
+          items: [
+            {
+              label: '概述',
+              translations: {
+                en: 'Overview',
+              },
+              slug: 'courses-textbooks-and-references/programming/cpp-programming',
+              attrs: {
+                'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+              },
+            },
+            {
+              label: '程序设计入门（C++ 程序设计 I）',
+              translations: {
+                en: 'Introduction to Programming (C++ Programming I)',
+              },
+              slug: 'courses-textbooks-and-references/programming/cpp-programming/i',
+              attrs: {
+                'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+                'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+              },
+            },
+            {
+              label: 'C++ 程序设计 II',
+              translations: {
+                en: 'C++ Programming II',
+              },
+              slug: 'courses-textbooks-and-references/programming/cpp-programming/ii',
+              attrs: {
+                'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+                'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+              },
+            },
+          ],
+        },
+        {
+          label: 'C 语言程序设计',
+          translations: {
+            en: 'C Programming Language',
+          },
+          slug: 'courses-textbooks-and-references/programming/c-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
           },
         },
         {
-          label: 'C++ 程序设计 II',
+          label: 'C# 程序设计',
           translations: {
-            en: 'C++ Programming II',
+            en: 'C# Programming Language',
           },
-          slug: 'courses-textbooks-and-references/cpp-programming/ii',
+          slug: 'courses-textbooks-and-references/programming/csharp-programming',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+          },
+        },
+        {
+          label: 'Java 程序设计',
+          translations: {
+            en: 'Java Programming Language',
+          },
+          slug: 'courses-textbooks-and-references/programming/java-programming',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+          },
+        },
+        {
+          label: 'Kotlin 程序设计',
+          translations: {
+            en: 'Kotlin Programming Language',
+          },
+          slug: 'courses-textbooks-and-references/programming/kotlin-programming',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+          },
+        },
+        {
+          label: 'Python 程序设计',
+          translations: {
+            en: 'Python Programming Language',
+          },
+          slug: 'courses-textbooks-and-references/programming/python-programming',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+          },
+        },
+        {
+          label: 'Shell 程序设计',
+          translations: {
+            en: 'Shell Programming',
+          },
+          slug: 'courses-textbooks-and-references/programming/shell-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
           },
         },
       ],
-    },
-    {
-      label: 'Shell 程序设计',
-      translations: {
-        en: 'Shell Programming',
-      },
-      slug: 'courses-textbooks-and-references/shell-programming',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
-      },
     },
     {
       label: '软件测试',
@@ -674,61 +747,6 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
-      label: 'C 语言程序设计',
-      translations: {
-        en: 'C Programming Language',
-      },
-      slug: 'courses-textbooks-and-references/c-programming',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
-      },
-    },
-    {
-      label: 'C# 程序设计',
-      translations: {
-        en: 'C# Programming Language',
-      },
-      slug: 'courses-textbooks-and-references/csharp-programming',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
-      },
-    },
-    {
-      label: 'Java 程序设计',
-      translations: {
-        en: 'Java Programming Language',
-      },
-      slug: 'courses-textbooks-and-references/java-programming',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
-      },
-    },
-    {
-      label: 'Kotlin 程序设计',
-      translations: {
-        en: 'Kotlin Programming Language',
-      },
-      slug: 'courses-textbooks-and-references/kotlin-programming',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
-      },
-    },
-    {
-      label: 'Python 程序设计',
-      translations: {
-        en: 'Python Programming Language',
-      },
-      slug: 'courses-textbooks-and-references/python-programming',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
-      },
-    },
-    {
       label: 'Android 开发',
       translations: {
         en: 'Android Development',
@@ -736,8 +754,8 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/android-development',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
-      },
-    },
-  ],
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+          },
+        },
+      ],
 } satisfies SidebarItem

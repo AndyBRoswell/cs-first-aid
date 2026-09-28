@@ -3,10 +3,10 @@ import * as util from '@tests/util.ts'
 import * as src_util from '@tests/util/e2e.ts'
 import * as docs_util from '@tests/util/content/docs.ts'
 import * as course_util from '@tests/util/content/docs/Courses, Textbooks and References.ts'
-import { I_course_material } from '@/content/docs/Courses, Textbooks and References/CPP Programming/data.ts'
+import { I_course_material } from '@/content/docs/Courses, Textbooks and References/Programming/CPP Programming/data.ts'
 
 src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References', '@C++ Programming I', '@C++ Programming', '@Introduction to Programming', ] }, async ({ page }) => {
-  await page.goto(`${util.test_server}/courses-textbooks-and-references/cpp-programming/i`)
+  await page.goto(`${util.test_server}/courses-textbooks-and-references/programming/cpp-programming/i`)
 
   const main = page.getByRole('main')
 

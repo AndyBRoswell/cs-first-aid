@@ -3,10 +3,10 @@ import * as util from '@tests/util.ts'
 import * as src_util from '@tests/util/e2e.ts'
 import * as docs_util from '@tests/util/content/docs.ts'
 import * as course_util from '@tests/util/content/docs/Courses, Textbooks and References.ts'
-import { course_material } from '@/content/docs/Courses, Textbooks and References/Java Programming/data.ts'
+import { course_material } from '@/content/docs/Courses, Textbooks and References/Programming/Java Programming/data.ts'
 
 src_util.test('Java Programming', { tag: [ '@Courses, Textbooks and References', '@Java Programming' ] }, async ({ page }) => {
-  await page.goto(`${util.test_server}/courses-textbooks-and-references/java-programming`)
+  await page.goto(`${util.test_server}/courses-textbooks-and-references/programming/java-programming`)
 
   const main = page.getByRole('main')
 
