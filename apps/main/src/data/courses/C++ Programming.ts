@@ -9,19 +9,25 @@ export const I_info = {
   tag: [ '基础必修' ],
   material: {
     text: {
-      selected: [
-        catalog.get('PPP3'),
+      selected: {
+        en: [
+          catalog.get('PPP3'),
+        ],
+      },
+    },
+    reference: {
+      en: [
+        ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
+        catalog.get('cppreference'),
+        ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
       ],
     },
-    reference: [
-      ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
-      catalog.get('cppreference'),
-      ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
-    ],
-    excluded: [
-      ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'C++ Primer') && item.edition === 5, { count: 1 }),
-      ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'C++ Primer Plus') && item.edition === 6, { count: 1 }),
-    ],
+    excluded: {
+      en: [
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'C++ Primer') && item.edition === 5, { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'C++ Primer Plus') && item.edition === 6, { count: 1 }),
+      ],
+    },
   }
 } satisfies types_data.Course
 

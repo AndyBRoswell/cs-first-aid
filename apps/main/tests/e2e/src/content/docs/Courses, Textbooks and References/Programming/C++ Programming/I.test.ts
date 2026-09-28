@@ -14,7 +14,7 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
 
   await docs_util.check_title(main, /程序设计入门（C\+\+\s*程序设计\s*I）/)
 
-  let heading: Locator, References: Locator
+  let heading: Locator, section: Locator, References: Locator
 
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
@@ -23,29 +23,35 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
   ])
 
   await src_util.test.step('教科书', async () => {
-    References = course_util.locate_references(main, [ 'text', 'selected' ])
+    References = course_util.locate_references(main, [ 'text', 'selected', 'en' ])
     await expect(References.locator('.entry.CSL')).toHaveCount(1)
     await src_util.everyone_occurs(References, [
       /B. Stroustrup/,
       /Programming: Principles and Practice Using C\+\+/,
     ])
+    section = src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 
   await src_util.test.step('其它参考', async () => {
-    References = course_util.locate_references(main, [ 'reference' ])
+    References = course_util.locate_references(main, [ 'reference', 'en' ])
     await src_util.everyone_occurs(References, [
       /Microsoft/,
       /C\+\+ Language Reference/,
       /cppreference/,
       /The Definitive C\+\+ Book Guide and List/,
     ])
+    section = src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 
   await src_util.test.step('未被选择的书目', async () => {
-    References = course_util.locate_references(main, [ 'excluded' ])
+    References = course_util.locate_references(main, [ 'excluded', 'en' ])
     await expect(References.locator('.entry.CSL')).toHaveCount(2)
     await src_util.everyone_occurs(References, [
       /C\+\+ Primer,/, /C\+\+ Primer Plus,/,
     ])
+    section = src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 })
