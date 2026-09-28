@@ -66,9 +66,11 @@ export const I_info = {
           ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学习题集'), { max_count: 1 }),
         ],
       },
-      video: [
-        ...catalog.filter(item => item.type === 'motion_picture' && item.author?.some(author => author.literal === '分析学爱好者') && util.ieq(item.title!, '我为什么推荐你使用丘维声学习高等代数'), { max_count: 1 }),
-      ],
+      video: {
+        zh: [
+          ...catalog.filter(item => item.type === 'motion_picture' && item.author?.some(author => author.literal === '分析学爱好者') && util.ieq(item.title!, '我为什么推荐你使用丘维声学习高等代数'), { max_count: 1 }),
+        ],
+      },
     }
   }
 } satisfies types_data.Course
