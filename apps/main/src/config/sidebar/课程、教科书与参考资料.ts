@@ -301,6 +301,17 @@ export const Courses_Textbooks_and_References = {
       ],
     },
     {
+      label: 'Shell 程序设计',
+      translations: {
+        en: 'Shell Programming',
+      },
+      slug: 'courses-textbooks-and-references/shell-programming',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+      },
+    },
+    {
       label: '软件测试',
       translations: {
         en: 'Software Testing',
