@@ -62,7 +62,10 @@ import References from '@/components/References.astro'
     </section>
     <section>
       ### 视频
-      <References materials={II_course_material.reference.video} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'video' ]}/>
+      <section>
+        #### 中文
+        <References materials={II_course_material.reference.video.zh} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'video', 'zh' ]}/>
+      </section>
     </section>
     <section>
       ### 习题集

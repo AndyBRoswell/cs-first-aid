@@ -131,9 +131,11 @@ export const II_info = {
           ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '尚志') && util.ieq(item.title!, '线性代数学习指导'), { max_count: 1 }),
         ],
       },
-      video: [
-        ...catalog.filter(item => item.type === 'motion_picture' && item.author?.some(author => author.literal === '分析学爱好者') && util.ieq(item.title!, '我为什么推荐你使用丘维声学习高等代数'), { max_count: 1 }),
-      ],
+      video: {
+        zh: [
+          ...catalog.filter(item => item.type === 'motion_picture' && item.author?.some(author => author.literal === '分析学爱好者') && util.ieq(item.title!, '我为什么推荐你使用丘维声学习高等代数'), { max_count: 1 }),
+        ],
+      },
       problem_set: {
         zh: [
           ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学习题集'), { max_count: 1 }),
