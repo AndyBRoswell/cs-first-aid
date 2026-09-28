@@ -22,6 +22,8 @@ export const entries = [
       URL: 'https://link.springer.com/book/10.1007/978-3-030-54256-6',
       accessed: { 'date-parts': [ [ 2026, 9, 28 ] ] },
       custom: {
+        topic: [ 'Programming Techniques', 'Theory of Computation', 'Algorithms', 'Discrete Mathematics in Computer Science' ],
+        'eBook packages': [ 'Computer Science', 'Computer Science (R0)' ],
         'collection-title-short': 'TCS',
         variant: [
           {
