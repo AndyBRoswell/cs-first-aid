@@ -7,8 +7,10 @@ export const info = {
   name: [ '汇编语言程序设计' ],
   tag: [ '基础选修' ],
   material: {
-    text: [
-      ...catalog.filter(item => item.type === 'book' && item.title === 'Assembly Language for x86 Processors' && item.author?.some(author => author.family === 'Irvine' && author.given === 'Kip R.'), { count: 1 }),
-    ],
+    text: {
+      en: [
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Assembly Language for x86 Processors' && item.author?.some(author => author.family === 'Irvine' && author.given === 'Kip R.'), { count: 1 }),
+      ],
+    },
   },
 } satisfies types_data.Course
