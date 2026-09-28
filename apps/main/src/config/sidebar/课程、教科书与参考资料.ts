@@ -328,6 +328,17 @@ export const Courses_Textbooks_and_References = {
           },
         },
         {
+          label: '汇编语言程序设计',
+          translations: {
+            en: 'Assembly Language Programming',
+          },
+          slug: 'courses-textbooks-and-references/programming/assembly-language-programming',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+          },
+        },
+        {
           label: 'C# 程序设计',
           translations: {
             en: 'C# Programming Language',
