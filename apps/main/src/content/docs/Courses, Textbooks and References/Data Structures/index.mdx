@@ -1,0 +1,43 @@
+---
+title: 数据结构
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <section>
+      ### 中文
+      <References materials={course_material.text.zh} reference_ranges={reference_ranges} scope_name={[ 'text', 'zh' ]}/>
+    </section>
+    <section>
+      ### 英文
+      <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={[ 'text', 'en' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 参考书
+    <section>
+      ### 英文
+      <References materials={course_material.reference.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'en' ]}/>
+    </section>
+    <section>
+      ### 说明
+      Shaffer 在[原书主页](https://people.cs.vt.edu/shaffer/Book/)说明，《Data Structures and Algorithm Analysis》纸质版和 PDF 版最后更新于 2013 年，已不再维护，并明确建议改用 OpenDSA 在线项目。此处列出的该项目的 CS3 教材[部分示例同时提供 Java 和 C++ 代码](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/ListArray.html)；其第 2 章「Programming Tutorials」还收录了[使用 Java 的 Scanner 类](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/scanning.html)等 Java 专题。[OpenDSA 官方说明](https://opendsa.org/guides/opendsa-book-configuration)指出，代码示例并非都具备所有语言的版本。
+
+      我不建议使用不原生支持不安全内存访问的语言学习《数据结构》，如 Java、Python；强烈建议使用 C 或 C++。若你坚持使用 Java 学习，不推荐按此项目的建议使用 Eclipse；推荐 JetBrains IntelliJ IDEA。
+    </section>
+  </section>
+  <section>
+    ## 习题集
+    <section>
+      ### 中文
+      <References materials={course_material.problem_set.zh} reference_ranges={reference_ranges} scope_name={[ 'problem_set', 'zh' ]}/>
+    </section>
+  </section>
+</section>
