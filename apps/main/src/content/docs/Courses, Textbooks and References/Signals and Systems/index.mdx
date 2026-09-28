@@ -11,6 +11,9 @@ import References from '@/components/References.astro'
   # 学习材料
   <section>
     ## 参考资料
-    <References materials={course_material.reference} reference_ranges={reference_ranges} scope_name={[ 'reference' ]}/>
+    <section>
+      ### 英文
+      <References materials={course_material.reference.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'en' ]}/>
+    </section>
   </section>
 </section>
