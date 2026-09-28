@@ -1,0 +1,40 @@
+---
+title: 操作系统 I
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <section>
+      ### 英文
+      <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={[ 'text', 'en' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 参考资料
+    <section>
+      ### 教科书
+      <section>
+        #### 中文
+        <References materials={course_material.reference.text.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'zh' ]}/>
+      </section>
+      <section>
+        #### 英文
+        <References materials={course_material.reference.text.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
+      </section>
+    </section>
+    <section>
+      ### 其它资料
+      <section>
+        #### 英文
+        <References materials={course_material.reference.other.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'other', 'en' ]}/>
+      </section>
+    </section>
+  </section>
+</section>
