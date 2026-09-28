@@ -6,7 +6,11 @@ export const info = {
   canonical_name: 'Kotlin 程序设计',
   name: [ 'Kotlin 程序设计', 'Kotlin' ],
   material: {
-    text: [ catalog.get('Kotlin Docs') ],
-    reference: [ catalog.get('Kotlin books') ],
+    text: {
+      en: [ catalog.get('Kotlin Docs') ],
+    },
+    reference: {
+      en: [ catalog.get('Kotlin books') ],
+    },
   },
 } satisfies types_data.Course
