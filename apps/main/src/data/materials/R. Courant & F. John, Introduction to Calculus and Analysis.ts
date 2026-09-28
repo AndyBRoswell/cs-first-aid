@@ -26,7 +26,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       language: 'en-US',
       custom: {
-        'eBook Packages': 'Springer Book Archive',
+        'eBook packages': 'Springer Book Archive',
         variant: [
           {
             type: 'book',
@@ -63,7 +63,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       language: 'en-US',
       custom: {
-        'eBook Packages': 'Springer Book Archive',
+        'eBook packages': 'Springer Book Archive',
         variant: [
           {
             type: 'book',
@@ -100,7 +100,7 @@ export const entries = [
       language: 'en-US',
       custom: {
         subtitle: 'Chapters 5 - 8',
-        'eBook Packages': 'Springer Book Archive',
+        'eBook packages': 'Springer Book Archive',
       } satisfies CSL.Custom
     },
   },
