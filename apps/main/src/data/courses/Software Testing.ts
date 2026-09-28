@@ -7,8 +7,10 @@ export const info = {
   name: [ '软件测试' ],
   tag: [ '基础必修' ],
   material: {
-    reference: [
-      ...catalog.filter(item => item.type === 'book' && item.title === 'Software Testing' && item.author?.some(author => author.family === 'Patton' && author.given === 'Ron'), { count: 1 }),
-    ],
+    reference: {
+      en: [
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Software Testing' && item.author?.some(author => author.family === 'Patton' && author.given === 'Ron'), { count: 1 }),
+      ],
+    },
   },
 } satisfies types_data.Course
