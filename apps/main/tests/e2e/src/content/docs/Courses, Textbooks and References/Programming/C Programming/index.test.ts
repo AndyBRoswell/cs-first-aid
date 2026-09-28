@@ -20,17 +20,31 @@ test_src_util.test('C Programming', { tag: [ '@Courses, Textbooks and References
   await expect(heading).toHaveCount(1)
 
   await test_src_util.test.step('教科书', async () => {
-    References = test_course_util.locate_references(main, [ 'text' ])
+    References = test_course_util.locate_references(main, [ 'text', 'en' ])
     await test_src_util.everyone_occurs(References, [
       /J. Gustedt/,
       /Modern C/,
     ])
+    section = test_src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 
   await test_src_util.test.step('参考资料', async () => {
-    References = test_course_util.locate_references(main, [ 'reference' ])
+    References = test_course_util.locate_references(main, [ 'reference', 'en' ])
     await test_src_util.everyone_occurs(References, [
       /C reference/i,
     ])
+    section = test_src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
+  })
+
+  await test_src_util.test.step('未被选择的书目', async () => {
+    References = test_course_util.locate_references(main, [ 'excluded', 'en' ])
+    await test_src_util.everyone_occurs(References, [
+      /The C Programming Language/,
+      /C Primer Plus/,
+    ])
+    section = test_src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 })

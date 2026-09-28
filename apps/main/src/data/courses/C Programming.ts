@@ -7,15 +7,21 @@ export const info = {
   name: [ 'C 程序设计', 'C 语言程序设计', 'C', 'C 语言', ],
   tag: [ '基础选修' ],
   material: {
-    text: [
-      ...catalog.filter(item => item.title === 'Modern C' && item.issued!["date-parts"]![0][0] as number >= 2024)
-    ],
-    reference: [
-      catalog.get('cppreference.com/c'),
-    ],
-    excluded: [
-      catalog.get('K&R C'),
-      catalog.get('C Primer Plus'),
-    ],
+    text: {
+      en: [
+        ...catalog.filter(item => item.title === 'Modern C' && item.issued!["date-parts"]![0][0] as number >= 2024)
+      ],
+    },
+    reference: {
+      en: [
+        catalog.get('cppreference.com/c'),
+      ],
+    },
+    excluded: {
+      en: [
+        catalog.get('K&R C'),
+        catalog.get('C Primer Plus'),
+      ],
+    },
   }
 } satisfies types_data.Course
