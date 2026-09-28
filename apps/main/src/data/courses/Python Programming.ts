@@ -8,15 +8,23 @@ export const info = {
   name: [ 'Python 程序设计', 'Python', ],
   tag: [ '基础选修' ],
   material: {
-    text: [
-      ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Python Software Foundation' && util.ieq(item.title!, 'The Python Tutorial'), { max_count: 1 }),
-    ],
-    reference: [
-      ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.family === 'Matthes' && util.ieq(item.title!, 'Python Crash Course'), { max_count: 1 }),
-      ...catalog.filter(item => item.author?.some(author => author.family === '嵩' && author.given === '天') && util.ieq(item.title!, 'Python语言程序设计基础'), { max_count: 1 }),
-    ],
-    excluded: [
-      catalog.get('Python Cookbook'),
-    ],
+    text: {
+      en: [
+        ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Python Software Foundation' && util.ieq(item.title!, 'The Python Tutorial'), { max_count: 1 }),
+      ],
+    },
+    reference: {
+      en: [
+        ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.family === 'Matthes' && util.ieq(item.title!, 'Python Crash Course'), { max_count: 1 }),
+      ],
+      zh: [
+        ...catalog.filter(item => item.author?.some(author => author.family === '嵩' && author.given === '天') && util.ieq(item.title!, 'Python语言程序设计基础'), { max_count: 1 }),
+      ],
+    },
+    excluded: {
+      en: [
+        catalog.get('Python Cookbook'),
+      ],
+    },
   }
 } satisfies types_data.Course

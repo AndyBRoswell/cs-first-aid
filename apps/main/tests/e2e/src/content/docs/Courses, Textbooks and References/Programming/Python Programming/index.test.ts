@@ -20,20 +20,37 @@ src_util.test('Python Programming', { tag: [ '@Courses, Textbooks and References
   await expect(heading).toHaveCount(1)
 
   await src_util.test.step('教科书', async () => {
-    References = course_util.locate_references(main, [ 'text' ])
+    References = course_util.locate_references(main, [ 'text', 'en' ])
     await src_util.everyone_occurs(References, [
       /Python Software Foundation/,
       /The Python Tutorial/,
     ])
+    section = src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 
   await src_util.test.step('参考资料', async () => {
-    References = course_util.locate_references(main, [ 'reference' ])
+    References = course_util.locate_references(main, [ 'reference', 'en' ])
     await src_util.everyone_occurs(References, [
       /E. Matthes/,
-      /嵩天/,
       /Python Crash Course/,
+    ])
+    section = src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
+
+    References = course_util.locate_references(main, [ 'reference', 'zh' ])
+    await src_util.everyone_occurs(References, [
+      /嵩天/,
       /Python\s*语言程序设计基础/,
     ])
+    section = src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '中文' })).toHaveCount(1)
+  })
+
+  await src_util.test.step('未被选择的书目', async () => {
+    References = course_util.locate_references(main, [ 'excluded', 'en' ])
+    await src_util.everyone_occurs(References, [ /Python Cookbook/ ])
+    section = src_util.locate_parent(References, 'section')
+    await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 })
