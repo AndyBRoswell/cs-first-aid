@@ -432,10 +432,38 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Operating Systems',
       },
-      slug: '',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      },
+      items: [
+        {
+          label: '概述',
+          translations: {
+            en: 'Overview',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '操作系统 I',
+          translations: {
+            en: 'Operating Systems I',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '操作系统 II',
+          translations: {
+            en: 'Operating Systems II',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+      ],
     },
     {
       label: '计算机组成原理',
@@ -448,9 +476,9 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
-      label: '数据库',
+      label: '计算机体系结构',
       translations: {
-        en: 'Databases',
+        en: 'Computer Architecture',
       },
       slug: '',
       attrs: {
@@ -458,19 +486,123 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
-      label: '安全编程',
+      label: '数据库',
       translations: {
-        en: 'Secure Programming',
+        en: 'Databases',
       },
-      slug: '',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      },
+      items: [
+        {
+          label: '概述',
+          translations: {
+            en: 'Overview',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '数据库 I',
+          translations: {
+            en: 'Databases I',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '数据库 II',
+          translations: {
+            en: 'Databases II',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+      ],
     },
     {
       label: '计算机网络',
       translations: {
         en: 'Computer Networks',
+      },
+      items: [
+        {
+          label: '概述',
+          translations: {
+            en: 'Overview',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '计算机网络 I',
+          translations: {
+            en: 'Computer Networks I',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '计算机网络 II',
+          translations: {
+            en: 'Computer Networks II',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+      ],
+    },
+    {
+      label: '编译原理',
+      translations: {
+        en: 'Compiler Design',
+      },
+      items: [
+        {
+          label: '概述',
+          translations: {
+            en: 'Overview',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '编译原理 I',
+          translations: {
+            en: 'Compiler Design I',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '编译原理 II',
+          translations: {
+            en: 'Compiler Design II',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+      ],
+    },
+    {
+      label: '安全编程',
+      translations: {
+        en: 'Secure Programming',
       },
       slug: '',
       attrs: {
@@ -491,16 +623,6 @@ export const Courses_Textbooks_and_References = {
       label: '形式语言与自动机',
       translations: {
         en: 'Formal Languages and Automata',
-      },
-      slug: '',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      },
-    },
-    {
-      label: '编译原理',
-      translations: {
-        en: 'Compiler Design',
       },
       slug: '',
       attrs: {
@@ -611,16 +733,6 @@ export const Courses_Textbooks_and_References = {
       label: '设计模式',
       translations: {
         en: 'Design Patterns',
-      },
-      slug: '',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      },
-    },
-    {
-      label: '计算机体系结构',
-      translations: {
-        en: 'Computer Architecture',
       },
       slug: '',
       attrs: {
