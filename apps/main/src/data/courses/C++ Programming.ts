@@ -35,18 +35,24 @@ export const II_info = {
   canonical_name: 'C++ 程序设计 II',
   name: [ 'C++ 程序设计 II', 'C++程序设计II', 'C++ II', ],
   material: {
-    text: [
-      ...catalog.filter(item => util.ieq(item.title!, 'A Tour of C++'), { count: 1 }),
-    ],
+    text: {
+      en: [
+        ...catalog.filter(item => util.ieq(item.title!, 'A Tour of C++'), { count: 1 }),
+      ],
+    },
     reference: {
-      book: [
-        ...catalog.filter(item => util.ieq(item.title!, 'Professional C++'), { count: 1 }),
-      ],
-      other: [
-        ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
-        catalog.get('cppreference'),
-        ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
-      ],
+      book: {
+        en: [
+          ...catalog.filter(item => util.ieq(item.title!, 'Professional C++'), { count: 1 }),
+        ],
+      },
+      other: {
+        en: [
+          ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
+          catalog.get('cppreference'),
+          ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
+        ],
+      },
     },
   },
 } satisfies types_data.Course
