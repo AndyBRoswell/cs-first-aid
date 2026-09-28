@@ -14,7 +14,11 @@ import References from '@/components/References.astro'
     <References materials={II_course_material.text} reference_ranges={II_reference_ranges} scope_name={['text']} />
   </section>
   <section>
-    ## 参考资料
-    <References materials={II_course_material.reference} reference_ranges={II_reference_ranges} scope_name={['reference']} />
+    ## 参考书
+    <References materials={II_course_material.reference.book} reference_ranges={II_reference_ranges} scope_name={['reference', 'book']} />
+  </section>
+  <section>
+    ## 其它参考
+    <References materials={II_course_material.reference.other} reference_ranges={II_reference_ranges} scope_name={['reference', 'other']} />
   </section>
 </section>

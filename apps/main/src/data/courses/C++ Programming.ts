@@ -32,8 +32,15 @@ export const II_info = {
     text: [
       ...catalog.filter(item => util.ieq(item.title!, 'A Tour of C++'), { count: 1 }),
     ],
-    reference: [
-      ...catalog.filter(item => util.ieq(item.title!, 'Professional C++'), { count: 1 }),
-    ],
+    reference: {
+      book: [
+        ...catalog.filter(item => util.ieq(item.title!, 'Professional C++'), { count: 1 }),
+      ],
+      other: [
+        ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
+        catalog.get('cppreference'),
+        ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
+      ],
+    },
   },
 } satisfies types_data.Course
