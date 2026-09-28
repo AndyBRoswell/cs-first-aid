@@ -21,14 +21,22 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
 
-  References = course_util.locate_references(main, [ 'text', 'selected' ])
+  References = course_util.locate_references(main, [ 'text', 'selected', 'en' ])
   await src_util.everyone_occurs(References, [
     /R. A. Adams/,
-    /龚昇/,
     /Calculus: A Complete Course/,
+  ])
+  section = src_util.locate_parent(References, 'section')
+  await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
+
+  References = course_util.locate_references(main, [ 'text', 'selected', 'zh' ])
+  await src_util.everyone_occurs(References, [
+    /龚昇/,
     /简明微积分/,
   ])
   section = src_util.locate_parent(References, 'section')
+  await expect(section.getByRole('heading', { level: 3, name: '中文' })).toHaveCount(1)
+  section = src_util.locate_parent(References, 'section', 2)
   section = section.locator('section', { has: page.getByRole('heading', { level: 3, name: '说明' }) })
   await expect(section).toHaveCount(1)
   await src_util.everyone_occurs(section, [
@@ -40,8 +48,10 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
     /《简明微积分》/,
   ])
 
-  References = course_util.locate_references(main, [ 'text', 'excluded' ])
+  References = course_util.locate_references(main, [ 'text', 'excluded', 'en' ])
   section = src_util.locate_parent(References, 'section')
+  await expect(section.getByRole('heading', { level: 4, name: '英文' })).toHaveCount(1)
+  section = src_util.locate_parent(References, 'section', 2)
   section = section.locator('section', { has: page.getByRole('heading', { level: 4, name: '说明' }) })
   await expect(section).toHaveCount(1)
   await src_util.everyone_occurs(section, [
@@ -52,8 +62,14 @@ src_util.test('Calculus', { tag: [ '@Courses, Textbooks and References', '@Calcu
     /荣誉/,
   ])
 
-  References = course_util.locate_references(main, [ 'other', 'text', ])
+  References = course_util.locate_references(main, [ 'other', 'text', 'zh' ])
   section = src_util.locate_parent(References, 'section')
+  await expect(section.getByRole('heading', { level: 3, name: '中文' })).toHaveCount(1)
+
+  References = course_util.locate_references(main, [ 'other', 'text', 'en' ])
+  section = src_util.locate_parent(References, 'section')
+  await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
+  section = src_util.locate_parent(References, 'section', 2)
   section = section.locator('section', { has: page.getByRole('heading', { level: 3, name: '说明' }) })
   await expect(section).toHaveCount(1)
   await src_util.everyone_occurs(section, [
