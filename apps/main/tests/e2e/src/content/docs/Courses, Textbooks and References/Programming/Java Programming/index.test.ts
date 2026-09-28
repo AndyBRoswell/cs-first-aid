@@ -20,7 +20,7 @@ src_util.test('Java Programming', { tag: [ '@Courses, Textbooks and References',
   await expect(heading).toHaveCount(1)
 
   await src_util.test.step('教科书', async () => {
-    References = course_util.locate_references(main, [ 'text' ])
+    References = course_util.locate_references(main, [ 'text', 'en' ])
     await src_util.everyone_occurs(References, [
       /Oracle/,
       /Learn Java/,
@@ -28,7 +28,7 @@ src_util.test('Java Programming', { tag: [ '@Courses, Textbooks and References',
   })
 
   await src_util.test.step('参考资料', async () => {
-    References = course_util.locate_references(main, [ 'reference' ])
+    References = course_util.locate_references(main, [ 'reference', 'en' ])
     await src_util.everyone_occurs(References, [
       /K. Sierra/,
       /Head First Java/,
