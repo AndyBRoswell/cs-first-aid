@@ -36,7 +36,7 @@ export const entries = [
     material: {
       type: 'book',
       title: 'Windows Internals, Part 2',
-      author: [ { given: 'Andrea', family: 'Allievi' }, { given: 'Mark E.', family: 'Russinovich' }, { given: 'Alex', family: 'Ionescu' }, { given: 'David A.', family: 'Solomon' } ],
+      author: [ { given: 'Andrea', family: 'Allievi' }, { given: 'Alex', family: 'Ionescu' }, { given: 'Mark E.', family: 'Russinovich' }, { given: 'David A.', family: 'Solomon' } ],
       publisher: 'Microsoft Press',
       issued: { 'date-parts': [ [ 2021, 8, 31 ] ] },
       edition: 7,
