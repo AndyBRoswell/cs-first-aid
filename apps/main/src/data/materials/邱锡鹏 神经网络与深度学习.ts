@@ -23,9 +23,7 @@ export const entries = [
           { link: 'https://github.com/nndl/nndl/releases/download/book-pdf/nndl-v2.pdf', display_text: 'PDF [2e, forthcoming, 2026-07-23]', 'Content-Type': 'application/pdf' },
           { link: 'https://nndl.ai/nndl/legacy/nndl-v1/main.pdf', display_text: 'PDF [1e]', 'Content-Type': 'application/pdf' },
         ],
-        variant: [
-          { type: 'book', edition: 2, medium: 'PDF', URL: 'https://nndl.ai/nndl-v2/' },
-        ],
+        URL: [ { link: 'https://github.com/nndl/nndl', display_text: 'GH repo' } ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
