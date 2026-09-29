@@ -16,12 +16,14 @@ export const entries = [
       edition: 2,
       medium: 'Hardcover',
       publisher: 'Pearson',
-      issued: { 'date-parts': [ [ 2006 ] ] },
+      issued: { 'date-parts': [ [ 2006, 8, 31 ] ] },
       ISBN: '9780321486813',
+      'number-of-pages': 1040,
       language: 'en',
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/compilers-principles-techniques-and-tools/P200000003472/9780321486813',
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
+        URL: [ { link: 'https://www.informit.com/store/compilers-principles-techniques-and-tools-9780321486813', display_text: 'Pearson InformIT' } ],
         variant: [
           {
             type: 'book',
