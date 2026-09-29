@@ -1,0 +1,23 @@
+---
+title: 编码理论
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 参考书
+    <section>
+      ### 中文
+      <References materials={course_material.reference.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'zh' ]}/>
+    </section>
+    <section>
+      ### 英文
+      <References materials={course_material.reference.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'en' ]}/>
+    </section>
+  </section>
+</section>
