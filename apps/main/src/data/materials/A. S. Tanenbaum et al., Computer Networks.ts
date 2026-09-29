@@ -17,7 +17,12 @@ export const entries = [
       language: 'en',
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/computer-networks-global-edition/P200000005535/9781292374062',
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
-      custom: { edition: 'Global Edition' } satisfies CSL.Custom,
+      custom: {
+        edition: 'Global Edition',
+        URL: [
+          { link: 'https://www.pearson.com/content/dam/one-dot-com/one-dot-com/us/en/files/Global/Pearson-2022-ENGINEERING-and-COMPUTER-SCIENCE-International-Catalogue.pdf#page=72', display_text: 'Pearson-2022-ENGINEERING-and-COMPUTER-SCIENCE-International-Catalogue.pdf' },
+        ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
