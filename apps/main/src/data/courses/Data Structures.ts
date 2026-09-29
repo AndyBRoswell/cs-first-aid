@@ -9,7 +9,7 @@ export const info = {
     text: {
       zh: [
         ...catalog.filter(item => item.type === 'book' && item.title === '数据结构（C++语言版）' && item.author?.some(author => author.family === '邓' && author.given === '俊辉'), { count: 1 }),
-        ...catalog.filter(item => item.type === 'book' && item.title === '数据结构' && item.author?.some(author => author.family === '严' && author.given === '蔚敏'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === '数据结构' && item.publisher === '清华大学出版社' && item.author?.some(author => author.family === '严' && author.given === '蔚敏'), { count: 1 }),
       ],
       en: [
         ...catalog.filter(item => item.type === 'book' && item.title === 'The Algorithm Design Manual' && item.author?.some(author => author.family === 'Skiena'), { count: 1 }),
