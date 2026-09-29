@@ -20,10 +20,16 @@ export const I_info = {
           ...catalog.filter(item => item.type === 'book' && item.title === 'Modern Operating Systems' && item.author?.some(author => author.family === 'Tanenbaum'), { count: 1 }),
         ],
       },
-      other: { en: [
-        ...catalog.filter(item => item.type === 'book' && item.title?.startsWith('Windows Internals, Part 1:'), { count: 1 }),
-        ...catalog.filter(item => item.type === 'book' && item.title === 'Windows Internals, Part 2', { count: 1 }),
-      ] },
+      other: {
+        zh: [
+          ...catalog.filter(item => item.type === 'webpage' && item.title === '计算机本科生花大量时间写编译器，操作系统是不是不务正业？', { count: 1 }),
+          ...catalog.filter(item => item.type === 'webpage' && item.title === '为啥南京大学蒋炎岩老师的操作系统课那么难?', { count: 1 }),
+        ],
+        en: [
+          ...catalog.filter(item => item.type === 'book' && item.title?.startsWith('Windows Internals, Part 1:'), { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'Windows Internals, Part 2', { count: 1 }),
+        ],
+      },
     },
   },
 } satisfies types_data.Course
