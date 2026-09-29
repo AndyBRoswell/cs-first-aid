@@ -12,6 +12,9 @@ export const entries = [
       medium: 'Paperback',
       publisher: 'Pearson Education Limited',
       issued: { 'date-parts': [ [ 2013, 7, 23 ] ] },
+      'original-date': { 'date-parts': [ [ 1989 ] ] },
+      'original-publisher': 'Addison-Wesley Publishing Company',
+      'original-publisher-place': 'Reading, Massachusetts',
       ISBN: '9781292026565',
       'number-of-pages': '720',
       language: 'en',
@@ -19,7 +22,10 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
         edition: 'Pearson New International Edition',
-        URL: [ { link: 'https://www.kinokuniya.co.jp/f/dsg-02-9781292026565', display_text: 'Kinokuniya' } ],
+        URL: [
+          { link: 'https://www.kinokuniya.co.jp/f/dsg-02-9781292026565', display_text: 'Kinokuniya' },
+          { link: 'https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=870065&se=b0&ty=B', display_text: 'KAIST Library' },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
