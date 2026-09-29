@@ -21,7 +21,14 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
         variant: [
-          { type: 'book', medium: 'Hardcover', ISBN: '9780321573513', 'number-of-pages': 976, issued: { 'date-parts': [ [ 2011, 3, 24 ] ] }, URL: 'https://www.informit.com/store/algorithms-9780321573513' },
+          {
+            type: 'book',
+            medium: 'Hardcover',
+            ISBN: '9780321573513',
+            'number-of-pages': 976,
+            issued: { 'date-parts': [ [ 2011, 3, 24 ] ] },
+            URL: 'https://www.informit.com/store/algorithms-9780321573513',
+          },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
