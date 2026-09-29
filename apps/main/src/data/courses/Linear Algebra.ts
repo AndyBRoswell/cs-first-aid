@@ -44,6 +44,7 @@ export const I_info = {
     reference: {
       text: {
         zh: [
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '线性代数') && item.author?.some(author => author.literal === '中国人民大学数学学院') && item.edition === 7, { count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '炯生') && util.ieq(item.title!, '线性代数'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '席' && author.given === '南华') && util.ieq(item.title!, '基础代数') && item.volume === 1, { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '尚志') && util.ieq(item.title!, '线性代数（数学专业用）'), { max_count: 1 }),
