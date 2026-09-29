@@ -27,7 +27,6 @@ export const entries = [
             medium: 'VitalSource eTextbook',
             ISBN: '9781292038155',
             issued: { 'date-parts': [ [ 2013 ] ] },
-            URL: 'https://www.pearson.fr/fr/book/?GCOI=27440109052510',
           },
           {
             type: 'book',
@@ -35,7 +34,6 @@ export const entries = [
             ISBN: '9780131988422',
             'number-of-pages': 1108,
             issued: { 'date-parts': [ [ 2009, 8, 18 ] ] },
-            URL: 'https://www.pearson.com/en-us/subject-catalog/p/discrete-time-signal-processing/P200000003226/9780131988422',
           },
         ],
       } satisfies CSL.Custom,
