@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,8 +16,11 @@ export const entries = [
       'number-of-pages': 296,
       'collection-title': '面向21世纪课程教材',
       language: 'zh-CN',
-      URL: 'https://www.hep.com.cn/book/show/e073e65d-330e-48e7-92e3-a5bb89e954a0',
+      URL: 'https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=66e4cb88e4efbc722ba4840a',
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+      custom: {
+        'printing-date': { 'date-parts': [ [ 2026, 8 ] ] },
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
