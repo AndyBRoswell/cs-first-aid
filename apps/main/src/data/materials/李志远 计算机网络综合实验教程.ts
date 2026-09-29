@@ -5,7 +5,7 @@ export const entries = [
     id: [],
     material: {
       type: 'book',
-      title: '计算机网络综合实验教程——协议分析与应用（第2版）',
+      title: '计算机网络综合实验教程——协议分析与应用',
       author: [ { family: '李', given: '志远' } ],
       publisher: '电子工业出版社',
       issued: { 'date-parts': [ [ 2026, 6 ] ] },
