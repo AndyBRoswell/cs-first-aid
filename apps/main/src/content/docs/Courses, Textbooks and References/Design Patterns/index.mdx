@@ -1,0 +1,22 @@
+---
+title: 设计模式
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 参考书
+    <section>
+      ### 教科书
+      <section>
+        #### 中文
+        <References materials={course_material.reference.text.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'zh' ]}/>
+      </section>
+    </section>
+  </section>
+</section>
