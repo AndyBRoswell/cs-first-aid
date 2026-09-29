@@ -18,7 +18,13 @@ export const entries = [
       language: 'en',
       URL: 'https://www.mheducation.co.uk/engineering-circuit-analysis-ise-9781266262494-emea-group',
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
-      custom: { edition: 'International Student Edition' } satisfies CSL.Custom,
+      custom: {
+        edition: 'International Student Edition',
+        URL: [
+          { link: 'https://ci.nii.ac.jp/ncid/BD06008995', display_text: 'CiNii Books' },
+          { link: 'https://qcpl.quezoncity.gov.ph/catalog/26011', display_text: 'Quezon City Public Library' },
+        ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
