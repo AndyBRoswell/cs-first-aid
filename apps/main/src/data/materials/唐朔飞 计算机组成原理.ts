@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -15,6 +16,7 @@ export const entries = [
       language: 'zh-CN',
       URL: 'https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=62d19e6a938b7cc2960eede1',
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+      custom: { 'printing-date': { 'date-parts': [ [ 2026, 7 ] ] } } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -30,6 +32,7 @@ export const entries = [
       language: 'zh-CN',
       URL: 'https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cd4f52ba9eb884cf819d2a',
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+      custom: { 'printing-date': { 'date-parts': [ [ 2025, 1 ] ] } } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
