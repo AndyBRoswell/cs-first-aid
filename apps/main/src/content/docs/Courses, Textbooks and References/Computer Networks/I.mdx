@@ -1,0 +1,59 @@
+---
+title: 计算机网络 I
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import Cite from '@/components/Cite.astro'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <section>
+      ### 中文
+      <References materials={course_material.text.zh} reference_ranges={reference_ranges} scope_name={[ 'text', 'zh' ]}/>
+    </section>
+    <section>
+      ### 英文
+      <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={[ 'text', 'en' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 学习指导
+    <section>
+      ### 中文
+      <References materials={course_material.guide.zh} reference_ranges={reference_ranges} scope_name={[ 'guide', 'zh' ]}/>
+
+      这本习题解答<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'guide', 'zh' ], filter: m => m.title === '计算机网络释疑与习题解答' && m.author?.some(author => author.family === '谢' && author.given === '希仁'), options: { count: 1 } } ]}/>对应《计算机网络》第 8 版，目前我还没有发现第 9 版已经发行。使用第 9 版主教材时需要核对题目与章节。
+    </section>
+  </section>
+  <section>
+    ## 实验指导
+    <section>
+      ### 中文
+      <References materials={course_material.lab.zh} reference_ranges={reference_ranges} scope_name={[ 'lab', 'zh' ]}/>
+
+      出版社明确说明这本实验教程<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'lab', 'zh' ], filter: m => m.title === '计算机网络综合实验教程——协议分析与应用' && m.author?.some(author => author.family === '李' && author.given === '志远'), options: { count: 1 } } ]}/>配套《计算机网络》第 9 版。
+    </section>
+  </section>
+  <section>
+    ## 参考资料
+    <section>
+      ### 教科书
+      <section>
+        #### 英文
+        <References materials={course_material.reference.text.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
+      </section>
+    </section>
+    <section>
+      ### 其它
+      <section>
+        #### 英文
+        <References materials={course_material.reference.other.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'other', 'en' ]}/>
+      </section>
+    </section>
+  </section>
+</section>

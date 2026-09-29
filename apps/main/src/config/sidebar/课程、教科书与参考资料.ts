@@ -544,9 +544,9 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Computer Networks I',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/computer-networks/i',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
           },
         },
         {
