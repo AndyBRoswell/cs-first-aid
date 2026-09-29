@@ -6,11 +6,6 @@ export const info = {
   canonical_name: '算法分析与设计',
   name: [ '算法分析与设计', 'Algorithm Analysis and Design' ],
   material: {
-    open_course: {
-      zh: [
-        ...catalog.filter(item => item.type === 'motion_picture' && item.publisher === 'bilibili' && item['event-place'] === '北京大学' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item.title?.includes('算法设计与分析'), { count: 1 }),
-      ],
-    },
     text: {
       zh: [
         ...catalog.filter(item => item.type === 'book' && item.title === '算法设计与分析' && item.author?.some(author => author.family === '屈' && author.given === '婉玲'), { count: 1 }),
@@ -19,10 +14,16 @@ export const info = {
         ...catalog.filter(item => item.type === 'book' && item.title === 'Algorithms' && item.author?.some(author => author.family === 'Erickson' && author.given === 'Jeff'), { count: 1 }),
       ],
     },
+    open_course: {
+      zh: [
+        ...catalog.filter(item => item.type === 'motion_picture' && item.publisher === 'bilibili' && item['event-place'] === '北京大学' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item.title?.includes('算法设计与分析'), { count: 1 }),
+      ],
+    },
     reference: {
       text: {
         en: [
           ...catalog.filter(item => item.type === 'book' && item.title === 'Introduction to Algorithms' && item.author?.some(author => author.family === 'Cormen'), { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'Algorithms' && item.author?.some(author => author.family === 'Sedgewick' && author.given === 'Robert'), { count: 1 }),
         ],
       },
       guide: {
