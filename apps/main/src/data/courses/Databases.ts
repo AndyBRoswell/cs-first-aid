@@ -16,7 +16,7 @@ export const I_info = {
     },
     guide: {
       zh: [
-        ...catalog.filter(item => item.type === 'book' && item.title === '数据库系统概论（第6版）习题解析与实验指导' && item.author?.some(author => author.family === '王' && author.given === '珊'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && /^数据库系统概论(?:（第\d+版）)?习题解析与实验指导$/u.test(item.title ?? '') && item.author?.some(author => author.family === '王' && author.given === '珊'), { count: 1 }),
       ],
     },
   },
