@@ -4,7 +4,7 @@ import '@/data/materials/import materials.ts'
 
 export const info = {
   canonical_name: '算法分析与设计',
-  name: [ '算法分析与设计', 'Algorithm Analysis and Design' ],
+  name: [ '算法分析与设计', '算法设计与分析', '算法', 'Algorithm Analysis and Design' ],
   material: {
     text: {
       zh: [
