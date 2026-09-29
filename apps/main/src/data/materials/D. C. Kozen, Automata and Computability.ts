@@ -13,7 +13,9 @@ export const entries = [
       publisher: 'Springer New York',
       'publisher-place': 'New York, NY',
       issued: { 'date-parts': [ [ 2012, 12, 6 ] ] },
-      'original-date': { 'date-parts': [ [ 1997 ] ] },
+      'original-date': { 'date-parts': [ [ 1997, 4, 30 ] ] },
+      'original-publisher': 'Springer-Verlag',
+      'original-publisher-place': 'New York',
       ISBN: '978-1-4612-1844-9',
       DOI: '10.1007/978-1-4612-1844-9',
       'collection-title': 'Undergraduate Texts in Computer Science',
@@ -22,6 +24,7 @@ export const entries = [
       URL: 'https://link.springer.com/book/10.1007/978-1-4612-1844-9',
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
+        URL: [ { link: 'https://www.cs.cornell.edu/kozen/Papers/papers_by_area.htm', display_text: `Dexter Kozen's Publications` } ],
         topic: [ 'Computation by Abstract Devices', 'Algorithm Analysis and Problem Complexity' ],
         'eBook packages': 'Springer Book Archive',
         'collection-title-short': 'UTCS',
