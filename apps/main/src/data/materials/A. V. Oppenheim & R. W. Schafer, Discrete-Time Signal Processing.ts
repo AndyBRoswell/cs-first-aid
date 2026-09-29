@@ -21,21 +21,6 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
         edition: 'Pearson New International Edition',
-        variant: [
-          {
-            type: 'book',
-            medium: 'VitalSource eTextbook',
-            ISBN: '9781292038155',
-            issued: { 'date-parts': [ [ 2013 ] ] },
-          },
-          {
-            type: 'book',
-            medium: 'Hardcover',
-            ISBN: '9780131988422',
-            'number-of-pages': 1108,
-            issued: { 'date-parts': [ [ 2009, 8, 18 ] ] },
-          },
-        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
