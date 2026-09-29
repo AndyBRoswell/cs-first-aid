@@ -5,6 +5,7 @@ tags: [ ]
 ---
 
 import { course_material, reference_ranges } from './data.ts'
+import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
 
 <section>
@@ -38,6 +39,15 @@ import References from '@/components/References.astro'
     <section>
       ### 中文
       <References materials={course_material.problem_set.zh} reference_ranges={reference_ranges} scope_name={[ 'problem_set', 'zh' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 未选书目
+    <section>
+      ### 中文
+      <References materials={course_material.excluded.zh} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'zh' ]}/>
+
+      人邮社将《数据结构习题解析与实验指导》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'zh' ], filter: m => m.title === '数据结构习题解析与实验指导' && m.publisher === '人民邮电出版社' && m.author?.some(author => author.family === '李' && author.given === '冬梅'), options: { count: 1 } } ]}/>列为第 2 版教材的配套书；目前没有确认它与此处列出的第 3 版教材<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '人民邮电出版社' && m.author?.some(author => author.family === '李' && author.given === '冬梅'), options: { count: 1 } } ]}/>逐题对应。[出版社教材页](https://www.ryjiaoyu.com/book/details/45170)
     </section>
   </section>
 </section>

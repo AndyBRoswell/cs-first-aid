@@ -27,5 +27,11 @@ export const info = {
         ...catalog.filter(item => item.type === 'book' && item.title === '数据结构题集' && item.author?.some(author => author.family === '严' && author.given === '蔚敏'), { count: 1 }),
       ],
     },
+    excluded: {
+      zh: [
+        ...catalog.filter(item => item.type === 'book' && item.title === '数据结构' && item.publisher === '人民邮电出版社' && item.author?.some(author => author.family === '李' && author.given === '冬梅'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === '数据结构习题解析与实验指导' && item.publisher === '人民邮电出版社' && item.author?.some(author => author.family === '李' && author.given === '冬梅'), { count: 1 }),
+      ],
+    },
   },
 } satisfies types_data.Course
