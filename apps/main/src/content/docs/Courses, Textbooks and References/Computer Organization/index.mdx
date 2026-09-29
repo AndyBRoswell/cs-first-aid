@@ -1,0 +1,49 @@
+---
+title: 计算机组成原理
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import Cite from '@/components/Cite.astro'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 教科书
+    <section>
+      ### 英文
+      <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={[ 'text', 'en' ]}/>
+
+      RISC-V 版第 1 版以 RV64 为教学主线，第 2 版改用 RV32。[版本说明](https://www.cmpedu.com/books/book/5610352.htm)
+    </section>
+  </section>
+  <section>
+    ## 参考资料
+    <section>
+      ### 教科书
+      <section>
+        #### 中文
+        <References materials={course_material.reference.text.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'zh' ]}/>
+      </section>
+      <section>
+        #### 英文
+        <References materials={course_material.reference.text.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
+      </section>
+      <section>
+        #### 说明
+        CSAPP 第 3 版<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === "Computer Systems: A Programmer's Perspective" && m.edition === 3, options: { count: 1 } } ]}/>另有 Global Edition，但它与此处列出的北美版使用不同的随堂练习和章末习题。作者指出，全球版的题目及解答有许多错误，且他们没有为全球版制作勘误表。因此此处保留北美版。[作者勘误页](https://csapp.cs.cmu.edu/3e/errata.html)
+      </section>
+    </section>
+    <section>
+      ### 学习指导
+      <section>
+        #### 中文
+        <References materials={course_material.reference.guide.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'guide', 'zh' ]}/>
+
+        高等教育出版社注明，这本学习指导<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'guide', 'zh' ], filter: m => m.title === '计算机组成原理——学习指导与习题解答' && m.edition === 2, options: { count: 1 } } ]}/>配套的是《计算机组成原理》第 2 版；上列主教材为第 3 版。[来源](https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cd4f52ba9eb884cf819d2a)
+      </section>
+    </section>
+  </section>
+</section>
