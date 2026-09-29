@@ -13,6 +13,7 @@ export const entries = [
       medium: 'PDF',
       publisher: 'Maarten van Steen',
       issued: { 'date-parts': [ [ 2025, 2 ] ] },
+      'original-date': { 'date-parts': [ [ 2023 ] ] },
       ISBN: '9789081540643',
       language: 'en',
       URL: 'https://www.distributed-systems.net/index.php/books/ds4/',
@@ -22,7 +23,7 @@ export const entries = [
           { link: 'https://www.distributed-systems.net/index.php/books/ds4/ds4-ebook/', display_text: 'PDF' },
         ],
         variant: [
-          { type: 'book', version: '4.03', medium: 'Paperback', issued: { 'date-parts': [ [ 2025, 1 ] ] }, ISBN: '9789081540636', 'number-of-pages': 684 },
+          { type: 'book', version: '4.03', medium: 'Paperback', issued: { 'date-parts': [ [ 2023, 1, 8 ] ] }, ISBN: '9789081540636', 'number-of-pages': 684, URL: 'https://www.amazon.com/dp/9081540637' },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
