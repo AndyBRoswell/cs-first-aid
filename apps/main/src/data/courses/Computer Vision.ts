@@ -7,10 +7,10 @@ export const info = {
   name: [ '计算机视觉', 'Computer Vision' ],
   material: {
     reference: {
-      en: [
+      text: { en: [
         ...catalog.filter(item => item.type === 'book' && item.title === 'Computer Vision' && item.custom?.subtitle === 'Algorithms and Applications' && item.author?.some(author => author.family === 'Szeliski'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'Foundations of Computer Vision' && item.author?.some(author => author.family === 'Torralba'), { count: 1 }),
-      ],
+      ] },
     },
   },
 } satisfies types_data.Course

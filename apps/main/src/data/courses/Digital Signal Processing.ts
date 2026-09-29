@@ -7,11 +7,11 @@ export const info = {
   name: [ '数字信号处理', 'Digital Signal Processing' ],
   material: {
     reference: {
-      en: [
+      text: { en: [
         ...catalog.filter(item => item.type === 'book' && item.title === 'Discrete-Time Signal Processing' && item.author?.some(author => author.family === 'Oppenheim'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'Digital Signal Processing: Principles, Algorithms and Applications' && item.author?.some(author => author.family === 'Proakis'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'Digital Signal Processing: A Computer-Based Approach' && item.author?.some(author => author.family === 'Mitra'), { count: 1 }),
-      ],
+      ] },
     },
   },
 } satisfies types_data.Course

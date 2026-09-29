@@ -8,10 +8,10 @@ export const info = {
   name: [ '信号与系统', ],
   material: {
     reference: {
-      en: [
+      text: { en: [
         ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Signals and Systems') && item.author?.some(author => author.family === 'Adams') && item.edition === '6.0', { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Signals and Systems') && item.author?.some(author => author.family === 'Oppenheim') && item.edition === 2, { count: 1 }),
-      ],
+      ] },
     },
   },
 } satisfies types_data.Course
