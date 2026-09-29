@@ -1,0 +1,35 @@
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+
+export const entries = [
+  {
+    id: [],
+    material: {
+      type: 'book',
+      title: '计算机组成原理',
+      author: [ { family: '唐', given: '朔飞' } ],
+      edition: 3,
+      publisher: '高等教育出版社',
+      issued: { 'date-parts': [ [ 2020, 10, 16 ] ] },
+      ISBN: '9787040545180',
+      'number-of-pages': 444,
+      language: 'zh-CN',
+      URL: 'https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=62d19e6a938b7cc2960eede1',
+      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+    } satisfies types_data.Material,
+  },
+  {
+    id: [],
+    material: {
+      type: 'book',
+      title: '计算机组成原理——学习指导与习题解答',
+      author: [ { family: '唐', given: '朔飞' } ],
+      edition: 2,
+      publisher: '高等教育出版社',
+      issued: { 'date-parts': [ [ 2012, 7, 6 ] ] },
+      ISBN: '9787040354119',
+      language: 'zh-CN',
+      URL: 'https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cd4f52ba9eb884cf819d2a',
+      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+    } satisfies types_data.Material,
+  },
+] satisfies types_data.Entry[]
