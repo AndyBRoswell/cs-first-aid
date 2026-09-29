@@ -4,7 +4,7 @@ import '@/data/materials/import materials.ts'
 
 export const info = {
   canonical_name: '电磁场与电磁波',
-  name: [ '电磁场与电磁波', 'Electromagnetics' ],
+  name: [ '电磁场与电磁波', '电磁场', '工程电磁场', '电磁场与波', 'Electromagnetics' ],
   material: {
     reference: {
       text: {
