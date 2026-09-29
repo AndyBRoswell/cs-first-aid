@@ -19,7 +19,7 @@ export const Mathematical_Logic = {
     },
     open_course: {
       zh: [
-        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学' && item.title?.includes('离散数学'), { count: 1 }),
       ],
     },
     guide: {
@@ -61,7 +61,7 @@ export const Set_Theory = {
     },
     open_course: {
       zh: [
-        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学' && item.title?.includes('离散数学'), { count: 1 }),
       ],
     },
     guide: {
@@ -102,7 +102,7 @@ export const Graph_Theory = {
     },
     open_course: {
       zh: [
-        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学' && item.title?.includes('离散数学'), { count: 1 }),
       ],
     },
     guide: {
@@ -148,7 +148,7 @@ export const Abstract_Algebra = {
     },
     open_course: {
       zh: [
-        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学' && item.title?.includes('离散数学'), { count: 1 }),
       ],
     },
     guide: {
@@ -195,7 +195,7 @@ export const Combinatorics = {
     },
     open_course: {
       zh: [
-        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学', { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'motion_picture' && item.custom?.lecturer?.some(lecturer => lecturer.family === '屈' && lecturer.given === '婉玲') && item['event-place'] === '北京大学' && item.title?.includes('离散数学'), { count: 1 }),
       ],
     },
     guide: {
