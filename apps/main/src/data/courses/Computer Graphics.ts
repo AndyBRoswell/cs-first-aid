@@ -8,7 +8,7 @@ export const info = {
   material: {
     reference: {
       en: [
-        ...catalog.filter(item => item.type === 'book' && item.title === 'Physically Based Rendering: From Theory to Implementation' && item.author?.some(author => author.family === 'Pharr' && author.given === 'Matt') && item.edition === 4, { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Physically Based Rendering: From Theory to Implementation' && item.author?.some(author => author.family === 'Pharr' && author.given === 'Matt'), { count: 1 }),
       ],
     },
   },
