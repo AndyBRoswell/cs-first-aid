@@ -162,7 +162,7 @@ export const Tools_and_Ideas = {
       },
       slug: 'tools-and-ideas/free-and-cost-efficient-cloud-services',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-rc', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0', en: 'blank', })
       },
     },
     {
