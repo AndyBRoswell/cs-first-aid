@@ -22,8 +22,11 @@ export const entries = [
       'number-of-pages': 'IX, 285',
       language: 'en-US',
       URL: 'https://link.springer.com/book/10.1007/978-1-4757-1949-9',
-      accessed: { 'date-parts': [ [ 2026, 5, 6 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       custom: {
+        keyword: [ 'Eigenvalue', 'Eigenvector', 'algebra', 'linear algebra', 'matrices', 'matrix theory' ],
+        topic: [ 'Linear and Multilinear Algebras, Matrix Theory' ],
+        'eBook packages': 'Springer Book Archive',
         'collection-title-short': 'UTM',
         variant: [
           {
