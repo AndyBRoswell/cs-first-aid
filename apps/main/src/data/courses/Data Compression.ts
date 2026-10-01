@@ -8,6 +8,8 @@ export const info = {
   material: {
     reference: {
       en: [
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Introduction to Data Compression' && item.author?.some(author => author.family === 'Sayood' && author.given === 'Khalid'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Handbook of Data Compression' && item.author?.some(author => author.family === 'Salomon' && author.given === 'David'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'Data Compression Explained' && item.author?.some(author => author.family === 'Mahoney' && author.given === 'Matt'), { count: 1 }),
       ],
     },
