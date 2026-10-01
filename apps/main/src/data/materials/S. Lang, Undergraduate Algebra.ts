@@ -19,8 +19,11 @@ export const entries = [
       DOI: '10.1007/0-387-27475-8',
       ISBN: '9780387274751',
       URL: 'https://link.springer.com/book/10.1007/0-387-27475-8',
-      accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       custom: {
+        keyword: [ 'Galois theory', 'Vector space', 'algebra', 'field', 'linear algebra', 'matrices' ],
+        topic: [ 'Algebra', 'Field Theory and Polynomials' ],
+        'eBook packages': [ 'Mathematics and Statistics', 'Mathematics and Statistics (R0)' ],
         variant: [
           {
             type: 'book',
