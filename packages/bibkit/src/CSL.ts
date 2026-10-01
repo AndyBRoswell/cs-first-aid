@@ -241,6 +241,7 @@ export function is_ISSN(str: string): boolean { return validator_isISSN(str) }
 export type Custom = {
   [key: string]: unknown
   tag?: string[]
+  keyword?: string[] // Individual keywords; Item.keyword is a single string.
   topic?: string[]
   subtitle?: string
   edition?: string | number // Additional edition designation (e.g. "Global Edition"); use `Item.edition` for the edition number.
