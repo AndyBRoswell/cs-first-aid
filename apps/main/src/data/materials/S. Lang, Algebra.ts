@@ -20,10 +20,13 @@ export const entries = [
       DOI: '10.1007/978-1-4613-0041-0',
       ISBN: '9781461300410',
       URL: 'https://link.springer.com/book/10.1007/978-1-4613-0041-0',
-      accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       'collection-title': 'Graduate Texts in Mathematics',
       'collection-number': 211,
       custom: {
+        keyword: [ 'Algebra Textbook', 'Category theory', 'Textbook', 'algebra', 'linear algebra', 'matrix theory' ],
+        topic: [ 'Algebra', 'Commutative Rings and Algebras', 'Linear Algebra', 'Associative Rings and Algebras', 'Group Theory and Generalizations' ],
+        'eBook packages': 'Springer Book Archive',
         variant: [
           {
             type: 'book',
