@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -17,7 +18,12 @@ export const entries = [
       DOI: '10.1007/978-1-4842-3288-0',
       language: 'en-US',
       URL: 'https://link.springer.com/book/10.1007/978-1-4842-3288-0',
-      accessed: { 'date-parts': [ [ 2026, 9, 27 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
+      custom: {
+        keyword: [ 'Microsoft', '.NET', 'ASP.NET', 'MVC', 'WPF', 'Core', 'development', 'programming' ],
+        topic: [ 'Microsoft and .NET', 'Software Engineering/Programming and Operating Systems' ],
+        'eBook packages': [ 'Professional and Applied Computing', 'Apress Access Books', 'Professional and Applied Computing (R0)' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
