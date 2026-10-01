@@ -21,6 +21,10 @@ export const entries = [
       URL: 'https://shop.elsevier.com/books/introduction-to-data-compression/sayood/978-0-12-809474-7',
       accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       custom: {
+        URL: [
+          { link: 'https://www.educate.elsevier.com/book/details/9780128094747', display_text: 'Elsevier Educate' },
+          { link: 'https://www.oreilly.com/library/view/introduction-to-data/9780128097052/', display_text: 'O’Reilly eBook' },
+        ],
         variant: [
           {
             type: 'book',
