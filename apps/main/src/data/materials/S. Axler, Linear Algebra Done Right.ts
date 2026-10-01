@@ -15,8 +15,22 @@ export const entries = [
       publisher: 'Springer',
       language: 'en-US',
       URL: 'https://linear.axler.net/index.html',
-      accessed: { 'date-parts': [ [ 2026, 9, 10 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       custom: {
+        URL: [ { link: 'https://link.springer.com/book/10.1007/978-3-031-41026-0', display_text: 'Springer bibliographic information' } ],
+        keyword: [
+          'Axler linear algebra',
+          'adopted textbook',
+          'dual spaces',
+          'finite-dimensional spectral theorem',
+          'linear algebra',
+          'product spaces',
+          'quotient spaces',
+          'vector spaces',
+          'Open Access',
+        ],
+        topic: [ 'Linear and Multilinear Algebras, Matrix Theory' ],
+        'eBook packages': [ 'Mathematics and Statistics', 'Mathematics and Statistics (R0)' ],
         free_material: [
           {
             link: 'https://linear.axler.net/LADR4e.pdf',
