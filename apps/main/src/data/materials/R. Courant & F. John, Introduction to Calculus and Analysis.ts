@@ -23,9 +23,11 @@ export const entries = [
       ISBN: '978-3-642-58604-0',
       DOI: '10.1007/978-3-642-58604-0',
       URL: 'https://link.springer.com/book/10.1007/978-3-642-58604-0',
-      accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       language: 'en-US',
       custom: {
+        keyword: [ 'Fourier series', 'calculus', 'differential equation', 'numerical methods', 'real analysis' ],
+        topic: [ 'Real Functions', 'Special Functions' ],
         'eBook packages': 'Springer Book Archive',
         variant: [
           {
@@ -60,9 +62,25 @@ export const entries = [
       ISBN: '978-3-642-57149-7',
       DOI: '10.1007/978-3-642-57149-7',
       URL: 'https://link.springer.com/book/10.1007/978-3-642-57149-7',
-      accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       language: 'en-US',
       custom: {
+        keyword: [
+          'Derivative',
+          'Differential equations',
+          'Integral calculus',
+          "Taylor's theorem",
+          'calculus',
+          'calculus of variations',
+          'curves and surfaces',
+          'differential equation',
+          'extrema',
+          'maximum',
+          'mean value theorem',
+          'measure',
+          'minimum',
+        ],
+        topic: [ 'Analysis' ],
         'eBook packages': 'Springer Book Archive',
         variant: [
           {
@@ -96,10 +114,19 @@ export const entries = [
       "original-publisher": 'Interscience Publishers; a division of John Wiley and Sons, Inc.',
       ISBN: '978-3-540-66570-0',
       URL: 'https://link.springer.com/book/9783540665700',
-      accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       language: 'en-US',
       custom: {
         subtitle: 'Chapters 5 - 8',
+        keyword: [
+          'CON_D038',
+          'CON_D045',
+          'Differential equations',
+          'Integral calculus',
+          'YellowSale2006',
+          'calculus of variations',
+          'curves and surfaces',
+        ],
         'eBook packages': 'Springer Book Archive',
       } satisfies CSL.Custom
     },
