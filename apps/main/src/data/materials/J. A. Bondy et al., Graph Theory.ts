@@ -18,7 +18,22 @@ export const entries = [
       "number-of-pages": 'XII, 663',
       ISBN: '978-1-84996-690-0',
       language: 'en-US',
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       custom: {
+        URL: [ { link: 'https://link.springer.com/book/9781846289699', display_text: 'Springer bibliographic information' } ],
+        keyword: [
+          'Graph',
+          'Graph theory',
+          'Matching',
+          'Sim',
+          'Vertex',
+          'algorithms',
+          'combinatorial optimization',
+          'complexity',
+          'computer',
+          'computer science',
+          'optimization',
+        ],
         variant: [
           {
             type: 'book',
