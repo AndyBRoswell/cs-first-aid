@@ -10,7 +10,7 @@ export const entries = [
       language: 'en-US',
       author: [ { given: 'John M.', family: 'Harris' }, { given: 'Jeffry L.', family: 'Hirst' }, { given: 'Michael John', family: 'Mossinghoff' } ],
       issued: { 'date-parts': [ [ 2009, 4, 3 ] ] },
-      accessed: { 'date-parts': [ [ 2026, 5, 7 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 1 ] ] },
       title: 'Combinatorics and Graph Theory',
       publisher: 'Springer',
       "publisher-place": 'New York, NY',
@@ -21,6 +21,9 @@ export const entries = [
       URL: 'https://link.springer.com/book/10.1007/978-0-387-79711-3',
       ISBN: '9780387797113',
       custom: {
+        keyword: [ 'Addition', 'Combinatorics', 'Counting', 'Graph', 'Graph Theory', 'Hamiltonian path', 'pigeonhole principle' ],
+        topic: [ 'Discrete Mathematics', 'Combinatorics', 'Mathematical Logic and Foundations' ],
+        'eBook packages': [ 'Mathematics and Statistics', 'Mathematics and Statistics (R0)' ],
         variant: [
           {
             type: 'book',
