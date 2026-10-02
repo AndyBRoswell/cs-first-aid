@@ -24,7 +24,7 @@ export type Localized_Release = {
   en: Release
 }
 
-export function to_HTML_attr(release_stages: Localized_Release): string {
+export function validate(release_stages: Localized_Release): void {
   for (const [ language, release ] of Object.entries(release_stages)) {
     if (unversioned_releases.includes(release.toLowerCase())) { continue }
     const parsed = parse_version(release)
@@ -33,7 +33,6 @@ export function to_HTML_attr(release_stages: Localized_Release): string {
     if (is_stable && comparison > 0) { throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: Stable release ${JSON.stringify(release)} cannot be newer than project version ${JSON.stringify(project_version)}.`) }
     if (!is_stable && comparison < 0) { throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: Prerelease ${JSON.stringify(release)} cannot be older than project version ${JSON.stringify(project_version)}.`) } // The core version of a prerelease version indicates the estimated core version when the corresponding page becomes stable.
   }
-  return JSON.stringify(release_stages)
 }
 
 export function get_stage(release: string): string {

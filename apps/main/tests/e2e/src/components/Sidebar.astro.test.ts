@@ -2,7 +2,7 @@
 
 import { expect, type Locator, type Page } from '@playwright/test'
 import type { Meta as Badge_Meta } from '@/components/badges.ts'
-import * as release_stages from '@/components/release_stages.ts'
+import * as release_stages from '@/core/release_stages.ts'
 import * as util from '@tests/util.ts'
 import { get_release_stages, sidebar_links, site_locales } from '@tests/util/config/starlight.ts'
 import * as src_util from '@tests/util/e2e.ts'

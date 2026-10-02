@@ -1,6 +1,6 @@
 import type { SidebarItem } from "@/types/starlight.ts";
 import * as badges from '@/components/badges.ts'
-import * as release_stages from '@/components/release_stages.ts'
+import * as release_stages from '@/UI/release_stages.ts'
 import * as subject_badges from '@/components/subject_badges.ts'
 
 const subject_badge_meta = {

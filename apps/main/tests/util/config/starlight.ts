@@ -1,6 +1,6 @@
 // Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
 
-import type { Localized_Release } from '@/components/release_stages.ts'
+import type { Localized_Release } from '@/core/release_stages.ts'
 import { locales, sidebar } from '@/config/starlight.ts'
 import type { SidebarItem } from '@/types/starlight.ts'
 

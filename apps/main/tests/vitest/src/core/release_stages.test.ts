@@ -3,28 +3,28 @@
 import { fc, test } from '@fast-check/vitest'
 import { expect } from 'vitest'
 import * as semver from 'semver'
-import * as release_stages from '@/components/release_stages.ts'
+import * as release_stages from '@/core/release_stages.ts'
 import package_json from '@package.json' with { type: 'json' }
 
 type Core_Version = `${number}.${number}.${number}` // Keeps generated versions in the required three-part shape.
-type Localized = Parameters<typeof release_stages.to_HTML_attr>[0]
+type Localized = release_stages.Localized_Release
 
 const random_component_limit: number = 10_000 // Exclusive upper bound for generated core and prerelease numbers.
 const project_version = new semver.SemVer(package_json.version, { loose: true, })
 const project_core_version = `${project_version.major}.${project_version.minor}.${project_version.patch}` as Core_Version
 const { prerelease_stage_groups, unversioned_releases, } = release_stages
 
-test('to_HTML_attr serializes and validates releases', ({ g, }) => {
+test('validate checks releases against the project version', ({ g, }) => {
   const future_project_version = random_future_version(project_version, g) // Always strictly newer than the package version.
   const localized: Localized = {
     'zh-CN': random_prerelease(future_project_version, g),
     en: 'planned',
     fr: project_core_version,
   }
-  expect(JSON.parse(release_stages.to_HTML_attr(localized))).toEqual(localized)
-  const serialize = (release: release_stages.Release) => release_stages.to_HTML_attr({ 'zh-CN': release, en: 'blank', })
-  expect(() => serialize(random_prerelease(random_older_version(project_version, g), g))).toThrow(/Invalid release/) // Prerelease cannot target an older core.
-  expect(() => serialize(future_project_version)).toThrow(/Invalid release/) // A future version cannot already be stable.
+  expect(() => release_stages.validate(localized)).not.toThrow()
+  const validate = (release: release_stages.Release) => release_stages.validate({ 'zh-CN': release, en: 'blank', })
+  expect(() => validate(random_prerelease(random_older_version(project_version, g), g))).toThrow(/Invalid release/) // Prerelease cannot target an older core.
+  expect(() => validate(future_project_version)).toThrow(/Invalid release/) // A future version cannot already be stable.
 })
 
 test('get_stage derives the stage from a semantic version', ({ g, }) => {
