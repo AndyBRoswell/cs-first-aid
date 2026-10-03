@@ -19,7 +19,7 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
   await expect(main.getByRole('heading', { level: 2 })).toHaveText([
-    '教科书', '其它参考', '未被选择的书目',
+    '教科书', '参考资料', '未被选择的书目',
   ])
 
   await src_util.test.step('教科书', async () => {
@@ -33,7 +33,7 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
     await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 
-  await src_util.test.step('其它参考', async () => {
+  await src_util.test.step('参考资料', async () => {
     References = course_util.locate_references(main, [ 'reference', 'en' ])
     await src_util.everyone_occurs(References, [
       /Microsoft/,
