@@ -29,13 +29,12 @@ export const entries = [
         ],
         variant: [
           {
-            type: 'book', medium: 'Softcover', ISBN: '978-1-4704-5668-9', ISSN: '1943-9334',
+            type: 'book', medium: 'Softcover', ISBN: '978-1-4704-5668-9',
             issued: { 'date-parts': [ [ 2020, 8, 11 ] ] }, 'number-of-pages': 'xii, 247',
             URL: 'https://bookstore.ams.org/amstext-47',
             custom: { URL: [
               { link: 'https://ci.nii.ac.jp/ncid/BC00829696', display_text: 'CiNii Books' },
               { link: 'https://books.google.com/books/about/Introduction_to_Analysis_in_One_Variable.html?id=6135DwAAQBAJ', display_text: 'Google Books' },
-              { link: 'https://bookstore.ams.org/bookstore/amstext', display_text: 'AMS' },
             ] },
           },
           { type: 'manuscript', medium: 'Author PDF', URL: 'https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/anal1v.pdf', 'number-of-pages': 'xiv, 277' },
@@ -73,13 +72,12 @@ export const entries = [
         ],
         variant: [
           {
-            type: 'book', medium: 'Softcover', ISBN: '978-1-4704-5669-6', ISSN: '1943-9334',
+            type: 'book', medium: 'Softcover', ISBN: '978-1-4704-5669-6',
             issued: { 'date-parts': [ [ 2020, 7, 27 ] ] }, 'number-of-pages': 'xii, 445',
             URL: 'https://bookstore.ams.org/amstext-46',
             custom: { URL: [
               { link: 'https://ci.nii.ac.jp/ncid/BC0082970X', display_text: 'CiNii Books' },
               { link: 'https://books.google.com/books/about/Introduction_to_Analysis_in_Several_Vari.html?id=_F75DwAAQBAJ', display_text: 'Google Books' },
-              { link: 'https://bookstore.ams.org/bookstore/amstext', display_text: 'AMS' },
             ] },
           },
           { type: 'manuscript', medium: 'Author PDF', URL: 'https://mtaylor.web.unc.edu/wp-content/uploads/sites/16915/2018/04/analmv.pdf', 'number-of-pages': 'xvi, 449' },
