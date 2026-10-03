@@ -17,11 +17,11 @@ export const entries = [
       custom: {
         free_material: [
           {
-            display_text: 'Chapters in PDF',
+            display_text: 'PDF',
             link: 'https://www.math.ucdavis.edu/%7Ehunter/book/pdfbook.html',
           },
           {
-            display_text: 'Chapters in PostScript',
+            display_text: 'PostScript',
             link: 'https://www.math.ucdavis.edu/%7Ehunter/book/psbook.html',
           },
         ]
