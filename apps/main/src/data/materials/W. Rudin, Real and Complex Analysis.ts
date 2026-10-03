@@ -1,0 +1,66 @@
+import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
+
+export const entries = [
+  {
+    id: [],
+    material: {
+      type: 'book',
+      author: [ { given: 'Walter', family: 'Rudin' } ],
+      title: '实分析与复分析',
+      edition: 3,
+      'printing-number': '1-7',
+      medium: '平装',
+      publisher: '机械工业出版社',
+      'publisher-place': '北京',
+      'collection-title': '华章数学原版精品系列',
+      issued: { 'date-parts': [ [ 2019, 3, 25 ] ] },
+      'number-of-pages': '416',
+      ISBN: '978-7-111-61955-0',
+      language: 'en-US',
+      URL: 'https://www.cmpedu.com/books/book/5585582.htm',
+      accessed: { 'date-parts': [ [ 2026, 10, 4 ] ] },
+      custom: {
+        edition: '英文版·典藏版',
+        'printing-date': { 'date-parts': [ [ 2023, 8, 21 ] ] },
+        URL: [
+          { link: 'https://www.megbook.com.tw/mall/detail.jsp?proID=3331853', display_text: 'MegBook' },
+        ],
+        variant: [
+          {
+            type: 'book', edition: 3, medium: 'Hardcover',
+            publisher: 'McGraw-Hill', 'publisher-place': 'New York',
+            'collection-title': 'McGraw-Hill Series in Higher Mathematics',
+            issued: { 'date-parts': [ [ 1986, 5, 1 ] ] },
+            'number-of-pages': 'xiv, 416', ISBN: '978-0-07-054234-1',
+            URL: 'https://mitpressbookstore.mit.edu/book/9780070542341',
+            custom: { URL: [
+              { link: 'https://ci.nii.ac.jp/ncid/BA0026676X', display_text: 'CiNii Books' },
+              { link: 'https://books.google.com/books/about/Real_and_Complex_Analysis.html?id=Z_fuAAAAMAAJ', display_text: 'Google Books' },
+              { link: 'https://www.managementboek.nl/boek/9780070542341/real-and-complex-analysis-walter-rudin', display_text: 'Managementboek' },
+            ] },
+          },
+          {
+            type: 'book', edition: 3, medium: 'Paperback',
+            publisher: 'McGraw-Hill', 'publisher-place': 'New York',
+            issued: { 'date-parts': [ [ 1987 ] ] },
+            'number-of-pages': 'xiv, 416', ISBN: '978-0-07-100276-9',
+            URL: 'https://openlibrary.org/books/OL22706082M/Real_and_Complex_Analysis',
+            note: 'International Edition.',
+          },
+          {
+            type: 'book', edition: 3, medium: 'Paperback',
+            publisher: 'McGraw Hill Education (India)', 'publisher-place': 'Chennai',
+            issued: { 'date-parts': [ [ 2023, 9, 22 ] ] },
+            'number-of-pages': 'xiv, 416', ISBN: '978-93-5532-611-9',
+            URL: 'https://www.mheducation.co.in/real-and-complex-analysis-9789355326119-india',
+            custom: { URL: [
+              { link: 'https://library.iitgoa.ac.in/cgi-bin/koha/opac-detail.pl?biblionumber=1721', display_text: 'IIT Goa' },
+              { link: 'https://www.flipkart.com/real-complex-analysis-3rd/p/itm08a8f76214fba', display_text: 'Flipkart' },
+            ] },
+          },
+        ],
+      } satisfies CSL.Custom,
+    },
+  },
+] satisfies types_data.Entry[]
