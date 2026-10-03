@@ -16,12 +16,23 @@ export const entries = [
       ISBN: '978-0-9715766-8-1',
       language: 'en-US',
       URL: 'https://matrixeditions.com/5thUnifiedApproach.html',
-      accessed: { 'date-parts': [ [ 2026, 10, 3 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 4 ] ] },
       custom: {
         subtitle: 'A Unified Approach',
         URL: [
           { link: 'https://matrixeditions.com/errata.html', display_text: 'Errata' },
           { link: 'https://libcat.weber.edu/bib/1163555', display_text: 'Stewart Library' },
+        ],
+        variant: [
+          {
+            type: 'book',
+            medium: 'PDF eBook',
+            note: 'Requires the Javelin PDF reader and an authorization code; limited to two devices; printing disabled.',
+            URL: 'https://matrixeditions.com/5thUnifiedApproach.html',
+            custom: {
+              URL: [ { link: 'https://matrixeditions.com/Drumlin.html', display_text: 'Matrix Editions eBooks' } ],
+            },
+          },
         ],
       } satisfies CSL.Custom,
     },
