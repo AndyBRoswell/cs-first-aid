@@ -35,6 +35,9 @@ export const info = {
         ...catalog.filter(item => item.author?.some(author => author.family === '陈' && author.given === '纪修') && util.ieq(item.title!, '数学分析习题全解指南'), { max_count: 4 }),
         ...catalog.filter(item => item.author?.some(author => author.family === '徐' && author.given === '森林') && util.ieq(item.title!, '数学分析精选习题全解'), { max_count: 2 }),
       ],
+      en: [
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Hubbard' && author.given === 'John H.') && item.author?.some(author => author.family === 'Hubbard' && author.given === 'Barbara Burke') && util.ieq(item.title!, 'Student Solution Manual to accompany the 5th edition of Vector Calculus, Linear Algebra, and Differential Forms: A Unified Approach'), { max_count: 1 }),
+      ],
     },
     reference: {
       text: {

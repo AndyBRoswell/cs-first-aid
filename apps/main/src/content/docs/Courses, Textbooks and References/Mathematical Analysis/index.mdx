@@ -31,8 +31,14 @@ import References from '@/components/References.astro'
   </section>
   <section>
     ## 习题集
-    ### 中文
-    <References materials={course_material.problem_set.zh} reference_ranges={reference_ranges} scope_name={[ 'problem_set', 'zh' ]}/>
+    <section>
+      ### 中文
+      <References materials={course_material.problem_set.zh} reference_ranges={reference_ranges} scope_name={[ 'problem_set', 'zh' ]}/>
+    </section>
+    <section>
+      ### 英文
+      <References materials={course_material.problem_set.en} reference_ranges={reference_ranges} scope_name={[ 'problem_set', 'en' ]}/>
+    </section>
   </section>
   <section>
     ## 参考资料
