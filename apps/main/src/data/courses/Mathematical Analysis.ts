@@ -17,7 +17,6 @@ export const info = {
         ...catalog.filter(item => item.author?.some(author => author.family === '张' && author.given === '筑生') && util.ieq(item.title!, '数学分析新讲（重排本）'), { max_count: 3 }),
       ],
       en: [
-        ...catalog.filter(item => item.author?.some(author => author.family === 'Hunter') && item.author?.some(author => author.family === 'Nachtergaele') && util.ieq(item.title!, 'Applied Analysis'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Abbott') && util.ieq(item.title!, 'Understanding Analysis'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Pugh') && util.ieq(item.title!, 'Real Mathematical Analysis'), { max_count: 1 }),
       ],
@@ -43,6 +42,7 @@ export const info = {
           ...catalog.filter(item => item.author?.some(author => author.family === 'Фихтенгольц') && util.ieq(item.title!, '微积分学教程'), { max_count: 3 }),
         ],
         en: [
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Hunter') && item.author?.some(author => author.family === 'Nachtergaele') && util.ieq(item.title!, 'Applied Analysis'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === 'Apostol') && item.title?.startsWith('Mathematical Analysis'), { max_count: 1 }),
           catalog.get('Rudin PMA'),
           ...catalog.filter(item => item.author?.some(author => author.family === 'Courant') && item.author?.some(author => author.family === 'John') && util.ieq(item.title!, 'Introduction to Calculus and Analysis'), { max_count: 3 }),
