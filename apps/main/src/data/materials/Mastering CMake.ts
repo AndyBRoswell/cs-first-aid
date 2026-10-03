@@ -5,7 +5,8 @@ export const entries = [
     id: [ 'Mastering CMake' ],
     material: {
       type: 'book',
-      title: 'Mastering CMake: A Cross-Platform Build System',
+      title: 'Mastering CMake',
+      'original-title': 'Mastering CMake: A Cross-Platform Build System',
       'original-author': [
         { given: 'Ken', family: 'Martin' },
         { given: 'Bill', family: 'Hoffman' },

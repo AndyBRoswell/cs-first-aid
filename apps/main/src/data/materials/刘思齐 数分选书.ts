@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -13,7 +14,9 @@ export const entries = [
       language: 'zh-CN',
       URL: 'https://www.bilibili.com/video/BV1xp4y1e7Nh',
       accessed: { "date-parts": [ [ 2026, 4, 9 ] ] },
-      note: 'https://zhuanlan.zhihu.com/p/563317174',
+      custom: {
+        URL: [ { link: 'https://zhuanlan.zhihu.com/p/563317174', display_text: '知乎：要点整理' } ],
+      } satisfies CSL.Custom,
     }
   }
 ] satisfies types_data.Entry[]

@@ -33,12 +33,16 @@ src_util.test('Mathematical Analysis', { tag: [ '@Courses, Textbooks and Referen
 
   References = course_util.locate_references(main, [ 'text', 'en' ])
   await src_util.everyone_occurs(References, [
-    /Hunter/,
     /Abbott/,
     /Pugh/,
-    /Applied Analysis/,
     /Understanding Analysis/,
     /Real Mathematical Analysis/,
+  ])
+
+  References = course_util.locate_references(main, [ 'reference', 'text', 'en' ])
+  await src_util.everyone_occurs(References, [
+    /Hunter/,
+    /Applied Analysis/,
   ])
 
   References = course_util.locate_references(main, [ 'open_course', 'zh' ])
