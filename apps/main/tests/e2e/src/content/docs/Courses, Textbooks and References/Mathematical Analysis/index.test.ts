@@ -34,6 +34,9 @@ src_util.test('Mathematical Analysis', { tag: [ '@Courses, Textbooks and Referen
   References = course_util.locate_references(main, [ 'text', 'en' ])
   await src_util.everyone_occurs(References, [
     /Abbott/,
+    /Lebl/,
+    /Basic Analysis I\b/,
+    /Basic Analysis II\b/,
     /Pugh/,
     /Understanding Analysis/,
     /Real Mathematical Analysis/,
@@ -41,6 +44,11 @@ src_util.test('Mathematical Analysis', { tag: [ '@Courses, Textbooks and Referen
 
   References = course_util.locate_references(main, [ 'reference', 'text', 'en' ])
   await src_util.everyone_occurs(References, [
+    /Real Analysis and Applications/,
+    /Introduction to Real Analysis/,
+    /Introduction to Analysis in One Variable/,
+    /Introduction to Analysis in Several Variables/,
+    /Vector Calculus, Linear Algebra, and Differential Forms/,
     /Hunter/,
     /Applied Analysis/,
   ])

@@ -18,6 +18,8 @@ export const info = {
       ],
       en: [
         ...catalog.filter(item => item.author?.some(author => author.family === 'Abbott') && util.ieq(item.title!, 'Understanding Analysis'), { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Lebl') && util.ieq(item.title!, 'Basic Analysis I') && item.volume === 1, { max_count: 1 }),
+        ...catalog.filter(item => item.author?.some(author => author.family === 'Lebl') && util.ieq(item.title!, 'Basic Analysis II') && item.volume === 2, { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Pugh') && util.ieq(item.title!, 'Real Mathematical Analysis'), { max_count: 1 }),
       ],
     },
@@ -42,6 +44,11 @@ export const info = {
           ...catalog.filter(item => item.author?.some(author => author.family === 'Фихтенгольц') && util.ieq(item.title!, '微积分学教程'), { max_count: 3 }),
         ],
         en: [
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Davidson') && item.author?.some(author => author.family === 'Donsig') && util.ieq(item.title!, 'Real Analysis and Applications'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Trench') && util.ieq(item.title!, 'Introduction to Real Analysis'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Taylor') && util.ieq(item.title!, 'Introduction to Analysis in One Variable'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Taylor') && util.ieq(item.title!, 'Introduction to Analysis in Several Variables'), { max_count: 1 }),
+          ...catalog.filter(item => item.author?.some(author => author.family === 'Hubbard' && author.given === 'John H.') && item.author?.some(author => author.family === 'Hubbard' && author.given === 'Barbara Burke') && util.ieq(item.title!, 'Vector Calculus, Linear Algebra, and Differential Forms'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === 'Hunter') && item.author?.some(author => author.family === 'Nachtergaele') && util.ieq(item.title!, 'Applied Analysis'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === 'Apostol') && item.title?.startsWith('Mathematical Analysis'), { max_count: 1 }),
           catalog.get('Rudin PMA'),
