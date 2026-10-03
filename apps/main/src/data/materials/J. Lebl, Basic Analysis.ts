@@ -23,7 +23,7 @@ export const entries = [
           { link: 'https://www.jirka.org/ra/realanal.pdf', display_text: 'PDF', 'Content-Type': 'application/pdf', license: 'CC-BY-SA-4.0 OR CC-BY-NC-SA-4.0' },
         ],
         variant: [
-          { type: 'book', medium: 'Paperback', ISBN: '979-8851944635', URL: 'https://www.amazon.com/dp/B0C9S99TKF' },
+          { type: 'book', medium: 'Paperback', issued: { 'date-parts': [ [ 2023, 7, 15 ] ] }, ISBN: '979-8851944635', URL: 'https://www.amazon.com/dp/B0C9S99TKF' },
         ],
       } satisfies CSL.Custom,
     },
@@ -49,7 +49,7 @@ export const entries = [
           { link: 'https://www.jirka.org/ra/realanal2.pdf', display_text: 'PDF', 'Content-Type': 'application/pdf', license: 'CC-BY-SA-4.0 OR CC-BY-NC-SA-4.0' },
         ],
         variant: [
-          { type: 'book', medium: 'Paperback', ISBN: '979-8851945977', URL: 'https://www.amazon.com/dp/B0C9S7P6M8' },
+          { type: 'book', medium: 'Paperback', issued: { 'date-parts': [ [ 2023, 7, 15 ] ] }, ISBN: '979-8851945977', URL: 'https://www.amazon.com/dp/B0C9S7P6M8' },
         ],
       } satisfies CSL.Custom,
     },
