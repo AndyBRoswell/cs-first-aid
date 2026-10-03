@@ -25,7 +25,7 @@ export const entries = [
       custom: {
         subtitle: 'Theory in Practice',
         'collection-title-short': 'UTM',
-        keyword: [ 'analysis', 'applications', 'real analysis', 'calculus', 'linear algebra', 'linear optimization', 'nonlinear optimization', 'optimization' ],
+        keyword: [ 'Analysis', 'Applications', 'Real analysis', 'calculus', 'linear algebra', 'linear optimization', 'nonlinear optimization', 'optimization' ],
         topic: [ 'Real Functions', 'Analysis', 'Applications of Mathematics' ],
         'eBook packages': [ 'Mathematics and Statistics', 'Mathematics and Statistics (R0)' ],
         URL: [
