@@ -28,11 +28,14 @@ export const entries = [
         variant: [
           {
             type: 'book',
-            medium: 'EPUB eBook',
+            medium: 'eBook (EPUB/PDF)',
             ISBN: '978-1-4008-3556-0',
             issued: { 'date-parts': [ [ 2009, 11, 28 ] ] },
-            URL: 'https://www.kobo.com/us/en/ebook/real-analysis',
-            note: 'EPUB 2 with Adobe DRM; requires a compatible reading app.',
+            URL: 'https://press.princeton.edu/books/ebook/9781400835560/real-analysis',
+            note: 'The publisher’s eBook requires the Princeton University Press app; the Kobo EPUB 2 uses Adobe DRM.',
+            custom: { URL: [
+              { link: 'https://www.kobo.com/us/en/ebook/real-analysis', display_text: 'Kobo' },
+            ] },
           },
         ],
       } satisfies CSL.Custom,
