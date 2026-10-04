@@ -23,6 +23,8 @@ export const entries = [
         'printing-date': { 'date-parts': [ [ 2005, 3, 28 ] ] },
         free_material: [
           { link: 'https://www.inference.org.uk/itprnn/book.pdf', display_text: 'PDF', 'Content-Type': 'application/pdf' },
+          { link: 'https://www.inference.org.uk/itprnn/book.ps.gz', display_text: 'PostScript (.ps.gz)', 'Content-Type': 'application/gzip' },
+          { link: 'https://www.inference.org.uk/mackay/book.djvu', display_text: 'DjVu (2nd printing)', 'Content-Type': 'image/vnd.djvu' },
           { link: 'https://www.inference.org.uk/itprnn/book.epub', display_text: 'EPUB (experimental)', 'Content-Type': 'application/epub+zip' },
         ],
         variant: [
@@ -37,7 +39,7 @@ export const entries = [
             ISBN: '9780521642989',
             'number-of-pages': 'xii, 628',
             language: 'en',
-            URL: 'https://assets.cambridge.org/97805216/42989/frontmatter/9780521642989_frontmatter.pdf',
+            URL: 'https://www.cambridgebookshop.co.uk/products/information-theory-inference-and-learning-algorithms',
           },
           {
             type: 'book',
@@ -50,7 +52,7 @@ export const entries = [
             ISBN: '9780521644440',
             'number-of-pages': 'xii, 628',
             language: 'en',
-            URL: 'https://catalog.iavalley.edu/bib/15453',
+            URL: 'https://www.abebooks.com/9780521644440/Information-Theory-Inference-Learning-Algorithms-0521644445/plp',
           },
           {
             type: 'book',
