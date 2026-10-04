@@ -486,8 +486,11 @@
             <text macro="issued"/>
             <text macro="page"/>
           </group>
-          <text macro="access"/>
-          <text variable="note" prefix="Note: "/>
+          <!-- Fixed by GPT-6 Sol Max. Revised by AndyBRoswell. -->
+          <group delimiter=" ">
+            <text macro="access"/>
+            <text variable="note" prefix="Note: "/>
+          </group>
         </else-if>
         <else-if type="article-magazine article-newspaper broadcast interview manuscript map patent personal_communication song speech thesis webpage" match="any">
           <group delimiter=", " suffix=".">
