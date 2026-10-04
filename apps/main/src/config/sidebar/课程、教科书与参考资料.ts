@@ -231,6 +231,37 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '积分变换',
+      translations: {
+        en: 'Integral Transforms',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      },
+    },
+    {
+      label: '实变函数',
+      translations: {
+        en: 'Real Analysis',
+      },
+      slug: 'courses-textbooks-and-references/real-analysis',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+      },
+    },
+    {
+      label: '泛函分析',
+      translations: {
+        en: 'Functional Analysis',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      },
+    },
+    {
       label: '常微分方程',
       translations: {
         en: 'Ordinary Differential Equations',
