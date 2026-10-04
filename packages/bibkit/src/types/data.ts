@@ -66,6 +66,10 @@ export type Link =
     note?: string // Free-text note about the link or resource.
     'Content-Type'?: string // Direct resource media type following RFC 9110 and IANA.
     license?: string // Resource license following DCMI; prefer an SPDX expression when applicable.
+    created?: CSL.Date_Variable // DCMI: when the linked resource was created, if distinct from release.
+    issued?: CSL.Date_Variable // DCMI/DCAT: when this linked version or distribution was published; not always the same as the parent Material's date.
+    modified?: CSL.Date_Variable // DCMI/DCAT: last known content revision; do not infer it solely from HTTP Last-Modified.
+    accessed?: CSL.Date_Variable // CSL: when this particular URL was checked; can be independent of Material.accessed.
     tag?: string[] // Internal tags; never use them as fallback link text.
   }
 
