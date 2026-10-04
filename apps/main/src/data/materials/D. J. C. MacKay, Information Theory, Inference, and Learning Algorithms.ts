@@ -22,10 +22,33 @@ export const entries = [
       custom: {
         'printing-date': { 'date-parts': [ [ 2005, 3, 28 ] ] },
         free_material: [
-          { link: 'https://www.inference.org.uk/itprnn/book.pdf', display_text: 'PDF', 'Content-Type': 'application/pdf' },
-          { link: 'https://www.inference.org.uk/itprnn/book.ps.gz', display_text: 'PostScript (.ps.gz)', 'Content-Type': 'application/gzip' },
-          { link: 'https://www.inference.org.uk/mackay/book.djvu', display_text: 'DjVu (2nd printing)', 'Content-Type': 'image/vnd.djvu' },
-          { link: 'https://www.inference.org.uk/itprnn/book.epub', display_text: 'EPUB (experimental)', 'Content-Type': 'application/epub+zip' },
+          {
+            link: 'https://www.inference.org.uk/itprnn/book.pdf',
+            display_text: 'PDF',
+            'Content-Type': 'application/pdf',
+            modified: { 'date-parts': [ [ 2005, 3, 28 ] ] },
+            accessed: { 'date-parts': [ [ 2026, 10, 4 ] ] },
+          },
+          {
+            link: 'https://www.inference.org.uk/itprnn/book.ps.gz',
+            display_text: 'PostScript (.ps.gz)',
+            'Content-Type': 'application/gzip',
+            modified: { 'date-parts': [ [ 2005, 3 ] ] },
+            accessed: { 'date-parts': [ [ 2026, 10, 4 ] ] },
+          },
+          {
+            link: 'https://www.inference.org.uk/mackay/book.djvu',
+            display_text: 'DjVu (2nd printing)',
+            'Content-Type': 'image/vnd.djvu',
+            accessed: { 'date-parts': [ [ 2026, 10, 4 ] ] },
+          },
+          {
+            link: 'https://www.inference.org.uk/itprnn/book.epub',
+            display_text: 'EPUB (experimental)',
+            'Content-Type': 'application/epub+zip',
+            created: { 'date-parts': [ [ 2014, 8, 31 ] ] },
+            accessed: { 'date-parts': [ [ 2026, 10, 4 ] ] },
+          },
         ],
         variant: [
           {
