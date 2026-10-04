@@ -46,6 +46,7 @@ export const entries = [
             medium: 'eBook',
             ISBN: '9781118585771',
             issued: { 'date-parts': [ [ 2012, 11 ] ] },
+            // Wiley lists 784 pages for this ISBN; Schweitzer lists 792.
             'number-of-pages': 784,
             URL: 'https://www.schweitzer-online.de/ebook/Cover/Elements-Information-Theory/9781118585771/A5162106/',
           },
