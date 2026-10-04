@@ -872,6 +872,16 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '信息论',
+      translations: {
+        en: 'Information Theory',
+      },
+      slug: 'courses-textbooks-and-references/information-theory',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+      },
+    },
+    {
       label: '编码理论',
       translations: {
         en: 'Coding Theory',

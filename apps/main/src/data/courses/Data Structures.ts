@@ -18,6 +18,7 @@ export const info = {
     reference: {
       en: [
         ...catalog.filter(item => item.type === 'book' && item.title === 'Data Structures and Algorithm Analysis in C++' && item.author?.some(author => author.family === 'Weiss'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'The Art of Computer Programming' && item.author?.some(author => author.family === 'Knuth') && item.volume === 1, { count: 1 }),
         ...catalog.filter(item => item.type === 'webpage' && item.title === 'CS3 Data Structures & Algorithms' && item['container-title'] === 'OpenDSA', { count: 1 }),
       ],
     },

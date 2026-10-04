@@ -24,6 +24,10 @@ export const info = {
         en: [
           ...catalog.filter(item => item.type === 'book' && item.title === 'Introduction to Algorithms' && item.author?.some(author => author.family === 'Cormen'), { count: 1 }),
           ...catalog.filter(item => item.type === 'book' && item.title === 'Algorithms' && item.author?.some(author => author.family === 'Sedgewick' && author.given === 'Robert'), { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'The Art of Computer Programming' && item.author?.some(author => author.family === 'Knuth') && item.volume === 2, { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'The Art of Computer Programming' && item.author?.some(author => author.family === 'Knuth') && item.volume === 3, { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'The Art of Computer Programming' && item.author?.some(author => author.family === 'Knuth') && item.volume === '4A', { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'The Art of Computer Programming' && item.author?.some(author => author.family === 'Knuth') && item.volume === '4B', { count: 1 }),
         ],
       },
       guide: {
