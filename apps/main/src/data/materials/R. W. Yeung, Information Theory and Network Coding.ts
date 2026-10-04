@@ -19,11 +19,9 @@ export const entries = [
       ISSN: '1866-6361',
       'number-of-pages': 'XX, 580',
       language: 'en',
-      note: 'eBook (PDF), watermarked without hard DRM; purchase or institutional access required.',
       URL: 'https://link.springer.com/book/10.1007/978-0-387-79234-7',
       accessed: { 'date-parts': [ [ 2026, 10, 4 ] ] },
       custom: {
-        URL: [ { link: 'https://support.springernature.com/en/support/solutions/articles/6000080086-digital-rights-management-drm-and-ebook-content', display_text: 'Springer Nature eBook DRM policy' } ],
         'collection-title-short': 'ITTP',
         'eBook packages': [ 'Engineering', 'Engineering (R0)' ],
         topic: [ 'Theory of Computation', 'Computer Communication Networks', 'Communications Engineering, Networks', 'Data Structures and Information Theory', 'Probability Theory and Stochastic Processes' ],
