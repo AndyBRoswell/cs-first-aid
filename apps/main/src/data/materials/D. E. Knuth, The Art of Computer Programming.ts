@@ -29,6 +29,11 @@ export const entries = [
             ISBN: '978-0-201-89683-1',
             issued: { 'date-parts': [ [ 1997, 7, 7 ] ] },
             URL: 'https://www.abebooks.com/9780201896831/Art-Computer-Programming-Vol-Fundamental-0201896834/plp',
+            custom: {
+              URL: [
+                { link: 'https://www.informit.com/store/art-of-computer-programming-volume-1-fundamental-algorithms-9780201896831', display_text: 'InformIT: publication date' },
+              ],
+            },
           },
         ],
       } satisfies CSL.Custom,
@@ -61,6 +66,11 @@ export const entries = [
             ISBN: '978-0-201-89684-8',
             issued: { 'date-parts': [ [ 1997, 11, 4 ] ] },
             URL: 'https://www.abebooks.com/9780201896848/Art-Computer-Programming-Seminumerical-Algorithms-0201896842/plp',
+            custom: {
+              URL: [
+                { link: 'https://www.informit.com/store/art-of-computer-programming-volume-2-seminumerical-9780201896848', display_text: 'InformIT: publication date' },
+              ],
+            },
           },
         ],
       } satisfies CSL.Custom,
@@ -93,6 +103,11 @@ export const entries = [
             ISBN: '978-0-201-89685-5',
             issued: { 'date-parts': [ [ 1998, 4, 24 ] ] },
             URL: 'https://www.zvab.com/9780201896855/Art-Computer-Programming-Volume-Sorting-0201896850/plp',
+            custom: {
+              URL: [
+                { link: 'https://www.informit.com/store/art-of-computer-programming-volume-3-sorting-and-searching-9780201896855', display_text: 'InformIT: publication date' },
+              ],
+            },
           },
         ],
       } satisfies CSL.Custom,
@@ -125,6 +140,11 @@ export const entries = [
             ISBN: '978-0-201-03804-0',
             issued: { 'date-parts': [ [ 2011, 1, 12 ] ] },
             URL: 'https://www.pearson.com/en-us/subject-catalog/p/art-of-computer-programming-the-combinatorial-algorithms-volume-4a-part-1/P200000009030/9780201038040',
+            custom: {
+              URL: [
+                { link: 'https://www.informit.com/store/art-of-computer-programming-volume-4a-combinatorial-9780201038040', display_text: 'InformIT: publication date' },
+              ],
+            },
           },
         ],
       } satisfies CSL.Custom,
@@ -157,6 +177,11 @@ export const entries = [
             ISBN: '978-0-201-03806-4',
             issued: { 'date-parts': [ [ 2022, 9, 28 ] ] },
             URL: 'https://www.pearson.com/en-us/subject-catalog/p/art-of-computer-programming-volume-4b-the-combinatorial-algorithms/P200000002106/9780201038064',
+            custom: {
+              URL: [
+                { link: 'https://www.informit.com/store/art-of-computer-programming-volume-4b-combinatorial-9780201038064', display_text: 'InformIT: publication date' },
+              ],
+            },
           },
         ],
       } satisfies CSL.Custom,
