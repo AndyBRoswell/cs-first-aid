@@ -21,7 +21,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha.1', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha.2', en: 'blank', })
       },
     },
     {
