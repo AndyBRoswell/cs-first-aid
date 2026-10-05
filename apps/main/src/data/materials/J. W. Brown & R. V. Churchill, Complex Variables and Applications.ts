@@ -38,6 +38,11 @@ export const entries = [
             issued: { 'date-parts': [ [ 2013, 9, 3 ] ] },
             ISBN: '978-0-07-338317-0',
             URL: 'https://ci.nii.ac.jp/ncid/BB14921000?l=en',
+            custom: {
+              URL: [
+                { link: 'https://libcat.weber.edu/cgi-bin/koha/opac-MARCdetail.pl?biblionumber=1210647', display_text: 'Stewart Library: hardcover ISBN' },
+              ],
+            },
           },
           {
             type: 'book',
