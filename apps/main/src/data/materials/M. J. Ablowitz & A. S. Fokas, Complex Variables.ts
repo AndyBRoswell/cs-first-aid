@@ -21,6 +21,9 @@ export const entries = [
       URL: 'https://www.cambridge.org/core/books/complex-variables/08A62E6DB03F5D5435F5DE6260618002',
       accessed: { 'date-parts': [ [ 2026, 10, 5 ] ] },
       custom: {
+        URL: [
+          { link: 'https://mitpressbookstore.mit.edu/book/9780521534291', display_text: 'MIT Press Bookstore' },
+        ],
         variant: [
           {
             type: 'book',
