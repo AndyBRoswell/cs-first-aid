@@ -7,6 +7,10 @@ export const info = {
   name: [ '复变函数', '复分析', 'Complex Analysis' ],
   material: {
     reference: {
+      zh: [
+        ...catalog.filter(item => item.type === 'book' && item.title === '复变函数' && item.author?.some(author => author.family === '史' && author.given === '济怀'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === '简明复分析' && item.author?.some(author => author.family === '龚' && author.given === '昇') && item.edition === 2, { count: 1 }),
+      ],
       en: [
         ...catalog.filter(item => item.type === 'book' && item.title === 'Fundamentals of Complex Analysis with Applications to Engineering, Science, and Mathematics' && item.author?.some(author => author.family === 'Saff'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'Complex Variables and Applications' && item.author?.some(author => author.family === 'Brown'), { count: 1 }),
