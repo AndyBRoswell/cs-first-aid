@@ -12,7 +12,7 @@ export const info = {
         ...catalog.filter(item => item.type === 'book' && item.title === 'An Introduction to Integral Transforms' && item.author?.some(author => author.family === 'Patra'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'Transforms and Applications Handbook' && item.editor?.some(editor => editor.family === 'Poularikas'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'Discrete Fourier Analysis and Wavelets' && item.author?.some(author => author.family === 'Broughton'), { count: 1 }),
-        ...catalog.filter(item => item.type === 'book' && item.title === 'Introduction to Orthogonal Transforms: With Applications in Data Processing and Analysis' && item.author?.some(author => author.family === 'Wang'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Introduction to Orthogonal Transforms' && item.author?.some(author => author.family === 'Wang'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'A Wavelet Tour of Signal Processing' && item.author?.some(author => author.family === 'Mallat'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'Principles of Computerized Tomographic Imaging' && item.author?.some(author => author.family === 'Kak'), { count: 1 }),
       ],
