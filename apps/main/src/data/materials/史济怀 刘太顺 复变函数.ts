@@ -16,11 +16,11 @@ export const entries = [
       'number-of-pages': 358,
       ISBN: '978-7-312-00999-0',
       language: 'zh-CN',
-      URL: 'https://opac.lib.uibe.edu.cn/opac/book/765f329cebff7ce54a23f292798ca20c',
+      URL: 'https://book.douban.com/subject/4860746/',
       accessed: { 'date-parts': [ [ 2026, 10, 6 ] ] },
       custom: {
         URL: [
-          { link: 'https://m.youlu.net/2755599', display_text: '有路网' },
+          { link: 'https://opac.lib.uibe.edu.cn/opac/book/765f329cebff7ce54a23f292798ca20c', display_text: '对外经济贸易大学图书馆' },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
