@@ -10,6 +10,7 @@ export const entries = [
       publisher: 'Cambridge University Press',
       issued: { 'date-parts': [ [ 2013, 12 ] ] },
       ISBN: '9781107039759',
+      'number-of-pages': 553,
       language: 'en',
       URL: 'https://www.cambridge.org/gb/titles/stochastic-processes-theory-applications',
       accessed: { 'date-parts': [ [ 2026, 10, 7 ] ] },
