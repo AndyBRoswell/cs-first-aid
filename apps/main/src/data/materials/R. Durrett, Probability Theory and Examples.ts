@@ -22,6 +22,8 @@ export const entries = [
             publisher: 'Cambridge University Press',
             issued: { 'date-parts': [ [ 2019, 4, 18 ] ] },
             ISBN: '9781108473682',
+            URL: 'https://www.cambridge.org/core/books/probability/DD9A1907F810BB14CCFF022CDFC5677A',
+            accessed: { 'date-parts': [ [ 2026, 10, 8 ] ] },
           },
         ],
         free_material: [
