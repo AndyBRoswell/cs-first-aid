@@ -17,6 +17,30 @@ export const entries = [
       language: 'en',
       URL: 'https://www.routledge.com/Probability-and-Statistics-for-Computer-Scientists/Baron/p/book/9781138044487',
       accessed: { 'date-parts': [ [ 2026, 10, 8 ] ] },
+      custom: {
+        variant: [
+          {
+            type: 'book',
+            edition: 3,
+            issued: { 'date-parts': [ [ 2019, 6, 25 ] ] },
+            medium: 'eBook',
+            publisher: 'Chapman and Hall/CRC',
+            ISBN: '9781315172286',
+            DOI: '10.1201/9781315172286',
+            URL: 'https://doi.org/10.1201/9781315172286',
+          },
+          {
+            type: 'book',
+            edition: 3,
+            medium: 'eBook (EPUB)',
+            publisher: 'Chapman and Hall/CRC',
+            issued: { 'date-parts': [ [ 2019, 6 ] ] },
+            ISBN: '9781351697392',
+            URL: 'https://www.vitalsource.com/products/probability-and-statistics-for-computer-michael-baron-v9781351697392',
+            accessed: { 'date-parts': [ [ 2026, 10, 8 ] ] },
+          },
+        ],
+      },
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
