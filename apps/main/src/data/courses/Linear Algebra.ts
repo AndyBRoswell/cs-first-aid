@@ -68,6 +68,9 @@ export const I_info = {
         ],
       },
       video: {
+        en: [
+          ...catalog.filter(item => item.type === 'motion_picture' && item.author?.some(author => author.given === 'Grant' && author.family === 'Sanderson') && util.ieq(item.title!, 'Essence of Linear Algebra'), { count: 1 }),
+        ],
         zh: [
           ...catalog.filter(item => item.type === 'motion_picture' && item.author?.some(author => author.literal === '分析学爱好者') && util.ieq(item.title!, '我为什么推荐你使用丘维声学习高等代数'), { max_count: 1 }),
         ],
