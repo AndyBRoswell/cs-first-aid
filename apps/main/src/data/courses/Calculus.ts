@@ -42,6 +42,11 @@ export const info = {
           ...catalog.filter(material => material.author?.some(author => author.family === 'Corral') && util.ieq(material.title!, 'Vector Calculus'), { count: 1 }),
         ],
       },
+      video: {
+        en: [
+          ...catalog.filter(material => material.type === 'motion_picture' && material.author?.some(author => author.given === 'Grant' && author.family === 'Sanderson') && util.ieq(material.title!, 'Essence of Calculus'), { count: 1 }),
+        ],
+      },
     },
   }
 } satisfies types_data.Course
