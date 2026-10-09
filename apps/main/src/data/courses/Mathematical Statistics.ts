@@ -14,8 +14,14 @@ export const info = {
     },
     reference: {
       zh: [
+        ...catalog.filter(item => item.type === 'book' && item.title === '数理统计学教程' && item.author?.some(author => author.family === '陈' && author.given === '希孺') && item.author?.some(author => author.family === '倪' && author.given === '国熙'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === '概率论与数理统计' && item.author?.some(author => author.family === '徐' && author.given === '全智'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === '概率论与数理统计' && item.author?.some(author => author.family === '缪' && author.given === '柏其') && item.author?.some(author => author.family === '张' && author.given === '伟平'), { count: 1 }),
+      ],
+      en: [
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Introduction to Probability, Statistics, and Random Processes' && item.author?.some(author => author.family === 'Pishro-Nik'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Probability and Statistics' && item.author?.some(author => author.family === 'Evans') && item.edition === 2, { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Instructor’s Solutions Manual for Probability and Statistics' && item.author?.some(author => author.family === 'Evans') && item.edition === 2, { count: 1 }),
       ],
     },
     excluded: {
