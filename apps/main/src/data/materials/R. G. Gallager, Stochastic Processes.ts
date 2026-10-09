@@ -33,9 +33,10 @@ export const entries = [
           },
           {
             type: 'book',
-            medium: 'eBook (Adobe Reader)',
+            medium: 'eBook (PDF)',
             ISBN: '9781107440418',
-            URL: 'https://www.cambridge.org/to/titles/stochastic-processes-theory-applications?format=AR',
+            URL: 'https://www.vitalsource.com/products/stochastic-processes-robert-g-gallager-v9781107440418',
+            accessed: { 'date-parts': [ [ 2026, 10, 9 ] ] },
           },
           {
             type: 'book',
