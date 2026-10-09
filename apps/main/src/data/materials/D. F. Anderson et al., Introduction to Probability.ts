@@ -17,7 +17,17 @@ export const entries = [
       URL: 'https://www.cambridge.org/highereducation/books/introduction-to-probability/5AB95A42185AB1EF4EDDE73C3A56494E',
       accessed: { 'date-parts': [ [ 2026, 10, 9 ] ] },
       custom: {
+        subject: [ 'Mathematics', 'Mathematics (general)', 'Probability Theory and Stochastic Processes', 'Statistics and Probability' ],
         variant: [
+          {
+            type: 'book',
+            medium: 'eBook (EPUB+DRM)',
+            publisher: 'Cambridge University Press',
+            issued: { 'date-parts': [ [ 2017, 11, 2 ] ] },
+            ISBN: '9781108244985',
+            URL: 'https://www.kriso.ee/introduction-probability-db-97811082449856e.html',
+            accessed: { 'date-parts': [ [ 2026, 10, 9 ] ] },
+          },
           {
             type: 'book',
             medium: 'eBook (Cambridge)',
