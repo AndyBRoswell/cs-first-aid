@@ -19,9 +19,19 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 11 ] ] },
       custom: {
         subtitle: 'Lessons Learned from Programming Over Time',
-        URL: [ { link: 'https://abseil.io/resources/swe-book', display_text: 'Abseil' } ],
+        URL: [
+          {
+            link: 'https://abseil.io/resources/swe-book',
+            display_text: 'Abseil',
+          },
+        ],
         free_material: [
-          { link: 'https://abseil.io/resources/swe-book/html/toc.html', display_text: 'HTML', 'Content-Type': 'text/html', license: 'CC-BY-NC-ND-4.0' },
+          {
+            link: 'https://abseil.io/resources/swe-book/html/toc.html',
+            display_text: 'HTML',
+            'Content-Type': 'text/html',
+            license: 'CC-BY-NC-ND-4.0',
+          },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
