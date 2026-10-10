@@ -428,6 +428,17 @@ export const Courses_Textbooks_and_References = {
           },
         },
         {
+          label: 'TypeScript 程序设计',
+          translations: {
+            en: 'TypeScript Programming Language',
+          },
+          slug: 'courses-textbooks-and-references/programming/typescript-programming',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+          },
+        },
+        {
           label: 'Shell 程序设计',
           translations: {
             en: 'Shell Programming',
