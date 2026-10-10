@@ -38,7 +38,7 @@ test_src_util.test('C Programming', { tag: [ '@Courses, Textbooks and References
     await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 
-  await test_src_util.test.step('未被选择的书目', async () => {
+  await test_src_util.test.step('未选书目', async () => {
     References = test_course_util.locate_references(main, [ 'excluded', 'en' ])
     await test_src_util.everyone_occurs(References, [
       /The C Programming Language/,

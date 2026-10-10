@@ -47,7 +47,7 @@ src_util.test('Python Programming', { tag: [ '@Courses, Textbooks and References
     await expect(section.getByRole('heading', { level: 3, name: '中文' })).toHaveCount(1)
   })
 
-  await src_util.test.step('未被选择的书目', async () => {
+  await src_util.test.step('未选书目', async () => {
     References = course_util.locate_references(main, [ 'excluded', 'en' ])
     await src_util.everyone_occurs(References, [ /Python Cookbook/ ])
     section = src_util.locate_parent(References, 'section')
