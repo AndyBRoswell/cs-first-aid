@@ -19,6 +19,17 @@ import References from '@/components/References.astro'
       </section>
     </section>
     <section>
+      ### 课程讲义
+      <section>
+        #### 英文
+        <References
+          materials={course_material.reference.lecture_notes_and_slides.en}
+          reference_ranges={reference_ranges}
+          scope_name={[ 'reference', 'lecture_notes_and_slides', 'en' ]}
+        />
+      </section>
+    </section>
+    <section>
       ### 其它
       <section>
         #### 英文

@@ -20,6 +20,11 @@ export const info = {
           ...catalog.filter(item => item.type === 'book' && item.title === 'Software Foundations', { count: 1 }),
         ],
       },
+      lecture_notes_and_slides: {
+        en: [
+          ...catalog.filter(item => item.type === 'document' && item['collection-title'] === 'LTAT.05.006: Software Testing' && item.publisher === 'University of Tartu', { count: 1 }),
+        ],
+      },
       other: {
         en: [
           ...catalog.filter(item => item.type === 'document' && item.title === 'Certified Tester Foundation Level Syllabus', { count: 1 }),
