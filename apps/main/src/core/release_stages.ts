@@ -15,7 +15,7 @@ export const prerelease_stage_groups = [ // The 1st item is canonical; the outer
 type Parsed_Version = { semver: semver.SemVer; stage_index?: number; prerelease_number?: string | number }
 
 export type Release = string // Unversioned names are special; every other value is validated by semver at runtime.
-const project_version = parse_version(package_json.version).semver.version // Validate and normalize the site version once.
+const project_version = parse_version(package_json.version) // Validate and normalize the site version once, including its canonical stage.
 
 export type Localized_Release = {
   [language: Intl.UnicodeBCP47LocaleIdentifier]: Release
