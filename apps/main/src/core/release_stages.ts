@@ -3,9 +3,9 @@
 import * as semver from 'semver'
 import package_json from '@package.json' with { type: 'json' }
 
-const semver_parse_options: semver.Options = { loose: true } // Accept node-semver's documented loose forms.
+const semver_parsing_options: semver.Options = { loose: true } // Accept node-semver's documented loose forms.
 export const unversioned_releases: readonly [string, ...string[]] = [ 'blank', 'planned', 'backlog', ] // Equivalent statuses below every version.
-export const prerelease_stage_groups = [ // The first item is canonical; the outer array defines stage order.
+export const prerelease_stage_groups = [ // The 1st item is canonical; the outer array defines stage order.
   [ 'dev', 'snapshot', 'nightly', 'pre-alpha', ],
   [ 'alpha', 'a', ],
   [ 'beta', 'b', ],
