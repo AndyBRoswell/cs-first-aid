@@ -56,7 +56,7 @@ export function compare(left_release: Release, right_release: Release): number {
 }
 
 function parse_version(value: string): Parsed_Version {
-  const version = semver.parse(value, semver_parse_options)
+  const version = semver.parse(value, semver_parsing_options)
   if (version === null) { throw new TypeError(`Invalid semantic version: ${JSON.stringify(value)}`) }
   if (version.prerelease.length === 0) { return { semver: version, } }
   const [ identifier, prerelease_number, ...extra_identifiers ] = version.prerelease
