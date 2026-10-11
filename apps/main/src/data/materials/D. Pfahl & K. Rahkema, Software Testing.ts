@@ -6,7 +6,6 @@ export const entries = [
     id: [],
     material: {
       type: 'document',
-      title: 'Software Testing: Lecture Slides',
       author: [ { given: 'Dietmar', family: 'Pfahl' }, { given: 'Kristiina', family: 'Rahkema' } ],
       'collection-title': 'LTAT.05.006: Software Testing',
       genre: 'Lecture slides',
