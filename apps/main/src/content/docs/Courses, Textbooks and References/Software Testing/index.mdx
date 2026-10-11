@@ -10,10 +10,20 @@ import References from '@/components/References.astro'
 <section>
   # 学习材料
   <section>
-    ## 参考书
+    ## 参考资料
     <section>
-      ### 英文
-      <References materials={course_material.reference.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'en' ]}/>
+      ### 书籍
+      <section>
+        #### 英文
+        <References materials={course_material.reference.book.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'book', 'en' ]}/>
+      </section>
+    </section>
+    <section>
+      ### 其它
+      <section>
+        #### 英文
+        <References materials={course_material.reference.other.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'other', 'en' ]}/>
+      </section>
     </section>
   </section>
 </section>
