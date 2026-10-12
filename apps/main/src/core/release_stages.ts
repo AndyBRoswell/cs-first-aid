@@ -28,10 +28,8 @@ export function validate(release_stages: Localized_Release): void {
   for (const [ language, release ] of Object.entries(release_stages)) {
     if (unversioned_releases.includes(release.toLowerCase())) { continue }
     const parsed = parse_version(release)
-    const comparison = compare(release, project_version)
-    const is_stable = parsed.semver.prerelease.length === 0
-    if (is_stable && comparison > 0) { throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: Stable release ${JSON.stringify(release)} cannot be newer than project version ${JSON.stringify(project_version)}.`) }
-    if (!is_stable && comparison < 0) { throw new TypeError(`Invalid release for language ${JSON.stringify(language)}: Prerelease ${JSON.stringify(release)} cannot be older than project version ${JSON.stringify(project_version)}.`) } // The core version of a prerelease version indicates the estimated core version when the corresponding page becomes stable.
+    if (parsed.stage_index === undefined) { continue } // The version of a stable page can be ahead of / behind the site release version.
+    if (compare_core_and_stage(parsed, project_version) < 0) { throw new TypeError(`Invalid release for language "${language}": Prerelease "${release}" cannot be earlier than project version "${project_version.semver.version}" in core version or release stage.`) } // The number in prelease is not compared here: Different pages can have different total counts of preleases for a certain pre-release stage.
   }
 }
 
@@ -46,13 +44,14 @@ export function compare(left_release: Release, right_release: Release): number {
   const left = unversioned_releases.includes(left_release.toLowerCase()) ? undefined : parse_version(left_release)
   const right = unversioned_releases.includes(right_release.toLowerCase()) ? undefined : parse_version(right_release)
   if (left === undefined || right === undefined) { return left === right ? 0 : left === undefined ? -1 : 1 }
-  const core_comparison = left.semver.compareMain(right.semver)
-  if (core_comparison !== 0) { return core_comparison } // The core version always takes precedence over its stage.
-  if (left.stage_index === undefined || right.stage_index === undefined) { return left.stage_index === right.stage_index ? 0 : left.stage_index === undefined ? 1 : -1 } // A stable release follows every prerelease of the same core.
-  const stage_comparison = left.stage_index - right.stage_index
-  if (stage_comparison !== 0) { return stage_comparison }
+  const comparison = compare_core_and_stage(left, right)
+  if (comparison !== 0 || left.stage_index === undefined) { return comparison }
   if (left.prerelease_number === undefined || right.prerelease_number === undefined) { return left.prerelease_number === right.prerelease_number ? 0 : left.prerelease_number === undefined ? -1 : 1 } // An absent prerelease number is earlier.
   return semver.compareIdentifiers(String(left.prerelease_number), String(right.prerelease_number))
+}
+
+function compare_core_and_stage(left: Parsed_Version, right: Parsed_Version): number { // The number in pre-release is ignored.
+  return left.semver.compareMain(right.semver) || (left.stage_index ?? prerelease_stage_groups.length) - (right.stage_index ?? prerelease_stage_groups.length) // Stable follows every prerelease stage of the same core.
 }
 
 function parse_version(value: string): Parsed_Version {
@@ -62,7 +61,7 @@ function parse_version(value: string): Parsed_Version {
   const [ identifier, prerelease_number, ...extra_identifiers ] = version.prerelease
   const normalized = typeof identifier === 'string' ? identifier.toLowerCase() : '' // Known stage names and aliases are case-insensitive.
   const stage_index = prerelease_stage_groups.findIndex(names => names.some(name => name === normalized))
-  if (stage_index === -1) { throw new TypeError(`Unsupported prerelease identifier: ${JSON.stringify(identifier)}`) }
+  if (stage_index === -1) { throw new TypeError(`Unsupported prerelease identifier: "${identifier}"`) }
   if (extra_identifiers.length > 0 || prerelease_number !== undefined && !/^\d+$/.test(String(prerelease_number))) { throw new TypeError(`Prerelease may contain only its stage identifier and one optional numeric identifier: ${JSON.stringify(value)}`) }
   return prerelease_number === undefined ? { semver: version, stage_index, } : { semver: version, stage_index, prerelease_number, }
 }
