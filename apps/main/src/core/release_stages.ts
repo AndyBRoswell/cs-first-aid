@@ -44,10 +44,7 @@ export function compare(left_release: Release, right_release: Release): number {
   const left = unversioned_releases.includes(left_release.toLowerCase()) ? undefined : parse_version(left_release)
   const right = unversioned_releases.includes(right_release.toLowerCase()) ? undefined : parse_version(right_release)
   if (left === undefined || right === undefined) { return left === right ? 0 : left === undefined ? -1 : 1 }
-  const comparison = compare_core_and_stage(left, right)
-  if (comparison !== 0 || left.stage_index === undefined) { return comparison }
-  if (left.prerelease_number === undefined || right.prerelease_number === undefined) { return left.prerelease_number === right.prerelease_number ? 0 : left.prerelease_number === undefined ? -1 : 1 } // An absent prerelease number is earlier.
-  return semver.compareIdentifiers(String(left.prerelease_number), String(right.prerelease_number))
+  return compare_core_and_stage(left, right)
 }
 
 function compare_core_and_stage(left: Parsed_Version, right: Parsed_Version): number { // The number in pre-release is ignored.
