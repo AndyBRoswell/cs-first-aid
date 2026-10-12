@@ -1,4 +1,4 @@
-// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+// Created by GPT-5.6 Sol Max [codex]. Revised by GPT-6.1 Sol Max [codex]. Then Revised by AndyBRoswell.
 
 import * as semver from 'semver'
 import package_json from '@package.json' with { type: 'json' }
