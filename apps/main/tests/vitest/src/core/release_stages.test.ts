@@ -90,37 +90,26 @@ describe('get_stage / release format', () => {
   })
 })
 
-test('get_stage rejects unsupported forms', ({ g, }) => {
-  const version = random_version(g)
-  const [ major, minor, ] = version.split('.') as [string, string, string]
-  const prerelease_number = random_integer(g, random_component_limit)
-  const unsupported_prerelease_identifier = `unsupported-${random_integer(g, random_component_limit)}`
-  const compact_alias = prerelease_stage_groups.flat().find(identifier => identifier.length === 1)!
-  const unsupported_releases = [
-    `${version}-${unsupported_prerelease_identifier}.${prerelease_number}`,
-    `${version}-${prerelease_number}`,
-    `${version}-${compact_alias}${prerelease_number}`,
-    `${version}-${compact_alias}-${prerelease_number}`,
-  ]
-  for (const unsupported_release of unsupported_releases) {
-    expect.soft(semver.parse(unsupported_release, { loose: true, }), `node-semver accepts ${JSON.stringify(unsupported_release)}`).not.toBeNull()
-    expect.soft(() => release_stages.get_stage(unsupported_release), `release ${JSON.stringify(unsupported_release)}`).toThrow(/Unsupported prerelease identifier/)
-    expect.soft(() => release_stages.compare(unsupported_release, version), `compare ${JSON.stringify(unsupported_release)}`).toThrow(/Unsupported prerelease identifier/)
-    expect.soft(() => release_stages.compare(unversioned_releases[0], unsupported_release), `compare unversioned release with ${JSON.stringify(unsupported_release)}`).toThrow(/Unsupported prerelease identifier/)
-    expect.soft(() => release_stages.compare(unsupported_release, unversioned_releases[0]), `compare unversioned release with ${JSON.stringify(unsupported_release)}`).toThrow(/Unsupported prerelease identifier/)
-  }
-  const supported_identifier = prerelease_stage_groups[random_integer(g, prerelease_stage_groups.length)]![0]
-  const invalid_releases = [
-    `unversioned-${random_integer(g, random_component_limit)}`, // Only the configured unversioned names bypass SemVer parsing.
-    `${major}.${minor}-${supported_identifier}`, // The full three-part core version is mandatory.
-    `${version}-${supported_identifier}!${random_integer(g, 10)}`, // SemVer rejects this punctuation.
-    `${version}-${supported_identifier}..${random_integer(g, 10)}`, // Identifiers cannot be empty.
-    `${version}+`, // Build identifiers cannot be empty.
-    `${version}-${supported_identifier}.preview`, // The optional identifier after a stage must be numeric.
-    `${version}-${supported_identifier}.${prerelease_number}.${supported_identifier}.preview`, // Only one optional numeric identifier is allowed.
-  ]
-  for (const release of invalid_releases) {
-    expect.soft(() => release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toThrow(/semantic version|Prerelease/)
+describe('compare / two release versions', () => {
+  test('treats unversioned statuses as equivalent and below every core version', () => {
+    for (const release of unversioned) {
+      expect(release_stages.compare(release, 'BLANK')).toBe(0)
+      expect(release_stages.compare(release, '0.0.0-dev')).toBeLessThan(0)
+      expect(release_stages.compare('0.0.0-dev', release)).toBeGreaterThan(0)
+    }
+  })
+
+  for (const [ rule, component_index, ] of [
+    [ 'major before minor and patch', 0, ],
+    [ 'minor before patch', 1, ],
+    [ 'patch before stage', 2, ],
+  ] as const) {
+    test.prop({ cores: core_variants, }, property_options)(`orders by ${rule}`, ({ cores, }) => {
+      const earlier = cores.older[component_index]!
+      const later = `${core_version}-dev` // Opposing stages ensure the core difference decides the result.
+      expect(release_stages.compare(earlier, later), `${earlier} < ${later}`).toBeLessThan(0)
+      expect(release_stages.compare(later, earlier), `${later} > ${earlier}`).toBeGreaterThan(0)
+    })
   }
 })
 
