@@ -134,10 +134,12 @@ describe('compare / two release versions', () => {
     }
   })
 
-  test('equates aliases with the same number', () => {
+  test('equates aliases with the same number regardless of case', () => {
     for (const [ stage, aliases, ] of stage_aliases) {
       for (const alias of aliases) {
-        expect(release_stages.compare(`${core_version}-${stage}.2`, `${core_version}-${alias.toUpperCase()}.2`), `${stage} = ${alias}`).toBe(0)
+        for (const variant of case_variants(alias)) {
+          expect(release_stages.compare(`${core_version}-${stage}.2`, `${core_version}-${variant}.2`), `${stage} = ${variant}`).toBe(0)
+        }
       }
     }
   })
@@ -215,7 +217,9 @@ describe('validate / page and project versions', () => {
   test.prop({ cores: core_variants, }, property_options)('exempts unversioned pages from the project version constraint', ({ cores, }) => {
     for (const project of projects) {
       for (const release of unversioned) {
-        expect(() => project.validate({ 'zh-CN': release, en: release.toUpperCase(), fr: `${cores.newer[0]}-dev`, }), `${release} against project ${project.version}`).not.toThrow()
+        for (const variant of case_variants(release)) {
+          expect(() => project.validate({ 'zh-CN': release, en: variant, fr: `${cores.newer[0]}-dev`, }), `${variant} against project ${project.version}`).not.toThrow()
+        }
       }
     }
   })
