@@ -18,12 +18,17 @@ const property_options = { numRuns: 100, } // Run each property against 100 gene
 const component_changes = core_components.map(max => fc.tuple(fc.integer({ min: 1, max, }), increment)) // Each pair is [decrement, increment]; decrements cannot exceed the field.
 const core_variants = fc.tuple(...component_changes).map(build_core_variants) // Shrink numeric inputs, then rebuild the version strings.
 
-test('validate checks releases against the project version', ({ g, }) => {
-  const future_project_version = random_future_version(project_version, g) // Always strictly newer than the package version.
-  const localized: Localized = {
-    'zh-CN': random_prerelease(future_project_version, g),
-    en: 'planned',
-    fr: project_core_version,
+function build_core_variants(changes: [number, number][]) {
+  const higher = core_components.map((value, index) => value + changes[index]![1]) // Use the increment (2nd item) for each component.
+
+  const older: string[] = []
+  const newer: string[] = []
+  for (const [ index, value, ] of core_components.entries()) {
+    const [ decrement, ] = changes[index]!
+    const prefix = core_components.slice(0, index) // More significant fields stay unchanged.
+    const zero_tail = core_components.slice(index + 1).fill(0) // Less significant fields reset in newer versions.
+    older.push([ ...prefix, value - decrement, ...higher.slice(index + 1), ].join('.')) // Larger suffixes must not override the decreased field.
+    newer.push([ ...prefix, higher[index]!, ...zero_tail, ].join('.'))
   }
   expect(() => release_stages.validate(localized)).not.toThrow()
   const validate = (release: release_stages.Release) => release_stages.validate({ 'zh-CN': release, en: 'blank', })
