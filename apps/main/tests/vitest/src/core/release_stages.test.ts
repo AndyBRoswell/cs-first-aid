@@ -66,30 +66,28 @@ describe('get_stage / release format', () => {
     }
   })
 
-test('compare orders known stages and canonicalizes their aliases', ({ g, }) => {
-  const version = random_version(g)
-  const prerelease_number = random_integer(g, random_component_limit - 1)
-  const later_prerelease_number = random_integer(g, random_component_limit, prerelease_number + 1)
-  for (const release of unversioned_releases) { expect.soft(release_stages.compare(unversioned_releases[0], g(fc.mixedCase, fc.constant(release))), `${unversioned_releases[0]} = ${release}`).toBe(0) }
-  for (const [ canonical, ...aliases ] of prerelease_stage_groups) {
-    for (const alias of [ canonical, ...aliases, ]) {
-      expect.soft(release_stages.compare(`${version}-${canonical}`, `${version}-${g(fc.mixedCase, fc.constant(alias))}`), `${canonical} = ${alias}`).toBe(0)
+  test('identifies a version without a prerelease as stable', () => {
+    expect(release_stages.get_stage('0.0.0')).toBe('stable')
+    expect(release_stages.get_stage(`${core_version}+build.1`)).toBe('stable')
+  })
+
+  test('preserves the current loose parsing compatibility', () => {
+    expect(release_stages.get_stage('=01.02.03-A.01')).toBe('alpha')
+  })
+
+  test.each([
+    [ 'invalid SemVer', [ '', '1.2', `${core_version}+`, `${core_version}-alpha..1`, `${core_version}-alpha!1`, ], ],
+    [ 'unsupported stage', [ 'dev', `${core_version}-preview`, `${core_version}-stable`, `${core_version}-1`, `${core_version}-planned`, `${core_version}-backlog`, `${core_version}-a1`, ], ],
+    [ 'nonnumeric or negative number', [ `${core_version}-alpha.preview`, `${core_version}-alpha.-1`, ], ],
+    [ 'extra identifiers', [ `${core_version}-alpha.1.2`, `${core_version}-alpha.1.preview`, ], ],
+  ] as const)('rejects %s at every public entry point', (_reason, releases) => {
+    for (const release of releases) {
+      expect(() => release_stages.get_stage(release), release).toThrow(TypeError)
+      expect(() => release_stages.compare(release, 'blank'), release).toThrow(TypeError) // An unversioned operand must not hide an invalid version.
+      expect(() => release_stages.compare('blank', release), release).toThrow(TypeError)
+      expect(() => release_stages.validate({ 'zh-CN': 'blank', en: release, }), release).toThrow(TypeError)
     }
-  }
-  const ordered_releases = [ unversioned_releases[0], ...prerelease_stage_groups.map(([ canonical, ]) => `${version}-${canonical}`), version, ] // Compare every adjacent stage.
-  for (let index = 1; index < ordered_releases.length; index++) {
-    const earlier = ordered_releases[index - 1]!
-    const later = ordered_releases[index]!
-    expect.soft(release_stages.compare(earlier, later), `${earlier} < ${later}`).toBeLessThan(0)
-    expect.soft(release_stages.compare(later, earlier), `${later} > ${earlier}`).toBeGreaterThan(0)
-  }
-  expect(release_stages.compare(version, version)).toBe(0)
-  const numbered_group = prerelease_stage_groups[random_integer(g, prerelease_stage_groups.length)]!
-  const numbered_stage = numbered_group[0]
-  const numbered_alias = numbered_group[random_integer(g, numbered_group.length)]!
-  expect(release_stages.compare(`${version}-${numbered_stage}.${prerelease_number}`, `${version}-${g(fc.mixedCase, fc.constant(numbered_alias))}.${prerelease_number}`)).toBe(0)
-  expect(release_stages.compare(`${version}-${numbered_stage}.${prerelease_number}`, `${version}-${numbered_stage}.${later_prerelease_number}`)).toBeLessThan(0)
-  expect(release_stages.compare(`${version}-${prerelease_stage_groups.at(-1)![0]}`, `${random_future_version(new semver.SemVer(version), g)}-${prerelease_stage_groups[0][0]}`)).toBeLessThan(0) // Core version takes precedence.
+  })
 })
 
 test('get_stage rejects unsupported forms', ({ g, }) => {
