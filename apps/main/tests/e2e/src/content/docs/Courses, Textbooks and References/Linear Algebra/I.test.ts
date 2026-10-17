@@ -38,12 +38,15 @@ src_util.test('Linear Algebra I', { tag: [ '@Courses, Textbooks and References',
     /D. C. Lay/,
     /S. R. Treil/,
     /S. J. Leon/,
+    /A. T. Hensbergen/,
+    /N. D. Verhulst/,
     /Introduction to Linear Algebra/,
     /Linear Algebra and Its Applications/,
     /Linear Algebra Done Wrong/,
     /Linear Algebra with Applications/
   ])
   await expect(References).not.toContainText('Interactive Linear Algebra')
+  await expect(References.locator('a[href="https://interactivetextbooks.tudelft.nl/linear-algebra/"]')).toHaveCount(1)
 
   section = src_util.locate_parent(References, 'section', 2)
   await src_util.everyone_occurs(section, [

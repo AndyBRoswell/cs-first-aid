@@ -22,6 +22,7 @@ export const I_info = {
         catalog.get('ILA6'),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Lay') && item.title?.startsWith('Linear Algebra and Its Applications'), { max_count: 1 }),
         catalog.get('LADW'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Linear Algebra') && item.author?.some(author => author.family === 'Hensbergen') && item.author?.some(author => author.family === 'Verhulst') && item.edition === 2, { count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Shores') && util.ieq(item.title!, 'Applied Linear Algebra and Matrix Analysis'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Saff') && util.ieq(item.title!, 'Matrix Fundamentals'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Leon') && item.title?.startsWith('Linear Algebra with Applications'), { max_count: 1 }),
