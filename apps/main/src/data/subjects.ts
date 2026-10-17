@@ -108,6 +108,12 @@ add_many([
   },
   {
     names: {
+      'zh-CN': { full: { canonical: '数据库', all: [ '数据库', '数据库系统', ] }, short: { canonical: '数据库', all: [ '数据库', ] } },
+      en: { full: { canonical: 'Databases', all: [ 'Database', 'Databases', 'Database Systems', ] }, short: { canonical: 'DB', all: [ 'DB', ] } },
+    },
+  },
+  {
+    names: {
       'zh-CN': { full: { canonical: '计算机架构', all: [ '计算机架构', '计算机体系结构', '计算机系统结构', ] }, short: { canonical: '体系结构', all: [ '体系结构', '系统结构', ] } },
       en: { full: { canonical: 'Computer Architecture', all: [ 'Computer Architecture', ] }, short: { canonical: 'Arch', all: [ 'Arch', 'CompArch', ] } },
     },
