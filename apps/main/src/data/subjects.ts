@@ -76,4 +76,76 @@ add_many([
       en: { full: { canonical: 'Computer Science', all: [ 'Computer Science', ] }, short: { canonical: 'CS', all: [ 'CS', 'CompSci', ] } },
     },
   },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '软件工程', all: [ '软件工程', ] }, short: { canonical: '软工', all: [ '软工', '软', ] } },
+      en: { full: { canonical: 'Software Engineering', all: [ 'Software Engineering', ] }, short: { canonical: 'SE', all: [ 'SE', 'SWE', 'SoftEng', 'S/W Eng', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '安全', all: [ '安全', ] }, short: { canonical: '安全', all: [ '安全', ] } },
+      en: { full: { canonical: 'Security', all: [ 'Security', ] }, short: { canonical: 'Sec', all: [ 'Sec', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '理论计算机科学', all: [ '理论计算机科学', ] }, short: { canonical: '理计', all: [ '理计', ] } },
+      en: { full: { canonical: 'Theoretical Computer Science', all: [ 'Theoretical Computer Science', ] }, short: { canonical: 'TCS', all: [ 'TCS', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '系统', all: [ '系统', ] }, short: { canonical: '系统', all: [ '系统', ] } },
+      en: { full: { canonical: 'System', all: [ 'System', ] }, short: { canonical: 'Sys', all: [ 'Sys', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '网络', all: [ '网络', ] }, short: { canonical: '网络', all: [ '网络', ] } },
+      en: { full: { canonical: 'Network', all: [ 'Network', 'Networks' ] }, short: { canonical: 'Net', all: [ 'Net', 'Network', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '微架构/体系结构', all: [ '微架构/体系结构', '微架构/系统结构' ] }, short: { canonical: '微架构/体系结构', all: [ '微架构/体系结构', '微架构/系统结构', ] } },
+      en: { full: { canonical: 'Microarchitecture/Architecture', all: [ 'Microarchitecture/Architecture', ] }, short: { canonical: 'μArch/Arch', all: [ 'μArch/Arch', 'uArch/Arch', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '电气工程', all: [ '电气工程', ] }, short: { canonical: '电气', all: [ '电气', ] } },
+      en: { full: { canonical: 'Electrical Engineering', all: [ 'Electrical Engineering', ] }, short: { canonical: 'Electrical', all: [ 'Electrical', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '电子工程', all: [ '电子工程', ] }, short: { canonical: '电子', all: [ '电子', ] } },
+      en: { full: { canonical: 'Electronics Engineering', all: [ 'Electronics Engineering', ] }, short: { canonical: 'Electronic', all: [ 'Electronic', 'Electronics', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '控制工程', all: [ '控制工程', ] }, short: { canonical: '控制', all: [ '控制', ] } },
+      en: { full: { canonical: 'Control Engineering', all: [ 'Control Engineering', ] }, short: { canonical: 'Control', all: [ 'Control', 'Ctrl', 'Ctl', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '通信工程', all: [ '通信工程', ] }, short: { canonical: '通信', all: [ '通信', ] } },
+      en: { full: { canonical: 'Telecommunications Engineering', all: [ 'Telecommunications Engineering', ] }, short: { canonical: 'Telecom', all: [ 'Telecom', 'Telecommunications', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '光电工程', all: [ '光电工程', '光电子学', ] }, short: { canonical: '光电', all: [ '光电', ] } },
+      en: { full: { canonical: 'Optoelectronics', all: [ 'Optoelectronics', 'Optronics', ] }, short: { canonical: 'Optronics', all: [ 'Optronics', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '微电子', all: [ '微电子', '微电子学', ] }, short: { canonical: '微电子', all: [ '微电子', ] } },
+      en: { full: { canonical: 'Microelectronics', all: [ 'Microelectronics', ] }, short: { canonical: 'Microelectronics', all: [ 'Microelectronics', ] } },
+    },
+  },
 ])
