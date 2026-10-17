@@ -14,6 +14,8 @@ export const info = {
           ...catalog.filter(item => item.type === 'book' && item.title === '神经网络与深度学习' && item.author?.some(author => author.family === '邱' && author.given === '锡鹏'), { count: 1 }),
         ],
         en: [
+          ...catalog.filter(item => item.type === 'book' && item.title === 'An Introduction to Statistical Learning' && item.author?.some(author => author.family === 'Hastie'), { count: 2 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'The Elements of Statistical Learning' && item.author?.some(author => author.family === 'Hastie') && item.author?.some(author => author.family === 'Friedman'), { count: 1 }),
           ...catalog.filter(item => item.type === 'book' && item.title === 'Pattern Recognition and Machine Learning' && item.author?.some(author => author.family === 'Bishop'), { count: 1 }),
           ...catalog.filter(item => item.type === 'book' && item.title === 'Deep Learning' && item.author?.some(author => author.family === 'Goodfellow'), { count: 1 }),
         ],
