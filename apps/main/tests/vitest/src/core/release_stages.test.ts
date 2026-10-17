@@ -30,19 +30,30 @@ function build_core_variants(changes: [number, number][]) {
     older.push([ ...prefix, value - decrement, ...higher.slice(index + 1), ].join('.')) // Larger suffixes must not override the decreased field.
     newer.push([ ...prefix, higher[index]!, ...zero_tail, ].join('.'))
   }
-  expect(() => release_stages.validate(localized)).not.toThrow()
-  const validate = (release: release_stages.Release) => release_stages.validate({ 'zh-CN': release, en: 'blank', })
-  expect(() => validate(random_prerelease(random_older_version(project_version, g), g))).toThrow(/Invalid release/) // Prerelease cannot target an older core.
-  expect(() => validate(future_project_version)).toThrow(/Invalid release/) // A future version cannot already be stable.
-})
+  return { older, newer, }
+}
 
-test('get_stage derives the stage from a semantic version', ({ g, }) => {
-  const version = random_version(g)
-  const prerelease_number = random_integer(g, random_component_limit)
-  expect(release_stages.get_stage(version)).toBe('stable')
-  for (const configured_release of unversioned_releases) {
-    for (const release of [ configured_release, g(fc.mixedCase, fc.constant(configured_release)), ]) {
-      expect.soft(release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toBe('blank')
+const unversioned = [ 'blank', 'planned', 'backlog', ] as const
+const stage_aliases = [
+  [ 'dev', [ 'dev', 'snapshot', 'nightly', 'pre-alpha', ], ],
+  [ 'alpha', [ 'alpha', 'a', ], ],
+  [ 'beta', [ 'beta', 'b', ], ],
+  [ 'rc', [ 'rc', ], ],
+] as const
+
+function case_variants(value: string) {
+  return [
+    value, // Lowercase; all names in the test tables are lowercase.
+    value.toUpperCase(), // Uppercase.
+    value.replace(/\b[a-z]/g, letter => letter.toUpperCase()), // Title case, including hyphen-separated words.
+    value.replace(/[a-z]/g, (letter, index) => index % 2 === 0 ? letter : letter.toUpperCase()), // Mixed case.
+  ]
+}
+
+describe('get_stage / release format', () => {
+  test('recognizes the unversioned statuses regardless of case', () => {
+    for (const release of unversioned) {
+      for (const variant of case_variants(release)) { expect(release_stages.get_stage(variant), variant).toBe('blank') }
     }
   }
   for (const semver_prefix of [ '', '=', ]) { // Enumerate strict and loose forms.
