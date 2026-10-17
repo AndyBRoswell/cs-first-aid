@@ -1,4 +1,4 @@
-// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell. Refactored by Codex.
+// Created by GPT-5.6 Sol Max [codex]. Refactored by GPT-6.1 Sol Max [codex]. Revised by AndyBRoswell.
 
 import { fc, test } from '@fast-check/vitest'
 import { afterAll, beforeAll, describe, expect, vi } from 'vitest'
