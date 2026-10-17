@@ -1,18 +1,22 @@
-// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell. Refactored by Codex.
 
 import { fc, test } from '@fast-check/vitest'
-import { expect } from 'vitest'
-import * as semver from 'semver'
+import { afterAll, beforeAll, describe, expect, vi } from 'vitest'
+import { SemVer } from 'semver'
 import * as release_stages from '@/core/release_stages.ts'
 import package_json from '@package.json' with { type: 'json' }
 
-type Core_Version = `${number}.${number}.${number}` // Keeps generated versions in the required three-part shape.
-type Localized = release_stages.Localized_Release
+// Business rules: src/content/docs/Technical Information/Features.mdx, 内容版本管理.
+const core_version = vi.hoisted(() => '1.2.3') // Keep tests independent of the real package version.
+vi.mock('@package.json', () => ({ default: { version: core_version, }, }))
 
-const random_component_limit: number = 10_000 // Exclusive upper bound for generated core and prerelease numbers.
-const project_version = new semver.SemVer(package_json.version, { loose: true, })
-const project_core_version = `${project_version.major}.${project_version.minor}.${project_version.patch}` as Core_Version
-const { prerelease_stage_groups, unversioned_releases, } = release_stages
+const { major, minor, patch, } = new SemVer(core_version)
+const core_components = [ major, minor, patch, ] // Field order is also their comparison priority.
+const project_prerelease_number = 9
+const increment = fc.integer({ min: 1, })
+const property_options = { numRuns: 100, } // Run each property against 100 generated samples.
+const component_changes = core_components.map(max => fc.tuple(fc.integer({ min: 1, max, }), increment)) // Each pair is [decrement, increment]; decrements cannot exceed the field.
+const core_variants = fc.tuple(...component_changes).map(build_core_variants) // Shrink numeric inputs, then rebuild the version strings.
 
 test('validate checks releases against the project version', ({ g, }) => {
   const future_project_version = random_future_version(project_version, g) // Always strictly newer than the package version.
