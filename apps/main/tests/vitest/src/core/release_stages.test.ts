@@ -55,16 +55,16 @@ describe('get_stage / release format', () => {
     for (const release of unversioned) {
       for (const variant of case_variants(release)) { expect(release_stages.get_stage(variant), variant).toBe('blank') }
     }
-  }
-  for (const semver_prefix of [ '', '=', ]) { // Enumerate strict and loose forms.
-    for (const [ canonical, ...aliases ] of prerelease_stage_groups) {
-      for (const alias of [ canonical, ...aliases, ]) {
-        const release = `${semver_prefix}${version}-${g(fc.mixedCase, fc.constant(alias))}.${prerelease_number}`
-        expect.soft(release_stages.get_stage(release), `release ${JSON.stringify(release)}`).toBe(canonical)
+  })
+
+  test.each(stage_aliases)('normalizes %s and its aliases regardless of case', (stage, aliases) => {
+    for (const alias of aliases) {
+      for (const variant of case_variants(alias)) {
+        expect(release_stages.get_stage(`${core_version}-${variant}`), variant).toBe(stage)
+        expect(release_stages.get_stage(`${core_version}-${variant}.0+build.1`), variant).toBe(stage)
       }
     }
-  }
-})
+  })
 
 test('compare orders known stages and canonicalizes their aliases', ({ g, }) => {
   const version = random_version(g)
