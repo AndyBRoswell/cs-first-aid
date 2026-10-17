@@ -4,7 +4,6 @@ import { fc, test } from '@fast-check/vitest'
 import { afterAll, beforeAll, describe, expect, vi } from 'vitest'
 import { SemVer } from 'semver'
 import * as release_stages from '@/core/release_stages.ts'
-import package_json from '@package.json' with { type: 'json' }
 
 // Business rules: src/content/docs/Technical Information/Features.mdx, 内容版本管理.
 const core_version = vi.hoisted(() => '1.2.3') // Keep tests independent of the real package version.
@@ -185,4 +184,27 @@ describe('validate / page and project versions', () => {
       })
     }
 
-function random_integer(g: fc.GeneratorValue, maximum_exclusive: number, minimum = 0): number { return g(fc.integer, { min: minimum, max: maximum_exclusive - 1, }) }
+    test.prop({ cores: core_variants, }, property_options)('allows stable pages with an older, equal, or newer core', ({ cores, }) => {
+      for (const release of [ ...cores.older, core_version, ...cores.newer, ]) {
+        expect(() => validate({ 'zh-CN': release, en: 'blank', }), release).not.toThrow()
+      }
+    })
+
+    test.prop({ cores: core_variants, delta: increment, }, property_options)('compares prerelease cores before stages', ({ cores, delta, }) => {
+      for (const core of cores.older) {
+        const release = `${core}-rc.${project_prerelease_number + delta}`
+        expect(() => validate({ 'zh-CN': release, en: 'blank', }), release).toThrow(/cannot be earlier than project version/)
+      }
+      for (const core of cores.newer) {
+        const release = `${core}-dev`
+        expect(() => validate({ 'zh-CN': release, en: 'blank', }), release).not.toThrow()
+      }
+    })
+
+    test.prop({ cores: core_variants, }, property_options)('exempts unversioned pages from the project version constraint', ({ cores, }) => {
+      for (const release of unversioned) {
+        expect(() => validate({ 'zh-CN': release, en: release.toUpperCase(), fr: `${cores.newer[0]}-dev`, })).not.toThrow()
+      }
+    })
+  })
+})
