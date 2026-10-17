@@ -54,7 +54,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/linear-algebra',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -94,7 +95,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -145,7 +147,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/discrete-mathematics',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', ], 'en'))
           },
         },
         {
@@ -156,7 +159,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/mathematical-logic',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', ], 'en'))
           },
         },
         {
@@ -167,7 +170,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/set-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', ], 'en'))
           },
         },
         {
@@ -178,7 +181,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/graph-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', ], 'en'))
           },
         },
         {
@@ -189,7 +192,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/abstract-algebra',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', ], 'en'))
           },
         },
         {
@@ -200,7 +203,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/combinatorics',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', ], 'en'))
           },
         },
         {
@@ -211,7 +214,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/number-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', ], 'en'))
           },
         },
       ],
@@ -256,7 +259,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -266,7 +270,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -276,7 +281,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -286,7 +292,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -302,7 +309,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/programming',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
         {
@@ -318,7 +326,8 @@ export const Courses_Textbooks_and_References = {
               },
               slug: 'courses-textbooks-and-references/programming/cpp-programming',
               attrs: {
-                'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+                'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+                'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
               },
             },
             {
@@ -329,7 +338,7 @@ export const Courses_Textbooks_and_References = {
               slug: 'courses-textbooks-and-references/programming/cpp-programming/i',
               attrs: {
                 'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-                'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+                'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
               },
             },
             {
@@ -340,7 +349,7 @@ export const Courses_Textbooks_and_References = {
               slug: 'courses-textbooks-and-references/programming/cpp-programming/ii',
               attrs: {
                 'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-                'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+                'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
               },
             },
           ],
@@ -353,7 +362,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/c-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
           },
         },
         {
@@ -364,7 +373,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/assembly-language-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Arch', 'Embedded', ], 'en'))
           },
         },
         {
@@ -375,7 +384,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/csharp-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
         {
@@ -386,7 +395,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/java-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
         {
@@ -397,7 +406,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/kotlin-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
         {
@@ -408,7 +417,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/python-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
         {
@@ -419,7 +428,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/rust-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
           },
         },
         {
@@ -430,7 +439,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/typescript-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
         {
@@ -441,7 +450,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/shell-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', ], 'en'))
           },
         },
       ],
@@ -454,7 +463,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/software-testing',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
       },
     },
     {
@@ -465,7 +474,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/web-development',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
       },
     },
     {
@@ -475,7 +484,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/data-structures',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'TCS', ], 'en'))
       },
     },
     {
@@ -491,7 +501,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Embedded', ], 'en'))
           },
         },
         {
@@ -501,7 +512,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/operating-systems/i',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Embedded', ], 'en'))
           },
         },
         {
@@ -511,7 +523,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Embedded', ], 'en'))
           },
         },
       ],
@@ -523,7 +536,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/computer-organization',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Arch', 'Electronics', 'Embedded', ], 'en'))
       },
     },
     {
@@ -533,7 +547,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/computer-architecture',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Arch', 'Electronics', 'Embedded', ], 'en'))
       },
     },
     {
@@ -549,7 +564,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'DB', ], 'en'))
           },
         },
         {
@@ -559,7 +575,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/databases/i',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'DB', ], 'en'))
           },
         },
         {
@@ -569,7 +586,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'DB', ], 'en'))
           },
         },
       ],
@@ -587,7 +605,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Net', ], 'en'))
           },
         },
         {
@@ -597,7 +616,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/computer-networks/i',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Net', ], 'en'))
           },
         },
         {
@@ -607,7 +627,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Net', ], 'en'))
           },
         },
       ],
@@ -625,7 +646,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'TCS', ], 'en'))
           },
         },
         {
@@ -635,7 +657,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/compiler-design/i',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'TCS', ], 'en'))
           },
         },
         {
@@ -645,7 +668,8 @@ export const Courses_Textbooks_and_References = {
           },
           slug: '',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'TCS', ], 'en'))
           },
         },
       ],
@@ -657,7 +681,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'InfoSec', ], 'en'))
       },
     },
     {
@@ -667,7 +692,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'SE', ], 'en'))
       },
     },
     {
@@ -677,7 +703,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/formal-languages-and-automata',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', ], 'en'))
       },
     },
     {
@@ -687,7 +714,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/circuit-analysis',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Electronics', ], 'en'))
       },
     },
     {
@@ -697,7 +725,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/analog-circuits',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Electronics', 'Microelectronics', ], 'en'))
       },
     },
     {
@@ -707,7 +736,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Electrical', 'Electronics', 'Microelectronics', ], 'en'))
       },
     },
     {
@@ -717,7 +747,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/signals-and-systems',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Signal', 'Control', 'Electronics', ], 'en'))
       },
     },
     {
@@ -727,7 +758,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/electromagnetics',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Telecom', 'Electronics', ], 'en'))
       },
     },
     {
@@ -737,7 +769,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Control', 'Electronics', ], 'en'))
       },
     },
     {
@@ -747,7 +780,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/digital-signal-processing',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Signal', 'Electronics', ], 'en'))
       },
     },
     {
@@ -757,7 +791,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', ], 'en'))
       },
     },
     {
@@ -767,7 +802,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Electronics', ], 'en'))
       },
     },
     {
@@ -777,7 +813,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', ], 'en'))
       },
     },
     {
@@ -787,7 +824,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/design-patterns',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
       },
     },
     {
@@ -797,7 +835,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/algorithm-analysis-and-design',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'TCS', ], 'en'))
       },
     },
     {
@@ -807,7 +846,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/distributed-systems',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', ], 'en'))
       },
     },
     {
@@ -817,7 +857,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/parallel-and-distributed-computing',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Arch', ], 'en'))
       },
     },
     {
@@ -827,7 +868,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Telecom', 'Signal', 'Electronics', ], 'en'))
       },
     },
     {
@@ -837,7 +879,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/digital-image-processing',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Signal', 'Multimedia', ], 'en'))
       },
     },
     {
@@ -847,7 +890,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/computer-vision',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'AI', 'Signal', 'Multimedia', ], 'en'))
       },
     },
     {
@@ -857,7 +901,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'AI', ], 'en'))
       },
     },
     {
@@ -867,7 +912,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/computer-graphics',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Multimedia', ], 'en'))
       },
     },
     {
@@ -877,7 +923,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/machine-learning',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'AI', ], 'en'))
       },
     },
     {
@@ -887,7 +934,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/information-theory',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', 'Telecom', 'Electronics', ], 'en'))
       },
     },
     {
@@ -897,7 +945,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/coding-theory',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', 'CS', 'TCS', 'Telecom', 'Electronics', ], 'en'))
       },
     },
     {
@@ -907,7 +956,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/cryptography',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'InfoSec', 'Math', 'TCS', ], 'en'))
       },
     },
     {
@@ -917,7 +967,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/data-compression',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'TCS', 'Signal', 'Multimedia', ], 'en'))
       },
     },
     {
@@ -927,7 +978,8 @@ export const Courses_Textbooks_and_References = {
       },
       slug: '',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'InfoSec', ], 'en'))
       },
     },
     {
@@ -938,8 +990,8 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/android-development',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
-          },
-        },
-      ],
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
+      },
+    },
+  ],
 } satisfies SidebarItem
