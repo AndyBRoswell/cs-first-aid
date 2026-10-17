@@ -156,22 +156,33 @@ describe('validate / page and project versions', () => {
     })
   }
 
-function random_older_version(version: semver.SemVer, g: fc.GeneratorValue): Core_Version {
-  const components: [number, number, number] = [ version.major, version.minor, version.patch, ]
-  const reducible_indices = components.flatMap((component, index) => component === 0 ? [] : [ index, ])
-  if (reducible_indices.length === 0) { throw new RangeError('No semantic version is older than 0.0.0.') }
-  const reduced_index = reducible_indices[random_integer(g, reducible_indices.length)]!
-  const decrements = components.map(component => random_integer(g, component + 1))
-  decrements[reduced_index] = random_integer(g, components[reduced_index]! + 1, 1) // Force at least one component to decrease.
-  return components.map((component, index) => component - decrements[index]!).join('.') as Core_Version // Other components may remain unchanged or also decrease.
-}
+  // Project stages follow dev, alpha, beta, rc, stable. Stable pages are covered separately.
+  describe.each([ 'NIGHTLY', 'A', 'b', 'RC', undefined, ].map((stage, project_stage_index) => ({
+    project: `${core_version}${stage === undefined ? '' : `-${stage}.${project_prerelease_number}`}+site.1`,
+    project_stage_index,
+  })))('project $project', ({ project, project_stage_index }) => {
+    let validate: typeof release_stages.validate
 
-function random_prerelease(stable_version: Core_Version, g: fc.GeneratorValue): release_stages.Release {
-  const group = prerelease_stage_groups[random_integer(g, prerelease_stage_groups.length)]!
-  const prerelease_identifier = group[random_integer(g, group.length)]!
-  return `${stable_version}-${prerelease_identifier}.${random_integer(g, random_component_limit)}`
-}
+    beforeAll(async () => {
+      vi.resetModules()
+      vi.doMock('@package.json', () => ({ default: { version: project, }, }))
+      validate = (await import('@/core/release_stages.ts')).validate // The module captures the mocked project version during import.
+    })
+    afterAll(() => {
+      vi.doUnmock('@package.json') // Prevent this project's mock from leaking into later groups.
+      vi.resetModules()
+    })
 
-function random_version(g: fc.GeneratorValue): Core_Version { return `${random_integer(g, random_component_limit)}.${random_integer(g, random_component_limit)}.${random_integer(g, random_component_limit)}` }
+    for (const [ page_stage_index, [ stage, ], ] of stage_aliases.entries()) {
+      const is_allowed = page_stage_index >= project_stage_index // A prerelease page cannot be at an earlier stage than the project.
+      test.prop({ delta: increment, }, property_options)(`same-core page ${stage}: allowed = ${is_allowed}`, ({ delta, }) => {
+        for (const number of [ undefined, 0, project_prerelease_number, project_prerelease_number + delta, ]) { // All four number forms must give the same validation result.
+          const release = `${core_version}-${stage}${number === undefined ? '' : `.${number}`}+page.1`
+          const run = () => validate({ 'zh-CN': release, en: 'blank', })
+          if (is_allowed) { expect(run).not.toThrow() }
+          else { expect(run).toThrow(/cannot be earlier than project version/) }
+        }
+      })
+    }
 
 function random_integer(g: fc.GeneratorValue, maximum_exclusive: number, minimum = 0): number { return g(fc.integer, { min: minimum, max: maximum_exclusive - 1, }) }
