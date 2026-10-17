@@ -56,11 +56,13 @@ describe('get_stage / release format', () => {
     }
   })
 
-  test.each(stage_aliases)('normalizes %s and its aliases regardless of case', (stage, aliases) => {
-    for (const alias of aliases) {
-      for (const variant of case_variants(alias)) {
-        expect(release_stages.get_stage(`${core_version}-${variant}`), variant).toBe(stage)
-        expect(release_stages.get_stage(`${core_version}-${variant}.0+build.1`), variant).toBe(stage)
+  test('normalizes stage names and aliases regardless of case', () => {
+    for (const [ stage, aliases, ] of stage_aliases) {
+      for (const alias of aliases) {
+        for (const variant of case_variants(alias)) {
+          expect(release_stages.get_stage(`${core_version}-${variant}`), variant).toBe(stage)
+          expect(release_stages.get_stage(`${core_version}-${variant}.0+build.1`), variant).toBe(stage)
+        }
       }
     }
   })
@@ -74,17 +76,18 @@ describe('get_stage / release format', () => {
     expect(release_stages.get_stage('=01.02.03-A.01')).toBe('alpha')
   })
 
-  test.each([
-    [ 'invalid SemVer', [ '', '1.2', `${core_version}+`, `${core_version}-alpha..1`, `${core_version}-alpha!1`, ], ],
-    [ 'unsupported stage', [ 'dev', `${core_version}-preview`, `${core_version}-stable`, `${core_version}-1`, `${core_version}-planned`, `${core_version}-backlog`, `${core_version}-a1`, ], ],
-    [ 'nonnumeric or negative number', [ `${core_version}-alpha.preview`, `${core_version}-alpha.-1`, ], ],
-    [ 'extra identifiers', [ `${core_version}-alpha.1.2`, `${core_version}-alpha.1.preview`, ], ],
-  ] as const)('rejects %s at every public entry point', (_reason, releases) => {
-    for (const release of releases) {
-      expect(() => release_stages.get_stage(release), release).toThrow(TypeError)
-      expect(() => release_stages.compare(release, 'blank'), release).toThrow(TypeError) // An unversioned operand must not hide an invalid version.
-      expect(() => release_stages.compare('blank', release), release).toThrow(TypeError)
-      expect(() => release_stages.validate({ 'zh-CN': 'blank', en: release, }), release).toThrow(TypeError)
+  test('rejects invalid and unsupported releases at every public entry point', () => {
+    for (const release of [
+      '', '1.2', `${core_version}+`, `${core_version}-alpha..1`, `${core_version}-alpha!1`, // Invalid SemVer.
+      'dev', `${core_version}-preview`, `${core_version}-stable`, `${core_version}-1`, `${core_version}-planned`, `${core_version}-backlog`, `${core_version}-a1`, // Unsupported stages.
+      `${core_version}-alpha.preview`, `${core_version}-alpha.-1`, // Nonnumeric or negative numbers.
+      `${core_version}-alpha.1.2`, `${core_version}-alpha.1.preview`, // Extra identifiers.
+    ]) {
+      const message = `release "${release}"`
+      expect(() => release_stages.get_stage(release), message).toThrow(TypeError)
+      expect(() => release_stages.compare(release, 'blank'), message).toThrow(TypeError) // An unversioned operand must not hide an invalid version.
+      expect(() => release_stages.compare('blank', release), message).toThrow(TypeError)
+      expect(() => release_stages.validate({ 'zh-CN': 'blank', en: release, }), message).toThrow(TypeError)
     }
   })
 })
@@ -98,18 +101,13 @@ describe('compare / two release versions', () => {
     }
   })
 
-  for (const [ rule, component_index, ] of [
-    [ 'major before minor and patch', 0, ],
-    [ 'minor before patch', 1, ],
-    [ 'patch before stage', 2, ],
-  ] as const) {
-    test.prop({ cores: core_variants, }, property_options)(`orders by ${rule}`, ({ cores, }) => {
-      const earlier = cores.older[component_index]!
-      const later = `${core_version}-dev` // Opposing stages ensure the core difference decides the result.
+  test.prop({ cores: core_variants, }, property_options)('compares major, minor, patch, then stage', ({ cores, }) => {
+    const later = `${core_version}-dev` // Opposing stages ensure the core difference decides the result.
+    for (const earlier of cores.older) {
       expect(release_stages.compare(earlier, later), `${earlier} < ${later}`).toBeLessThan(0)
       expect(release_stages.compare(later, earlier), `${later} > ${earlier}`).toBeGreaterThan(0)
-    })
-  }
+    }
+  })
 
   test.prop({ number: fc.nat(), delta: increment, }, property_options)('orders stages before numbers', ({ number, delta, }) => {
     const ordered: string[] = []
@@ -125,86 +123,100 @@ describe('compare / two release versions', () => {
     }
   })
 
-  test.each([
-    [ 'absent number before zero', `${core_version}-rc`, `${core_version}-rc.0`, ],
-    [ 'numeric rather than lexicographic order', `${core_version}-rc.2`, `${core_version}-rc.10`, ],
-    [ 'adjacent numbers beyond safe integer precision', `${core_version}-rc.9007199254740992`, `${core_version}-rc.9007199254740993`, ],
-  ] as const)('preserves %s', (_rule, earlier, later) => {
-    expect(release_stages.compare(earlier, later)).toBeLessThan(0)
-    expect(release_stages.compare(later, earlier)).toBeGreaterThan(0)
-  })
-
-  test.each(stage_aliases)('equates %s aliases with the same number', (stage, aliases) => {
-    for (const alias of aliases) {
-      expect(release_stages.compare(`${core_version}-${stage}.2`, `${core_version}-${alias.toUpperCase()}.2`)).toBe(0)
+  test('orders absent and numeric prerelease numbers exactly', () => {
+    for (const [ earlier, later, ] of [
+      [ `${core_version}-rc`, `${core_version}-rc.0`, ], // An absent number precedes zero.
+      [ `${core_version}-rc.2`, `${core_version}-rc.10`, ], // Numeric rather than lexicographic order.
+      [ `${core_version}-rc.9007199254740992`, `${core_version}-rc.9007199254740993`, ], // Adjacent numbers beyond safe integer precision.
+    ] as const) {
+      expect(release_stages.compare(earlier, later), `${earlier} < ${later}`).toBeLessThan(0)
+      expect(release_stages.compare(later, earlier), `${later} > ${earlier}`).toBeGreaterThan(0)
     }
   })
 
-  test.each([ core_version, `${core_version}-rc.2`, ])('ignores build metadata in %s', release => {
-    expect(release_stages.compare(release, `${release}+build.1`)).toBe(0)
-    expect(release_stages.compare(`${release}+build.2`, `${release}+build.1`)).toBe(0)
+  test('equates aliases with the same number', () => {
+    for (const [ stage, aliases, ] of stage_aliases) {
+      for (const alias of aliases) {
+        expect(release_stages.compare(`${core_version}-${stage}.2`, `${core_version}-${alias.toUpperCase()}.2`), `${stage} = ${alias}`).toBe(0)
+      }
+    }
+  })
+
+  test('ignores build metadata', () => {
+    for (const release of [ core_version, `${core_version}-rc.2`, ]) {
+      expect(release_stages.compare(release, `${release}+build.1`), release).toBe(0)
+      expect(release_stages.compare(`${release}+build.2`, `${release}+build.1`), release).toBe(0)
+    }
   })
 })
 
 describe('validate / page and project versions', () => {
-  for (const language of [ 'zh-CN', 'en', 'fr', ]) {
-    test.prop({ cores: core_variants, }, property_options)(`validates ${language} and identifies it in the error`, ({ cores, }) => {
+  const projects: { version: string; validate: typeof release_stages.validate }[] = []
+
+  beforeAll(async () => {
+    // Load one validator for each project stage: dev, alpha, beta, rc, stable.
+    for (const stage of [ 'NIGHTLY', 'A', 'b', 'RC', undefined, ]) {
+      const version = `${core_version}${stage === undefined ? '' : `-${stage}.${project_prerelease_number}`}+site.1`
+      vi.resetModules()
+      vi.doMock('@package.json', () => ({ default: { version, }, }))
+      const { validate, } = await import('@/core/release_stages.ts') // Each module retains its own project version.
+      projects.push({ version, validate, })
+    }
+  })
+  afterAll(() => {
+    vi.doUnmock('@package.json')
+    vi.resetModules()
+  })
+
+  test.prop({ cores: core_variants, }, property_options)('validates every language and identifies it in the error', ({ cores, }) => {
+    for (const language of [ 'zh-CN', 'en', 'fr', ]) {
       const releases: release_stages.Localized_Release = { 'zh-CN': core_version, en: 'blank', fr: 'planned', }
       releases[language] = `${cores.older[2]}-rc`
       expect(() => release_stages.validate(releases)).toThrow(`Invalid release for language "${language}"`)
-    })
-  }
-
-  // Project stages follow dev, alpha, beta, rc, stable. Stable pages are covered separately.
-  describe.each([ 'NIGHTLY', 'A', 'b', 'RC', undefined, ].map((stage, project_stage_index) => ({
-    project: `${core_version}${stage === undefined ? '' : `-${stage}.${project_prerelease_number}`}+site.1`,
-    project_stage_index,
-  })))('project $project', ({ project, project_stage_index }) => {
-    let validate: typeof release_stages.validate
-
-    beforeAll(async () => {
-      vi.resetModules()
-      vi.doMock('@package.json', () => ({ default: { version: project, }, }))
-      validate = (await import('@/core/release_stages.ts')).validate // The module captures the mocked project version during import.
-    })
-    afterAll(() => {
-      vi.doUnmock('@package.json') // Prevent this project's mock from leaking into later groups.
-      vi.resetModules()
-    })
-
-    for (const [ page_stage_index, [ stage, ], ] of stage_aliases.entries()) {
-      const is_allowed = page_stage_index >= project_stage_index // A prerelease page cannot be at an earlier stage than the project.
-      test.prop({ delta: increment, }, property_options)(`same-core page ${stage}: allowed = ${is_allowed}`, ({ delta, }) => {
-        for (const number of [ undefined, 0, project_prerelease_number, project_prerelease_number + delta, ]) { // All four number forms must give the same validation result.
-          const release = `${core_version}-${stage}${number === undefined ? '' : `.${number}`}+page.1`
-          const run = () => validate({ 'zh-CN': release, en: 'blank', })
-          if (is_allowed) { expect(run).not.toThrow() }
-          else { expect(run).toThrow(/cannot be earlier than project version/) }
-        }
-      })
     }
+  })
 
-    test.prop({ cores: core_variants, }, property_options)('allows stable pages with an older, equal, or newer core', ({ cores, }) => {
-      for (const release of [ ...cores.older, core_version, ...cores.newer, ]) {
-        expect(() => validate({ 'zh-CN': release, en: 'blank', }), release).not.toThrow()
+  test.prop({ delta: increment, }, property_options)('compares same-core stages and ignores prerelease numbers', ({ delta, }) => {
+    for (const [ project_stage_index, project, ] of projects.entries()) {
+      for (const [ page_stage_index, [ stage, ], ] of stage_aliases.entries()) {
+        const is_allowed = page_stage_index >= project_stage_index // A prerelease page cannot be at an earlier stage than the project.
+        for (const number of [ undefined, 0, project_prerelease_number, project_prerelease_number + delta, ]) { // All numbers here must give the same validation result.
+          const release = `${core_version}-${stage}${number === undefined ? '' : `.${number}`}+page.1`
+          const run = () => project.validate({ 'zh-CN': release, en: 'blank', })
+          const message = `${release} against project ${project.version}`
+          if (is_allowed) { expect(run, message).not.toThrow() }
+          else { expect(run, message).toThrow(/cannot be earlier than project version/) }
+        }
       }
-    })
+    }
+  })
 
-    test.prop({ cores: core_variants, delta: increment, }, property_options)('compares prerelease cores before stages', ({ cores, delta, }) => {
+  test.prop({ cores: core_variants, }, property_options)('allows stable pages with an older, equal, or newer core', ({ cores, }) => {
+    for (const project of projects) {
+      for (const release of [ ...cores.older, core_version, ...cores.newer, ]) {
+        expect(() => project.validate({ 'zh-CN': release, en: 'blank', }), `${release} against project ${project.version}`).not.toThrow()
+      }
+    }
+  })
+
+  test.prop({ cores: core_variants, delta: increment, }, property_options)('compares prerelease cores before stages', ({ cores, delta, }) => {
+    for (const project of projects) {
       for (const core of cores.older) {
         const release = `${core}-rc.${project_prerelease_number + delta}`
-        expect(() => validate({ 'zh-CN': release, en: 'blank', }), release).toThrow(/cannot be earlier than project version/)
+        expect(() => project.validate({ 'zh-CN': release, en: 'blank', }), `${release} against project ${project.version}`).toThrow(/cannot be earlier than project version/)
       }
       for (const core of cores.newer) {
         const release = `${core}-dev`
-        expect(() => validate({ 'zh-CN': release, en: 'blank', }), release).not.toThrow()
+        expect(() => project.validate({ 'zh-CN': release, en: 'blank', }), `${release} against project ${project.version}`).not.toThrow()
       }
-    })
+    }
+  })
 
-    test.prop({ cores: core_variants, }, property_options)('exempts unversioned pages from the project version constraint', ({ cores, }) => {
+  test.prop({ cores: core_variants, }, property_options)('exempts unversioned pages from the project version constraint', ({ cores, }) => {
+    for (const project of projects) {
       for (const release of unversioned) {
-        expect(() => validate({ 'zh-CN': release, en: release.toUpperCase(), fr: `${cores.newer[0]}-dev`, })).not.toThrow()
+        expect(() => project.validate({ 'zh-CN': release, en: release.toUpperCase(), fr: `${cores.newer[0]}-dev`, }), `${release} against project ${project.version}`).not.toThrow()
       }
-    })
+    }
   })
 })
