@@ -8,6 +8,7 @@ import { Critical_Goals_and_Time_Windows } from '@/config/sidebar/关键目标�
 import { Future_Trends } from '@/config/sidebar/未来趋势.ts'
 import { FAQ } from '@/config/sidebar/常见问题.ts'
 import { Derivations } from '@/config/sidebar/推导.ts'
+import { Technical_Information } from "@/config/sidebar/技术信息.ts";
 import { Recommended_Reading_Materials } from '@/config/sidebar/推荐读物.ts'
 import { Epilog } from '@/config/sidebar/后记.ts'
 
@@ -33,6 +34,7 @@ export const sidebar = [
   Future_Trends,
   FAQ,
   Derivations,
+  Technical_Information,
   Recommended_Reading_Materials,
   Epilog,
 ] satisfies NonNullable<StarlightUserConfig['sidebar']>
