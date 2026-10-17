@@ -84,32 +84,38 @@ add_many([
   },
   {
     names: {
-      'zh-CN': { full: { canonical: '安全', all: [ '安全', ] }, short: { canonical: '安全', all: [ '安全', ] } },
-      en: { full: { canonical: 'Security', all: [ 'Security', ] }, short: { canonical: 'Sec', all: [ 'Sec', ] } },
+      'zh-CN': { full: { canonical: '信息安全', all: [ '信息安全', ] }, short: { canonical: '信安', all: [ '信安', ] } },
+      en: { full: { canonical: 'Information Security', all: [ 'Information Security', ] }, short: { canonical: 'InfoSec', all: [ 'InfoSec', ] } },
     },
   },
   {
     names: {
-      'zh-CN': { full: { canonical: '理论计算机科学', all: [ '理论计算机科学', ] }, short: { canonical: '理计', all: [ '理计', ] } },
+      'zh-CN': { full: { canonical: '理论计算机科学', all: [ '理论计算机科学', ] }, short: { canonical: '理计', all: [ '理计', '理论计科', ] } },
       en: { full: { canonical: 'Theoretical Computer Science', all: [ 'Theoretical Computer Science', ] }, short: { canonical: 'TCS', all: [ 'TCS', ] } },
     },
   },
   {
     names: {
-      'zh-CN': { full: { canonical: '系统', all: [ '系统', ] }, short: { canonical: '系统', all: [ '系统', ] } },
-      en: { full: { canonical: 'System', all: [ 'System', ] }, short: { canonical: 'Sys', all: [ 'Sys', ] } },
+      'zh-CN': { full: { canonical: '计算机系统', all: [ '计算机系统', ] }, short: { canonical: '系统', all: [ '系统', ] } },
+      en: { full: { canonical: 'Computer System', all: [ 'Computer System', 'Computer Systems', ] }, short: { canonical: 'Sys', all: [ 'Sys', 'System', ] } },
     },
   },
   {
     names: {
-      'zh-CN': { full: { canonical: '网络', all: [ '网络', ] }, short: { canonical: '网络', all: [ '网络', ] } },
-      en: { full: { canonical: 'Network', all: [ 'Network', 'Networks' ] }, short: { canonical: 'Net', all: [ 'Net', 'Network', ] } },
+      'zh-CN': { full: { canonical: '计算机网络', all: [ '计算机网络', ] }, short: { canonical: '网络', all: [ '网络', '计网', ] } },
+      en: { full: { canonical: 'Computer Network', all: [ 'Computer Network', 'Computer Networks' ] }, short: { canonical: 'Net', all: [ 'Net', 'Network', ] } },
     },
   },
   {
     names: {
-      'zh-CN': { full: { canonical: '微架构/体系结构', all: [ '微架构/体系结构', '微架构/系统结构' ] }, short: { canonical: '微架构/体系结构', all: [ '微架构/体系结构', '微架构/系统结构', ] } },
-      en: { full: { canonical: 'Microarchitecture/Architecture', all: [ 'Microarchitecture/Architecture', ] }, short: { canonical: 'μArch/Arch', all: [ 'μArch/Arch', 'uArch/Arch', ] } },
+      'zh-CN': { full: { canonical: '计算机架构', all: [ '计算机架构', '计算机体系结构', '计算机系统结构', ] }, short: { canonical: '体系结构', all: [ '体系结构', '系统结构', ] } },
+      en: { full: { canonical: 'Computer Architecture', all: [ 'Computer Architecture', ] }, short: { canonical: 'Arch', all: [ 'Arch', 'CompArch', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '人工智能', all: [ '人工智能', ] }, short: { canonical: '智能', all: [ '智能', '人智', ] } },
+      en: { full: { canonical: 'Artificial Intelligence', all: [ 'Artificial Intelligence', ] }, short: { canonical: 'AI', all: [ 'AI', ] } },
     },
   },
   {
@@ -121,7 +127,7 @@ add_many([
   {
     names: {
       'zh-CN': { full: { canonical: '电子工程', all: [ '电子工程', ] }, short: { canonical: '电子', all: [ '电子', ] } },
-      en: { full: { canonical: 'Electronics Engineering', all: [ 'Electronics Engineering', ] }, short: { canonical: 'Electronic', all: [ 'Electronic', 'Electronics', ] } },
+      en: { full: { canonical: 'Electronics Engineering', all: [ 'Electronics Engineering', ] }, short: { canonical: 'Electronics', all: [ 'Electronics', 'Electronic', ] } },
     },
   },
   {
@@ -146,6 +152,24 @@ add_many([
     names: {
       'zh-CN': { full: { canonical: '微电子', all: [ '微电子', '微电子学', ] }, short: { canonical: '微电子', all: [ '微电子', ] } },
       en: { full: { canonical: 'Microelectronics', all: [ 'Microelectronics', ] }, short: { canonical: 'Microelectronics', all: [ 'Microelectronics', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '信号处理', all: [ '信号处理', ] }, short: { canonical: '信号', all: [ '信号', ] } },
+      en: { full: { canonical: 'Signal Processing', all: [ 'Signal Processing', ] }, short: { canonical: 'Signal', all: [ 'Signal', 'Signals', 'SP', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '多媒体', all: [ '多媒体', ] }, short: { canonical: '多媒体', all: [ '多媒体', ] } },
+      en: { full: { canonical: 'Multimedia', all: [ 'Multimedia', ] }, short: { canonical: 'Multimedia', all: [ 'Multimedia', 'MM', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '嵌入式系统', all: [ '嵌入式系统', ] }, short: { canonical: '嵌入式', all: [ '嵌入式', ] } },
+      en: { full: { canonical: 'Embedded Systems', all: [ 'Embedded Systems', ] }, short: { canonical: 'Embedded', all: [ 'Embedded', ] } },
     },
   },
 ])
