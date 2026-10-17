@@ -3,11 +3,6 @@ import * as badges from '@/components/badges.ts'
 import * as release_stages from '@/UI/release_stages.ts'
 import * as subject_badges from '@/components/subject_badges.ts'
 
-const subject_badge_meta = {
-  Math: subject_badges.find('Math', 'en'),
-  CS: subject_badges.find('CS', 'en'),
-}
-
 export const Courses_Textbooks_and_References = {
   label: '课程、教科书与参考资料',
   translations: {
@@ -32,7 +27,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/calculus',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -43,7 +38,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/mathematical-analysis',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -70,7 +65,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/linear-algebra/i',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -81,7 +76,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/linear-algebra/ii',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
       ],
@@ -110,7 +105,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/probability-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -121,7 +116,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/mathematical-statistics',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -132,7 +127,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/stochastic-processes',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
       ],
@@ -161,7 +156,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/mathematical-logic',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -172,7 +167,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/set-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -183,7 +178,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/graph-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -194,7 +189,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/abstract-algebra',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -205,7 +200,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/combinatorics',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
         {
@@ -216,7 +211,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/discrete-mathematics/number-theory',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
           },
         },
       ],
@@ -229,7 +224,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/complex-analysis',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -240,7 +235,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/integral-transforms',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -251,7 +246,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/real-analysis',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.Math, ])
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
       },
     },
     {
@@ -334,7 +329,7 @@ export const Courses_Textbooks_and_References = {
               slug: 'courses-textbooks-and-references/programming/cpp-programming/i',
               attrs: {
                 'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-                'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+                'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
               },
             },
             {
@@ -345,7 +340,7 @@ export const Courses_Textbooks_and_References = {
               slug: 'courses-textbooks-and-references/programming/cpp-programming/ii',
               attrs: {
                 'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-                'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+                'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
               },
             },
           ],
@@ -358,7 +353,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/c-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
         {
@@ -369,7 +364,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/assembly-language-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
         {
@@ -380,7 +375,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/csharp-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
         {
@@ -391,7 +386,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/java-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
         {
@@ -402,7 +397,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/kotlin-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
         {
@@ -413,7 +408,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/python-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
         {
@@ -424,7 +419,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/rust-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
         {
@@ -435,7 +430,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/typescript-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
         {
@@ -446,7 +441,7 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/programming/shell-programming',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
       ],
@@ -459,7 +454,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/software-testing',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
       },
     },
     {
@@ -470,7 +465,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/web-development',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
       },
     },
     {
@@ -943,7 +938,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/android-development',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-            'data-badges': badges.to_HTML_attr([ subject_badge_meta.CS, ])
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', ], 'en'))
           },
         },
       ],
