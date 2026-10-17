@@ -111,6 +111,40 @@ describe('compare / two release versions', () => {
       expect(release_stages.compare(later, earlier), `${later} > ${earlier}`).toBeGreaterThan(0)
     })
   }
+
+  test.prop({ number: fc.nat(), delta: increment, }, property_options)('orders stages before numbers', ({ number, delta, }) => {
+    const ordered: string[] = []
+    for (const [ stage, ] of stage_aliases) {
+      ordered.push(`${core_version}-${stage}.${number}`, `${core_version}-${stage}.${number + delta}`) // The larger number must still precede the next stage.
+    }
+    ordered.push(core_version) // Stable follows every prerelease of the same core.
+    for (let index = 1; index < ordered.length; index++) {
+      const earlier = ordered[index - 1]!
+      const later = ordered[index]!
+      expect(release_stages.compare(earlier, later), `${earlier} < ${later}`).toBeLessThan(0)
+      expect(release_stages.compare(later, earlier), `${later} > ${earlier}`).toBeGreaterThan(0)
+    }
+  })
+
+  test.each([
+    [ 'absent number before zero', `${core_version}-rc`, `${core_version}-rc.0`, ],
+    [ 'numeric rather than lexicographic order', `${core_version}-rc.2`, `${core_version}-rc.10`, ],
+    [ 'adjacent numbers beyond safe integer precision', `${core_version}-rc.9007199254740992`, `${core_version}-rc.9007199254740993`, ],
+  ] as const)('preserves %s', (_rule, earlier, later) => {
+    expect(release_stages.compare(earlier, later)).toBeLessThan(0)
+    expect(release_stages.compare(later, earlier)).toBeGreaterThan(0)
+  })
+
+  test.each(stage_aliases)('equates %s aliases with the same number', (stage, aliases) => {
+    for (const alias of aliases) {
+      expect(release_stages.compare(`${core_version}-${stage}.2`, `${core_version}-${alias.toUpperCase()}.2`)).toBe(0)
+    }
+  })
+
+  test.each([ core_version, `${core_version}-rc.2`, ])('ignores build metadata in %s', release => {
+    expect(release_stages.compare(release, `${release}+build.1`)).toBe(0)
+    expect(release_stages.compare(`${release}+build.2`, `${release}+build.1`)).toBe(0)
+  })
 })
 
 function random_future_version(version: semver.SemVer, g: fc.GeneratorValue): Core_Version {
