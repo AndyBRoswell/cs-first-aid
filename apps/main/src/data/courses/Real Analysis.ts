@@ -11,6 +11,8 @@ export const info = {
       en: [
         ...catalog.filter(item => item.author?.some(author => author.family === 'Stein') && item.author?.some(author => author.family === 'Shakarchi') && util.ieq(item.title!, 'Real Analysis'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Rudin') && util.ieq(item.title!, '实分析与复分析'), { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.author?.some(author => author.family === 'Folland') && util.ieq(item.title!, 'Real Analysis'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.author?.some(author => author.family === 'Royden') && item.author?.some(author => author.family === 'Fitzpatrick') && util.ieq(item.title!, 'Real Analysis'), { count: 1 }),
       ],
     },
   },
