@@ -97,13 +97,13 @@ add_many([
   {
     names: {
       'zh-CN': { full: { canonical: '计算机系统', all: [ '计算机系统', ] }, short: { canonical: '系统', all: [ '系统', ] } },
-      en: { full: { canonical: 'Computer System', all: [ 'Computer System', 'Computer Systems', ] }, short: { canonical: 'Sys', all: [ 'Sys', 'System', ] } },
+      en: { full: { canonical: 'Computer Systems', all: [ 'Computer System', 'Computer Systems', ] }, short: { canonical: 'Sys', all: [ 'Sys', 'System', ] } },
     },
   },
   {
     names: {
       'zh-CN': { full: { canonical: '计算机网络', all: [ '计算机网络', ] }, short: { canonical: '网络', all: [ '网络', '计网', ] } },
-      en: { full: { canonical: 'Computer Network', all: [ 'Computer Network', 'Computer Networks' ] }, short: { canonical: 'Net', all: [ 'Net', 'Network', ] } },
+      en: { full: { canonical: 'Computer Networks', all: [ 'Computer Network', 'Computer Networks' ] }, short: { canonical: 'Net', all: [ 'Net', 'Network', ] } },
     },
   },
   {
@@ -114,7 +114,7 @@ add_many([
   },
   {
     names: {
-      'zh-CN': { full: { canonical: '人工智能', all: [ '人工智能', ] }, short: { canonical: '智能', all: [ '智能', '人智', ] } },
+      'zh-CN': { full: { canonical: '人工智能', all: [ '人工智能', ] }, short: { canonical: '人工智能', all: [ '人工智能', '人智', ] } },
       en: { full: { canonical: 'Artificial Intelligence', all: [ 'Artificial Intelligence', ] }, short: { canonical: 'AI', all: [ 'AI', ] } },
     },
   },
@@ -169,7 +169,7 @@ add_many([
   {
     names: {
       'zh-CN': { full: { canonical: '嵌入式系统', all: [ '嵌入式系统', ] }, short: { canonical: '嵌入式', all: [ '嵌入式', ] } },
-      en: { full: { canonical: 'Embedded Systems', all: [ 'Embedded Systems', ] }, short: { canonical: 'Embedded', all: [ 'Embedded', ] } },
+      en: { full: { canonical: 'Embedded Systems', all: [ 'Embedded Systems', 'Embedded System', ] }, short: { canonical: 'Embedded', all: [ 'Embedded', ] } },
     },
   },
 ])
