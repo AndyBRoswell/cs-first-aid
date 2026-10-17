@@ -41,15 +41,18 @@ src_util.test('Linear Algebra I', { tag: [ '@Courses, Textbooks and References',
     /Introduction to Linear Algebra/,
     /Linear Algebra and Its Applications/,
     /Linear Algebra Done Wrong/,
-    /Interactive Linear Algebra/,
     /Linear Algebra with Applications/
   ])
+  await expect(References).not.toContainText('Interactive Linear Algebra')
 
   section = src_util.locate_parent(References, 'section', 2)
   await src_util.everyone_occurs(section, [
     /基准/,
     /D. C. Lay.+Linear Algebra and Its Applications/,
   ])
+
+  References = course_util.locate_references(main, [ 'reference', 'text', 'en' ])
+  await expect(References).toContainText('Interactive Linear Algebra')
 
   References = course_util.locate_references(main, [ 'guide', 'zh' ])
   await src_util.everyone_occurs(References, [

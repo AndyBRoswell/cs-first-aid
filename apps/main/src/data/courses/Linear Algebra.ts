@@ -22,7 +22,6 @@ export const I_info = {
         catalog.get('ILA6'),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Lay') && item.title?.startsWith('Linear Algebra and Its Applications'), { max_count: 1 }),
         catalog.get('LADW'),
-        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Interactive Linear Algebra'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Shores') && util.ieq(item.title!, 'Applied Linear Algebra and Matrix Analysis'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Saff') && util.ieq(item.title!, 'Matrix Fundamentals'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Leon') && item.title?.startsWith('Linear Algebra with Applications'), { max_count: 1 }),
@@ -53,6 +52,7 @@ export const I_info = {
           ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学引论') && item.volume === 1, { max_count: 1 }),
         ],
         en: [
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Interactive Linear Algebra'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === 'Artin') && util.ieq(item.title!, 'Algebra'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === 'Lang') && util.ieq(item.title!, 'Linear Algebra'), { max_count: 1 }),
         ],
