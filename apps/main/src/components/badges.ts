@@ -1,4 +1,4 @@
-// Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
+// Created by GPT-5.6 Sol Max [codex]. Revised by GPT-6.1 Sol Max [codex]. Then revised by AndyBRoswell.
 // Starlight doesn't support multiple badges in the sidebar, and it seems there are no features recently planned for this. See https://github.com/withastro/starlight/discussions/3295
 
 import { get_stage, type Localized_Release as Localized_Release_Stages } from '@/core/release_stages.ts'
@@ -6,14 +6,14 @@ import { get_stage, type Localized_Release as Localized_Release_Stages } from '@
 export type Meta_Item = Meta_Item_primitive | Meta_Item_object
 export type Meta_Item_primitive = string
 export type Mandatory_Multilingual_Text = {
-  'zh-CN': string // root language
-  'en': string
+  readonly 'zh-CN': string // root language
+  readonly 'en': string
 }
 export type Meta_Item_object = {
-  text: string | { [key: Intl.UnicodeBCP47LocaleIdentifier]: string } & Mandatory_Multilingual_Text
-  class?: string[]
+  readonly text: string | { readonly [key: Intl.UnicodeBCP47LocaleIdentifier]: string } & Mandatory_Multilingual_Text
+  readonly class?: readonly string[]
 }
-export type Meta = Meta_Item[]
+export type Meta = readonly Meta_Item[]
 export type Rendered_Badge = {
   text: string
   class: string[]
@@ -39,7 +39,7 @@ export function render(language: Intl.UnicodeBCP47LocaleIdentifier, serialized_r
   const meta_items = serialized_badges === null ? [] : JSON.parse(serialized_badges) as Meta // Custom badges may be absent, plain, or localized.
   for (const meta_item of meta_items) {
     let badge_text: string | undefined
-    let badge_class: string[] | undefined
+    let badge_class: readonly string[] | undefined
     switch (typeof meta_item) {
       case 'string':
         badge_text = meta_item
