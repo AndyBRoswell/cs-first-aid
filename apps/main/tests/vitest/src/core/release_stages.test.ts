@@ -147,11 +147,14 @@ describe('compare / two release versions', () => {
   })
 })
 
-function random_future_version(version: semver.SemVer, g: fc.GeneratorValue): Core_Version {
-  const increments: [number, number, number] = [ random_integer(g, random_component_limit), random_integer(g, random_component_limit), random_integer(g, random_component_limit), ]
-  increments[random_integer(g, increments.length)] = random_integer(g, random_component_limit, 1) // Force at least one component to increase.
-  return `${version.major + increments[0]}.${version.minor + increments[1]}.${version.patch + increments[2]}` // Other components may remain unchanged; none resets.
-}
+describe('validate / page and project versions', () => {
+  for (const language of [ 'zh-CN', 'en', 'fr', ]) {
+    test.prop({ cores: core_variants, }, property_options)(`validates ${language} and identifies it in the error`, ({ cores, }) => {
+      const releases: release_stages.Localized_Release = { 'zh-CN': core_version, en: 'blank', fr: 'planned', }
+      releases[language] = `${cores.older[2]}-rc`
+      expect(() => release_stages.validate(releases)).toThrow(`Invalid release for language "${language}"`)
+    })
+  }
 
 function random_older_version(version: semver.SemVer, g: fc.GeneratorValue): Core_Version {
   const components: [number, number, number] = [ version.major, version.minor, version.patch, ]
