@@ -17,7 +17,7 @@ export type Subject = {
 }
 type Input = Omit<Subject, 'id'>
 
-// IDs are zero-based. Keep additions append-only so existing IDs remain stable.
+// IDs are zero-based and are allocated during the build.
 const items: Subject[] = []
 
 function create(input: Input, id: number): Subject {
