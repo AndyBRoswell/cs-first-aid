@@ -41,10 +41,15 @@ export function get_stage(release: string): string {
 }
 
 export function compare(left_release: Release, right_release: Release): number {
-  const left = unversioned_releases.includes(left_release.toLowerCase()) ? undefined : parse_version(left_release)
-  const right = unversioned_releases.includes(right_release.toLowerCase()) ? undefined : parse_version(right_release)
-  if (left === undefined || right === undefined) { return left === right ? 0 : left === undefined ? -1 : 1 }
-  return compare_core_and_stage(left, right)
+  const left = unversioned_releases.includes(left_release.toLowerCase()) ? 'blank' : parse_version(left_release)
+  const right = unversioned_releases.includes(right_release.toLowerCase()) ? 'blank' : parse_version(right_release)
+  if (left === 'blank' || right === 'blank') { return left === right ? 0 : left === 'blank' ? -1 : 1 }
+  const core_and_stage_order = compare_core_and_stage(left, right)
+  if (core_and_stage_order !== 0) { return core_and_stage_order }
+  // An absent number precedes zero. BigInt also compares large numeric identifiers exactly. See https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.max_safe_integer
+  const left_number = BigInt(left.prerelease_number ?? -1)
+  const right_number = BigInt(right.prerelease_number ?? -1)
+  return left_number === right_number ? 0 : left_number < right_number ? -1 : 1
 }
 
 function compare_core_and_stage(left: Parsed_Version, right: Parsed_Version): number { // The number in pre-release is ignored.
