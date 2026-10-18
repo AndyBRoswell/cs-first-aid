@@ -29,6 +29,8 @@ export const entries = [
             display_text: 'Sanmin',
             accessed: { 'date-parts': [ [ 2026, 10, 18 ] ] },
           },
+        ],
+        free_material: [
           {
             link: 'https://www.tup.tsinghua.edu.cn/upload/books/yz/101136-01.pdf',
             display_text: 'PDF [CH3]',
