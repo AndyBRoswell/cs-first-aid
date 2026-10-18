@@ -93,7 +93,7 @@
 </ul>
 </li>
 <li>不区分大小写。</li>
-<li>可以包含非负整数编号（例如<code dir="auto">alpha.2</code>、<code dir="auto">beta.3</code>、<code dir="auto">rc.1</code>）。</li>
+<li>可以包含编号（例如<code dir="auto">alpha.2</code>、<code dir="auto">beta.3</code>、<code dir="auto">rc.1</code>）。</li>
 <li>不支持其余预发布标识符。</li>
 </ul>
 </li>
@@ -102,6 +102,7 @@
 <li>暂不使用。</li>
 </ul>
 </li>
+<li>版本号中出现的数值必须为非负整数；若这些整数的值大于<code dir="auto">Number.MAX_SAFE_INTEGER</code>，则行为未定义。</li>
 </ul><p>一般地，对单一页面：</p><ul>
 <li>一个版本的初稿基本完成后，版本核心视具体情形递增修订版或递增次版本，进入 dev 阶段。</li>
 <li>作者校对至少一轮后，进入 alpha 阶段。</li>
@@ -119,4 +120,4 @@
 <li>除不比较（直接忽略）预发布标识符中的编号外，按上述比较方法比较。这允许页面的预发布标识符中的编号不受全站约束，譬如：全站可能经过<code dir="auto">rc.1</code>、<code dir="auto">rc.2</code>再发布正式版，而计划某页在<code dir="auto">rc</code>或<code dir="auto">rc.1</code>以后就进入正式版；而全站在<code dir="auto">rc.2</code>时，该页可以停留在<code dir="auto">rc.1</code>。</li>
 <li>如页面为稳定版，则页面版本可以小于、等于或大于全站版本，即不受全站版本的约束。</li>
 <li>如页面不为稳定版，则当页面版本包含版本核心时，页面版本不能小于全站版本。此时，该页面版本号的版本核心的意义为：预计随全站发布具有相同版本核心的正式版时，该页面发布正式版。</li>
-</ul></section></div><footer class="sl-flex astro-dy7eukef"><div class="meta sl-flex astro-dy7eukef"><p>Last updated: <time datetime="2026-10-17T00:46:13.000Z">Oct 17, 2026</time></p></div><div class="pagination-links print:hidden astro-fqi222xo" dir="ltr"><a href="/cs-first-aid/dev/en/technical-information/" rel="prev" class="astro-fqi222xo"><svg aria-hidden="true" class="astro-fqi222xo astro-h6pg4gef" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"></path></svg><span class="astro-fqi222xo">Previous<br class="astro-fqi222xo"><span class="link-title astro-fqi222xo">Overview</span></span></a><a href="/cs-first-aid/dev/en/" rel="next" class="astro-fqi222xo"><svg aria-hidden="true" class="astro-fqi222xo astro-h6pg4gef" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"></path></svg><span class="astro-fqi222xo">Next<br class="astro-fqi222xo"><span class="link-title astro-fqi222xo">Architecture</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
+</ul></section></div><footer class="sl-flex astro-dy7eukef"><div class="meta sl-flex astro-dy7eukef"><p>Last updated: <time datetime="2026-10-18T02:24:18.000Z">Oct 18, 2026</time></p></div><div class="pagination-links print:hidden astro-fqi222xo" dir="ltr"><a href="/cs-first-aid/dev/en/technical-information/" rel="prev" class="astro-fqi222xo"><svg aria-hidden="true" class="astro-fqi222xo astro-h6pg4gef" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"></path></svg><span class="astro-fqi222xo">Previous<br class="astro-fqi222xo"><span class="link-title astro-fqi222xo">Overview</span></span></a><a href="/cs-first-aid/dev/en/" rel="next" class="astro-fqi222xo"><svg aria-hidden="true" class="astro-fqi222xo astro-h6pg4gef" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"></path></svg><span class="astro-fqi222xo">Next<br class="astro-fqi222xo"><span class="link-title astro-fqi222xo">Architecture</span></span></a></div></footer></div></div></main></div></div></div></div></body></html>
