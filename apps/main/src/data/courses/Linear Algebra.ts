@@ -45,6 +45,7 @@ export const I_info = {
       text: {
         zh: [
           ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '线性代数') && item.author?.some(author => author.literal === '中国人民大学数学学院') && item.edition === 7, { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '线性代数') && item.author?.some(author => author.family === '李' && author.given === '思'), { count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '炯生') && util.ieq(item.title!, '线性代数'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '席' && author.given === '南华') && util.ieq(item.title!, '基础代数') && item.volume === 1, { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '尚志') && util.ieq(item.title!, '线性代数（数学专业用）'), { max_count: 1 }),
@@ -95,6 +96,7 @@ export const II_info = {
       ],
       en: [
         catalog.get('LADR'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'Linear Algebra Done Wrong') && item.author?.some(author => author.family === 'Treil'), { count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Meyer') && util.ieq(item.title!, 'Matrix Analysis and Applied Linear Algebra'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Horn') && util.ieq(item.title!, 'Matrix Analysis'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Garcia') && util.ieq(item.title!, 'Matrix Mathematics'), { max_count: 1 }),
@@ -119,6 +121,7 @@ export const II_info = {
       text: {
         zh: [
           ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '炯生') && util.ieq(item.title!, '线性代数'), { max_count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '线性代数') && item.author?.some(author => author.family === '李' && author.given === '思'), { count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '席' && author.given === '南华') && util.ieq(item.title!, '基础代数') && item.volume === 2, { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '李' && author.given === '尚志') && util.ieq(item.title!, '线性代数（数学专业用）'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '张' && author.given === '贤科') && util.ieq(item.title!, '高等代数学'), { max_count: 1 }),
