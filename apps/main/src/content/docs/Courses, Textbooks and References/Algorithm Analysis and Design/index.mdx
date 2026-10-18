@@ -32,6 +32,10 @@ import References from '@/components/References.astro'
     <section>
       ### 教科书
       <section>
+        #### 中文
+        <References materials={course_material.reference.text.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'zh' ]}/>
+      </section>
+      <section>
         #### 英文
         <References materials={course_material.reference.text.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
