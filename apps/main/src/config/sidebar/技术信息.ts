@@ -107,5 +107,15 @@ export const Technical_Information = {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
+    {
+      label: '合规',
+      translations: {
+        en: 'Compliance',
+      },
+      slug: 'technical-information/compliance',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      },
+    },
   ]
 }
