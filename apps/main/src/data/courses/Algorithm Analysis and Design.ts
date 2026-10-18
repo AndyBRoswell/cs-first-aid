@@ -21,6 +21,9 @@ export const info = {
     },
     reference: {
       text: {
+        zh: [
+          ...catalog.filter(item => item.type === 'book' && item.title === '算法设计与分析' && item.edition === 3 && item.author?.some(author => author.family === '李' && author.given === '春葆'), { count: 1 }),
+        ],
         en: [
           ...catalog.filter(item => item.type === 'book' && item.title === 'Introduction to Algorithms' && item.author?.some(author => author.family === 'Cormen'), { count: 1 }),
           ...catalog.filter(item => item.type === 'book' && item.title === 'Algorithms' && item.author?.some(author => author.family === 'Sedgewick' && author.given === 'Robert'), { count: 1 }),
