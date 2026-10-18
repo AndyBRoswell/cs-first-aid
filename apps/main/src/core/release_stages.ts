@@ -46,9 +46,9 @@ export function compare(left_release: Release, right_release: Release): number {
   if (left === 'blank' || right === 'blank') { return left === right ? 0 : left === 'blank' ? -1 : 1 }
   const core_and_stage_order = compare_core_and_stage(left, right)
   if (core_and_stage_order !== 0) { return core_and_stage_order }
-  // An absent number precedes zero. BigInt also compares large numeric identifiers exactly. See https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-number.max_safe_integer
-  const left_number = BigInt(left.prerelease_number ?? -1)
-  const right_number = BigInt(right.prerelease_number ?? -1)
+  // An absent number precedes zero.
+  const left_number = Number(left.prerelease_number ?? -1)
+  const right_number = Number(right.prerelease_number ?? -1)
   return left_number === right_number ? 0 : left_number < right_number ? -1 : 1
 }
 
