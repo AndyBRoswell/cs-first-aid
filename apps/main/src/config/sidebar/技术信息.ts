@@ -32,7 +32,7 @@ export const Technical_Information = {
       translations: {
         en: 'Architecture',
       },
-      slug: '',
+      slug: 'technical-information/architecture',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
@@ -42,7 +42,7 @@ export const Technical_Information = {
       translations: {
         en: 'Design Decisions',
       },
-      slug: '',
+      slug: 'technical-information/design-decisions',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
@@ -52,7 +52,17 @@ export const Technical_Information = {
       translations: {
         en: 'Testing',
       },
-      slug: '',
+      slug: 'technical-information/testing',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      },
+    },
+    {
+      label: '构建与发布',
+      translations: {
+        en: 'Build and Release',
+      },
+      slug: 'technical-information/build-and-release',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
@@ -62,7 +72,7 @@ export const Technical_Information = {
       translations: {
         en: 'The Usage of AI',
       },
-      slug: '',
+      slug: 'technical-information/ai-usage',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
@@ -72,7 +82,7 @@ export const Technical_Information = {
       translations: {
         en: 'Roadmap',
       },
-      slug: '',
+      slug: 'technical-information/roadmap',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
@@ -82,7 +92,7 @@ export const Technical_Information = {
       translations: {
         en: 'Contributing',
       },
-      slug: '',
+      slug: 'technical-information/contributing',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
@@ -92,7 +102,7 @@ export const Technical_Information = {
       translations: {
         en: 'Statistics',
       },
-      slug: '',
+      slug: 'technical-information/statistics',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
