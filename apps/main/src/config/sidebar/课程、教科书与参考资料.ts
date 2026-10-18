@@ -253,6 +253,17 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '测度论',
+      translations: {
+        en: 'Measure Theory',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Math', ], 'en'))
+      },
+    },
+    {
       label: '泛函分析',
       translations: {
         en: 'Functional Analysis',
