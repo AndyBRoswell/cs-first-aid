@@ -30,7 +30,9 @@ export const Mathematical_Logic = {
     },
     reference: {
       text: {
-        zh: [],
+        zh: [
+          ...catalog.filter(item => item.type === 'book' && item.author?.some(author => author.family === '左' && author.given === '孝凌') && util.ieq(item.title!, '离散数学'), { count: 1 }),
+        ],
         en: [
           ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Discrete Mathematics and Its Applications'), { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === 'Huth') && item.title?.startsWith('Logic in Computer Science'), { max_count: 1 }),
@@ -72,6 +74,9 @@ export const Set_Theory = {
     },
     reference: {
       text: {
+        zh: [
+          ...catalog.filter(item => item.type === 'book' && item.author?.some(author => author.family === '左' && author.given === '孝凌') && util.ieq(item.title!, '离散数学'), { count: 1 }),
+        ],
         en: [
           ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Discrete Mathematics and Its Applications'), { max_count: 1 }),
         ],
@@ -114,6 +119,7 @@ export const Graph_Theory = {
     reference: {
       text: {
         zh: [
+          ...catalog.filter(item => item.type === 'book' && item.author?.some(author => author.family === '左' && author.given === '孝凌') && util.ieq(item.title!, '离散数学'), { count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '王' && author.given === '树禾') && util.ieq(item.title!, '图论'), { max_count: 1 }),
         ],
         en: [
@@ -160,6 +166,7 @@ export const Abstract_Algebra = {
     reference: {
       text: {
         zh: [
+          ...catalog.filter(item => item.type === 'book' && item.author?.some(author => author.family === '左' && author.given === '孝凌') && util.ieq(item.title!, '离散数学'), { count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '席' && author.given === '南华') && util.ieq(item.title!, '基础代数') && item.volume === 3, { max_count: 1 }),
           ...catalog.filter(item => item.author?.some(author => author.family === '冯' && author.given === '克勤') && util.ieq(item.title!, '近世代数引论'), { max_count: 1 }),
           ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, '代数学引论') && item.volume === 3, { max_count: 1 }),
