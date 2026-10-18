@@ -10,7 +10,7 @@ import References from '@/components/References.astro'
 <section>
   # 学习材料
   <section>
-    ## 参考书
+    ## 参考资料
     <section>
       ### 教科书
       <section>
@@ -21,6 +21,20 @@ import References from '@/components/References.astro'
         #### 英文
         <References materials={course_material.reference.text.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
+    </section>
+    <section>
+      ### 课程讲义
+      <section>
+        #### 中文
+        <References materials={course_material.reference.lecture_notes_and_slides.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'lecture_notes_and_slides', 'zh' ]}/>
+      </section>
+    </section>
+  </section>
+  <section>
+    ## 未选书目
+    <section>
+      ### 英文
+      <References materials={course_material.excluded.en} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'en' ]}/>
     </section>
   </section>
 </section>
