@@ -29,7 +29,7 @@ import References from '@/components/References.astro'
     </section>
     <section>
       ### 说明
-      Shaffer 在[原书主页](https://people.cs.vt.edu/shaffer/Book/)说明，《Data Structures and Algorithm Analysis》纸质版和 PDF 版最后更新于 2013 年，已不再维护，并明确建议改用 OpenDSA 在线项目。此处列出的该项目的 CS3 教材[部分示例同时提供 Java 和 C++ 代码](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/ListArray.html)；其第 2 章「Programming Tutorials」还收录了[使用 Java 的 Scanner 类](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/scanning.html)等 Java 专题。[OpenDSA 官方说明](https://opendsa.org/guides/opendsa-book-configuration)指出，代码示例并非都具备所有语言的版本。
+      Shaffer 在[原书主页](https://people.cs.vt.edu/shaffer/Book/)说明，《Data Structures and Algorithm Analysis》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'en' ], filter: m => m.type === 'book' && m.title?.startsWith('Data Structures and Algorithm Analysis') && m.author?.some(author => author.family === 'Shaffer'), options: { count: 2 } } ]}/>的纸质版和 PDF 版已不再维护，最后一个 PDF 版本为 2013 年 3 月 28 日的 3.2.0.10，并明确建议改用 OpenDSA 在线项目。此处列出的该项目的 CS3 教材[部分示例同时提供 Java 和 C++ 代码](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/ListArray.html)；其第 2 章「Programming Tutorials」还收录了[使用 Java 的 Scanner 类](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/scanning.html)等 Java 专题。[OpenDSA 官方说明](https://opendsa.org/guides/opendsa-book-configuration)指出，代码示例并非都具备所有语言的版本。
 
       我不建议使用不原生支持不安全内存访问的语言学习《数据结构》，如 Java、Python；强烈建议使用 C 或 C++。若你坚持使用 Java 学习，不推荐按此项目的建议使用 Eclipse；推荐 JetBrains IntelliJ IDEA。
     </section>
@@ -48,6 +48,10 @@ import References from '@/components/References.astro'
       <References materials={course_material.excluded.zh} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'zh' ]}/>
 
       人邮社将《数据结构习题解析与实验指导》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'zh' ], filter: m => m.title === '数据结构习题解析与实验指导' && m.publisher === '人民邮电出版社' && m.author?.some(author => author.family === '李' && author.given === '冬梅'), options: { count: 1 } } ]}/>列为第 2 版教材的配套书；目前没有确认它与此处列出的第 3 版教材<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '人民邮电出版社' && m.author?.some(author => author.family === '李' && author.given === '冬梅'), options: { count: 1 } } ]}/>逐题对应。[出版社教材页](https://www.ryjiaoyu.com/book/details/45170)
+    </section>
+    <section>
+      ### 英文
+      <References materials={course_material.excluded.en} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'en' ]}/>
     </section>
   </section>
 </section>

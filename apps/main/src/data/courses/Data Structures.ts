@@ -33,6 +33,9 @@ export const info = {
         ...catalog.filter(item => item.type === 'book' && item.title === '数据结构' && item.publisher === '人民邮电出版社' && item.author?.some(author => author.family === '李' && author.given === '冬梅'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === '数据结构习题解析与实验指导' && item.publisher === '人民邮电出版社' && item.author?.some(author => author.family === '李' && author.given === '冬梅'), { count: 1 }),
       ],
+      en: [
+        ...catalog.filter(item => item.type === 'book' && item.title?.startsWith('Data Structures and Algorithm Analysis') && item.author?.some(author => author.family === 'Shaffer'), { count: 2 }),
+      ],
     },
   },
 } satisfies types_data.Course
