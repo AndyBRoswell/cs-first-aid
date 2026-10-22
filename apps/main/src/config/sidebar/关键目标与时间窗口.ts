@@ -28,9 +28,9 @@ export const Critical_Goals_and_Time_Windows = {
       },
     },
     {
-      label: '决定毕业去向',
+      label: 'GPA 与毕业去向',
       translations: {
-        en: 'Determine Your Career Path',
+        en: 'GPA and Career Path after Graduation',
       },
       slug: '',
       attrs: {
