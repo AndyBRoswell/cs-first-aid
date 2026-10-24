@@ -19,7 +19,7 @@ export const entries = [
       ISBN: '9780133356724',
       language: 'en-US',
       URL: 'https://www.pearson.com/en-us/subject-catalog/p/digital-image-processing/P200000003224/9780133356724',
-      accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] },
       custom: {
         edition: 'North America Edition',
         variant: [
@@ -35,13 +35,13 @@ export const entries = [
             ISBN: '9781292223070',
             language: 'en',
             URL: 'https://www.pearson.com/en-gb/subject-catalog/p/digital-image-processing-global-edition/P200000004313/9781292223070',
-            accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] },
+            accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] },
             custom: {
               edition: 'Global Edition',
               URL: [
-                { link: 'https://books.google.com/books?id=p74oEAAAQBAJ', display_text: 'Google Books', accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] } },
-                { link: 'https://www.adlibris.com/sv/bok/digital-image-processing-global-edition-9781292223070', display_text: 'Adlibris', accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] } },
-                { link: 'https://eld.bl.uk/catalog/018858430', display_text: 'British Library', accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] } },
+                { link: 'https://books.google.com/books?id=p74oEAAAQBAJ', display_text: 'Google Books', accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] } },
+                { link: 'https://www.adlibris.com/sv/bok/digital-image-processing-global-edition-9781292223070', display_text: 'Adlibris', accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] } },
+                { link: 'https://eld.bl.uk/catalog/018858430', display_text: 'British Library', accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] } },
               ],
             },
           },
@@ -54,7 +54,7 @@ export const entries = [
             ISBN: '9781292223049',
             language: 'en-GB',
             URL: 'https://www.pearson.com/en-gb/subject-catalog/p/digital-image-processing-global-edition/P200000004313/9781292223049',
-            accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] },
+            accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] },
             custom: { edition: 'Global Edition' },
           },
           {
@@ -66,7 +66,7 @@ export const entries = [
             ISBN: '9780134734804',
             language: 'en-US',
             URL: 'https://www.vitalsource.com/en-uk/products/digital-image-processing-pod-file-rafael-c-gonzalez-richard-e-v9780134734804',
-            accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] },
+            accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] },
             custom: { edition: 'North America Edition' },
           },
           {
@@ -82,8 +82,8 @@ export const entries = [
             ISBN: '9787121476426',
             language: 'en',
             URL: 'https://phei.com.cn/module/goods/wssd_content.jsp?bookid=65198',
-            accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] },
-            custom: { edition: '英文版', URL: [ { link: 'https://www.yuntaigo.com/book.action?recordid=bm5semZoaGM5Nzg3MTIxNDc2NDI2', display_text: 'Yuntaigo', accessed: { 'date-parts': [ [ 2026, 10, 23 ] ] } } ] },
+            accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] },
+            custom: { edition: '英文版', URL: [ { link: 'https://www.yuntaigo.com/book.action?recordid=bm5semZoaGM5Nzg3MTIxNDc2NDI2', display_text: 'Yuntaigo', accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] } } ] },
           },
         ],
       } satisfies CSL.Custom,
