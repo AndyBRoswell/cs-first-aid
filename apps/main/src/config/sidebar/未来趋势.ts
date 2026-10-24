@@ -113,6 +113,26 @@ export const Future_Trends = {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
         },
+        {
+          label: '不仅需要终身学习，更需要终身自学',
+          translations: {
+            en: 'Not Only Lifelong Learning, but Also Lifelong Self-Learning',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '越发不容忽视的：学习与工作以外的影响因素',
+          translations: {
+            en: 'The Increasingly Non-Negligible: Influencing Factors outside Study and Work',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
       ],
     },
     {
@@ -155,6 +175,16 @@ export const Future_Trends = {
           label: '资源受限下的设计决策',
           translations: {
             en: 'Design Decisions under Resource Limits',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
+          label: '高冗余',
+          translations: {
+            en: 'High Redundancy',
           },
           slug: '',
           attrs: {
