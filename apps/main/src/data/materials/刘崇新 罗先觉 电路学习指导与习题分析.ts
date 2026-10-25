@@ -34,7 +34,7 @@ export function resolve_relations(): void {
   const material: types_data.Material = entries[0]!.material
   material.custom!.companion = catalog.filter(
     item => item.type === 'book'
-      && item.title === '电路'
+      && /^电路(?:（第6版）)?$/u.test(item.title ?? '')
       && item.edition === 6
       && item.author?.some(author => author.family === '邱' && author.given === '关源'),
     { count: 1 }
