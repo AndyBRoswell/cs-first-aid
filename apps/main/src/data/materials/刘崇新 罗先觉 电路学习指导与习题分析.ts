@@ -22,6 +22,9 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] },
       custom: {
         'printing-date': { 'date-parts': [ [ 2026, 8 ] ] },
+        URL: [
+          { link: 'https://www.hep.com.cn/api/v1/books/27cfdae8-1254-4b68-8547-f31b0d156d10', display_text: '高教社官网书目数据' }, // issued
+        ],
       } satisfies CSL.Custom,
     },
   },
