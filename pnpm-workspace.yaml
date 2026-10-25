@@ -10,3 +10,5 @@ minimumReleaseAgeExclude:
 packages:
   - "apps/*"
   - "packages/*"
+overrides:
+  "pino@^10.0.0": "10.3.1"
