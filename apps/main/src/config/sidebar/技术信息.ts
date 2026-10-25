@@ -1,4 +1,3 @@
-import type { SidebarItem } from "@/types/starlight.ts";
 import * as release_stages from '@/UI/release_stages.ts'
 
 export const Technical_Information = {
