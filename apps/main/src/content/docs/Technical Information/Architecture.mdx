@@ -5,8 +5,12 @@ author: AndyBRoswell
 tags: [ ]
 ---
 
+import { references as R } from './Architecture.ts'
+import Cite from '@/components/Cite.astro'
+import References from '@/components/References.astro'
+
 <section>
-  一个软件一般由如下 3 个部分构成：
+  一个软件一般由如下 3 个部分构成<Cite references={R} cite_items={[ { condition: m => m.title === 'Chapter 1: Software & Software Engineering' && m.edition === 7, label: 'page', locator: '2', suffix: '（幻灯片 2；PDF 第 1 页）' } ]}/>：
   - 指令（代码）
   - 数据结构
   - 文档
@@ -25,4 +29,9 @@ tags: [ ]
   # 数据流图
 
   （拟展现如下数据的流向：简单文本、管理的材料、课程、学科名称、公视、页面元信息）
+</section>
+<section>
+  # 参考文献
+
+  <References materials={R}/>
 </section>
