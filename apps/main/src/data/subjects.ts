@@ -90,7 +90,7 @@ add_many([
   },
   {
     names: {
-      'zh-CN': { full: { canonical: '理论计算机科学', all: [ '理论计算机科学', ] }, short: { canonical: '理计', all: [ '理计', '理论计科', ] } },
+      'zh-CN': { full: { canonical: '理论计算机科学', all: [ '理论计算机科学', ] }, short: { canonical: '理计', all: [ '理计', '理论计科', '理论计算机', ] } },
       en: { full: { canonical: 'Theoretical Computer Science', all: [ 'Theoretical Computer Science', ] }, short: { canonical: 'TCS', all: [ 'TCS', ] } },
     },
   },
