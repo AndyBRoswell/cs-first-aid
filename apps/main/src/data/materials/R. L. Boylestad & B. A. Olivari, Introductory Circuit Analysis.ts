@@ -20,6 +20,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] },
       custom: {
         URL: [
+          { link: 'https://www.pearson.com/content/dam/one-dot-com/one-dot-com/us/en/files/Pearson-Higher-Education-Titles-Autumn-2022.pdf', display_text: 'Pearson higher education catalogue (Autumn 2022)', 'Content-Type': 'application/pdf' }, // number-of-pages
           { link: 'https://studentebookhub.com/wp-content/uploads/2024/preview/9780137594115.pdf', display_text: 'Copyright page and cataloging data (Student eBook Hub preview)', 'Content-Type': 'application/pdf' }, // publisher, publisher-place, custom.variant
           { link: 'https://books.google.com/books?id=5mCjzgEACAAJ', display_text: 'Google Books (eBook)' }, // custom.variant
           { link: 'https://www.vitalsource.com/products/pearson-etext-introductory-circuit-analysis-robert-boylestad-v9780137594177', display_text: 'VitalSource (Pearson+ eTextbook)' }, // custom.variant
