@@ -12,7 +12,8 @@ export const entries = [
       genre: 'Software manual',
       medium: 'Paperback',
       dimensions: '232 × 176 × 10 mm',
-      publisher: 'Pearson',
+      publisher: 'Pearson Education Canada',
+      'publisher-place': '[Toronto, ON]', // Inferred from the publisher's head office; brackets mark supplied information: https://www.loc.gov/aba/rda/mgd/manifestation/mg-m-placeOfPublication-01.pdf#page=6
       issued: { 'date-parts': [ [ 2018, 6, 29 ] ] },
       ISBN: '9780134739342',
       'number-of-pages': 144,
@@ -22,6 +23,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 25 ] ] },
       custom: {
         URL: [
+          { link: 'https://openlibrary.org/books/OL28870427M.json', display_text: 'Open Library: Book data' }, // publisher
           { link: 'https://images.thenile.io/r1000/9780134739342.jpg', display_text: 'Cover (11th edition)', 'Content-Type': 'image/jpeg' }, // author
           { link: 'https://www.thenile.com.au/books/james-nilsson/introduction-to-multisim-for-electric-circuits/9780134739342', display_text: 'The Nile' },
           { link: 'https://www.pearsonhighered.com/assets/preface/0/1/3/4/0134814118.pdf', display_text: 'Electric Circuits, 11th edition: Preface' },
