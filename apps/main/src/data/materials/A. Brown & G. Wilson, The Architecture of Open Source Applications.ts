@@ -15,6 +15,7 @@ export const entries = [
       URL: 'https://aosabook.org/en/#aosa1',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
+        subtitle: 'Elegance, Evolution, and a Few Fearless Hacks',
         URL: [
           {
             link: 'https://github.com/aosabook/aosabook',
@@ -33,10 +34,17 @@ export const entries = [
           {
             type: 'book',
             medium: 'Paperback',
+            publisher: 'Lulu.com',
             issued: { 'date-parts': [ [ 2011, 5, 19 ] ] },
             ISBN: '9781257638017',
             'number-of-pages': 432,
+            dimensions: '189 × 246 mm',
+            language: 'en',
             URL: 'https://www.lulu.com/shop/greg-wilson-and-amy-brown/the-architecture-of-open-source-applications/paperback/product-12vn4q2m.html',
+            custom: {
+              binding: 'Perfect bound',
+              'Interior Color': 'Black and white',
+            } satisfies CSL.Custom,
           },
         ],
       } satisfies CSL.Custom,
@@ -55,6 +63,7 @@ export const entries = [
       URL: 'https://aosabook.org/en/#aosa2',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
+        subtitle: 'Structure, Scale, and a Few More Fearless Hacks',
         URL: [
           {
             link: 'https://github.com/aosabook/aosabook',
@@ -77,10 +86,18 @@ export const entries = [
           {
             type: 'book',
             medium: 'Paperback',
+            publisher: 'Lulu.com',
             issued: { 'date-parts': [ [ 2012, 3, 31 ] ] },
             ISBN: '9781105571817',
             'number-of-pages': 390,
+            dimensions: '189 × 246 mm',
+            language: 'en',
             URL: 'https://www.lulu.com/shop/amy-brown-and-greg-wilson/the-architecture-of-open-source-applications-volume-ii/paperback/product-20111008.html',
+            custom: {
+              binding: 'Perfect bound',
+              'Interior Color': 'Black and white',
+              keyword: [ 'software architecture', 'open source', 'software engineering', 'programming' ],
+            } satisfies CSL.Custom,
           },
         ],
       } satisfies CSL.Custom,
