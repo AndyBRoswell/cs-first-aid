@@ -19,7 +19,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
         edition: 'Global Edition',
-        URL: [ { link: 'https://libkoha.alfaisal.edu/cgi-bin/koha/opac-detail.pl?biblionumber=602510', display_text: 'Alfaisal Library' } ],
+        URL: [ { link: 'https://libkoha.alfaisal.edu/cgi-bin/koha/opac-detail.pl?biblionumber=602510', display_text: 'مكتبة جامعة الفيصل' } ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

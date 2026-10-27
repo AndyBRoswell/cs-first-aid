@@ -22,7 +22,7 @@ export const info = {
       },
       lecture_notes_and_slides: {
         en: [
-          ...catalog.filter(item => item.type === 'document' && item['collection-title'] === 'LTAT.05.006: Software Testing' && item.publisher === 'University of Tartu', { count: 1 }),
+          ...catalog.filter(item => item.type === 'document' && item['collection-title'] === 'LTAT.05.006: Software Testing' && item.publisher === 'Tartu Ülikool', { count: 1 }),
         ],
       },
       other: {

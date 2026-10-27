@@ -8,7 +8,7 @@ export const entries = [
       title: 'Queueing Systems',
       author: [ { given: 'Ivo', family: 'Adan' }, { given: 'Jacques', family: 'Resing' } ],
       medium: 'Lecture notes (PDF)',
-      publisher: 'Eindhoven University of Technology',
+      publisher: 'Technische Universiteit Eindhoven',
       issued: { 'date-parts': [ [ 2015, 3, 26 ] ] },
       language: 'en',
       URL: 'https://iadan.win.tue.nl/queueing.pdf',

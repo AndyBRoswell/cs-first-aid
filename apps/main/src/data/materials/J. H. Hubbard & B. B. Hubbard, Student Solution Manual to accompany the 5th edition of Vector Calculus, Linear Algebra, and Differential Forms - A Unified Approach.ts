@@ -21,7 +21,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 4 ] ] },
       custom: {
         URL: [
-          { link: 'https://library.kaist.ac.kr/search/kaistSearchQRCode.do?bibctrlno=908627&deviceType=mobile&se=b0&ty=B', display_text: 'KAIST Library' },
+          { link: 'https://library.kaist.ac.kr/search/kaistSearchQRCode.do?bibctrlno=908627&deviceType=mobile&se=b0&ty=B', display_text: 'KAIST 도서관' },
           { link: 'https://matrixeditions.com/errata.html', display_text: 'Errata' },
           { link: 'https://matrixeditions.com/VC5.Preface.pdf', display_text: 'Preface' },
         ],

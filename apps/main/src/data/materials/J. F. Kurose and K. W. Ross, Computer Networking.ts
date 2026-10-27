@@ -24,7 +24,7 @@ export const entries = [
         edition: 'Global Edition',
         URL: [
           { link: 'https://gaia.cs.umass.edu/kurose_ross/index.php', display_text: 'Computer Networking 9E' },
-          { link: 'https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=1152928&se=b0&ty=B', display_text: 'KAIST Library' },
+          { link: 'https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=1152928&se=b0&ty=B', display_text: 'KAIST 도서관' },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,

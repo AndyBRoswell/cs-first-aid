@@ -10,7 +10,7 @@ export const entries = [
       'collection-title': 'LTAT.05.006: Software Testing',
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'University of Tartu',
+      publisher: 'Tartu Ülikool',
       'publisher-place': 'Tartu, Estonia',
       issued: { 'date-parts': [ [ 2026 ] ], season: 1 },
       'number-of-pages': 1262,

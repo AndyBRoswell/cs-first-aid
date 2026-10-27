@@ -19,7 +19,7 @@ export const entries = [
       URL: 'https://shop.elsevier.com/books/advanced-compiler-design-and-implementation/muchnick/978-0-08-049871-3',
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
-        URL: [ { link: 'https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=155391&ty=B', display_text: 'KAIST Library' } ],
+        URL: [ { link: 'https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=155391&ty=B', display_text: 'KAIST 도서관' } ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

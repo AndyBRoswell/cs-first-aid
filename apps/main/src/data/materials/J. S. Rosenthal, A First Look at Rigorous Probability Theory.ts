@@ -21,7 +21,7 @@ export const entries = [
       custom: {
         URL: [
           { link: 'https://probability.ca/jeff/grprobbook.html', display_text: `Author's site` },
-          { link: 'https://katalog.bibliothek.kit.edu/bib/305831', display_text: 'KIT Library' },
+          { link: 'https://katalog.bibliothek.kit.edu/bib/305831', display_text: 'KIT-Bibliothek' },
         ],
         variant: [
           {
