@@ -23,7 +23,7 @@ export const info = {
           ...catalog.filter(item => item.type === 'book' && item.title === 'Pro Git' && item.author?.some(author => author.family === 'Chacon') && item.edition === 2, { count: 1 }),
         ],
       },
-      topics: {
+      topic: {
         data_serialization: {
           en: [
             ...catalog.filter(item => item.type === 'webpage' && item.title === 'Comparison of data-serialization formats' && item['container-title'] === 'Wikipedia', { count: 1 }),
