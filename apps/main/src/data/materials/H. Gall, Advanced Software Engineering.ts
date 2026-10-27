@@ -10,7 +10,7 @@ export const entries = [
       author: [ { given: 'Harald', family: 'Gall' } ],
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'University of Zurich',
+      publisher: 'Universität Zürich',
       issued: { 'date-parts': [ [ 2012 ] ] },
       version: 'Spring 2012',
       language: 'en',

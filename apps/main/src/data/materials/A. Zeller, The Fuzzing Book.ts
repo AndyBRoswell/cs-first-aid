@@ -10,7 +10,7 @@ export const entries = [
       author: [ { given: 'Andreas', family: 'Zeller' }, { given: 'Rahul', family: 'Gopinath' }, { given: 'Marcel', family: 'Böhme' }, { given: 'Gordon', family: 'Fraser' }, { given: 'Christian', family: 'Holler' } ],
       version: '1.2.2',
       medium: 'Online',
-      publisher: 'CISPA Helmholtz Center for Information Security',
+      publisher: 'CISPA Helmholtz-Zentrum für Informationssicherheit',
       issued: { 'date-parts': [ [ 2024, 11, 10 ] ] },
       note: 'Continuously updated online textbook; version and date identify the latest numbered release.',
       language: 'en',

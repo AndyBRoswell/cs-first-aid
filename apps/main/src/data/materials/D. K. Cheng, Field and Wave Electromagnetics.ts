@@ -24,7 +24,7 @@ export const entries = [
         edition: 'Pearson New International Edition',
         URL: [
           { link: 'https://www.kinokuniya.co.jp/f/dsg-02-9781292026565', display_text: 'Kinokuniya' },
-          { link: 'https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=870065&se=b0&ty=B', display_text: 'KAIST Library' },
+          { link: 'https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=870065&se=b0&ty=B', display_text: 'KAIST 도서관' },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,

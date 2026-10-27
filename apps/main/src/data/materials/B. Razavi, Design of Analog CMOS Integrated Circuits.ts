@@ -20,7 +20,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
         edition: 'International Student Edition',
-        URL: [ { link: 'https://katalog.bibliothek.kit.edu/bib/1479947', display_text: 'KIT Library' } ],
+        URL: [ { link: 'https://katalog.bibliothek.kit.edu/bib/1479947', display_text: 'KIT-Bibliothek' } ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

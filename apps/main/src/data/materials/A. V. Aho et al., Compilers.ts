@@ -39,7 +39,7 @@ export const entries = [
               edition: 'Pearson New International Edition',
               URL: [
                 { link: 'https://toc.library.ethz.ch/objects/pdf03/e01_978-1-292-02434-9_01.pdf', display_text: 'ETH Zürich: table of contents' },
-                { link: 'https://studieinfo.liu.se/en/kurs/TDDE66/ht-2024#literature', display_text: 'Linköping University: edition comparison' },
+                { link: 'https://studieinfo.liu.se/en/kurs/TDDE66/ht-2024#literature', display_text: 'Linköpings universitet: edition comparison' },
               ],
             },
           },
