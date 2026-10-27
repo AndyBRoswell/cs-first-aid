@@ -24,6 +24,15 @@ export const info = {
       guide: { zh: [
         ...catalog.filter(item => item.type === 'book' && item.title === '计算机组成原理——学习指导与习题解答' && item.author?.some(author => author.family === '唐' && author.given === '朔飞'), { count: 1 }),
       ] },
+      topic: {
+        processors_and_microarchitectures: {
+          en: [
+            ...catalog.filter(item => item.type === 'webpage' && item.title === 'List of AMD CPU microarchitectures' && item['container-title'] === 'Wikipedia', { count: 1 }),
+            ...catalog.filter(item => item.type === 'webpage' && item.title === 'List of Intel CPU microarchitectures' && item['container-title'] === 'Wikipedia', { count: 1 }),
+            ...catalog.filter(item => item.type === 'webpage' && item.title === 'List of ARM processors' && item['container-title'] === 'Wikipedia', { count: 1 }),
+          ],
+        },
+      },
     },
   },
 } satisfies types_data.Course

@@ -42,8 +42,10 @@ export const I_info = {
           ...catalog.filter(item => item.type === 'book' && item.title === 'Computer Networks' && item.author?.some(author => author.family === 'Tanenbaum'), { count: 1 }),
         ],
       },
-      other: {
-        en: wikipedia_titles.flatMap(title => catalog.filter(item => item.type === 'webpage' && item.title === title && item['container-title'] === 'Wikipedia', { count: 1 })),
+      topic: {
+        network_protocols: {
+          en: wikipedia_titles.flatMap(title => catalog.filter(item => item.type === 'webpage' && item.title === title && item['container-title'] === 'Wikipedia', { count: 1 })),
+        },
       },
     },
   },
