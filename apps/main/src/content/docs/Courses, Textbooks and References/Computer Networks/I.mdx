@@ -49,10 +49,13 @@ import References from '@/components/References.astro'
       </section>
     </section>
     <section>
-      ### 其它
+      ### 专题
       <section>
-        #### 英文
-        <References materials={course_material.reference.other.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'other', 'en' ]}/>
+        #### 网络协议
+        <section>
+          ##### 英文
+          <References materials={course_material.reference.topic.network_protocols.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'topic', 'network_protocols', 'en' ]}/>
+        </section>
       </section>
     </section>
   </section>
