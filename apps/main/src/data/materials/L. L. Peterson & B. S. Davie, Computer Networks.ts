@@ -17,7 +17,7 @@ export const entries = [
       ISBN: '9780128182000',
       DOI: '10.1016/C2018-0-01477-2',
       'collection-title': 'The Morgan Kaufmann Series in Networking',
-      'number-of-pages': 'xxvi, 817',
+      'number-of-pages': 848,
       language: 'en',
       URL: 'https://shop.elsevier.com/books/computer-networks/peterson/978-0-12-818200-0',
       accessed: { 'date-parts': [ [ 2026, 10, 28 ] ] },
