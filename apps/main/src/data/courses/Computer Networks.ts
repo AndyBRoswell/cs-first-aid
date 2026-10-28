@@ -40,6 +40,7 @@ export const I_info = {
       text: {
         en: [
           ...catalog.filter(item => item.type === 'book' && item.title === 'Computer Networks' && item.author?.some(author => author.family === 'Tanenbaum'), { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && /^Computer Networks(?:: A Systems Approach)?$/u.test(item.title ?? '') && item.edition === 6 && item.author?.some(author => author.family === 'Peterson'), { count: 1 }),
         ],
       },
       topic: {
