@@ -862,6 +862,61 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '电力系统继电保护原理',
+      translations: {
+        en: 'Principles of Power System Protection',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', ], 'en'))
+      },
+    },
+    {
+      label: '高电压技术',
+      translations: {
+        en: 'High Voltage Engineering',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', ], 'en'))
+      },
+    },
+    {
+      label: '电气测量',
+      translations: {
+        en: 'Electrical Measurements',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Electronics', ], 'en'))
+      },
+    },
+    {
+      label: '储能技术',
+      translations: {
+        en: 'Energy Storage Technology',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', ], 'en'))
+      },
+    },
+    {
+      label: '过程控制',
+      translations: {
+        en: 'Process Control',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Electronics', 'Control', ], 'en'))
+      },
+    },
+    {
       label: '设计模式',
       translations: {
         en: 'Design Patterns',
@@ -906,6 +961,17 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '传感器技术',
+      translations: {
+        en: 'Sensor Technology',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electronics', 'Signal', ], 'en'))
+      },
+    },
+    {
       label: '现代通信',
       translations: {
         en: 'Communications',
@@ -914,6 +980,17 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Telecom', 'Signal', 'Electronics', ], 'en'))
+      },
+    },
+    {
+      label: '工业通信',
+      translations: {
+        en: 'Industrial Communications',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Telecom', 'Control', 'Embedded', ], 'en'))
       },
     },
     {
@@ -972,6 +1049,39 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '信息检索',
+      translations: {
+        en: 'Information Retrieval',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'AI', ], 'en'))
+      },
+    },
+    {
+      label: '知识图谱',
+      translations: {
+        en: 'Knowledge Graphs',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'AI', 'DB', ], 'en'))
+      },
+    },
+    {
+      label: '数据挖掘',
+      translations: {
+        en: 'Data Mining',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'AI', 'DB', ], 'en'))
+      },
+    },
+    {
       label: '信息论',
       translations: {
         en: 'Information Theory',
@@ -1016,6 +1126,50 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '音频处理',
+      translations: {
+        en: 'Audio Processing',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Signal', 'Multimedia', ], 'en'))
+      },
+    },
+    {
+      label: '视频处理',
+      translations: {
+        en: 'Video Processing',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Signal', 'Multimedia', ], 'en'))
+      },
+    },
+    {
+      label: '多媒体通信',
+      translations: {
+        en: 'Multimedia Communications',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Net', 'Telecom', 'Multimedia', ], 'en'))
+      },
+    },
+    {
+      label: '程序设计语言理论',
+      translations: {
+        en: 'Programming Language Theory',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'TCS', ], 'en'))
+      },
+    },
+    {
       label: '软件安全',
       translations: {
         en: 'Software Security',
@@ -1024,6 +1178,50 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'InfoSec', ], 'en'))
+      },
+    },
+    {
+      label: '网络安全',
+      translations: {
+        en: 'Network Security',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Net', 'InfoSec', ], 'en'))
+      },
+    },
+    {
+      label: '二进制分析',
+      translations: {
+        en: 'Binary Analysis',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'InfoSec', ], 'en'))
+      },
+    },
+    {
+      label: '硬件安全',
+      translations: {
+        en: 'Hardware Security',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Arch', 'Electronics', 'InfoSec', ], 'en'))
+      },
+    },
+    {
+      label: '信息隐藏技术',
+      translations: {
+        en: 'Information Hiding',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'InfoSec', 'Signal', 'Multimedia', ], 'en'))
       },
     },
     {
