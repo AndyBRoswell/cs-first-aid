@@ -16,10 +16,13 @@ export const entries = [
       'number-of-pages': 936,
       language: 'en',
       URL: 'https://shop.elsevier.com/books/computer-architecture/hennessy/978-0-443-15406-5',
-      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
         subtitle: 'A Quantitative Approach',
         URL: [ { link: 'https://www.educate.elsevier.com/book/details/9780443154065', display_text: 'Elsevier Educate' } ],
+        free_material: [
+          { link: 'https://shop.elsevier.com/books/book-companion/9780443154065', display_text: 'Book companion (Elsevier)', 'Content-Type': 'text/html' },
+        ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
