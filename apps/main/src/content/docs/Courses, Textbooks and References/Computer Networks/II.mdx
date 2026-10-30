@@ -1,0 +1,30 @@
+---
+title: 计算机网络 II
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { II_course_material, II_reference_ranges } from './data.ts'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 实验指导
+    <section>
+      ### 英文
+      <References materials={II_course_material.lab.en} reference_ranges={II_reference_ranges} scope_name={[ 'lab', 'en' ]}/>
+    </section>
+  </section>
+  <section>
+    ## 参考资料
+    <section>
+      ### 课程资料
+      <section>
+        #### 英文
+        <References materials={II_course_material.reference.course.XB_0048.en} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'course', 'XB_0048', 'en' ]}/>
+      </section>
+    </section>
+  </section>
+</section>
+
