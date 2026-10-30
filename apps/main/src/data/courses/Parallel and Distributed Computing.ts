@@ -8,6 +8,7 @@ export const info = {
   material: {
     reference: {
       en: [
+        ...catalog.filter(material => material.type === 'document' && material.title === 'Programming Large-scale Parallel Systems' && material.author?.some(author => author.family === 'Bal') && material.version === 'Fall 2017', { count: 1 }),
         ...catalog.filter(material => material.type === 'webpage' && material.title === 'Algorithms for Modern Hardware' && material.author?.some(author => author.given === 'Sergey' && author.family === 'Slotin'), { count: 1 }),
       ],
     },

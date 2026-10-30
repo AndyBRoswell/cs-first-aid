@@ -14,8 +14,13 @@ export const entries = [
       ISBN: '9780128017333',
       language: 'en-US',
       URL: 'https://shop.elsevier.com/books/computer-organization-and-design-arm-edition/patterson/978-0-12-801733-3',
-      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
-      custom: { subtitle: 'The Hardware Software Interface' } satisfies CSL.Custom,
+      accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
+      custom: {
+        subtitle: 'The Hardware Software Interface',
+        free_material: [
+          { link: 'https://shop.elsevier.com/books/book-companion/9780128017333', display_text: 'Book companion (Elsevier)', 'Content-Type': 'text/html' },
+        ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -30,8 +35,13 @@ export const entries = [
       ISBN: '9780128201091',
       language: 'en-US',
       URL: 'https://shop.elsevier.com/books/computer-organization-and-design-mips-edition/patterson/978-0-12-820109-1',
-      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
-      custom: { subtitle: 'The Hardware/Software Interface' } satisfies CSL.Custom,
+      accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
+      custom: {
+        subtitle: 'The Hardware/Software Interface',
+        free_material: [
+          { link: 'https://shop.elsevier.com/books/book-companion/9780128201091', display_text: 'Book companion (Elsevier)', 'Content-Type': 'text/html' },
+        ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -46,8 +56,13 @@ export const entries = [
       ISBN: '9780128122754',
       language: 'en-US',
       URL: 'https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-812275-4',
-      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
-      custom: { subtitle: 'The Hardware Software Interface' } satisfies CSL.Custom,
+      accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
+      custom: {
+        subtitle: 'The Hardware Software Interface',
+        free_material: [
+          { link: 'https://shop.elsevier.com/books/book-companion/9780128122754', display_text: 'Book companion (Elsevier)', 'Content-Type': 'text/html' },
+        ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -62,8 +77,13 @@ export const entries = [
       ISBN: '9780128203316',
       language: 'en-US',
       URL: 'https://shop.elsevier.com/books/computer-organization-and-design-risc-v-edition/patterson/978-0-12-820331-6',
-      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
-      custom: { subtitle: 'The Hardware Software Interface' } satisfies CSL.Custom,
+      accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
+      custom: {
+        subtitle: 'The Hardware Software Interface',
+        free_material: [
+          { link: 'https://shop.elsevier.com/books/book-companion/9780128203316', display_text: 'Book companion (Elsevier)', 'Content-Type': 'text/html' },
+        ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

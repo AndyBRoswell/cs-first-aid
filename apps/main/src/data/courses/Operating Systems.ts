@@ -18,6 +18,7 @@ export const I_info = {
         en: [
           ...catalog.filter(item => item.type === 'book' && item.title === 'Operating System Concepts' && item.author?.some(author => author.family === 'Silberschatz'), { count: 1 }),
           ...catalog.filter(item => item.type === 'book' && item.title === 'Modern Operating Systems' && item.author?.some(author => author.family === 'Tanenbaum'), { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'xv6: a simple, Unix-like teaching operating system' && item.author?.some(author => author.family === 'Cox'), { count: 1 }),
         ],
       },
       other: {

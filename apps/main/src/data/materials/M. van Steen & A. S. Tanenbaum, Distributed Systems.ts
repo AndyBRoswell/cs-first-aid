@@ -17,10 +17,12 @@ export const entries = [
       ISBN: '9789081540643',
       language: 'en',
       URL: 'https://www.distributed-systems.net/index.php/books/ds4/',
-      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
         free_material: [
           { link: 'https://www.distributed-systems.net/index.php/books/ds4/ds4-ebook/', display_text: 'PDF' },
+          { link: 'https://www.distributed-systems.net/my-data/DS4/allslides.zip', display_text: 'Complete lecture slides (PDF and PPTX, ZIP)', 'Content-Type': 'application/zip' },
+          { link: 'https://www.distributed-systems.net/my-data/DS4/makeslides.zip', display_text: 'Lecture slide sources (LaTeX, ZIP)', 'Content-Type': 'application/zip' },
         ],
         variant: [
           { type: 'book', version: '4.03', medium: 'Paperback', issued: { 'date-parts': [ [ 2023, 1, 8 ] ] }, ISBN: '9789081540636', 'number-of-pages': 684, URL: 'https://www.amazon.com/dp/9081540637' },

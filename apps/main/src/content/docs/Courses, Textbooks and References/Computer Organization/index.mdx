@@ -41,8 +41,15 @@ import References from '@/components/References.astro'
       <section>
         #### 中文
         <References materials={course_material.reference.guide.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'guide', 'zh' ]}/>
-
         高等教育出版社注明，这本学习指导<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'guide', 'zh' ], filter: m => m.title === '计算机组成原理——学习指导与习题解答' && m.edition === 2, options: { count: 1 } } ]}/>配套的是《计算机组成原理》第 2 版；上列主教材为第 3 版。[来源](https://xuanshu.hep.com.cn/front/book/findBookDetails?bookId=59cd4f52ba9eb884cf819d2a)
+      </section>
+    </section>
+    <section>
+      ### 课程与实验
+      <section>
+        #### 英文
+        <References materials={course_material.reference.course.XB_40009.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'course', 'XB_40009', 'en' ]}/>
+        <References materials={course_material.reference.lab.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'lab', 'en' ]}/>
       </section>
     </section>
     <section>

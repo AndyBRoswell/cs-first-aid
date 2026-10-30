@@ -25,5 +25,29 @@ import References from '@/components/References.astro'
         <References materials={course_material.reference.text.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
     </section>
+    <section>
+      ### 实验指导
+      <section>
+        #### 英文
+        <References materials={course_material.reference.lab.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'lab', 'en' ]}/>
+      </section>
+    </section>
+    <section>
+      ### 教程
+      <section>
+        #### LLVM
+        <section>
+          ##### 英文
+          <References materials={course_material.reference.tutorial.llvm.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'tutorial', 'llvm', 'en' ]}/>
+        </section>
+      </section>
+      <section>
+        #### Clang
+        <section>
+          ##### 英文
+          <References materials={course_material.reference.tutorial.clang.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'tutorial', 'clang', 'en' ]}/>
+        </section>
+      </section>
+    </section>
   </section>
 </section>
