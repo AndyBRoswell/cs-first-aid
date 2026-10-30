@@ -1,0 +1,34 @@
+---
+title: 存储系统
+author: AndyBRoswell
+tags: [ ]
+---
+
+import { course_material, reference_ranges } from './data.ts'
+import References from '@/components/References.astro'
+
+<section>
+  # 学习材料
+  <section>
+    ## 参考资料
+    <section>
+      ### 英文
+      <section>
+        #### VU：Storage Systems
+        <References materials={course_material.reference.vu.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'vu', 'en' ]}/>
+      </section>
+      <section>
+        #### ETH Zürich：Modern SSDs
+        <References materials={course_material.reference.eth.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'eth', 'en' ]}/>
+      </section>
+      <section>
+        #### 克里特大学：Modern Storage Systems
+        <References materials={course_material.reference.crete.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'crete', 'en' ]}/>
+      </section>
+      <section>
+        #### 哈佛大学：Modern Storage Systems
+        <References materials={course_material.reference.harvard.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'harvard', 'en' ]}/>
+      </section>
+    </section>
+  </section>
+</section>
