@@ -9,11 +9,8 @@ export const entries = [
       title: 'Computer Networks',
       author: [
         { given: 'Jesse', family: 'Donkervliet' },
-        { given: 'Gonçalo Amado', family: 'Mesquita' },
-        { given: 'Nehir', family: 'Kırkgöz' },
-        { given: 'Daniel-Ştefan', family: 'Halasz' },
         { given: 'Balakrishnan', family: 'Chandrasekaran' },
-      ],
+      ], // Slide credits; the introductory deck's lecturer list is not an author byline.
       genre: 'Lecture slides',
       medium: 'PDF',
       publisher: 'Vrije Universiteit Amsterdam',
@@ -25,6 +22,13 @@ export const entries = [
       URL: 'https://compnet2526.atlarge-research.com/docs/course-components/lectures/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        lecturer: [
+          { given: 'Jesse', family: 'Donkervliet' },
+          { given: 'Gonçalo Amado', family: 'Mesquita' },
+          { given: 'Nehir', family: 'Kırkgöz' },
+          { given: 'Daniel-Ştefan', family: 'Halasz' },
+          { given: 'Balakrishnan', family: 'Chandrasekaran' },
+        ],
         URL: [
           { link: 'https://studiegids.vu.nl/en/courses/2026-2027/X_400487', display_text: 'Official course description (X_400487, 2026–2027)' },
           { link: 'https://compnet2526.atlarge-research.com/', display_text: 'Course website (2025–2026)' },
