@@ -626,6 +626,17 @@ export const Courses_Textbooks_and_References = {
       ],
     },
     {
+      label: '存储系统',
+      translations: {
+        en: 'Storage Systems',
+      },
+      slug: 'courses-textbooks-and-references/storage-systems',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'DB', ], 'en'))
+      },
+    },
+    {
       label: '计算机网络',
       translations: {
         en: 'Computer Networks',
@@ -658,9 +669,9 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Computer Networks II',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/computer-networks/ii',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Net', ], 'en'))
           },
         },
