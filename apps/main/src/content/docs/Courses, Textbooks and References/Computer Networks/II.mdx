@@ -10,19 +10,19 @@ import References from '@/components/References.astro'
 <section>
   # 学习材料
   <section>
-    ## 实验指导
-    <section>
-      ### 英文
-      <References materials={II_course_material.lab.en} reference_ranges={II_reference_ranges} scope_name={[ 'lab', 'en' ]}/>
-    </section>
-  </section>
-  <section>
     ## 参考资料
     <section>
       ### 课程资料
       <section>
         #### 英文
-        <References materials={II_course_material.reference.course.XB_0048.en} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'course', 'XB_0048', 'en' ]}/>
+        <section>
+          ##### Stanford：CS144
+          <References materials={II_course_material.reference.course.en.CS144} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'course', 'en', 'CS144' ]}/>
+        </section>
+        <section>
+          ##### VU：Advanced Network Programming（XB_0048）
+          <References materials={II_course_material.reference.course.en.XB_0048} reference_ranges={II_reference_ranges} scope_name={[ 'reference', 'course', 'en', 'XB_0048' ]}/>
+        </section>
       </section>
     </section>
   </section>
