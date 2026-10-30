@@ -23,7 +23,6 @@ export const entries = [
       custom: {
         URL: [
           { link: 'https://systems.seas.harvard.edu/teaching/', display_text: 'Harvard Systems Group teaching page' },
-          { link: 'https://beta.my.harvard.edu/course/COMPSCI2640/2026-Spring/001', display_text: 'Official course catalogue (Spring 2026)' },
         ],
         free_material: {
           Slides: [
