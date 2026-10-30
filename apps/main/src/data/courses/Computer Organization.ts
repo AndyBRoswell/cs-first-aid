@@ -24,6 +24,14 @@ export const info = {
       guide: { zh: [
         ...catalog.filter(item => item.type === 'book' && item.title === '计算机组成原理——学习指导与习题解答' && item.author?.some(author => author.family === '唐' && author.given === '朔飞'), { count: 1 }),
       ] },
+      course: {
+        XB_40009: { en: [
+          ...catalog.filter(item => item.type === 'webpage' && item.title === 'Computer Organization' && item.number === 'XB_40009' && item.version === '2026–2027', { count: 1 }),
+        ] },
+      },
+      lab: { en: [
+        ...catalog.filter(item => item.type === 'document' && item.title === 'CO Lab Manual' && item.number === 'XB_40009' && item.version === '2025–2026', { count: 1 }),
+      ] },
       topic: {
         processors_and_microarchitectures: {
           en: [
