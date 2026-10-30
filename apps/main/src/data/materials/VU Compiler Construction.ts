@@ -19,8 +19,8 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
         URL: [
-          { link: 'https://research.vu.nl/en/courses/compiler-construction-6/', display_text: 'Bachelor course description (XB_0003)' },
-          { link: 'https://research.vu.nl/en/courses/advanced-compiler-construction-3/', display_text: 'Master course description (XM_0139)' },
+          { link: 'https://studiegids.vu.nl/en/courses/2026-2027/XB_0003', display_text: 'Bachelor course description (XB_0003, 2026–2027)' },
+          { link: 'https://studiegids.vu.nl/en/courses/2026-2027/XM_0139', display_text: 'Master course description (XM_0139, 2026–2027)' },
           { link: 'https://teemperor.de/', display_text: 'Teaching Compiler Construction with LLVM: former TA\'s public-release links' },
         ],
         free_material: [
