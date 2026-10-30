@@ -18,13 +18,19 @@ export const entries = [
       ISBN: '9781292499239',
       language: 'en',
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/computer-networking-global-edition/P200000015518/9781292499239',
-      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
         subtitle: 'A Top-Down Approach',
         edition: 'Global Edition',
         URL: [
           { link: 'https://gaia.cs.umass.edu/kurose_ross/index.php', display_text: 'Computer Networking 9E' },
           { link: 'https://library.kaist.ac.kr/search/ctlgSearch/posesn/view.do?bibctrlno=1152928&se=b0&ty=B', display_text: 'KAIST 도서관' },
+        ],
+        free_material: [
+          { link: 'https://gaia.cs.umass.edu/kurose_ross/ppt.php', display_text: 'PowerPoint slides', 'Content-Type': 'text/html' },
+          { link: 'https://gaia.cs.umass.edu/kurose_ross/wireshark.php', display_text: 'Wireshark labs', 'Content-Type': 'text/html' },
+          { link: 'https://gaia.cs.umass.edu/kurose_ross/programming.php', display_text: 'Programming assignments', 'Content-Type': 'text/html' },
+          { link: 'https://gaia.cs.umass.edu/kurose_ross/interactive/', display_text: 'Interactive exercises', 'Content-Type': 'text/html' },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
