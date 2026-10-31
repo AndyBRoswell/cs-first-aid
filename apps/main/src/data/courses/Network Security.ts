@@ -9,7 +9,7 @@ export const info = {
     reference: {
       course: {
         en: {
-          ost2: [
+          OST2: [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://ost2.fyi/Bluetooth.html', { count: 1 }),
           ],
         },
