@@ -752,6 +752,17 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '工程制图',
+      translations: {
+        en: 'Engineering Drawing',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Mechanical', 'Electrical', 'Electronics', ], 'en'))
+      },
+    },
+    {
       label: '电路分析',
       translations: {
         en: 'Circuit Analysis',
@@ -782,6 +793,17 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Electrical', 'Electronics', 'Microelectronics', ], 'en'))
+      },
+    },
+    {
+      label: 'PCB设计',
+      translations: {
+        en: 'PCB Design',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Electronics', ], 'en'))
       },
     },
     {
