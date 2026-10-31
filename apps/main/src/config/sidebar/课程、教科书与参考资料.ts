@@ -796,7 +796,7 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
-      label: 'PCB设计',
+      label: 'PCB 设计',
       translations: {
         en: 'PCB Design',
       },
