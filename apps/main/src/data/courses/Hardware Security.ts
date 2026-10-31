@@ -9,7 +9,7 @@ export const info = {
     reference: {
       course: {
         en: {
-          ost2: [
+          OST2: [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://ost2.fyi/Firmware-Security.html', { count: 1 }),
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://ost2.fyi/System-Security.html', { count: 1 }),
           ],
