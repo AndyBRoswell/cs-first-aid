@@ -734,9 +734,9 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Software Containerization'
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/software-containerization',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'SE', ], 'en'))
       },
     },
@@ -1170,9 +1170,20 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
-      label: '软件安全',
+      label: '二进制漏洞利用',
       translations: {
-        en: 'Software Security',
+        en: 'Binary Exploitation',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'InfoSec', ], 'en'))
+      },
+    },
+    {
+      label: 'Web 安全',
+      translations: {
+        en: 'Web Security',
       },
       slug: '',
       attrs: {
@@ -1192,9 +1203,9 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
-      label: '二进制分析',
+      label: '软件逆向工程',
       translations: {
-        en: 'Binary Analysis',
+        en: 'Software Reverse Engineering',
       },
       slug: '',
       attrs: {
