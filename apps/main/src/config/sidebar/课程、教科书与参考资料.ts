@@ -1240,9 +1240,9 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Network Security',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/network-security',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Net', 'InfoSec', ], 'en'))
       },
     },
@@ -1262,9 +1262,9 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Hardware Security',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/hardware-security',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Arch', 'Electronics', 'InfoSec', ], 'en'))
       },
     },
