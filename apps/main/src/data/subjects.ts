@@ -178,4 +178,10 @@ add_many([
       en: { full: { canonical: 'Embedded Systems', all: [ 'Embedded Systems', 'Embedded System', ] }, short: { canonical: 'Embedded', all: [ 'Embedded', ] } },
     },
   },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '机械工程', all: [ '机械工程', ] }, short: { canonical: '机械', all: [ '机械', ] } },
+      en: { full: { canonical: 'Mechanical Engineering', all: [ 'Mechanical Engineering', ] }, short: { canonical: 'Mech', all: [ 'Mechanical', 'Mech', 'MechEng', ] } },
+    },
+  },
 ])
