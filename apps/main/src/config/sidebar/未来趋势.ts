@@ -114,6 +114,16 @@ export const Future_Trends = {
           },
         },
         {
+          label: 'IT/OT 融合',
+          translations: {
+            en: 'IT/OT Convergence',
+          },
+          slug: '',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+          },
+        },
+        {
           label: '不仅需要终身学习，更需要终身自学',
           translations: {
             en: 'Not Only Lifelong Learning, but Also Lifelong Self-Learning',
