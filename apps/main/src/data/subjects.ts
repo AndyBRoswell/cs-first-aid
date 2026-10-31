@@ -184,4 +184,16 @@ add_many([
       en: { full: { canonical: 'Mechanical Engineering', all: [ 'Mechanical Engineering', ] }, short: { canonical: 'Mech', all: [ 'Mechanical', 'Mech', 'MechEng', ] } },
     },
   },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '数据科学', all: [ '数据科学', ] }, short: { canonical: '数据科学', all: [ '数据科学', ] } },
+      en: { full: { canonical: 'Data Science', all: [ 'Data Science', ] }, short: { canonical: 'DS', all: [ 'DataSci', 'DatSci', 'DS', ] } },
+    },
+  },
+  {
+    names: {
+      'zh-CN': { full: { canonical: '数据工程', all: [ '数据工程', ] }, short: { canonical: '数据工程', all: [ '数据工程', ] } },
+      en: { full: { canonical: 'Data Engineering', all: [ 'Data Engineering', ] }, short: { canonical: 'DE', all: [ 'DataEng', 'DatEng', 'DE', ] } },
+    },
+  },
 ])
