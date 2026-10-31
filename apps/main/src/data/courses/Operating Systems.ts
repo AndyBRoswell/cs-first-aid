@@ -21,6 +21,15 @@ export const I_info = {
           ...catalog.filter(item => item.type === 'book' && item.title === 'xv6: a simple, Unix-like teaching operating system' && item.author?.some(author => author.family === 'Cox'), { count: 1 }),
         ],
       },
+      course: {
+        en: {
+          cse598_revpa: [
+            ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/reversing-hell/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/introspecting/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/hello-hackers/', { count: 1 }),
+          ],
+        },
+      },
       other: {
         zh: [
           ...catalog.filter(item => item.type === 'webpage' && item.title === '计算机本科生花大量时间写编译器，操作系统是不是不务正业？', { count: 1 }),
