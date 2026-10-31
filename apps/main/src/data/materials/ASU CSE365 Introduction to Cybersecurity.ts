@@ -46,7 +46,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/cse365-f2026/module-1/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: '平台入门、Linux 命令行、文件与进程操作，以及用户、权限和访问控制基础。',
+      note: 'Platform basics, Linux shell, files, processes, users, permissions, and access control.',
     } satisfies types_data.Material,
   },
   {
@@ -63,7 +63,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/cse365-f2026/module-2/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: '数据表示与编码、HTTP 请求和响应、SQL 查询基础，为后续 Web 安全与密码学实验作准备。',
+      note: 'Data representation and encoding, HTTP requests and responses, and SQL basics.',
     } satisfies types_data.Material,
   },
   {
@@ -80,7 +80,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/cse365-f2026/module-3/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: '路径遍历、命令注入、认证绕过、SQL 注入、XSS 与 CSRF；包含漏洞代码说明与渐进式实验。',
+      note: 'Path traversal, command and SQL injection, authentication bypasses, XSS, and CSRF.',
     } satisfies types_data.Material,
   },
   {
@@ -97,7 +97,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/cse365-f2026/module-4/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: 'x86-64 汇编、内存与栈、控制流、系统调用、程序调试与 Web 服务器构建等计算机系统基础实验。',
+      note: 'x86-64 assembly, memory, stacks, control flow, syscalls, debugging, and building a web server.',
     } satisfies types_data.Material,
   },
   {
@@ -114,7 +114,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/cse365-f2026/module-5/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: '围绕 cIMG 文件格式，练习程序理解、内部状态分析、指令与资源处理及程序修改。',
+      note: 'Program analysis and patching through the cIMG format, internal state, instructions, and resources.',
     } satisfies types_data.Material,
   },
   {
@@ -131,7 +131,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/cse365-f2026/module-6/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: '二进制漏洞利用入门；通过内存破坏与控制流劫持实验理解程序中的安全错误。',
+      note: 'Introductory memory corruption and control-flow hijacking exercises.',
     } satisfies types_data.Material,
   },
   {
@@ -148,7 +148,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/cse365-s2026/module-7/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: 'Ethernet、IP、TCP、ARP 与网络通信截获和操纵实验；2026 秋模块尚未公开练习，先收录春季版本。',
+      note: 'Ethernet, IP, TCP, ARP, and traffic interception. Uses Spring 2026; Fall 2026 challenges were not yet public.',
     } satisfies types_data.Material,
   },
   {
@@ -165,7 +165,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/cse365-s2026/module-8/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: '对称加密、密钥交换、非对称加密、哈希与信任机制的入门实验；2026 秋模块尚未公开练习，先收录春季版本。',
+      note: 'Symmetric and asymmetric cryptography, key exchange, hashes, and trust. Uses Spring 2026; Fall 2026 challenges were not yet public.',
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
