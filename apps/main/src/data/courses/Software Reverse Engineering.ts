@@ -20,6 +20,9 @@ export const info = {
           ],
           cse598_revpa: [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/reversing-hell/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/introspecting/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/assembly-crash-course/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/debugging-refresher/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/babyc/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/babyprofile/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/babypyc/', { count: 1 }),
