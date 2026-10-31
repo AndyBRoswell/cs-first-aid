@@ -1,7 +1,37 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
-import * as CSL from '@cs-first-aid/bibkit/CSL'
 
+// Module titles follow each semester's syllabus; challenge pages use "Module N" headings.
 export const entries = [
+  {
+    id: [],
+    material: {
+      type: 'webpage',
+      title: 'CSE 365: Introduction to Cybersecurity — Fall 2026',
+      number: 'CSE 365',
+      publisher: 'Arizona State University',
+      genre: 'Course website and syllabus',
+      issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
+      version: 'Fall 2026',
+      language: 'en',
+      URL: 'https://pwn.college/cse365-f2026/',
+      accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
+    } satisfies types_data.Material,
+  },
+  {
+    id: [],
+    material: {
+      type: 'webpage',
+      title: 'CSE 365: Introduction to Cybersecurity — Spring 2026',
+      number: 'CSE 365',
+      publisher: 'Arizona State University',
+      genre: 'Course website and syllabus',
+      issued: { 'date-parts': [ [ 2026 ] ], season: 1 },
+      version: 'Spring 2026',
+      language: 'en',
+      URL: 'https://pwn.college/cse365-s2026/',
+      accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
+    } satisfies types_data.Material,
+  },
   {
     id: [],
     material: {
@@ -17,9 +47,6 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-1/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: '平台入门、Linux 命令行、文件与进程操作，以及用户、权限和访问控制基础。',
-      custom: {
-        URL: [ { link: 'https://pwn.college/cse365-f2026/', display_text: 'Fall 2026', 'Content-Type': 'text/html' } ],
-      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -37,9 +64,6 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-2/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: '数据表示与编码、HTTP 请求和响应、SQL 查询基础，为后续 Web 安全与密码学实验作准备。',
-      custom: {
-        URL: [ { link: 'https://pwn.college/cse365-f2026/', display_text: 'Fall 2026', 'Content-Type': 'text/html' } ],
-      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -57,9 +81,6 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-3/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: '路径遍历、命令注入、认证绕过、SQL 注入、XSS 与 CSRF；包含漏洞代码说明与渐进式实验。',
-      custom: {
-        URL: [ { link: 'https://pwn.college/cse365-f2026/', display_text: 'Fall 2026', 'Content-Type': 'text/html' } ],
-      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -77,9 +98,6 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-4/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'x86-64 汇编、内存与栈、控制流、系统调用、程序调试与 Web 服务器构建等计算机系统基础实验。',
-      custom: {
-        URL: [ { link: 'https://pwn.college/cse365-f2026/', display_text: 'Fall 2026', 'Content-Type': 'text/html' } ],
-      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -97,9 +115,6 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-5/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: '围绕 cIMG 文件格式，练习程序理解、内部状态分析、指令与资源处理及程序修改。',
-      custom: {
-        URL: [ { link: 'https://pwn.college/cse365-f2026/', display_text: 'Fall 2026', 'Content-Type': 'text/html' } ],
-      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -117,9 +132,6 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-6/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: '二进制漏洞利用入门；通过内存破坏与控制流劫持实验理解程序中的安全错误。',
-      custom: {
-        URL: [ { link: 'https://pwn.college/cse365-f2026/', display_text: 'Fall 2026', 'Content-Type': 'text/html' } ],
-      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -137,9 +149,6 @@ export const entries = [
       URL: 'https://pwn.college/cse365-s2026/module-7/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Ethernet、IP、TCP、ARP 与网络通信截获和操纵实验；2026 秋模块尚未公开练习，先收录春季版本。',
-      custom: {
-        URL: [ { link: 'https://pwn.college/cse365-s2026/', display_text: 'Spring 2026', 'Content-Type': 'text/html' } ],
-      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -157,9 +166,6 @@ export const entries = [
       URL: 'https://pwn.college/cse365-s2026/module-8/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: '对称加密、密钥交换、非对称加密、哈希与信任机制的入门实验；2026 秋模块尚未公开练习，先收录春季版本。',
-      custom: {
-        URL: [ { link: 'https://pwn.college/cse365-s2026/', display_text: 'Spring 2026', 'Content-Type': 'text/html' } ],
-      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
