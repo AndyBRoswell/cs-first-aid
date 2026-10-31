@@ -56,7 +56,7 @@ export const entries = [
       note: 'Exercise instructions are embedded in the lecture pages. MOOC.fi blurs exercise cards for signed-out visitors; a freely registered MOOC.fi account is needed to view them normally. No University of Helsinki student account is required. The Chapter 4 instructions use GKE, which requires a Google Cloud account and may incur charges; Chapters 2–3 and some later exercises can be completed locally.',
       custom: {
         URL: [
-          { link: 'https://courses.mooc.fi/org/uh-cs/courses/devops-with-kubernetes-2026', display_text: 'Course homepage (2026)', note: 'Exercise cards are blurred until you log in with a freely registered MOOC.fi account; no university account is required. Chapter 4 uses GKE and may incur cloud charges; Chapters 2–3 and some later exercises can run locally.' },
+          { link: 'https://courses.mooc.fi/org/uh-cs/courses/devops-with-kubernetes-2026', display_text: 'Course homepage (2026)', },
           { link: 'https://courses.mooc.fi/signup', display_text: 'Create a MOOC.fi account with an ordinary email address' },
         ],
         free_material: {
