@@ -30,15 +30,23 @@ import References from '@/components/References.astro'
       </section>
     </section>
     <section>
-      ### 课程模块与实验
+      ### 课程资料与学习路线
       <section>
         #### 英文
         <section>
-          ##### ASU CSE598：Reverse Engineering and Program Analysis
+          ##### ASU CSE 598：Reverse Engineering and Program Analysis
           <References
-            materials={course_material.reference.course.en.cse598_revpa}
+            materials={course_material.reference.course.en['CSE 598 Rev&PA']}
             reference_ranges={reference_ranges}
-            scope_name={[ 'reference', 'course', 'en', 'cse598_revpa' ]}
+            scope_name={[ 'reference', 'course', 'en', 'CSE 598 Rev&PA' ]}
+          />
+        </section>
+        <section>
+          ##### OpenSecurityTraining2
+          <References
+            materials={course_material.reference.course.en.OST2}
+            reference_ranges={reference_ranges}
+            scope_name={[ 'reference', 'course', 'en', 'OST2' ]}
           />
         </section>
       </section>
