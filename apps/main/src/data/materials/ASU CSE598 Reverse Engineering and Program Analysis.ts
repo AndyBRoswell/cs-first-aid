@@ -77,7 +77,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/reversing-hell/memory/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: 'x86-64 memory loads, stores, addresses, and pointer dereferencing.',
+      note: 'Memory loads, offset addressing, and multilevel pointer dereferencing in x86-64.',
     } satisfies types_data.Material,
   },
   {
@@ -93,7 +93,7 @@ export const entries = [
       language: 'en',
       URL: 'https://pwn.college/reversing-hell/hello-hackers/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-      note: 'Linux write syscall, file descriptors, and terminal output in x86-64 assembly.',
+      note: 'Linux read/write syscalls, file descriptors, and buffers in x86-64 assembly.',
     } satisfies types_data.Material,
   },
   {
