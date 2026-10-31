@@ -723,9 +723,9 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Secure Programming',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/secure-programming',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'InfoSec', ], 'en'))
       },
     },
@@ -917,6 +917,17 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '现代控制理论',
+      translations: {
+        en: 'Modern Control Theory',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Electronics', 'Control', ], 'en'))
+      },
+    },
+    {
       label: '设计模式',
       translations: {
         en: 'Design Patterns',
@@ -1035,6 +1046,17 @@ export const Courses_Textbooks_and_References = {
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Multimedia', ], 'en'))
+      },
+    },
+    {
+      label: '模式识别',
+      translations: {
+        en: 'Pattern Recognition',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'AI', ], 'en'))
       },
     },
     {
@@ -1174,9 +1196,9 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Binary Exploitation',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/binary-exploitation',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'InfoSec', ], 'en'))
       },
     },
@@ -1185,9 +1207,9 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Web Security',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/web-security',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'InfoSec', ], 'en'))
       },
     },
@@ -1207,9 +1229,9 @@ export const Courses_Textbooks_and_References = {
       translations: {
         en: 'Software Reverse Engineering',
       },
-      slug: '',
+      slug: 'courses-textbooks-and-references/software-reverse-engineering',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'InfoSec', ], 'en'))
       },
     },
