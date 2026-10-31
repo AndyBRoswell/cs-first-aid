@@ -28,6 +28,10 @@ export const info = {
         XB_40009: { en: [
           ...catalog.filter(item => item.type === 'webpage' && item.title === 'Computer Organization' && item.number === 'XB_40009' && item.version === '2026–2027', { count: 1 }),
         ] },
+        cse598_revpa: { en: [
+          ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/reversing-hell/', { count: 1 }),
+          ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/memory/', { count: 1 }),
+        ] },
       },
       lab: { en: [
         ...catalog.filter(item => item.type === 'document' && item.title === 'CO Lab Manual' && item.number === 'XB_40009' && item.version === '2025–2026', { count: 1 }),
