@@ -20,21 +20,6 @@ export const entries = [
   {
     id: [],
     material: {
-      type: 'webpage',
-      title: 'CSE 365: Introduction to Cybersecurity — Spring 2026',
-      number: 'CSE 365',
-      publisher: 'Arizona State University',
-      genre: 'Course website and syllabus',
-      issued: { 'date-parts': [ [ 2026 ] ], season: 1 },
-      version: 'Spring 2026',
-      language: 'en',
-      URL: 'https://pwn.college/cse365-s2026/',
-      accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
-    } satisfies types_data.Material,
-  },
-  {
-    id: [],
-    material: {
       type: 'document',
       title: 'Getting Started, Linux Luminarium, and Access Control',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
@@ -132,6 +117,21 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-6/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Introductory memory corruption and control-flow hijacking exercises.',
+    } satisfies types_data.Material,
+  },
+  {
+    id: [],
+    material: {
+      type: 'webpage',
+      title: 'CSE 365: Introduction to Cybersecurity — Spring 2026',
+      number: 'CSE 365',
+      publisher: 'Arizona State University',
+      genre: 'Course website and syllabus',
+      issued: { 'date-parts': [ [ 2026 ] ], season: 1 },
+      version: 'Spring 2026',
+      language: 'en',
+      URL: 'https://pwn.college/cse365-s2026/',
+      accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
     } satisfies types_data.Material,
   },
   {
