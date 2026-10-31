@@ -12,16 +12,24 @@ import References from '@/components/References.astro'
   <section>
     ## 参考资料
     <section>
-      ### 课程模块与实验
+      ### 课程资料与学习路线
       <section>
         #### 英文
         <section>
-          ##### ASU CSE365：Introduction to Cybersecurity
+          ##### ASU CSE 365：Introduction to Cybersecurity
           以下模块用于理解漏洞成因与验证攻击效果，作为安全编程的补充实验。
           <References
-            materials={course_material.reference.course.en.cse365}
+            materials={course_material.reference.course.en['CSE 365']}
             reference_ranges={reference_ranges}
-            scope_name={[ 'reference', 'course', 'en', 'cse365' ]}
+            scope_name={[ 'reference', 'course', 'en', 'CSE 365' ]}
+          />
+        </section>
+        <section>
+          ##### OpenSecurityTraining2
+          <References
+            materials={course_material.reference.course.en.OST2}
+            reference_ranges={reference_ranges}
+            scope_name={[ 'reference', 'course', 'en', 'OST2' ]}
           />
         </section>
       </section>

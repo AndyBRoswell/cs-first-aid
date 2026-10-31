@@ -23,10 +23,14 @@ export const I_info = {
       },
       course: {
         en: {
-          cse598_revpa: [
+          'CSE 598 Rev&PA': [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/reversing-hell/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/introspecting/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/hello-hackers/', { count: 1 }),
+          ],
+          OST2: [
+            ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://ost2.fyi/System-Security.html', { count: 1 }),
+            ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://ost2.fyi/Windows-Security.html', { count: 1 }),
           ],
         },
       },

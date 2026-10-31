@@ -9,16 +9,16 @@ export const info = {
     reference: {
       course: {
         en: {
-          cse365: [
+          'CSE 365': [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/cse365-f2026/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse365-f2026/module-5/', { count: 1 }),
           ],
-          cse466: [
+          'CSE 466': [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/cse466-f2026/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse466-f2026/assembly/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse466-f2026/reverse-engineering/', { count: 1 }),
           ],
-          cse598_revpa: [
+          'CSE 598 Rev&PA': [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/reversing-hell/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/introspecting/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/assembly-crash-course/', { count: 1 }),
@@ -33,7 +33,7 @@ export const info = {
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/project_21/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/project_22/', { count: 1 }),
           ],
-          cse598_avr: [
+          'CSE 598 AVR': [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/cse598-avr-f2024/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse598-avr-f2024/xnu-mach-ipc/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse598-avr-f2024/xnu-mach-ports/', { count: 1 }),
@@ -41,6 +41,9 @@ export const info = {
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse598-avr-f2024/xnu-pac/', { count: 1 }),
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/cse598-avr-f2025/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse598-avr-f2025/what-is-a-bug/', { count: 1 }),
+          ],
+          OST2: [
+            ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://ost2.fyi/Malware-Analysis.html', { count: 1 }),
           ],
         },
       },

@@ -15,7 +15,7 @@ export const info = {
     reference: {
       course: {
         en: {
-          cse598_revpa: [
+          'CSE 598 Rev&PA': [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/reversing-hell/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/your-first-program/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/memory/', { count: 1 }),
