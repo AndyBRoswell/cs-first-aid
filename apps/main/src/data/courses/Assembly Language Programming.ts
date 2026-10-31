@@ -12,5 +12,19 @@ export const info = {
         ...catalog.filter(item => item.type === 'book' && item.title === 'Assembly Language for x86 Processors' && item.author?.some(author => author.family === 'Irvine' && author.given === 'Kip R.'), { count: 1 }),
       ],
     },
+    reference: {
+      course: {
+        en: {
+          cse598_revpa: [
+            ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/reversing-hell/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/your-first-program/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/memory/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/hello-hackers/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/assembly-crash-course/', { count: 1 }),
+            ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/reversing-hell/debugging-refresher/', { count: 1 }),
+          ],
+        },
+      },
+    },
   },
 } satisfies types_data.Course
