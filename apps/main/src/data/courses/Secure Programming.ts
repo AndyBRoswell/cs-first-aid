@@ -9,10 +9,13 @@ export const info = {
     reference: {
       course: {
         en: {
-          cse365: [
+          'CSE 365': [
             ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://pwn.college/cse365-f2026/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse365-f2026/module-3/', { count: 1 }),
             ...catalog.filter(item => item.type === 'document' && item.URL === 'https://pwn.college/cse365-f2026/module-6/', { count: 1 }),
+          ],
+          OST2: [
+            ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://ost2.fyi/Secure-Software-Design-and-Implementation.html', { count: 1 }),
           ],
         },
       },
