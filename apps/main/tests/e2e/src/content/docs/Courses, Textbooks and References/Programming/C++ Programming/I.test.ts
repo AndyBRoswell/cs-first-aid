@@ -19,7 +19,7 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
   await expect(main.getByRole('heading', { level: 2 })).toHaveText([
-    '教科书', '参考资料', '未选书目',
+    '教科书', '参考资料', '未选材料',
   ])
 
   await src_util.test.step('教科书', async () => {
@@ -45,11 +45,11 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
     await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
   })
 
-  await src_util.test.step('未选书目', async () => {
+  await src_util.test.step('未选材料', async () => {
     References = course_util.locate_references(main, [ 'excluded', 'en' ])
-    await expect(References.locator('.entry.CSL')).toHaveCount(2)
+    await expect(References.locator('.entry.CSL')).toHaveCount(3)
     await src_util.everyone_occurs(References, [
-      /C\+\+ Primer,/, /C\+\+ Primer Plus,/,
+      /C\+\+ Primer,/, /C\+\+ Primer Plus,/, /cplusplus\.com/,
     ])
     section = src_util.locate_parent(References, 'section')
     await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
