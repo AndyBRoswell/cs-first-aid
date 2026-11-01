@@ -500,6 +500,17 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '图形用户界面',
+      translations: {
+        en: 'Graphical User Interfaces',
+      },
+      slug: 'courses-textbooks-and-references/graphical-user-interfaces',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'HCI', ], 'en'))
+      },
+    },
+    {
       label: 'Web 开发',
       translations: {
         en: 'Web Development',
