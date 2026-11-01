@@ -33,8 +33,10 @@ src_util.test('Graph Theory', { tag: [ '@Courses, Textbooks and References', '@D
     await src_util.everyone_occurs(References, [
       /D. B. West/,
       /J. M. Harris/,
+      /M. Lavrov/,
       /Introduction to Graph Theory/,
       /Combinatorics and Graph Theory/,
+      /Start Doing Graph Theory/,
     ])
   })
 
