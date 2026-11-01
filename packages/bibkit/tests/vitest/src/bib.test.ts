@@ -49,8 +49,8 @@ test.each([
     expect(field.querySelector(':scope > .label')!.textContent).toBe(label)
     const list = field.querySelector('ul.list')!
     expect(list.querySelectorAll(':scope > li').map(item => item.textContent)).toEqual(institution)
-    expect(list.querySelector('img, institute')).toBeNull()
-    expect(root.querySelector('.csl-entry')!.textContent).toContain('Example Press')
+    expect(list.querySelector('img, institute')).toBeNull() // typo checker
+    expect(root.querySelector('.csl-entry')!.textContent).toContain('Example Press') // custom.institution should not make publiser absent
   }
 })
 
