@@ -35,6 +35,39 @@ function citation_entries(materials: Material[], numbers: number[]) { return num
 
 test('resolve_citations returns no results for an empty input', () => { expect(bib.resolve_citations([], [])).toEqual([]) })
 
+test.each([
+  { language: 'zh-CN', label: '机构：' },
+  { language: 'en', label: 'Institution:' },
+])('print_bibliography renders institutions as localized plain-text lists ($language)', ({ language, label }) => {
+  for (const institution of [
+    [ 'University of Leeds' ],
+    [ 'Politechnika Warszawska', 'Research <Institute> & Studies', '<img src=x onerror=alert(1)>' ],
+  ]) {
+    const material = { type: 'document', title: 'Course materials', publisher: 'Example Press', language: 'en-US', custom: { institution } } satisfies Material
+    const root = node_html_parser.parse(bib.print_bibliography([ material ], { language }))
+    const field = root.querySelector('.custom > .institution')!
+    expect(field.querySelector(':scope > .label')!.textContent).toBe(label)
+    const list = field.querySelector('ul.list')!
+    expect(list.querySelectorAll(':scope > li').map(item => item.textContent)).toEqual(institution)
+    expect(list.querySelector('img, institute')).toBeNull() // typo checker
+    expect(root.querySelector('.csl-entry')!.textContent).toContain('Example Press') // custom.institution should not make publiser absent
+  }
+})
+
+test('print_bibliography omits absent and empty institution lists', () => {
+  const materials: Material[] = [
+    { type: 'document', title: 'No custom fields' },
+    { type: 'document', title: 'No institution', custom: {} },
+    { type: 'document', title: 'Empty institutions', custom: { institution: [] } },
+  ]
+  for (const material of materials) {
+    for (const language of i18n.supported_languages) {
+      const root = node_html_parser.parse(bib.print_bibliography([ material ], { language }))
+      expect(root.querySelector('.custom > .institution')).toBeNull()
+    }
+  }
+})
+
 test('print_bibliography localizes the lecturer label by interface language', () => {
   const material: Material = { type: 'motion_picture', title: 'Lecture', language: 'en-US', custom: { lecturer: [ { family: '丘', given: '维声', } ], }, }
   expect(bib.print_bibliography([ material ], { language: 'zh-CN' })).toContain('主讲：')
