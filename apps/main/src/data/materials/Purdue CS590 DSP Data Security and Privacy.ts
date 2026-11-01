@@ -6,7 +6,7 @@ export const entries = [
     id: [],
     material: {
       type: 'document',
-      title: 'CS590 DSP: Data Security and Privacy',
+      title: 'Data Security and Privacy',
       number: 'CS590 DSP',
       author: [ { given: 'Ninghui', family: 'Li' } ],
       genre: 'Lecture slides, handouts, and assignments',
