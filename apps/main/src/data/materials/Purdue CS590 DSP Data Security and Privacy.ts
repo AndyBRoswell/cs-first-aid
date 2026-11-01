@@ -44,6 +44,7 @@ export const entries = [
             { link: 'https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/handouts/hw1.pdf', display_text: 'Homework 1 (PDF)', 'Content-Type': 'application/pdf' },
             { link: 'https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/handouts/hw2.pdf', display_text: 'Homework 2 (PDF)', 'Content-Type': 'application/pdf' },
             { link: 'https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/handouts/hw3.pdf', display_text: 'Homework 3: Differential privacy programming (PDF)', 'Content-Type': 'application/pdf' },
+            { link: 'https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/handouts/hw4.pdf', display_text: 'Homework 4: Differential privacy programming (PDF)', 'Content-Type': 'application/pdf' },
             { link: 'https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/handouts/hw5.pdf', display_text: 'Homework 5 (PDF)', 'Content-Type': 'application/pdf' },
             { link: 'https://github.com/SkinfaxiL/public_CS590DSP', display_text: 'Programming assignments and data (Jupyter notebooks)' },
           ],
