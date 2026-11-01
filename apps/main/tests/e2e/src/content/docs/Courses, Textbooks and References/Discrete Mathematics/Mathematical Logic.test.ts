@@ -61,6 +61,15 @@ src_util.test('Mathematical Logic', { tag: [ '@Courses, Textbooks and References
     ])
   })
 
+  await src_util.test.step('其它参考/课程资料/英文', async () => {
+    References = course_util.locate_references(main, [ 'reference', 'lecture_notes_and_slides', 'en' ])
+    await src_util.everyone_occurs(References, [
+      /L. C. Paulson/,
+      /Logic and Proof/,
+      /University of Cambridge/,
+    ])
+  })
+
   await src_util.test.step('其它参考/指导书/英文', async () => {
     References = course_util.locate_references(main, [ 'reference', 'guide', 'en' ])
     await src_util.everyone_occurs(References, [
