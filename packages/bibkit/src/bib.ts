@@ -142,6 +142,14 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
   if (material.custom) {
     const additional = util.create_HTML_element('div', { class: 'custom', })
     const labels = get_custom_label(language)
+    if (material.custom.institution?.length) {
+      const field = util.create_HTML_element('div', { class: 'institution', })
+      field.appendChild(util.create_HTML_element('span', { class: 'label', }, format_field_label(labels.institution, language)))
+      const list = util.create_HTML_element('ul', { class: 'list', role: 'list', })
+      for (const institution of material.custom.institution) { list.appendChild(util.create_HTML_element('li', {}, institution)) }
+      field.appendChild(list)
+      additional.appendChild(field)
+    }
     if (material.custom.lecturer !== undefined) {
       const p = util.create_HTML_element('p', { class: 'lecturer', })
       const lecturer = catalog.get_rendered_names(material.custom.lecturer, { full_name: true })
