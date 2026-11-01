@@ -29,6 +29,7 @@ export const I_info = {
       en: [
         ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'C++ Primer') && item.edition === 5, { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'C++ Primer Plus') && item.edition === 6, { count: 1 }),
+        catalog.get('cplusplus.com'),
       ],
     },
   }
@@ -56,6 +57,11 @@ export const II_info = {
           ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
         ],
       },
+    },
+    excluded: {
+      en: [
+        catalog.get('cplusplus.com'),
+      ],
     },
   },
 } satisfies types_data.Course
