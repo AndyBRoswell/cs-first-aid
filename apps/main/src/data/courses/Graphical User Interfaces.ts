@@ -10,6 +10,7 @@ export const info = {
       lecture_notes_and_slides: {
         en: [
           ...catalog.filter(item => item.type === 'document' && item.title === 'Programming in Graphical Environment' && item.publisher === 'Politechnika Warszawska' && item.version === '2025/26', { count: 1 }),
+          ...catalog.filter(item => item.type === 'document' && item.title === 'COMP2811 Exercises' && item.publisher === 'University of Leeds', { count: 1 }),
         ],
       },
       documentation: {
