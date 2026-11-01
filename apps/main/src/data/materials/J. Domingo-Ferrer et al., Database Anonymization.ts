@@ -18,6 +18,7 @@ export const entries = [
       ISBN: '9783031023477',
       DOI: '10.1007/978-3-031-02347-7',
       'collection-title': 'Synthesis Lectures on Information Security, Privacy, and Trust',
+      'collection-editor': [ { given: 'Elisa', family: 'Bertino' }, { given: 'Elena', family: 'Ferrari' } ], // Current series editors, https://link.springer.com/series/16908
       ISSN: '1945-9750',
       'number-of-pages': 'XV + 120',
       language: 'en',
