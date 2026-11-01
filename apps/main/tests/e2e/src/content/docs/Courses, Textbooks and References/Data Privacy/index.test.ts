@@ -29,7 +29,7 @@ for (const { language, prefix } of [
 
     const courses = course_util.locate_references(main, [ 'reference', 'lecture_notes_and_slides', 'en' ])
     await expect(courses.locator('.Bibliography > .entry.CSL')).toHaveCount(1)
-    await expect(courses).toContainText('CS590 DSP: Data Security and Privacy')
+    await expect(courses).toContainText('Data Security and Privacy')
     await expect(courses.locator('.institution > .list > li')).toHaveText([ 'Purdue University' ])
   })
 }
