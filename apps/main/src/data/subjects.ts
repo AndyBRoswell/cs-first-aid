@@ -84,6 +84,12 @@ add_many([
   },
   {
     names: {
+      'zh-CN': { full: { canonical: '人机交互', all: [ '人机交互', ] }, short: { canonical: '人机交互', all: [ '人机交互', ] } },
+      en: { full: { canonical: 'Human-Computer Interaction', all: [ 'Human-Computer Interaction', ] }, short: { canonical: 'HCI', all: [ 'HCI', ] } },
+    },
+  },
+  {
+    names: {
       'zh-CN': { full: { canonical: '信息安全', all: [ '信息安全', ] }, short: { canonical: '信安', all: [ '信安', ] } },
       en: { full: { canonical: 'Information Security', all: [ 'Information Security', ] }, short: { canonical: 'InfoSec', all: [ 'InfoSec', ] } },
     },
