@@ -12,7 +12,6 @@ export const entries = [
       ],
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'Harvard University',
       number: 'CS2640',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: 'Spring 2026',
@@ -21,6 +20,7 @@ export const entries = [
       URL: 'https://moderncomputerstorage.com/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Harvard University' ],
         URL: [
           { link: 'https://systems.seas.harvard.edu/teaching/', display_text: 'Harvard Systems Group teaching page' },
         ],
@@ -58,7 +58,6 @@ export const entries = [
       title: 'Course Project',
       genre: 'Course project and assignments',
       medium: 'HTML',
-      publisher: 'Harvard University',
       number: 'CS2640',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: 'Spring 2026',
@@ -66,6 +65,7 @@ export const entries = [
       URL: 'https://moderncomputerstorage.com/project',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Harvard University' ],
         lecturer: [ { given: 'Juncheng', family: 'Yang' } ], // The project page has no author byline; its footer names the copyright holder.
         URL: [
           { link: 'https://moderncomputerstorage.com/', display_text: 'Course website' },

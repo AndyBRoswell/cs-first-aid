@@ -10,13 +10,13 @@ export const entries = [
       author: [ { literal: 'CSSE6400 Course Staff' } ],
       genre: 'Lecture notes and slides',
       medium: 'PDF',
-      publisher: 'The University of Queensland',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: 'Semester 1, 2026',
       language: 'en',
       URL: 'https://csse6400.uqcloud.net/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
+        institution: [ 'The University of Queensland' ],
         lecturer: [ { given: 'Richard', family: 'Thomas' } ],
         URL: [
           { link: 'https://course-profiles.uq.edu.au/course-profiles/CSSE6400-21413-7620', display_text: 'Course profile (UQ)' }, // issued, version, lecturer

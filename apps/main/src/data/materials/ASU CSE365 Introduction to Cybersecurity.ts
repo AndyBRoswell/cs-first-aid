@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 // Module titles and numbers follow each semester's syllabus; challenge pages use "Module N" headings.
 export const entries = [
@@ -8,13 +9,15 @@ export const entries = [
       type: 'webpage',
       title: 'CSE 365: Introduction to Cybersecurity — Fall 2026',
       number: 'CSE 365',
-      publisher: 'Arizona State University',
       genre: 'Course website and syllabus',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
       language: 'en',
       URL: 'https://pwn.college/cse365-f2026/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -24,7 +27,6 @@ export const entries = [
       title: 'Getting Started, Linux Luminarium, and Access Control',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
       number: '1',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -32,6 +34,9 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-1/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Platform basics, Linux shell, files, processes, users, permissions, and access control.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -41,7 +46,6 @@ export const entries = [
       title: 'Dealing with Data, Talking Web, and SQL Playground',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
       number: '2',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -49,6 +53,9 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-2/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Data representation and encoding, HTTP requests and responses, and SQL basics.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -58,7 +65,6 @@ export const entries = [
       title: 'Web Security',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
       number: '3',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -66,6 +72,9 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-3/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Path traversal, command and SQL injection, authentication bypasses, XSS, and CSRF.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -75,7 +84,6 @@ export const entries = [
       title: 'Computing 101',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
       number: '4',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -83,6 +91,9 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-4/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'x86-64 assembly, memory, stacks, control flow, syscalls, debugging, and building a web server.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -92,7 +103,6 @@ export const entries = [
       title: 'Reverse Engineering',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
       number: '5',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -100,6 +110,9 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-5/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Program analysis and patching through the cIMG format, internal state, instructions, and resources.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -109,7 +122,6 @@ export const entries = [
       title: 'Binary Exploitation',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
       number: '6',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -117,6 +129,9 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/module-6/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Introductory memory corruption and control-flow hijacking exercises.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -125,13 +140,15 @@ export const entries = [
       type: 'webpage',
       title: 'CSE 365: Introduction to Cybersecurity — Spring 2026',
       number: 'CSE 365',
-      publisher: 'Arizona State University',
       genre: 'Course website and syllabus',
       issued: { 'date-parts': [ [ 2026 ] ], season: 1 },
       version: 'Spring 2026',
       language: 'en',
       URL: 'https://pwn.college/cse365-s2026/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -141,7 +158,6 @@ export const entries = [
       title: 'Intercepting Communications',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
       number: '7',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 1 },
       version: 'Spring 2026',
@@ -149,6 +165,9 @@ export const entries = [
       URL: 'https://pwn.college/cse365-s2026/module-7/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Ethernet, IP, TCP, ARP, and traffic interception. Uses Spring 2026; Fall 2026 challenges were not yet public.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -158,7 +177,6 @@ export const entries = [
       title: 'Cryptography',
       'collection-title': 'CSE 365: Introduction to Cybersecurity',
       number: '8',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 1 },
       version: 'Spring 2026',
@@ -166,6 +184,9 @@ export const entries = [
       URL: 'https://pwn.college/cse365-s2026/module-8/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Symmetric and asymmetric cryptography, key exchange, hashes, and trust. Uses Spring 2026; Fall 2026 challenges were not yet public.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

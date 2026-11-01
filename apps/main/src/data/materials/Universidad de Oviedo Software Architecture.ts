@@ -15,12 +15,12 @@ export const entries = [
       ],
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'Universidad de Oviedo',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: '2025–2026',
       URL: 'https://arquisoft.github.io/course2526.html',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
+        institution: [ 'Universidad de Oviedo' ],
         URL: [
           { link: 'https://github.com/Arquisoft/Arquisoft.github.io', display_text: 'GitHub' },
         ],

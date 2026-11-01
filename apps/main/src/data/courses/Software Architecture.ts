@@ -10,7 +10,7 @@ export const info = {
       lecture_notes_and_slides: {
         en: [
           ...catalog.filter(item => item.type === 'document' && item.title === 'CSSE6400: Software Architecture' && item.version === 'Semester 1, 2026', { count: 1 }),
-          ...catalog.filter(item => item.type === 'document' && item.title === 'Software Architecture Course' && item.publisher === 'Universidad de Oviedo' && item.version === '2025–2026', { count: 1 }),
+          ...catalog.filter(item => item.type === 'document' && item.title === 'Software Architecture Course' && item.custom?.institution?.includes('Universidad de Oviedo') && item.version === '2025–2026', { count: 1 }),
           ...catalog.filter(item => item.type === 'document' && item.title === 'CS446: Software Design and Architecture' && item.version === 'Winter 2026', { count: 1 }),
           ...catalog.filter(item => item.type === 'document' && item.title === 'IN4315: Software Architecture' && item.version === '2022', { count: 1 }),
           ...catalog.filter(item => item.type === 'document' && item.title === 'Software Architecture' && item.author?.some(author => author.family === 'Taylor'), { count: 1 }),

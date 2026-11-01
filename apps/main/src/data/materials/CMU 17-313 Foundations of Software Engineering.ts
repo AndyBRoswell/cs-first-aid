@@ -10,13 +10,13 @@ export const entries = [
       author: [ { given: 'Michael', family: 'Hilton' }, { given: 'Joshua', family: 'Sunshine' } ],
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'Carnegie Mellon University',
       issued: { 'date-parts': [ [ 2026 ] ], season: 1 },
       version: 'Spring 2026',
       language: 'en',
       URL: 'https://cmu-313.github.io/_old/S26/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
+        institution: [ 'Carnegie Mellon University' ],
         free_material: [
           { link: 'https://cmu-313.github.io/_old/S26/#weekly-schedule', display_text: 'Lecture slides (PDF)', 'Content-Type': 'text/html' },
         ],
