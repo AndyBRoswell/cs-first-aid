@@ -18,8 +18,6 @@ export const entries = [
       ISBN: '9783031023477',
       DOI: '10.1007/978-3-031-02347-7',
       'collection-title': 'Synthesis Lectures on Information Security, Privacy, and Trust',
-      'collection-number': 15,
-      'collection-editor': [ { given: 'Elisa', family: 'Bertino' }, { given: 'Ravi', family: 'Sandhu' } ], // Editors named in the 2016 book.
       ISSN: '1945-9750',
       'number-of-pages': 'XV + 120',
       language: 'en',
@@ -27,7 +25,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 11, 1 ] ] },
       custom: {
         subtitle: 'Privacy Models, Data Utility, and Microaggregation-based Inter-model Connections',
-        'collection-title-short': 'SLISPT',
+        'collection-title-short': 'SLISPT', // Springer book page, Overview: abbreviation following the series title.
         copyright: 'Springer Nature Switzerland AG 2016',
         keyword: [ 'data releases', 'privacy protection', 'anonymization', 'privacy models', 'statistical disclosure limitation', 'statistical disclosure control', 'microaggregation' ], // Book front matter.
         topic: [ 'Systems and Data Security' ],
@@ -45,10 +43,12 @@ export const entries = [
             medium: 'Paperback',
             publisher: 'Morgan & Claypool Publishers',
             issued: { 'date-parts': [ [ 2016 ] ] },
+            'collection-number': 15,
+            'collection-editor': [ { given: 'Elisa', family: 'Bertino' }, { given: 'Ravi', family: 'Sandhu' } ], // 2016 book, copyright page (PDF page 6).
             ISBN: '9781627058438',
             DOI: '10.2200/S00690ED1V01Y201512SPT015',
             ISSN: '1945-9742',
-            'number-of-pages': 136, // Author's bibliography 【6 Sep 2026]: https://crises-deim.urv.cat/jdomingo/docs/currentCVeng.pdf
+            'number-of-pages': 136, // CV dated 6 Sep 2026, p. 81, book no. 2; stated directly in the CV, whose old publisher links are no longer usable: https://crises-deim.urv.cat/jdomingo/docs/currentCVeng.pdf#page=81
             custom: { copyright: 'Morgan & Claypool 2016' },
           },
         ],
