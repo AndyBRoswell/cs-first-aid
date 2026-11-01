@@ -38,6 +38,11 @@ export const Mathematical_Logic = {
           ...catalog.filter(item => item.author?.some(author => author.family === 'Huth') && item.title?.startsWith('Logic in Computer Science'), { max_count: 1 }),
         ],
       },
+      lecture_notes_and_slides: {
+        en: [
+          ...catalog.filter(item => item.type === 'document' && item.author?.some(author => author.family === 'Paulson') && util.ieq(item.title!, 'Logic and Proof') && item.version === '2021–22', { count: 1 }),
+        ],
+      },
       guide: {
         en: [
           ...catalog.filter(item => item.author?.some(author => author.family === 'Rosen') && util.ieq(item.title!, 'Student\'s Solutions Guide for Discrete Mathematics and Its Applications'), { max_count: 1 }),
@@ -103,6 +108,7 @@ export const Graph_Theory = {
       en: [
         ...catalog.filter(item => item.author?.some(author => author.family === 'West') && util.ieq(item.title!, 'Introduction to Graph Theory'), { max_count: 1 }),
         ...catalog.filter(item => item.author?.some(author => author.family === 'Harris') && util.ieq(item.title!, 'Combinatorics and Graph Theory'), { max_count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.author?.some(author => author.family === 'Lavrov') && util.ieq(item.title!, 'Start Doing Graph Theory'), { count: 1 }),
       ],
     },
     open_course: {
