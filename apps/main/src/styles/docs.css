@@ -45,7 +45,7 @@ ol.Bibliography.csl-bib-body {
   grid-column: 2;
 }
 
-.Bibliography > .entry.CSL > .custom > :is(.URL, .free_material) {
+.Bibliography > .entry.CSL > .custom > :is(.institution, .URL, .free_material) {
   display: grid;
   grid-template-columns: max-content minmax(0, 1fr); /* Align labels with independently wrapping values. */
   align-items: baseline;
@@ -57,7 +57,7 @@ ol.Bibliography.csl-bib-body {
 }
 
 .Bibliography > .entry.CSL > .custom .list {
-  display: inline-flex; /* Keep link groups inline with their label. */
+  display: inline-flex; /* Keep list items inline with their label. */
   flex-wrap: wrap; /* Wrap when insufficient space */
   gap: 0 0.75em; /* Row spacing: 0. Column spacing: 0.75em. */
   list-style: none;
@@ -65,7 +65,7 @@ ol.Bibliography.csl-bib-body {
   padding: 0;
 }
 
-.Bibliography > .entry.CSL > .custom .list > .Link {
+.Bibliography > .entry.CSL > .custom .list > li {
   margin: 0; /* Prevent prose styles from spacing individual link items. */
 }
 
