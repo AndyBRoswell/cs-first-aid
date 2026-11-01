@@ -10,7 +10,6 @@ export const entries = [
       author: [ { given: 'Animesh', family: 'Trivedi' }, { given: 'Lin', family: 'Wang' } ],
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'Vrije Universiteit Amsterdam',
       number: 'XB_0048',
       issued: { 'date-parts': [ [ 2020 ] ] },
       version: '2020',
@@ -19,6 +18,7 @@ export const entries = [
       URL: 'https://github.com/animeshtrivedi/animeshtrivedi.github.io/tree/master/files/2020/anp',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Vrije Universiteit Amsterdam' ],
         URL: [
           { link: 'https://animeshtrivedi.github.io/course-anp/', display_text: 'Lecturer course page and public-release statement' },
           { link: 'https://atlarge-research.com/courses/advanced-net-prog-vu/', display_text: 'Research group course page (2020 syllabus)' },
@@ -49,7 +49,6 @@ export const entries = [
       author: [ { given: 'Animesh', family: 'Trivedi' }, { given: 'Matthijs', family: 'Jansen' }, { given: 'Jesse', family: 'Donkervliet' } ], // Cover signatures; lectures 7–9 have no author byline.
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'Vrije Universiteit Amsterdam',
       number: 'XB_0048',
       issued: { 'date-parts': [ [ 2023 ] ] },
       version: '2023',
@@ -58,6 +57,7 @@ export const entries = [
       URL: 'https://drive.google.com/drive/folders/1o12Qgzj1xFBf-xIcAeALqUN1Gx8iMr29',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Vrije Universiteit Amsterdam' ],
         lecturer: [ { given: 'Animesh', family: 'Trivedi' }, { given: 'Balakrishnan', family: 'Chandrasekaran' }, { given: 'Matthijs', family: 'Jansen' }, { given: 'Jesse', family: 'Donkervliet' } ],
         URL: [
           { link: 'https://studiegids.vu.nl/en/courses/2024-2025/XB_0048', display_text: 'Official course description (XB_0048, 2024–2025)' },
@@ -105,7 +105,6 @@ export const entries = [
       ],
       genre: 'Laboratory manual',
       medium: 'Google Docs and PDF',
-      publisher: 'Vrije Universiteit Amsterdam',
       number: 'XB_0048',
       issued: { 'date-parts': [ [ 2023, 10, 27 ] ] }, // Revision history.
       version: '2.0',
@@ -114,6 +113,7 @@ export const entries = [
       URL: 'https://docs.google.com/document/d/1ytNjPB8nz6otKcD3G-3m9MT9zKcqZWg-dnuCK3RR3VM/edit',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Vrije Universiteit Amsterdam' ],
         URL: [
           { link: 'https://animeshtrivedi.github.io/course-anp/', display_text: 'Lecturer course page and public-release statement' },
           { link: 'https://drive.google.com/drive/folders/1DikFZmkc-jcW1biGPW_XtfHaY6dTsM9M', display_text: 'Official project assignment folder' },

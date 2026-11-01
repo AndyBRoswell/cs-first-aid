@@ -22,7 +22,6 @@ export const entries = [
     material: {
       type: 'document',
       title: 'CO Lab Manual',
-      publisher: 'Vrije Universiteit Amsterdam',
       genre: 'Laboratory manual',
       medium: 'HTML',
       number: 'XB_40009',
@@ -31,6 +30,7 @@ export const entries = [
       URL: 'https://computerscienceeducation.gitbook.io/co-lab-manual',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Vrije Universiteit Amsterdam' ],
         free_material: [
           { link: 'https://computerscienceeducation.gitbook.io/co-lab-manual', display_text: 'Lab manual (2025–2026)', 'Content-Type': 'text/html' },
           { link: 'https://github.com/ComputerScienceEducation/co-framework-2026', display_text: 'Lab framework (GitHub, 2025–2026)', 'Content-Type': 'text/html' },

@@ -13,7 +13,6 @@ export const entries = [
       ], // Slide credits; the introductory deck's lecturer list is not an author byline.
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'Vrije Universiteit Amsterdam',
       number: 'X_400487',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: '2025–2026',
@@ -22,6 +21,7 @@ export const entries = [
       URL: 'https://compnet2526.atlarge-research.com/docs/course-components/lectures/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Vrije Universiteit Amsterdam' ],
         lecturer: [
           { given: 'Jesse', family: 'Donkervliet' },
           { given: 'Gonçalo Amado', family: 'Mesquita' },
@@ -75,7 +75,6 @@ export const entries = [
       ],
       genre: 'Tutorial slides',
       medium: 'PDF',
-      publisher: 'Vrije Universiteit Amsterdam',
       number: 'X_400487',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: '2025–2026',
@@ -84,6 +83,7 @@ export const entries = [
       URL: 'https://compnet2526.atlarge-research.com/docs/course-components/tutorials/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Vrije Universiteit Amsterdam' ],
         free_material: {
           Slides: [
             { link: 'https://compnet2526.atlarge-research.com/slides/tutorial-1-physical-layer-link-layer.pdf', display_text: 'Tutorial 1: Physical and link layers (PDF)', 'Content-Type': 'application/pdf' },
@@ -108,13 +108,13 @@ export const entries = [
       title: 'Computer Networks Lab Manual',
       genre: 'Laboratory manual',
       medium: 'HTML',
-      publisher: 'Vrije Universiteit Amsterdam',
       number: 'X_400487',
       version: '2025–2026',
       language: 'en',
       URL: 'https://compnet2526.atlarge-research.com/docs/lab-manual/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Vrije Universiteit Amsterdam' ],
         free_material: {
           Assignments: [
             { link: 'https://compnet2526.atlarge-research.com/docs/lab-manual/mandatory-assignments/a1/', display_text: 'A1: Chat Client', 'Content-Type': 'text/html' },

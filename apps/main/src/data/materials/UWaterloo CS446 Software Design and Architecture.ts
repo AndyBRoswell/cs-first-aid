@@ -10,13 +10,13 @@ export const entries = [
       author: [ { given: 'Pengyu', family: 'Nie' } ],
       genre: 'Lecture notes and slides',
       medium: 'HTML and PDF',
-      publisher: 'University of Waterloo',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: 'Winter 2026',
       language: 'en',
       URL: 'https://pengyunie.github.io/cs446-1261/docs/lectures/slides/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
+        institution: [ 'University of Waterloo' ],
         URL: [
           { link: 'https://pengyunie.com/', display_text: 'Instructor’s teaching page' }, // author, issued, version
         ],

@@ -14,12 +14,13 @@ export const entries = [
       number: 11,
       author: [ { given: 'Ren', family: 'Ng' }, { given: 'David', family: 'McAllister' }, ],
       'collection-title': 'CS 184/284A: Foundations of Computer Graphics',
-      publisher: 'University of California, Berkeley',
-      'publisher-place': 'Berkeley, CA',
       issued: { 'date-parts': [ [ 2026, 7, 9 ] ], season: 2, },
       language: 'en-US',
       URL: 'https://cs184.eecs.berkeley.edu/su26/assets/lectures/11-radiometry-su26.pdf',
       accessed: { 'date-parts': [ [ 2026, 9, 9 ] ], },
+      custom: {
+        institution: [ 'University of California, Berkeley' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -30,12 +31,13 @@ export const entries = [
       number: 7,
       author: [ { given: 'Ren', family: 'Ng' }, { given: 'David', family: 'McAllister' }, ],
       'collection-title': 'CS 184/284A: Foundations of Computer Graphics',
-      publisher: 'University of California, Berkeley',
-      'publisher-place': 'Berkeley, CA',
       issued: { 'date-parts': [ [ 2026, 7 ] ], season: 2, },
       language: 'en-US',
       URL: 'https://cs184.eecs.berkeley.edu/su26/assets/discussions/07-slides.pdf',
       accessed: { 'date-parts': [ [ 2026, 9, 9 ] ], },
+      custom: {
+        institution: [ 'University of California, Berkeley' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

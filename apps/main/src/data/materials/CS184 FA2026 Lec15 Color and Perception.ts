@@ -21,12 +21,13 @@ export const entries = [
         { given: 'Lingqi', family: 'Yan' },
       ],
       'collection-title': 'CS 184/284A: Foundations of Computer Graphics',
-      publisher: 'University of California, Berkeley',
-      'publisher-place': 'Berkeley, CA',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       language: 'en-US',
       URL: 'https://cs184.eecs.berkeley.edu/fa26/assets/lectures/15-Color-and-Perception.pdf',
       accessed: { 'date-parts': [ [ 2026, 8, 24 ] ] },
+      custom: {
+        institution: [ 'University of California, Berkeley' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

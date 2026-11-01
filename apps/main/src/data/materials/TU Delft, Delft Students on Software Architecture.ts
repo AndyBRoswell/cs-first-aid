@@ -8,7 +8,6 @@ export const entries = [
       type: 'webpage',
       title: 'Delft Students on Software Architecture',
       author: [ { literal: 'TU Delft IN4315 Students' } ],
-      publisher: 'Technische Universiteit Delft',
       issued: { 'date-parts': [ [ 2022 ] ] },
       version: '2022',
       language: 'en',
@@ -16,6 +15,7 @@ export const entries = [
       URL: 'https://desosa2022.netlify.app/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
+        institution: [ 'Technische Universiteit Delft' ],
         URL: [
           { link: 'https://desosa2022.netlify.app/about/', display_text: 'About and license' },
         ],

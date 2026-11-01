@@ -10,7 +10,6 @@ export const entries = [
       author: [ { given: 'Keith', family: 'Winstein' }, { given: 'Nick', family: 'McKeown' } ],
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'Stanford University',
       number: 'CS144',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: 'Fall 2026',
@@ -20,6 +19,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       note: 'The Fall 2026 course is in progress; this collection contains the materials published by the access date.',
       custom: {
+        institution: [ 'Stanford University' ],
         free_material: {
           Slides: [
             { link: 'https://cs144.github.io/handouts/week-1-logistics.pdf', display_text: 'Course introduction (PDF)', 'Content-Type': 'application/pdf' },
@@ -48,7 +48,6 @@ export const entries = [
       title: 'Introduction to Computer Networking',
       genre: 'Lecture notes',
       medium: 'Google Docs and PDF',
-      publisher: 'Stanford University',
       number: 'CS144',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: 'Fall 2026',
@@ -58,6 +57,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       note: 'The Fall 2026 course is in progress; this collection contains the materials published by the access date.',
       custom: {
+        institution: [ 'Stanford University' ],
         lecturer: [ { given: 'Keith', family: 'Winstein' } ],
         free_material: {
           'Lecture notes': [
@@ -87,7 +87,6 @@ export const entries = [
       title: 'Introduction to Computer Networking: Lab Assignments',
       genre: 'Laboratory manual',
       medium: 'PDF',
-      publisher: 'Stanford University',
       number: 'CS144',
       issued: { 'date-parts': [ [ 2026 ] ] },
       version: 'Fall 2026',
@@ -97,6 +96,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       note: 'Checkpoints 0–4 were public on the access date. Most tests require access to Stanford\'s grading server; the public Imp framework includes only some local tests.',
       custom: {
+        institution: [ 'Stanford University' ],
         lecturer: [ { given: 'Keith', family: 'Winstein' } ],
         free_material: {
           Assignments: [
@@ -123,7 +123,6 @@ export const entries = [
       author: [ { given: 'Keith', family: 'Winstein' }, { given: 'Nick', family: 'McKeown' } ],
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'Stanford University',
       number: 'CS144',
       issued: { 'date-parts': [ [ 2025 ] ] },
       version: 'Fall 2025',
@@ -132,6 +131,7 @@ export const entries = [
       URL: 'https://web.archive.org/web/20260506063931/https://cs144.github.io/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'Stanford University' ],
         free_material: [
           { link: 'https://web.archive.org/web/20251115051719id_/https://cs144.github.io/handouts/week-1-logistics.pdf', display_text: 'Course introduction (PDF)', 'Content-Type': 'application/pdf' },
           { link: 'https://web.archive.org/web/20251210075705id_/https://cs144.github.io/handouts/week-1-reliability.pdf', display_text: 'Reliability from unreliability (PDF)', 'Content-Type': 'application/pdf' },
@@ -152,7 +152,6 @@ export const entries = [
       title: 'Introduction to Computer Networking',
       genre: 'Lecture notes',
       medium: 'Google Docs and PDF',
-      publisher: 'Stanford University',
       number: 'CS144',
       issued: { 'date-parts': [ [ 2025 ] ] },
       version: 'Fall 2025',
@@ -162,6 +161,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       note: 'The course index is archived; the Google Docs links remain live documents.',
       custom: {
+        institution: [ 'Stanford University' ],
         lecturer: [ { given: 'Keith', family: 'Winstein' } ],
         free_material: {
           'Lecture notes': [
@@ -197,7 +197,6 @@ export const entries = [
       title: 'Introduction to Computer Networking: Lab Assignments',
       genre: 'Laboratory manual',
       medium: 'PDF',
-      publisher: 'Stanford University',
       number: 'CS144',
       issued: { 'date-parts': [ [ 2025 ] ] },
       version: 'Fall 2025',
@@ -207,6 +206,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       note: 'The eight assignment handouts are preserved from the official course website. The original Minnow repository is currently unavailable; a complete starter-code download has not been verified.',
       custom: {
+        institution: [ 'Stanford University' ],
         lecturer: [ { given: 'Keith', family: 'Winstein' } ],
         URL: [
           { link: 'https://web.archive.org/web/20260215123727/https://github.com/CS144/minnow', display_text: 'Archived official Minnow repository landing page', note: 'The original repository is currently unavailable; a complete starter-code download has not been verified.' },

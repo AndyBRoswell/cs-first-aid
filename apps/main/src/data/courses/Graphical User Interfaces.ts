@@ -9,7 +9,8 @@ export const info = {
     reference: {
       lecture_notes_and_slides: {
         en: [
-          ...catalog.filter(item => item.type === 'document' && item.title === 'Programming in Graphical Environment' && item.publisher === 'Politechnika Warszawska' && item.version === '2025/26', { count: 1 }),
+          ...catalog.filter(item => item.type === 'document' && item.title === 'Programming in Graphical Environment' && item.custom?.institution?.includes('Politechnika Warszawska') && item.version === '2025/26', { count: 1 }),
+          ...catalog.filter(item => item.type === 'document' && item.title === 'COMP2811 Exercises' && item.custom?.institution?.includes('University of Leeds'), { count: 1 }),
         ],
       },
       documentation: {

@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 // Module numbers follow the Schedule section of each semester's syllabus.
 export const entries = [
@@ -8,13 +9,15 @@ export const entries = [
       type: 'webpage',
       title: 'CSE 466: System Security — Fall 2026',
       number: 'CSE 466',
-      publisher: 'Arizona State University',
       genre: 'Course website and syllabus',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
       language: 'en',
       URL: 'https://pwn.college/cse466-f2026/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -24,7 +27,6 @@ export const entries = [
       title: 'Assembly and Debugging Refresher',
       'collection-title': 'CSE 466: System Security',
       number: '1',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -32,6 +34,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2026/assembly/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Review of x86-64 assembly, program behavior, and debugging from CSE365.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -41,7 +46,6 @@ export const entries = [
       title: 'Program Security',
       'collection-title': 'CSE 466: System Security',
       number: '2',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -49,6 +53,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2026/program-security/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Shellcode, memory corruption, input constraints, and binary defenses.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -58,7 +65,6 @@ export const entries = [
       title: 'Reverse Engineering',
       'collection-title': 'CSE 466: System Security',
       number: '3',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -66,6 +72,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2026/reverse-engineering/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Static and dynamic analysis of functions, stack frames, and data; includes crackmes and the yan85 VM.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -75,7 +84,6 @@ export const entries = [
       title: 'Return Oriented Programming',
       'collection-title': 'CSE 466: System Security',
       number: '4',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -83,6 +91,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2026/return-oriented-programming/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Finding and chaining gadgets for return-oriented programming.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -92,7 +103,6 @@ export const entries = [
       title: 'Dynamic Allocator Misuse',
       'collection-title': 'CSE 466: System Security',
       number: '5',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -100,6 +110,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2026/dynamic-allocator-misuse/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Heap management, allocator misuse, and use-after-free exploitation.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -109,7 +122,6 @@ export const entries = [
       title: 'Program Exploitation',
       'collection-title': 'CSE 466: System Security',
       number: '6',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -117,6 +129,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2026/program-exploitation/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Integrated exploitation using reverse engineering, shellcode, and defense bypasses.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -125,13 +140,15 @@ export const entries = [
       type: 'webpage',
       title: 'CSE 466: System Security — Fall 2025',
       number: 'CSE 466',
-      publisher: 'Arizona State University',
       genre: 'Course website and syllabus',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
       language: 'en',
       URL: 'https://pwn.college/cse466-f2025/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -141,7 +158,6 @@ export const entries = [
       title: 'Race Conditions',
       'collection-title': 'CSE 466: System Security',
       number: '6',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -149,6 +165,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2025/race-conditions/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Filesystem and concurrency races, including TOCTOU vulnerabilities.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -158,7 +177,6 @@ export const entries = [
       title: 'Sandboxing',
       'collection-title': 'CSE 466: System Security',
       number: '7',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -166,6 +184,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2025/sandboxing/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'chroot, seccomp, sandbox boundaries, and escapes.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -175,7 +196,6 @@ export const entries = [
       title: 'Kernel Security',
       'collection-title': 'CSE 466: System Security',
       number: '8',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -183,6 +203,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2025/kernel-security/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Linux kernel modules, vulnerabilities, and privilege escalation; VM labs.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -192,7 +215,6 @@ export const entries = [
       title: 'Microarchitecture Exploitation',
       'collection-title': 'CSE 466: System Security',
       number: '9',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -200,6 +222,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2025/speculative-execution/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Cache side channels, Spectre, and Meltdown; some labs require VMs. Omitted from the Fall 2026 syllabus.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -209,7 +234,6 @@ export const entries = [
       title: 'System Exploitation',
       'collection-title': 'CSE 466: System Security',
       number: '10',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -217,6 +241,9 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2025/system-exploitation/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Integrated userland and kernel exploitation, concurrency, and address randomization.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

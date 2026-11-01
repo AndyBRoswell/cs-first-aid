@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -7,13 +8,15 @@ export const entries = [
       type: 'webpage',
       title: 'CSE 598: Reverse Engineering and Program Analysis — Fall 2025',
       number: 'CSE 598',
-      publisher: 'Arizona State University',
       genre: 'Course website and syllabus',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
       language: 'en',
       URL: 'https://pwn.college/reversing-hell/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -22,7 +25,6 @@ export const entries = [
       type: 'document',
       title: 'Welcome',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -30,6 +32,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/welcome/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Course introduction and platform orientation.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -38,7 +43,6 @@ export const entries = [
       type: 'document',
       title: 'Your First Program',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -46,6 +50,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/your-first-program/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'x86-64 registers, Linux syscalls, exit codes, and building executables.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -54,7 +61,6 @@ export const entries = [
       type: 'document',
       title: 'Software Introspection',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -62,6 +68,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/introspecting/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Trace Linux system calls with strace and start programs in GDB.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -70,7 +79,6 @@ export const entries = [
       type: 'document',
       title: 'Computer Memory',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -78,6 +86,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/memory/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Memory loads, offset addressing, and multilevel pointer dereferencing in x86-64.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -86,7 +97,6 @@ export const entries = [
       type: 'document',
       title: 'Hello Hackers',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -94,6 +104,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/hello-hackers/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Linux read/write syscalls, file descriptors, and buffers in x86-64 assembly.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -102,7 +115,6 @@ export const entries = [
       type: 'document',
       title: 'Assembly Crash Course',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -110,6 +122,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/assembly-crash-course/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'x86-64 arithmetic, bitwise operations, memory, stack, and control flow in emulated challenges.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -118,7 +133,6 @@ export const entries = [
       type: 'document',
       title: 'Debugging Refresher',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -126,6 +140,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/debugging-refresher/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'GDB practice with registers, memory, stepping, breakpoints, and automation.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -134,7 +151,6 @@ export const entries = [
       type: 'document',
       title: 'babyc',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -142,6 +158,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/babyc/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'C program comprehension and analysis.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -150,7 +169,6 @@ export const entries = [
       type: 'document',
       title: 'babyprofile',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -158,6 +176,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/babyprofile/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Program profiling and dynamic behavior analysis.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -166,7 +187,6 @@ export const entries = [
       type: 'document',
       title: 'babypyc',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -174,6 +194,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/babypyc/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Python bytecode analysis and reverse engineering.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -182,7 +205,6 @@ export const entries = [
       type: 'document',
       title: 'babyrev',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -190,6 +212,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/babyrev/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Binary reverse engineering exercises.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -198,7 +223,6 @@ export const entries = [
       type: 'document',
       title: 'babyvm',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -206,6 +230,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/babyvm/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Custom virtual machine and instruction set analysis.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -215,7 +242,6 @@ export const entries = [
       title: 'Project 0: Evil and Obfuscated C',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
       number: '0',
-      publisher: 'Arizona State University',
       genre: 'Course project',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -223,6 +249,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/project_0/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Write obfuscated C programs; requires Ubuntu 24.04, GCC 13.x, and x86-64 ELF.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -232,7 +261,6 @@ export const entries = [
       title: 'Project 1: De-evil Obfuscated C',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
       number: '1',
-      publisher: 'Arizona State University',
       genre: 'Course project',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -240,6 +268,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/project_1/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Analyze obfuscated C programs written by other participants.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -249,7 +280,6 @@ export const entries = [
       title: 'Project 2.1: Develop Your Own Tool',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
       number: '2.1',
-      publisher: 'Arizona State University',
       genre: 'Course project',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -257,6 +287,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/project_21/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Develop a reverse engineering or program comprehension tool.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -266,7 +299,6 @@ export const entries = [
       title: 'Project 2.2: Making The World A Better Place (for real this time)',
       'collection-title': 'CSE 598: Reverse Engineering and Program Analysis',
       number: '2.2',
-      publisher: 'Arizona State University',
       genre: 'Course project',
       issued: { 'date-parts': [ [ 2025 ] ], season: 3 },
       version: 'Fall 2025',
@@ -274,6 +306,9 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/project_22/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Find and fix bugs in real software.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]

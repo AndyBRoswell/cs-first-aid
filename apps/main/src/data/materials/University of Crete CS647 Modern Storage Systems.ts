@@ -14,7 +14,6 @@ export const entries = [
       ],
       genre: 'Lecture slides',
       medium: 'PDF',
-      publisher: 'University of Crete',
       number: 'CS647',
       issued: { 'date-parts': [ [ 2022 ], [ 2023 ] ] },
       version: '2022–2023', // Reused in the Fall 2025 course.
@@ -23,6 +22,7 @@ export const entries = [
       URL: 'https://www.csd.uoc.gr/~hy647/syllabus.html',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'University of Crete' ],
         URL: [
           { link: 'https://www.csd.uoc.gr/~hy647/', display_text: 'Course website (Fall 2025)' },
         ],
@@ -51,7 +51,6 @@ export const entries = [
       title: 'Modern Storage Systems: Assignments',
       genre: 'Assignments',
       medium: 'HTML',
-      publisher: 'University of Crete',
       number: 'CS647',
       issued: { 'date-parts': [ [ 2022 ] ] },
       version: '2022', // Reused in the Fall 2025 course.
@@ -59,6 +58,7 @@ export const entries = [
       URL: 'https://www.csd.uoc.gr/~hy647/assignments.html',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
+        institution: [ 'University of Crete' ],
         lecturer: [ { given: 'Angelos', family: 'Bilas' } ], // Listed as instructor, not assignment author.
         URL: [
           { link: 'https://www.csd.uoc.gr/~hy647/', display_text: 'Course website (Fall 2025)' },

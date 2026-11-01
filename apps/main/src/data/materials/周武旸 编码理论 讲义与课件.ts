@@ -10,12 +10,12 @@ export const entries = [
       author: [ { family: '周', given: '武旸' } ],
       genre: 'Lecture notes and slides',
       medium: 'PDF',
-      publisher: '中国科学技术大学',
       'number-of-pages': 371,
       language: 'zh-CN',
       URL: 'http://staff.ustc.edu.cn/~wyzhou/course.htm',
       accessed: { 'date-parts': [ [ 2026, 10, 18 ] ] },
       custom: {
+        institution: [ '中国科学技术大学' ],
         free_material: [
           {
             link: 'http://staff.ustc.edu.cn/~wyzhou/ct_chapter1.pdf',

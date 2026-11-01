@@ -1,4 +1,5 @@
 import * as types_data from '@cs-first-aid/bibkit/types/data'
+import * as CSL from '@cs-first-aid/bibkit/CSL'
 
 export const entries = [
   {
@@ -7,13 +8,15 @@ export const entries = [
       type: 'webpage',
       title: 'CSE 598: Advanced Security of the Web — Fall 2026',
       number: 'CSE 598',
-      publisher: 'Arizona State University',
       genre: 'Course website and syllabus',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
       language: 'en',
       URL: 'https://pwn.college/cse598-asow-f2026/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -22,7 +25,6 @@ export const entries = [
       type: 'document',
       title: 'Hosts and Proxies',
       'collection-title': 'CSE 598: Advanced Security of the Web',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -30,6 +32,9 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/hosts-and-proxies/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Security of web hosts and proxies.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -38,7 +43,6 @@ export const entries = [
       type: 'document',
       title: 'HTTP Requests',
       'collection-title': 'CSE 598: Advanced Security of the Web',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -46,6 +50,9 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/http-requests/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'HTTP request construction, parsing, and security.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -54,7 +61,6 @@ export const entries = [
       type: 'document',
       title: 'Cookies and Session IDs',
       'collection-title': 'CSE 598: Advanced Security of the Web',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -62,6 +68,9 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/cookies-and-session-ids/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Security of cookies and session identifiers.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -70,7 +79,6 @@ export const entries = [
       type: 'document',
       title: 'Authentication',
       'collection-title': 'CSE 598: Advanced Security of the Web',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -78,6 +86,9 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/authentication/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Web authentication mechanisms and attacks.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -86,7 +97,6 @@ export const entries = [
       type: 'document',
       title: 'Command Injection',
       'collection-title': 'CSE 598: Advanced Security of the Web',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -94,6 +104,9 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/cmd-injection/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Server-side command injection exercises.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -102,7 +115,6 @@ export const entries = [
       type: 'document',
       title: 'Path Traversal',
       'collection-title': 'CSE 598: Advanced Security of the Web',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -110,6 +122,9 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/path-traversal/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Path traversal and file access boundaries.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -118,7 +133,6 @@ export const entries = [
       type: 'document',
       title: 'Cross-Site Request Forgery',
       'collection-title': 'CSE 598: Advanced Security of the Web',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -126,6 +140,9 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/csrf/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Cross-site request forgery mechanisms and attack conditions.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
   {
@@ -134,7 +151,6 @@ export const entries = [
       type: 'document',
       title: 'Cross-Site Scripting',
       'collection-title': 'CSE 598: Advanced Security of the Web',
-      publisher: 'Arizona State University',
       genre: 'Course module and challenges',
       issued: { 'date-parts': [ [ 2026 ] ], season: 3 },
       version: 'Fall 2026',
@@ -142,6 +158,9 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/xss/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Cross-site scripting vulnerabilities and exploitation.',
+      custom: {
+        institution: [ 'Arizona State University' ],
+      } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
