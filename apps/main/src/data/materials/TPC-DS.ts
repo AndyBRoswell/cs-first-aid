@@ -11,7 +11,7 @@ export const entries = [
       author: [ { literal: 'Transaction Processing Performance Council' } ],
       publisher: 'Transaction Processing Performance Council',
       version: '4.0.0',
-      issued: { 'date-parts': [ [ 2024, 11 ] ] },
+      issued: { 'date-parts': [ [ 2024, 11, 21 ] ] },
       'number-of-pages': 146,
       language: 'en',
       URL: 'https://www.tpc.org/tpcds/',
@@ -22,7 +22,7 @@ export const entries = [
           { link: 'https://www.tpc.org/TPC_Documents_Current_Versions/download_programs/tools-download-request5.asp?bm_type=TPC-DS&bm_vers=4.0.0&mode=CURRENT-ONLY', display_text: 'Official tools request form (contact details and license acceptance required)' },
         ],
         free_material: [
-          { link: 'https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-DS_v4.0.0.pdf', display_text: 'Specification, schemas and query definitions (PDF)', 'Content-Type': 'application/pdf' },
+          { link: 'https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-DS_v4.0.0.pdf', display_text: 'Specification, schemas and query definitions (PDF)', 'Content-Type': 'application/pdf' }, // issued, version
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,

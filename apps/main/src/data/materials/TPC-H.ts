@@ -12,6 +12,7 @@ export const entries = [
       publisher: 'Transaction Processing Performance Council',
       'publisher-place': 'San Francisco',
       version: '3.0.1',
+      issued: { 'date-parts': [ [ 2022, 4, 28 ] ] },
       'number-of-pages': 138,
       language: 'en',
       URL: 'https://www.tpc.org/tpch/',
@@ -22,7 +23,7 @@ export const entries = [
           { link: 'https://www.tpc.org/TPC_Documents_Current_Versions/download_programs/tools-download-request5.asp?bm_type=TPC-H&bm_vers=3.0.1&mode=CURRENT-ONLY', display_text: 'Official tools request form (contact details and license acceptance required)' },
         ],
         free_material: [
-          { link: 'https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf', display_text: 'Specification, schemas and query definitions (PDF)', 'Content-Type': 'application/pdf' },
+          { link: 'https://www.tpc.org/TPC_Documents_Current_Versions/pdf/TPC-H_v3.0.1.pdf', display_text: 'Specification, schemas and query definitions (PDF)', 'Content-Type': 'application/pdf' }, // issued, version
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
