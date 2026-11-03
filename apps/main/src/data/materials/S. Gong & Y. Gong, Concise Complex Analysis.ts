@@ -14,7 +14,7 @@ export const entries = [
       'publisher-place': 'Singapore',
       issued: { 'date-parts': [ [ 2007, 4 ] ] },
       'original-title': '简明复分析',
-      'number-of-pages': 237,
+      'number-of-pages': 'xix, 237', // Numbered pagination confirmed by the preview and front/back-matter DOIs; advertised totals of 258/260 remain unreconciled.
       ISBN: '9789812706935',
       DOI: '10.1142/6457',
       language: 'en',
@@ -28,9 +28,17 @@ export const entries = [
           {
             type: 'book',
             edition: 'Revised',
-            medium: 'eBook',
+            medium: 'eBook (World Scientific)',
             ISBN: '9789812770646',
             DOI: '10.1142/6457',
+          },
+          {
+            type: 'book',
+            edition: 'Revised',
+            medium: 'eBook (VitalSource, fixed layout)',
+            ISBN: '9789813106987',
+            URL: 'https://www.vitalsource.com/products/concise-complex-analysis-sheng-gong-v9789813106987',
+            accessed: { 'date-parts': [ [ 2026, 11, 4 ] ] },
           },
         ],
       } satisfies CSL.Custom,
