@@ -14,7 +14,7 @@ export const entries = [
       'publisher-place': 'Singapore',
       issued: { 'date-parts': [ [ 2017, 3 ] ] },
       'original-title': '简明微积分',
-      'number-of-pages': 674,
+      'number-of-pages': 'xvi, 674', // Numbered pagination; the publisher advertises 692 total pages, whose remaining two pages are unconfirmed.
       ISBN: '9789814291491',
       DOI: '10.1142/7554',
       language: 'en',
@@ -32,9 +32,18 @@ export const entries = [
           },
           {
             type: 'book',
-            medium: 'eBook',
+            medium: 'eBook (World Scientific)',
             ISBN: '9789814291507',
             DOI: '10.1142/7554',
+          },
+          {
+            type: 'book',
+            medium: 'eBook (EPUB 3)',
+            issued: { 'date-parts': [ [ 2017, 2, 3 ] ] },
+            ISBN: '9789813222632',
+            URL: 'https://www.kobo.com/us/en/ebook/concise-calculus',
+            accessed: { 'date-parts': [ [ 2026, 11, 4 ] ] },
+            note: 'Kobo download uses Adobe DRM.',
           },
         ],
       } satisfies CSL.Custom,
