@@ -20,3 +20,19 @@ import References from '@/components/References.astro'
     </section>
   </section>
 </section>
+
+<section>
+  # 常见数据集
+  <section>
+    ## 数据集
+    <References materials={course_material.common_dataset.dataset} reference_ranges={reference_ranges} scope_name={[ 'common_dataset', 'dataset' ]}/>
+  </section>
+  <section>
+    ## 基准与数据生成工具
+    <References materials={course_material.common_dataset.benchmark} reference_ranges={reference_ranges} scope_name={[ 'common_dataset', 'benchmark' ]}/>
+  </section>
+  <section>
+    ## 数据集目录
+    <References materials={course_material.common_dataset.catalogue} reference_ranges={reference_ranges} scope_name={[ 'common_dataset', 'catalogue' ]}/>
+  </section>
+</section>
