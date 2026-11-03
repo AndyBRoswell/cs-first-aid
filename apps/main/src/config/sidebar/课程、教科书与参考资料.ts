@@ -1089,7 +1089,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/data-acquisition-and-analysis',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'DataSci', ], 'en'))
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'DataSci', 'DE', ], 'en'))
       },
     },
     {
@@ -1188,7 +1188,7 @@ export const Courses_Textbooks_and_References = {
       slug: 'courses-textbooks-and-references/data-compression',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'TCS', 'Signal', 'Multimedia', ], 'en'))
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'TCS', 'Signal', ], 'en'))
       },
     },
     {
