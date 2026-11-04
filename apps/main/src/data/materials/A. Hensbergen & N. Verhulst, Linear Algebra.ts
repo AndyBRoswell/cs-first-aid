@@ -25,7 +25,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 17 ] ] },
       custom: {
         keyword: [ 'Linear Algebra for Bachelor Engineering Students' ],
-        institution: [ 'Technische Universiteit Delft' ],
+        institution: 'Technische Universiteit Delft',
         URL: [
           {
             link: 'https://repository.tudelft.nl/record/uuid:92662589-a0c0-4ba8-9520-dcfe855dd4b9',

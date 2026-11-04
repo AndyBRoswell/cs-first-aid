@@ -11,10 +11,10 @@ test('material relations resolve after every material module is registered', () 
   const modules_with_relations = material_modules.filter(([ , material_module ]) => material_module.resolve_relations)
   expect(modules_with_relations.length).toBeGreaterThan(0)
   for (const [ module_path, material_module ] of modules_with_relations) {
-    const relation_owners = material_module.entries.filter(({ material }) => material.custom?.companion?.length)
-    expect(relation_owners.length, `${module_path} did not resolve any companion relationships`).toBeGreaterThan(0)
+    const relation_owners = material_module.entries.filter(({ material }) => material.custom?.companion_to?.length)
+    expect(relation_owners.length, `${module_path} did not resolve any companion_to relationships`).toBeGreaterThan(0)
     for (const { material } of relation_owners) {
-      for (const companion of material.custom!.companion!) { expect(materials, `${module_path} resolved a companion outside the catalog`).toContain(companion) }
+      for (const main_work of material.custom!.companion_to!) { expect(materials, `${module_path} resolved a companion_to target outside the catalog`).toContain(main_work) }
     }
   }
 })

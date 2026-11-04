@@ -16,7 +16,7 @@ export const entries = [
       URL: 'https://pengyunie.github.io/cs446-1261/docs/lectures/slides/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
-        institution: [ 'University of Waterloo' ],
+        institution: 'University of Waterloo',
         URL: [
           { link: 'https://pengyunie.com/', display_text: 'Instructor’s teaching page' }, // author, issued, version
         ],

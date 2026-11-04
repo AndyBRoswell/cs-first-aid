@@ -17,7 +17,7 @@ export const entries = [
       URL: 'https://download.vusec.net/vms/coco/CoCoAssignments2025.pdf',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'Vrije Universiteit Amsterdam' ],
+        institution: 'Vrije Universiteit Amsterdam',
         URL: [
           { link: 'https://studiegids.vu.nl/en/courses/2026-2027/XB_0003', display_text: 'Bachelor course description (XB_0003, 2026–2027)' },
           { link: 'https://studiegids.vu.nl/en/courses/2026-2027/XM_0139', display_text: 'Master course description (XM_0139, 2026–2027)' },

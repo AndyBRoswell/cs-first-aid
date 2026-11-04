@@ -32,7 +32,7 @@ export const entries = [
 
 export function resolve_relations(): void {
   const material: types_data.Material = entries[0]!.material
-  material.custom!.companion = catalog.filter(
+  material.custom!.companion_to = catalog.filter(
     item => item.type === 'book'
       && /^电路(?:（第6版）)?$/u.test(item.title ?? '')
       && item.edition === 6

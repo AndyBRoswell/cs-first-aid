@@ -18,7 +18,7 @@ export const entries = [
       URL: 'https://www.cs.vu.nl/~bal/parallel-programming.html',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'Vrije Universiteit Amsterdam' ],
+        institution: 'Vrije Universiteit Amsterdam',
         free_material: [
           { link: 'https://www.cs.vu.nl/~bal/college17/background17.pdf', display_text: '1. Background (PDF)', 'Content-Type': 'application/pdf' },
           { link: 'https://www.cs.vu.nl/~bal/college17/introduction17.pdf', display_text: '2. Introduction to parallel programming (PDF)', 'Content-Type': 'application/pdf' },

@@ -19,7 +19,7 @@ export const entries = [
       URL: 'https://cs184.eecs.berkeley.edu/su26/assets/lectures/11-radiometry-su26.pdf',
       accessed: { 'date-parts': [ [ 2026, 9, 9 ] ], },
       custom: {
-        institution: [ 'University of California, Berkeley' ],
+        institution: 'University of California, Berkeley',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -36,7 +36,7 @@ export const entries = [
       URL: 'https://cs184.eecs.berkeley.edu/su26/assets/discussions/07-slides.pdf',
       accessed: { 'date-parts': [ [ 2026, 9, 9 ] ], },
       custom: {
-        institution: [ 'University of California, Berkeley' ],
+        institution: 'University of California, Berkeley',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

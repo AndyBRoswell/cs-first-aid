@@ -100,7 +100,7 @@ export const entries = [ ...books, ...open_courses ] satisfies types_data.Entry[
 
 export function resolve_relations(): void {
   const first_course: types_data.Material = open_courses[0]!.material
-  first_course.custom!.companion = catalog.filter(
+  first_course.custom!.companion_to = catalog.filter(
     m =>
       m.author?.some(a => _.isEqual(a, { family: '程', given: '艺' }))
       &&
@@ -110,7 +110,7 @@ export function resolve_relations(): void {
     , { count: 1 }
   )
   const second_course: types_data.Material = open_courses[1]!.material
-  second_course.custom!.companion = catalog.filter(
+  second_course.custom!.companion_to = catalog.filter(
     m =>
       util.ieq(m.title!, '数学分析讲义')
       &&

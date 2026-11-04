@@ -117,7 +117,7 @@ const open_courses = [
       URL: 'https://www.bilibili.com/video/BV1jR4y1M78W',
       accessed: { 'date-parts': [ [ 2026, 5, 5 ] ] },
       custom: {
-        institution: [ '清华大学' ],
+        institution: '清华大学',
         lecturer: [ { family: '丘', given: '维声' } ],
         suggested_playback_speed: [ 1.25, 1.5 ],
       } satisfies CSL.Custom,
@@ -129,7 +129,7 @@ export const entries = [ ...books, ...open_courses ] satisfies types_data.Entry[
 
 export function resolve_relations(): void {
   const material: types_data.Material = open_courses[0]!.material
-  material.custom!.companion = catalog.filter(
+  material.custom!.companion_to = catalog.filter(
     m =>
       util.ieq(m.title!, '高等代数')
       &&

@@ -249,9 +249,9 @@ export type Custom = {
   'collection-title-short'?: string | string[]
   free_material?: Data_Type.Link[] | Record<string, Data_Type.Link[]> // Freely accessible and normally downloadable resources, or pages through which they can be obtained.
   for?: unknown
-  companion?: (Data_Type.ID_t | Data_Type.Material | Data_Type.Course)[]
+  companion_to?: (Data_Type.ID_t | Data_Type.Material | Data_Type.Course)[] // Works this item accompanies; points from companion material to its main work.
   variant?: Data_Type.Material[] // Other editions, media, bindings, or publication variants of the same work.
-  institution?: string[]
+  institution?: string | string[]
   lecturer?: Name_Variable[]
   URL?: Data_Type.Link[] // Additional descriptive pages for the same item; `Item.URL` remains preferred.
   suggested_playback_speed?: [ minimum: number, maximum: number ]

@@ -17,7 +17,7 @@ export const entries = [
       URL: 'https://www.cl.cam.ac.uk/teaching/2122/LogicProof/materials.html',
       accessed: { 'date-parts': [ [ 2026, 11, 1 ] ] },
       custom: {
-        institution: [ 'University of Cambridge' ],
+        institution: 'University of Cambridge',
         URL: [
           { link: 'https://www.cl.cam.ac.uk/teaching/2122/LogicProof/', display_text: 'Course information' },
         ],

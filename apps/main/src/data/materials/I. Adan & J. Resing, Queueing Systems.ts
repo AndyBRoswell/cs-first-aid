@@ -14,7 +14,7 @@ export const entries = [
       URL: 'https://iadan.win.tue.nl/queueing.pdf',
       accessed: { 'date-parts': [ [ 2026, 10, 9 ] ] },
       custom: {
-        institution: [ 'Technische Universiteit Eindhoven' ],
+        institution: 'Technische Universiteit Eindhoven',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

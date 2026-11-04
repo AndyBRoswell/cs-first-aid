@@ -113,7 +113,7 @@ function get_material_digest(material: Material): string {
   delete digest_source.id
   if (material.custom) {
     digest_source.custom = { ...material.custom }
-    delete digest_source.custom.companion
+    delete digest_source.custom.companion_to
     if (Object.keys(digest_source.custom).length === 0) { delete digest_source.custom }
   }
   else { delete digest_source.custom }

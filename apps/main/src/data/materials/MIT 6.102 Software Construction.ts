@@ -16,7 +16,7 @@ export const entries = [
       URL: 'https://web.mit.edu/6.102/www/sp26/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
-        institution: [ 'Massachusetts Institute of Technology' ],
+        institution: 'Massachusetts Institute of Technology',
         lecturer: [ { given: 'Max', family: 'Goldman' }, { given: 'Mitchell', family: 'Gordon' }, { given: 'Rob', family: 'Miller' } ],
         free_material: [
           { link: 'https://web.mit.edu/6.102/www/sp26/#readings', display_text: 'Readings (HTML)', 'Content-Type': 'text/html' },

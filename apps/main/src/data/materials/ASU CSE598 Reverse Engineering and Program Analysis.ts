@@ -15,7 +15,7 @@ export const entries = [
       URL: 'https://pwn.college/reversing-hell/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -33,7 +33,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Course introduction and platform orientation.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -51,7 +51,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'x86-64 registers, Linux syscalls, exit codes, and building executables.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -69,7 +69,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Trace Linux system calls with strace and start programs in GDB.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -87,7 +87,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Memory loads, offset addressing, and multilevel pointer dereferencing in x86-64.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -105,7 +105,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Linux read/write syscalls, file descriptors, and buffers in x86-64 assembly.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -123,7 +123,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'x86-64 arithmetic, bitwise operations, memory, stack, and control flow in emulated challenges.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -141,7 +141,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'GDB practice with registers, memory, stepping, breakpoints, and automation.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -159,7 +159,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'C program comprehension and analysis.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -177,7 +177,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Program profiling and dynamic behavior analysis.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -195,7 +195,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Python bytecode analysis and reverse engineering.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -213,7 +213,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Binary reverse engineering exercises.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -231,7 +231,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Custom virtual machine and instruction set analysis.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -250,7 +250,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Write obfuscated C programs; requires Ubuntu 24.04, GCC 13.x, and x86-64 ELF.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -269,7 +269,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Analyze obfuscated C programs written by other participants.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -288,7 +288,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Develop a reverse engineering or program comprehension tool.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -307,7 +307,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Find and fix bugs in real software.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

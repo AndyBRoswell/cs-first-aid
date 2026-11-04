@@ -15,7 +15,7 @@ export const entries = [
       URL: 'https://desosa2022.netlify.app/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
-        institution: [ 'Technische Universiteit Delft' ],
+        institution: 'Technische Universiteit Delft',
         URL: [
           { link: 'https://desosa2022.netlify.app/about/', display_text: 'About and license' },
         ],

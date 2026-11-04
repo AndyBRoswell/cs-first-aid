@@ -15,7 +15,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 11, 1 ] ] },
       note: '8 very short exercises: 2 on C++, 6 on Qt 6 Widgets (C++17).',
       custom: {
-        institution: [ 'University of Leeds' ],
+        institution: 'University of Leeds',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

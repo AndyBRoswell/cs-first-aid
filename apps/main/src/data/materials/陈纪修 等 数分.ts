@@ -104,7 +104,7 @@ export const entries = [ ...books, ...open_courses ] satisfies types_data.Entry[
 
 export function resolve_relations(): void {
   const material: types_data.Material = open_courses[0]!.material
-  material.custom!.companion = catalog.filter(
+  material.custom!.companion_to = catalog.filter(
     m =>
       util.ieq(m.title!, '数学分析')
       &&

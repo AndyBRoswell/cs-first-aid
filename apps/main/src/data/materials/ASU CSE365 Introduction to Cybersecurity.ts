@@ -16,7 +16,7 @@ export const entries = [
       URL: 'https://pwn.college/cse365-f2026/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -35,7 +35,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Platform basics, Linux shell, files, processes, users, permissions, and access control.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -54,7 +54,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Data representation and encoding, HTTP requests and responses, and SQL basics.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -73,7 +73,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Path traversal, command and SQL injection, authentication bypasses, XSS, and CSRF.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -92,7 +92,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'x86-64 assembly, memory, stacks, control flow, syscalls, debugging, and building a web server.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -111,7 +111,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Program analysis and patching through the cIMG format, internal state, instructions, and resources.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -130,7 +130,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Introductory memory corruption and control-flow hijacking exercises.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -147,7 +147,7 @@ export const entries = [
       URL: 'https://pwn.college/cse365-s2026/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -166,7 +166,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Ethernet, IP, TCP, ARP, and traffic interception. Uses Spring 2026; Fall 2026 challenges were not yet public.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -185,7 +185,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Symmetric and asymmetric cryptography, key exchange, hashes, and trust. Uses Spring 2026; Fall 2026 challenges were not yet public.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

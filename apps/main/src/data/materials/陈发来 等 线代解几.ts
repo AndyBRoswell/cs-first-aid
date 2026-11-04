@@ -46,7 +46,7 @@ const open_course = [
       accessed: { 'date-parts': [ [ 2026, 5, 6 ], ], },
       custom: {
         lecturer: [ { family: '陈', given: '发来' } ],
-        institution: [ '中国科学技术大学' ],
+        institution: '中国科学技术大学',
       } satisfies CSL.Custom,
     } satisfies types_data.Video,
   },
@@ -56,7 +56,7 @@ export const entries = [ ...books, ...open_course ] satisfies types_data.Entry[]
 
 export function resolve_relations(): void {
   const material: types_data.Material = open_course[0]!.material
-  material.custom!.companion = catalog.filter(
+  material.custom!.companion_to = catalog.filter(
     m =>
       util.ieq(m.title!, '线性代数与解析几何')
       &&

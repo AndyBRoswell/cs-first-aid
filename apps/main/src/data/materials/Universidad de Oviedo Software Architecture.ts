@@ -20,7 +20,7 @@ export const entries = [
       URL: 'https://arquisoft.github.io/course2526.html',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
-        institution: [ 'Universidad de Oviedo' ],
+        institution: 'Universidad de Oviedo',
         URL: [
           { link: 'https://github.com/Arquisoft/Arquisoft.github.io', display_text: 'GitHub' },
         ],

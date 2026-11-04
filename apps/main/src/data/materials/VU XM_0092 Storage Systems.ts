@@ -20,7 +20,7 @@ export const entries = [
       URL: 'https://animeshtrivedi.github.io/course-stosys/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'Vrije Universiteit Amsterdam' ],
+        institution: 'Vrije Universiteit Amsterdam',
         URL: [
           { link: 'https://atlarge-research.com/courses/storage-systems-vu/', display_text: 'Research group course page' },
           { link: 'https://studiegids.vu.nl/en/courses/2023-2024/XM_0092', display_text: 'Official course description (2023–2024)' },
@@ -74,7 +74,7 @@ export const entries = [
       URL: 'https://atlarge-research.com/pdfs/stosys/2023-2024-stosys-handbook-4.0.pdf',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'Vrije Universiteit Amsterdam' ],
+        institution: 'Vrije Universiteit Amsterdam',
         URL: [
           { link: 'https://animeshtrivedi.github.io/course-stosys/', display_text: 'Lecturer course page and public-release statement' },
         ],

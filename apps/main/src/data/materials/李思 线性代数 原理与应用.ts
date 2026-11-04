@@ -19,7 +19,7 @@ export const entries = [
       custom: {
         subtitle: '原理与应用',
         edition: '第三次更新',
-        institution: [ '清华大学' ],
+        institution: '清华大学',
         free_material: [
           {
             link: 'https://sili-math.github.io/notes/LinearAlgebra.pdf',

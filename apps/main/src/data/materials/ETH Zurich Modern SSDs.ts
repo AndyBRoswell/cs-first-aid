@@ -23,7 +23,7 @@ export const entries = [
       URL: 'https://safari.ethz.ch/projects_and_seminars/spring2023/doku.php?id=modern_ssds',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'ETH Zürich' ],
+        institution: 'ETH Zürich',
         URL: [
           { link: 'https://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?ansicht=ALLE&lang=en&lerneinheitId=166897&semkez=2023S', display_text: 'Official course catalogue and reading list (Spring 2023)' },
         ],
@@ -83,7 +83,7 @@ export const entries = [
       URL: 'https://www.youtube.com/playlist?list=PL5Q2soXY2Zi_8qOM5Icpp8hB2SHtm4z57',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'ETH Zürich' ],
+        institution: 'ETH Zürich',
         URL: [
           { link: 'https://safari.ethz.ch/projects_and_seminars/spring2023/doku.php?id=modern_ssds#lecture_video_playlists_on_youtube', display_text: 'Official course page linking the recordings' },
         ],
