@@ -119,13 +119,13 @@ test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
 })
 
 // Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
-test('companion relationships do not affect material deduplication', () => {
+test('companion_to relationships do not affect material deduplication', () => {
   const title: string = `deduplication-${randomUUID()}`
   const material: Material = { type: 'motion_picture', title }
-  const companion: Material = { type: 'book', title: 'Companion' }
+  const main_work: Material = { type: 'book', title: 'Textbook' }
   const initial_count: number = catalog.all().length
   catalog.add([], material)
-  material.custom = { companion: [ companion ] }
-  catalog.add([], { type: 'motion_picture', title, custom: { companion: [ companion ] } })
+  material.custom = { companion_to: [ main_work ] }
+  catalog.add([], { type: 'motion_picture', title, custom: { companion_to: [ main_work ] } })
   expect(catalog.all()).toHaveLength(initial_count + 1)
 })

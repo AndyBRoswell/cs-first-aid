@@ -43,7 +43,7 @@ export const entries = [
 
 export function resolve_relations(): void {
   const material: types_data.Material = entries[0]!.material
-  material.custom!.companion = catalog.filter(
+  material.custom!.companion_to = catalog.filter(
     item => item.type === 'book'
       && item.title === 'Vector Calculus, Linear Algebra, and Differential Forms'
       && item.edition === 5
