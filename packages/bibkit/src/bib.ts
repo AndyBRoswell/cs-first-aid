@@ -143,10 +143,11 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
     const additional = util.create_HTML_element('div', { class: 'custom', })
     const labels = get_custom_label(language)
     if (material.custom.institution?.length) {
+      const institutions = typeof material.custom.institution === 'string' ? [ material.custom.institution ] : material.custom.institution
       const field = util.create_HTML_element('div', { class: 'institution', })
       field.appendChild(util.create_HTML_element('span', { class: 'label', }, format_field_label(labels.institution, language)))
       const list = util.create_HTML_element('ul', { class: 'list', role: 'list', })
-      for (const institution of material.custom.institution) { list.appendChild(util.create_HTML_element('li', {}, institution)) }
+      for (const institution of institutions) { list.appendChild(util.create_HTML_element('li', {}, institution)) }
       field.appendChild(list)
       additional.appendChild(field)
     }

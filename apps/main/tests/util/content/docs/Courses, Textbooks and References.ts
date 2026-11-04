@@ -41,9 +41,10 @@ export async function check_references(main: Locator, references: types_data.Sco
         await expect(custom_div).toHaveCount(1)
         const institution = custom_div.locator(':scope > .institution')
         if (material.custom.institution?.length) {
+          const institutions = typeof material.custom.institution === 'string' ? [ material.custom.institution ] : material.custom.institution
           await expect(institution).toHaveCount(1)
           await expect(institution.locator(':scope > .label')).toHaveText(i18n.format_field_label(labels.institution, language))
-          await expect(institution.getByRole('list').getByRole('listitem')).toHaveText(material.custom.institution)
+          await expect(institution.getByRole('list').getByRole('listitem')).toHaveText(institutions)
         }
         else { await expect(institution).toHaveCount(0) }
         if (material.custom.lecturer !== undefined) {

@@ -39,25 +39,28 @@ test.each([
   { language: 'zh-CN', label: '机构：' },
   { language: 'en', label: 'Institution:' },
 ])('print_bibliography renders institutions as localized plain-text lists ($language)', ({ language, label }) => {
-  for (const institution of [
-    [ 'University of Leeds' ],
-    [ 'Politechnika Warszawska', 'Research <Institute> & Studies', '<img src=x onerror=alert(1)>' ],
+  for (const { institution, expected } of [
+    { institution: 'University of Leeds', expected: [ 'University of Leeds' ] },
+    { institution: 'Research <Institute> & Studies <img src=x onerror=alert(1)>', expected: [ 'Research <Institute> & Studies <img src=x onerror=alert(1)>' ] },
+    { institution: [ 'University of Leeds' ], expected: [ 'University of Leeds' ] },
+    { institution: [ 'Politechnika Warszawska', 'Research <Institute> & Studies', '<img src=x onerror=alert(1)>' ], expected: [ 'Politechnika Warszawska', 'Research <Institute> & Studies', '<img src=x onerror=alert(1)>' ] },
   ]) {
     const material = { type: 'document', title: 'Course materials', publisher: 'Example Press', language: 'en-US', custom: { institution } } satisfies Material
     const root = node_html_parser.parse(bib.print_bibliography([ material ], { language }))
     const field = root.querySelector('.custom > .institution')!
     expect(field.querySelector(':scope > .label')!.textContent).toBe(label)
     const list = field.querySelector('ul.list')!
-    expect(list.querySelectorAll(':scope > li').map(item => item.textContent)).toEqual(institution)
+    expect(list.querySelectorAll(':scope > li').map(item => item.textContent)).toEqual(expected)
     expect(list.querySelector('img, institute')).toBeNull() // typo checker
     expect(root.querySelector('.csl-entry')!.textContent).toContain('Example Press') // custom.institution should not make publiser absent
   }
 })
 
-test('print_bibliography omits absent and empty institution lists', () => {
+test('print_bibliography omits absent and empty institutions', () => {
   const materials: Material[] = [
     { type: 'document', title: 'No custom fields' },
     { type: 'document', title: 'No institution', custom: {} },
+    { type: 'document', title: 'Empty institution', custom: { institution: '' } },
     { type: 'document', title: 'Empty institutions', custom: { institution: [] } },
   ]
   for (const material of materials) {

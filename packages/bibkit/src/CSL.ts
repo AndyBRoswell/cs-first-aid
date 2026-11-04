@@ -251,7 +251,7 @@ export type Custom = {
   for?: unknown
   companion?: (Data_Type.ID_t | Data_Type.Material | Data_Type.Course)[]
   variant?: Data_Type.Material[] // Other editions, media, bindings, or publication variants of the same work.
-  institution?: string[]
+  institution?: string | string[]
   lecturer?: Name_Variable[]
   URL?: Data_Type.Link[] // Additional descriptive pages for the same item; `Item.URL` remains preferred.
   suggested_playback_speed?: [ minimum: number, maximum: number ]
