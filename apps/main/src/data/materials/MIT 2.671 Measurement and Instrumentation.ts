@@ -44,7 +44,7 @@ export const entries = [
       URL: 'https://web.mit.edu/2.THA/www/JournalArticleGuidelinesForWeb.pdf',
       accessed: { 'date-parts': [ [ 2026, 11, 1 ] ] },
       custom: {
-        institution: [ 'Massachusetts Institute of Technology' ],
+        institution: 'Massachusetts Institute of Technology',
         URL: [
           { link: 'https://ocw.mit.edu/courses/2-tha-undergraduate-thesis-for-course-2-a-january-iap-2007/pages/related-resources/', display_text: 'MIT OpenCourseWare: author attribution and official link' },
         ],
@@ -67,7 +67,7 @@ export const entries = [
       URL: 'https://docs.google.com/spreadsheets/d/1WMQEF7cEQnTiaPmBEAoPwQISa33caf6C-o5fEtT5Fc4/edit',
       accessed: { 'date-parts': [ [ 2026, 11, 1 ] ] },
       custom: {
-        institution: [ 'Massachusetts Institute of Technology' ],
+        institution: 'Massachusetts Institute of Technology',
         URL: [
           { link: 'https://web.mit.edu/2.671/www/', display_text: 'Official course website and project topic index link' },
         ],

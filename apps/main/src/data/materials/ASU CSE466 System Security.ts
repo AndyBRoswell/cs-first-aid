@@ -16,7 +16,7 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2026/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -35,7 +35,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Review of x86-64 assembly, program behavior, and debugging from CSE365.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -54,7 +54,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Shellcode, memory corruption, input constraints, and binary defenses.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -73,7 +73,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Static and dynamic analysis of functions, stack frames, and data; includes crackmes and the yan85 VM.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -92,7 +92,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Finding and chaining gadgets for return-oriented programming.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -111,7 +111,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Heap management, allocator misuse, and use-after-free exploitation.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -130,7 +130,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Integrated exploitation using reverse engineering, shellcode, and defense bypasses.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -147,7 +147,7 @@ export const entries = [
       URL: 'https://pwn.college/cse466-f2025/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -166,7 +166,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Filesystem and concurrency races, including TOCTOU vulnerabilities.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -185,7 +185,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'chroot, seccomp, sandbox boundaries, and escapes.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -204,7 +204,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Linux kernel modules, vulnerabilities, and privilege escalation; VM labs.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -223,7 +223,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Cache side channels, Spectre, and Meltdown; some labs require VMs. Omitted from the Fall 2026 syllabus.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -242,7 +242,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Integrated userland and kernel exploitation, concurrency, and address randomization.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

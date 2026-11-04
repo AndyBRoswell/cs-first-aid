@@ -22,7 +22,7 @@ export const entries = [
       URL: 'https://www.csd.uoc.gr/~hy647/syllabus.html',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'University of Crete' ],
+        institution: 'University of Crete',
         URL: [
           { link: 'https://www.csd.uoc.gr/~hy647/', display_text: 'Course website (Fall 2025)' },
         ],
@@ -58,7 +58,7 @@ export const entries = [
       URL: 'https://www.csd.uoc.gr/~hy647/assignments.html',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'University of Crete' ],
+        institution: 'University of Crete',
         lecturer: [ { given: 'Angelos', family: 'Bilas' } ], // Listed as instructor, not assignment author.
         URL: [
           { link: 'https://www.csd.uoc.gr/~hy647/', display_text: 'Course website (Fall 2025)' },

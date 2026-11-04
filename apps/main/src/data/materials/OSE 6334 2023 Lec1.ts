@@ -15,7 +15,7 @@ export const entries = [
       URL: 'https://www.creol.ucf.edu/mir/wp-content/uploads/sites/7/2023/07/L1_Logistics.-Intro-to-NLO.pdf',
       accessed: { 'date-parts': [ [ 2026, 9, 10 ] ] },
       custom: {
-        institution: [ 'CREOL, The College of Optics and Photonics, University of Central Florida' ],
+        institution: 'CREOL, The College of Optics and Photonics, University of Central Florida',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

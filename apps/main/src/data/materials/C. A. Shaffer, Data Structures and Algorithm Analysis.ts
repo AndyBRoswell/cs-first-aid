@@ -17,7 +17,7 @@ export const entries = [
       URL: 'https://people.cs.vt.edu/shaffer/Book/',
       accessed: { 'date-parts': [ [ 2026, 10, 19 ] ] },
       custom: {
-        institution: [ 'Virginia Tech' ],
+        institution: 'Virginia Tech',
         free_material: [
           {
             link: 'https://people.cs.vt.edu/shaffer/Book/C++3e20130328.pdf',
@@ -65,7 +65,7 @@ export const entries = [
       URL: 'https://people.cs.vt.edu/shaffer/Book/',
       accessed: { 'date-parts': [ [ 2026, 10, 19 ] ] },
       custom: {
-        institution: [ 'Virginia Tech' ],
+        institution: 'Virginia Tech',
         free_material: [
           {
             link: 'https://people.cs.vt.edu/shaffer/Book/JAVA3e20130328.pdf',

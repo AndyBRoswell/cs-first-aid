@@ -16,7 +16,7 @@ export const entries = [
       URL: 'https://csse6400.uqcloud.net/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
-        institution: [ 'The University of Queensland' ],
+        institution: 'The University of Queensland',
         lecturer: [ { given: 'Richard', family: 'Thomas' } ],
         URL: [
           { link: 'https://course-profiles.uq.edu.au/course-profiles/CSSE6400-21413-7620', display_text: 'Course profile (UQ)' }, // issued, version, lecturer

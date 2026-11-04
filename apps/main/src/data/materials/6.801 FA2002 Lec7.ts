@@ -15,7 +15,7 @@ export const entries = [
       URL: 'http://www.ai.mit.edu/courses/6.801/Fall2002/lect/lect07.pdf',
       accessed: { 'date-parts': [ [ 2026, 8, 23 ] ] },
       custom: {
-        institution: [ 'Massachusetts Institute of Technology' ],
+        institution: 'Massachusetts Institute of Technology',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

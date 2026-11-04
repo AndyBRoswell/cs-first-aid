@@ -46,7 +46,7 @@ const open_course = [
       accessed: { 'date-parts': [ [ 2026, 5, 6 ], ], },
       custom: {
         lecturer: [ { family: '陈', given: '发来' } ],
-        institution: [ '中国科学技术大学' ],
+        institution: '中国科学技术大学',
       } satisfies CSL.Custom,
     } satisfies types_data.Video,
   },

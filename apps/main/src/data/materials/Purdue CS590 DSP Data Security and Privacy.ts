@@ -18,7 +18,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 11, 1 ] ] },
       note: 'Includes access control and cryptography alongside anonymization and differential privacy.',
       custom: {
-        institution: [ 'Purdue University' ],
+        institution: 'Purdue University',
         URL: [
           { link: 'https://www.cs.purdue.edu/homes/ninghui/courses/Spring22/', display_text: 'Course information' },
         ],

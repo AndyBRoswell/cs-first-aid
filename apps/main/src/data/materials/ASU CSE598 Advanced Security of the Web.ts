@@ -15,7 +15,7 @@ export const entries = [
       URL: 'https://pwn.college/cse598-asow-f2026/',
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -33,7 +33,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Security of web hosts and proxies.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -51,7 +51,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'HTTP request construction, parsing, and security.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -69,7 +69,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Security of cookies and session identifiers.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -87,7 +87,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Web authentication mechanisms and attacks.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -105,7 +105,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Server-side command injection exercises.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -123,7 +123,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Path traversal and file access boundaries.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -141,7 +141,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Cross-site request forgery mechanisms and attack conditions.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },
@@ -159,7 +159,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 31 ] ] },
       note: 'Cross-site scripting vulnerabilities and exploitation.',
       custom: {
-        institution: [ 'Arizona State University' ],
+        institution: 'Arizona State University',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

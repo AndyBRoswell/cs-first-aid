@@ -21,7 +21,7 @@ export const entries = [
       URL: 'https://compnet2526.atlarge-research.com/docs/course-components/lectures/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'Vrije Universiteit Amsterdam' ],
+        institution: 'Vrije Universiteit Amsterdam',
         lecturer: [
           { given: 'Jesse', family: 'Donkervliet' },
           { given: 'Gonçalo Amado', family: 'Mesquita' },
@@ -83,7 +83,7 @@ export const entries = [
       URL: 'https://compnet2526.atlarge-research.com/docs/course-components/tutorials/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'Vrije Universiteit Amsterdam' ],
+        institution: 'Vrije Universiteit Amsterdam',
         free_material: {
           Slides: [
             { link: 'https://compnet2526.atlarge-research.com/slides/tutorial-1-physical-layer-link-layer.pdf', display_text: 'Tutorial 1: Physical and link layers (PDF)', 'Content-Type': 'application/pdf' },
@@ -114,7 +114,7 @@ export const entries = [
       URL: 'https://compnet2526.atlarge-research.com/docs/lab-manual/',
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
       custom: {
-        institution: [ 'Vrije Universiteit Amsterdam' ],
+        institution: 'Vrije Universiteit Amsterdam',
         free_material: {
           Assignments: [
             { link: 'https://compnet2526.atlarge-research.com/docs/lab-manual/mandatory-assignments/a1/', display_text: 'A1: Chat Client', 'Content-Type': 'text/html' },

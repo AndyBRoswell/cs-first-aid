@@ -16,7 +16,7 @@ export const entries = [
       URL: 'https://cmu-313.github.io/_old/S26/',
       accessed: { 'date-parts': [ [ 2026, 10, 27 ] ] },
       custom: {
-        institution: [ 'Carnegie Mellon University' ],
+        institution: 'Carnegie Mellon University',
         free_material: [
           { link: 'https://cmu-313.github.io/_old/S26/#weekly-schedule', display_text: 'Lecture slides (PDF)', 'Content-Type': 'text/html' },
         ],

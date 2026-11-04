@@ -26,7 +26,7 @@ export const entries = [
       URL: 'https://cs184.eecs.berkeley.edu/fa26/assets/lectures/15-Color-and-Perception.pdf',
       accessed: { 'date-parts': [ [ 2026, 8, 24 ] ] },
       custom: {
-        institution: [ 'University of California, Berkeley' ],
+        institution: 'University of California, Berkeley',
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
   },

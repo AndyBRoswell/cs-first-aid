@@ -16,7 +16,7 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 11, 1 ] ] },
       note: 'Win32 and WPF; includes HTML/CSS. WPF slides: 2017 PDF metadata; lab tutorial: April 2023.',
       custom: {
-        institution: [ 'Politechnika Warszawska' ],
+        institution: 'Politechnika Warszawska',
         free_material: {
           'Lecture slides': [
             { link: 'https://pages.mini.pw.edu.pl/~aszklarp/archiwum/2025/pige/Intro.pdf', display_text: 'Introduction (PDF)', 'Content-Type': 'application/pdf' },

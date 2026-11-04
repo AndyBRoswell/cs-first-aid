@@ -14,7 +14,7 @@ export const entries = [
       URL: 'https://grouplens.org/datasets/movielens/',
       accessed: { 'date-parts': [ [ 2026, 11, 3 ] ] },
       custom: {
-        institution: [ 'University of Minnesota' ],
+        institution: 'University of Minnesota',
         URL: [
           { link: 'https://grouplens.org/datasets/movielens/32m/', display_text: 'MovieLens 32M information page' }, // issued
           { link: 'https://grouplens.org/datasets/movielens/20m/', display_text: 'MovieLens 20M information page' }, // modified
