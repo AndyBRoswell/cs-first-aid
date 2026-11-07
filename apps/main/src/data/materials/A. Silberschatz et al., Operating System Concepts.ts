@@ -53,10 +53,10 @@ export const entries = [
             'publisher-place': 'Hoboken, NJ',
             issued: { 'date-parts': [ [ 2019 ] ] },
             ISBN: '9781119586166',
-            'number-of-pages': 'xxvi + 1006 + 24 + 57 + 42 + 26', // CiNii includes the four separately paginated appendices.
+            'number-of-pages': 'xxvi + 1006 + 24 + 57 + 42 + 26', // CiNii includes the 4 separately paginated appendices.
             URL: 'https://webpac.lib.itb.ac.id/find/detail/147240',
             accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
-            note: 'Four separately paginated appendices (24, 57, 42, and 26 pages) are inserted between pages 897 and 901.',
+            note: '4 separately paginated appendices (24, 57, 42, and 26 pages) are inserted between pages 897 and 901.',
             custom: {
               edition: 'Asia Edition',
               URL: [
