@@ -245,7 +245,7 @@ export type Custom = {
   topic?: string[]
   subtitle?: string
   edition?: string | number // Additional edition designation (e.g. "Global Edition"); use `Item.edition` for the edition number.
-  weight?: string | number // Physical weight; strings include units (e.g. "4.4 lb").
+  weight?: string | number // Physical weight; number means grams; strings include units (e.g. "4.6 lb").
   'printing-date'?: Date_Variable // Date of the printing identified by `Item['printing-number']`; use `Item.issued` for the edition's publication date.
   'collection-title-short'?: string | string[]
   free_material?: Data_Type.Link[] | Record<string, Data_Type.Link[]> // Freely accessible and normally downloadable resources, or pages through which they can be obtained.
