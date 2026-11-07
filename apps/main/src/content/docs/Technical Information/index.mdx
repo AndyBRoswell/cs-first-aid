@@ -6,10 +6,11 @@ tags: [ ]
 ---
 
 import { references as R } from './index.ts'
+import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
 
 <section>
-  本章依据经典的软件开发生命周期（SDLC），为本项目撰写技术文档。
+  本章依据经典的软件开发生命周期（SDLC）<Cite references={R} cite_items={[ { condition: m => m.title?.includes('软件开发生命周期') && m.author?.some(a => a.literal === 'Amazon Web Services') }, { condition: m => m.title?.includes('软件开发生命周期') && m.author?.some(a => a.literal === 'Akamai') } ]}/>，为本项目撰写技术文档。
   - 《需求分析》主要描述上层（宏观）需求，原则上不涉及设计、实现等下层细节。
   - 《架构与设计决策》包括本项目的总体架构及对应的设计决策。
   - 《需求规格》在需求分析结果、架构与设计决策的共同约束下制定，用于检验指定的需求是否满足。
