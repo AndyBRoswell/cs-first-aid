@@ -19,7 +19,7 @@ export const Technical_Information = {
     {
       label: '需求分析',
       translations: {
-        en: 'Features',
+        en: 'Requirement Analysis',
       },
       slug: 'technical-information/requirement-analysis',
       attrs: {
@@ -29,7 +29,7 @@ export const Technical_Information = {
     {
       label: '架构与设计决策',
       translations: {
-        en: 'Architecture',
+        en: 'Architecture and Design Decisions',
       },
       slug: 'technical-information/architecture-and-design-decisions',
       attrs: {
@@ -39,7 +39,7 @@ export const Technical_Information = {
     {
       label: '需求规格',
       translations: {
-        en: 'Design Decisions',
+        en: 'Requirement Specifications',
       },
       slug: 'technical-information/requirement-specifications',
       attrs: {
