@@ -1034,7 +1034,7 @@ export const Courses_Textbooks_and_References = {
       slug: '',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
-        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Telecom', 'Control', 'Embedded', ], 'en'))
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Telecom', 'Control', 'Embedded', ], 'en'))
       },
     },
     {

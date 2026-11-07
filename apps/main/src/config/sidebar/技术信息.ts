@@ -43,7 +43,7 @@ export const Technical_Information = {
       },
       slug: 'technical-information/requirement-specifications',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
       },
     },
     {
