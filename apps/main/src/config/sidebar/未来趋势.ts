@@ -20,7 +20,7 @@ export const Future_Trends = {
     {
       label: '我们面对什么？',
       translations: {
-        en: 'What Are We Encountering?',
+        en: 'What We Encounter?',
       },
       items: [
         {
@@ -28,7 +28,7 @@ export const Future_Trends = {
           translations: {
             en: 'Computer Literacy Becoming Common Sense: Data Analysis, Web/Client Development...',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/computer-literacy-becoming-common-sense',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -38,7 +38,7 @@ export const Future_Trends = {
           translations: {
             en: 'The Decline of Cost-per-Token Is Not Inevitable',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/the-decline-of-cost-per-token-is-not-inevitable',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -48,7 +48,7 @@ export const Future_Trends = {
           translations: {
             en: 'Free and Budget Plans/Benefits Are Not Guaranteed to Last Long',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/free-and-budget-plans-and-benefits',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -58,7 +58,7 @@ export const Future_Trends = {
           translations: {
             en: 'The Quality of Various Products and Services in This Industry Is Declining but without Price Reduction',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/declining-product-and-service-quality',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -68,7 +68,7 @@ export const Future_Trends = {
           translations: {
             en: 'Cost Pressure Everywhere: Talking from the Surges of Subscriptions and Memory/Disk Prices',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/cost-pressure-everywhere',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -78,7 +78,7 @@ export const Future_Trends = {
           translations: {
             en: 'The Illusion of Long-Term Free Access: Thoughts on the Prohibition of Access to Curricula / Open Courses of Multiple Universities Without Logins',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/the-illusion-of-long-term-free-access',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -88,7 +88,7 @@ export const Future_Trends = {
           translations: {
             en: 'The Degradation of Search Results',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/the-degradation-of-search-results',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -98,7 +98,7 @@ export const Future_Trends = {
           translations: {
             en: 'The Tide of Closed-Source',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/the-tide-of-closed-source',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -108,7 +108,7 @@ export const Future_Trends = {
           translations: {
             en: 'The Red-Blue Asymmetry of AI',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/the-red-blue-asymmetry-of-ai',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -118,7 +118,7 @@ export const Future_Trends = {
           translations: {
             en: 'IT/OT Convergence',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/it-ot-convergence',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -128,7 +128,7 @@ export const Future_Trends = {
           translations: {
             en: 'Not Only Lifelong Learning, but Also Lifelong Self-Learning',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/lifelong-self-learning',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -138,7 +138,7 @@ export const Future_Trends = {
           translations: {
             en: 'The Increasingly Non-Negligible: Influencing Factors outside Study and Work',
           },
-          slug: '',
+          slug: 'future-trends/what-we-encounter/influencing-factors-outside-study-and-work',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -156,7 +156,7 @@ export const Future_Trends = {
           translations: {
             en: 'The Ceiling of Low-Code/No-Code',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/the-ceiling-of-low-code-and-no-code',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -166,7 +166,7 @@ export const Future_Trends = {
           translations: {
             en: 'Off-Cloud',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/off-cloud',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -176,7 +176,7 @@ export const Future_Trends = {
           translations: {
             en: 'Fully Implement Automated Testing',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/fully-implement-automated-testing',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -186,7 +186,7 @@ export const Future_Trends = {
           translations: {
             en: 'Design Decisions under Resource Limits',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/design-decisions-under-resource-limits',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -196,7 +196,7 @@ export const Future_Trends = {
           translations: {
             en: 'High Redundancy',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/high-redundancy',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -206,7 +206,7 @@ export const Future_Trends = {
           translations: {
             en: 'Persist in Open-Source and Free of Charge',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/persist-in-open-source-and-free-of-charge',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -216,7 +216,7 @@ export const Future_Trends = {
           translations: {
             en: 'Implement Multiple Aspects of Security Measures Well',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/implement-multiple-aspects-of-security-measures-well',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -226,7 +226,7 @@ export const Future_Trends = {
           translations: {
             en: 'Beyond the Boundaries of Search Boxes: Programmable Information Retrieval',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/programmable-information-retrieval',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
@@ -236,7 +236,7 @@ export const Future_Trends = {
           translations: {
             en: 'General Solution: Computer Science+',
           },
-          slug: '',
+          slug: 'future-trends/what-should-we-do/computer-science-plus',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
           },
