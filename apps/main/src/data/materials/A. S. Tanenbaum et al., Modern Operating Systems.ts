@@ -11,16 +11,23 @@ export const entries = [
       publisher: 'Pearson',
       issued: { 'date-parts': [ [ 2023, 4, 17 ] ] },
       edition: 5,
+      medium: 'Paperback',
+      dimensions: '230 × 180 × 46 mm',
+      'number-of-pages': 1184,
       language: 'en-US',
       ISBN: '9781292459660',
       URL: 'https://www.pearson.com/en-gb/subject-catalog/p/modern-operating-systems-global-edition/P200000010760/9781292459660',
-      accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
       custom: {
         edition: 'Global Edition',
+        URL: [
+          { link: 'https://www.foyles.co.uk/book/modern-operating-systems-global-edition/andrew-s-tanenbaum/9781292459660', display_text: 'Foyles' }, // dimensions, number-of-pages
+        ],
         variant: [
           {
             type: 'book',
             medium: 'Paperback',
+            dimensions: '7 × 9.125 in', // Pearson InformIT: 7" × 9-1/8"
             issued: { 'date-parts': [ [ 2022, 5, 29 ] ] },
             ISBN: '9780137618873',
             'number-of-pages': 1184,
@@ -38,6 +45,7 @@ export const entries = [
           {
             type: 'book',
             medium: 'Loose-leaf',
+            dimensions: '9.3 × 7.1 × 2.5 in', // Bookshop.org
             issued: { 'date-parts': [ [ 2022, 10, 31 ] ] },
             ISBN: '9780137618842',
             'number-of-pages': 1156,
