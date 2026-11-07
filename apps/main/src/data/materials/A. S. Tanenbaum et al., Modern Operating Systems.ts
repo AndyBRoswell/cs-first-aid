@@ -20,8 +20,9 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
       custom: {
         edition: 'Global Edition',
+        weight: '1722 g',
         URL: [
-          { link: 'https://www.foyles.co.uk/book/modern-operating-systems-global-edition/andrew-s-tanenbaum/9781292459660', display_text: 'Foyles' }, // dimensions, number-of-pages
+          { link: 'https://www.foyles.co.uk/book/modern-operating-systems-global-edition/andrew-s-tanenbaum/9781292459660', display_text: 'Foyles' }, // dimensions, number-of-pages, weight
         ],
         variant: [
           {
@@ -53,6 +54,7 @@ export const entries = [
             accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
             custom: {
               edition: 'United States Edition',
+              weight: '4.4 lb', // Bookshop.org
               URL: [
                 { link: 'https://books.google.com/books?id=VYJ5zwEACAAJ', display_text: 'Google Books bibliographic record' },
               ],
