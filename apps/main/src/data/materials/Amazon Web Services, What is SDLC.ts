@@ -13,4 +13,16 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
     } satisfies types_data.Material,
   },
+  {
+    id: [],
+    material: {
+      type: 'webpage',
+      title: 'What is SDLC (Software Development Lifecycle)?',
+      author: [ { literal: 'Amazon Web Services' } ],
+      'container-title': 'Amazon Web Services',
+      language: 'en-US',
+      URL: 'https://aws.amazon.com/what-is/sdlc/',
+      accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
+    } satisfies types_data.Material,
+  },
 ] satisfies types_data.Entry[]

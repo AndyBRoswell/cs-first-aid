@@ -13,4 +13,16 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 10, 30 ] ] },
     } satisfies types_data.Material,
   },
+  {
+    id: [],
+    material: {
+      type: 'webpage',
+      title: 'What Is the Software Development Lifecycle (SDLC)?',
+      author: [ { literal: 'Akamai' } ],
+      'container-title': 'Akamai',
+      language: 'en',
+      URL: 'https://www.akamai.com/glossary/software-development-lifecycle-sdlc',
+      accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
+    } satisfies types_data.Material,
+  },
 ] satisfies types_data.Entry[]
