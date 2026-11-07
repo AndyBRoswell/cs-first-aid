@@ -21,3 +21,15 @@ export const I_info = {
     },
   },
 } satisfies types_data.Course
+
+export const II_info = {
+  canonical_name: '数据库 II',
+  name: [ '数据库 II', 'Databases II' ],
+  material: {
+    reference: {
+      en: [
+        ...catalog.filter(item => item.type === 'webpage' && item.title === 'The Internals of PostgreSQL' && item.author?.some(author => author.family === 'SUZUKI'), { count: 1 }),
+      ],
+    },
+  },
+} satisfies types_data.Course
