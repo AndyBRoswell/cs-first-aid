@@ -27,6 +27,61 @@ export const entries = [
             issued: { 'date-parts': [ [ 2018, 4 ] ] },
             URL: 'https://www.wiley.com/en-us/Operating+System+Concepts%2C+10th+Edition-p-9781119320913',
           },
+          {
+            type: 'book',
+            title: 'Silberschatz\'s Operating System Concepts',
+            medium: 'Paperback',
+            dimensions: '252 × 201 × 36 mm',
+            issued: { 'date-parts': [ [ 2019, 7 ] ] },
+            ISBN: '9781119454083',
+            'number-of-pages': 896,
+            URL: 'https://www.wiley.com/en-gb/silberschatz%27s-operating-system-concepts-global-edition-10th-edition-p-9781119454083',
+            accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
+            custom: {
+              edition: 'Global Edition',
+              weight: '1656 g',
+              URL: [
+                { link: 'https://www.akademika.no/en/teknologi/data-og-informasjonsteknologi/silberschatzs-operating-system-concepts-global-edition/9781119454083', display_text: 'Akademika' }, // dimensions, weight
+                { link: 'https://media.wiley.com/product_data/excerpt/85/11194540/1119454085-18.pdf', display_text: 'Wiley: Table of Contents (PDF)' },
+              ],
+            },
+          },
+          {
+            type: 'book',
+            medium: 'Paperback',
+            dimensions: '24 cm',
+            'publisher-place': 'Hoboken, NJ',
+            issued: { 'date-parts': [ [ 2019 ] ] },
+            ISBN: '9781119586166',
+            'number-of-pages': 'xxvi + 1006 + 24 + 57 + 42 + 26', // CiNii includes the four separately paginated appendices.
+            URL: 'https://webpac.lib.itb.ac.id/find/detail/147240',
+            accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
+            note: 'Four separately paginated appendices (24, 57, 42, and 26 pages) are inserted between pages 897 and 901.',
+            custom: {
+              edition: 'Asia Edition',
+              URL: [
+                { link: 'https://cir.nii.ac.jp/crid/1971993809756396838', display_text: 'CiNii Books' }, // publisher-place, number-of-pages, separately paginated appendices
+                { link: 'https://www.tenlong.com.tw/products/9781119586166', display_text: 'Tenlong Books: Table of Contents' },
+                { link: 'https://cylis.lib.cycu.edu.tw/record%3Db3000729~S1%2Acht', display_text: 'Chung Yuan Christian University Library (associated eBook: 9781119320913)' },
+              ],
+            },
+          },
+          {
+            type: 'book',
+            title: 'Silberschatz\'s Operating System Concepts',
+            medium: 'eBook',
+            issued: { 'date-parts': [ [ 2019, 10 ] ] },
+            ISBN: '9781119455868',
+            'number-of-pages': 896,
+            URL: 'https://www.wiley.com/en-gb/silberschatz%27s-operating-system-concepts-global-edition-10th-edition-p-9781119455868',
+            accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
+            custom: {
+              edition: 'Global Edition',
+              URL: [
+                { link: 'https://www.vitalsource.com/products/silberschatz-39-s-operating-system-concepts-global-abraham-silberschatz-peter-b-v9781119455868', display_text: 'VitalSource' },
+              ],
+            },
+          },
         ],
       } satisfies CSL.Custom,
     },
