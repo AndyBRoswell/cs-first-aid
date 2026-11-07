@@ -5,7 +5,7 @@ import { afterAll, beforeAll, describe, expect, vi } from 'vitest'
 import { SemVer } from 'semver'
 import * as release_stages from '@/core/release_stages.ts'
 
-// Business rules: src/content/docs/Technical Information/Features.mdx, 内容版本管理.
+// Business rules: src/content/docs/Technical Information/Requirement Specifications.mdx, 内容版本管理.
 const core_version = vi.hoisted(() => '1.2.3') // Keep tests independent of the real package version.
 vi.mock('@package.json', () => ({ default: { version: core_version, }, }))
 

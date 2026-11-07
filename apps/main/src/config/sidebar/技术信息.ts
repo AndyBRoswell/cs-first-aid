@@ -17,31 +17,31 @@ export const Technical_Information = {
       },
     },
     {
-      label: '特性',
+      label: '需求分析',
       translations: {
         en: 'Features',
       },
-      slug: 'technical-information/features',
+      slug: 'technical-information/requirement-analysis',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
       },
     },
     {
-      label: '架构',
+      label: '架构与设计决策',
       translations: {
         en: 'Architecture',
       },
-      slug: 'technical-information/architecture',
+      slug: 'technical-information/architecture-and-design-decisions',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', })
       },
     },
     {
-      label: '设计决策',
+      label: '需求规格',
       translations: {
         en: 'Design Decisions',
       },
-      slug: 'technical-information/design-decisions',
+      slug: 'technical-information/requirement-specifications',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
@@ -97,21 +97,21 @@ export const Technical_Information = {
       },
     },
     {
-      label: '统计数据',
-      translations: {
-        en: 'Statistics',
-      },
-      slug: 'technical-information/statistics',
-      attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
-      },
-    },
-    {
       label: '合规',
       translations: {
         en: 'Compliance',
       },
       slug: 'technical-information/compliance',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      },
+    },
+    {
+      label: '统计数据',
+      translations: {
+        en: 'Statistics',
+      },
+      slug: 'technical-information/statistics',
       attrs: {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
