@@ -26,12 +26,40 @@ export const entries = [
             'number-of-pages': 1184,
             URL: 'https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618873',
             accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
-            note: 'United States edition.',
+            note: 'Used copies are available for outright purchase from eCampus (Buy Used).',
             custom: {
-              edition: 'Rental Edition',
+              edition: 'United States Edition',
               URL: [
-                { link: 'https://www.informit.com/store/modern-operating-systems-rental-edition-9780137618873', display_text: 'Pearson InformIT' },
+                { link: 'https://www.ecampus.com/modern-operating-systems-rental-edition/bk/9780137618873', display_text: 'eCampus (Buy Used)' },
+                { link: 'https://www.informit.com/store/modern-operating-systems-rental-edition-9780137618873', display_text: 'Pearson InformIT bibliographic record' },
               ],
+            },
+          },
+          {
+            type: 'book',
+            medium: 'Loose-leaf',
+            issued: { 'date-parts': [ [ 2022, 10, 31 ] ] },
+            ISBN: '9780137618842',
+            'number-of-pages': 1156,
+            URL: 'https://bookshop.org/p/books/modern-operating-systems-andrew-tanenbaum/923d5d871cc32391?ean=9780137618842',
+            accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
+            custom: {
+              edition: 'United States Edition',
+              URL: [
+                { link: 'https://books.google.com/books?id=VYJ5zwEACAAJ', display_text: 'Google Books bibliographic record' },
+              ],
+            },
+          },
+          {
+            type: 'book',
+            medium: 'eBook',
+            issued: { 'date-parts': [ [ 2022, 10, 14 ] ] },
+            ISBN: '9780137618880',
+            'number-of-pages': 1184,
+            URL: 'https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618880',
+            accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
+            custom: {
+              edition: 'United States Edition',
             },
           },
         ],
