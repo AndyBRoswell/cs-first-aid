@@ -24,9 +24,9 @@ export const Future_Trends = {
       },
       items: [
         {
-          label: '正在成为常识的计算机素养：数据分析、Web / 客户端开发……',
+          label: '正在成为常识的计算机素养：数据分析、Web/客户端开发……',
           translations: {
-            en: 'Computer Literacy Becoming Common Sense: Data Analysis, Web / Client Development...',
+            en: 'Computer Literacy Becoming Common Sense: Data Analysis, Web/Client Development...',
           },
           slug: '',
           attrs: {
@@ -74,9 +74,9 @@ export const Future_Trends = {
           },
         },
         {
-          label: '长期免费访问的幻觉：由多所高校禁止未登录访问培养方案/公开课想到的',
+          label: '长期免费访问的幻觉：由多所高校禁止未登录访问培养方案 / 公开课想到的',
           translations: {
-            en: 'The Illusion of Long-Term Free Access: Thoughts on the Prohibition of Access to Curricula/Open Courses of Multiple Universities Without Logins',
+            en: 'The Illusion of Long-Term Free Access: Thoughts on the Prohibition of Access to Curricula / Open Courses of Multiple Universities Without Logins',
           },
           slug: '',
           attrs: {
