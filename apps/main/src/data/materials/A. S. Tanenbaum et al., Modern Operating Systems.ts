@@ -17,6 +17,24 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 9, 29 ] ] },
       custom: {
         edition: 'Global Edition',
+        variant: [
+          {
+            type: 'book',
+            medium: 'Paperback',
+            issued: { 'date-parts': [ [ 2022, 5, 29 ] ] },
+            ISBN: '9780137618873',
+            'number-of-pages': 1184,
+            URL: 'https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618873',
+            accessed: { 'date-parts': [ [ 2026, 11, 7 ] ] },
+            note: 'United States edition.',
+            custom: {
+              edition: 'Rental Edition',
+              URL: [
+                { link: 'https://www.informit.com/store/modern-operating-systems-rental-edition-9780137618873', display_text: 'Pearson InformIT' },
+              ],
+            },
+          },
+        ],
       } satisfies CSL.Custom,
     },
   },
