@@ -47,3 +47,16 @@ export const I_info = {
     },
   },
 } satisfies types_data.Course
+
+export const II_info = {
+  canonical_name: '操作系统 II',
+  name: [ '操作系统 II', 'Operating Systems II' ],
+  material: {
+    reference: {
+      en: [
+        ...catalog.filter(item => item.type === 'book' && item.title?.startsWith('Windows Internals, Part 1:'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Windows Internals, Part 2', { count: 1 }),
+      ],
+    },
+  },
+} satisfies types_data.Course
