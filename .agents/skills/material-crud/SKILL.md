@@ -13,7 +13,7 @@ description: The creation, read, update, and deletion of materials
   - `publisher`与`custom.institution`不要混淆。
   - `author`与`custom.lecturer`不要混淆。
   - 字段值保持原有大小写样式，不要随意转换。
-  - `custom`中若有字段与 CSL-JSON 中的字段重名，则 CSL-JSON 中的该字段的值为首选，`custom`中该字段的值为附加。
+  - `custom`中若有字段与 CSL-JSON 中的字段重名，则 CSL-JSON 中的该字段的值为首选，`custom`中该字段的值为附加。附加值不与首选值重复。
     - 例：`URL` 一般首选出版社（如有）信息页 URL；`custom.URL`为提供的该条目的元信息的其余站点的 URL。
 - 不要记录盗版资源的 URL。
 - 租赁（rental）版本无需收录。
