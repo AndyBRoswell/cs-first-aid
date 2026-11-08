@@ -36,7 +36,7 @@ test('src/get_rendered_author.csl and src/get_full_author_names.csl', {
     { original: [ { family: '梁', given: '文锋' } ], rendered: { default: '梁文锋', full: '梁文锋' } },
     { original: [ { given: 'Wenfeng', family: 'Liang' } ], rendered: { default: 'W. Liang', full: 'Wenfeng Liang' } },
     { original: [ { family: '杨', given: '植麟' } ], rendered: { default: '杨植麟', full: '杨植麟' } },
-    { original: [ { given: 'Zhiling', family: 'Yang' } ], rendered: { default: 'Z. Yang', full: 'Zhiling Yang' } },
+    { original: [ { given: 'Zhilin', family: 'Yang' } ], rendered: { default: 'Z. Yang', full: 'Zhilin Yang' } },
     { original: [ { family: '黃', given: '霑' } ], rendered: { default: '黃霑', full: '黃霑' } },
     { original: [ { given: 'James Jim', family: 'Wong' } ], rendered: { default: 'J. J. Wong', full: 'James Jim Wong' } },
     { original: [ { family: '顧', given: '嘉煇' } ], rendered: { default: '顧嘉煇', full: '顧嘉煇' } },
