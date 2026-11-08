@@ -21,12 +21,12 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 11, 8 ] ] },
       note: 'Maintained edition for modern kernels; Linux 5.10 is the minimum supported baseline.',
       custom: {
+        license: 'OSL-3.0',
         URL: [
           { link: 'https://github.com/sysprog21/lkmpg', display_text: 'Book source and examples (GitHub)' },
         ],
         free_material: [
-          { link: 'https://sysprog21.github.io/lkmpg/', display_text: 'Full text (HTML)', 'Content-Type': 'text/html', license: 'OSL-3.0' },
-          { link: 'https://github.com/sysprog21/lkmpg/releases/download/latest/lkmpg.pdf', display_text: 'Latest PDF', 'Content-Type': 'application/pdf', license: 'OSL-3.0' },
+          { link: 'https://github.com/sysprog21/lkmpg/releases/download/latest/lkmpg.pdf', display_text: 'Latest PDF', 'Content-Type': 'application/pdf' },
           { link: 'https://github.com/sysprog21/lkmpg/tree/master/examples', display_text: 'Example source code', 'Content-Type': 'text/html', license: 'GPL-2.0-only' },
         ],
       } satisfies CSL.Custom,
