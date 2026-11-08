@@ -116,5 +116,15 @@ export const Technical_Information = {
         'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
       },
     },
+    {
+      label: '补充说明',
+      translations: {
+        en: 'Statistics',
+      },
+      slug: 'technical-information/additional',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', })
+      },
+    },
   ]
 }
