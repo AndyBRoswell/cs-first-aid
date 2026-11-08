@@ -142,6 +142,12 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
   if (material.custom) {
     const additional = util.create_HTML_element('div', { class: 'custom', })
     const labels = get_custom_label(language)
+    if (material.custom.license?.length) {
+      const field = util.create_HTML_element('p', { class: 'license', })
+      field.appendChild(util.create_HTML_element('span', { class: 'label', }, format_field_label(labels.license, language, { inline: true })))
+      field.appendChild(util.create_HTML_text_node(material.custom.license))
+      additional.appendChild(field)
+    }
     if (material.custom.institution?.length) {
       const institutions = typeof material.custom.institution === 'string' ? [ material.custom.institution ] : material.custom.institution
       const field = util.create_HTML_element('div', { class: 'institution', })

@@ -96,6 +96,7 @@ test('print_bibliography renders localized additional and free link lists', () =
     type: 'book',
     title: 'Links',
     custom: {
+      license: 'Work <license> & terms',
       URL: [ 'https://example.com/descriptive?page=1&language=en' ],
       free_material: [
         {
@@ -113,6 +114,11 @@ test('print_bibliography renders localized additional and free link lists', () =
   for (const language of i18n.supported_languages) {
     const labels = i18n.get_custom_label(language)
     const root = node_html_parser.parse(bib.print_bibliography([material], { language }))
+
+    const work_license = root.querySelector('.custom > .license')!
+    const license_label = language === 'zh-CN' ? '许可协议：' : 'License: '
+    expect(work_license.textContent).toBe(`${license_label}Work <license> & terms`)
+    expect(work_license.querySelector('license')).toBeNull() // Verify that special characters in HTML are also accepted as plain text here.
 
     const URL_field = root.querySelector('.custom > .URL')!
     expect(URL_field.querySelector(':scope > .label')!.textContent).toBe(i18n.format_field_label(labels.URL, language))

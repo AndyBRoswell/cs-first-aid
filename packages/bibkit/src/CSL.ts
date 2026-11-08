@@ -243,6 +243,7 @@ export type Custom = {
   tag?: string[]
   keyword?: string[] // Individual keywords; Item.keyword is a single string.
   topic?: string[]
+  license?: string // Work-level license; prefer an SPDX expression when applicable. Linked resources use Link.license independently.
   subtitle?: string
   edition?: string | number // Additional edition designation (e.g. "Global Edition"); use `Item.edition` for the edition number.
   weight?: string | number // Physical weight; number means grams; strings include units (e.g. "4.6 lb").

@@ -39,11 +39,24 @@ export const I_info = {
           ...catalog.filter(item => item.type === 'webpage' && item.title === '计算机本科生花大量时间写编译器，操作系统是不是不务正业？', { count: 1 }),
           ...catalog.filter(item => item.type === 'webpage' && item.title === '为啥南京大学蒋炎岩老师的操作系统课那么难?', { count: 1 }),
         ],
-        en: [
-          ...catalog.filter(item => item.type === 'book' && item.title?.startsWith('Windows Internals, Part 1:'), { count: 1 }),
-          ...catalog.filter(item => item.type === 'book' && item.title === 'Windows Internals, Part 2', { count: 1 }),
-        ],
       },
+    },
+  },
+} satisfies types_data.Course
+
+export const II_info = {
+  canonical_name: '操作系统 II',
+  name: [ '操作系统 II', 'Operating Systems II' ],
+  material: {
+    reference: {
+      en: [
+        ...catalog.filter(item => item.type === 'book' && item.title?.startsWith('Windows Internals, Part 1:'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'Windows Internals, Part 2', { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.URL === 'https://sysprog21.github.io/lkmpg/', { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === 'The Linux Memory Manager' && item.author?.some(author => author.family === 'Stoakes'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title?.startsWith('Linux Kernel Debugging:') && item.author?.some(author => author.family === 'Billimoria'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title?.startsWith('Linux Kernel Programming:') && item.edition === 2 && item.author?.some(author => author.family === 'Billimoria'), { count: 1 }),
+      ],
     },
   },
 } satisfies types_data.Course

@@ -19,6 +19,9 @@ export const entries = [
       "original-date": { 'date-parts': [[2018, 4]] },
       "original-publisher": 'Wiley',
       custom: {
+        URL: [
+          { link: 'https://www.zybooks.com/catalog/silberschatz-operating-system-concepts-10th-edition/', display_text: 'zyBooks: Operating System Concepts (zyVersion, interactive edition)' },
+        ],
         variant: [
           {
             type: 'book',
