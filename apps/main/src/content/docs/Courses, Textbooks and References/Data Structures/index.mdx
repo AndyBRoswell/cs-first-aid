@@ -9,6 +9,9 @@ import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
 
 <section>
+  有的学校的对应课程为 “数据结构与算法”（DSA）。
+</section>
+<section>
   # 学习材料
   <section>
     ## 教科书
@@ -16,6 +19,7 @@ import References from '@/components/References.astro'
       ### 中文
       <References materials={course_material.text.zh} reference_ranges={reference_ranges} scope_name={[ 'text', 'zh' ]}/>
     </section>
+    <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '清华大学出版社' && m.author?.some(author => author.family === '严' && author.given === '蔚敏'), options: { count: 1 } } ]}/>是我本科上课用的（当时是第 1 版）。这本书倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢：除了声称是 C 语言版但是出现了 C++ 的`operator&`以外，读起来总有一种古怪的感觉，我也描述不出来具体是什么。所以我基本不看上面的代码，而是直接根据自然语言部分来自行实现数据结构。另外，想考研的同学最好学习 / 复习本书。
     <section>
       ### 英文
       <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={[ 'text', 'en' ]}/>
@@ -31,7 +35,7 @@ import References from '@/components/References.astro'
       ### 说明
       Shaffer 在[原书主页](https://people.cs.vt.edu/shaffer/Book/)说明，《Data Structures and Algorithm Analysis》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'en' ], filter: m => m.type === 'book' && m.title?.startsWith('Data Structures and Algorithm Analysis') && m.author?.some(author => author.family === 'Shaffer'), options: { count: 2 } } ]}/>的纸质版和 PDF 版已不再维护，最后一个 PDF 版本为 2013 年 3 月 28 日的 3.2.0.10，并明确建议改用 OpenDSA 在线项目。此处列出的该项目的 CS3 教材[部分示例同时提供 Java 和 C++ 代码](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/ListArray.html)；其第 2 章「Programming Tutorials」还收录了[使用 Java 的 Scanner 类](https://opendsa-server.cs.vt.edu/OpenDSA/Books/CS3/html/scanning.html)等 Java 专题。[OpenDSA 官方说明](https://opendsa.org/guides/opendsa-book-configuration)指出，代码示例并非都具备所有语言的版本。
 
-      我不建议使用不原生支持不安全内存访问的语言学习《数据结构》，如 Java、Python；强烈建议使用 C 或 C++。若你坚持使用 Java 学习，不推荐按此项目的建议使用 Eclipse；推荐 JetBrains IntelliJ IDEA。
+      **我不建议使用不便于原生不安全内存访问的语言学习《数据结构》，如 Java、Python；强烈建议使用 C 或 C++。** 若你坚持使用 Java 学习，不推荐按此项目的建议使用 Eclipse；推荐 JetBrains IntelliJ IDEA。
     </section>
   </section>
   <section>
@@ -46,8 +50,9 @@ import References from '@/components/References.astro'
     <section>
       ### 中文
       <References materials={course_material.excluded.zh} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'zh' ]}/>
-
       人邮社将《数据结构习题解析与实验指导》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'zh' ], filter: m => m.title === '数据结构习题解析与实验指导' && m.publisher === '人民邮电出版社' && m.author?.some(author => author.family === '李' && author.given === '冬梅'), options: { count: 1 } } ]}/>列为第 2 版教材的配套书；目前没有确认它与此处列出的第 3 版教材<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '人民邮电出版社' && m.author?.some(author => author.family === '李' && author.given === '冬梅'), options: { count: 1 } } ]}/>逐题对应。[出版社教材页](https://www.ryjiaoyu.com/book/details/45170)
+
+      我之前把人邮版《数据结构》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'excluded', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '人民邮电出版社' && m.author?.some(author => author.family === '李' && author.given === '冬梅'), options: { count: 1 } } ]}/>收录到本项目的时候还是第 2 版，之前我一直以为是<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '清华大学出版社' && m.author?.some(author => author.family === '严' && author.given === '蔚敏'), options: { count: 1 } } ]}/>（那时还是第 1 版）的更新版本。但最近 GPT 偶然帮我找到了清华社的第 2 版<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '清华大学出版社' && m.author?.some(author => author.family === '严' && author.given === '蔚敏'), options: { count: 1 } } ]}/>，我这才发现人邮版的少了不少内容。
     </section>
     <section>
       ### 英文
