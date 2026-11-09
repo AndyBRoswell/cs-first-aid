@@ -7,7 +7,10 @@ tags: [ 基础选修 ]
 
 import { course_material, reference_ranges } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
+import * as util from '@cs-first-aid/util'
+
 import References from '@/components/References.astro'
+import Cite from '@/components/Cite.astro'
 
 <section>
   # 学习材料
@@ -35,5 +38,6 @@ import References from '@/components/References.astro'
       ### 中文
       <References materials={course_material.excluded.zh} reference_ranges={reference_ranges} scope_name={['excluded', 'zh']} />
     </section>
+    <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded'], filter: m => true }]}/>是我本科做“大创”（大学生创新训练计划）项目期间使用的参考书，都是 2018 年的，比较老了，目前也没有发现新版。
   </section>
 </section>
