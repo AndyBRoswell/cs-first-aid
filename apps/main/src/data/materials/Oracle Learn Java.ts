@@ -10,7 +10,7 @@ export const entries = [
       title: 'Learn Java',
       author: [ { literal: 'Oracle' } ],
       URL: 'https://dev.java/learn/',
-      accessed: { 'date-parts': [ [ 2026, 5, 13 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 11, 9 ] ] },
       publisher: 'Oracle',
       language: 'en-US',
     },
