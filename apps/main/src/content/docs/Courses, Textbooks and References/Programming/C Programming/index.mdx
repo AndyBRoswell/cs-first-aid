@@ -7,7 +7,10 @@ tags: [ 基础选修 ]
 
 import { course_material, reference_ranges } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
+import * as util from '@cs-first-aid/util'
+
 import References from '@/components/References.astro'
+import Cite from '@/components/Cite.astro'
 
 <section>
   # 学习材料
@@ -16,6 +19,7 @@ import References from '@/components/References.astro'
     <section>
       ### 英文
       <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={['text', 'en']} />
+      <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['text', 'en'], filter: m => util.ieq(m.title, 'Modern C')}]}/>作者为 C 标委会（[WG14](https://www.open-std.org/jtc1/sc22/wg14/)）成员。
     </section>
   </section>
   <section>
@@ -30,6 +34,7 @@ import References from '@/components/References.astro'
     <section>
       ### 英文
       <References materials={course_material.excluded.en} reference_ranges={reference_ranges} scope_name={['excluded', 'en']} />
+      不选的理由很简单，就是年代太久远了，特别是<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'The C Programming Language') && m.issued?.["date-parts"]?.[0]?.[0] === 1988 }]}/>。
     </section>
   </section>
 </section>
