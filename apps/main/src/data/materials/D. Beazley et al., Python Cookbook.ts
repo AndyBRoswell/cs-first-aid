@@ -16,7 +16,7 @@ export const entries = [
       ISBN: '9781449357337',
       language: 'en-US',
       URL: 'https://www.oreilly.com/library/view/python-cookbook-3rd/9781449357337/',
-      accessed: { 'date-parts': [ [ 2026, 9, 27 ] ] },
+      accessed: { 'date-parts': [ [ 2026, 11, 9 ] ] },
     } satisfies types_data.Material,
   },
 ] satisfies types_data.Entry[]
