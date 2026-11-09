@@ -7,7 +7,9 @@ tags: [ 基础必修 ]
 
 import { I_course_material, I_reference_ranges } from './data.ts'
 import * as bib from '@cs-first-aid/bibkit/bib'
+import * as util from '@cs-first-aid/util'
 import References from '@/components/References.astro'
+import Cite from '@/components/Cite.astro'
 
 <section>
   # 学习材料
@@ -30,6 +32,7 @@ import References from '@/components/References.astro'
     <section>
       ### 英文
       <References materials={I_course_material.excluded.en} reference_ranges={I_reference_ranges} scope_name={['excluded', 'en']} />
+      <Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/><Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer Plus') }]}/>都停留在 C++11；<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={['cplusplus.com']}/>也很少 C++11 以后的内容。<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/>是我读本科的时候我们专业用的书（不清楚现在还用不用），后来觉得信息密度还是低了（约 1000 页）；<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer Plus') }]}/>比<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/>还要多出大约 500 页。
     </section>
   </section>
 </section>
