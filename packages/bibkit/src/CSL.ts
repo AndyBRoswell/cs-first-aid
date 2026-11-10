@@ -257,5 +257,7 @@ export type Custom = {
   lecturer?: Name_Variable[]
   URL?: Data_Type.Link[] // Additional descriptive pages for the same item; `Item.URL` remains preferred.
   suggested_playback_speed?: [ minimum: number, maximum: number ]
+  received?: Date_Variable // Date manuscript was received by publisher/journal.
+  accepted?: Date_Variable // Date manuscript was accepted by publisher/journal.
   'collection-title'?: string | string[]
 }
