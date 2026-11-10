@@ -16,5 +16,6 @@ description: The creation, read, update, and deletion of materials
   - `custom`中若有字段与 CSL-JSON 中的字段重名，则 CSL-JSON 中的该字段的值为首选，`custom`中该字段的值为附加。附加值不与首选值重复。
     - 例：`URL` 一般首选出版社（如有）信息页 URL；`custom.URL`为提供的该条目的元信息的其余站点的 URL。
   - 在一个条目中，同一 URL 不重复出现，例如既出现在`URL`或`custom.URL`又出现在`custom.free_material`的元素中的`link`。
+- 该条目所在的 ts 文件的基本名（basename）建议填写作者与标题：作者通常填写第一作者；当有多名作者时，使用` et al.`或` 等`省略非一作；有多名作者但第一作者不明确时，搜索并填写该资料被被提及时提到最多的作者。填写简称（例如`CSAPP`或`SICP`）亦可。非中文且非 Latin1 字符一般需要转写。
 - 不要记录盗版资源的 URL。
 - 租赁（rental）版本无需收录。
