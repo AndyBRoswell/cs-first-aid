@@ -17,7 +17,7 @@ description: The creation, read, update, and deletion of materials
     - 例：`URL` 一般首选出版社（如有）信息页 URL；`custom.URL`为提供的该条目的元信息的其余站点的 URL。
   - 在一个条目中，同一 URL 不重复出现，例如既出现在`URL`或`custom.URL`又出现在`custom.free_material`的元素中的`link`。
   - 不在首选 URL 指向的资源中出现的字段，其出处填写于`custom.URL`，并为该`custom.URL`项中使用行末注释（`// `）简短标注此项资源提供的字段。
-  - 本项目推荐使用图灵完备方法编程查询条目，因而 CSL-JSON 中的`id`项不填，由 bibkit 自动生成；`Material.id`一项通常填写该条目的简称。
+  - 本项目推荐使用图灵完备方法编程查询条目，因而 CSL-JSON 中的`id`项不填，由 bibkit 自动生成；`Material.id`一项通常填写该条目的知名简称；若无广为人知的简称，则此项亦省略不写。
 - 该条目所在的 ts 文件的基本名（basename）建议填写作者与标题：作者通常填写第一作者；当有多名作者时，使用` et al.`或` 等`省略非一作；有多名作者但第一作者不明确时，搜索并填写该资料被被提及时提到最多的作者。填写简称（例如`CSAPP`或`SICP`）亦可。非中文且非 Latin1 字符一般需要转写。
 - 不要记录盗版资源的 URL。
 - 租赁（rental）版本无需收录。
