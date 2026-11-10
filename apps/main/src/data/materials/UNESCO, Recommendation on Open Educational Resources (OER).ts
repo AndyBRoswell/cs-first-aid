@@ -26,11 +26,6 @@ export const entries = [
             display_text: 'PDF',
             'Content-Type': 'application/pdf',
           },
-          {
-            link: 'https://www.unesco.org/en/legal-affairs/recommendation-open-educational-resources-oer',
-            display_text: 'HTML',
-            'Content-Type': 'text/html',
-          },
         ],
       } satisfies CSL.Custom,
     } satisfies types_data.Material,
@@ -58,11 +53,6 @@ export const entries = [
             link: 'https://unesdoc.unesco.org/ark:/48223/pf0000373755/PDF/373755chi.pdf.multi',
             display_text: 'PDF',
             'Content-Type': 'application/pdf',
-          },
-          {
-            link: 'https://www.unesco.org/zh/legal-affairs/recommendation-open-educational-resources-oer',
-            display_text: 'HTML',
-            'Content-Type': 'text/html',
           },
         ],
       } satisfies CSL.Custom,
