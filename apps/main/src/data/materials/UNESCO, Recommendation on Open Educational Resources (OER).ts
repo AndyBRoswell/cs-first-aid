@@ -18,7 +18,8 @@ export const entries = [
       note: 'Adopted on 25 November 2019 by the UNESCO General Conference at its 40th session (40 C/Resolution 32); transmitted to Member States under Circular Letter CL/4319.',
       custom: {
         URL: [
-          { link: 'https://unesdoc.unesco.org/ark:/48223/pf0000373755', display_text: 'UNESDOC' },
+          { link: 'https://unesdoc.unesco.org/ark:/48223/pf0000373755', display_text: 'UNESDOC (CL/4319)' },
+          { link: 'https://unesdoc.unesco.org/ark:/48223/pf0000370936', display_text: 'UNESDOC (40 C/32)' },
         ],
         free_material: [
           {
@@ -38,20 +39,22 @@ export const entries = [
       author: [ { literal: '联合国教育、科学及文化组织' } ],
       publisher: '联合国教科文组织',
       'publisher-place': '巴黎',
-      number: 'CL/4319',
+      number: '40 C/32',
       issued: { 'date-parts': [ [ 2019, 11, 25 ] ] },
       language: 'zh-CN',
-      URL: 'https://www.unesco.org/zh/legal-affairs/recommendation-open-educational-resources-oer',
+      URL: 'https://unesdoc.unesco.org/ark:/48223/pf0000370936',
       accessed: { 'date-parts': [ [ 2026, 11, 10 ] ] },
-      note: '经联合国教科文组织第四十届大会（40 C/决议 32）于2019年11月25日审议通过，以通函 CL/4319 正式印发各会员国。',
+      note: '经联合国教科文组织第四十届大会（40 C/决议 32）于2019年11月25日审议通过，以文件 40 C/32 及通函 CL/4319 印发。',
       custom: {
         URL: [
-          { link: 'https://unesdoc.unesco.org/ark:/48223/pf0000373755', display_text: 'UNESDOC' },
+          { link: 'https://unesdoc.unesco.org/ark:/48223/pf0000370936', display_text: 'UNESDOC (40 C/32)' },
+          { link: 'https://unesdoc.unesco.org/ark:/48223/pf0000372579', display_text: 'UNESDOC (40 C/决议 32)' },
+          { link: 'https://www.unesco.org/en/legal-affairs/recommendation-open-educational-resources-oer', display_text: 'UNESCO Legal Affairs (英文页面)' },
         ],
         free_material: [
           {
-            link: 'https://unesdoc.unesco.org/ark:/48223/pf0000373755/PDF/373755chi.pdf.multi',
-            display_text: 'PDF',
+            link: 'https://unesdoc.unesco.org/ark:/48223/pf0000370936/PDF/370936chi.pdf.multi',
+            display_text: 'PDF (中文)',
             'Content-Type': 'application/pdf',
           },
         ],
