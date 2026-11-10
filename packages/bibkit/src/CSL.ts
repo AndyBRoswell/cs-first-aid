@@ -188,10 +188,10 @@ export type Item = {
   'first-reference-note-number'?: string | number
   issue?: string | number
   locator?: string | number
-  number?: string | number
+  number?: string | number // Document number (e.g. for reports, standards, patents); do not use for journal article numbers.
   'number-of-pages'?: string | number
   'number-of-volumes'?: string | number
-  page?: string | number
+  page?: string | number // Page range or article number / e-locator (CSL 1.0 legacy: online-only journals store article numbers in page for style compatibility).
   'page-first'?: string | number
   part?: string | number
   'printing-number'?: string | number // Claude Sonnet 4.6 Max Extended wrote it as `printing` before. Fixed by GPT-5.6 Sol Max [codex].
