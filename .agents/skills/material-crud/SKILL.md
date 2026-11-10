@@ -15,5 +15,6 @@ description: The creation, read, update, and deletion of materials
   - 字段值保持原有大小写样式，不要随意转换。
   - `custom`中若有字段与 CSL-JSON 中的字段重名，则 CSL-JSON 中的该字段的值为首选，`custom`中该字段的值为附加。附加值不与首选值重复。
     - 例：`URL` 一般首选出版社（如有）信息页 URL；`custom.URL`为提供的该条目的元信息的其余站点的 URL。
+  - 在一个条目中，同一 URL 不重复出现，例如既出现在`URL`或`custom.URL`又出现在`custom.free_material`的元素中的`link`。
 - 不要记录盗版资源的 URL。
 - 租赁（rental）版本无需收录。
