@@ -591,7 +591,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/computer-architecture',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Arch', 'Electronics', 'Embedded', ], 'en'))
       },
     },
@@ -619,7 +619,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/databases/i',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'DB', ], 'en'))
           },
         },
@@ -671,7 +671,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/computer-networks/i',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Net', ], 'en'))
           },
         },
@@ -712,7 +712,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/compiler-design/i',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'TCS', ], 'en'))
           },
         },
