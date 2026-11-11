@@ -983,6 +983,28 @@ export const Courses_Textbooks_and_References = {
       },
     },
     {
+      label: '运动控制',
+      translations: {
+        en: 'Motion Control',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Electrical', 'Control', ], 'en'))
+      },
+    },
+    {
+      label: '智能控制',
+      translations: {
+        en: 'Intelligent Control',
+      },
+      slug: '',
+      attrs: {
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+        'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'Control', 'AI', ], 'en'))
+      },
+    },
+    {
       label: '设计模式',
       translations: {
         en: 'Design Patterns',
