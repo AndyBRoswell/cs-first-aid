@@ -9,7 +9,7 @@ import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
 
 <section>
-  有的学校的对应课程为 “数据结构与算法”（DSA）。
+  有的学校的对应课程为 “数据结构与算法”（DSA），本页选入的一些书也采用这个标题，但我没有选用为课程名称。虽然数据结构的教科书一般都会讲解相关的基础算法，比如串的匹配（KMP、BM 及其常见变体）、单源/多源最短路、关键路径、最小生成树、二叉搜索树的重新平衡、二分搜索、归并排序、快速排序等等，然而掌握这些不足以称为 “会算法”，最多只能称为 “（相对）不缺乏常识”，至少根据如今的卷情而言应当如此。
 </section>
 <section>
   # 学习材料
@@ -19,7 +19,9 @@ import References from '@/components/References.astro'
       ### 中文
       <References materials={course_material.text.zh} reference_ranges={reference_ranges} scope_name={[ 'text', 'zh' ]}/>
     </section>
-    <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '清华大学出版社' && m.author?.some(author => author.family === '严' && author.given === '蔚敏'), options: { count: 1 } } ]}/>是我本科上课用的（当时是第 1 版）。这本书倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢：除了声称是 C 语言版但是出现了 C++ 的`operator&`以外，读起来总有一种古怪的感觉，我也描述不出来具体是什么。所以我基本不看上面的代码，而是直接根据自然语言部分来自行实现数据结构。另外，想考研的同学最好学习 / 复习本书。
+    严蔚敏《数据结构》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '清华大学出版社' && m.author?.some(author => author.family === '严' && author.given === '蔚敏'), options: { count: 1 } } ]}/>是我本科上课用的，当时是第 1 版。这本书倒没有一些人骂得那样糟，我个人感觉至少非代码部分还是写得挺清楚的。但严书的代码风格我不喜欢：除了声称是 C 语言版但是出现了 C++ 的`operator&`以外（能接受 C++ 的编译器可以编译），读起来总有一种古怪的感觉，我也描述不出来具体是什么。所以我基本不看上面的代码，而是直接根据自然语言部分来自行实现数据结构。另外，想考研的同学最好学习 / 复习本书。
+
+    第 2 版<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => m.title === '数据结构' && m.publisher === '清华大学出版社' && m.author?.some(author => author.family === '严' && author.given === '蔚敏'), options: { count: 1 } } ]}/>前言称代码已改用纯 C。
     <section>
       ### 英文
       <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={[ 'text', 'en' ]}/>
