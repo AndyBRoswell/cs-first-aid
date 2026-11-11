@@ -606,7 +606,7 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Overview',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/databases',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'DB', ], 'en'))
@@ -658,7 +658,7 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Overview',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/computer-networks',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Net', ], 'en'))
@@ -699,7 +699,7 @@ export const Courses_Textbooks_and_References = {
           translations: {
             en: 'Overview',
           },
-          slug: '',
+          slug: 'courses-textbooks-and-references/compiler-design',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'TCS', ], 'en'))
