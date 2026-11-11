@@ -8,6 +8,7 @@ export const info = {
   material: {
     text: {
       zh: [
+        ...catalog.filter(item => item.type === 'book' && item.title === '数据结构与算法' && item.author?.some(author => author.family === '邓' && author.given === '俊辉'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === '数据结构（C++语言版）' && item.author?.some(author => author.family === '邓' && author.given === '俊辉'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === '数据结构' && item.publisher === '清华大学出版社' && item.author?.some(author => author.family === '严' && author.given === '蔚敏'), { count: 1 }),
       ],
@@ -16,6 +17,10 @@ export const info = {
       ],
     },
     reference: {
+      zh: [
+        ...catalog.filter(item => item.type === 'book' && item.title === '数据结构' && item.custom?.subtitle === '用面向对象方法与C++语言描述' && item.author?.some(author => author.family === '殷' && author.given === '人昆'), { count: 1 }),
+        ...catalog.filter(item => item.type === 'book' && item.title === '数据结构与算法' && item.author?.some(author => author.family === '张' && author.given === '铭'), { count: 1 }),
+      ],
       en: [
         ...catalog.filter(item => item.type === 'book' && item.title === 'Data Structures and Algorithm Analysis in C++' && item.author?.some(author => author.family === 'Weiss'), { count: 1 }),
         ...catalog.filter(item => item.type === 'book' && item.title === 'The Art of Computer Programming' && item.author?.some(author => author.family === 'Knuth') && item.volume === 1, { count: 1 }),
