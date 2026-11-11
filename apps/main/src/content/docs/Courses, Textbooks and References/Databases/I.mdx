@@ -15,6 +15,7 @@ import References from '@/components/References.astro'
     <section>
       ### 中文
       <References materials={course_material.text.zh} reference_ranges={reference_ranges} scope_name={[ 'text', 'zh' ]}/>
+      人大《数据库系统概论》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => /^数据库系统概论$/u.test(m.title ?? '') && m.author?.some(author => author.family === '王' && author.given === '珊'), options: { count: 1 } } ]}/>（我们上课那阵子用的是第 5 版）上面的不少 SQL 语句一些数据库产品都是不能识别的，这点要注意：不同数据库产品使用不同的 SQL 方言（SQL dialects），它们与作为标准的 ANSI SQL 不完全相同，如 Oracle DB 使用 PL/SQL，Microsoft SQL Server（MSSQL）使用 Transact-SQL（T-SQL），PostgreSQL 使用 PL/pgSQL；理论部分总体还可以，没什么大问题。
     </section>
     <section>
       ### 英文
@@ -26,8 +27,7 @@ import References from '@/components/References.astro'
     <section>
       ### 中文
       <References materials={course_material.guide.zh} reference_ranges={reference_ranges} scope_name={[ 'guide', 'zh' ]}/>
-
-      本书的习题解析对应主教材第 1～12 章，另有实验指导<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'guide', 'zh' ], filter: m => /^数据库系统概论(?:（第\d+版）)?习题解析与实验指导$/u.test(m.title ?? '') && m.author?.some(author => author.family === '王' && author.given === '珊'), options: { count: 1 } } ]}/>。
+      本书的习题解析对应主教材<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => /^数据库系统概论$/u.test(m.title ?? '') && m.author?.some(author => author.family === '王' && author.given === '珊'), options: { count: 1 } } ]}/>第 1～12 章，另有实验指导<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'guide', 'zh' ], filter: m => /^数据库系统概论(?:（第\d+版）)?习题解析与实验指导$/u.test(m.title ?? '') && m.author?.some(author => author.family === '王' && author.given === '珊'), options: { count: 1 } } ]}/>。
     </section>
   </section>
 </section>
