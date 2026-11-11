@@ -23,9 +23,11 @@ import References from '@/components/References.astro'
     <section>
       ### 说明
 
-      关于谢希仁编著的《计算机网络》，我们老师说：如果用的是中文教材，那么基本都是用这本。同时，这本书也是很多学校的计算机类考研指定的参考书。用于和《自顶向下方法》互为补充，也是很不错的。这两本的内容总体上差不了太多。
+      关于谢希仁编著的《计算机网络》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'zh' ], filter: m => m.title === '计算机网络' && m.author?.some(author => author.family === '谢' && author.given === '希仁'), options: { count: 1 } } ]}/>，我们老师说：如果用的是中文教材，那么基本都是用这本。同时，这本书也是很多学校的计算机类考研指定的参考书。用于和《自顶向下方法》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => m.title === 'Computer Networking' && m.author?.some(author => author.family === 'Kurose'), options: { count: 1 } } ]}/>互为补充，也是很不错的。这两本的内容总体上差不了太多。
 
-      我们本科上《计算机网络》的时候谢的书出到第 7 版；Kurose & Ross 这本书也还是第 7 版，中文版我也买了，但翻译质量很差，大量细节不准确，机翻味儿十分明显。不知道后续版本的翻译有没有改进。
+      我们本科上《计算机网络》的时候谢的书出到第 7 版；Kurose & Ross 这本书<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => m.title === 'Computer Networking' && m.author?.some(author => author.family === 'Kurose'), options: { count: 1 } } ]}/>也还是第 7 版，中文版我也买了，但翻译质量很差，大量细节不准确，机翻味儿十分明显。不知道后续版本的翻译有没有改进。
+
+      《自顶向下方法》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => m.title === 'Computer Networking' && m.author?.some(author => author.family === 'Kurose'), options: { count: 1 } } ]}/>自第 8 版起删去了第 7 版的第 9 章 “多媒体网络”，作者说明称：由于多媒体应用越来越流行，因此他们选择将这些内容编入前 8 个章节。从书中移除的内容都可以在书本的配套网站找到。该官方网站还具有 slides 和练习题。
 
       有的学校的人工智能等方向不将《计算机网络》列为必修课。
     </section>
