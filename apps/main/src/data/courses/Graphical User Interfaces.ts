@@ -20,6 +20,15 @@ export const info = {
           ...catalog.filter(item => item.type === 'webpage' && item.URL === 'https://docs.avaloniaui.net/docs/welcome', { count: 1 }),
         ],
       },
+      article: {
+        en: [
+          ...catalog.filter(item => item.URL === 'https://forum.qt.io/topic/112772/textarea-memory-leak-qml', { count: 1 }),
+          ...catalog.filter(item => item.number === 'QTBUG-95329', { count: 1 }),
+          ...catalog.filter(item => item.number === 'QTBUG-103819', { count: 1 }),
+          ...catalog.filter(item => item.number === 'QTBUG-107214', { count: 1 }),
+          ...catalog.filter(item => item.URL === 'https://forum.qt.io/topic/160753/qml-textarea-performance-with-large-data-buffers', { count: 1 }),
+        ],
+      },
     },
   },
 } satisfies types_data.Course
