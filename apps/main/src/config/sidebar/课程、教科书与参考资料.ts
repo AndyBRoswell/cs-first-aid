@@ -388,6 +388,17 @@ export const Courses_Textbooks_and_References = {
           },
         },
         {
+          label: '裸机程序设计',
+          translations: {
+            en: 'Bare-Metal Programming',
+          },
+          slug: 'courses-textbooks-and-references/programming/bare-metal-programming',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
+          },
+        },
+        {
           label: 'C# 程序设计',
           translations: {
             en: 'C# Programming Language',
@@ -568,6 +579,17 @@ export const Courses_Textbooks_and_References = {
           slug: 'courses-textbooks-and-references/operating-systems/ii',
           attrs: {
             'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Embedded', ], 'en'))
+          },
+        },
+        {
+          label: '实时操作系统',
+          translations: {
+            en: 'Real-Time Operating Systems',
+          },
+          slug: 'courses-textbooks-and-references/operating-systems/real-time-operating-systems',
+          attrs: {
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': 'blank', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'Sys', 'Embedded', ], 'en'))
           },
         },
