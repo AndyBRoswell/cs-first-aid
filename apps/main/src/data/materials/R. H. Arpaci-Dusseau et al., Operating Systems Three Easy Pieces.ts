@@ -8,7 +8,7 @@ export const entries = [
       type: 'book',
       title: 'Operating Systems: Three Easy Pieces',
       author: [ { given: 'Remzi H.', family: 'Arpaci-Dusseau' }, { given: 'Andrea C.', family: 'Arpaci-Dusseau' } ],
-      contributor: [ { given: 'Peter', family: 'Reiher' } ],
+      contributor: [ { given: 'Peter Lawrence', family: 'Reiher' } ],
       publisher: 'Arpaci-Dusseau Books',
       issued: { 'date-parts': [ [ 2023, 11 ] ] },
       version: '1.10',
