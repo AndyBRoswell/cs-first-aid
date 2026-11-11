@@ -14,7 +14,7 @@ export const entries = [
       ],
       edition: 1,
       publisher: '高等教育出版社',
-      issued: { 'date-parts': [ [ 2008, 6, 30 ] ] },
+      issued: { 'date-parts': [ [ 2008, 6 ] ] }, // 高教社原始物料23961-00实时页面记6月；A0/B0实时页面记5月，尚未找到可公开访问的版权页并核对。
       ISBN: '9787040239614',
       'number-of-pages': 400,
       language: 'zh-CN',
