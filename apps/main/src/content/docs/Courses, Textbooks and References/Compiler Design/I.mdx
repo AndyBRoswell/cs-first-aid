@@ -25,7 +25,7 @@ import References from '@/components/References.astro'
         #### 英文
         <References materials={course_material.reference.text.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
-      Kenneth C. Louden《Compiler Construction: Principles and Practice》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === 'Compiler Construction' && m.author?.some(author => author.family === 'Louden'), options: { count: 1 } } ]}/>是我们上课用的。任课老师说以前他们试过换成包括“龙书”<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === 'Compilers: Principles, Techniques, and Tools' && m.author?.some(author => author.family === 'Aho'), options: { count: 1 } } ]}/>在内的其它书目，但后来又换了回来。原因我不记得了。但我觉得这本实在太老了，而且第 5 章开始有不少我都没读懂。
+      Kenneth C. Louden《Compiler Construction: Principles and Practice》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === 'Compiler Construction' && m.author?.some(author => author.family === 'Louden'), options: { count: 1 } } ]}/>是我本科阶段用的。任课老师说以前他们试过换成包括“龙书”<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === 'Compilers: Principles, Techniques, and Tools' && m.author?.some(author => author.family === 'Aho'), options: { count: 1 } } ]}/>在内的其它书目，但后来又换了回来。原因我不记得了。但我觉得这本实在太老了，而且第 5 章开始有不少我都没读懂。
 
       如果时间实在太紧，我的建议是：至少练习编写一个和 [JSON](https://www.json.org/json-en.html) 的复杂程度差不多的语言，这样至少覆盖词法分析、句法分析阶段，有时也涉及语义分析。
     </section>
