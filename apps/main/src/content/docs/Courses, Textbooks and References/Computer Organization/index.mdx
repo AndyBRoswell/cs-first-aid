@@ -17,13 +17,13 @@ import References from '@/components/References.astro'
     <section>
       ### 英文
       <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={[ 'text', 'en' ]}/>
-      我个人力荐《Computer Organization and Design》。当时我看的是 MIPS 版本（第 5 版）。第 5 章的部分内容和操作系统相关书籍（如 OSTEP）有重合。当时我还买了第 5 版的中文版，发现翻译有少量细节上的瑕疵，不过总体质量达标；后续第 6 版、ARM 或 RV 版的中文翻译我就不清楚了。因为 MIPS 的市占目前已经很低，我没有再将这本书的 MIPS 版列为首选。
+      我个人力荐《Computer Organization and Design》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => m.title?.startsWith('Computer Organization and Design'), options: { count: 3 } }, { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === 'Computer Organization and Design MIPS Edition' && m.edition === 6, options: { count: 1 } } ]}/>。当时我看的是 MIPS 版本（第 5 版）。第 5 章的部分内容和操作系统相关书籍（如 OSTEP<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === 'Operating Systems: Three Easy Pieces', options: { count: 1 } } ]}/>）有重合。当时我还买了第 5 版的中文版，发现翻译有少量细节上的瑕疵，不过总体质量达标；后续第 6 版、ARM 或 RV 版的中文翻译我就不清楚了。因为 MIPS 的市占目前已经很低，我没有再将这本书的 MIPS 版列为首选。
 
-      中国科学技术大学选用此书。[COD 2026春](https://soc.ustc.edu.cn/COD/src/ppt/ch0_1_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D.pdf#page=4) [CODH 2026春](https://soc.ustc.edu.cn/CODH/2026/src/ppt/Ch0.pdf#page=53)
+      中国科学技术大学选用此书。[COD 2026春课程页](https://soc.ustc.edu.cn/COD/)所链接的[课程介绍课件（封面标2024春）](https://soc.ustc.edu.cn/COD/src/ppt/ch0_1_%E8%AF%BE%E7%A8%8B%E4%BB%8B%E7%BB%8D.pdf#page=4)；[CODH 2026春](https://soc.ustc.edu.cn/CODH/2026/src/ppt/Ch0.pdf#page=53)。
 
       VU 本科（[XB_40009](https://studiegids.vu.nl/en/courses/2026-2027/XB_40009)）选用此书。
 
-      RISC-V 版第 1 版以 RV64 为教学主线，第 2 版改用 RV32。[版本说明](https://www.cmpedu.com/books/book/5610352.htm)
+      RISC-V 版第 1 版<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => m.title === 'Computer Organization and Design RISC-V Edition' && m.edition === 1, options: { count: 1 } } ]}/>以 RV64 为教学主线，第 2 版<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => m.title === 'Computer Organization and Design RISC-V Edition' && m.edition === 2, options: { count: 1 } } ]}/>改用 RV32。[版本说明](https://www.cmpedu.com/books/book/5610352.htm)
     </section>
   </section>
   <section>
@@ -34,14 +34,14 @@ import References from '@/components/References.astro'
         #### 中文
         <References materials={course_material.reference.text.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'zh' ]}/>
       </section>
-      考研的同学可以以唐朔飞的《计算机组成原理》及其习题解答为参考资料。
+      考研的同学可以以唐朔飞的《计算机组成原理》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'zh' ], filter: m => m.title === '计算机组成原理' && m.author?.some(author => author.family === '唐' && author.given === '朔飞') && m.edition === 3, options: { count: 1 } } ]}/>及其习题解答<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'guide', 'zh' ], filter: m => m.title === '计算机组成原理——学习指导与习题解答', options: { count: 1 } } ]}/>为参考资料。
       <section>
         #### 英文
         <References materials={course_material.reference.text.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'text', 'en' ]}/>
       </section>
       <section>
         #### 说明
-        部分同学反映：CSAPP 难度偏低，对于进入计算机类专业之前已时常接触计算机并具有一些基础的同学来说过于简单且冗赘。
+        部分同学反映：CSAPP<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === "Computer Systems: A Programmer's Perspective" && m.edition === 3, options: { count: 1 } } ]}/> 难度偏低，对于进入计算机类专业之前已时常接触计算机并具有一些基础的同学来说过于简单且冗赘。
 
         CSAPP 第 3 版<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === "Computer Systems: A Programmer's Perspective" && m.edition === 3, options: { count: 1 } } ]}/>另有 Global Edition，但它与此处列出的北美版使用不同的随堂练习和章末习题。作者指出，全球版的题目及解答有许多错误，且他们没有为全球版制作勘误表。因此此处保留北美版。[作者勘误页](https://csapp.cs.cmu.edu/3e/errata.html)
       </section>

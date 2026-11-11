@@ -19,6 +19,7 @@ export const info = {
         en: [
           ...catalog.filter(item => item.type === 'book' && item.title === "Computer Systems: A Programmer's Perspective" && item.author?.some(author => author.family === 'Bryant'), { count: 1 }),
           ...catalog.filter(item => item.type === 'book' && item.title === 'Computer Organization and Design MIPS Edition' && item.edition === 6, { count: 1 }),
+          ...catalog.filter(item => item.type === 'book' && item.title === 'Operating Systems: Three Easy Pieces', { count: 1 }),
         ],
       },
       guide: { zh: [
