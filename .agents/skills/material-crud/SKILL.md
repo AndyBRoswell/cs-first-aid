@@ -15,6 +15,7 @@ description: The creation, read, update, and deletion of materials
   - 字段值保持原有大小写样式，不要随意转换。
   - `custom`中若有字段与 CSL-JSON 中的字段重名，则 CSL-JSON 中的该字段的值为首选，`custom`中该字段的值为附加。附加值不与首选值重复。
     - 例：`URL` 一般首选出版社（如有）信息页 URL；`custom.URL`为提供的该条目的元信息的其余站点的 URL。
+  - 如 URL 指向网页，应记录桌面版网页的 URL 而不是移动版。
   - 在一个条目中，同一 URL 不重复出现，例如既出现在`URL`或`custom.URL`又出现在`custom.free_material`的元素中的`link`。
   - 不在首选 URL 指向的资源中出现的字段，其出处填写于`custom.URL`，并为该`custom.URL`项添加行末注释（`// `）简短标注此项资源提供的字段。
   - 本项目推荐使用图灵完备方法编程查询条目，因而 CSL-JSON 中的`id`项不填，由 bibkit 自动生成；`Material.id`一项通常填写该条目的知名简称或作者指定的简称；若无此类简称，则此项亦省略不写。
