@@ -21,6 +21,8 @@ import References from '@/components/References.astro'
       OSTEP<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => m.title === 'Operating Systems: Three Easy Pieces', options: { count: 1 } } ]}/> 我个人强推。当然学习之前需要学过 C/C++。
       
       我本科上《操作系统原理》，老师选的书是汤子瀛《计算机操作系统》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'zh' ], filter: m => m.title === '计算机操作系统' && m.author?.some(author => author.family === '汤' && author.given === '小丹'), options: { count: 1 } } ]}/>，然后还推荐了《现代操作系统》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === 'Modern Operating Systems' && m.author?.some(author => author.family === 'Tanenbaum'), options: { count: 1 } } ]}/>。但这两本我当时没看懂。当时还有大约 1 个月就要期末考试，然后我偶然找到了 OSTEP，接着在这 1 个月看了这本书和 D. A. Patterson《计算机组成与设计》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'text', 'en' ], filter: m => m.title === 'Computer Organization and Design MIPS Edition' && m.edition === 6, options: { count: 1 } } ]}/>（第 5 章和此书有部分重叠）的大部分章节，都是一遍就能看懂。期末考前几天我又看了一遍汤子瀛这本的前 7 章（后面几章当时我们不考），却又看懂了。汤的这本书还提到了 RTOS 概论等一些可以作为补充的知识，所以我留作参考；考研的同学也可以参考这本。
+
+      作者也把中译版放上网了，不过主页不能直接进去，但可以被 Google 检索到。注意中译版没有随作者修订而更新，部分章节（如《SSD》及 Peter L. Reiher 添补的安全部分）缺失。
     </section>
   </section>
   <section>
