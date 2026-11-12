@@ -10,7 +10,7 @@ export const entries = [
       'container-title': 'Linux Kernel Mailing List',
       genre: 'Mailing list post',
       language: 'en',
-      URL: 'https://lists.openwall.net/linux-kernel/2022/02/28/431',
+      URL: 'https://lore.kernel.org/r/20220228103142.3301082-1-arnd@kernel.org',
       issued: { 'date-parts': [ [ 2022, 2, 28 ] ] },
       accessed: { 'date-parts': [ [ 2026, 11, 12 ] ] },
     },
