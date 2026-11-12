@@ -60,6 +60,8 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
   await expect(heading).toHaveCount(1)
   section = src_util.locate_parent(heading, 'section')
   await src_util.test.step('常见问题', async () => {
-    await src_util.everyone_occurs(section, ['为什么.+C++'])
+    await src_util.everyone_occurs(section, [
+      /为什么.+C\+\+/
+    ])
   })
 })
