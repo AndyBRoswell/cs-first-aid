@@ -348,7 +348,7 @@ export const Courses_Textbooks_and_References = {
               },
               slug: 'courses-textbooks-and-references/programming/cpp-programming/i',
               attrs: {
-                'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+                'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
                 'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
               },
             },
@@ -372,7 +372,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/programming/c-programming',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
           },
         },
@@ -405,7 +405,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/programming/csharp-programming',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
@@ -416,7 +416,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/programming/java-programming',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
@@ -438,7 +438,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/programming/python-programming',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
           },
         },
@@ -449,7 +449,7 @@ export const Courses_Textbooks_and_References = {
           },
           slug: 'courses-textbooks-and-references/programming/rust-programming',
           attrs: {
-            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+            'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
             'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'Sys', 'Embedded', ], 'en'))
           },
         },
@@ -506,7 +506,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/software-testing',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
       },
     },
@@ -517,7 +517,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/graphical-user-interfaces',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', 'HCI', ], 'en'))
       },
     },
@@ -528,7 +528,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/web-development',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
       },
     },
@@ -1363,7 +1363,7 @@ export const Courses_Textbooks_and_References = {
       },
       slug: 'courses-textbooks-and-references/android-development',
       attrs: {
-        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-dev', en: 'blank', }),
+        'data-release-stage': release_stages.to_HTML_attr({ 'zh-CN': '2026.1.0-alpha', en: 'blank', }),
         'data-badges': badges.to_HTML_attr(subject_badges.find_many([ 'CS', 'SE', ], 'en'))
       },
     },
