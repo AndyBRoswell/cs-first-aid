@@ -10,6 +10,10 @@
   --sl-content-width: 80rem; /* Raise Starlight's default maximum content width. */
 }
 
+.sl-markdown-content .FAQ {
+  --sl-text-h2: var(--sl-text-body); /* Match question headings and their anchor wrappers to the answer text. */
+}
+
 pre {
   white-space: pre-wrap; /* Preserve whitespace if truncated by wrapping. */
   word-wrap: break-word; /* Provide a legacy fallback for overflow wrapping: Allow truncation of words by wraps. */
