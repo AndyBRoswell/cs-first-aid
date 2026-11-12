@@ -38,6 +38,6 @@ import Cite from '@/components/Cite.astro'
       ### 中文
       <References materials={course_material.excluded.zh} reference_ranges={reference_ranges} scope_name={['excluded', 'zh']} />
     </section>
-    <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded'], filter: m => true }]}/>是我本科做“大创”（大学生创新训练计划）项目期间使用的参考书，都是 2018 年的，比较老了，目前也没有发现新版。
+    <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded'], filter: () => true }]}/>是我本科做“大创”（大学生创新训练计划）项目期间使用的参考书，都是 2018 年的，都偏老了，目前也没有发现新版。唐大仕《C# 程序设计教程》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded'], filter: m => util.ieq(m.title, 'C#程序设计教程') && m.author?.some(a => a.family === '唐' && a.given === '大仕'), options: { count: 1 } }]}/> 的 GUI 部分主要讲了 WinForms。除非维护老项目，否则不建议再做基于 WinForms 的新项目了。
   </section>
 </section>
