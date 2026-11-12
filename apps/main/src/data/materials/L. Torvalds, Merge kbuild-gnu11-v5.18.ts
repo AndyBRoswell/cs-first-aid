@@ -12,11 +12,6 @@ export const entries = [
       URL: 'https://git.kernel.org/linus/50560ce6a0bdab2fc37384c52aa02c7043909d2c',
       issued: { 'date-parts': [ [ 2022, 3, 25 ] ] },
       accessed: { 'date-parts': [ [ 2026, 11, 12 ] ] },
-      custom: {
-        URL: [
-          { link: 'https://git.zx2c4.com/linux-rng/commit/?id=50560ce6a0bdab2fc37384c52aa02c7043909d2c' }, // Author, title, commit date, and merge description.
-        ],
-      },
     },
   },
 ] satisfies types_data.Entry[]
