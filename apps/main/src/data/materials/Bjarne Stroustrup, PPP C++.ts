@@ -20,6 +20,15 @@ export const entries = [
       accessed: { 'date-parts': [ [ 2026, 5, 12 ] ] },
       URL: 'https://www.stroustrup.com/programming.html',
       custom: {
+        free_material: [
+          {
+            link: 'https://www.stroustrup.com/PPP3.html',
+            display_text: 'PPP3 Home (w/ extra material)',
+            'Content-Type': 'text/html',
+            modified: { 'date-parts': [ [ 2024, 3, 23 ] ] },
+            accessed: { 'date-parts': [ [ 2026, 11, 12 ] ] },
+          }, // Samples, support material, and supplementary chapters from PPP2.
+        ],
         URL: [
           { link: 'https://www.amazon.com/dp/B0DFMWL9P6', display_text: 'Amazon Kindle' },
           { link: 'https://www.informit.com/store/programming-principles-and-practice-using-c-plus-plus-9780138308681', display_text: 'InformIT (Publisher)' },
