@@ -34,6 +34,20 @@ import Cite from '@/components/Cite.astro'
     <section>
       ### 英文
       <References materials={I_course_material.text.selected.en} reference_ranges={I_reference_ranges} scope_name={['text', 'selected', 'en']} />
+
+      《Programming: Principles and Practice Using C++》（PPP3）面向没有编程基础的读者，建议按顺序学习正文，并在动手练习后回头重读尚未理解的部分<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ condition: { scope: ['text', 'selected', 'en'], filter: m => m.title === 'Programming: Principles and Practice Using C++' && m.edition === 3 }, label: 'section', locator: '0.1.1' }]}/>。
+
+      书中的几种练习各有用途，作者在 §0.1.2 中作了说明<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ condition: { scope: ['text', 'selected', 'en'], filter: m => m.title === 'Programming: Principles and Practice Using C++' && m.edition === 3 }, label: 'section', locator: '0.1.2' }]}/>：
+
+      - **Drill（操练）**：通常通过对同一程序作一连串修改，练熟基本操作。作者要求全部完成。
+      - **Exercises（习题）**：需要更多独立思考，难度不一。作者不要求全部完成；应选做足够数量，找出自己的薄弱点，再多做一些相关题目。
+      - **Try this（尝试）**：穿插在正文中的短练习；阅读时暂时跳过的，可以在完成本章 drill 时补做。
+
+      学习时应给编写、运行、调试和修改程序留出足够时间，并结合章末的复习问题，检查自己能否解释关键概念。学到后半部分时，可以做一个完整、有实际用途的小项目，把各章知识串联起来；作者也建议这样的实践<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ condition: { scope: ['text', 'selected', 'en'], filter: m => m.title === 'Programming: Principles and Practice Using C++' && m.edition === 3 }, label: 'section', locator: '0.1.2' }]}/>。
+
+      本站粗略估计（并非作者给出的标准）：零基础读者认真理解正文、完成全部 drill 并选做有代表性的习题（不包含补充章节），建议预留 **150–200 小时**；已能使用其它语言独立编写小程序的读者，可预留显著更少的总学习时长。
+
+      第 3 版将部分较专门的内容移到了作者网站作为补充章节，供按需选读<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ condition: { scope: ['text', 'selected', 'en'], filter: m => m.title === 'Programming: Principles and Practice Using C++' && m.edition === 3 }, label: 'section', locator: '0.2' }]}/>:这些是来自第二版的章节，仍使用 C++14。
     </section>
   </section>
   <section>
@@ -52,4 +66,8 @@ import Cite from '@/components/Cite.astro'
       <Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/><Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer Plus') }]}/>都停留在 C++11；<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={['cplusplus.com']}/>也很少 C++11 以后的内容。<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/>是我读本科的时候我们专业用的书（不清楚现在还用不用），后来我觉得信息密度还是低了（并且整本书有大约 1000 页），并且在网上也多次看到类似反馈；<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer Plus') }]}/>比<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/>还要多出大约 500 页。
     </section>
   </section>
+</section>
+<section>
+  # 常见问题
+  
 </section>
