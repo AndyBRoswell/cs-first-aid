@@ -7,7 +7,6 @@ export const entries = [
       type: 'webpage',
       title: 'Qt Widgets',
       author: [ { literal: 'The Qt Company' } ],
-      'container-title': 'Qt 6 Documentation',
       language: 'en',
       URL: 'https://doc.qt.io/qt-6/qtwidgets-index.html',
       accessed: { 'date-parts': [ [ 2026, 11, 1 ] ] },
