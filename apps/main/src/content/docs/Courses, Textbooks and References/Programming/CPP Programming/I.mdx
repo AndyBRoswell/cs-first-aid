@@ -45,7 +45,7 @@ import Cite from '@/components/Cite.astro'
 
       学习时应给编写、运行、调试和修改程序留出足够时间，并结合章末的复习问题，检查自己能否解释关键概念。学到后半部分时，可以做一个完整、有实际用途的小项目，把各章知识串联起来；作者也建议这样的实践<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ condition: { scope: ['text', 'selected', 'en'], filter: m => m.title === 'Programming: Principles and Practice Using C++' && m.edition === 3 }, label: 'section', locator: '0.1.2' }]}/>。
 
-      本站粗略估计（并非作者给出的标准）：零基础读者认真理解正文、完成全部 drill 并选做有代表性的习题（不包含补充章节），建议预留 **150–200 小时**；已能使用其它语言独立编写小程序的读者，可预留显著更少的总学习时长。
+      本站初步估计（并非作者给出的标准）：零基础读者认真理解正文、完成全部 drill 并选做有代表性的习题（不包含补充章节），建议预留 **150–200 小时**；已能使用其它语言独立编写小程序的读者，可预留显著更少的总学习时长。
 
       第 3 版将部分较专门的内容移到了作者网站作为补充章节，供按需选读<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ condition: { scope: ['text', 'selected', 'en'], filter: m => m.title === 'Programming: Principles and Practice Using C++' && m.edition === 3 }, label: 'section', locator: '0.2' }]}/>:这些是来自第二版的章节，仍使用 C++14。
     </section>
@@ -69,5 +69,9 @@ import Cite from '@/components/Cite.astro'
 </section>
 <section>
   # 常见问题
-  
+  <section>
+    ## 为什么用 C++ 入门？
+
+    如果现在是，比如 2021 年以前，乃至 2022Q1/2022H1，那么我会说：C++ 实在有困难，可以选用 Java，甚至可以是 Python、JavaScript。选哪一门语言不太紧要，更重要的是能够掌握在不同编程语言之间相通的思想/原理。但是这之后的就业市场完全不同了，因而我认为：想学习计算机类专业、想入计算机这一行，多少还是要有些门槛的，也就是 weed out。让太多（至少是在当前的供需关系下）不适合的人修读相关专业并从事对口工作，对他们自己以及对行业而言都不是好事：既浪费他们的时间，又拉低从业者水平的均值或中值。把 C++ 列为必修，考查你是否能够一边学习 C++ 本身的特性，一边逐渐熟悉这些特性背后的计算机的工作机制——为了让 C++ 程序成功运行，或者更进一步地，性能达标，你会被迫学习一部分来自《数据结构》《操作系统》《计算机组成原理》《编译原理》等课程的知识与技能，也会令你日后更加认真地对待它们。如果你学习 C++ 存在严重困难且长期无法解决，那么你其实没有通过筛选，我建议你尽快转出计算机类专业，或者不要入行。当然，这并不意味着你应该放弃学习计算机科学或软件工程。
+  </section>
 </section>
