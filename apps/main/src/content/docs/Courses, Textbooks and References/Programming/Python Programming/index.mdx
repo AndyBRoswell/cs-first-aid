@@ -30,13 +30,17 @@ import Cite from '@/components/Cite.astro'
       ### 中文
       <References materials={course_material.reference.zh} reference_ranges={reference_ranges} scope_name={[ 'reference', 'zh' ]}/>
     </section>
+    <section>
+      ### 说明
+      《Python Crash Course》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference', 'en'], filter: m => util.ieq(m.title, 'Python Crash Course') && m.author?.some(a => a.given.startsWith('E') && a.family === 'Matthes'), options: { count: 1 } }]}/>我看的也是第 2 版。嵩天《Python 语言程序设计基础》<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference', 'zh'], filter: m => util.ieq(m.title, 'Python语言程序设计基础') && m.author?.some(a => a.family === '嵩' && a.given === '天'), options: { count: 1 } }]}/>这本书我有第 2 版。我觉得作为参考都是没有问题的，不过为了尽可能提高学习速率，还是建议学习官方文档<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['text', 'en'], filter: m => util.ieq(m.title, 'The Python Tutorial') && m.author?.some(a => a.literal === 'Python Software Foundation'), options: { count: 1 } }]}/>。
+    </section>
   </section>
   <section>
     ## 未选书目
     <section>
       ### 英文
       <References materials={course_material.excluded.en} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'en' ]}/>
-      <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'Python Cookbook') && m.issued?.["date-parts"]?.[0]?.[0] === 2013 }]}/>落选的缘由自然也是年代久远（2013）。目前尚未发现更新版本。
+      <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'Python Cookbook') && m.issued?.["date-parts"]?.[0]?.[0] === 2013, options: { count: 1 } }]}/>落选的缘由自然也是年代久远（2013；[Python 版本历史](https://devguide.python.org/versions/)）。目前尚未发现更新版本。
     </section>
   </section>
 </section>
