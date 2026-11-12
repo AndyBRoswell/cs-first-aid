@@ -12,6 +12,22 @@ import References from '@/components/References.astro'
 import Cite from '@/components/Cite.astro'
 
 <section>
+  笔者认为，C++ 应当是**必修**的。这是因为：相比 Java、Python、C# 等高级语言，C / C++ 更加贴近硬件，因而暴露了计算机工作时涉及的许多原理与细节。打好 C / C++ 的基础，有利于尽快建立对计算机整体及主要部件的认识，对计算机将如何执行自己编写的语句有一个更加明确而充满细节的思路。
+  此外，许多其它高级语言的语法和代码风格等，都可以在 C++ 中找到。如果在熟悉 C++ 以后再去学习其它语言，学习速率就会快得多，因为要学习的很多内容都是自己已经接触过了的。
+    
+  再次提醒：可使用人工智能辅助自己的学习。虽然此类人工智能在绝大多数时候都能提供正确答案，但你仍然需要结合已有知识、参考资料与搜索引擎，自行判断人工智能给出的计算机相关知识的作答是否准确。
+
+  C / C++ 标准的正式版是要收费的，网上只能找到免费的最终草稿（final draft），最终草稿与正式标准一般只有顺序上的区别。
+
+  不同的 C++ 编译器（如 MSVC、GCC/G++、Clang/Clang++、ICX/ICPX）对 C++ 标准的实现有一定差异。当然，常见的语法一般都遵循标准。
+
+  自 1985 年发布以来，C++ 已经更新了数个版本，主要包括 C++98、C++03、C++11、C++14、C++17、C++20、C++23。学习 C++ 时，尤其需要注意 C++11 以来的新特性。
+
+  “一年精通，三年熟悉，五年了解，十年用过”，C++ 作为编程语言的复杂度在世界上数一数二，1 门课能学到的全部知识，充其量连皮毛都算不上。想要掌握 C++，只学 1 门课或 1 本书自然是远远不够的。如果你想向工业软件、音视频、游戏（温馨提醒：很多工业软件的岗位还未必要求图形学的功底，但游戏肯定是躲不掉的）、高性能计算、操作系统（内核等的开发通常要求使用纯 C，所以 C 语言也不要落下）、高频交易等方向发展，或者想成为（底层）库作者，就更有必要将 C++ 的基础打扎实：因为这些方面需要的软件对性能的要求是很高的。C++ 是编写高性能软件的必备语言。
+
+  另：Rust 是近几年开始快速发展的语言之一，有机会在日后达到与 C++ 分庭抗礼的地位。感兴趣的同学也可以[学习 Rust](/courses-textbooks-and-references/programming/rust-programming/)（但强烈不推荐跳过 C++）。
+</section>
+<section>
   # 学习材料
   <section>
     ## 教科书
@@ -26,13 +42,14 @@ import Cite from '@/components/Cite.astro'
       ### 英文
       <References materials={I_course_material.reference.en} reference_ranges={I_reference_ranges} scope_name={['reference', 'en']} />
     </section>
+    **注意：练习 C++ 期间，请一同练习使用构建自动化工具 [CMake](https://cmake.org/)。CMake 是事实上的 C++ 项目跨平台构建自动化的标准。**
   </section>
   <section>
     ## 未选材料
     <section>
       ### 英文
       <References materials={I_course_material.excluded.en} reference_ranges={I_reference_ranges} scope_name={['excluded', 'en']} />
-      <Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/><Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer Plus') }]}/>都停留在 C++11；<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={['cplusplus.com']}/>也很少 C++11 以后的内容。<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/>是我读本科的时候我们专业用的书（不清楚现在还用不用），后来觉得信息密度还是低了（约 1000 页）；<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer Plus') }]}/>比<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/>还要多出大约 500 页。
+      <Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/><Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer Plus') }]}/>都停留在 C++11；<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={['cplusplus.com']}/>也很少 C++11 以后的内容。<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/>是我读本科的时候我们专业用的书（不清楚现在还用不用），后来我觉得信息密度还是低了（并且整本书有大约 1000 页），并且在网上也多次看到类似反馈；<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer Plus') }]}/>比<Cite references={I_course_material} reference_ranges={I_reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'C++ Primer') }]}/>还要多出大约 500 页。
     </section>
   </section>
 </section>
