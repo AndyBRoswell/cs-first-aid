@@ -10,10 +10,6 @@ import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
 
 <section>
-  2022 年 10 月 1 日，Kees Cook 向 Linus Torvalds 提交了 Rust 初始支持的合入请求，并说明 Miguel Ojeda 是主要维护者<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === '[GIT PULL] Rust introduction for v6.1-rc1' }]}/>。10 月 3 日，Linus 将这些改动合入 Linux 内核主线，进入 Linux 6.1；初始支持包括构建基础设施、基础 crate 与绑定、文档和示例<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title?.startsWith("Merge tag 'rust-v6.1-rc1'") }]}/>。10 月 16 日，他在 Linux 6.1-rc1 发布公告中介绍了这一变化，并说明当时合入的是 Rust 基础设施，尚无实际功能性的 Rust 内核代码<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === 'Linux 6.1-rc1' }]}/>。
-</section>
-
-<section>
   # 学习材料
 
   <section>
@@ -58,6 +54,24 @@ import References from '@/components/References.astro'
     - The Rustonomicon<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'The Rustonomicon' ]}/>深入讨论 `unsafe`、底层内存操作及安全抽象，预设读者熟悉 Rust 和基本系统编程。
     - The Embedded Rust Book<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'The Embedded Rust Book' ]}/>面向裸机嵌入式开发，涉及微控制器、外设与中断等内容。
   </section>
+</section>
+<section>
+  # Rust 在 Linux 内核中的应用
+
+  2022 年 10 月 1 日，Kees Cook 向 Linus Torvalds 提交了 Rust 初始支持的合入请求，并说明 Miguel Ojeda 是主要维护者<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === '[GIT PULL] Rust introduction for v6.1-rc1' }]}/>。10 月 3 日，Linus 将这些改动合入 Linux 内核主线，进入 Linux 6.1；初始支持包括构建基础设施、基础 crate 与绑定、文档和示例<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title?.startsWith("Merge tag 'rust-v6.1-rc1'") }]}/>。10 月 16 日，他在 Linux 6.1-rc1 发布公告中介绍了这一变化，并说明当时合入的是 Rust 基础设施，尚无实际功能性的 Rust 内核代码<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === 'Linux 6.1-rc1' }]}/>。
+
+  截至 2026 年 11 月 12 日，主线 Linux 7.4-rc2 已包含以下 Rust 实现：
+
+  - Android Binder 进程间通信驱动<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Linux kernel source tree' && m.version === '7.4-rc2' }, label: 'section', locator: 'drivers/android/binder/' }]}/>。
+  - ASIX 与 AMCC QT2025 以太网 PHY 驱动<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Linux kernel source tree' && m.version === '7.4-rc2' }, label: 'section', locator: 'drivers/net/phy/ax88796b_rust.rs; drivers/net/phy/qt2025.rs' }]}/>。
+  - DRM 崩溃画面的二维码生成器<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Linux kernel source tree' && m.version === '7.4-rc2' }, label: 'section', locator: 'drivers/gpu/drm/drm_panic_helper_qr.rs' }]}/>。
+  - 用于开发和测试的 rnull 虚拟块设备驱动<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Linux kernel source tree' && m.version === '7.4-rc2' }, label: 'section', locator: 'drivers/block/rnull/' }]}/>。
+  - 基于设备树的 CPU 调频驱动<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Linux kernel source tree' && m.version === '7.4-rc2' }, label: 'section', locator: 'drivers/cpufreq/rcpufreq_dt.rs' }]}/>。
+  - TH1520 PWM 驱动<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Linux kernel source tree' && m.version === '7.4-rc2' }, label: 'section', locator: 'drivers/pwm/pwm_th1520.rs' }]}/>。
+
+  Nova（NVIDIA GPU）和 Tyr（Arm Mali CSF GPU）的部分代码也已进入主线，但仍在开发中，尚不能视为成熟的替代驱动<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Linux kernel source tree' && m.version === '7.4-rc2' }, label: 'section', locator: 'drivers/gpu/nova-core/Kconfig; drivers/gpu/drm/nova/Kconfig; drivers/gpu/drm/tyr/Kconfig' }]}/>。此外，Rust 的共用基础设施已覆盖内存分配、同步，以及 PCI、USB、DMA、DRM 和块设备等接口的抽象封装<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Linux kernel source tree' && m.version === '7.4-rc2' }, label: 'section', locator: 'rust/kernel/' }]}/>。
+
+  Apple AGX GPU 驱动、Rust NVMe 驱动和 PuzzleFS 文件系统则仍由 Rust for Linux 项目列为主线之外的应用<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ condition: { scope: ['reference'], filter: m => m.title === 'Rust for Linux' }, label: 'section', locator: 'Users — outside mainline' }]}/>。
 </section>
 <section>
   # 参考文献
