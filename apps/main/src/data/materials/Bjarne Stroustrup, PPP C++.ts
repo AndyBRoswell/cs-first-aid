@@ -28,6 +28,12 @@ export const entries = [
             modified: { 'date-parts': [ [ 2024, 3, 23 ] ] },
             accessed: { 'date-parts': [ [ 2026, 11, 12 ] ] },
           }, // Samples, support material, and supplementary chapters from PPP2.
+          {
+            link: 'https://www.stroustrup.com/PPP3_Ch0.pdf',
+            display_text: '§0 (PDF)',
+            'Content-Type': 'application/pdf',
+            accessed: { 'date-parts': [ [ 2026, 11, 12 ] ] },
+          },
         ],
         URL: [
           { link: 'https://www.amazon.com/dp/B0DFMWL9P6', display_text: 'Amazon Kindle' },
