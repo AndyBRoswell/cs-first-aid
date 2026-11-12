@@ -27,5 +27,7 @@ import References from '@/components/References.astro'
   <section>
     ## 说明
     **建议首先通过官方文档<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'text', 'en' ], filter: m => m.type === 'webpage' && m.title === 'Developer Guides' && m.author?.some(author => author.literal === 'Google'), options: { count: 1 } } ]}/>进行学习**。
+
+    郭霖这本书<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'zh' ], filter: m => /^第一行代码.+Android$/.test(m.title) && m.author?.some(author => author.family === '郭' && author.given === '霖'), options: { count: 1 } } ]}/>是我本科期间（2021Q3）任课老师推荐的。这本书当时已有一些例子是基于比较老的 Kotlin 版本的，但一些内容还是给了我不少帮助。然而，Android 开发领域的更新极快。如果今年过后我依然没有发现更新版本，这本书就差不多要移到《未选书目》下了。
   </section>
 </section>
