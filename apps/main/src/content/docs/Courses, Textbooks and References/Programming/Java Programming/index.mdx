@@ -32,7 +32,7 @@ import * as util from '@cs-first-aid/util'
     <section>
       ### 英文
       <References materials={course_material.excluded.en} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'en' ]}/>
-      <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'Thinking in Java') && m.issued?.["date-parts"]?.[0]?.[0] === 2006 }]}/>自 2006 年发行至今没有推出新版；Java 7 和 Java 8 分别于 2011 年及 2014 年发布。建议直接参照官方教程<Cite references={course_material} reference_ranges={reference_ranges} cite_items={['dev.java/learn']}/>学习。
+      <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'Thinking in Java') && m.issued?.["date-parts"]?.[0]?.[0] === 2006, options: { count: 1 } }]}/>自 2006 年发行至今没有推出新版；Java 7 和 Java 8 分别于 2011 年及 2014 年发布（[Java 版本历史](https://en.wikipedia.org/wiki/Java_version_history#Release_table)）。建议直接参照官方教程<Cite references={course_material} reference_ranges={reference_ranges} cite_items={['dev.java/learn']}/>学习。
     </section>
   </section>
 </section>
