@@ -5,9 +5,13 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import { course_material, reference_ranges } from './data.ts'
+import { page_reference, reference_ranges } from './data.ts'
 import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
+
+<section>
+  2022 年 10 月 1 日，Kees Cook 向 Linus Torvalds 提交了 Rust 初始支持的合入请求，并说明 Miguel Ojeda 是主要维护者<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === '[GIT PULL] Rust introduction for v6.1-rc1' }]}/>。10 月 3 日，Linus 将这些改动合入 Linux 内核主线，进入 Linux 6.1；初始支持包括构建基础设施、基础 crate 与绑定、文档和示例<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title?.startsWith("Merge tag 'rust-v6.1-rc1'") }]}/>。10 月 16 日，他在 Linux 6.1-rc1 发布公告中介绍了这一变化，并说明当时合入的是 Rust 基础设施，尚无实际功能性的 Rust 内核代码<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === 'Linux 6.1-rc1' }]}/>。
+</section>
 
 <section>
   # 学习材料
@@ -16,10 +20,10 @@ import References from '@/components/References.astro'
     ## 教科书
     <section>
       ### 英文
-      <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={[ 'text', 'en' ]}/>
+      <References materials={page_reference.material.text.en} reference_ranges={reference_ranges} scope_name={[ 'material', 'text', 'en' ]}/>
     </section>
 
-    《The Rust Programming Language》（“The Book”）<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'The Rust Programming Language' ]}/>系统讲解 Rust 的核心概念，并通过猜数字、文本搜索和简易 Web 服务器等代码片段或项目串联知识。适合作为学习 Rust 的主教材。
+    《The Rust Programming Language》（“The Book”）<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'The Rust Programming Language' ]}/>系统讲解 Rust 的核心概念，并通过猜数字、文本搜索和简易 Web 服务器等代码片段或项目串联知识。适合作为学习 Rust 的主教材。
 
     本书预设读者已经使用另一门语言编写过程序。具备 C 或 C++ 等语言的基本编程经验后，可以直接开始学习；所有权、借用和生命周期等概念需要重点理解。
   </section>
@@ -27,31 +31,35 @@ import References from '@/components/References.astro'
     ## 指南
     <section>
       ### 英文
-      <References materials={course_material.guide.en} reference_ranges={reference_ranges} scope_name={[ 'guide', 'en' ]}/>
+      <References materials={page_reference.material.guide.en} reference_ranges={reference_ranges} scope_name={[ 'material', 'guide', 'en' ]}/>
     </section>
 
-    Rust by Example<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'Rust by Example' ]}/>按主题提供可运行的短代码示例，配有简要说明和练习。适合阅读主教材时补充例子，或查询某个功能的具体写法，也可以按顺序学习。
+    Rust by Example<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'Rust by Example' ]}/>按主题提供可运行的短代码示例，配有简要说明和练习。适合阅读主教材时补充例子，或查询某个功能的具体写法，也可以按顺序学习。
   </section>
   <section>
     ## 编程练习
     <section>
       ### 英文
-      <References materials={course_material.exercise.en} reference_ranges={reference_ranges} scope_name={[ 'exercise', 'en' ]}/>
+      <References materials={page_reference.material.exercise.en} reference_ranges={reference_ranges} scope_name={[ 'material', 'exercise', 'en' ]}/>
     </section>
 
-    Rustlings<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'Rustlings' ]}/>是在本机完成的交互式练习：修复编译错误或补全代码，通过编译器反馈、测试和提示检查理解。可配合主教材使用。
+    Rustlings<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'Rustlings' ]}/>是在本机完成的交互式练习：修复编译错误或补全代码，通过编译器反馈、测试和提示检查理解。可配合主教材使用。
   </section>
   <section>
     ## 参考资料
     <section>
       ### 英文
-      <References materials={course_material.reference.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'en' ]}/>
+      <References materials={page_reference.material.reference.en} reference_ranges={reference_ranges} scope_name={[ 'material', 'reference', 'en' ]}/>
     </section>
 
-    - The Rust Reference<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'The Rust Reference' ]}/>为语言参考，按需查询。
-    - Rust 标准库文档<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'The Rust Standard Library' ]}/>用于查询标准库类型、函数、方法和 trait 的接口、行为及示例。
-    - The Cargo Book<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'The Cargo Book' ]}/>介绍构建与包管理工具 Cargo，供学习项目配置、依赖管理、工作区和发布流程时查阅。
-    - The Rustonomicon<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'The Rustonomicon' ]}/>深入讨论 `unsafe`、底层内存操作及安全抽象，预设读者熟悉 Rust 和基本系统编程。
-    - The Embedded Rust Book<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ 'The Embedded Rust Book' ]}/>面向裸机嵌入式开发，涉及微控制器、外设与中断等内容。
+    - The Rust Reference<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'The Rust Reference' ]}/>为语言参考，按需查询。
+    - Rust 标准库文档<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'The Rust Standard Library' ]}/>用于查询标准库类型、函数、方法和 trait 的接口、行为及示例。
+    - The Cargo Book<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'The Cargo Book' ]}/>介绍构建与包管理工具 Cargo，供学习项目配置、依赖管理、工作区和发布流程时查阅。
+    - The Rustonomicon<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'The Rustonomicon' ]}/>深入讨论 `unsafe`、底层内存操作及安全抽象，预设读者熟悉 Rust 和基本系统编程。
+    - The Embedded Rust Book<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ 'The Embedded Rust Book' ]}/>面向裸机嵌入式开发，涉及微控制器、外设与中断等内容。
   </section>
+</section>
+<section>
+  # 参考文献
+  <References materials={page_reference.reference} reference_ranges={reference_ranges} scope_name={[ 'reference' ]}/>
 </section>
