@@ -18,7 +18,7 @@ import Cite from '@/components/Cite.astro'
 
   不同的 C 编译器（compiler）对 C 标准的实现是有出入的，但常见的语法一般都遵循标准。
 
-  2022 年 2 月 28 日，在 Linus Torvalds 的建议下，Arnd Bergmann 提交了将 Linux 内核编译模式从 GNU89 切换至 GNU11（含 GNU 扩展的 C11）的补丁<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === '[PATCH] [v2] Kbuild: move to -std=gnu11' }]}/>。同年 3 月 25 日，Linus 将相关改动合入主线，进入 Linux 5.18<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.genre === 'Git merge commit' }]}/>。
+  2022 年 2 月 28 日，在 Linus Torvalds 的建议下，Arnd Bergmann 提交了将 Linux 内核编译模式从 GNU89 切换至 GNU11（含 GNU 扩展的 C11）的补丁<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === '[PATCH] [v2] Kbuild: move to -std=gnu11' }]}/>。同年 3 月 25 日，Linus 将相关改动合入主线，进入 Linux 5.18<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title?.startsWith("Merge tag 'kbuild-gnu11-v5.18'") }]}/>。
 </section>
 <section>
   # 学习材料
