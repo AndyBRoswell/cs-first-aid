@@ -14,6 +14,7 @@ export const info = {
     },
     reference: {
       en: [
+        ...catalog.filter(item => item.author?.length === 1 && item.author[0]?.literal === 'Microsoft' && item.title === 'C Language Reference', { count: 1 }),
         catalog.get('cppreference.com/c'),
       ],
     },
