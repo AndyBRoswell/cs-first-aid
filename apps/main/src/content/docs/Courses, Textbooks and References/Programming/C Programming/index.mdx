@@ -5,8 +5,7 @@ author: AndyBRoswell
 tags: [ 基础选修 ]
 ---
 
-import { course_material, reference_ranges } from './data.ts'
-import * as bib from '@cs-first-aid/bibkit/bib'
+import { page_reference, reference_ranges } from './data.ts'
 import * as util from '@cs-first-aid/util'
 
 import References from '@/components/References.astro'
@@ -19,7 +18,7 @@ import Cite from '@/components/Cite.astro'
 
   不同的 C 编译器（compiler）对 C 标准的实现是有出入的，但常见的语法一般都遵循标准。
 
-  2022 年 2 月 28 日，在 Linux 内核作者 Linus Benedict Torvalds 的建议下，Linux 内核从使用 GNU89 改为使用 GNU11（C11 的 GNU 实现）。3 月起，相关改动开始被合并。
+  2022 年 2 月 28 日，在 Linus Torvalds 的建议下，Arnd Bergmann 提交了将 Linux 内核编译模式从 GNU89 切换至 GNU11（含 GNU 扩展的 C11）的补丁<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.title === '[PATCH] [v2] Kbuild: move to -std=gnu11' }]}/>。同年 3 月 25 日，Linus 将相关改动合入主线，进入 Linux 5.18<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['reference'], filter: m => m.genre === 'Git merge commit' }]}/>。
 </section>
 <section>
   # 学习材料
@@ -27,23 +26,27 @@ import Cite from '@/components/Cite.astro'
     ## 教科书
     <section>
       ### 英文
-      <References materials={course_material.text.en} reference_ranges={reference_ranges} scope_name={['text', 'en']} />
-      <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['text', 'en'], filter: m => util.ieq(m.title, 'Modern C')}]}/>作者为 C 标委会（[WG14](https://www.open-std.org/jtc1/sc22/wg14/)）成员。
+      <References materials={page_reference.material.text.en} reference_ranges={reference_ranges} scope_name={['material', 'text', 'en']} />
+      <Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['material', 'text', 'en'], filter: m => util.ieq(m.title, 'Modern C')}]}/>作者为 C 标委会（[WG14](https://www.open-std.org/jtc1/sc22/wg14/)）成员。
     </section>
   </section>
   <section>
     ## 参考资料
     <section>
       ### 英文
-      <References materials={course_material.reference.en} reference_ranges={reference_ranges} scope_name={['reference', 'en']} />
+      <References materials={page_reference.material.reference.en} reference_ranges={reference_ranges} scope_name={['material', 'reference', 'en']} />
     </section>
   </section>
   <section>
     ## 未选书目
     <section>
       ### 英文
-      <References materials={course_material.excluded.en} reference_ranges={reference_ranges} scope_name={['excluded', 'en']} />
-      不选的理由很简单，就是年代太久远了，特别是<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'The C Programming Language') && m.issued?.["date-parts"]?.[0]?.[0] === 1988 }]}/>。
+      <References materials={page_reference.material.excluded.en} reference_ranges={reference_ranges} scope_name={['material', 'excluded', 'en']} />
+      不选的理由很简单，就是年代太久远了，特别是<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[{ scope: ['material', 'excluded', 'en'], filter: m => util.ieq(m.title, 'The C Programming Language') && m.issued?.["date-parts"]?.[0]?.[0] === 1988 }]}/>。
     </section>
   </section>
+</section>
+<section>
+  # 参考文献
+  <References materials={page_reference.reference} reference_ranges={reference_ranges} scope_name={['reference']} />
 </section>
