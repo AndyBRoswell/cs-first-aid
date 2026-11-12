@@ -18,7 +18,8 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
 
   heading = main.getByRole('heading', { level: 1, name: '学习材料' })
   await expect(heading).toHaveCount(1)
-  await expect(main.getByRole('heading', { level: 2 })).toHaveText([
+  section = src_util.locate_parent(heading, 'section')
+  await expect(section.getByRole('heading', { level: 2 })).toHaveText([
     '教科书', '参考资料', '未选材料',
   ])
 
@@ -53,5 +54,12 @@ src_util.test('C++ Programming I', { tag: [ '@Courses, Textbooks and References'
     ])
     section = src_util.locate_parent(References, 'section')
     await expect(section.getByRole('heading', { level: 3, name: '英文' })).toHaveCount(1)
+  })
+
+  heading = main.getByRole('heading', { level: 1, name: '常见问题' })
+  await expect(heading).toHaveCount(1)
+  section = src_util.locate_parent(heading, 'section')
+  await src_util.test.step('常见问题', async () => {
+    await src_util.everyone_occurs(section, ['为什么.+C++'])
   })
 })
