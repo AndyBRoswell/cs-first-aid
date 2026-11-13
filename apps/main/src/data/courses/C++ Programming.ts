@@ -19,6 +19,8 @@ export const I_info = {
       en: [
         ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
         catalog.get('cppreference'),
+        catalog.get('isocpp.org'),
+        catalog.get('CppCoreGuidelines'),
         ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
         ...catalog.filter(item => item.type === 'webpage' && item.title === 'Guides' && item['container-title'] === 'CMake Reference Documentation', { count: 1 }),
         catalog.get('Mastering CMake'),
@@ -54,6 +56,8 @@ export const II_info = {
         en: [
           ...catalog.filter(item => item.author?.length === 1 && item.author![0]!.literal === 'Microsoft' && item.title?.match(/C\+\+.+Reference/)),
           catalog.get('cppreference'),
+          catalog.get('isocpp.org'),
+          catalog.get('CppCoreGuidelines'),
           ...catalog.filter(item => util.ieq(item.title!, 'The Definitive C++ Book Guide and List')),
         ],
       },
