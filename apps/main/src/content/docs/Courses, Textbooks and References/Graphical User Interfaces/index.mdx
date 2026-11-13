@@ -3,7 +3,7 @@ title: 图形用户界面
 author: AndyBRoswell
 ---
 
-import { course_material, reference_ranges } from './data.ts'
+import { page_reference, reference_ranges } from './data.ts'
 import References from '@/components/References.astro'
 import Cite from '@/components/Cite.astro'
 
@@ -18,26 +18,23 @@ import Cite from '@/components/Cite.astro'
       ### 课程资料
       <section>
         #### 英文
-        <References materials={course_material.reference.lecture_notes_and_slides.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'lecture_notes_and_slides', 'en' ]}/>
-        PW 这门课的 slides<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'lecture_notes_and_slides', 'en' ], filter: m => m.title === 'Programming in Graphical Environment', options: { count: 1 } } ]}/>我粗略看了，似乎很不错，讲解了 Win32 的基本原理，例如调用约定、消息循环、输入处理、资源、GDI。WPF 部分讲了 XAML、布局、数据绑定、路由事件、模板、触发器、动画、依赖属性等重要专题，还提到了 HTML、CSS 及 MVC/MVP/MVVM 架构模式。University of Leeds 提供的资料<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'lecture_notes_and_slides', 'en' ], filter: m => m.title === 'COMP2811 Exercises', options: { count: 1 } } ]}/>很短，工作量不足，仅作为参考。
+        <References materials={page_reference.material.reference.lecture_notes_and_slides.en} reference_ranges={reference_ranges} scope_name={[ 'material', 'reference', 'lecture_notes_and_slides', 'en' ]}/>
+        PW 这门课的 slides<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'material', 'reference', 'lecture_notes_and_slides', 'en' ], filter: m => m.title === 'Programming in Graphical Environment', options: { count: 1 } } ]}/>我粗略看了，似乎很不错，讲解了 Win32 的基本原理，例如调用约定、消息循环、输入处理、资源、GDI。WPF 部分讲了 XAML、布局、数据绑定、路由事件、模板、触发器、动画、依赖属性等重要专题，还提到了 HTML、CSS 及 MVC/MVP/MVVM 架构模式。University of Leeds 提供的资料<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'material', 'reference', 'lecture_notes_and_slides', 'en' ], filter: m => m.title === 'COMP2811 Exercises', options: { count: 1 } } ]}/>很短，工作量不足，仅作为参考。
       </section>
     </section>
     <section>
       ### 官方文档
       <section>
         #### 英文
-        <References materials={course_material.reference.documentation.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'documentation', 'en' ]}/>
-        目前选用的官方资料以相对成熟的 GUI 框架为主，包括 Qt Widgets<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'documentation', 'en' ], filter: m => m.URL === 'https://doc.qt.io/qt-6/qtwidgets-index.html', options: { count: 1 } } ]}/>、WPF<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'documentation', 'en' ], filter: m => m.URL === 'https://learn.microsoft.com/en-us/dotnet/desktop/wpf/', options: { count: 1 } } ]}/> 和 Avalonia<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'documentation', 'en' ], filter: m => m.URL === 'https://docs.avaloniaui.net/docs/welcome', options: { count: 1 } } ]}/>。WPF 虽然这些年几乎没有再添加新特性，但存量市场并不算小，为数不少的工业软件依然在使用；另一方面，WinForms 已落伍；WinUI 2（UWP）已弃用；WinUI 3 及 MAUI 较新，暗坑可能很多，因此在这里 .NET 生态的跨平台 GUI 选择了已累积一定口碑的 Avalonia。JavaFX 过于小众，同样暂不推荐。
+        <References materials={page_reference.material.reference.documentation.en} reference_ranges={reference_ranges} scope_name={[ 'material', 'reference', 'documentation', 'en' ]}/>
+        目前选用的官方资料以相对成熟的 GUI 框架为主，包括 Qt Widgets<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'material', 'reference', 'documentation', 'en' ], filter: m => m.title === 'Qt Widgets' && m.author?.some(author => author.literal === 'The Qt Company'), options: { count: 1 } } ]}/>、WPF<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'material', 'reference', 'documentation', 'en' ], filter: m => m.title === 'Windows Presentation Foundation documentation' && m.author?.some(author => author.literal === 'Microsoft'), options: { count: 1 } } ]}/> 和 Avalonia<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'material', 'reference', 'documentation', 'en' ], filter: m => m.title === 'Avalonia documentation' && m.author?.some(author => author.literal === 'AvaloniaUI'), options: { count: 1 } } ]}/>。WPF 虽然这些年几乎没有再添加新特性，但存量市场并不算小，为数不少的工业软件依然在使用；另一方面，WinForms 已落伍；WinUI 2（UWP）已弃用；WinUI 3 及 MAUI 较新，暗坑可能很多，因此在这里 .NET 生态的跨平台 GUI 选择了已累积一定口碑的 Avalonia。JavaFX 过于小众，同样暂不推荐。
 
-        Qt Quick 是一个比较新的 GUI 框架。我本科写毕业论文还被坑过：多行文本框组件 `TextArea` 在输入长文本时响应极慢且内存占用高达数 GB；我去 Qt 官方的论坛搜索，发现 2020 年前后就有人反馈这个 bug<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'article', 'en' ], filter: m => m.URL === 'https://forum.qt.io/topic/112772/textarea-memory-leak-qml', options: { count: 1 } } ]}/>，但直到我做毕设的时候（2022）依然没有修复，并且至今（Qt 6.12）疑似仍未修复完毕<Cite references={course_material} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference', 'article', 'en' ], filter: m => [ 'QTBUG-95329', 'QTBUG-103819', 'QTBUG-107214' ].includes(m.number ?? ''), options: { count: 3 } }, { scope: [ 'reference', 'article', 'en' ], filter: m => m.URL === 'https://forum.qt.io/topic/160753/qml-textarea-performance-with-large-data-buffers', options: { count: 1 } } ]}/>。当时我为了加快进度，立即换用 Widgets 重写了 GUI，长文本框选用 `QPlainTextEdit`。如果使用 Quick 做项目，还是要多加注意框架存在 bug 的可能性。
-      </section>
-    </section>
-    <section>
-      ### 问题报告与讨论
-      <section>
-        #### 英文
-        <References materials={course_material.reference.article.en} reference_ranges={reference_ranges} scope_name={[ 'reference', 'article', 'en' ]}/>
+        Qt Quick 是一个比较新的 GUI 框架。我本科写毕业论文还被坑过：多行文本框组件 `TextArea` 在输入长文本时响应极慢且内存占用高达数 GB；我去 Qt 官方的论坛搜索，发现 2020 年前后就有人反馈这个 bug<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference' ], filter: m => m.title === 'TextArea memory leak - QML' && m.author?.some(author => author.literal === 'Mohammadsm'), options: { count: 1 } } ]}/>，但直到我做毕设的时候（2022）依然没有修复，并且至今（Qt 6.12）疑似仍未修复完毕<Cite references={page_reference} reference_ranges={reference_ranges} cite_items={[ { scope: [ 'reference' ], filter: m => [ 'QTBUG-95329', 'QTBUG-103819', 'QTBUG-107214' ].includes(m.number ?? ''), options: { count: 3 } }, { scope: [ 'reference' ], filter: m => m.title === 'QML TextArea performance with large data buffers' && m.author?.some(author => author.literal === 'preiter'), options: { count: 1 } } ]}/>。当时我为了加快进度，立即换用 Widgets 重写了 GUI，长文本框选用 `QPlainTextEdit`。如果使用 Quick 做项目，还是要多加注意框架存在 bug 的可能性。
       </section>
     </section>
   </section>
+</section>
+<section>
+  # 参考文献
+  <References materials={page_reference.reference} reference_ranges={reference_ranges} scope_name={[ 'reference' ]}/>
 </section>
