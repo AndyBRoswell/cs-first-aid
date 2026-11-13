@@ -22,15 +22,6 @@ export const I_info = {
           ...catalog.filter(item => item.type === 'book' && item.title === 'Modern Compiler Design' && item.author?.some(author => author.family === 'Grune'), { count: 1 }),
         ],
       },
-      article: {
-        en: [
-          ...catalog.filter(item => item.type === 'post-weblog' && item.title === 'Parser generators vs. handwritten parsers: surveying major language implementations in 2021' && item.author?.some(author => author.family === 'Eaton'), { count: 1 }),
-          ...catalog.filter(item => item.type === 'post-weblog' && item.title === 'In which I have Opinions about parsing and grammars' && item.author?.some(author => author.family === 'Tatham'), { count: 1 }),
-          ...catalog.filter(item => item.type === 'post-weblog' && item.title === 'Rewriting the Ruby parser' && item.author?.some(author => author.family === 'Newton'), { count: 1 }),
-          ...catalog.filter(item => item.type === 'post-weblog' && item.title === 'Announcing: MSVC Conforms to the C++ Standard' && item.author?.some(author => author.family === 'Luvsanbat'), { count: 1 }),
-          ...catalog.filter(item => item.type === 'post-weblog' && item.title === 'MSVC Build Tools Version 14.51 Release Candidate Now Available' && item.author?.some(author => author.family === 'Brumer'), { count: 1 }),
-        ],
-      },
       lecture_notes_and_slides: {
         en: [
           ...catalog.filter(item => item.type === 'document' && item.title === 'Programming Language Design and Implementation' && item.version === 'Fall 2025' && item.author?.some(author => author.family === 'Scott'), { count: 1 }),
