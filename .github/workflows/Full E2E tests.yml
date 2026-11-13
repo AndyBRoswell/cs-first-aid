@@ -4,7 +4,7 @@ name: Full E2E tests
 
 on:
   schedule:
-    - cron: '17 3 * * *' # Every day at 03:17 UTC [to avoid peak loads]
+    - cron: '17 3 * * *' # Daily availability checks; the full E2E suite runs every 3 UTC days. At 03:17 UTC to avoid peak loads.
   workflow_dispatch: # Allow manual runs against a selected deployed site
     inputs:
       target:
@@ -28,6 +28,21 @@ concurrency:
   cancel-in-progress: false # Do not discard a partially completed browser suite
 
 jobs:
+  e2e_schedule:
+    name: Check E2E interval
+    runs-on: ubuntu-slim
+    timeout-minutes: 1
+    outputs:
+      due: ${{ steps.interval.outputs.due }}
+    steps:
+      - name: Check 3-day interval
+        id: interval
+        shell: pwsh
+        run: |
+          $utc_day = [Math]::Floor([DateTimeOffset]::UtcNow.ToUnixTimeSeconds() / 86400)
+          $due = $env:GITHUB_EVENT_NAME -eq 'workflow_dispatch' -or ($utc_day % 3 -eq 0)
+          Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "due=$($due.ToString().ToLowerInvariant())"
+
   # Keep provider availability checks cheap and independent from the browser suite.
   smoke:
     name: Smoke test (${{ matrix.name }})
@@ -69,6 +84,8 @@ jobs:
   # Test only 1 deployed site by default using 3 supported browsers instead of all the deployed sites.
   e2e:
     name: Full browser suite
+    needs: e2e_schedule
+    if: needs.e2e_schedule.outputs.due == 'true'
     runs-on: ubuntu-latest # Playwright needs the full browser-capable image
     env:
       E2E_target: ${{ inputs.target || 'round-robin' }} # Scheduled runs rotate sites by UTC day
