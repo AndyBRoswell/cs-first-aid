@@ -9,6 +9,12 @@ export default defineConfig({
     dir: 'tests/vitest',
     tags: [
       {
+        name: 'apps/main/src/integrations/internal_links.ts:with_base',
+      },
+      {
+        name: 'apps/main/src/integrations/internal_links.ts:rehype_base_links',
+      },
+      {
         name: '@citation-js/plugin-csl.output.citation',
       },
       {

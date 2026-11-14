@@ -13,8 +13,7 @@ test_src_util.test('course list', { tag: [ '@Courses, Textbooks and References',
   const links = await course_list.locator('[href]').all()
   const tmp_page = await context.newPage()
   for (const link of links) {
-    const href = await link.getAttribute('href')
-    const target_link = `${prefix}/${href}`
+    const target_link = await link.evaluate(element => (element as HTMLAnchorElement).href)
     logger.debug(await link.textContent())
     await tmp_page.goto(target_link)
     const main_404 = tmp_page.getByTestId('404')
