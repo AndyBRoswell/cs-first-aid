@@ -47,6 +47,7 @@
     "@types/semver": "^7.8.0",
     "cssesc": "^3.0.0",
     "fast-glob": "^3.3.3",
+    "mdast-util-mdx-jsx": "3.2.0",
     "typescript": "^6.0.3"
   }
 }
