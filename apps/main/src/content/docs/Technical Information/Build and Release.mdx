@@ -4,3 +4,23 @@ description: /
 author: AndyBRoswell
 tags: [ ]
 ---
+
+# 站内链接的自动重写
+
+正文中链接到本站其它页面时，使用从站点根目录开始的路径，不写域名或部署前缀。例如：
+
+```md
+[学习 Rust](/courses-textbooks-and-references/programming/rust-programming/)
+[参与贡献](/technical-information/contributing/)
+[未选材料](/courses-textbooks-and-references/programming/cpp-programming/i/#未选材料)
+```
+
+Astro 中间件读取构建时的 `base`（可由命令行参数置换），在页面渲染后为链接添加部署前缀。GitHub Pages 的 `main` 分站会生成 `/cs-first-aid/main/…`，`dev` 分站会生成 `/cs-first-aid/dev/…`；部署在域名根目录时使用原路径。查询参数和锚点会保留。
+
+Markdown、MDX 和 Astro 组件最终生成的 `<a href="…">` 与 `<area href="…">` 都会处理。形如 `href={target}`、`href={'/…'}` 和属性展开生成的链接也会自动添补前缀，无须逐个调用相应的函数。外部链接、页内锚点和相对链接沿用原有写法；相对链接按当前页面的 URL 解析。链接到其它语言的版本时，站内路径中明确写出语言前缀，如 `/en/`。
+
+这个处理发生在构建或服务端渲染期间。浏览器脚本在页面加载后新建或修改的链接，需要脚本自行处理部署前缀。
+
+# 部署
+
+（TBC）
