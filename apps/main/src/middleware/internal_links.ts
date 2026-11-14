@@ -10,7 +10,7 @@ export function with_base(href: string, base: string): string {
 export function rewrite_HTML_links(source: string, base: string): string {
   const root = parse(source, { comment: true })
   let changed = false
-  for (const link of root.querySelectorAll('a[href], area[href]')) {
+  for (const link of root.querySelectorAll('a[href], area[href]')) { // todo: support more elements that support hyperlinks
     const href = link.getAttribute('href')!
     const rewritten = with_base(href, base)
     if (rewritten === href) { continue }
@@ -19,4 +19,3 @@ export function rewrite_HTML_links(source: string, base: string): string {
   }
   return changed ? root.toString() : source
 }
-
