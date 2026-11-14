@@ -7,8 +7,7 @@ import * as test_src_util from '@tests/util/e2e.ts'
 const logger = pino(util.pino_arg)
 
 test_src_util.test('course list', { tag: [ '@Courses, Textbooks and References', '@course list' ] }, async ({ page, context }) => {
-  const prefix: string = `${test_util.test_server}/courses-textbooks-and-references`
-  await page.goto(`${prefix}/#%E8%AF%BE%E7%A8%8B%E5%88%97%E8%A1%A8`) // courses-textbooks-and-references/#课程列表
+  await page.goto(`${test_util.test_server}/courses-textbooks-and-references/#课程列表`)
   const course_list = page.getByTestId('course list')
   const links = await course_list.locator('[href]').all()
   const tmp_page = await context.newPage()
