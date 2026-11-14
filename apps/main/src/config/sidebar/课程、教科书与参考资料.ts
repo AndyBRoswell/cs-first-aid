@@ -1,6 +1,6 @@
 import type { SidebarItem } from "@/types/starlight.ts";
 import * as badges from '@/components/badges.ts'
-import * as release_stages from '@/UI/release_stages.ts'
+import * as release_stages from '@/html/release_stages.ts'
 import * as subject_badges from '@/components/subject_badges.ts'
 
 export const Courses_Textbooks_and_References = {

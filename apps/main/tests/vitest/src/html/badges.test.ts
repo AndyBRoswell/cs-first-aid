@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
 import * as node_HTML_parser from 'node-html-parser'
 import * as util from '@cs-first-aid/util'
-import * as badges_HTML from '@/components/badges_HTML.ts'
+import * as badges_HTML from '@/html/badges.ts'
 
 const localized_releases = JSON.stringify({ 'zh-CN': '2026.1.0-dev', en: 'blank', }) // Locale-specific release selection.
 const localized_subject = JSON.stringify([ // Localized custom badge text and classes.

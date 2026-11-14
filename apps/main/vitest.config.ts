@@ -9,13 +9,13 @@ export default defineConfig({
     dir: 'tests/vitest',
     tags: [
       {
-        name: 'apps/main/src/middleware/internal_links.ts:with_base',
+        name: 'apps/main/src/html/internal_links.ts:with_base',
       },
       {
-        name: 'apps/main/src/middleware/internal_links.ts:rewrite_HTML_links',
+        name: 'apps/main/src/html/internal_links.ts:rewrite_HTML_links',
       },
       {
-        name: 'apps/main/src/middleware/index.ts:onRequest',
+        name: 'apps/main/src/middleware.ts:onRequest',
       },
       {
         name: '@citation-js/plugin-csl.output.citation',

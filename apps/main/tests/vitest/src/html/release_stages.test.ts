@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import * as semver from 'semver'
-import { to_HTML_attr } from '@/UI/release_stages.ts'
+import { to_HTML_attr } from '@/html/release_stages.ts'
 import type { Localized_Release } from '@/core/release_stages.ts'
 import package_json from '@package.json' with { type: 'json' }
 

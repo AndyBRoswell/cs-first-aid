@@ -1,8 +1,8 @@
 // Created by GPT-5.6 Sol Max [codex]. Revised by AndyBRoswell.
 
 import type { MiddlewareHandler } from 'astro'
-import * as badges_HTML from '@/components/badges_HTML.ts'
-import { rewrite_HTML_links } from './internal_links.ts'
+import * as badges_HTML from '@/html/badges.ts'
+import { rewrite_HTML_links } from '@/html/internal_links.ts'
 
 export const onRequest: MiddlewareHandler = async function onRequest(_context, next) {
   const response = await next()

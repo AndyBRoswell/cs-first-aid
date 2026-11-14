@@ -1,4 +1,4 @@
-import * as release_stages from '@/UI/release_stages.ts'
+import * as release_stages from '@/html/release_stages.ts'
 
 export const Technical_Information = {
   label: '技术信息',

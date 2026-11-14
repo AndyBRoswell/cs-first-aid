@@ -2,7 +2,7 @@
 
 import * as node_HTML_parser from 'node-html-parser'
 import * as util from '@cs-first-aid/util'
-import * as badges from './badges.ts'
+import * as badges from '@/components/badges.ts'
 
 export function inject(source: string): string {
   if (!source.includes('data-release-stage') && !source.includes('data-badges')) { return source } // Avoid parsing unrelated HTML responses.
