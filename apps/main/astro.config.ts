@@ -10,6 +10,7 @@ import * as unist_util_visit from 'unist-util-visit'
 import * as UnicodeMathML from 'unicodemathml'
 import * as markdown_remark from '@astrojs/markdown-remark'
 import remarkMath from 'remark-math'
+import internal_links from './src/integrations/internal_links.ts'
 
 /**
  * @deprecated
@@ -69,6 +70,7 @@ export default defineConfig({
     })
   },
   integrations: [
+    internal_links(),
     starlight({
       title: {
         'zh-CN': '计算机科学急救指南',
