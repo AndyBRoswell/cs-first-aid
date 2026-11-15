@@ -34,17 +34,16 @@ test('rewrites HTML responses and preserves response semantics', { tags: [ 'apps
     expect(await onRequest(context, async () => untouched)).toBe(untouched)
     expect(untouched.bodyUsed).toBe(false)
   }
-  const unchanged = new Response('<a href="https://example.com/">External</a>', {
+  const unchanged_response = await onRequest(context, async () => new Response('<a href="https://example.com/">External</a>', {
     headers: { 'content-type': 'text/html', etag: 'unchanged' },
-  })
-  const unchanged_response = await onRequest(context, async () => unchanged)
+  }))
   if (!(unchanged_response instanceof Response)) { throw new Error('Expected an unchanged HTML response.') }
   expect(unchanged_response.headers.get('etag')).toBe('unchanged')
   expect(await unchanged_response.text()).toBe('<a href="https://example.com/">External</a>')
 
-  const root_response = new Response('<a href="/guide/">Guide</a>', { headers: { 'content-type': 'text/html' } })
+  const root_response = new Response(source, { headers: { 'content-type': 'text/html' } })
   vi.stubEnv('BASE_URL', '/')
   const root_result = await onRequest(context, async () => root_response)
   if (!(root_result instanceof Response)) { throw new Error('Expected a root deployment response.') }
-  expect(await root_result.text()).toBe('<a href="/guide/">Guide</a>')
+  expect(await root_result.text()).toBe(source)
 })
