@@ -8,10 +8,16 @@ test('rewrites HTML responses and preserves response semantics', { tags: [ 'apps
   onTestFinished(() => { vi.unstubAllEnvs() })
   const middleware = onRequest
   const context = {} as APIContext
-  const response = await middleware(context, async () => new Response('<a href="/guide/">Guide</a>', {
+  const source = '<a href="/guide/">Guide</a>'
+  const response = await middleware(context, async () => new Response(source, {
     status: 201,
     statusText: 'Created',
-    headers: { 'content-type': 'text/html; charset=utf-8', 'content-length': '27', etag: 'original', 'x-test': 'preserved' },
+    headers: {
+      'content-type': 'text/html; charset=utf-8',
+      'content-length': new TextEncoder().encode(source).byteLength.toString(), // Content-Length counts UTF-8 bytes.
+      etag: 'original',
+      'x-test': 'preserved',
+    },
   }))
   if (!(response instanceof Response)) { throw new Error('Expected an HTML response.') }
   expect(await response.text()).toBe(`<a href="${base}/guide/">Guide</a>`)
