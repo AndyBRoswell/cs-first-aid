@@ -9,6 +9,7 @@ export const info = {
     reference: {
       text: { en: [
         ...catalog.filter(item => item.type === 'book' && item.title === 'Physically Based Rendering: From Theory to Implementation' && item.author?.some(author => author.family === 'Pharr' && author.given === 'Matt'), { count: 1 }),
+        catalog.get('RTR4'),
       ] },
     },
   },
