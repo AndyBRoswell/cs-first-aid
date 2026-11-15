@@ -34,12 +34,13 @@ test('rewrites HTML responses and preserves response semantics', { tags: [ 'apps
     expect(await onRequest(context, async () => untouched)).toBe(untouched) // Return the original response object.
     expect(untouched.bodyUsed).toBe(false) // Passing through must not consume the body.
   }
-  const unchanged_response = await onRequest(context, async () => new Response('<a href="https://example.com/">External</a>', {
+  const external_source = '<a href="https://example.com/">External</a>'
+  const unchanged_response = await onRequest(context, async () => new Response(external_source, {
     headers: { 'content-type': 'text/html', etag: 'unchanged' },
   }))
   if (!(unchanged_response instanceof Response)) { throw new Error('Expected an unchanged HTML response.') }
   expect(unchanged_response.headers.get('etag')).toBe('unchanged') // HTML processing that leaves the body unchanged must retain its validator.
-  expect(await unchanged_response.text()).toBe('<a href="https://example.com/">External</a>') // External links need no deployment prefix.
+  expect(await unchanged_response.text()).toBe(external_source) // External links need no deployment prefix.
 
   const root_response = new Response(source, { headers: { 'content-type': 'text/html' } })
   vi.stubEnv('BASE_URL', '/') // Simulate deployment at the site root.
