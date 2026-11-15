@@ -119,7 +119,7 @@ export const Technical_Information = {
     {
       label: '补充说明',
       translations: {
-        en: 'Statistics',
+        en: 'Additional',
       },
       slug: 'technical-information/additional',
       attrs: {
