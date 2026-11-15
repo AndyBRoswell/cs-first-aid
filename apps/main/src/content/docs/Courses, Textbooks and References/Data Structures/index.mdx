@@ -9,9 +9,6 @@ import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
 
 <section>
-  有的学校的对应课程为 “数据结构与算法”（DSA），本页选入的一些书也采用这个标题，但我没有选用为课程名称：虽然数据结构的教科书一般都会讲解相关的基础算法，比如串的匹配（KMP、BM 及其常见变体）、DFS/BFS、单源/多源最短路、关键路径、最小生成树、二叉搜索树的重新平衡、二分搜索、归并排序、快速排序等等，然而掌握这些不足以称为 “会算法”，最多只能称为 “（相对）不缺乏常识”，至少根据如今的卷情而言应当如此。
-</section>
-<section>
   # 学习材料
   <section>
     ## 教科书
@@ -65,4 +62,17 @@ import References from '@/components/References.astro'
       <References materials={course_material.excluded.en} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'en' ]}/>
     </section>
   </section>
+</section>
+<section class="FAQ">
+  # 常见问题
+  <section>
+    ## 为什么不像有的项目那样把这门课称为《数据结构与算法》？
+
+    有的学校的对应课程为 “数据结构与算法”（DSA），本页选入的一些书也采用这个标题，但我没有选用为课程名称：数据结构的教科书一般都会讲解相关的基础算法，比如串的匹配（KMP、BM 及其常见变体）、DFS/BFS、单源/多源最短路、关键路径、最小生成树、二叉搜索树的重新平衡、二分搜索、归并排序/堆排序/快速排序，等等。然而，掌握这些不足以称为 “会算法”，最多只能称为 “（相对）不缺乏常识”，至少根据如今的卷情而言应当如此。写个快排或者随便做点 LeetCode 就能进大厂的年代早已远去了。
+
+    ## 强推使用 C/C++ 学习本课程也是继[《C++ 程序设计 I》](/courses-textbooks-and-references/programming/cpp-programming/i#%E4%B8%BA%E4%BB%80%E4%B9%88%E7%94%A8-c-%E5%85%A5%E9%97%A8)后的淘汰机制吗？
+
+    没错。
+  </section>
+  <hr/>
 </section>
