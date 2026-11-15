@@ -13,15 +13,15 @@ test('resolves site-root links and preserves other URLs', { tags: [ 'apps/main/s
     [`/${course}`                     , main      , `${main}/${course}`],
     [`/en/${course}?view=full#details`, `${dev}/` , `${dev}/en/${course}?view=full#details`],
     ['/'                              , `${main}/`, `${main}/`],
-    [main                             , `${main}/`, main],
+    [main                             , `${main}/`, main], // An existing deployment prefix must not be added twice.
     [`${main}/#details`               , main      , `${main}/#details`],
     [`${main}?view=full`              , main      , `${main}?view=full`],
-    [`${main}land/`                   , main      , `${main}${main}land/`],
+    [`${main}land/`                   , main      , `${main}${main}land/`], // A shared string prefix is not necessarily the same path segment.
     ['#details'                       , main      , '#details'],
     ['../example/'                    , main      , '../example/'],
     ['?view=full'                     , main      , '?view=full'],
     ['https://example.com/page'       , main      , 'https://example.com/page'],
-    ['//example.com/page'             , main      , '//example.com/page'],
+    ['//example.com/page'             , main      , '//example.com/page'], // A network-path reference changes the host, not the local path.
     ['mailto:reader@example.com'      , main      , 'mailto:reader@example.com'],
   ] as const) {
     expect(with_base(href, base), `${href} (base: ${base})`).toBe(expected)
@@ -32,7 +32,7 @@ test('rewrites rendered links for root and subpath deployments', { tags: [ 'apps
   const renderer = await createMarkdownProcessor({ syntaxHighlight: false })
   const rendered = await renderer.render([
     '[Rust](/courses-textbooks-and-references/programming/rust-programming/)',
-    '[Details][details]',
+    '[Details][details]', // Reference-style Markdown links must be handled after rendering too.
     '[Local](#details)',
     '[External](https://example.com/)',
     '',
@@ -44,15 +44,15 @@ test('rewrites rendered links for root and subpath deployments', { tags: [ 'apps
   head.appendChild(util.create_HTML_element('base', { href: '/' }))
   head.appendChild(util.create_HTML_element('link', { rel: 'stylesheet', href: '/style.css' }))
   body.appendChild(new CommentNode('preserved'))
-  body.insertAdjacentHTML('beforeend', rendered.code)
+  body.insertAdjacentHTML('beforeend', rendered.code) // Combine rendered Markdown with programmatically created HTML.
   body.appendChild(util.create_HTML_element('a', { href: '/generated/?a=1&b=2#details' }, 'Generated'))
   const map = body.appendChild(util.create_HTML_element('map', { name: 'navigation' }))
-  map.appendChild(util.create_HTML_element('area', { href: '/area/', alt: 'Area' }))
+  map.appendChild(util.create_HTML_element('area', { href: '/area/', alt: 'Area' })) // Image-map links also need the deployment prefix.
   body.appendChild(util.create_HTML_element('a', {}, 'No href'))
   body.appendChild(util.create_HTML_element('img', { src: '/image.png' }))
-  body.appendChild(util.create_HTML_element('pre', {}, '<a href="/code/">'))
+  body.appendChild(util.create_HTML_element('pre', {}, '<a href="/code/">')) // The helper escapes this as displayed code, not a real link.
   const script = body.appendChild(util.create_HTML_element('script'))
-  script.appendChild(new TextNode("const example = '<a href=\"/script/\">';"))
+  script.appendChild(new TextNode("const example = '<a href=\"/script/\">';")) // Preserve raw JavaScript without parsing its string as HTML.
   const source = HTML.toString()
   for (const base of ['/', '/cs-first-aid/main/', '/cs-first-aid/dev/']) {
     const transformed = rewrite_HTML_links(source, base)
@@ -67,14 +67,14 @@ test('rewrites rendered links for root and subpath deployments', { tags: [ 'apps
       `${prefix}/generated/?a=1&b=2#details`,
       `${prefix}/area/`,
     ])
-    expect(document.querySelector('base')?.getAttribute('href')).toBe('/')
+    expect(document.querySelector('base')?.getAttribute('href')).toBe('/') // The document's URL resolution base must remain unchanged.
     expect(document.querySelector('link')?.getAttribute('href')).toBe('/style.css')
-    expect(document.querySelector('img')?.getAttribute('src')).toBe('/image.png')
+    expect(document.querySelector('img')?.getAttribute('src')).toBe('/image.png') // Resource URLs are outside this navigation-link transformation.
     expect(transformed).toContain('<!--preserved-->')
     expect(document.querySelector('pre')?.text).toBe('<a href="/code/">')
     expect(document.querySelector('script')?.rawText).toBe("const example = '<a href=\"/script/\">';")
-    expect(rewrite_HTML_links(transformed, base)).toBe(transformed)
-    const uppercase = parse(rewrite_HTML_links('<a HREF="/case/">Case</a>', base))
+    expect(rewrite_HTML_links(transformed, base)).toBe(transformed) // Repeated processing must be idempotent.
+    const uppercase = parse(rewrite_HTML_links('<a HREF="/case/">Case</a>', base)) // HTML attribute names are case-insensitive.
     expect(uppercase.querySelector('a')?.getAttribute('href')).toBe(`${prefix}/case/`)
   }
 })
