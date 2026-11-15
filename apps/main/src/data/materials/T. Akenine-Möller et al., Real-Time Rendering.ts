@@ -38,21 +38,33 @@ export const entries = [
             link: 'https://www.realtimerendering.com/Real-Time_Rendering_4th-TOC_Preface_Intro_Bib_Index.pdf',
             display_text: 'Table of Contents, Preface, Introduction, Bibliography, and Index',
             'Content-Type': 'application/pdf',
+            license: 'Reproduction requires publisher permission except as permitted under U.S. Copyright Law.',
+            created: { 'date-parts': [ [ 2018, 7, 3, ], ], }, // Embedded PDF CreationDate; no release date is stated.
+            accessed: { 'date-parts': [ [ 2026, 11, 15, ], ], },
           },
           {
             link: 'https://www.realtimerendering.com/Real-Time_Rendering_4th-Collision_Detection.pdf',
             display_text: 'Online Chapter: Collision Detection',
             'Content-Type': 'application/pdf',
+            note: 'Version 1.3.',
+            issued: { 'date-parts': [ [ 2018, 10, 12, ], ], }, // Version date on the cover.
+            accessed: { 'date-parts': [ [ 2026, 11, 15, ], ], },
           },
           {
             link: 'https://www.realtimerendering.com/Real-Time_Rendering_4th-Real-Time_Ray_Tracing.pdf',
             display_text: 'Online Chapter: Real-Time Ray Tracing',
             'Content-Type': 'application/pdf',
+            note: 'Version 1.4.',
+            issued: { 'date-parts': [ [ 2018, 11, 5, ], ], }, // Version date on the cover.
+            accessed: { 'date-parts': [ [ 2026, 11, 15, ], ], },
           },
           {
             link: 'https://www.realtimerendering.com/Real-Time_Rendering_4th-Appendices.pdf',
             display_text: 'Online Appendices: Linear Algebra and Trigonometry',
             'Content-Type': 'application/pdf',
+            note: 'Version 1.1.',
+            issued: { 'date-parts': [ [ 2018, 7, 19, ], ], }, // Version date on the cover.
+            accessed: { 'date-parts': [ [ 2026, 11, 15, ], ], },
           },
         ],
         variant: [
