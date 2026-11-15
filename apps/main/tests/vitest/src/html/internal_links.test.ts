@@ -8,20 +8,20 @@ test('resolves site-root links and preserves other URLs', { tags: [ 'apps/main/s
   const dev = '/cs-first-aid/dev'
   const course = 'courses/example/'
   for (const [href, base, expected] of [
-    [`/${course}`, '/', `/${course}`],
-    [`/${course}`, main, `${main}/${course}`],
-    [`/en/${course}?view=full#details`, `${dev}/`, `${dev}/en/${course}?view=full#details`],
-    ['/', `${main}/`, `${main}/`],
-    [main, `${main}/`, main],
-    [`${main}/#details`, main, `${main}/#details`],
-    [`${main}?view=full`, main, `${main}?view=full`],
-    [`${main}land/`, main, `${main}${main}land/`],
-    ['#details', main, '#details'],
-    ['../example/', main, '../example/'],
-    ['?view=full', main, '?view=full'],
-    ['https://example.com/page', main, 'https://example.com/page'],
-    ['//example.com/page', main, '//example.com/page'],
-    ['mailto:reader@example.com', main, 'mailto:reader@example.com'],
+    [`/${course}`                     , '/'       , `/${course}`],
+    [`/${course}`                     , main      , `${main}/${course}`],
+    [`/en/${course}?view=full#details`, `${dev}/` , `${dev}/en/${course}?view=full#details`],
+    ['/'                              , `${main}/`, `${main}/`],
+    [main                             , `${main}/`, main],
+    [`${main}/#details`               , main      , `${main}/#details`],
+    [`${main}?view=full`              , main      , `${main}?view=full`],
+    [`${main}land/`                   , main      , `${main}${main}land/`],
+    ['#details'                       , main      , '#details'],
+    ['../example/'                    , main      , '../example/'],
+    ['?view=full'                     , main      , '?view=full'],
+    ['https://example.com/page'       , main      , 'https://example.com/page'],
+    ['//example.com/page'             , main      , '//example.com/page'],
+    ['mailto:reader@example.com'      , main      , 'mailto:reader@example.com'],
   ] as const) {
     expect(with_base(href, base), `${href} (base: ${base})`).toBe(expected)
   }
