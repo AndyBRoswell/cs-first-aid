@@ -38,7 +38,7 @@ test('rewrites rendered links for root and subpath deployments', { tags: [ 'apps
     '',
     '[details]: /en/guide/?view=full#details',
   ].join('\n'))
-  const HTML = parse('<!DOCTYPE html><html><head></head><body></body></html>') // todo: init an html document
+  const HTML = util.create_HTML_document()
   const head = HTML.querySelector('head')!
   const body = HTML.querySelector('body')!
   head.appendChild(util.create_HTML_element('base', { href: '/' }))

@@ -38,8 +38,9 @@ test('inject reports incomplete localized metadata with its sidebar item', () =>
 })
 
 function create_HTML(serialized_releases: string, serialized_badges: string | null): string {
-  const document_element = util.create_HTML_element('html', { lang: 'zh-CN', }) // The document language drives localized badge resolution.
-  const body = util.create_HTML_element('body')
+  const document = util.create_HTML_document()
+  document.querySelector('html')!.setAttribute('lang', 'zh-CN') // The document language drives localized badge resolution.
+  const body = document.querySelector('body')!
   const sidebar = util.create_HTML_element('nav', { class: 'sidebar', }) // Match the Starlight sidebar boundary used by the transformer.
   const link_attributes: Record<string, string> = {
     href: '/fixture',
@@ -52,6 +53,5 @@ function create_HTML(serialized_releases: string, serialized_badges: string | nu
   sidebar.appendChild(link)
   body.appendChild(new node_HTML_parser.CommentNode('preserved')) // Verify that the transformer preserves existing HTML comments.
   body.appendChild(sidebar)
-  document_element.appendChild(body)
-  return document_element.toString() // Serialize only after the complete fixture tree has been assembled.
+  return document.toString() // Serialize only after the complete fixture tree has been assembled.
 }
