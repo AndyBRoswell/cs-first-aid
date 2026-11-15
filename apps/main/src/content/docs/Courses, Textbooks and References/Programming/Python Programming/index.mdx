@@ -40,7 +40,7 @@ import Cite from '@/components/Cite.astro'
     <section>
       ### 英文
       <References materials={course_material.excluded.en} reference_ranges={reference_ranges} scope_name={[ 'excluded', 'en' ]}/>
-      <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'Python Cookbook') && m.issued?.["date-parts"]?.[0]?.[0] === 2013, options: { count: 1 } }]}/>落选的缘由自然也是年代久远（2013；[Python 版本历史](https://devguide.python.org/versions/)）。目前尚未发现更新版本。
+      <Cite references={course_material} reference_ranges={reference_ranges} cite_items={[{ scope: ['excluded', 'en'], filter: m => util.ieq(m.title, 'Python Cookbook') && m.issued?.["date-parts"]?.[0]?.[0] === 2013, options: { count: 1 } }]}/>落选的缘由自然也是年代久远（2013，当时 Python 只出到 3.3；[Python 版本历史](https://devguide.python.org/versions/)）。目前尚未发现更新版本。
     </section>
   </section>
 </section>
