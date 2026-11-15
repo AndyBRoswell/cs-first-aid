@@ -55,8 +55,8 @@ test('rewrites rendered links for root and subpath deployments', { tags: [ 'apps
   script.appendChild(new TextNode("const example = '<a href=\"/script/\">';")) // Preserve raw JavaScript without parsing its string as HTML.
   const source = HTML.toString()
   for (const base of ['/', '/cs-first-aid/main/', '/cs-first-aid/dev/']) {
-    const transformed = rewrite_HTML_links(source, base)
-    const document = parse(transformed)
+    const document = rewrite_HTML_links(parse(source, { comment: true }), base)
+    const transformed = document.toString()
     const links = document.querySelectorAll('a[href], area[href]').map(link => link.getAttribute('href'))
     const prefix = base.replace(/\/$/, '')
     expect(links, `base: ${base}`).toEqual([
@@ -73,8 +73,9 @@ test('rewrites rendered links for root and subpath deployments', { tags: [ 'apps
     expect(transformed).toContain('<!--preserved-->')
     expect(document.querySelector('pre')?.text).toBe('<a href="/code/">')
     expect(document.querySelector('script')?.rawText).toBe("const example = '<a href=\"/script/\">';")
-    expect(rewrite_HTML_links(transformed, base)).toBe(transformed) // Repeated processing must be idempotent.
-    const uppercase = parse(rewrite_HTML_links('<a HREF="/case/">Case</a>', base)) // HTML attribute names are case-insensitive.
+    expect(rewrite_HTML_links(document, base)).toBe(document) // Reuse the existing tree rather than create a replacement.
+    expect(document.toString()).toBe(transformed) // Repeated processing must be idempotent.
+    const uppercase = rewrite_HTML_links(parse('<a HREF="/case/">Case</a>'), base) // HTML attribute names are case-insensitive.
     expect(uppercase.querySelector('a')?.getAttribute('href')).toBe(`${prefix}/case/`)
   }
 })

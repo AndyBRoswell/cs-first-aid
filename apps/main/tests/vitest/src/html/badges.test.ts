@@ -12,8 +12,7 @@ const localized_subject = JSON.stringify([ // Localized custom badge text and cl
 ])
 
 test('inject renders localized badges into the initial HTML', () => {
-  const transformed = badges_HTML.inject(create_HTML(localized_releases, localized_subject)) // Run the same transformer used by the middleware.
-  const root = node_HTML_parser.parse(transformed, { comment: true, }) // Inspect the generated server HTML without browser JavaScript.
+  const root = badges_HTML.inject(create_HTML(localized_releases, localized_subject)) // Run the same transformer used by the middleware on the existing tree.
   const link = root.querySelector('nav.sidebar a')! // This test fixture intentionally contains one badge host.
   const container = link.querySelector('.badges')! // Injection should append one shared badge container.
   const rendered_badges = container.querySelectorAll('.badge') // Release and subject badges must remain separate elements.
@@ -25,9 +24,10 @@ test('inject renders localized badges into the initial HTML', () => {
   ])
   expect(link.getAttribute('data-release-stage')).toBe(localized_releases) // Keep source metadata available for diagnostics and tests.
   expect(link.getAttribute('data-badges')).toBe(localized_subject) // Rendering must not consume the custom badge metadata.
-  expect(transformed).toContain('<!--preserved-->') // Astro marker comments must survive the HTML round trip.
+  expect(root.toString()).toContain('<!--preserved-->') // Astro marker comments must survive serialization.
 
-  const reinjected = node_HTML_parser.parse(badges_HTML.inject(transformed)) // A second middleware pass must be harmless.
+  const reinjected = badges_HTML.inject(root) // A second pass on the same tree must be harmless.
+  expect(reinjected).toBe(root)
   expect(reinjected.querySelectorAll('nav.sidebar .badges')).toHaveLength(1)
   expect(reinjected.querySelectorAll('nav.sidebar .badge')).toHaveLength(2)
 })
@@ -37,7 +37,7 @@ test('inject reports incomplete localized metadata with its sidebar item', () =>
   expect(() => badges_HTML.inject(create_HTML(incomplete_releases, null))).toThrow('sidebar item {"label":"Fixture","href":"/fixture"}',)
 })
 
-function create_HTML(serialized_releases: string, serialized_badges: string | null): string {
+function create_HTML(serialized_releases: string, serialized_badges: string | null): node_HTML_parser.HTMLElement {
   const document = util.create_HTML_document()
   document.querySelector('html')!.setAttribute('lang', 'zh-CN') // The document language drives localized badge resolution.
   const body = document.querySelector('body')!
@@ -53,5 +53,5 @@ function create_HTML(serialized_releases: string, serialized_badges: string | nu
   sidebar.appendChild(link)
   body.appendChild(new node_HTML_parser.CommentNode('preserved')) // Verify that the transformer preserves existing HTML comments.
   body.appendChild(sidebar)
-  return document.toString() // Serialize only after the complete fixture tree has been assembled.
+  return document // Keep the fixture as a tree for the transformer.
 }

@@ -4,13 +4,11 @@ import * as node_HTML_parser from 'node-html-parser'
 import * as util from '@cs-first-aid/util'
 import * as badges from '@/components/badges.ts'
 
-export function inject(source: string): string {
-  if (!source.includes('data-release-stage') && !source.includes('data-badges')) { return source } // Avoid parsing unrelated HTML responses.
-  const root = node_HTML_parser.parse(source, { comment: true, }) // Preserve comments that Astro or integrations may use as markers.
+export function inject(root: node_HTML_parser.HTMLElement): node_HTML_parser.HTMLElement {
   const sidebar = root.querySelector('nav.sidebar') // Limit badge injection to Starlight's sidebar.
-  if (sidebar === null) { return source }
+  if (sidebar === null) { return root }
   const badge_hosts = sidebar.querySelectorAll('[data-release-stage], [data-badges]')
-  if (badge_hosts.length === 0) { return source }
+  if (badge_hosts.length === 0) { return root }
   const language = root.querySelector('html')?.getAttribute('lang') // The document language selects localized badge content.
   if (language === undefined || language.length === 0) { throw new Error('Cannot render sidebar badges without a language on the document element.') }
   for (const host of badge_hosts) {
@@ -31,5 +29,5 @@ export function inject(source: string): string {
     }
     host.appendChild(container)
   }
-  return root.toString()
+  return root
 }
