@@ -48,6 +48,11 @@ export function create_HTML_element(tag_name: string, attributes: Record<string,
   return element
 }
 
+/** Creates an empty HTML document with a doctype, head, and body. */
+export function create_HTML_document(): node_HTML_parser.HTMLElement {
+  return node_HTML_parser.parse('<!DOCTYPE html><html><head></head><body></body></html>')
+}
+
 export const supported_locales: Intl.UnicodeBCP47LocaleIdentifier[] = [ 'en-US' ]
 export const collator = new Map<string, Intl.Collator>()
 function get_collator(locale: string): Intl.Collator {
