@@ -5,7 +5,7 @@ author: AndyBRoswell
 tags: [ ]
 ---
 
-import { references as R } from './Architecture.ts'
+import { references as R } from './Architecture and Design Decisions.ts'
 import Cite from '@/components/Cite.astro'
 import References from '@/components/References.astro'
 
@@ -53,7 +53,7 @@ import References from '@/components/References.astro'
     - 微信、支付宝、抖音等的小程序；Telegram、Slack、Teams、LINE 等的 App / Mini App。
     - 单独的应用（需要下载和/或安装并运行的客户端）。
 
-    一个符合 HTML 标准的浏览器（用户代理）在访问指定的 URL 时，只被要求直接加载具有下列 MIME 类型的实体：
+    一个符合 HTML 标准的浏览器（用户代理）在访问指定的 URL 时，只被要求直接加载具有下列 MIME 类型的实体<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '7.4.6' } ]}/>：
     - HTML
     - 不被<u>显式支持</u>（被配置为使用外部应用程序打开或其它专用处理规则处理）的 XML
     - JavaScript
@@ -70,13 +70,13 @@ import References from '@/components/References.astro'
     - 首先排除 PDF（application/pdf、text/pdf）。因为 PDF 是固定版式，无法适应不同的显示区域（例如不同宽高比或分辨率），也不便于切换样式（例如选择黑暗主题）。这会给持有不同设备的用户的流畅阅读带来麻烦。
     - 其次排除视频或音频，以及网络视频文本轨道（WebVTT，text/vtt）。因为本项目以文本为主（同时符合本项目主张的 “优先文字材料而非视频” 的思想）。
       - 图像特别是SVG（即 image/svg+xml）可以在本项目中采用，但本项目以文本为主，而不是一张或多张图像。
-    - 然后排除纯文本（text/plain）、层叠样式表（text/css）、JavaScript 脚本（text/javascript）、不被显式支持的 JSON，因为浏览器会直接显示原始内容（虽然主流浏览器往往展示 JSON 的树结构，即具有 JSON 的显式支持），无法显示本项目所需的富文本。
+    - 然后排除纯文本（text/plain）、层叠样式表（text/css）、JavaScript 脚本（text/javascript）、不被显式支持的 JSON，因为浏览器会直接显示原始内容<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '7.4.6, 7.5.4' } ]}/>（虽然主流浏览器往往展示 JSON 的树结构，即具有 JSON 的显式支持），无法显示本项目所需的富文本。
     - 排除不被显式支持的 XML：
-      - 若其采用了 HTML 命名空间，则该 XML 文档成为 XHTML（application/xhtml+xml）：XHTML 句法已不再维护，同时亦无任何规范定义 XML 解析器如何将字节流或字符流映射为 DOM 对象。目前没有找到其它合适的理由继续使用它。
+      - 若其采用了 HTML 命名空间，则该 XML 文档成为 XHTML（application/xhtml+xml）<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '1.7' } ]}/>：XHTML 句法已不再维护<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '14' } ]}/>，同时亦无任何规范定义 XML 解析器如何将字节流或字符流映射为 DOM 对象<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '14.2' } ]}/>。目前没有找到其它合适的理由继续使用它。
       - 若其不采用 HTML 命名空间，则浏览器往往会直接显示 XML 的内容（以树结构呈现），无法显示本项目所需的富文本，也缺乏 HTML 元信息，不利于搜索引擎优化（SEO），进而不利于增加本项目的曝光。
     - 排除 multipart/x-mixed-replace：
       - 该 MIME 类型主要用于 MJPEG 实时视频流的更新（逐帧推送 JPEG），早期还用于 HTML 或纯文本片段的持续更新（现代浏览器已不支持）。
-      - HTML 标准的加载算法要求加载该类型时递归调用同一加载算法，故而本项目的交付物不能直接使用此类型，必须具有上述其它 MIME 类型。
+      - HTML 标准的加载算法要求加载该类型时递归调用同一加载算法<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '7.5.5' } ]}/>，故而本项目的交付物不能直接使用此类型，必须具有上述其它 MIME 类型。
 
     于是候选项只剩下 HTML，其与 CSS、JavaScript 在 Web 生态中往往同时使用，但这时 CSS 和 JavaScript 文件由 HTML 通过`<link>` `<style>` `<script>`等元素链接作为子资源，而不在访问 URL 时直接向用户展示。
   </section>
