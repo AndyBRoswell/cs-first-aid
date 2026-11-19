@@ -30,7 +30,7 @@ import References from '@/components/References.astro'
     <section>
       ### 读者的角度
 
-      - 低技术门槛：读者不一定具有足够的计算机背景，尤其是正准备学习计算机科学的读者。
+      - 低技术门槛：读者不一定具有足够的计算机背景，尤其是正准备学习计算机科学的读者。不但需要使得他们轻易访问本项目的全部内容，而且获取到的是最新版本。
       - 低经济门槛与高性能：在廉价消费电子设备上能够流畅阅读本项目的完整内容。必须充分考虑经济条件不佳或被家长禁止购买配置较高的电子设备的读者。
     </section>
   </section>
@@ -40,9 +40,9 @@ import References from '@/components/References.astro'
     一个人若要尝试了解一个话题，往往离不开搜索引擎。虽然现在有了 AI，但 AI 也需要通过 Web 搜索来提升回答质量。因此，为了令本项目易于被发现，本项目需要能被通用搜索引擎（Google、Bing、百度、Yandex 等）搜索到。
 
     不合适的例子：
-    - 离线文件（难以被主流通用搜索引擎检索）。
+    - 公网不可访问的离线文件（难以被主流通用搜索引擎检索）。
 
-    为了使本项目易于传播，应当使得分享本项目时不需发送其完整内容，而是仅发送标识符。而 Web 常用的标识符是 URL（可以是一个或多个）。
+    为了使（最新版本的）本项目易于传播，应当使得分享本项目时不需发送其完整内容，而是仅发送标识符。而 Web 常用的标识符是 URL（可以是一个或多个）。
   </section>
   <section>
     ## 能在浏览器中查看
@@ -67,13 +67,13 @@ import References from '@/components/References.astro'
     - text/pdf
 
     接下来可以按 MIME 类型进一步排除：
-    - 首先排除 PDF（application/pdf、text/pdf）。因为 PDF 是固定版式，无法适应不同的显示区域（例如不同宽高比或分辨率），也不便于切换样式（例如选择黑暗主题）。这会给持有不同设备的用户的流畅阅读带来麻烦。
+    - 首先排除 PDF（application/pdf、text/pdf）。因为 PDF 是固定版式，无法适应不同的显示区域（根据不同的宽高比、分辨率等自动重排），也不便于切换样式（例如切换黑暗主题而不引起图像失真）。这会给持有不同设备的用户的流畅阅读带来麻烦。
     - 其次排除视频或音频，以及网络视频文本轨道（WebVTT，text/vtt）。因为本项目以文本为主（同时符合本项目主张的 “优先文字材料而非视频” 的思想）。
       - 图像特别是SVG（即 image/svg+xml）可以在本项目中采用，但本项目以文本为主，而不是一张或多张图像。
     - 然后排除纯文本（text/plain）、层叠样式表（text/css）、JavaScript 脚本（text/javascript）、不被显式支持的 JSON，因为浏览器会直接显示原始内容<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '7.4.6, 7.5.4' } ]}/>（虽然主流浏览器往往展示 JSON 的树结构，即具有 JSON 的显式支持），无法显示本项目所需的富文本。
     - 排除不被显式支持的 XML：
       - 若其采用了 HTML 命名空间，则该 XML 文档成为 XHTML（application/xhtml+xml）<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '1.7' } ]}/>：XHTML 句法已不再维护<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '14' } ]}/>，同时亦无任何规范定义 XML 解析器如何将字节流或字符流映射为 DOM 对象<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '14.2' } ]}/>。目前没有找到其它合适的理由继续使用它。
-      - 若其不采用 HTML 命名空间，则浏览器往往会直接显示 XML 的内容（以树结构呈现），无法显示本项目所需的富文本，也缺乏 HTML 元信息，不利于搜索引擎优化（SEO），进而不利于增加本项目的曝光。
+      - 若其不采用 HTML 命名空间，则浏览器往往会直接显示 XML 的内容（以树结构呈现），无法显示本项目所需的富文本；即便得以关联 CSS 或 XSLT（主流浏览器已弃用）样式表，自定义标签缺乏 HTML 原生语义与元信息，不利于搜索引擎优化（SEO），进而不利于增加本项目的曝光。
     - 排除 multipart/x-mixed-replace：
       - 该 MIME 类型主要用于 MJPEG 实时视频流的更新（逐帧推送 JPEG），早期还用于 HTML 或纯文本片段的持续更新（现代浏览器已不支持）。
       - HTML 标准的加载算法要求加载该类型时递归调用同一加载算法<Cite references={R} cite_items={[ { condition: 'HTML Living Standard', label: 'section', locator: '7.5.5' } ]}/>，故而本项目的交付物不能直接使用此类型，必须具有上述其它 MIME 类型。
@@ -83,10 +83,10 @@ import References from '@/components/References.astro'
   <section>
     ## 按项目内容渲染完毕的时间筛选方案
 
-    可以完备地将候选解决方案按照本项目的内容渲染的时间分为 3 类：
+    可以完备地将候选解决方案按照本项目的内容渲染的时间分为下列类别：
     - 在用户访问前渲染完毕。典例：静态站点生成（SSG）。
     - 在用户访问时开始渲染：
-      - 在响应请求的过程中渲染。典例：服务端渲染（SSR）及其变体，例如 ESR（边缘渲染）、ISR（增量静态再生成）。
+      - 在处理请求的过程中（同步或异步按需）渲染。典例：服务端渲染（SSR）及其变体，例如 ESR（边缘渲染）、ISR（增量静态再生成）。
       - 在响应发回用户后渲染。典例：客户端渲染（CSR），包括 SPA（单页应用）等。
 
     显然，内容在用户访问前渲染完毕，相比在响应请求过程中渲染（SSR 等）可省去服务端的动态计算资源与作者需支付的相关费用，相比在响应发回后渲染（CSR）可降低用户设备流畅浏览项目内容的资源消耗，还更利于通用搜索引擎直接抓取内容。因此，本项目首选静态站点生成（SSG）方法。确有需要时，再引入动态内容。
@@ -130,12 +130,14 @@ import References from '@/components/References.astro'
 <section>
   # 贡献门槛的考虑
 
-  在大多数场景中，我不认为引入软工方法会带来过高的贡献门槛，因为计算机技能正被越来越多非计算机岗位列为硬性要求。当下的竞争之激烈大家已有目共睹，应当推定已有众多不具有计算机背景的人员正在自学计算机知识并练习相应的技能。
+  在大多数场景中，我不认为引入软工方法会带来过高的贡献门槛，因为计算机技能正被越来越多非计算机岗位列为硬性要求。当下的竞争之激烈大家已有目共睹，应当推定已有众多不具有计算机背景的人员正在自学计算机知识并练习相应的技能，从 Git、Markdown 及其变体到基础编程、Web 开发等。AI 亦能明显降低阅读他人代码的成本。另外，如提交 PR 确实感到困难，至少可以直接使用自然语言编写并提交 Issue。
 </section>
 <section>
   # 具体的技术选型
 
+  众所周知，在 Web 生态中，JavaScript 与 TypeScript（JavaScript 的严格超集）是极其常用的编程语言。而 Astro 则是近年来生态迅速扩张的高性能静态站框架之一。
 
+  （TBC）
 </section>
 <section>
   # 内容处理
