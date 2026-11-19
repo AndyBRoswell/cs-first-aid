@@ -11,6 +11,7 @@ export const entries = [
       publisher: 'WHATWG',
       language: 'en-US',
       URL: 'https://html.spec.whatwg.org/multipage/',
+      issued: { 'date-parts': [ [ 2026, 11, 17 ] ] },
       accessed: { 'date-parts': [ [ 2026, 11, 19 ] ] },
       custom: {
         license: 'CC-BY-4.0',
@@ -20,6 +21,7 @@ export const entries = [
             display_text: 'HTML (Single-Page Version)',
             'Content-Type': 'text/html',
             license: 'CC-BY-4.0',
+            modified: { 'date-parts': [ [ 2026, 11, 17 ] ] },
             accessed: { 'date-parts': [ [ 2026, 11, 19 ] ] },
           },
           {
@@ -27,6 +29,7 @@ export const entries = [
             display_text: 'PDF',
             'Content-Type': 'application/pdf',
             license: 'CC-BY-4.0',
+            modified: { 'date-parts': [ [ 2026, 11, 17 ] ] },
             accessed: { 'date-parts': [ [ 2026, 11, 19 ] ] },
           },
         ],
