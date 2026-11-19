@@ -8,6 +8,7 @@ export const entries = [
       author: [ { given: 'Arnd', family: 'Bergmann' } ],
       title: '[PATCH] [v2] Kbuild: move to -std=gnu11',
       'container-title': 'Linux Kernel Mailing List',
+      archive: 'lore.kernel.org',
       genre: 'Mailing list post',
       language: 'en',
       URL: 'https://lore.kernel.org/r/20220228103142.3301082-1-arnd@kernel.org',

@@ -7,6 +7,8 @@ export const entries = [
       type: 'webpage',
       author: [ { given: 'Linus', family: 'Torvalds' } ],
       title: "Merge tag 'kbuild-gnu11-v5.18' of git://git.kernel.org/pub/scm/linux/kernel/git/masahiroy/linux-kbuild",
+      'container-title': 'Linux kernel source tree',
+      archive: 'git.kernel.org',
       genre: 'Git merge commit',
       language: 'en',
       URL: 'https://git.kernel.org/linus/50560ce6a0bdab2fc37384c52aa02c7043909d2c',

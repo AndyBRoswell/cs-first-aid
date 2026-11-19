@@ -2,9 +2,8 @@ import * as types_data from '@cs-first-aid/bibkit/types/data'
 
 export const entries = [
   {
-    id: [],
+    id: [ 'QTBUG-103819' ],
     material: {
-      id: 'QTBUG-103819',
       type: 'webpage',
       title: 'QML TextEdit memory usage is extreme and the memory is not freed',
       author: [ { given: 'Jussi', family: 'Witick' } ],

@@ -2,9 +2,8 @@ import * as types_data from '@cs-first-aid/bibkit/types/data'
 
 export const entries = [
   {
-    id: [],
+    id: [ 'QTBUG-107214' ],
     material: {
-      id: 'QTBUG-107214',
       type: 'webpage',
       title: 'QML Text Memory leak',
       author: [ { given: 'Nahomi', family: 'Gröhn' } ],

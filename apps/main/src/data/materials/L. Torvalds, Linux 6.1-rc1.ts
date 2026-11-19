@@ -8,6 +8,7 @@ export const entries = [
       author: [ { given: 'Linus', family: 'Torvalds' } ],
       title: 'Linux 6.1-rc1',
       'container-title': 'Linux Kernel Mailing List',
+      archive: 'lore.kernel.org',
       genre: 'Mailing list post',
       language: 'en',
       URL: 'https://lore.kernel.org/r/CAHk-=wj6y5fipM2A5kEuOO9qm5PBzUY=-m9viEahhtxT09KR_g@mail.gmail.com/',

@@ -7,6 +7,8 @@ export const entries = [
       type: 'webpage',
       author: [ { given: 'Linus', family: 'Torvalds' } ],
       title: "Merge tag 'rust-v6.1-rc1' of https://github.com/Rust-for-Linux/linux",
+      'container-title': 'Linux kernel source tree',
+      archive: 'git.kernel.org',
       genre: 'Git merge commit',
       language: 'en',
       URL: 'https://git.kernel.org/linus/8aebac82933ff1a7c8eede18cab11e1115e2062b',
