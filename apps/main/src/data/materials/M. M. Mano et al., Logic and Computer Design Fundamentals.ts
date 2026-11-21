@@ -18,6 +18,14 @@ export const entries = [
       custom: {
         variant: [
           { type: 'book', medium: 'eBook', ISBN: '9781292096124', issued: { 'date-parts': [ [ 2016, 9, 12 ] ] } },
+          {
+            type: 'book',
+            title: 'Logic & Computer Design Fundamentals',
+            medium: 'Hardcover',
+            issued: { 'date-parts': [ [ 2015, 3, 4 ] ] },
+            ISBN: '9780133760637',
+            URL: 'https://www.pearson.com/en-ca/subject-catalog/p/logic-computer-design-fundamentals/P200000003256/9780133760637',
+          },
         ],
       },
     } satisfies types_data.Material,
