@@ -21,6 +21,7 @@ export const info = {
     excluded: {
       en: [
         catalog.get('Thinking in Java'),
+        ...catalog.filter(item => item.type === 'book' && util.ieq(item.title!, 'On Java 8') && item.edition === 2, { max_count: 1 }),
       ],
     },
   }
