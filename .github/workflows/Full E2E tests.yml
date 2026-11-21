@@ -4,7 +4,7 @@ name: Full E2E tests
 
 on:
   schedule:
-    - cron: '17 3 * * *' # Daily availability checks; the full E2E suite runs every 3 UTC days. At 03:17 UTC to avoid peak loads.
+    - cron: '17 3 * * *' # Daily availability checks; the full E2E suite runs every 7 UTC days. At 03:17 UTC to avoid peak loads.
   workflow_dispatch: # Allow manual runs against a selected deployed site
     inputs:
       target:
@@ -35,12 +35,12 @@ jobs:
     outputs:
       due: ${{ steps.interval.outputs.due }}
     steps:
-      - name: Check 3-day interval
+      - name: Check 7-day interval
         id: interval
         shell: pwsh
         run: |
           $utc_day = [Math]::Floor([DateTimeOffset]::UtcNow.ToUnixTimeSeconds() / 86400)
-          $due = $env:GITHUB_EVENT_NAME -eq 'workflow_dispatch' -or ($utc_day % 3 -eq 0)
+          $due = $env:GITHUB_EVENT_NAME -eq 'workflow_dispatch' -or ($utc_day % 7 -eq 0)
           Add-Content -LiteralPath $env:GITHUB_OUTPUT -Value "due=$($due.ToString().ToLowerInvariant())"
 
   # Keep provider availability checks cheap and independent from the browser suite.
