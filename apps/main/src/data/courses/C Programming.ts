@@ -17,6 +17,7 @@ export const info = {
         ...catalog.filter(item => item.author?.length === 1 && item.author[0]?.literal === 'Microsoft' && item.title === 'C Language Reference', { count: 1 }),
         catalog.get('cppreference.com/c'),
         catalog.get('c-language.org'),
+        catalog.get('The Definitive C Book Guide and List'),
       ],
     },
     excluded: {
