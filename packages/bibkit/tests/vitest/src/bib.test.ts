@@ -36,6 +36,44 @@ function citation_entries(materials: Material[], numbers: number[]) { return num
 test('resolve_citations returns no results for an empty input', () => { expect(bib.resolve_citations([], [])).toEqual([]) })
 
 test.each([
+  { language: 'zh-CN', label: '最后修订日期：' },
+  { language: 'en', label: 'Last modified: ' },
+])('print_bibliography renders the modification date when supplied ($language)', ({ language, label }) => {
+  const cases: { material: Material, expected: string | null }[] = [
+    {
+      material: { type: 'webpage', title: 'Full date', issued: { 'date-parts': [ [ 2009, 2, 18 ] ] }, custom: { modified: { 'date-parts': [ [ 2024, 4, 21 ] ] } } },
+      expected: label + '2024-04-21',
+    },
+    {
+      material: { type: 'document', title: 'Partial date', custom: { modified: { 'date-parts': [ [ 2025, 3 ] ] } } },
+      expected: label + '2025-03',
+    },
+    {
+      material: { type: 'document', title: 'Date range', custom: { modified: { 'date-parts': [ [ 2024, 4, 21 ], [ 2024, 4, 23 ] ] } } },
+      expected: label + '2024-04-21 - 23',
+    },
+    {
+      material: { type: 'document', title: 'Literal date', custom: { modified: { literal: 'Before <publication>' } } },
+      expected: label + 'Before <publication>',
+    },
+    {
+      material: { type: 'document', title: 'Raw date', custom: { modified: { raw: 'April 21, 2024' } } },
+      expected: label + '2024-04-21',
+    },
+    { material: { type: 'document', title: 'Empty date', custom: { modified: {} } }, expected: null },
+    { material: { type: 'document', title: 'No modification date' }, expected: null },
+  ]
+  const materials = cases.map(({ material }) => material)
+  const root = node_html_parser.parse(bib.print_bibliography(materials, { language }))
+  const entries = root.querySelectorAll('.Bibliography > .entry')
+  expect(entries).toHaveLength(cases.length)
+  for (const [index, { material, expected }] of cases.entries()) {
+    const fields = entries[index]!.querySelectorAll('.custom > .modified')
+    expect(fields.map(field => field.textContent), material.title).toEqual(expected === null ? [] : [expected])
+  }
+})
+
+test.each([
   { language: 'zh-CN', label: '机构：' },
   { language: 'en', label: 'Institution:' },
 ])('print_bibliography renders institutions as localized plain-text lists ($language)', ({ language, label }) => {
