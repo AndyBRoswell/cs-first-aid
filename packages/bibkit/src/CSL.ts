@@ -259,5 +259,6 @@ export type Custom = {
   suggested_playback_speed?: [ minimum: number, maximum: number ]
   received?: Date_Variable // Date manuscript was received by publisher/journal.
   accepted?: Date_Variable // Date manuscript was accepted by publisher/journal.
+  modified?: Date_Variable // Date the cited content was last edited.
   'collection-title'?: string | string[]
 }
