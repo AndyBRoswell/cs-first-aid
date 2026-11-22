@@ -2,6 +2,8 @@ import * as citation_js from "@citation-js/core"
 import '@citation-js/plugin-csl'
 import * as node_html_parser from 'node-html-parser'
 import default_bib_style from './IEEE.custom.csl'
+import default_date_style from './format_date.csl'
+import type { Date_Variable } from './CSL.ts'
 import type { ID_t, Scoped_ID_t, Scoped_References, Scope_Name, Serialized_Scope_Name, Material, Material_Filter, Citation_Item, Citation_Result, Citation_Context, Citation_Condition, Link, } from "./types/data.ts";
 import * as catalog from './catalog.ts'
 import { check_filter_results, type Filter_Options } from "./catalog.ts"
@@ -16,6 +18,8 @@ const logger = pino(util.pino_arg)
 const CSL_config = citation_js.plugins.config.get('@csl')
 const default_bib_style_name = 'IEEE [Custom]'
 CSL_config.styles.add(default_bib_style_name, default_bib_style)
+const default_date_style_name = 'bibkit-date'
+CSL_config.styles.add(default_date_style_name, default_date_style)
 const prettified_default_bib_style: object = {
   format: 'html',
   template: default_bib_style_name,
@@ -89,6 +93,12 @@ export function get_scoped_references(references: Scoped_References, scope_name:
   return scoped_references
 }
 
+function format_date(date: Date_Variable): string {
+  if (!date['date-parts']?.length && !date.literal && !date.raw) { return '' }
+  const cite = new citation_js.Cite([ { id: 'date', type: 'document', issued: date } ])
+  return cite.format('citation', { style: default_date_style_name, format: 'text', entry: 'date', citationsPre: [], citationsPost: [] })
+}
+
 function render_link(link: Link): node_html_parser.HTMLElement {
   const metadata = typeof link === 'string' ? { link } : link
   const item = util.create_HTML_element('li', { class: 'Link', })
@@ -142,6 +152,15 @@ function decorate_bibliography_entry(entry: node_html_parser.HTMLElement, materi
   if (material.custom) {
     const additional = util.create_HTML_element('div', { class: 'custom', })
     const labels = get_custom_label(language)
+    if (material.custom.modified) {
+      const date = format_date(material.custom.modified)
+      if (date) {
+        const field = util.create_HTML_element('p', { class: 'modified', })
+        field.appendChild(util.create_HTML_element('span', { class: 'label', }, format_field_label(labels.modified, language, { inline: true })))
+        field.appendChild(util.create_HTML_text_node(date))
+        additional.appendChild(field)
+      }
+    }
     if (material.custom.license?.length) {
       const field = util.create_HTML_element('p', { class: 'license', })
       field.appendChild(util.create_HTML_element('span', { class: 'label', }, format_field_label(labels.license, language, { inline: true })))
