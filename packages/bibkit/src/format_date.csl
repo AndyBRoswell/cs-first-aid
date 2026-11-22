@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0">
+  <info>
+    <title>Bibkit date</title>
+    <id>urn:cs-first-aid:bibkit:date</id>
+    <updated>2026-11-22T00:00:00Z</updated>
+  </info>
+  <citation>
+    <layout>
+      <choose>
+        <if is-uncertain-date="issued">
+          <text value="≈"/>
+        </if>
+      </choose>
+      <date variable="issued" delimiter="-">
+        <date-part name="year" range-delimiter=" - "/>
+        <date-part name="month" form="numeric-leading-zeros" range-delimiter=" - "/>
+        <date-part name="day" form="numeric-leading-zeros" range-delimiter=" - "/>
+      </date>
+    </layout>
+  </citation>
+</style>
