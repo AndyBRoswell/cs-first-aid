@@ -14,6 +14,7 @@ type Localized<T extends Label_Node> = // Homomorphic mapped types preserve prim
   never
 
 export type Custom_Label = Readonly<{
+  modified: string
   license: string
   institution: string
   lecturer: string
@@ -26,6 +27,10 @@ export type Custom_Label = Readonly<{
 }>
 
 const custom_label: Localized<Custom_Label> = {
+  modified: {
+    'zh-CN': '最后修订日期',
+    en: 'Last modified',
+  },
   license: {
     'zh-CN': '许可协议',
     en: 'License',
